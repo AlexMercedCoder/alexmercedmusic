@@ -1,0 +1,79 @@
+---
+import Base from '../layouts/Base.astro';
+import { acousticTracks, acousticPlaylist, reimagined } from '../data/catalog';
+
+const rebuilt = new Set(reimagined.map((r) => r.original).filter(Boolean));
+
+const jsonLd = [
+  {
+    '@type': 'MusicPlaylist',
+    '@id': 'https://alexmercedmusic.com/acoustic#playlist',
+    name: acousticPlaylist.title,
+    url: acousticPlaylist.url,
+    numTracks: acousticTracks.length,
+    description: acousticPlaylist.description,
+    byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+    track: acousticTracks.map((t, i) => ({
+      '@type': 'MusicRecording',
+      position: i + 1,
+      name: t.title,
+      byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+    })),
+  },
+];
+---
+
+<Base
+  title="The acoustic archive"
+  description="Guitar and voice recordings by Alex Merced, uploaded from the mid-2000s onward. Songs, improvisations and takes from a bedroom and a camera, listed in full."
+  keywords={['Alex Merced acoustic', 'singer songwriter', 'The Loveatrian', 'guitar recordings']}
+  jsonLd={jsonLd}
+>
+  <section class="section" data-era="acoustic">
+    <div class="shell">
+      <p class="eyebrow">Era one</p>
+      <h1>A guitar and a camera</h1>
+      <p class="lede">
+        These are the oldest recordings on the site, and the ones the rest of it keeps
+        coming back to. Most went up on a channel called The Loveatrian, in the years
+        when putting a song on the internet meant pointing a camcorder at yourself and
+        hoping the take held together.
+      </p>
+      <p class="lede" style="margin-top:1rem">
+        The playlist says {acousticPlaylist.stated} videos. {acousticPlaylist.unavailable} of
+        them are no longer available, so what follows is the {acousticTracks.length} you can
+        still play. Titles are as they were typed at the time, capitals and all.
+      </p>
+      <div class="btn-row" style="margin-top:1.8rem">
+        <a class="btn btn--primary" href={acousticPlaylist.url}>Play the whole thing</a>
+        <a class="btn" href="/reimagined">Hear seven of them rebuilt</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="acoustic">
+    <div class="shell">
+      <div class="section__head">
+        <h2>The recordings</h2>
+        <p>
+          Marked titles are the ones that have since been rebuilt with Suno. There are
+          six of them, and each rebuild opens with a clip of the take listed here.
+        </p>
+      </div>
+      <ol class="tracks">
+        {acousticTracks.map((t, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span>
+              {t.title}
+              {rebuilt.has(t.title) && (
+                <span class="pair__style" style="display:inline;margin-left:0.6rem;color:var(--ai)">rebuilt</span>
+              )}
+            </span>
+            <span class="len">{t.length}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>

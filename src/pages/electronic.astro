@@ -1,0 +1,124 @@
+---
+import Base from '../layouts/Base.astro';
+import { albums, singles2013, reverbnationFeatured, tutorials } from '../data/catalog';
+
+const jsonLd = albums.map((a) => ({
+  '@type': 'MusicAlbum',
+  name: a.title,
+  byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+  numTracks: a.totalTracks ?? a.tracks.length,
+  track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t })),
+}));
+---
+
+<Base
+  title="The electronic catalogue"
+  description="Five albums of electronic music produced by Alex Merced in FL Studio, filed under electronica, electro pop and glitch hop out of Brooklyn."
+  keywords={['Alex Merced electronic', 'glitch hop', 'FL Studio', 'electronica', 'Brooklyn producer']}
+  jsonLd={jsonLd}
+>
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <p class="eyebrow">Era two</p>
+      <h1>Made in FL Studio,<br />filed under glitch hop</h1>
+      <p class="lede">
+        Somewhere after the guitar recordings the tools changed. These are produced
+        tracks: five albums plus a run of singles, listed on ReverbNation as electronica,
+        electro pop and glitch hop out of Brooklyn, where the profile still shows 6.6
+        thousand fans and a featured video called Modulate This.
+      </p>
+      <div class="btn-row" style="margin-top:1.8rem">
+        <a class="btn btn--primary" href="https://soundcloud.com/alexmerced">The albums on SoundCloud</a>
+        <a class="btn" href="https://legacy.reverbnation.com/alexmerced">The ReverbNation profile</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <div class="section__head">
+        <h2>The albums</h2>
+        <p>
+          Where an album lists more tracks than it shows, the count is given and the rest
+          are on the album page rather than guessed at here.
+        </p>
+      </div>
+      <div class="grid grid--2">
+        {albums.map((album) => (
+          <article class="card card--era" data-era="electronic">
+            <h3>{album.title}</h3>
+            <p class="pair__style">
+              {album.totalTracks ?? album.tracks.length} tracks · posted {album.posted}
+            </p>
+            <ol class="tracks" style="margin-top:0.4rem">
+              {album.tracks.map((t, i) => (
+                <li>
+                  <span class="num">{String(i + 1).padStart(2, '0')}</span>
+                  <span>{t}</span>
+                  <span class="len"></span>
+                </li>
+              ))}
+            </ol>
+            {album.totalTracks && album.totalTracks > album.tracks.length && (
+              <p class="pair__style">
+                and {album.totalTracks - album.tracks.length} more on the album
+              </p>
+            )}
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <div class="grid grid--2">
+        <div>
+          <h2 style="margin-bottom:1rem">A run of singles, 2013</h2>
+          <p style="color:var(--ink-soft)">
+            Posted one after another to a second SoundCloud account that holds the loose
+            tracks, acoustic and electronic together.
+          </p>
+          <ol class="tracks" style="margin-top:1rem">
+            {singles2013.map((t, i) => (
+              <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{t.title}</span><span class="len"></span></li>
+            ))}
+          </ol>
+        </div>
+        <div>
+          <h2 style="margin-bottom:1rem">Featured on ReverbNation</h2>
+          <p style="color:var(--ink-soft)">
+            The five the profile still puts at the top, years after the last upload.
+          </p>
+          <ol class="tracks" style="margin-top:1rem">
+            {reverbnationFeatured.map((t, i) => (
+              <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{t}</span><span class="len"></span></li>
+            ))}
+          </ol>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <div class="section__head">
+        <h2>The tutorials outdrew the music</h2>
+        <p>
+          Alongside the albums he recorded FL Studio walkthroughs and gave away sample
+          packs. Judged on views, that teaching is the most listened-to thing on the
+          music channel, which is a fair preview of the career that followed.
+        </p>
+      </div>
+      <ol class="tracks">
+        {tutorials.map((t, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span>{t.title}</span>
+            <span class="len">{t.posted}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>

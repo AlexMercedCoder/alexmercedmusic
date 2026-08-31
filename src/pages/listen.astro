@@ -1,0 +1,57 @@
+---
+import Base from '../layouts/Base.astro';
+import { platforms } from '../data/catalog';
+
+const label: Record<string, string> = {
+  acoustic: 'Acoustic',
+  electronic: 'Electronic',
+  ai: 'Rebuilt with Suno',
+  all: 'Everything',
+};
+---
+
+<Base
+  title="Where to listen"
+  description="Every place Alex Merced's music is hosted: two YouTube playlists, two SoundCloud accounts, ReverbNation, Suno and Instagram."
+  keywords={['Alex Merced music links', 'SoundCloud', 'ReverbNation', 'Suno', 'YouTube']}
+>
+  <section class="section">
+    <div class="shell">
+      <p class="eyebrow">Everywhere it lives</p>
+      <h1>Where to listen</h1>
+      <p class="lede">
+        The catalogue is spread over the platforms it was uploaded to at the time, and
+        none of it has been consolidated. This is the whole map, with the counts each
+        platform reports.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="grid grid--2">
+        {platforms.map((p) => (
+          <a class="card card--era" data-era={p.era} href={p.url} style="text-decoration:none">
+            <p class="eyebrow" style="margin:0;color:var(--era)">{label[p.era]}</p>
+            <h3>{p.label}</h3>
+            <p>{p.note}</p>
+            {p.stat && <p class="pair__style">{p.stat}</p>}
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section__head">
+        <h2>The rest of the work</h2>
+        <p>
+          Music is the older half of what Alex does. The current work is data and AI,
+          and it lives across a network of sites that all start from
+          <a href="https://alexmerced.com">alexmerced.com</a>.
+        </p>
+      </div>
+    </div>
+  </section>
+</Base>

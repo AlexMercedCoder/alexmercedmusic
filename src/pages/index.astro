@@ -1,0 +1,159 @@
+---
+import Base from '../layouts/Base.astro';
+import {
+  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
+  albums, sunoSongs, platforms,
+} from '../data/catalog';
+
+const paired = reimagined.filter((r) => r.original);
+const electronicTrackCount = albums.reduce((n, a) => n + (a.totalTracks ?? a.tracks.length), 0);
+
+const jsonLd = [
+  {
+    '@type': 'CollectionPage',
+    '@id': 'https://alexmercedmusic.com/#homepage',
+    url: 'https://alexmercedmusic.com/',
+    name: 'Alex Merced Music',
+    isPartOf: { '@id': 'https://alexmercedmusic.com/#website' },
+    about: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+  },
+];
+---
+
+<Base
+  title="Alex Merced Music"
+  description="Two decades of music by Alex Merced. Acoustic songs recorded from the mid-2000s, electronic albums produced in FL Studio, and seven of those same songs rebuilt with Suno."
+  keywords={['Alex Merced', 'Alex Merced music', 'singer songwriter', 'acoustic', 'glitch hop', 'FL Studio', 'Suno', 'AI covers']}
+  jsonLd={jsonLd}
+>
+  <section class="section hero">
+    <div class="shell">
+      <div class="hero__grid">
+        <div>
+          <p class="eyebrow">Songs, recordings and productions</p>
+          <h1>The same songs,<br />twenty years apart.</h1>
+          <p class="lede">
+            Alex Merced has been writing and recording since the mid-2000s: a guitar and a
+            camera first, then years of electronic production, and lately a set of those
+            early songs rebuilt with an AI model. This is where all three live.
+          </p>
+          <div class="era-key">
+            <span data-era="acoustic"><i></i>Acoustic</span>
+            <span data-era="electronic"><i></i>Electronic</span>
+            <span data-era="ai"><i></i>Rebuilt with Suno</span>
+          </div>
+        </div>
+        <img
+          class="hero__portrait"
+          src="/images/portrait-hero.webp"
+          width="900" height="900"
+          alt="Alex Merced"
+          fetchpriority="high"
+        />
+      </div>
+
+      <div class="stats" style="margin-top:2.5rem">
+        <div data-era="acoustic"><b>{acousticTracks.length}</b><span>Acoustic recordings</span></div>
+        <div data-era="electronic"><b>{electronicTrackCount}</b><span>Electronic tracks</span></div>
+        <div data-era="ai"><b>{reimagined.length}</b><span>Rebuilt with Suno</span></div>
+        <div data-era="all"><b>20</b><span>Years of it</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">The loop closed</p>
+        <h2>Songs written on a guitar, handed to a model</h2>
+        <p class="lede">
+          Seven songs from the archive have been rebuilt with Suno in styles they were
+          never written for: disco house, salsa, rock. Each video opens with a clip of
+          the original recording, so you hear where it started before you hear where it
+          went. Six of the seven still have that original sitting in the archive.
+        </p>
+      </div>
+
+      <div class="grid" style="gap:0.8rem">
+        {paired.map((song) => (
+          <div class="pair">
+            <div class="pair__side pair__then">
+              <small>The recording</small>
+              <div class="pair__title">{song.original}</div>
+            </div>
+            <div class="pair__arrow" aria-hidden="true">&rarr;</div>
+            <div class="pair__side pair__now">
+              <small>Rebuilt as</small>
+              <div class="pair__title">{song.title}</div>
+              <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+
+      <div class="btn-row" style="margin-top:1.6rem">
+        <a class="btn btn--primary" href="/reimagined">All seven, and what changed</a>
+        <a class="btn" href={reimaginedPlaylist.url}>Watch the playlist</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Three eras</p>
+        <h2>What is here</h2>
+      </div>
+      <div class="grid grid--3">
+        <article class="card card--era" data-era="acoustic">
+          <h3>The acoustic archive</h3>
+          <p>
+            {acousticTracks.length} recordings that survive out of {acousticPlaylist.stated}, most of
+            them posted to a channel called The Loveatrian. A guitar, a room, and songs
+            about the things you write songs about at that age.
+          </p>
+          <p><a href="/acoustic">Browse the archive</a></p>
+        </article>
+        <article class="card card--era" data-era="electronic">
+          <h3>The electronic catalogue</h3>
+          <p>
+            {albums.length} albums produced in FL Studio, filed under electronica, electro pop and
+            glitch hop out of Brooklyn. The tutorials he recorded alongside them ended up
+            with a wider audience than the music.
+          </p>
+          <p><a href="/electronic">Hear the albums</a></p>
+        </article>
+        <article class="card card--era" data-era="ai">
+          <h3>What he does now</h3>
+          <p>
+            The day job is data and AI, so the music comes in bursts: {sunoSongs.length} newer songs
+            generated on Suno, tagged indie prog, and the occasional acoustic take when a
+            guitar is within reach.
+          </p>
+          <p><a href="/listen">Follow along</a></p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="section__head" style="margin-bottom:1.5rem">
+        <p class="eyebrow">Everywhere else</p>
+        <h2>Where to listen</h2>
+      </div>
+      <div class="grid grid--2">
+        {platforms.slice(0, 4).map((p) => (
+          <a class="card card--era" data-era={p.era} href={p.url} style="text-decoration:none">
+            <h3>{p.label}</h3>
+            <p>{p.note}</p>
+            {p.stat && <p class="pair__style">{p.stat}</p>}
+          </a>
+        ))}
+      </div>
+      <div class="btn-row" style="margin-top:1.4rem">
+        <a class="btn" href="/listen">Every platform</a>
+      </div>
+    </div>
+  </section>
+</Base>

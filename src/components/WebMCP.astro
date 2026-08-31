@@ -1,0 +1,172 @@
+---
+import {
+  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
+  albums, singles2013, sunoSongs, sunoStyle, platforms, tutorials,
+  reverbnationFeatured,
+} from '../data/catalog';
+
+const catalog = {
+  acoustic: {
+    playlist: acousticPlaylist,
+    count: acousticTracks.length,
+    tracks: acousticTracks,
+  },
+  reimagined: {
+    playlist: reimaginedPlaylist,
+    count: reimagined.length,
+    songs: reimagined,
+  },
+  electronic: {
+    albums: albums.map((a) => ({ ...a, listed: a.tracks.length, total: a.totalTracks ?? a.tracks.length })),
+    singles2013,
+    reverbnationFeatured,
+    tutorials,
+  },
+  now: { suno: sunoSongs, style: sunoStyle },
+  platforms,
+};
+---
+
+<script is:inline define:vars={{ catalog }}>
+  (function () {
+    // The proposal has moved between navigator and document; accept either, and
+    // keep watching briefly, because a runtime injected by an extension can
+    // arrive after this page has finished loading.
+    const WAIT_MS = 10000;
+    const POLL_MS = 250;
+
+    const find = () => {
+      const nav = navigator, doc = document;
+      if (nav.modelContext && typeof nav.modelContext.registerTool === 'function') return nav.modelContext;
+      if (doc.modelContext && typeof doc.modelContext.registerTool === 'function') return doc.modelContext;
+      return null;
+    };
+
+    const ok = (value) => ({ content: [{ type: 'text', text: JSON.stringify(value, null, 2) }] });
+    const term = (input, key) => String((input && input[key]) || '').trim().toLowerCase();
+
+    const everyTrack = [
+      ...catalog.acoustic.tracks.map((t) => ({ ...t, era: 'acoustic' })),
+      ...catalog.reimagined.songs.map((t) => ({ ...t, era: 'ai' })),
+      ...catalog.electronic.albums.flatMap((a) =>
+        a.tracks.map((title) => ({ title, era: 'electronic', album: a.title }))),
+      ...catalog.electronic.singles2013.map((t) => ({ ...t, era: 'electronic' })),
+      ...catalog.now.suno.map((t) => ({ ...t, era: 'ai' })),
+    ];
+
+    const tools = [
+      {
+        name: 'music_overview',
+        description:
+          'Summarise the music Alex Merced has released: how many recordings there are in each of the three eras, what each era is, and where each one is hosted.',
+        inputSchema: { type: 'object', properties: {} },
+        execute: () => ok({
+          eras: {
+            acoustic: {
+              what: 'Guitar and voice recordings written and performed by Alex Merced, uploaded from the mid-2000s onward.',
+              playable: catalog.acoustic.count,
+              statedInPlaylist: catalog.acoustic.playlist.stated,
+              unavailable: catalog.acoustic.playlist.unavailable,
+              where: catalog.acoustic.playlist.url,
+            },
+            electronic: {
+              what: 'Produced electronic music, made largely in FL Studio and filed under electronica, electro pop and glitch hop.',
+              albums: catalog.electronic.albums.length,
+              where: 'https://soundcloud.com/alexmerced',
+            },
+            ai: {
+              what: 'Songs from the acoustic catalogue rebuilt with Suno, plus newer songs generated from scratch.',
+              covers: catalog.reimagined.count,
+              newSongs: catalog.now.suno.length,
+              where: catalog.reimagined.playlist.url,
+            },
+          },
+          platforms: catalog.platforms,
+        }),
+      },
+      {
+        name: 'search_songs',
+        description:
+          'Find a song by title across every era. Returns the era it belongs to, its runtime where the host reports one, and the album it came from for the electronic tracks.',
+        inputSchema: {
+          type: 'object',
+          properties: { query: { type: 'string', description: 'Part of a song title.' } },
+          required: ['query'],
+        },
+        execute: (input) => {
+          const q = term(input, 'query');
+          if (!q) return ok({ error: 'Give a query.', total: everyTrack.length });
+          const hits = everyTrack.filter((t) => t.title.toLowerCase().includes(q));
+          return ok({ query: q, found: hits.length, songs: hits.slice(0, 40) });
+        },
+      },
+      {
+        name: 'list_reimaginings',
+        description:
+          'List the songs rebuilt with Suno, each paired with the acoustic recording it reworks. Every video opens with a clip of that original, so the pairing is the point of the series.',
+        inputSchema: { type: 'object', properties: {} },
+        execute: () => ok({
+          playlist: catalog.reimagined.playlist,
+          pairs: catalog.reimagined.songs.map((s) => ({
+            reimagined: s.title,
+            style: s.style,
+            length: s.length,
+            originalRecording: s.original ?? null,
+            originalInArchive: Boolean(s.original),
+          })),
+        }),
+      },
+      {
+        name: 'list_albums',
+        description:
+          'List the electronic albums and what is on them. Some albums show only their first five tracks on the host, and the total is given where that is the case.',
+        inputSchema: { type: 'object', properties: {} },
+        execute: () => ok({ albums: catalog.electronic.albums, singles: catalog.electronic.singles2013 }),
+      },
+      {
+        name: 'where_to_listen',
+        description:
+          'Where the music is hosted. Filter by era with acoustic, electronic or ai, or leave it empty for everything.',
+        inputSchema: {
+          type: 'object',
+          properties: { era: { type: 'string', description: 'acoustic, electronic, ai, or all.' } },
+        },
+        execute: (input) => {
+          const era = term(input, 'era');
+          const list = !era || era === 'all'
+            ? catalog.platforms
+            : catalog.platforms.filter((p) => p.era === era || p.era === 'all');
+          return ok({ era: era || 'all', platforms: list });
+        },
+      },
+    ];
+
+    const register = (ctx) => {
+      for (const tool of tools) {
+        try {
+          ctx.registerTool({
+            name: tool.name,
+            description: tool.description,
+            inputSchema: tool.inputSchema,
+            execute: async (input) => {
+              try { return tool.execute(input || {}); }
+              catch (error) {
+                return { content: [{ type: 'text', text: JSON.stringify({ error: String(error) }) }], isError: true };
+              }
+            },
+          });
+        } catch { /* already registered, or unsupported */ }
+      }
+    };
+
+    const now = find();
+    if (now) { register(now); return; }
+
+    const started = Date.now();
+    const timer = setInterval(() => {
+      const ctx = find();
+      if (ctx) { clearInterval(timer); register(ctx); return; }
+      if (Date.now() - started > WAIT_MS) clearInterval(timer);
+    }, POLL_MS);
+  })();
+</script>

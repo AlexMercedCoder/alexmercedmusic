@@ -1,0 +1,100 @@
+---
+import Base from '../layouts/Base.astro';
+import { reimagined, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
+
+const jsonLd = [
+  {
+    '@type': 'MusicPlaylist',
+    '@id': 'https://alexmercedmusic.com/reimagined#playlist',
+    name: reimaginedPlaylist.title,
+    url: reimaginedPlaylist.url,
+    numTracks: reimagined.length,
+    description: reimaginedPlaylist.description,
+    byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+    track: reimagined.map((t, i) => ({
+      '@type': 'MusicRecording',
+      position: i + 1,
+      name: t.title,
+      byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+    })),
+  },
+];
+---
+
+<Base
+  title="Reimagined with Suno"
+  description="Seven songs from Alex Merced's acoustic archive rebuilt with Suno in styles they were never written for, each paired with the original recording it reworks."
+  keywords={['Suno', 'AI music', 'AI covers', 'Alex Merced', 'disco house', 'salsa cover']}
+  jsonLd={jsonLd}
+>
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <p class="eyebrow">Era three</p>
+      <h1>The songs, handed to a model</h1>
+      <p class="lede">
+        A song written for one voice and one guitar carries an arrangement it never got
+        to have. These seven take songs from the archive and run them through Suno in
+        styles they were never written for, which is the closest thing to hearing what a
+        different life would have done with them.
+      </p>
+      <p class="lede" style="margin-top:1rem">
+        Every video opens with a clip of the original recording before the rebuild
+        starts, so the comparison is built into the listening rather than left to the
+        listener.
+      </p>
+      <div class="btn-row" style="margin-top:1.8rem">
+        <a class="btn btn--primary" href={reimaginedPlaylist.url}>Watch all seven</a>
+        <a class="btn" href="/acoustic">Read the originals</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <h2>What became what</h2>
+      </div>
+      <div class="grid" style="gap:0.8rem">
+        {reimagined.map((song) => (
+          <div class="pair">
+            <div class="pair__side pair__then">
+              <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
+              <div class="pair__title">{song.original ?? 'An earlier song of his'}</div>
+            </div>
+            <div class="pair__arrow" aria-hidden="true">&rarr;</div>
+            <div class="pair__side pair__now">
+              <small>Rebuilt as</small>
+              <div class="pair__title">{song.title}</div>
+              <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <h2>And newer songs, written with it</h2>
+        <p>
+          Beyond the rebuilds there are songs generated from scratch, filed on Suno
+          under a style he describes himself as
+          <em>{sunoStyle}</em>.
+        </p>
+      </div>
+      <ol class="tracks">
+        {sunoSongs.map((t, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span>{t.title}</span>
+            <span class="len">Indie prog</span>
+          </li>
+        ))}
+      </ol>
+      <div class="btn-row" style="margin-top:1.4rem">
+        <a class="btn" href="https://suno.com/@alexmerced">The Suno profile</a>
+      </div>
+    </div>
+  </section>
+</Base>

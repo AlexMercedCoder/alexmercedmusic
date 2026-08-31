@@ -1,0 +1,44 @@
+---
+import { networkGroups, connectLinks, newsletter } from '../data/network';
+const year = new Date().getFullYear();
+---
+
+<footer class="site-footer">
+  <div class="shell">
+    <div class="footer-grid">
+      <div>
+        <h4>This site</h4>
+        <ul>
+          <li><a href="/acoustic">Acoustic archive</a></li>
+          <li><a href="/reimagined">Reimagined with Suno</a></li>
+          <li><a href="/electronic">Electronic catalogue</a></li>
+          <li><a href="/listen">Where to listen</a></li>
+          <li><a href="/llms.txt">llms.txt</a></li>
+        </ul>
+      </div>
+      {networkGroups.map((group) => (
+        <div>
+          <h4>{group.title}</h4>
+          <ul>
+            {group.links.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+          </ul>
+        </div>
+      ))}
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          {connectLinks.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-base">
+      <p>
+        Alex Merced writes and records music, and has done since the mid-2000s. His work in
+        data and AI lives across <a href="https://alexmerced.com">the rest of the network</a>,
+        and the weekly newsletter is at <a href={newsletter.url}>amdatalakehouse.substack.com</a>.
+      </p>
+      <p>&copy; {year} Alex Merced. Recordings and songs are his own.</p>
+    </div>
+  </div>
+</footer>

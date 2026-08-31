@@ -1,0 +1,116 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import WebMCP from '../components/WebMCP.astro';
+
+export interface Props {
+  title: string;
+  description: string;
+  /** Extra JSON-LD nodes merged into the site graph for this page. */
+  jsonLd?: Record<string, unknown>[];
+  keywords?: string[];
+  ogType?: 'website' | 'article' | 'music.album';
+}
+
+const { title, description, jsonLd = [], keywords = [], ogType = 'website' } = Astro.props;
+
+const SITE = 'https://alexmercedmusic.com';
+const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', SITE).href;
+const fullTitle = Astro.url.pathname === '/' ? title : `${title} | Alex Merced Music`;
+
+const baseGraph = [
+  {
+    '@type': 'WebSite',
+    '@id': `${SITE}/#website`,
+    name: 'Alex Merced Music',
+    url: `${SITE}/`,
+    description:
+      'Two decades of music by Alex Merced: acoustic songs recorded from the mid-2000s, electronic albums produced in FL Studio, and a set of those same songs rebuilt with Suno.',
+    inLanguage: 'en-US',
+    publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
+  },
+  {
+    '@type': 'Person',
+    '@id': 'https://alexmerced.com/#alexmerced',
+    name: 'Alex Merced',
+    url: 'https://alexmerced.com',
+    description:
+      'Alex Merced is a musician and a developer advocate. He has written and recorded acoustic songs since the mid-2000s and produced electronic music under his own name.',
+    sameAs: [
+      'https://alexmerced.com',
+      'https://www.youtube.com/@AlexMercedMusic',
+      'https://soundcloud.com/alexmerced',
+      'https://soundcloud.com/alex-merced',
+      'https://legacy.reverbnation.com/alexmerced',
+      'https://suno.com/@alexmerced',
+      'https://www.instagram.com/alexmercedmusic',
+    ],
+  },
+  {
+    '@type': 'MusicGroup',
+    '@id': `${SITE}/#musicgroup`,
+    name: 'Alex Merced',
+    url: SITE,
+    genre: ['Singer-songwriter', 'Acoustic', 'Electronica', 'Electro pop', 'Glitch hop', 'Indie prog'],
+    foundingLocation: { '@type': 'Place', name: 'Brooklyn, New York' },
+    member: { '@id': 'https://alexmerced.com/#alexmerced' },
+    sameAs: [
+      'https://www.youtube.com/@AlexMercedMusic',
+      'https://soundcloud.com/alexmerced',
+      'https://legacy.reverbnation.com/alexmerced',
+      'https://suno.com/@alexmerced',
+    ],
+  },
+];
+
+const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...jsonLd] };
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{fullTitle}</title>
+    <meta name="description" content={description} />
+    {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
+    <link rel="canonical" href={canonical} />
+    <meta name="author" content="Alex Merced" />
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+    <meta name="theme-color" content="#080c11" />
+    <meta name="color-scheme" content="dark" />
+
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="Alex Merced Music" />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content={`${SITE}/og.png`} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Alex Merced Music" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={`${SITE}/og.png`} />
+
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+
+    <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <WebMCP />
+    <SiteHeader path={Astro.url.pathname} />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>
