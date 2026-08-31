@@ -26,17 +26,13 @@ export type Track = {
 /**
  * The acoustic archive, from the Best of Alex Merced Music playlist.
  *
- * Most of it was uploaded to his YouTube channel, which is where
- * these recordings have lived since the mid-2000s. The playlist states 44
- * videos and hides 5 that are no longer available, so this is what a visitor
- * can actually play.
+ * Most of it was uploaded to his YouTube channel, which is where these
+ * recordings have lived since the mid-2000s.
  */
 export const acousticPlaylist = {
   title: 'Best of Alex Merced Music',
   url: 'https://www.youtube.com/playlist?list=PL0DCC201C0F84EB13',
   description: 'A Playlist of some of the best video bits of Alex Merced and his guitar.',
-  stated: 44,
-  unavailable: 5,
 };
 
 export const acousticTracks: Track[] = [
@@ -256,7 +252,7 @@ export const platforms: Platform[] = [
     url: 'https://www.youtube.com/playlist?list=PL0DCC201C0F84EB13',
     era: 'acoustic',
     note: 'Two decades of guitar recordings, most of them uploaded to his YouTube channel.',
-    stat: '44 videos, 5 no longer available',
+    stat: `${acousticTracks.length} recordings`,
   },
   {
     label: 'AI Covers of Alex Merced Songs',
