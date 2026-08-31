@@ -29,7 +29,7 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 
 ## Era one: the acoustic archive
 
-Guitar and voice, written and performed by Alex Merced, uploaded from the mid-2000s onward. Most went to a channel called The Loveatrian. The playlist states ${acousticPlaylist.stated} videos and hides ${acousticPlaylist.unavailable} that are no longer available, so ${acousticTracks.length} can actually be played.
+Guitar and voice, written and performed by Alex Merced, uploaded from the mid-2000s onward. Most went to his YouTube channel. The playlist states ${acousticPlaylist.stated} videos and hides ${acousticPlaylist.unavailable} that are no longer available, so ${acousticTracks.length} can actually be played.
 
 Titles are recorded here as they were typed at the time, including the inconsistent capitalisation, because that is what you find when you go and look.
 

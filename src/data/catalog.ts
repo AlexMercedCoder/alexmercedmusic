@@ -26,7 +26,7 @@ export type Track = {
 /**
  * The acoustic archive, from the Best of Alex Merced Music playlist.
  *
- * Most of it was uploaded to a channel called The Loveatrian, which is where
+ * Most of it was uploaded to his YouTube channel, which is where
  * these recordings have lived since the mid-2000s. The playlist states 44
  * videos and hides 5 that are no longer available, so this is what a visitor
  * can actually play.
@@ -255,7 +255,7 @@ export const platforms: Platform[] = [
     label: 'Best of Alex Merced Music',
     url: 'https://www.youtube.com/playlist?list=PL0DCC201C0F84EB13',
     era: 'acoustic',
-    note: 'Two decades of guitar recordings, most of them uploaded to a channel called The Loveatrian.',
+    note: 'Two decades of guitar recordings, most of them uploaded to his YouTube channel.',
     stat: '44 videos, 5 no longer available',
   },
   {
