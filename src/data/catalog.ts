@@ -8,6 +8,9 @@
  * when you go and listen.
  */
 
+import albumsData from './albums.json';
+import electronicTracksData from './electronic-tracks.json';
+
 export type Era = 'acoustic' | 'electronic' | 'ai';
 
 export type Track = {
@@ -149,80 +152,53 @@ export const reimagined: Reimagining[] = [
 
 export type Album = {
   title: string;
-  posted: string;
-  /** Tracks the host lists on the album. */
+  url: string;
+  /** Release date the host reports, ISO. */
+  released: string;
   tracks: string[];
-  /** Some albums show only the first five and count the rest. */
-  totalTracks?: number;
 };
 
 /**
- * The albums on the SoundCloud account that holds the produced work. Where the
- * page shows five tracks and a "view 6 tracks" control, the sixth is counted
- * but not named here, because naming it would mean guessing.
+ * The seven albums on the SoundCloud account that holds the produced work, with
+ * complete tracklists. The album pages themselves show five tracks and hide the
+ * rest behind a control, so these came from the API instead of the page.
  */
-export const albums: Album[] = [
-  {
-    title: 'Mid-Life Crisis',
-    posted: '12 years ago',
-    totalTracks: 6,
-    tracks: [
-      '10 - Alex Merced - If I Was DDR Song',
-      '11 - Alex Merced - And There Was Cacophoney',
-      '12 - Alex Merced - A Short Burst Of Content',
-      '14 - Alex Merced - WTF',
-      '15 - Alex Merced - A Meloncholy Uplift',
-    ],
-  },
-  {
-    title: 'An EP',
-    posted: '12 years ago',
-    tracks: ['Triumphant March', 'Warm Noises For Warm People', 'Sausages'],
-  },
-  {
-    title: 'Are You Game',
-    posted: '12 years ago',
-    totalTracks: 6,
-    tracks: [
-      '7 - Alex Merced - Gamers Ballad',
-      '8 - Alex Merced - Gamers Revolution',
-      '9 - Alex Merced - I Love Games',
-      '10 - Alex Merced - Mushroom By The Pond',
-      '11 - Alex Merced - That Gamer Phunk',
-    ],
-  },
-  {
-    title: 'Voices Volume 1',
-    posted: '12 years ago',
-    totalTracks: 6,
-    tracks: [
-      'Spilling Guts',
-      'Still Figuring It Out',
-      'The Best Of Me',
-      "The Games I've Played",
-      'The Voices In My Head',
-    ],
-  },
-  {
-    title: 'Album - Spaceman',
-    posted: '12 years ago',
-    tracks: [
-      '3 - Alex Merced - Love Slows Time',
-      '4 - Alex Merced - White Christmas',
-      '5 - Alex Merced - Power Ballad Of Love And Frustration',
-      '6 - Alex Merced - Bach That Thing Up',
-    ],
-  },
-];
+export const albums: Album[] = albumsData;
 
-/** Singles posted to the second SoundCloud account, all in one run in 2013. */
-export const singles2013: Track[] = [
-  { title: '(2013 New Song) Suspense Games' },
-  { title: '(2013 New Song) Sabre Fun' },
-  { title: '(New 2013 Song) March Madness' },
-  { title: '(2013 Song) Fun Night' },
-  { title: '(New 2013 Song) 8 Bit Good Night' },
-];
+export type ElectronicTrack = {
+  title: string;
+  seconds: number;
+  /** reverbnation, soundcloud, or soundcloud-albums. A track can be on several. */
+  sources: string[];
+  url: string;
+  /** Set when the track sits on one of the SoundCloud albums. */
+  album?: string;
+};
+
+/**
+ * Every produced track, merged across ReverbNation and both SoundCloud accounts
+ * and deduplicated on a normalised title, since the same song is often filed as
+ * "12 - Alex Merced - WTF" on one platform and "WTF" on another.
+ *
+ * ReverbNation carries almost all of it. The overlap between the platforms is
+ * small, which is why the total is far larger than any single profile suggests.
+ * Acoustic recordings that happen to sit on SoundCloud are excluded here and
+ * live in acousticTracks instead.
+ */
+export const electronicTracks: ElectronicTrack[] = electronicTracksData;
+
+export const electronicStats = {
+  total: electronicTracks.length,
+  onReverbNation: electronicTracks.filter((t) => t.sources.includes('reverbnation')).length,
+  onSoundCloud: electronicTracks.filter((t) => t.sources.some((s) => s.startsWith('soundcloud'))).length,
+  inAlbums: electronicTracks.filter((t) => t.album).length,
+  seconds: electronicTracks.reduce((n, t) => n + t.seconds, 0),
+};
+
+/** The produced catalogue's runtime, written out. */
+export const electronicRuntime = `${Math.floor(electronicStats.seconds / 3600)} hours ${Math.round(
+  (electronicStats.seconds % 3600) / 60,
+)} minutes`;
 
 /** What ReverbNation puts at the top of the profile. */
 export const reverbnationFeatured = [
@@ -232,6 +208,7 @@ export const reverbnationFeatured = [
   'Intense Piano',
   'Groovy Head Bobber',
 ];
+
 
 /** The FL Studio teaching, which outdrew the music it came from. */
 export const tutorials: Track[] = [

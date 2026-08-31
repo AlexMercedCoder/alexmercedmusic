@@ -2,11 +2,10 @@
 import Base from '../layouts/Base.astro';
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, sunoSongs, platforms,
+  albums, electronicStats, electronicRuntime, sunoSongs, platforms,
 } from '../data/catalog';
 
 const paired = reimagined.filter((r) => r.original);
-const electronicTrackCount = albums.reduce((n, a) => n + (a.totalTracks ?? a.tracks.length), 0);
 
 const jsonLd = [
   {
@@ -54,7 +53,7 @@ const jsonLd = [
 
       <div class="stats" style="margin-top:2.5rem">
         <div data-era="acoustic"><b>{acousticTracks.length}</b><span>Acoustic recordings</span></div>
-        <div data-era="electronic"><b>{electronicTrackCount}</b><span>Electronic tracks</span></div>
+        <div data-era="electronic"><b>{electronicStats.total}</b><span>Electronic tracks</span></div>
         <div data-era="ai"><b>{reimagined.length}</b><span>Rebuilt with Suno</span></div>
         <div data-era="all"><b>20</b><span>Years of it</span></div>
       </div>
@@ -117,11 +116,12 @@ const jsonLd = [
         <article class="card card--era" data-era="electronic">
           <h3>The electronic catalogue</h3>
           <p>
-            {albums.length} albums produced in FL Studio, filed under electronica, electro pop and
-            glitch hop out of Brooklyn. The tutorials he recorded alongside them ended up
-            with a wider audience than the music.
+            {electronicStats.total} tracks produced in FL Studio, {electronicRuntime} of it,
+            filed under electronica, electro pop and glitch hop out of Brooklyn. It is
+            scattered over three profiles and no one of them holds the whole thing, so the
+            full list is assembled here.
           </p>
-          <p><a href="/electronic">Hear the albums</a></p>
+          <p><a href="/electronic">Browse all {electronicStats.total}</a></p>
         </article>
         <article class="card card--era" data-era="ai">
           <h3>What he does now</h3>

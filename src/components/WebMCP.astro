@@ -1,7 +1,8 @@
 ---
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, singles2013, sunoSongs, sunoStyle, platforms, tutorials,
+  albums, electronicTracks, electronicStats, electronicRuntime,
+  sunoSongs, sunoStyle, platforms, tutorials,
   reverbnationFeatured,
 } from '../data/catalog';
 
@@ -17,8 +18,9 @@ const catalog = {
     songs: reimagined,
   },
   electronic: {
-    albums: albums.map((a) => ({ ...a, listed: a.tracks.length, total: a.totalTracks ?? a.tracks.length })),
-    singles2013,
+    albums,
+    tracks: electronicTracks,
+    stats: { ...electronicStats, runtime: electronicRuntime },
     reverbnationFeatured,
     tutorials,
   },
@@ -48,9 +50,7 @@ const catalog = {
     const everyTrack = [
       ...catalog.acoustic.tracks.map((t) => ({ ...t, era: 'acoustic' })),
       ...catalog.reimagined.songs.map((t) => ({ ...t, era: 'ai' })),
-      ...catalog.electronic.albums.flatMap((a) =>
-        a.tracks.map((title) => ({ title, era: 'electronic', album: a.title }))),
-      ...catalog.electronic.singles2013.map((t) => ({ ...t, era: 'electronic' })),
+      ...catalog.electronic.tracks.map((t) => ({ ...t, era: 'electronic' })),
       ...catalog.now.suno.map((t) => ({ ...t, era: 'ai' })),
     ];
 
@@ -71,8 +71,15 @@ const catalog = {
             },
             electronic: {
               what: 'Produced electronic music, made largely in FL Studio and filed under electronica, electro pop and glitch hop.',
+              tracks: catalog.electronic.stats.total,
+              runtime: catalog.electronic.stats.runtime,
               albums: catalog.electronic.albums.length,
-              where: 'https://soundcloud.com/alexmerced',
+              spreadOver: {
+                reverbnation: catalog.electronic.stats.onReverbNation,
+                soundcloud: catalog.electronic.stats.onSoundCloud,
+              },
+              note: 'No single profile holds the whole catalogue. The numbers above are the merged, deduplicated set.',
+              where: 'https://legacy.reverbnation.com/alexmerced',
             },
             ai: {
               what: 'Songs from the acoustic catalogue rebuilt with Suno, plus newer songs generated from scratch.',
@@ -119,9 +126,13 @@ const catalog = {
       {
         name: 'list_albums',
         description:
-          'List the electronic albums and what is on them. Some albums show only their first five tracks on the host, and the total is given where that is the case.',
+          'List the electronic albums with their complete tracklists, plus the merged catalogue statistics. The album pages on SoundCloud show only five tracks each, so these lists are more complete than the host.',
         inputSchema: { type: 'object', properties: {} },
-        execute: () => ok({ albums: catalog.electronic.albums, singles: catalog.electronic.singles2013 }),
+        execute: () => ok({
+          albums: catalog.electronic.albums,
+          stats: catalog.electronic.stats,
+          note: 'Use search_songs to look inside the full set of ' + catalog.electronic.stats.total + ' produced tracks.',
+        }),
       },
       {
         name: 'where_to_listen',

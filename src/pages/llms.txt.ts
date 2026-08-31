@@ -1,14 +1,14 @@
 import type { APIRoute } from 'astro';
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, singles2013, sunoSongs, sunoStyle, platforms, tutorials,
+  albums, electronicTracks, electronicStats, electronicRuntime,
+  sunoSongs, sunoStyle, platforms, tutorials,
 } from '../data/catalog';
 import { networkGroups } from '../data/network';
 
 const SITE = 'https://alexmercedmusic.com';
 
 export const GET: APIRoute = async () => {
-  const electronicTracks = albums.reduce((n, a) => n + (a.totalTracks ?? a.tracks.length), 0);
   const paired = reimagined.filter((r) => r.original);
 
   const body = `# Alex Merced Music
@@ -24,7 +24,7 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 - [Home](${SITE}/): the three eras, and the songs that exist in two of them at once.
 - [The acoustic archive](${SITE}/acoustic): ${acousticTracks.length} guitar and voice recordings, listed in full.
 - [Reimagined with Suno](${SITE}/reimagined): ${reimagined.length} rebuilds paired with the recordings they came from.
-- [The electronic catalogue](${SITE}/electronic): ${albums.length} albums, a run of singles, and the FL Studio tutorials.
+- [The electronic catalogue](${SITE}/electronic): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
 - [Where to listen](${SITE}/listen): every platform, with the counts each one reports.
 
 ## Era one: the acoustic archive
@@ -39,13 +39,17 @@ Playlist: ${acousticPlaylist.url}
 
 ## Era two: the electronic catalogue
 
-Produced electronic music, made largely in FL Studio. ReverbNation files it under electronica, electro pop and glitch hop, out of Brooklyn, and reports 6.6 thousand fans. ${electronicTracks} tracks across ${albums.length} albums.
+Produced electronic music, made largely in FL Studio. ReverbNation files it under electronica, electro pop and glitch hop, out of Brooklyn, and reports 6.6 thousand fans.
 
-${albums.map((a) => `### ${a.title}\n${a.tracks.map((t) => `- ${t}`).join('\n')}${a.totalTracks && a.totalTracks > a.tracks.length ? `\n- and ${a.totalTracks - a.tracks.length} more not listed on the album page` : ''}`).join('\n\n')}
+${electronicStats.total} tracks survive in total, ${electronicRuntime} of runtime. They are spread across three profiles and no single one holds them all: ${electronicStats.onReverbNation} are on ReverbNation, ${electronicStats.onSoundCloud} on SoundCloud, and ${electronicStats.inAlbums} sit on one of the ${albums.length} albums. The list below is the merged set, deduplicated on title, since the same track is filed as "12 - Alex Merced - WTF" on one platform and "WTF" on another.
 
-### Singles, 2013
+### The albums
 
-${singles2013.map((t) => `- ${t.title}`).join('\n')}
+${albums.map((a) => `#### ${a.title} (${a.released.slice(0, 4)})\n${a.tracks.map((t) => `- ${t}`).join('\n')}`).join('\n\n')}
+
+### Every produced track
+
+${electronicTracks.map((t) => `- ${t.title} (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')})`).join('\n')}
 
 ### FL Studio tutorials
 

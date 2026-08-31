@@ -51,7 +51,7 @@ body {
 }
 
 a { color: inherit; }
-img, svg { max-width: 100%; display: block; }
+img, svg { max-width: 100%; height: auto; display: block; }
 
 h1, h2, h3, h4 {
   font-family: var(--display);
@@ -200,8 +200,17 @@ p:last-child { margin-bottom: 0; }
   transition: border-color 0.15s ease, background 0.15s ease;
 }
 .btn:hover { border-color: var(--era, var(--acoustic)); background: var(--night-600); }
-.btn--primary { background: var(--acoustic); color: var(--night-900); border-color: var(--acoustic); }
-.btn--primary:hover { background: #edb87a; border-color: #edb87a; }
+.btn--primary {
+  /* Takes the era colour of the section it sits in, so the electronic page's
+     call to action is not wearing the acoustic accent. */
+  background: var(--era, var(--acoustic));
+  color: var(--night-900);
+  border-color: var(--era, var(--acoustic));
+}
+.btn--primary:hover {
+  background: color-mix(in srgb, var(--era, var(--acoustic)) 82%, white);
+  border-color: color-mix(in srgb, var(--era, var(--acoustic)) 82%, white);
+}
 .btn-row { display: flex; flex-wrap: wrap; gap: 0.7rem; }
 
 /* ---------------------------------------------------------------- stat strip */

@@ -1,19 +1,46 @@
 ---
 import Base from '../layouts/Base.astro';
-import { albums, singles2013, reverbnationFeatured, tutorials } from '../data/catalog';
+import {
+  albums,
+  electronicTracks,
+  electronicStats,
+  electronicRuntime,
+  reverbnationFeatured,
+  tutorials,
+} from '../data/catalog';
 
-const jsonLd = albums.map((a) => ({
-  '@type': 'MusicAlbum',
-  name: a.title,
-  byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
-  numTracks: a.totalTracks ?? a.tracks.length,
-  track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t })),
-}));
+const jsonLd = [
+  ...albums.map((a) => ({
+    '@type': 'MusicAlbum',
+    name: a.title,
+    url: a.url,
+    datePublished: a.released,
+    byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+    numTracks: a.tracks.length,
+    track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t })),
+  })),
+  {
+    '@type': 'MusicPlaylist',
+    name: 'The produced catalogue',
+    description: `Every electronic track by Alex Merced across ReverbNation and both SoundCloud accounts, ${electronicStats.total} in total.`,
+    numTracks: electronicStats.total,
+  },
+];
+
+const runtime = `${Math.floor(electronicStats.seconds / 3600)}h ${Math.round(
+  (electronicStats.seconds % 3600) / 60,
+)}m`;
+const mmss = (s: number) => `${Math.floor(s / 60)}:${String(s % 60).padStart(2, '0')}`;
+const label: Record<string, string> = {
+  reverbnation: 'ReverbNation',
+  soundcloud: 'SoundCloud',
+  'soundcloud-albums': 'Album',
+};
 ---
 
 <Base
   title="The electronic catalogue"
-  description="Five albums of electronic music produced by Alex Merced in FL Studio, filed under electronica, electro pop and glitch hop out of Brooklyn."
+  description={`${electronicStats.total} electronic tracks produced by Alex Merced in FL Studio, spread across ReverbNation and two SoundCloud accounts, filed under electronica, electro pop and glitch hop out of Brooklyn.`}
   keywords={['Alex Merced electronic', 'glitch hop', 'FL Studio', 'electronica', 'Brooklyn producer']}
   jsonLd={jsonLd}
 >
@@ -22,14 +49,23 @@ const jsonLd = albums.map((a) => ({
       <p class="eyebrow">Era two</p>
       <h1>Made in FL Studio,<br />filed under glitch hop</h1>
       <p class="lede">
-        Somewhere after the guitar recordings the tools changed. These are produced
-        tracks: five albums plus a run of singles, listed on ReverbNation as electronica,
-        electro pop and glitch hop out of Brooklyn, where the profile still shows 6.6
-        thousand fans and a featured video called Modulate This.
+        Somewhere after the guitar recordings the tools changed, and then they did not
+        stop. {electronicStats.total} produced tracks survive across three profiles,
+        listed on ReverbNation as electronica, electro pop and glitch hop out of
+        Brooklyn. No single profile shows you all of them, which is most of the reason
+        this page exists.
       </p>
       <div class="btn-row" style="margin-top:1.8rem">
-        <a class="btn btn--primary" href="https://soundcloud.com/alexmerced">The albums on SoundCloud</a>
-        <a class="btn" href="https://legacy.reverbnation.com/alexmerced">The ReverbNation profile</a>
+        <a class="btn btn--primary" href="https://legacy.reverbnation.com/alexmerced">The ReverbNation profile</a>
+        <a class="btn" href="https://soundcloud.com/alexmerced">The albums on SoundCloud</a>
+        <a class="btn" href="https://soundcloud.com/alex-merced">The loose tracks</a>
+      </div>
+
+      <div class="stats" style="margin-top:2.4rem">
+        <div data-era="electronic"><b>{electronicStats.total}</b><span>Tracks</span></div>
+        <div data-era="electronic"><b>{runtime}</b><span>Of runtime</span></div>
+        <div data-era="electronic"><b>{albums.length}</b><span>Albums</span></div>
+        <div data-era="electronic"><b>3</b><span>Profiles it is spread over</span></div>
       </div>
     </div>
   </section>
@@ -39,17 +75,16 @@ const jsonLd = albums.map((a) => ({
       <div class="section__head">
         <h2>The albums</h2>
         <p>
-          Where an album lists more tracks than it shows, the count is given and the rest
-          are on the album page rather than guessed at here.
+          Seven of them, all posted in one sitting in April 2014. The album pages show
+          five tracks each and hide the rest, so these tracklists are complete in a way
+          the pages themselves are not.
         </p>
       </div>
       <div class="grid grid--2">
         {albums.map((album) => (
           <article class="card card--era" data-era="electronic">
-            <h3>{album.title}</h3>
-            <p class="pair__style">
-              {album.totalTracks ?? album.tracks.length} tracks · posted {album.posted}
-            </p>
+            <h3><a href={album.url}>{album.title}</a></h3>
+            <p class="pair__style">{album.tracks.length} tracks · {album.released.slice(0, 4)}</p>
             <ol class="tracks" style="margin-top:0.4rem">
               {album.tracks.map((t, i) => (
                 <li>
@@ -59,11 +94,6 @@ const jsonLd = albums.map((a) => ({
                 </li>
               ))}
             </ol>
-            {album.totalTracks && album.totalTracks > album.tracks.length && (
-              <p class="pair__style">
-                and {album.totalTracks - album.tracks.length} more on the album
-              </p>
-            )}
           </article>
         ))}
       </div>
@@ -72,19 +102,57 @@ const jsonLd = albums.map((a) => ({
 
   <section class="section" data-era="electronic">
     <div class="shell">
-      <div class="grid grid--2">
-        <div>
-          <h2 style="margin-bottom:1rem">A run of singles, 2013</h2>
-          <p style="color:var(--ink-soft)">
-            Posted one after another to a second SoundCloud account that holds the loose
-            tracks, acoustic and electronic together.
-          </p>
-          <ol class="tracks" style="margin-top:1rem">
-            {singles2013.map((t, i) => (
-              <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{t.title}</span><span class="len"></span></li>
-            ))}
-          </ol>
+      <div class="section__head">
+        <h2>Everything, in one list</h2>
+        <p>
+          All {electronicStats.total} produced tracks, merged across the three profiles and
+          deduplicated, because the same song is filed as
+          <span class="mono">12 - Alex Merced - WTF</span> on one and
+          <span class="mono">WTF</span> on another. {electronicStats.onReverbNation} sit on
+          ReverbNation, {electronicStats.onSoundCloud} on SoundCloud, and only a handful on
+          both. Every title links out to the track.
+        </p>
+      </div>
+
+      <div class="filter">
+        <label class="filter__field">
+          <span class="sr-only">Search the catalogue</span>
+          <input
+            type="search"
+            id="q"
+            placeholder="Search 269 titles"
+            autocomplete="off"
+            aria-describedby="count"
+          />
+        </label>
+        <div class="filter__chips" role="group" aria-label="Filter by platform">
+          <button type="button" class="chip is-on" data-src="all">All</button>
+          <button type="button" class="chip" data-src="reverbnation">ReverbNation</button>
+          <button type="button" class="chip" data-src="soundcloud">SoundCloud</button>
+          <button type="button" class="chip" data-src="soundcloud-albums">On an album</button>
         </div>
+        <p class="filter__count" id="count" aria-live="polite">{electronicStats.total} tracks</p>
+      </div>
+
+      <ol class="catalogue" id="catalogue">
+        {electronicTracks.map((t, i) => (
+          <li data-title={t.title.toLowerCase()} data-sources={t.sources.join(' ')}>
+            <span class="num">{String(i + 1).padStart(3, '0')}</span>
+            <a href={t.url}>{t.title}</a>
+            <span class="tags">
+              {t.sources.map((s) => <i data-src={s}>{label[s] ?? s}</i>)}
+            </span>
+            <span class="len">{mmss(t.seconds)}</span>
+          </li>
+        ))}
+      </ol>
+      <p class="empty" id="empty" hidden>Nothing matches that.</p>
+    </div>
+  </section>
+
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <div class="grid grid--2">
         <div>
           <h2 style="margin-bottom:1rem">Featured on ReverbNation</h2>
           <p style="color:var(--ink-soft)">
@@ -96,29 +164,101 @@ const jsonLd = albums.map((a) => ({
             ))}
           </ol>
         </div>
+        <div>
+          <h2 style="margin-bottom:1rem">The tutorials outdrew the music</h2>
+          <p style="color:var(--ink-soft)">
+            Alongside the tracks came FL Studio walkthroughs and free sample packs. Judged
+            on views that teaching is the most watched thing on the music channel, which is
+            a fair preview of the career that followed.
+          </p>
+          <ol class="tracks" style="margin-top:1rem">
+            {tutorials.map((t, i) => (
+              <li>
+                <span class="num">{String(i + 1).padStart(2, '0')}</span>
+                <span>{t.title}</span>
+                <span class="len">{t.posted}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <section class="section" data-era="electronic">
-    <div class="shell">
-      <div class="section__head">
-        <h2>The tutorials outdrew the music</h2>
-        <p>
-          Alongside the albums he recorded FL Studio walkthroughs and gave away sample
-          packs. Judged on views, that teaching is the most listened-to thing on the
-          music channel, which is a fair preview of the career that followed.
-        </p>
-      </div>
-      <ol class="tracks">
-        {tutorials.map((t, i) => (
-          <li>
-            <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span>{t.title}</span>
-            <span class="len">{t.posted}</span>
-          </li>
-        ))}
-      </ol>
     </div>
   </section>
 </Base>
+
+<style>
+  .filter { display: flex; flex-wrap: wrap; align-items: center; gap: 0.8rem 1.2rem; margin-bottom: 1.6rem; }
+  .filter__field { flex: 1 1 16rem; }
+  .filter input {
+    width: 100%; padding: 0.7rem 0.9rem; border-radius: var(--radius);
+    border: 1px solid var(--rule); background: var(--surface); color: var(--ink);
+    font: 400 0.95rem/1.2 var(--body);
+  }
+  .filter input:focus-visible { outline: 2px solid var(--electronic); outline-offset: 2px; }
+  .filter__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .chip {
+    padding: 0.45rem 0.8rem; border-radius: 999px; border: 1px solid var(--rule);
+    background: transparent; color: var(--ink-faint); cursor: pointer;
+    font: 500 0.76rem/1 var(--mono); letter-spacing: 0.04em;
+  }
+  .chip:hover { color: var(--ink); border-color: var(--ink-faint); }
+  .chip.is-on { color: var(--bg); background: var(--electronic); border-color: var(--electronic); }
+  .filter__count { margin: 0; font: 400 0.8rem/1 var(--mono); color: var(--ink-faint); }
+
+  .catalogue { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
+  .catalogue li {
+    display: grid; grid-template-columns: 3rem 1fr auto auto; align-items: baseline;
+    gap: 0.9rem; padding: 0.55rem 0; border-bottom: 1px solid var(--rule);
+  }
+  .catalogue li[hidden] { display: none; }
+  .catalogue .num { font: 400 0.75rem/1 var(--mono); color: var(--ink-faint); }
+  .catalogue a { color: var(--ink); text-decoration: none; }
+  .catalogue a:hover { color: var(--electronic); text-decoration: underline; }
+  .catalogue .len { font: 400 0.78rem/1 var(--mono); color: var(--ink-faint); font-variant-numeric: tabular-nums; }
+  .tags { display: flex; gap: 0.3rem; }
+  .tags i {
+    font: 500 0.64rem/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase;
+    font-style: normal; padding: 0.24rem 0.45rem; border-radius: 3px;
+    border: 1px solid var(--rule); color: var(--ink-faint); white-space: nowrap;
+  }
+  .tags i[data-src='reverbnation'] { color: var(--electronic); border-color: color-mix(in srgb, var(--electronic) 40%, transparent); }
+  .empty { color: var(--ink-faint); padding: 2rem 0; }
+
+  @media (max-width: 620px) {
+    .catalogue li { grid-template-columns: 2.2rem 1fr auto; }
+    .tags { grid-column: 2 / -1; }
+  }
+</style>
+
+<script>
+  const list = document.getElementById('catalogue')!;
+  const rows = Array.from(list.children) as HTMLLIElement[];
+  const q = document.getElementById('q') as HTMLInputElement;
+  const count = document.getElementById('count')!;
+  const empty = document.getElementById('empty')!;
+  const chips = Array.from(document.querySelectorAll<HTMLButtonElement>('.chip'));
+  let source = 'all';
+
+  function apply() {
+    const term = q.value.trim().toLowerCase();
+    let shown = 0;
+    for (const row of rows) {
+      const okText = !term || row.dataset.title!.includes(term);
+      const okSrc = source === 'all' || row.dataset.sources!.split(' ').includes(source);
+      const show = okText && okSrc;
+      row.hidden = !show;
+      if (show) shown++;
+    }
+    count.textContent = shown === rows.length ? `${shown} tracks` : `${shown} of ${rows.length} tracks`;
+    empty.hidden = shown > 0;
+  }
+
+  q.addEventListener('input', apply);
+  for (const chip of chips) {
+    chip.addEventListener('click', () => {
+      source = chip.dataset.src!;
+      for (const c of chips) c.classList.toggle('is-on', c === chip);
+      apply();
+    });
+  }
+</script>
