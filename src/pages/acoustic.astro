@@ -9,7 +9,9 @@ import {
   youtubeArchiveTracks,
 } from '../data/catalog';
 
-const rebuilt = new Set(reimagined.map((r) => r.original).filter(Boolean));
+const rebuiltByOriginal = new Map(
+  reimagined.filter((r) => r.original).map((r) => [r.original, r]),
+);
 
 const jsonLd = [
   {
@@ -76,7 +78,7 @@ const jsonLd = [
         <h2>The YouTube archive playlist</h2>
         <p>
           {youtubeArchiveTracks.length} accessible videos in current playlist order.
-          Marked titles have since been rebuilt with Suno.
+          Rebuilt songs include direct links to both the original and new versions.
         </p>
       </div>
       <ol class="tracks">
@@ -85,8 +87,13 @@ const jsonLd = [
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span>
               {t.url ? <a class="song-link" href={t.url}>{t.title}</a> : t.title}
-              {rebuilt.has(t.title) && (
-                <span class="pair__style" style="display:inline;margin-left:0.6rem;color:var(--ai)">rebuilt</span>
+              {rebuiltByOriginal.has(t.title) && (
+                <span class="source-links source-links--inline">
+                  <a href={t.url}>Original ↗</a>
+                  {rebuiltByOriginal.get(t.title)?.links?.map((link) => (
+                    <a href={link.url}>Rebuilt · {link.source === 'youtube' ? 'YouTube' : 'Suno'} ↗</a>
+                  ))}
+                </span>
               )}
             </span>
             <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>

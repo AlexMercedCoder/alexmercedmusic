@@ -5,7 +5,7 @@ import {
   albums, electronicStats, electronicRuntime, sunoSongs, platforms,
 } from '../data/catalog';
 
-const paired = reimagined.filter((r) => r.original);
+const paired = reimagined;
 const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
 
 const jsonLd = [
@@ -78,12 +78,19 @@ const jsonLd = [
         {paired.map((song) => (
           <div class="pair">
             <div class="pair__side pair__then">
-              <small>The recording</small>
+              <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
               <div class="pair__title">
                 {song.original && acousticUrls.get(song.original)
                   ? <a class="song-link" href={acousticUrls.get(song.original)}>{song.original}</a>
-                  : song.original}
+                  : song.original ?? 'An earlier song of his'}
               </div>
+              {song.original && acousticUrls.get(song.original) ? (
+                <div class="source-links">
+                  <a href={acousticUrls.get(song.original)}>Original ↗</a>
+                </div>
+              ) : (
+                <div class="pair__style">Original recording unavailable</div>
+              )}
             </div>
             <div class="pair__arrow" aria-hidden="true">&rarr;</div>
             <div class="pair__side pair__now">
@@ -91,7 +98,9 @@ const jsonLd = [
               <div class="pair__title"><a class="song-link" href={song.url}>{song.title}</a></div>
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
               <div class="source-links">
-                {song.links?.map((link) => <a href={link.url}>{link.source === 'youtube' ? 'YouTube' : 'Suno'}</a>)}
+                {song.links?.map((link) => (
+                  <a href={link.url}>Rebuilt · {link.source === 'youtube' ? 'YouTube' : 'Suno'} ↗</a>
+                ))}
               </div>
             </div>
           </div>
