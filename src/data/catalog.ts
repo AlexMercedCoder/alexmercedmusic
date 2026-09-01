@@ -379,6 +379,16 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Paper Walls', url: 'https://suno.com/song/cef9f1fc-1706-4899-adcc-27ecc480b240' },
+  { title: 'Old Scars New Hands', url: 'https://suno.com/song/833b7aed-9afa-4e45-b18a-df25a1d9231b' },
+  { title: 'Mirror Bite', url: 'https://suno.com/song/2bb90c12-e4ca-41e9-9ae4-b94a0ca29c63' },
+  { title: 'Borrowed Appetite', url: 'https://suno.com/song/462147e6-a804-4ff7-828b-998887219459' },
+  { title: 'Say My Name', url: 'https://suno.com/song/55e6203e-9184-4848-a542-fde6179ca11d' },
+  { title: 'Bottomless Plate', url: 'https://suno.com/song/5d2401f6-4e71-4531-8696-b2db46825cc2' },
+  { title: 'Left Unspent', url: 'https://suno.com/song/c4321f34-4771-4667-874f-06aa3bfd9447' },
+  { title: 'Borrowed Smile', url: 'https://suno.com/song/42d33b11-fa91-475d-be00-6c1faeab9449' },
+  { title: 'Top Floor Steps', url: 'https://suno.com/song/5897d165-904c-4a27-815f-783f07c88288' },
+  { title: 'Glass On My Tongue', url: 'https://suno.com/song/3474b7eb-8a6a-4d19-afeb-2c5e94d968d9' },
   { title: 'Wrong Road Home', url: 'https://suno.com/song/abe6b10d-dfbb-44d8-9173-946586ae5d89' },
   { title: 'To Find My Mind', url: 'https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea' },
   { title: 'Black Hole Love', url: 'https://suno.com/song/1d7ba2fa-8c26-4610-9226-ff15241c38b5' },
@@ -454,7 +464,7 @@ export const platforms: Platform[] = [
     label: 'Suno',
     url: 'https://suno.com/@alexmerced',
     era: 'ai',
-    note: 'The current generated catalog: thirteen newer songs and eight published archive covers.',
+    note: `The current generated catalog: ${sunoSongs.length} newer songs and ${reimagined.length} published archive covers.`,
     stat: `${sunoSongs.length + reimagined.length} songs`,
   },
   {
