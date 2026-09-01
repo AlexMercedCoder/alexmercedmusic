@@ -1,6 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
-import { reimagined, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
+import { acousticTracks, reimagined, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
+
+const originals = new Map(acousticTracks.map((track) => [track.title, track.url]));
 
 const jsonLd = [
   {
@@ -15,6 +17,8 @@ const jsonLd = [
       '@type': 'MusicRecording',
       position: i + 1,
       name: t.title,
+      url: t.url,
+      sameAs: t.links?.map((link) => link.url),
       byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     })),
   },
@@ -23,7 +27,7 @@ const jsonLd = [
 
 <Base
   title="Reimagined with Suno"
-  description="Seven songs from Alex Merced's acoustic archive rebuilt with Suno in styles they were never written for, each paired with the original recording it reworks."
+  description="Eight songs from Alex Merced's archive rebuilt with Suno, linked directly to the YouTube and Suno versions and paired with their original recordings."
   keywords={['Suno', 'AI music', 'AI covers', 'Alex Merced', 'disco house', 'salsa cover']}
   jsonLd={jsonLd}
 >
@@ -33,17 +37,17 @@ const jsonLd = [
       <h1>The songs, handed to a model</h1>
       <p class="lede">
         A song written for one voice and one guitar carries an arrangement it never got
-        to have. These seven take songs from the archive and run them through Suno in
+        to have. These eight take songs from the archive and run them through Suno in
         styles they were never written for, which is the closest thing to hearing what a
         different life would have done with them.
       </p>
       <p class="lede" style="margin-top:1rem">
-        Every video opens with a clip of the original recording before the rebuild
-        starts, so the comparison is built into the listening rather than left to the
-        listener.
+        The seven-video YouTube series opens each rebuild with the original recording.
+        Suno publishes those generations directly and also carries an eighth archive
+        cover, Tell My Heart.
       </p>
       <div class="btn-row" style="margin-top:1.8rem">
-        <a class="btn btn--primary" href={reimaginedPlaylist.url}>Watch all seven</a>
+        <a class="btn btn--primary" href={reimaginedPlaylist.url}>Watch the seven-video series</a>
         <a class="btn" href="/acoustic">Read the originals</a>
       </div>
     </div>
@@ -59,13 +63,20 @@ const jsonLd = [
           <div class="pair">
             <div class="pair__side pair__then">
               <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
-              <div class="pair__title">{song.original ?? 'An earlier song of his'}</div>
+              <div class="pair__title">
+                {song.original && originals.get(song.original)
+                  ? <a class="song-link" href={originals.get(song.original)}>{song.original}</a>
+                  : song.original ?? 'An earlier song of his'}
+              </div>
             </div>
             <div class="pair__arrow" aria-hidden="true">&rarr;</div>
             <div class="pair__side pair__now">
               <small>Rebuilt as</small>
-              <div class="pair__title">{song.title}</div>
+              <div class="pair__title"><a class="song-link" href={song.url}>{song.title}</a></div>
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
+              <div class="source-links">
+                {song.links?.map((link) => <a href={link.url}>{link.source === 'youtube' ? 'YouTube' : 'Suno'}</a>)}
+              </div>
             </div>
           </div>
         ))}
@@ -78,17 +89,16 @@ const jsonLd = [
       <div class="section__head">
         <h2>And newer songs, written with it</h2>
         <p>
-          Beyond the rebuilds there are songs generated from scratch, filed on Suno
-          under a style he describes himself as
-          <em>{sunoStyle}</em>.
+          Beyond the eight archive covers, Suno currently exposes {sunoSongs.length}
+          additional published songs spanning {sunoStyle}.
         </p>
       </div>
       <ol class="tracks">
         {sunoSongs.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span>{t.title}</span>
-            <span class="len">Indie prog</span>
+            <span>{t.url ? <a class="song-link" href={t.url}>{t.title}</a> : t.title}</span>
+            <span class="len"><a class="platform-link" href={t.url}>Suno ↗</a></span>
           </li>
         ))}
       </ol>

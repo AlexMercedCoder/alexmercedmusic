@@ -1,6 +1,13 @@
 ---
 import Base from '../layouts/Base.astro';
-import { acousticTracks, acousticPlaylist, reimagined } from '../data/catalog';
+import {
+  acousticTracks,
+  acousticPlaylist,
+  channelAcousticTracks,
+  reimagined,
+  soundcloudAcousticTracks,
+  youtubeArchiveTracks,
+} from '../data/catalog';
 
 const rebuilt = new Set(reimagined.map((r) => r.original).filter(Boolean));
 
@@ -10,13 +17,14 @@ const jsonLd = [
     '@id': 'https://alexmercedmusic.com/acoustic#playlist',
     name: acousticPlaylist.title,
     url: acousticPlaylist.url,
-    numTracks: acousticTracks.length,
+    numTracks: youtubeArchiveTracks.length,
     description: acousticPlaylist.description,
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
-    track: acousticTracks.map((t, i) => ({
+    track: youtubeArchiveTracks.map((t, i) => ({
       '@type': 'MusicRecording',
       position: i + 1,
       name: t.title,
+      url: t.url,
       byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     })),
   },
@@ -41,12 +49,15 @@ const jsonLd = [
         hoping the take held together.
       </p>
       <p class="lede" style="margin-top:1rem">
-        {acousticTracks.length} of them, listed in full below. Titles are as they were
-        typed at the time, capitals and all.
+        {acousticTracks.length} accessible recordings are listed below across the old
+        YouTube playlist, the current music channel and the loose-tracks SoundCloud
+        account. {`The playlist itself reports ${acousticPlaylist.totalEntries} entries,
+        but YouTube hides ${acousticPlaylist.unavailableEntries} unavailable videos.
+        Titles are preserved as the hosts present them.`}
       </p>
       <div class="btn-row" style="margin-top:1.8rem">
         <a class="btn btn--primary" href={acousticPlaylist.url}>Play the whole thing</a>
-        <a class="btn" href="/reimagined">Hear seven of them rebuilt</a>
+        <a class="btn" href="/reimagined">Hear eight songs rebuilt</a>
       </div>
       </div>
       <img
@@ -62,23 +73,51 @@ const jsonLd = [
   <section class="section" data-era="acoustic">
     <div class="shell">
       <div class="section__head">
-        <h2>The recordings</h2>
+        <h2>The YouTube archive playlist</h2>
         <p>
-          Marked titles are the ones that have since been rebuilt with Suno. There are
-          six of them, and each rebuild opens with a clip of the take listed here.
+          {youtubeArchiveTracks.length} accessible videos in current playlist order.
+          Marked titles have since been rebuilt with Suno.
         </p>
       </div>
       <ol class="tracks">
-        {acousticTracks.map((t, i) => (
+        {youtubeArchiveTracks.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span>
-              {t.title}
+              {t.url ? <a class="song-link" href={t.url}>{t.title}</a> : t.title}
               {rebuilt.has(t.title) && (
                 <span class="pair__style" style="display:inline;margin-left:0.6rem;color:var(--ai)">rebuilt</span>
               )}
             </span>
-            <span class="len">{t.length}</span>
+            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>
+          </li>
+        ))}
+      </ol>
+
+      <div class="section__head" style="margin-top:3rem">
+        <h2>Elsewhere on the music channel</h2>
+        <p>Three performances published on the channel but not filed in the old playlist.</p>
+      </div>
+      <ol class="tracks">
+        {channelAcousticTracks.map((t, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span><a class="song-link" href={t.url}>{t.title}</a></span>
+            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>
+          </li>
+        ))}
+      </ol>
+
+      <div class="section__head" style="margin-top:3rem">
+        <h2>SoundCloud-only recordings</h2>
+        <p>Eight singer-songwriter tracks on the second SoundCloud account that are not part of the electronic merge.</p>
+      </div>
+      <ol class="tracks">
+        {soundcloudAcousticTracks.map((t, i) => (
+          <li>
+            <span class="num">{String(i + 1).padStart(2, '0')}</span>
+            <span><a class="song-link" href={t.url}>{t.title}</a></span>
+            <span class="len"><a class="platform-link" href={t.url}>SoundCloud ↗</a></span>
           </li>
         ))}
       </ol>

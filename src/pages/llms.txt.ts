@@ -1,19 +1,24 @@
 import type { APIRoute } from 'astro';
 import {
-  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
+  acousticTracks, acousticPlaylist, channelAcousticTracks, soundcloudAcousticTracks,
+  youtubeArchiveTracks, reimagined, reimaginedPlaylist,
   albums, electronicTracks, electronicStats, electronicRuntime,
   sunoSongs, sunoStyle, platforms, tutorials,
 } from '../data/catalog';
 import { networkGroups } from '../data/network';
 
 const SITE = 'https://alexmercedmusic.com';
+const directLinks = (links: { source: string; url: string }[] | undefined, fallback?: string) => {
+  const list = links?.length ? links : fallback ? [{ source: 'listen', url: fallback }] : [];
+  return list.map((link) => `[${link.source}](${link.url})`).join(', ');
+};
 
 export const GET: APIRoute = async () => {
   const paired = reimagined.filter((r) => r.original);
 
   const body = `# Alex Merced Music
 
-> Two decades of music by Alex Merced: acoustic songs recorded from the mid-2000s, electronic albums produced in FL Studio, and seven of those same songs rebuilt with the AI model Suno. This site catalogues all three and points at the platforms that host them.
+> Two decades of music by Alex Merced: archive recordings from the mid-2000s, electronic music produced in FL Studio, and eight older songs rebuilt with Suno. Every accessible recording is linked directly to its current host.
 
 Alex Merced is better known now for data and AI, where he works in developer relations and writes about lakehouse architecture. Music came first and has never entirely stopped. The catalogue divides into three eras, and the third folds back into the first: the Suno covers rework songs from the acoustic archive, and each one opens with a clip of the original recording.
 
@@ -29,11 +34,23 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 
 ## Era one: the acoustic archive
 
-Guitar and voice, written and performed by Alex Merced, uploaded from the mid-2000s onward. Most went to his YouTube channel. ${acousticTracks.length} recordings are listed here.
+Guitar and voice recordings uploaded from the mid-2000s onward. ${acousticTracks.length} accessible recordings are indexed across the archive playlist, the music channel and the second SoundCloud account.
 
 Titles are recorded here as they were typed at the time, including the inconsistent capitalisation, because that is what you find when you go and look.
 
-${acousticTracks.map((t) => `- ${t.title}${t.length ? ` (${t.length})` : ''}`).join('\n')}
+### YouTube archive playlist
+
+${youtubeArchiveTracks.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
+
+### Additional music-channel performances
+
+${channelAcousticTracks.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
+
+### SoundCloud-only singer-songwriter recordings
+
+${soundcloudAcousticTracks.map((t) => `- [${t.title}](${t.url})`).join('\n')}
+
+YouTube reports ${acousticPlaylist.totalEntries} archive-playlist entries; ${acousticPlaylist.unavailableEntries} unavailable videos are hidden, leaving ${youtubeArchiveTracks.length} accessible direct links in that playlist.
 
 Playlist: ${acousticPlaylist.url}
 
@@ -41,33 +58,37 @@ Playlist: ${acousticPlaylist.url}
 
 Produced electronic music, made largely in FL Studio. ReverbNation files it under electronica, electro pop and glitch hop, out of Brooklyn, and reports 6.6 thousand fans.
 
-${electronicStats.total} tracks survive in total, ${electronicRuntime} of runtime. They are spread across three profiles and no single one holds them all: ${electronicStats.onReverbNation} are on ReverbNation, ${electronicStats.onSoundCloud} on SoundCloud, and ${electronicStats.inAlbums} sit on one of the ${albums.length} albums. The list below is the merged set, deduplicated on title, since the same track is filed as "12 - Alex Merced - WTF" on one platform and "WTF" on another.
+${electronicStats.total} tracks survive in total, ${electronicRuntime} of runtime. They are spread across ReverbNation, two SoundCloud accounts and YouTube, and no single source holds them all: ${electronicStats.onReverbNation} are on ReverbNation, ${electronicStats.onSoundCloud} on SoundCloud, ${electronicStats.onYouTube} on YouTube, and ${electronicStats.inAlbums} sit on one of the ${albums.length} albums. The list below is deduplicated on title and retains a direct link for every verified source.
 
 ### The albums
 
-${albums.map((a) => `#### ${a.title} (${a.released.slice(0, 4)})\n${a.tracks.map((t) => `- ${t}`).join('\n')}`).join('\n\n')}
+${albums.map((a) => `#### [${a.title}](${a.url}) (${a.released.slice(0, 4)})\n${a.tracks.map((title) => {
+  const track = electronicTracks.find((candidate) => candidate.album === a.title && candidate.title === title);
+  const url = track?.links?.find((link) => link.source === 'soundcloud-albums')?.url ?? track?.url;
+  return url ? `- [${title}](${url})` : `- ${title}`;
+}).join('\n')}`).join('\n\n')}
 
 ### Every produced track
 
-${electronicTracks.map((t) => `- ${t.title} (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')})`).join('\n')}
+${electronicTracks.map((t) => `- ${t.title} (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')}) — ${directLinks(t.links, t.url)}`).join('\n')}
 
 ### FL Studio tutorials
 
 Recorded alongside the music, and by view count the most watched thing on the channel.
 
-${tutorials.map((t) => `- ${t.title} (${t.posted})`).join('\n')}
+${tutorials.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
 
 ## Era three: rebuilt with Suno
 
-${reimagined.length} songs from the archive run through Suno in styles they were never written for. ${paired.length} of the ${reimagined.length} have their original recording still in the archive above.
+${reimagined.length} songs from the archive run through Suno in styles they were never written for. ${paired.length} of the ${reimagined.length} have an accessible original recording in the archive above. Seven have YouTube videos; all eight link to their currently published Suno generation.
 
-${reimagined.map((r) => `- ${r.title}, as ${r.style.toLowerCase()}${r.original ? `, from "${r.original}"` : ', original not in the archive'}`).join('\n')}
+${reimagined.map((r) => `- ${r.title}, as ${r.style.toLowerCase()}${r.original ? `, from "${r.original}"` : ', original not in the archive'} — ${directLinks(r.links, r.url)}`).join('\n')}
 
 Playlist: ${reimaginedPlaylist.url}
 
 Newer songs written with Suno rather than rebuilt, filed under "${sunoStyle}":
 
-${sunoSongs.map((t) => `- ${t.title}`).join('\n')}
+${sunoSongs.map((t) => `- [${t.title}](${t.url})`).join('\n')}
 
 ## Where the music is hosted
 

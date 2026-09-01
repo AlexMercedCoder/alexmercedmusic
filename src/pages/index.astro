@@ -6,6 +6,7 @@ import {
 } from '../data/catalog';
 
 const paired = reimagined.filter((r) => r.original);
+const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
 
 const jsonLd = [
   {
@@ -21,7 +22,7 @@ const jsonLd = [
 
 <Base
   title="Alex Merced Music"
-  description="Two decades of music by Alex Merced. Acoustic songs recorded from the mid-2000s, electronic albums produced in FL Studio, and seven of those same songs rebuilt with Suno."
+  description={`Two decades of music by Alex Merced: ${acousticTracks.length} accessible archive recordings, ${electronicStats.total} produced tracks across four source collections, and ${reimagined.length} songs rebuilt with Suno.`}
   keywords={['Alex Merced', 'Alex Merced music', 'singer songwriter', 'acoustic', 'glitch hop', 'FL Studio', 'Suno', 'AI covers']}
   jsonLd={jsonLd}
 >
@@ -66,10 +67,10 @@ const jsonLd = [
         <p class="eyebrow">The loop closed</p>
         <h2>Songs written on a guitar, handed to a model</h2>
         <p class="lede">
-          Seven songs from the archive have been rebuilt with Suno in styles they were
+          Eight songs from the archive have been rebuilt with Suno in styles they were
           never written for: disco house, salsa, rock. Each video opens with a clip of
           the original recording, so you hear where it started before you hear where it
-          went. Six of the seven still have that original sitting in the archive.
+          went. Seven of the eight still have an accessible original in the archive.
         </p>
       </div>
 
@@ -78,20 +79,27 @@ const jsonLd = [
           <div class="pair">
             <div class="pair__side pair__then">
               <small>The recording</small>
-              <div class="pair__title">{song.original}</div>
+              <div class="pair__title">
+                {song.original && acousticUrls.get(song.original)
+                  ? <a class="song-link" href={acousticUrls.get(song.original)}>{song.original}</a>
+                  : song.original}
+              </div>
             </div>
             <div class="pair__arrow" aria-hidden="true">&rarr;</div>
             <div class="pair__side pair__now">
               <small>Rebuilt as</small>
-              <div class="pair__title">{song.title}</div>
+              <div class="pair__title"><a class="song-link" href={song.url}>{song.title}</a></div>
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
+              <div class="source-links">
+                {song.links?.map((link) => <a href={link.url}>{link.source === 'youtube' ? 'YouTube' : 'Suno'}</a>)}
+              </div>
             </div>
           </div>
         ))}
       </div>
 
       <div class="btn-row" style="margin-top:1.6rem">
-        <a class="btn btn--primary" href="/reimagined">All seven, and what changed</a>
+        <a class="btn btn--primary" href="/reimagined">All eight, and what changed</a>
         <a class="btn" href={reimaginedPlaylist.url}>Watch the playlist</a>
       </div>
     </div>
@@ -118,7 +126,7 @@ const jsonLd = [
           <p>
             {electronicStats.total} tracks produced in FL Studio, {electronicRuntime} of it,
             filed under electronica, electro pop and glitch hop out of Brooklyn. It is
-            scattered over three profiles and no one of them holds the whole thing, so the
+            scattered over ReverbNation, two SoundCloud accounts and YouTube, so the
             full list is assembled here.
           </p>
           <p><a href="/electronic">Browse all {electronicStats.total}</a></p>

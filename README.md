@@ -1,8 +1,8 @@
 # AlexMercedMusic.com
 
-The music side of [Alex Merced](https://alexmerced.com): twenty years of acoustic
-singer-songwriter recordings, electronic production, and a recent set of the same
-songs rebuilt with Suno.
+The music side of [Alex Merced](https://alexmerced.com): twenty years of archive
+recordings, electronic production, and a recent set of older songs rebuilt with
+Suno. Every accessible song links directly to each verified hosting source.
 
 Part of the Alex Merced network of sites.
 
@@ -31,6 +31,8 @@ Output lands in `dist/`. `npm run check` runs `tsc --noEmit`.
 
 ## Where the data lives
 
-Everything the site renders comes from `src/data/catalog.ts`, which mirrors what
-is actually published on YouTube, SoundCloud, ReverbNation, and Suno. Nothing in
-there is invented; update it when the catalogue changes.
+The hand-curated catalog and direct YouTube/Suno links live in
+`src/data/catalog.ts`. The larger SoundCloud/ReverbNation merge lives in
+`src/data/electronic-tracks.json`, and album ordering lives in
+`src/data/albums.json`. The data mirrors what is currently published on YouTube,
+SoundCloud, ReverbNation, and Suno; refresh it when those catalogs change.

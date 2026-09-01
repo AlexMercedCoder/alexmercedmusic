@@ -9,15 +9,24 @@ import {
   tutorials,
 } from '../data/catalog';
 
+const albumEntries = albums.map((album) => ({
+  ...album,
+  tracks: album.tracks.map((title) => {
+    const track = electronicTracks.find((candidate) => candidate.album === album.title && candidate.title === title);
+    const url = track?.links?.find((link) => link.source === 'soundcloud-albums')?.url ?? track?.url;
+    return { title, url };
+  }),
+}));
+
 const jsonLd = [
-  ...albums.map((a) => ({
+  ...albumEntries.map((a) => ({
     '@type': 'MusicAlbum',
     name: a.title,
     url: a.url,
     datePublished: a.released,
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     numTracks: a.tracks.length,
-    track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t })),
+    track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t.title, url: t.url })),
   })),
   {
     '@type': 'MusicPlaylist',
@@ -35,12 +44,13 @@ const label: Record<string, string> = {
   reverbnation: 'ReverbNation',
   soundcloud: 'SoundCloud',
   'soundcloud-albums': 'Album',
+  youtube: 'YouTube',
 };
 ---
 
 <Base
   title="The electronic catalogue"
-  description={`${electronicStats.total} electronic tracks produced by Alex Merced in FL Studio, spread across ReverbNation and two SoundCloud accounts, filed under electronica, electro pop and glitch hop out of Brooklyn.`}
+  description={`${electronicStats.total} electronic tracks produced by Alex Merced in FL Studio, indexed across ReverbNation, two SoundCloud accounts and YouTube.`}
   keywords={['Alex Merced electronic', 'glitch hop', 'FL Studio', 'electronica', 'Brooklyn producer']}
   jsonLd={jsonLd}
 >
@@ -50,7 +60,8 @@ const label: Record<string, string> = {
       <h1>Made in FL Studio,<br />filed under glitch hop</h1>
       <p class="lede">
         Somewhere after the guitar recordings the tools changed, and then they did not
-        stop. {electronicStats.total} produced tracks survive across three profiles,
+        stop. {electronicStats.total} produced tracks survive across ReverbNation, two
+        SoundCloud accounts and YouTube,
         listed on ReverbNation as electronica, electro pop and glitch hop out of
         Brooklyn. No single profile shows you all of them, which is most of the reason
         this page exists.
@@ -65,7 +76,7 @@ const label: Record<string, string> = {
         <div data-era="electronic"><b>{electronicStats.total}</b><span>Tracks</span></div>
         <div data-era="electronic"><b>{runtime}</b><span>Of runtime</span></div>
         <div data-era="electronic"><b>{albums.length}</b><span>Albums</span></div>
-        <div data-era="electronic"><b>3</b><span>Profiles it is spread over</span></div>
+        <div data-era="electronic"><b>{electronicStats.onYouTube}</b><span>Also on YouTube</span></div>
       </div>
     </div>
   </section>
@@ -81,7 +92,7 @@ const label: Record<string, string> = {
         </p>
       </div>
       <div class="grid grid--2">
-        {albums.map((album) => (
+        {albumEntries.map((album) => (
           <article class="card card--era" data-era="electronic">
             <h3><a href={album.url}>{album.title}</a></h3>
             <p class="pair__style">{album.tracks.length} tracks · {album.released.slice(0, 4)}</p>
@@ -89,7 +100,7 @@ const label: Record<string, string> = {
               {album.tracks.map((t, i) => (
                 <li>
                   <span class="num">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{t}</span>
+                  <span>{t.url ? <a href={t.url}>{t.title}</a> : t.title}</span>
                   <span class="len"></span>
                 </li>
               ))}
@@ -105,7 +116,7 @@ const label: Record<string, string> = {
       <div class="section__head">
         <h2>Everything, in one list</h2>
         <p>
-          All {electronicStats.total} produced tracks, merged across the three profiles and
+          All {electronicStats.total} produced tracks, merged across the four source collections and
           deduplicated, because the same song is filed as
           <span class="mono">12 - Alex Merced - WTF</span> on one and
           <span class="mono">WTF</span> on another. {electronicStats.onReverbNation} sit on
@@ -120,7 +131,7 @@ const label: Record<string, string> = {
           <input
             type="search"
             id="q"
-            placeholder="Search 269 titles"
+            placeholder={`Search ${electronicStats.total} titles`}
             autocomplete="off"
             aria-describedby="count"
           />
@@ -130,6 +141,7 @@ const label: Record<string, string> = {
           <button type="button" class="chip" data-src="reverbnation">ReverbNation</button>
           <button type="button" class="chip" data-src="soundcloud">SoundCloud</button>
           <button type="button" class="chip" data-src="soundcloud-albums">On an album</button>
+          <button type="button" class="chip" data-src="youtube">YouTube</button>
         </div>
         <p class="filter__count" id="count" aria-live="polite">{electronicStats.total} tracks</p>
       </div>
@@ -140,7 +152,9 @@ const label: Record<string, string> = {
             <span class="num">{String(i + 1).padStart(3, '0')}</span>
             <a href={t.url}>{t.title}</a>
             <span class="tags">
-              {t.sources.map((s) => <i data-src={s}>{label[s] ?? s}</i>)}
+              {(t.links ?? [{ source: t.sources[0], url: t.url }]).map((link) => (
+                <a href={link.url} data-src={link.source}>{label[link.source] ?? link.source}</a>
+              ))}
             </span>
             <span class="len">{mmss(t.seconds)}</span>
           </li>
@@ -159,9 +173,11 @@ const label: Record<string, string> = {
             The five the profile still puts at the top, years after the last upload.
           </p>
           <ol class="tracks" style="margin-top:1rem">
-            {reverbnationFeatured.map((t, i) => (
-              <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{t}</span><span class="len"></span></li>
-            ))}
+            {reverbnationFeatured.map((t, i) => {
+              const track = electronicTracks.find((candidate) => candidate.title === t);
+              const url = track?.links?.find((link) => link.source === 'reverbnation')?.url ?? track?.url;
+              return <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{url ? <a href={url}>{t}</a> : t}</span><span class="len"></span></li>;
+            })}
           </ol>
         </div>
         <div>
@@ -175,8 +191,8 @@ const label: Record<string, string> = {
             {tutorials.map((t, i) => (
               <li>
                 <span class="num">{String(i + 1).padStart(2, '0')}</span>
-                <span>{t.title}</span>
-                <span class="len">{t.posted}</span>
+                <span>{t.url ? <a href={t.url}>{t.title}</a> : t.title}</span>
+                <span class="len">{t.length}</span>
               </li>
             ))}
           </ol>
@@ -191,8 +207,8 @@ const label: Record<string, string> = {
   .filter__field { flex: 1 1 16rem; }
   .filter input {
     width: 100%; padding: 0.7rem 0.9rem; border-radius: var(--radius);
-    border: 1px solid var(--rule); background: var(--surface); color: var(--ink);
-    font: 400 0.95rem/1.2 var(--body);
+    border: 1px solid var(--rule); background: var(--night-800); color: var(--ink);
+    font: 400 0.95rem/1.2 var(--sans);
   }
   .filter input:focus-visible { outline: 2px solid var(--electronic); outline-offset: 2px; }
   .filter__chips { display: flex; flex-wrap: wrap; gap: 0.4rem; }
@@ -202,7 +218,7 @@ const label: Record<string, string> = {
     font: 500 0.76rem/1 var(--mono); letter-spacing: 0.04em;
   }
   .chip:hover { color: var(--ink); border-color: var(--ink-faint); }
-  .chip.is-on { color: var(--bg); background: var(--electronic); border-color: var(--electronic); }
+  .chip.is-on { color: var(--night-900); background: var(--electronic); border-color: var(--electronic); }
   .filter__count { margin: 0; font: 400 0.8rem/1 var(--mono); color: var(--ink-faint); }
 
   .catalogue { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--rule); }
@@ -216,12 +232,13 @@ const label: Record<string, string> = {
   .catalogue a:hover { color: var(--electronic); text-decoration: underline; }
   .catalogue .len { font: 400 0.78rem/1 var(--mono); color: var(--ink-faint); font-variant-numeric: tabular-nums; }
   .tags { display: flex; gap: 0.3rem; }
-  .tags i {
+  .tags a {
     font: 500 0.64rem/1 var(--mono); letter-spacing: 0.05em; text-transform: uppercase;
-    font-style: normal; padding: 0.24rem 0.45rem; border-radius: 3px;
+    font-style: normal; padding: 0.24rem 0.45rem; border-radius: 3px; text-decoration: none;
     border: 1px solid var(--rule); color: var(--ink-faint); white-space: nowrap;
   }
-  .tags i[data-src='reverbnation'] { color: var(--electronic); border-color: color-mix(in srgb, var(--electronic) 40%, transparent); }
+  .tags a[data-src='reverbnation'] { color: var(--electronic); border-color: color-mix(in srgb, var(--electronic) 40%, transparent); }
+  .tags a:hover { color: var(--ink); border-color: var(--electronic); }
   .empty { color: var(--ink-faint); padding: 2rem 0; }
 
   @media (max-width: 620px) {

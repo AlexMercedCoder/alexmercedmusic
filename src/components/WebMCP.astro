@@ -75,6 +75,7 @@ const catalog = {
               spreadOver: {
                 reverbnation: catalog.electronic.stats.onReverbNation,
                 soundcloud: catalog.electronic.stats.onSoundCloud,
+                youtube: catalog.electronic.stats.onYouTube,
               },
               note: 'No single profile holds the whole catalogue. The numbers above are the merged, deduplicated set.',
               where: 'https://legacy.reverbnation.com/alexmerced',
@@ -82,7 +83,8 @@ const catalog = {
             ai: {
               what: 'Songs from the acoustic catalogue rebuilt with Suno, plus newer songs generated from scratch.',
               covers: catalog.reimagined.count,
-              newSongs: catalog.now.suno.length,
+            newSongs: catalog.now.suno.length,
+            totalPublishedOnSuno: catalog.reimagined.count + catalog.now.suno.length,
               where: catalog.reimagined.playlist.url,
             },
           },
@@ -117,6 +119,10 @@ const catalog = {
             style: s.style,
             length: s.length,
             originalRecording: s.original ?? null,
+            directLinks: s.links ?? (s.url ? [{ source: 'listen', url: s.url }] : []),
+            originalUrl: s.original
+              ? catalog.acoustic.tracks.find((track) => track.title === s.original)?.url ?? null
+              : null,
             originalInArchive: Boolean(s.original),
           })),
         }),
@@ -127,7 +133,14 @@ const catalog = {
           'List the electronic albums with their complete tracklists, plus the merged catalogue statistics. The album pages on SoundCloud show only five tracks each, so these lists are more complete than the host.',
         inputSchema: { type: 'object', properties: {} },
         execute: () => ok({
-          albums: catalog.electronic.albums,
+          albums: catalog.electronic.albums.map((album) => ({
+            ...album,
+            tracks: album.tracks.map((title) => {
+              const track = catalog.electronic.tracks.find((candidate) => candidate.album === album.title && candidate.title === title);
+              const url = track?.links?.find((link) => link.source === 'soundcloud-albums')?.url ?? track?.url ?? null;
+              return { title, url };
+            }),
+          })),
           stats: catalog.electronic.stats,
           note: 'Use search_songs to look inside the full set of ' + catalog.electronic.stats.total + ' produced tracks.',
         }),
