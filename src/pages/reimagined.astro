@@ -83,7 +83,7 @@ const jsonLd = [
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
               <div class="source-links">
                 {song.links?.map((link) => (
-                  <a href={link.url}>Rebuilt · {link.source === 'youtube' ? 'YouTube' : 'Suno'} ↗</a>
+                  <a href={link.url}>Rebuilt · {link.label ?? (link.source === 'youtube' ? 'YouTube' : 'Suno')} ↗</a>
                 ))}
               </div>
             </div>

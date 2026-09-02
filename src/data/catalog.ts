@@ -16,6 +16,8 @@ export type Era = 'acoustic' | 'electronic' | 'ai';
 export type TrackLink = {
   source: 'youtube' | 'soundcloud' | 'soundcloud-albums' | 'reverbnation' | 'suno';
   url: string;
+  /** Optional human-readable distinction when one source hosts several versions. */
+  label?: string;
 };
 
 export type Track = {
@@ -198,7 +200,8 @@ export const reimagined: Reimagining[] = [
     url: 'https://www.youtube.com/watch?v=MusdQT-AKLU',
     links: [
       { source: 'youtube', url: 'https://www.youtube.com/watch?v=MusdQT-AKLU' },
-      { source: 'suno', url: 'https://suno.com/song/ca20d84d-4323-4dbc-b666-862148903723' },
+      { source: 'suno', url: 'https://suno.com/song/ca20d84d-4323-4dbc-b666-862148903723', label: 'Suno · earlier' },
+      { source: 'suno', url: 'https://suno.com/song/728e8b4b-2d5d-4107-b713-cadb1956e272', label: 'Suno · latest' },
     ],
   },
   {
@@ -379,6 +382,21 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'OUT OF LINE', url: 'https://suno.com/song/ced71ca3-a447-4fca-8d0b-ea19ffe13a88' },
+  { title: 'Lives Through The Window', url: 'https://suno.com/song/64217495-cfbb-444f-a440-705518655a9d' },
+  { title: 'THE WHOLE DAMN SHOW', url: 'https://suno.com/song/1b6cbd27-df54-4d5a-bca3-dc21ca13b883' },
+  { title: 'THE MIRROR LOVES ME BACK', url: 'https://suno.com/song/eb3ab107-fea0-46ea-ba8e-4224534875b9' },
+  { title: 'First Light', url: 'https://suno.com/song/ba3e1eab-47fc-47d3-91dd-bce5d8d1e493' },
+  { title: 'Tin Roof Weather', url: 'https://suno.com/song/6768254a-03a1-47e5-b5fa-e629ef446172' },
+  { title: 'Mirror Habit', url: 'https://suno.com/song/f6fe1f21-589f-47a8-b074-1f20ac571851' },
+  { title: 'Table For Nobody', url: 'https://suno.com/song/1606486d-e9e5-4cca-a4b1-c1f8d498a684' },
+  { title: 'Not Okay Today', url: 'https://suno.com/song/9558555e-8277-4a92-a1a3-9ba10d70c570' },
+  { title: 'Let Them Bloom', url: 'https://suno.com/song/52f592b5-6874-4f5c-9521-b112ed9a813f' },
+  { title: 'Peanut Butter Halo', url: 'https://suno.com/song/9f827ea5-bac8-402e-b0f1-14f0d2b98b26' },
+  { title: 'Counting My Blessings', url: 'https://suno.com/song/639aaca3-d58d-485a-bcf8-7e778535d0a7' },
+  { title: 'Eyes of the World', url: 'https://suno.com/song/57ad9c9c-6c16-4a81-a529-bff6a15c66e1' },
+  { title: 'Gold Under Skin', url: 'https://suno.com/song/db734f1d-3b00-47f2-9060-2550ae8671d6' },
+  { title: 'More than Pieces', url: 'https://suno.com/song/42e712f6-a452-4100-b70c-c2895829e796' },
   { title: 'Paper Walls', url: 'https://suno.com/song/cef9f1fc-1706-4899-adcc-27ecc480b240' },
   { title: 'Old Scars New Hands', url: 'https://suno.com/song/833b7aed-9afa-4e45-b18a-df25a1d9231b' },
   { title: 'Mirror Bite', url: 'https://suno.com/song/2bb90c12-e4ca-41e9-9ae4-b94a0ca29c63' },
@@ -405,6 +423,12 @@ export const sunoSongs: Track[] = [
 ];
 
 export const sunoStyle = 'glitch hop, indie prog, AI-voice covers and experimental generated songs';
+
+/** Published Suno generations; one rebuilt song currently has two versions. */
+export const sunoPublishedCount = sunoSongs.length + reimagined.reduce(
+  (total, song) => total + (song.links?.filter((link) => link.source === 'suno').length ?? 0),
+  0,
+);
 
 // ---------------------------------------------------------------- where
 
@@ -464,8 +488,8 @@ export const platforms: Platform[] = [
     label: 'Suno',
     url: 'https://suno.com/@alexmerced',
     era: 'ai',
-    note: `The current generated catalog: ${sunoSongs.length} newer songs and ${reimagined.length} published archive covers.`,
-    stat: `${sunoSongs.length + reimagined.length} songs`,
+    note: `The current generated catalog: ${sunoSongs.length} newer songs and nine published generations of ${reimagined.length} archive covers.`,
+    stat: `${sunoPublishedCount} songs`,
   },
   {
     label: 'Instagram',

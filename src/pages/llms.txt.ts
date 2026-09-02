@@ -3,14 +3,14 @@ import {
   acousticTracks, acousticPlaylist, channelAcousticTracks, soundcloudAcousticTracks,
   youtubeArchiveTracks, reimagined, reimaginedPlaylist,
   albums, electronicTracks, electronicStats, electronicRuntime,
-  sunoSongs, sunoStyle, platforms, tutorials,
+  sunoSongs, sunoStyle, sunoPublishedCount, platforms, tutorials,
 } from '../data/catalog';
 import { networkGroups } from '../data/network';
 
 const SITE = 'https://alexmercedmusic.com';
-const directLinks = (links: { source: string; url: string }[] | undefined, fallback?: string) => {
+const directLinks = (links: { source: string; url: string; label?: string }[] | undefined, fallback?: string) => {
   const list = links?.length ? links : fallback ? [{ source: 'listen', url: fallback }] : [];
-  return list.map((link) => `[${link.source}](${link.url})`).join(', ');
+  return list.map((link) => `[${link.label ?? link.source}](${link.url})`).join(', ');
 };
 
 export const GET: APIRoute = async () => {
@@ -87,6 +87,8 @@ ${reimagined.map((r) => `- ${r.title}, as ${r.style.toLowerCase()}${r.original ?
 Playlist: ${reimaginedPlaylist.url}
 
 Newer songs written with Suno rather than rebuilt, filed under "${sunoStyle}":
+
+Suno currently reports ${sunoPublishedCount} published songs in total.
 
 ${sunoSongs.map((t) => `- [${t.title}](${t.url})`).join('\n')}
 

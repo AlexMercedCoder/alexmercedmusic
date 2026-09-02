@@ -91,7 +91,7 @@ const jsonLd = [
                 <span class="source-links source-links--inline">
                   <a href={t.url}>Original ↗</a>
                   {rebuiltByOriginal.get(t.title)?.links?.map((link) => (
-                    <a href={link.url}>Rebuilt · {link.source === 'youtube' ? 'YouTube' : 'Suno'} ↗</a>
+                    <a href={link.url}>Rebuilt · {link.label ?? (link.source === 'youtube' ? 'YouTube' : 'Suno')} ↗</a>
                   ))}
                 </span>
               )}

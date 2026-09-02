@@ -2,7 +2,7 @@
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
   albums, electronicTracks, electronicStats, electronicRuntime,
-  sunoSongs, sunoStyle, platforms, tutorials,
+  sunoSongs, sunoStyle, sunoPublishedCount, platforms, tutorials,
   reverbnationFeatured,
 } from '../data/catalog';
 
@@ -24,7 +24,7 @@ const catalog = {
     reverbnationFeatured,
     tutorials,
   },
-  now: { suno: sunoSongs, style: sunoStyle },
+  now: { suno: sunoSongs, style: sunoStyle, publishedCount: sunoPublishedCount },
   platforms,
 };
 ---
@@ -84,7 +84,7 @@ const catalog = {
               what: 'Songs from the acoustic catalogue rebuilt with Suno, plus newer songs generated from scratch.',
               covers: catalog.reimagined.count,
             newSongs: catalog.now.suno.length,
-            totalPublishedOnSuno: catalog.reimagined.count + catalog.now.suno.length,
+            totalPublishedOnSuno: catalog.now.publishedCount,
               where: catalog.reimagined.playlist.url,
             },
           },
