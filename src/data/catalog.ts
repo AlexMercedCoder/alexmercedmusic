@@ -157,7 +157,8 @@ export const reimagined: Reimagining[] = [
     url: 'https://www.youtube.com/watch?v=2f-GLdPuI4k',
     links: [
       { source: 'youtube', url: 'https://www.youtube.com/watch?v=2f-GLdPuI4k' },
-      { source: 'suno', url: 'https://suno.com/song/efee051a-123d-4959-9224-a825050305a2' },
+      { source: 'suno', url: 'https://suno.com/song/efee051a-123d-4959-9224-a825050305a2', label: 'Suno · earlier' },
+      { source: 'suno', url: 'https://suno.com/song/80504323-9333-4c5c-aa42-c69cdd2acbdd', label: 'Suno · latest' },
     ],
   },
   {
@@ -212,7 +213,8 @@ export const reimagined: Reimagining[] = [
     url: 'https://www.youtube.com/watch?v=n_BbyWoAvFc',
     links: [
       { source: 'youtube', url: 'https://www.youtube.com/watch?v=n_BbyWoAvFc' },
-      { source: 'suno', url: 'https://suno.com/song/bf001c90-0d07-4d82-9eb4-6eeb711a13fd' },
+      { source: 'suno', url: 'https://suno.com/song/bf001c90-0d07-4d82-9eb4-6eeb711a13fd', label: 'Suno · earlier' },
+      { source: 'suno', url: 'https://suno.com/song/60e7d648-c733-4114-9125-ba373f8a87c8', label: 'Suno · latest' },
     ],
   },
   {
@@ -382,6 +384,14 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Fork in the Road', url: 'https://suno.com/song/a9944874-f578-469a-a535-d1d351babcfd' },
+  { title: 'Wide Awake Again', url: 'https://suno.com/song/4a9e15ff-6ee7-46c1-9b4b-9f0d85725002' },
+  { title: 'King of the Table', url: 'https://suno.com/song/0c3e6834-c2f9-440e-813c-6627f6245d0c' },
+  { title: 'Pixel Dust Memory', url: 'https://suno.com/song/6ac55931-4114-42a7-a32c-bbd97432c850' },
+  { title: 'OPEN THE STACK', url: 'https://suno.com/song/4fff3fb9-8ba5-41f9-bec5-f58309d30dc6' },
+  { title: 'LET IT GO, LET IT GROW', url: 'https://suno.com/song/833db24a-10ff-4f88-8f2c-5d486f1b250c' },
+  { title: 'STEP BY STEP', url: 'https://suno.com/song/6d8e733c-8100-475d-a8f3-f1e34204e959' },
+  { title: 'THE LONG WAY HOME', url: 'https://suno.com/song/7a48ad83-ae6a-473f-8030-05f3f716fcbd' },
   { title: 'OUT OF LINE', url: 'https://suno.com/song/ced71ca3-a447-4fca-8d0b-ea19ffe13a88' },
   { title: 'Lives Through The Window', url: 'https://suno.com/song/64217495-cfbb-444f-a440-705518655a9d' },
   { title: 'THE WHOLE DAMN SHOW', url: 'https://suno.com/song/1b6cbd27-df54-4d5a-bca3-dc21ca13b883' },
@@ -424,11 +434,12 @@ export const sunoSongs: Track[] = [
 
 export const sunoStyle = 'glitch hop, indie prog, AI-voice covers and experimental generated songs';
 
-/** Published Suno generations; one rebuilt song currently has two versions. */
-export const sunoPublishedCount = sunoSongs.length + reimagined.reduce(
+/** Published Suno generations, including alternate generations of rebuilt songs. */
+export const sunoCoverGenerationCount = reimagined.reduce(
   (total, song) => total + (song.links?.filter((link) => link.source === 'suno').length ?? 0),
   0,
 );
+export const sunoPublishedCount = sunoSongs.length + sunoCoverGenerationCount;
 
 // ---------------------------------------------------------------- where
 
@@ -488,7 +499,7 @@ export const platforms: Platform[] = [
     label: 'Suno',
     url: 'https://suno.com/@alexmerced',
     era: 'ai',
-    note: `The current generated catalog: ${sunoSongs.length} newer songs and nine published generations of ${reimagined.length} archive covers.`,
+    note: `The current generated catalog: ${sunoSongs.length} newer songs and ${sunoCoverGenerationCount} published generations of ${reimagined.length} archive covers.`,
     stat: `${sunoPublishedCount} songs`,
   },
   {
