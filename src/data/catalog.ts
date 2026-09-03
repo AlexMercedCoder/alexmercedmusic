@@ -190,7 +190,8 @@ export const reimagined: Reimagining[] = [
     url: 'https://www.youtube.com/watch?v=utHZCYF6FwM',
     links: [
       { source: 'youtube', url: 'https://www.youtube.com/watch?v=utHZCYF6FwM' },
-      { source: 'suno', url: 'https://suno.com/song/66a52b97-a1df-41ca-9fc7-978f31ffdd05' },
+      { source: 'suno', url: 'https://suno.com/song/66a52b97-a1df-41ca-9fc7-978f31ffdd05', label: 'Suno · earlier' },
+      { source: 'suno', url: 'https://suno.com/song/1213e903-cde2-4068-b31e-02f1db506876', label: 'Suno · latest' },
     ],
   },
   {
@@ -384,6 +385,18 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Paper And Paint', url: 'https://suno.com/song/d06f8494-2371-4ef5-8599-ad17cc9b8d45' },
+  { title: 'Hands Full Empty', url: 'https://suno.com/song/c379c5c2-f42f-4a96-a2e4-b5bb746a480f' },
+  { title: 'Cracked Lunch Tray', url: 'https://suno.com/song/df5c333b-31cd-4902-98c9-8159d0fee122' },
+  { title: 'Burn the Maps', url: 'https://suno.com/song/093032b4-b6ff-40f2-a771-de970fe6daae' },
+  { title: 'Listening Late', url: 'https://suno.com/song/09ee6274-9c4f-423c-a935-5c9a035fec99' },
+  { title: 'Could Have Been Me', url: 'https://suno.com/song/cf82cad8-1ca5-4d35-9159-1b911a5327ab' },
+  { title: 'Open Hands', url: 'https://suno.com/song/244c08fb-2e42-4763-a7f3-da6f4a115101' },
+  { title: 'THE UNIVERSE WON’T MIND', url: 'https://suno.com/song/fbc4383f-5242-4175-9ebb-01a6080dcd4e' },
+  { title: 'ROSE BY ANY OTHER NAME', url: 'https://suno.com/song/69a07d72-7a66-4cda-8efc-43df59da69cf' },
+  { title: 'THE PEOPLE NEXT DOOR', url: 'https://suno.com/song/ddfbcaad-b092-4c8c-91db-9e1749cea8c3' },
+  { title: 'FREE ENOUGH TO LOVE', url: 'https://suno.com/song/7874c362-1aaa-483c-8897-0ed9eddb4789' },
+  { title: 'MY NAME IS ALEX', url: 'https://suno.com/song/25ff86a1-0c28-451b-b7b7-35e7775bc889' },
   { title: 'Fork in the Road', url: 'https://suno.com/song/a9944874-f578-469a-a535-d1d351babcfd' },
   { title: 'Wide Awake Again', url: 'https://suno.com/song/4a9e15ff-6ee7-46c1-9b4b-9f0d85725002' },
   { title: 'King of the Table', url: 'https://suno.com/song/0c3e6834-c2f9-440e-813c-6627f6245d0c' },
