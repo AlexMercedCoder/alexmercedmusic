@@ -385,6 +385,20 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Borrowed Years', url: 'https://suno.com/song/9a075f73-0c60-4b57-a38a-36e95ef4126f' },
+  { title: 'Paper Thin Mercy', url: 'https://suno.com/song/ae6d48bc-ffd1-4c13-bf9d-bc438fff2c74' },
+  { title: 'Dice and Dirty Cards', url: 'https://suno.com/song/c0828c3e-58f5-497d-a0c8-4a0e65e75110' },
+  { title: 'Quiet in My Chest', url: 'https://suno.com/song/487b20b2-195f-4f1f-9f1c-2e7813d35da4' },
+  { title: 'Golden Window', url: 'https://suno.com/song/594099d7-ca30-4bb8-948e-9a74db73c1e6' },
+  { title: 'I’m Adorable', url: 'https://suno.com/song/428f6b76-425c-47f5-a7c1-3a3b3db5aa8d' },
+  { title: 'I am Alex Merced (AlexMerced.com)', url: 'https://suno.com/song/5624d42d-2b71-460d-a1c0-7c035ba4b901' },
+  { title: 'Long Line Blues', url: 'https://suno.com/song/65a19b33-8c31-481e-8917-8980eb37556b' },
+  { title: 'THE SIGNAL IN THE PRICE', url: 'https://suno.com/song/010faae9-b133-4b7c-8e83-8594e91d9739' },
+  { title: 'THE DAYS AHEAD', url: 'https://suno.com/song/295231f7-55c7-4890-b074-4219e162b2b3' },
+  { title: 'CARRY THE FIRE', url: 'https://suno.com/song/a9e437d2-0be2-4043-bcc0-9caa466cd55e' },
+  { title: 'Spin, Bend and Hold', url: 'https://suno.com/song/41050276-eb26-4c2a-8a57-8116d7a8b34d' },
+  { title: 'THE ICEBERG OPEN LAKEHOUSE', url: 'https://suno.com/song/a6cc9cd2-41d0-447e-b412-dfc258a8e9e7' },
+  { title: 'THE HOLE STILL KNOWS MY NAME', url: 'https://suno.com/song/4e7866de-0ff9-4698-a269-98b8fb0fcdcd' },
   { title: 'Paper And Paint', url: 'https://suno.com/song/d06f8494-2371-4ef5-8599-ad17cc9b8d45' },
   { title: 'Hands Full Empty', url: 'https://suno.com/song/c379c5c2-f42f-4a96-a2e4-b5bb746a480f' },
   { title: 'Cracked Lunch Tray', url: 'https://suno.com/song/df5c333b-31cd-4902-98c9-8159d0fee122' },
