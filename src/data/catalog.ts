@@ -385,6 +385,13 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Singapore Noodles', url: 'https://suno.com/song/96f3f7c7-798d-4866-941c-0810791b4429' },
+  { title: 'Pho and Banh Mi', url: 'https://suno.com/song/5f41a293-731d-4d5a-9718-e75e3a0e38a0' },
+  { title: 'Pumpkin Spice Run', url: 'https://suno.com/song/dd190652-8c87-4fd2-b507-5d1afa8a1512' },
+  { title: 'Never Enough', url: 'https://suno.com/song/651f5980-8d6a-48d7-8f27-9a76e163615d' },
+  { title: 'Half-Open Door', url: 'https://suno.com/song/e65000ef-506f-45a6-a2e3-8c770ea0f8c9' },
+  { title: 'Borrowed Lives', url: 'https://suno.com/song/1e1d7a95-4536-4146-a155-ba8c9053d631' },
+  { title: 'Half Truth Lantern', url: 'https://suno.com/song/af808aee-fba9-4319-80ba-86669bf7d102' },
   { title: 'Borrowed Years', url: 'https://suno.com/song/9a075f73-0c60-4b57-a38a-36e95ef4126f' },
   { title: 'Paper Thin Mercy', url: 'https://suno.com/song/ae6d48bc-ffd1-4c13-bf9d-bc438fff2c74' },
   { title: 'Dice and Dirty Cards', url: 'https://suno.com/song/c0828c3e-58f5-497d-a0c8-4a0e65e75110' },
