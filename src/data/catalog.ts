@@ -385,6 +385,23 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Hot Wind Halo', url: 'https://suno.com/song/d5ac9d14-131f-4432-9648-c753418ee492' },
+  { title: 'THE ARITHMETIC OF HEARTS', url: 'https://suno.com/song/5baa94a9-ff45-4ef5-b477-ce4d2838fdfa' },
+  { title: 'Pumpkin Porch', url: 'https://suno.com/song/72a87080-70dc-49ce-9ff3-804835b8dbaa' },
+  { title: 'Flag in the Rain', url: 'https://suno.com/song/49dff634-0fc2-4523-8c35-478b3be1d731' },
+  { title: 'Cotton Candy Cage', url: 'https://suno.com/song/deec5d46-ac5d-4f64-bd24-cbd4697c0ab1' },
+  { title: 'Split Between Us', url: 'https://suno.com/song/4ac2d7b9-26f5-4495-aead-8bfebce4f851' },
+  { title: 'Secondhand Spin', url: 'https://suno.com/song/dcb04b9a-6fe9-4b3c-bdd2-f32eef8d6c26' },
+  { title: 'Golden Arches', url: 'https://suno.com/song/84ca28e0-c3ca-48d8-818f-73d28ba468e6' },
+  { title: 'Backseat Moonlight', url: 'https://suno.com/song/f518908f-d5ae-4cfe-b58b-07c0dabb4902' },
+  { title: 'Cardboard Calendar', url: 'https://suno.com/song/d1e89237-fde7-415f-8ea6-9237b92408db' },
+  { title: 'Sole On The Floor', url: 'https://suno.com/song/a36b2a76-8cc3-40c8-b0ab-2bb4d298d591' },
+  { title: 'Keys on the Hook', url: 'https://suno.com/song/76e4e9ae-64f5-4f41-95df-4b909b5e534d' },
+  { title: 'Hand On Your Back', url: 'https://suno.com/song/4fbe4f49-da72-49c0-a48f-906084a62aa5' },
+  { title: 'ROOM FOR ALL OF US', url: 'https://suno.com/song/d496c3b2-f750-4429-97c6-d8f3e4d87f9f' },
+  { title: 'Apricot Heart', url: 'https://suno.com/song/b4de89ec-ef2c-438d-9327-1ae8351f27e5' },
+  { title: 'Break The Frame', url: 'https://suno.com/song/d326177c-00fc-4d23-aa35-c15c899d2e03' },
+  { title: 'YOUR NAME IS ALREADY TALKING', url: 'https://suno.com/song/cc33cc88-498f-47e2-9a9c-82c30cb487ea' },
   { title: 'Singapore Noodles', url: 'https://suno.com/song/96f3f7c7-798d-4866-941c-0810791b4429' },
   { title: 'Pho and Banh Mi', url: 'https://suno.com/song/5f41a293-731d-4d5a-9718-e75e3a0e38a0' },
   { title: 'Pumpkin Spice Run', url: 'https://suno.com/song/dd190652-8c87-4fd2-b507-5d1afa8a1512' },
