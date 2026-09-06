@@ -385,6 +385,12 @@ export const tutorials: Track[] = [
 
 /** The non-cover songs currently published on Suno, newest first. */
 export const sunoSongs: Track[] = [
+  { title: 'Tin Roof Weather', url: 'https://suno.com/song/7ab36278-1acb-46e0-aad8-df8c9cfba24a' },
+  { title: 'Under the Weight', url: 'https://suno.com/song/9bb8ee70-05d5-4142-ada3-57f95ae1a499' },
+  { title: 'LET LOVE BE LOUDER', url: 'https://suno.com/song/32f0400f-a858-4351-8757-8b4fd27014be' },
+  { title: 'THE MACHINE LEARNS HUNGER', url: 'https://suno.com/song/6295e5d5-e4f8-4f4b-a15c-5962e3755f9c' },
+  { title: 'MORE HEARTS THAN HOURS', url: 'https://suno.com/song/b29fac2f-ea90-442a-bc7a-bc68dbfffd0c' },
+  { title: 'LEAVE ROOM FOR ME', url: 'https://suno.com/song/06214650-ad0b-4355-8fbe-2192947318a0' },
   { title: 'Hot Wind Halo', url: 'https://suno.com/song/d5ac9d14-131f-4432-9648-c753418ee492' },
   { title: 'THE ARITHMETIC OF HEARTS', url: 'https://suno.com/song/5baa94a9-ff45-4ef5-b477-ce4d2838fdfa' },
   { title: 'Pumpkin Porch', url: 'https://suno.com/song/72a87080-70dc-49ce-9ff3-804835b8dbaa' },
