@@ -10,6 +10,9 @@
 
 import albumsData from './albums.json';
 import electronicTracksData from './electronic-tracks.json';
+import sunoSongsData from './suno-songs.json';
+import sunoCoversData from './suno-covers.json';
+import youtubeMetadataData from './youtube-metadata.json';
 
 export type Era = 'acoustic' | 'electronic' | 'ai';
 
@@ -30,7 +33,19 @@ export type Track = {
   url?: string;
   /** Every verified host for this recording. */
   links?: TrackLink[];
+  /** Exact source timestamps and richer metadata, when the host exposes them. */
+  createdAt?: string;
+  durationSeconds?: number;
+  genres?: string[];
+  imageUrl?: string;
+  imageLargeUrl?: string;
+  embedUrl?: string;
+  model?: string;
+  lyrics?: string;
 };
+
+export type YouTubeMetadata = { publishedAt: string; title?: string; imageUrl?: string };
+export const youtubeMetadata = youtubeMetadataData as Record<string, YouTubeMetadata>;
 
 // ---------------------------------------------------------------- acoustic
 
@@ -385,153 +400,8 @@ export const tutorials: Track[] = [
 // ---------------------------------------------------------------- now
 
 /** The non-cover songs currently published on Suno, newest first. */
-export const sunoSongs: Track[] = [
-  { title: 'Pocket Fire', url: 'https://suno.com/song/4ca21343-7f57-485d-9972-763aa4ef1037' },
-  { title: 'Second Stair Creak', url: 'https://suno.com/song/0a5a589d-837f-459d-9fd0-faff7f31cbe5' },
-  { title: 'Different Body, Same Fear', url: 'https://suno.com/song/1fa87fb4-de4e-4c3f-b071-5e3aad6bcb23' },
-  { title: 'Deadbolt Heavy', url: 'https://suno.com/song/489066d2-ca53-4470-b1a9-d310ff71e72c' },
-  { title: 'Polaroid Table', url: 'https://suno.com/song/127363e6-41c0-4996-874b-791208914244' },
-  { title: 'Seed on My Sleeve', url: 'https://suno.com/song/7d0864de-ecea-4e8f-aed3-a1a53ae68e95' },
-  { title: 'Phoenix Takes Flight', url: 'https://suno.com/song/d2420aee-41bd-49fb-ab6c-b6dbd3f4c5ab' },
-  { title: 'We Rise', url: 'https://suno.com/song/eb560ea7-41a8-4c2b-bc00-ff11036bbcac' },
-  { title: 'Steel Toe Smile', url: 'https://suno.com/song/af96f445-e033-42ad-a36a-78a94b2c1e27' },
-  { title: 'I Rise', url: 'https://suno.com/song/c4d0c4d4-b5ca-4c0f-aa2d-5ef7ea9d4c7e' },
-  { title: 'Pork Chop Heart', url: 'https://suno.com/song/8ad5b277-82e1-41e9-8da8-ec151fcfc9a7' },
-  { title: 'SOUL ON THE TONGUE', url: 'https://suno.com/song/cfa814d3-387f-4a76-bbec-c9459e404154' },
-  { title: 'Broken Battery', url: 'https://suno.com/song/27cdbe13-9484-46c0-b764-623c78f57c74' },
-  { title: 'Drowning in the light', url: 'https://suno.com/song/6d387f93-6e2d-46d4-bd17-d5002e684ec9' },
-  { title: 'Bag by the Door', url: 'https://suno.com/song/a6fce46d-896a-4fc6-8d68-2c0bbac056b8' },
-  { title: 'Don’t Press the Burger', url: 'https://suno.com/song/6652beac-d678-4fef-b921-e09542f797be' },
-  { title: 'SALMON AT SEVEN', url: 'https://suno.com/song/026a5e24-9c74-4a72-8873-ea964047700c' },
-  { title: 'WHERE DOES CONFIDENCE END?', url: 'https://suno.com/song/0e7b7343-d334-4bf4-a93c-ff48e4aee024' },
-  { title: 'NOWHERE AND EVERYWHERE', url: 'https://suno.com/song/0b4e3840-a400-4adc-90e2-e0e5560cbf5c' },
-  { title: 'EVERYTHING HAS TO CHANGE', url: 'https://suno.com/song/e15e10eb-e1cf-476b-8348-391212f485eb' },
-  { title: 'THE BEAUTIFUL PROBLEM', url: 'https://suno.com/song/a8d8a298-1647-4035-a901-63e8003dcbb8' },
-  { title: 'I CAN’T BE EVERYWHERE', url: 'https://suno.com/song/30391aa5-ec92-433f-a715-7f0ae8832f50' },
-  { title: 'YOU ARE NOT BEING REPLACED', url: 'https://suno.com/song/4e26cc6c-3e29-4778-8f5c-9d36190fd253' },
-  { title: 'MORE THAN ONE LIGHT', url: 'https://suno.com/song/90ba3b90-9954-42ad-89e6-9f625b626e7d' },
-  { title: 'DIFFERENT LOVE, SAME WEIGHT', url: 'https://suno.com/song/e906245e-03c3-423d-8951-a3086e0ce838' },
-  { title: 'THE PEOPLE I HAVEN’T MET YET', url: 'https://suno.com/song/d9b6aa9b-c256-415e-bea1-a8a0380bebf3' },
-  { title: 'I NEED TO BELONG TO MYSELF TOO', url: 'https://suno.com/song/fb82e903-78ad-4a12-a7c3-1369776b7f5a' },
-  { title: 'A THOUSAND GOODBYES EVERY DAY', url: 'https://suno.com/song/3a5962f5-a274-4a93-81eb-cbf8d8976657' },
-  { title: 'PLEASE DON’T COUNT THE HOURS', url: 'https://suno.com/song/6445fb95-601d-488a-b5c4-2d7990b544b5' },
-  { title: 'THE GUILT OF GOING HOME', url: 'https://suno.com/song/ec95ff67-c7f3-4c65-9e57-ce6ce80659ed' },
-  { title: 'NOT TODAY, FEET', url: 'https://suno.com/song/c3b1c91d-4f2d-40e7-ab43-44c5b62acac9' },
-  { title: 'LOVE HAS NO LIMIT, I DO', url: 'https://suno.com/song/32d5ef7d-1429-4645-b802-5586c40ee732' },
-  { title: 'EVERYONE DESERVES THE FULL VERSION', url: 'https://suno.com/song/dd6aef5f-c95c-49d2-8984-80868c3a84d2' },
-  { title: 'I DON’T WANT TO LOVE YOU EFFICIENTLY', url: 'https://suno.com/song/8aed1d3b-8799-44fe-94dd-bf29630700e2' },
-  { title: 'A HOUSE WITH TOO MANY ROOMS', url: 'https://suno.com/song/489a0c58-5d03-448e-93e5-a794933f9c65' },
-  { title: 'NO ONE SHOULD FEEL SECOND', url: 'https://suno.com/song/1144733f-f365-49b5-91b1-bbb0e64ddb2c' },
-  { title: 'THE CALENDAR IS THE ENEMY', url: 'https://suno.com/song/d68344cd-7500-4924-8770-4a957458efee' },
-  { title: 'ONLY ONE OF ME', url: 'https://suno.com/song/8f7929b8-a05e-40b7-92d8-51171b895ff1' },
-  { title: 'I NEED TO KNOW YOUR FIRE', url: 'https://suno.com/song/386dadd4-cf0c-417b-8c7c-65491100f943' },
-  { title: 'DON’T GIVE ME A KEY', url: 'https://suno.com/song/d773b362-09c4-4159-aae2-3779d9d1bbd8' },
-  { title: 'Shake It Off Tonight', url: 'https://suno.com/song/4f079df8-ec21-4d26-a776-68c8219c6ce8' },
-  { title: 'WE WILL ALWAYS RISE', url: 'https://suno.com/song/a6d5215e-ff24-4d5f-ba39-17ca575a95cd' },
-  { title: 'Velvet Afterglow', url: 'https://suno.com/song/0d4e95a3-7a19-4969-a318-6ded0b696bc5' },
-  { title: 'Tin Roof Weather', url: 'https://suno.com/song/7ab36278-1acb-46e0-aad8-df8c9cfba24a' },
-  { title: 'Under the Weight', url: 'https://suno.com/song/9bb8ee70-05d5-4142-ada3-57f95ae1a499' },
-  { title: 'LET LOVE BE LOUDER', url: 'https://suno.com/song/32f0400f-a858-4351-8757-8b4fd27014be' },
-  { title: 'THE MACHINE LEARNS HUNGER', url: 'https://suno.com/song/6295e5d5-e4f8-4f4b-a15c-5962e3755f9c' },
-  { title: 'MORE HEARTS THAN HOURS', url: 'https://suno.com/song/b29fac2f-ea90-442a-bc7a-bc68dbfffd0c' },
-  { title: 'LEAVE ROOM FOR ME', url: 'https://suno.com/song/06214650-ad0b-4355-8fbe-2192947318a0' },
-  { title: 'Hot Wind Halo', url: 'https://suno.com/song/d5ac9d14-131f-4432-9648-c753418ee492' },
-  { title: 'THE ARITHMETIC OF HEARTS', url: 'https://suno.com/song/5baa94a9-ff45-4ef5-b477-ce4d2838fdfa' },
-  { title: 'Pumpkin Porch', url: 'https://suno.com/song/72a87080-70dc-49ce-9ff3-804835b8dbaa' },
-  { title: 'Flag in the Rain', url: 'https://suno.com/song/49dff634-0fc2-4523-8c35-478b3be1d731' },
-  { title: 'Cotton Candy Cage', url: 'https://suno.com/song/deec5d46-ac5d-4f64-bd24-cbd4697c0ab1' },
-  { title: 'Split Between Us', url: 'https://suno.com/song/4ac2d7b9-26f5-4495-aead-8bfebce4f851' },
-  { title: 'Secondhand Spin', url: 'https://suno.com/song/dcb04b9a-6fe9-4b3c-bdd2-f32eef8d6c26' },
-  { title: 'Golden Arches', url: 'https://suno.com/song/84ca28e0-c3ca-48d8-818f-73d28ba468e6' },
-  { title: 'Backseat Moonlight', url: 'https://suno.com/song/f518908f-d5ae-4cfe-b58b-07c0dabb4902' },
-  { title: 'Cardboard Calendar', url: 'https://suno.com/song/d1e89237-fde7-415f-8ea6-9237b92408db' },
-  { title: 'Sole On The Floor', url: 'https://suno.com/song/a36b2a76-8cc3-40c8-b0ab-2bb4d298d591' },
-  { title: 'Keys on the Hook', url: 'https://suno.com/song/76e4e9ae-64f5-4f41-95df-4b909b5e534d' },
-  { title: 'Hand On Your Back', url: 'https://suno.com/song/4fbe4f49-da72-49c0-a48f-906084a62aa5' },
-  { title: 'ROOM FOR ALL OF US', url: 'https://suno.com/song/d496c3b2-f750-4429-97c6-d8f3e4d87f9f' },
-  { title: 'Apricot Heart', url: 'https://suno.com/song/b4de89ec-ef2c-438d-9327-1ae8351f27e5' },
-  { title: 'Break The Frame', url: 'https://suno.com/song/d326177c-00fc-4d23-aa35-c15c899d2e03' },
-  { title: 'YOUR NAME IS ALREADY TALKING', url: 'https://suno.com/song/cc33cc88-498f-47e2-9a9c-82c30cb487ea' },
-  { title: 'Singapore Noodles', url: 'https://suno.com/song/96f3f7c7-798d-4866-941c-0810791b4429' },
-  { title: 'Pho and Banh Mi', url: 'https://suno.com/song/5f41a293-731d-4d5a-9718-e75e3a0e38a0' },
-  { title: 'Pumpkin Spice Run', url: 'https://suno.com/song/dd190652-8c87-4fd2-b507-5d1afa8a1512' },
-  { title: 'Never Enough', url: 'https://suno.com/song/651f5980-8d6a-48d7-8f27-9a76e163615d' },
-  { title: 'Half-Open Door', url: 'https://suno.com/song/e65000ef-506f-45a6-a2e3-8c770ea0f8c9' },
-  { title: 'Borrowed Lives', url: 'https://suno.com/song/1e1d7a95-4536-4146-a155-ba8c9053d631' },
-  { title: 'Half Truth Lantern', url: 'https://suno.com/song/af808aee-fba9-4319-80ba-86669bf7d102' },
-  { title: 'Borrowed Years', url: 'https://suno.com/song/9a075f73-0c60-4b57-a38a-36e95ef4126f' },
-  { title: 'Paper Thin Mercy', url: 'https://suno.com/song/ae6d48bc-ffd1-4c13-bf9d-bc438fff2c74' },
-  { title: 'Dice and Dirty Cards', url: 'https://suno.com/song/c0828c3e-58f5-497d-a0c8-4a0e65e75110' },
-  { title: 'Quiet in My Chest', url: 'https://suno.com/song/487b20b2-195f-4f1f-9f1c-2e7813d35da4' },
-  { title: 'Golden Window', url: 'https://suno.com/song/594099d7-ca30-4bb8-948e-9a74db73c1e6' },
-  { title: 'I’m Adorable', url: 'https://suno.com/song/428f6b76-425c-47f5-a7c1-3a3b3db5aa8d' },
-  { title: 'I am Alex Merced (AlexMerced.com)', url: 'https://suno.com/song/5624d42d-2b71-460d-a1c0-7c035ba4b901' },
-  { title: 'Long Line Blues', url: 'https://suno.com/song/65a19b33-8c31-481e-8917-8980eb37556b' },
-  { title: 'THE SIGNAL IN THE PRICE', url: 'https://suno.com/song/010faae9-b133-4b7c-8e83-8594e91d9739' },
-  { title: 'THE DAYS AHEAD', url: 'https://suno.com/song/295231f7-55c7-4890-b074-4219e162b2b3' },
-  { title: 'CARRY THE FIRE', url: 'https://suno.com/song/a9e437d2-0be2-4043-bcc0-9caa466cd55e' },
-  { title: 'Spin, Bend and Hold', url: 'https://suno.com/song/41050276-eb26-4c2a-8a57-8116d7a8b34d' },
-  { title: 'THE ICEBERG OPEN LAKEHOUSE', url: 'https://suno.com/song/a6cc9cd2-41d0-447e-b412-dfc258a8e9e7' },
-  { title: 'THE HOLE STILL KNOWS MY NAME', url: 'https://suno.com/song/4e7866de-0ff9-4698-a269-98b8fb0fcdcd' },
-  { title: 'Paper And Paint', url: 'https://suno.com/song/d06f8494-2371-4ef5-8599-ad17cc9b8d45' },
-  { title: 'Hands Full Empty', url: 'https://suno.com/song/c379c5c2-f42f-4a96-a2e4-b5bb746a480f' },
-  { title: 'Cracked Lunch Tray', url: 'https://suno.com/song/df5c333b-31cd-4902-98c9-8159d0fee122' },
-  { title: 'Burn the Maps', url: 'https://suno.com/song/093032b4-b6ff-40f2-a771-de970fe6daae' },
-  { title: 'Listening Late', url: 'https://suno.com/song/09ee6274-9c4f-423c-a935-5c9a035fec99' },
-  { title: 'Could Have Been Me', url: 'https://suno.com/song/cf82cad8-1ca5-4d35-9159-1b911a5327ab' },
-  { title: 'Open Hands', url: 'https://suno.com/song/244c08fb-2e42-4763-a7f3-da6f4a115101' },
-  { title: 'THE UNIVERSE WON’T MIND', url: 'https://suno.com/song/fbc4383f-5242-4175-9ebb-01a6080dcd4e' },
-  { title: 'ROSE BY ANY OTHER NAME', url: 'https://suno.com/song/69a07d72-7a66-4cda-8efc-43df59da69cf' },
-  { title: 'THE PEOPLE NEXT DOOR', url: 'https://suno.com/song/ddfbcaad-b092-4c8c-91db-9e1749cea8c3' },
-  { title: 'FREE ENOUGH TO LOVE', url: 'https://suno.com/song/7874c362-1aaa-483c-8897-0ed9eddb4789' },
-  { title: 'MY NAME IS ALEX', url: 'https://suno.com/song/25ff86a1-0c28-451b-b7b7-35e7775bc889' },
-  { title: 'Fork in the Road', url: 'https://suno.com/song/a9944874-f578-469a-a535-d1d351babcfd' },
-  { title: 'Wide Awake Again', url: 'https://suno.com/song/4a9e15ff-6ee7-46c1-9b4b-9f0d85725002' },
-  { title: 'King of the Table', url: 'https://suno.com/song/0c3e6834-c2f9-440e-813c-6627f6245d0c' },
-  { title: 'Pixel Dust Memory', url: 'https://suno.com/song/6ac55931-4114-42a7-a32c-bbd97432c850' },
-  { title: 'OPEN THE STACK', url: 'https://suno.com/song/4fff3fb9-8ba5-41f9-bec5-f58309d30dc6' },
-  { title: 'LET IT GO, LET IT GROW', url: 'https://suno.com/song/833db24a-10ff-4f88-8f2c-5d486f1b250c' },
-  { title: 'STEP BY STEP', url: 'https://suno.com/song/6d8e733c-8100-475d-a8f3-f1e34204e959' },
-  { title: 'THE LONG WAY HOME', url: 'https://suno.com/song/7a48ad83-ae6a-473f-8030-05f3f716fcbd' },
-  { title: 'OUT OF LINE', url: 'https://suno.com/song/ced71ca3-a447-4fca-8d0b-ea19ffe13a88' },
-  { title: 'Lives Through The Window', url: 'https://suno.com/song/64217495-cfbb-444f-a440-705518655a9d' },
-  { title: 'THE WHOLE DAMN SHOW', url: 'https://suno.com/song/1b6cbd27-df54-4d5a-bca3-dc21ca13b883' },
-  { title: 'THE MIRROR LOVES ME BACK', url: 'https://suno.com/song/eb3ab107-fea0-46ea-ba8e-4224534875b9' },
-  { title: 'First Light', url: 'https://suno.com/song/ba3e1eab-47fc-47d3-91dd-bce5d8d1e493' },
-  { title: 'Tin Roof Weather', url: 'https://suno.com/song/6768254a-03a1-47e5-b5fa-e629ef446172' },
-  { title: 'Mirror Habit', url: 'https://suno.com/song/f6fe1f21-589f-47a8-b074-1f20ac571851' },
-  { title: 'Table For Nobody', url: 'https://suno.com/song/1606486d-e9e5-4cca-a4b1-c1f8d498a684' },
-  { title: 'Not Okay Today', url: 'https://suno.com/song/9558555e-8277-4a92-a1a3-9ba10d70c570' },
-  { title: 'Let Them Bloom', url: 'https://suno.com/song/52f592b5-6874-4f5c-9521-b112ed9a813f' },
-  { title: 'Peanut Butter Halo', url: 'https://suno.com/song/9f827ea5-bac8-402e-b0f1-14f0d2b98b26' },
-  { title: 'Counting My Blessings', url: 'https://suno.com/song/639aaca3-d58d-485a-bcf8-7e778535d0a7' },
-  { title: 'Eyes of the World', url: 'https://suno.com/song/57ad9c9c-6c16-4a81-a529-bff6a15c66e1' },
-  { title: 'Gold Under Skin', url: 'https://suno.com/song/db734f1d-3b00-47f2-9060-2550ae8671d6' },
-  { title: 'More than Pieces', url: 'https://suno.com/song/42e712f6-a452-4100-b70c-c2895829e796' },
-  { title: 'Paper Walls', url: 'https://suno.com/song/cef9f1fc-1706-4899-adcc-27ecc480b240' },
-  { title: 'Old Scars New Hands', url: 'https://suno.com/song/833b7aed-9afa-4e45-b18a-df25a1d9231b' },
-  { title: 'Mirror Bite', url: 'https://suno.com/song/2bb90c12-e4ca-41e9-9ae4-b94a0ca29c63' },
-  { title: 'Borrowed Appetite', url: 'https://suno.com/song/462147e6-a804-4ff7-828b-998887219459' },
-  { title: 'Say My Name', url: 'https://suno.com/song/55e6203e-9184-4848-a542-fde6179ca11d' },
-  { title: 'Bottomless Plate', url: 'https://suno.com/song/5d2401f6-4e71-4531-8696-b2db46825cc2' },
-  { title: 'Left Unspent', url: 'https://suno.com/song/c4321f34-4771-4667-874f-06aa3bfd9447' },
-  { title: 'Borrowed Smile', url: 'https://suno.com/song/42d33b11-fa91-475d-be00-6c1faeab9449' },
-  { title: 'Top Floor Steps', url: 'https://suno.com/song/5897d165-904c-4a27-815f-783f07c88288' },
-  { title: 'Glass On My Tongue', url: 'https://suno.com/song/3474b7eb-8a6a-4d19-afeb-2c5e94d968d9' },
-  { title: 'Wrong Road Home', url: 'https://suno.com/song/abe6b10d-dfbb-44d8-9173-946586ae5d89' },
-  { title: 'To Find My Mind', url: 'https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea' },
-  { title: 'Black Hole Love', url: 'https://suno.com/song/1d7ba2fa-8c26-4610-9226-ff15241c38b5' },
-  { title: 'Finding the me that once Was', url: 'https://suno.com/song/31dbde6d-e24e-400c-b43d-6f78625ab5dc' },
-  { title: 'Second Helpings', url: 'https://suno.com/song/7228591f-a9f1-4e71-840d-0b8bc38c8dde' },
-  { title: 'Ambition Habit', url: 'https://suno.com/song/a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0' },
-  { title: 'I believe in you', url: 'https://suno.com/song/a81106cc-267a-4a39-8c42-7a2a1a5363ed' },
-  { title: 'Heal Your Heart', url: 'https://suno.com/song/98c922aa-2470-42e5-a663-f8c6875fc9cb' },
-  { title: 'Today Has Been Good', url: 'https://suno.com/song/12d9ee62-fd89-43c6-ad8e-3266cafaf05b' },
-  { title: 'Maps I Cannot Fold', url: 'https://suno.com/song/947c5921-ee15-4338-bd49-73f1b72278a9' },
-  { title: 'Karaoke King', url: 'https://suno.com/song/91846c7d-ef22-4048-8681-dfc68ffbefba' },
-  { title: 'Built it Up', url: 'https://suno.com/song/fafac817-d29c-424b-bc3c-eaa0b780c319' },
-  { title: 'Food is Good', url: 'https://suno.com/song/7f3fd470-bd0c-426e-85b4-afdf5bba4c6c' },
-];
+export const sunoSongs: Track[] = sunoSongsData as Track[];
+export const sunoCovers: Track[] = sunoCoversData as Track[];
 
 export const sunoStyle = 'glitch hop, indie prog, AI-voice covers and experimental generated songs';
 

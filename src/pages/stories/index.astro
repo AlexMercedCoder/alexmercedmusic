@@ -1,0 +1,16 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+const stories = [
+  ['/stories/start-here/', 'Start here: ten songs across twenty years', 'A guided route through the acoustic, electronic and AI-assisted eras.'],
+  ['/stories/originals-and-reimaginings/', 'Originals and reimaginings', 'Why the old recordings remain beside the rebuilt arrangements.'],
+  ['/stories/electronic-albums/', 'The seven electronic albums', 'The 2014 SoundCloud albums and the broader produced catalog around them.'],
+  ['/stories/revisiting-songs-with-suno/', 'Revisiting older songs with Suno', 'How and why the archive songs were given new arrangements.'],
+  ['/stories/from-guitar-to-fl-studio/', 'From guitar to FL Studio', 'The tools changed, but the melodic thread continued.'],
+];
+---
+<Base title="Stories from the catalog" description="Guided listening and first-hand context for twenty years of Alex Merced music.">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Stories' }]} />
+  <section class="section"><div class="shell"><p class="eyebrow">Listening guides</p><h1>Stories from the catalog</h1><p class="lede">The song pages hold the facts. These guides connect the eras, tools and recordings into a history you can hear.</p></div></section>
+  <section class="section section--tight"><div class="shell grid grid--2">{stories.map(([url,title,description]) => <article class="card"><h2 style="font-size:1.35rem"><a href={url}>{title}</a></h2><p>{description}</p></article>)}</div></section>
+</Base>

@@ -1,0 +1,24 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE, songs } from '../../data/catalog-model';
+const picks = [
+  ['Eadd9 Improv', 'The unassuming acoustic improvisation that later became Solemn Thoughts.'],
+  ['These Days Video', 'An early, compact singer-songwriter recording.'],
+  ['Alex Merced - My Heart Stopped', 'The original performance before its disco-house rebuild.'],
+  ['Rock Chaos', 'One of the electronic tracks still featured by ReverbNation.'],
+  ['Jazzy Dance', 'A produced track that also sits on Songs from 2013–2014.'],
+  ['Glitchy Romance', 'A concise example of the electronic catalog’s melodic side.'],
+  ['Solemn Thoughts', 'Eadd9 Improv heard again through an indie-disco arrangement.'],
+  ['Through the Darkness', 'An older song rebuilt as disco house.'],
+  ['Pocket Fire', 'The newest end of the current Suno catalog.'],
+  ['YOUR NAME IS ALREADY TALKING', 'A newer generated song tied to Alex’s broader creative work.'],
+].map(([title,note]) => ({ song: songs.find((candidate) => candidate.title === title && (title !== 'Solemn Thoughts' || candidate.kind === 'reimagined')), note })).filter((item) => item.song);
+---
+<Base title="Start here: ten songs across twenty years" description="A ten-song guided introduction to Alex Merced's acoustic, electronic, reimagined and generated music.">
+  <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Start here'}]} />
+  <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">A listening path</p><h1>Ten songs across twenty years</h1><p class="lede">This is not a ranking. It is a route through the archive: a room and a guitar, a long stretch of electronic production, and songs old and new arranged with generative tools.</p>
+  <ol class="guide-list">{picks.map(({song,note},index) => <li data-era={song!.era}><span>{String(index+1).padStart(2,'0')}</span><div><h2><a href={song!.pageUrl.replace(SITE,'')}>{song!.title}</a></h2><p>{note}</p></div></li>)}</ol>
+  <p><a class="btn" href="/songs/">Explore the complete catalog</a></p></div></article>
+</Base>
+<style>.guide-list{list-style:none;margin:2.5rem 0;padding:0}.guide-list li{display:grid;grid-template-columns:2.5rem 1fr;gap:1rem;padding:1.2rem 0;border-top:1px solid var(--rule)}.guide-list li>span{color:var(--era);font:600 .78rem/1.7 var(--mono)}.guide-list h2{font-size:1.3rem;margin-bottom:.35rem}.guide-list h2 a{text-decoration:none}.guide-list h2 a:hover{color:var(--era)}</style>

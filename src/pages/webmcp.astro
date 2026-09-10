@@ -1,0 +1,41 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { CATALOG_SCHEMA_VERSION, SITE } from '../data/catalog-model';
+const tools = [
+  ['music_overview', 'Current catalog counts, eras and primary destinations.'],
+  ['get_song', 'One exact recording by stable ID, slug or exact title.'],
+  ['search_songs', 'Full-text discovery with era, kind, album and source filters.'],
+  ['list_songs', 'Paginated catalog browsing without a search term.'],
+  ['get_recent_songs', 'The most recently published dated recordings.'],
+  ['compare_versions', 'An original recording and every known reimagined version.'],
+  ['list_reimaginings', 'Every original/reimagined pair.'],
+  ['list_albums', 'Albums or one complete album track list.'],
+  ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
+  ['navigate_catalog', 'Canonical human and machine-readable site destinations.'],
+];
+---
+
+<Base title="WebMCP tools" description="How browser agents can search, navigate and understand the Alex Merced Music catalog through read-only WebMCP tools.">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'WebMCP tools' }]} />
+  <article class="section prose">
+    <div class="shell prose__body" style="margin-top:0">
+      <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
+      <h1>WebMCP for the music catalog</h1>
+      <p class="lede">AlexMercedMusic.com registers ten read-only browser tools. Agents can find recordings, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <h2>Available tools</h2>
+      <dl class="facts">
+        {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}
+      </dl>
+      <h2>Example workflow</h2>
+      <ol>
+        <li>Call <code>search_songs</code> with <code>{`{"query":"Solemn Thoughts"}`}</code>.</li>
+        <li>Use the returned stable ID with <code>compare_versions</code>.</li>
+        <li>Open the returned canonical AlexMercedMusic.com page or a verified listening source.</li>
+      </ol>
+      <h2>Direct machine access</h2>
+      <p>Clients without WebMCP can use the versioned <a href="/catalog.json">JSON catalog</a>, <a href="/llms.txt">LLM guide</a>, <a href="/feed.json">JSON Feed</a>, or <a href="/feed.xml">RSS feed</a>. All tools are read-only and have no login or side effects.</p>
+      <p><a class="btn" href={`${SITE}/songs/`}>Open the human song explorer</a></p>
+    </div>
+  </article>
+</Base>

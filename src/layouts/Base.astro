@@ -3,6 +3,7 @@ import '../styles/global.css';
 import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WebMCP from '../components/WebMCP.astro';
+import MiniPlayer from '../components/MiniPlayer.astro';
 
 export interface Props {
   title: string;
@@ -113,6 +114,8 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <meta name="twitter:image:alt" content={imageAlt} />
 
     <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
+    <link rel="alternate" type="application/rss+xml" href="/feed.xml" title="Alex Merced Music — recently published" />
+    <link rel="alternate" type="application/feed+json" href="/feed.json" title="Alex Merced Music — JSON Feed" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
@@ -126,6 +129,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <main id="main">
       <slot />
     </main>
+    <MiniPlayer />
     <SiteFooter />
   </body>
 </html>

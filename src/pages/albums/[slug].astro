@@ -40,6 +40,8 @@ const jsonLd = [
   description={`${album.title} is an electronic album by Alex Merced, released in ${album.released.slice(0, 4)}. Explore its complete ${tracks.length}-track listing with direct listening links.`}
   jsonLd={jsonLd}
   ogType="music.album"
+  ogImage={`/social/albums/${album.slug}.png`}
+  imageAlt={`${album.title}, an electronic album by Alex Merced`}
   dateModified={CATALOG_UPDATED_AT}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Electronic catalogue', href: '/electronic' }, { label: album.title }]} />

@@ -1,0 +1,43 @@
+name: Catalog refresh
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 11 * * *'
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  suno:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run sync:suno -- --write
+      - id: changes
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+      - if: steps.changes.outputs.changed == 'true'
+        run: npm test
+      - if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          branch="catalog/suno-${GITHUB_RUN_ID}"
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add src/data/suno-songs.json src/data/suno-covers.json src/data/catalog-model.ts astro.config.mjs
+          git commit -m "Refresh Suno catalog"
+          git push origin "$branch"
+          gh pr create --base main --head "$branch" --title "Refresh Suno catalog" --body "Automated public-catalog refresh. The build, metadata relationships, generated pages, structured data, feeds, and WebMCP contract passed validation."

@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { reimagined } from '../../data/catalog';
+---
+<Base title="Originals and reimaginings" description="Why Alex Merced's original acoustic recordings remain connected to their new Suno arrangements.">
+  <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Originals and reimaginings'}]} />
+  <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">Then and now</p><h1>The point is the distance between them</h1><p class="lede">A rebuilt song makes more sense when the imperfect recording it came from remains audible beside it.</p>
+  <h2>The recordings are part of the writing</h2><p>The acoustic archive was not made as a polished retrospective. It preserves the circumstances in which the songs were first shared: one voice, one instrument, a room and whatever camera was available. The hesitations and limitations are part of the document.</p>
+  <h2>A new arrangement, not a replacement</h2><p>The {reimagined.length} reimagined songs ask what those compositions might sound like with arrangements they never had—disco house, salsa, rock and related styles. The generated result does not erase the earlier performance. Each comparison page deliberately puts both versions within reach.</p>
+  <h2>Solemn Thoughts makes the relationship clearest</h2><p>The song now called Solemn Thoughts began as a video titled <a href="/songs/eadd9-improv/">Eadd9 Improv</a>. Keeping both names and sources matters: one identifies the historical recording, while the other identifies the later composition and arrangement.</p>
+  <p><a class="btn" href="/reimagined/">Compare all original and rebuilt versions</a></p></div></article>
+</Base>

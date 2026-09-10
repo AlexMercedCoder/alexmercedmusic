@@ -1,0 +1,12 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE, catalogAlbums, songById } from '../../data/catalog-model';
+---
+<Base title="The seven electronic albums" description="A guide to Alex Merced's seven 2014 electronic albums and their complete track lists.">
+  <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Electronic albums'}]} />
+  <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">The 2014 collections</p><h1>Seven albums, one publishing date</h1><p class="lede">The albums were all published to SoundCloud on April 2, 2014, but they divide the produced work by mood and purpose rather than presenting one undifferentiated archive.</p>
+  <p>Mid-Life Crisis, An EP, Are You Game, Voices Volume 1, Album – Spaceman, Gamer Soundscapes and Songs from 2013–2014 together account for {catalogAlbums.reduce((sum,album)=>sum+album.trackIds.length,0)} cataloged album tracks. Other electronic singles live around them on ReverbNation, SoundCloud and YouTube.</p>
+  <div class="grid" style="margin:2rem 0">{catalogAlbums.map((album)=><article class="card card--era" data-era="electronic"><h2 style="font-size:1.25rem"><a href={album.pageUrl.replace(SITE,'')}>{album.title}</a></h2><p>{album.trackIds.length} tracks, including {album.trackIds.slice(0,3).map((id)=>songById.get(id)?.title).join(', ')}.</p></article>)}</div>
+  <p><a class="btn" href="/electronic/">Search the full electronic catalog</a></p></div></article>
+</Base>

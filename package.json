@@ -6,17 +6,21 @@
   "engines": { "node": ">=22.12.0" },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "build": "astro build && node scripts/generate-social-images.mjs",
     "preview": "astro preview",
     "check": "tsc --noEmit",
     "validate": "npm run check && npm run build && node scripts/validate-site.mjs",
-    "test": "npm run validate"
+    "test": "npm run validate",
+    "sync:suno": "node scripts/sync-suno.mjs",
+    "sync:youtube": "node scripts/sync-youtube-metadata.mjs",
+    "check:external-links": "node scripts/check-external-links.mjs"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^7.2.9"
   },
   "devDependencies": {
+    "sharp": "^0.35.4",
     "typescript": "^5.9.3"
   }
 }

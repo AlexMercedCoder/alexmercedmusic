@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { reimagined, sunoSongs } from '../../data/catalog';
+---
+<Base title="Revisiting older songs with Suno" description="How Alex Merced uses Suno to arrange older compositions and create newer music without hiding the process.">
+  <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Revisiting songs with Suno'}]} />
+  <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">Process and disclosure</p><h1>Why revisit an old song with a model?</h1><p class="lede">The useful question is not whether a generated arrangement sounds new. It is whether it reveals something that was already latent in the writing.</p>
+  <h2>The source stays visible</h2><p>For each of the {reimagined.length} archive rebuilds, this catalog identifies the original performance and every verified Suno or YouTube version. That makes the creative intervention inspectable rather than presenting the result without history.</p>
+  <h2>Creative direction and generated performance</h2><p>Alex supplies the song, text and creative direction; Suno generates the musical arrangement and performance. Each newer song page identifies that method and publishes the model label, source date, style tags, artwork and lyrics when Suno exposes them.</p>
+  <h2>The work has moved beyond covers</h2><p>The current Suno catalog includes {sunoSongs.length} songs that are not part of the archive-cover series. They range across personal, playful, political and professional subjects, so the catalog treats “generated” as a production method rather than a genre.</p>
+  <p><a class="btn" href="/reimagined/">Hear the Suno catalog</a></p></div></article>
+</Base>

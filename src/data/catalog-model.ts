@@ -6,15 +6,17 @@ import {
   electronicTracks,
   platforms,
   reimagined,
+  sunoCovers,
   sunoPublishedCount,
   sunoSongs,
   sunoStyle,
+  youtubeMetadata,
   type Era,
   type TrackLink,
 } from './catalog';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.0.0';
+export const CATALOG_SCHEMA_VERSION = '1.1.0';
 export const CATALOG_UPDATED_AT = '2026-09-10';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -40,6 +42,16 @@ export type CatalogSong = {
   albumId?: string;
   albumPageUrl?: string;
   style?: string;
+  createdAt?: string;
+  durationSeconds?: number;
+  catalogedAt: string;
+  genres?: string[];
+  imageUrl?: string;
+  imageLargeUrl?: string;
+  embedUrl?: string;
+  model?: string;
+  lyrics?: string;
+  creationMethod: string;
   originalTrackId?: string;
   originalPageUrl?: string;
   reimaginedTrackIds?: string[];
@@ -126,19 +138,35 @@ type DerivedSeed = SongSeed & {
 };
 
 const albumSlugs = new Map(albums.map((album) => [album.title, slugify(album.title)]));
+const youtubeId = (url?: string) => url ? new URL(url).searchParams.get('v') ?? undefined : undefined;
+const youtubeDetails = (url?: string) => {
+  const id = youtubeId(url);
+  return id ? youtubeMetadata[id] : undefined;
+};
+const youtubeDetailsFromLinks = (links?: TrackLink[]) => youtubeDetails(links?.find((link) => link.source === 'youtube')?.url);
+const sunoCoverByUrl = new Map(sunoCovers.map((track) => [track.url, track]));
+const formatDate = (value?: string) => value ? new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(value)) : undefined;
 
 const seeds: SongSeed[] = [
-  ...acousticTracks.map((track) => ({
+  ...acousticTracks.map((track) => {
+    const source = youtubeDetails(track.url);
+    return ({
     key: track.url ?? track.title,
     title: track.title,
     era: 'acoustic' as const,
     kind: 'archive' as const,
-    description: `${track.title} is an acoustic archive recording written and performed by Alex Merced. This page collects its verified listening source and any known later reimagining.`,
+    description: `${track.title} is an acoustic archive recording written and performed by Alex Merced${source?.publishedAt ? `, published ${formatDate(source.publishedAt)}` : ''}. This page collects its verified listening source and any known later reimagining.`,
     links: linksFor(track.links, track.url, 'recording'),
     length: track.length,
     posted: track.posted,
-  })),
-  ...electronicTracks.map((track) => ({
+    createdAt: source?.publishedAt,
+    catalogedAt: CATALOG_UPDATED_AT,
+    imageUrl: source?.imageUrl,
+    creationMethod: 'Written and performed by Alex Merced; preserved as an acoustic archive recording.',
+  }); }),
+  ...electronicTracks.map((track) => {
+    const source = youtubeDetailsFromLinks(track.links);
+    return ({
     key: track.url,
     title: track.title,
     era: 'electronic' as const,
@@ -149,8 +177,15 @@ const seeds: SongSeed[] = [
     album: track.album,
     albumId: track.album ? `album:${albumSlugs.get(track.album)}` : undefined,
     albumPageUrl: track.album ? `${SITE}/albums/${albumSlugs.get(track.album)}/` : undefined,
-  })),
-  ...reimagined.map((track) => ({
+    createdAt: source?.publishedAt,
+    catalogedAt: CATALOG_UPDATED_AT,
+    imageUrl: source?.imageUrl,
+    creationMethod: 'Produced by Alex Merced in FL Studio.',
+  }); }),
+  ...reimagined.map((track) => {
+    const latestSunoLink = [...(track.links ?? [])].reverse().find((link) => link.source === 'suno');
+    const source = latestSunoLink ? sunoCoverByUrl.get(latestSunoLink.url) : undefined;
+    return ({
     key: track.url ?? track.title,
     title: track.title,
     era: 'ai' as const,
@@ -160,16 +195,36 @@ const seeds: SongSeed[] = [
     length: track.length,
     style: track.style,
     originalTitle: track.original,
-  })),
+    createdAt: source?.createdAt,
+    catalogedAt: CATALOG_UPDATED_AT,
+    durationSeconds: source?.durationSeconds,
+    genres: source?.genres,
+    imageUrl: source?.imageUrl,
+    imageLargeUrl: source?.imageLargeUrl,
+    embedUrl: source?.embedUrl,
+    model: source?.model,
+    lyrics: source?.lyrics,
+    creationMethod: `An earlier Alex Merced composition rebuilt with Suno as ${track.style.toLowerCase()}; the page keeps the source recording and generated arrangements together.`,
+  }); }),
   ...sunoSongs.map((track) => ({
     key: track.url ?? track.title,
     title: track.title,
     era: 'ai' as const,
     kind: 'generated' as const,
-    description: `${track.title} is a newer song created by Alex Merced with Suno. This page links directly to the published generation.`,
+    description: `${track.title} is a newer song created by Alex Merced with Suno${track.genres?.length ? ` in a style described as ${track.genres.slice(0, 3).join(', ')}` : ''}${track.createdAt ? `, published ${formatDate(track.createdAt)}` : ''}. This page preserves its verified creation details and published generation.`,
     links: linksFor(track.links, track.url, 'generation'),
     length: track.length,
     posted: track.posted,
+    createdAt: track.createdAt,
+    catalogedAt: CATALOG_UPDATED_AT,
+    durationSeconds: track.durationSeconds,
+    genres: track.genres,
+    imageUrl: track.imageUrl,
+    imageLargeUrl: track.imageLargeUrl,
+    embedUrl: track.embedUrl,
+    model: track.model,
+    lyrics: track.lyrics,
+    creationMethod: 'Created by Alex Merced with Suno; style tags, runtime, artwork, model version and lyrics are sourced from the public Suno recording metadata.',
   })),
 ];
 

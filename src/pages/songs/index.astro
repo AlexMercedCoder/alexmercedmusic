@@ -1,0 +1,167 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE, songs } from '../../data/catalog-model';
+
+const albums = [...new Set(songs.map((song) => song.album).filter(Boolean))].sort();
+const recent = songs.filter((song) => song.createdAt).sort((a, b) => Date.parse(b.createdAt!) - Date.parse(a.createdAt!)).slice(0, 12);
+const sectionLabel = { archive: 'Acoustic archive', electronic: 'Electronic', reimagined: 'Reimagined', generated: 'New with Suno' };
+const embedFor = (song: (typeof songs)[number]) => {
+  const youtube = song.links.find((link) => link.source === 'youtube');
+  if (youtube) return `https://www.youtube-nocookie.com/embed/${new URL(youtube.url).searchParams.get('v')}`;
+  if (song.embedUrl) return song.embedUrl;
+  const soundcloud = song.links.find((link) => link.source.startsWith('soundcloud'));
+  return soundcloud ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(soundcloud.url)}&auto_play=false&hide_related=true&show_comments=false` : undefined;
+};
+const jsonLd = [{
+  '@type': 'CollectionPage',
+  '@id': `${SITE}/songs/#page`,
+  name: 'Explore every Alex Merced song',
+  url: `${SITE}/songs/`,
+  about: { '@id': `${SITE}/#musicgroup` },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: songs.length,
+    itemListElement: songs.map((song, index) => ({ '@type': 'ListItem', position: index + 1, url: song.pageUrl, name: song.title })),
+  },
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Explore songs', item: `${SITE}/songs/` },
+  ],
+}];
+---
+
+<Base title="Explore every song" description={`Search and filter all ${songs.length} Alex Merced recordings by era, type, album and listening platform.`} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Explore songs' }]} />
+  <section class="section section--tight">
+    <div class="shell">
+      <p class="eyebrow">The complete catalog</p>
+      <h1>Find something to hear</h1>
+      <p class="lede">Search all {songs.length} acoustic recordings, electronic productions, reimagined songs and newer Suno releases from one place.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="explorer" aria-label="Song filters">
+        <label><span>Search</span><input id="song-query" type="search" placeholder="Song title, style or album" autocomplete="off" /></label>
+        <label><span>Era</span><select id="song-era"><option value="all">All eras</option><option value="acoustic">Acoustic</option><option value="electronic">Electronic</option><option value="ai">AI and reimagined</option></select></label>
+        <label><span>Type</span><select id="song-kind"><option value="all">All types</option><option value="archive">Archive recording</option><option value="electronic">Electronic</option><option value="reimagined">Reimagined</option><option value="generated">New with Suno</option></select></label>
+        <label><span>Platform</span><select id="song-source"><option value="all">All platforms</option><option value="youtube">YouTube</option><option value="suno">Suno</option><option value="soundcloud">SoundCloud</option><option value="reverbnation">ReverbNation</option></select></label>
+        <label><span>Album</span><select id="song-album"><option value="all">All albums</option>{albums.map((album) => <option value={album}>{album}</option>)}</select></label>
+        <label><span>Sort</span><select id="song-sort"><option value="catalog">Catalog order</option><option value="newest">Newest dated first</option><option value="az">Title A–Z</option><option value="duration">Longest first</option></select></label>
+      </div>
+      <div class="explorer__actions">
+        <p id="song-count" aria-live="polite">{songs.length} songs</p>
+        <button class="btn" type="button" id="surprise">Surprise me</button>
+        <button class="btn" type="button" id="reset">Reset filters</button>
+      </div>
+
+      <div class="song-grid" id="song-grid">
+        {songs.map((song, index) => {
+          const embed = embedFor(song);
+          return (
+            <article
+              class="song-card card card--era"
+              data-era={song.era}
+              data-kind={song.kind}
+              data-title={`${song.title} ${song.genres?.join(' ') ?? ''} ${song.album ?? ''}`.toLowerCase()}
+              data-sources={song.links.map((link) => link.source.replace('soundcloud-albums', 'soundcloud')).join(' ')}
+              data-album={song.album ?? ''}
+              data-date={song.createdAt ?? ''}
+              data-duration={song.seconds ?? song.durationSeconds ?? 0}
+              data-index={index}
+            >
+              <p class="eyebrow">{sectionLabel[song.kind]}</p>
+              <h2><a href={song.pageUrl.replace(SITE, '')}>{song.title}</a></h2>
+              <p>{song.album ?? song.genres?.slice(0, 3).join(' · ') ?? song.style ?? 'Alex Merced Music'}</p>
+              <div class="song-card__actions">
+                <a href={song.pageUrl.replace(SITE, '')}>Details</a>
+                {embed && <button type="button" data-embed-url={embed} data-track-title={song.title}>Play here</button>}
+                <a href={song.links[0].url}>Source ↗</a>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+      <p id="song-empty" class="empty" hidden>No songs match those filters.</p>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .explorer { display:grid; grid-template-columns:repeat(auto-fit,minmax(10rem,1fr)); gap:.8rem; }
+  .explorer label { display:grid; gap:.35rem; }
+  .explorer label span { font:600 .68rem/1 var(--mono); letter-spacing:.1em; text-transform:uppercase; color:var(--ink-faint); }
+  .explorer input,.explorer select { width:100%; min-height:2.7rem; padding:.62rem .7rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); color:var(--ink); font:inherit; font-size:.88rem; }
+  .explorer__actions { display:flex; align-items:center; flex-wrap:wrap; gap:.7rem; margin:1rem 0 1.5rem; }
+  .explorer__actions p { margin:0 auto 0 0; color:var(--ink-faint); font:500 .8rem/1 var(--mono); }
+  .song-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(17rem,1fr)); gap:.75rem; }
+  .song-card[hidden] { display:none; }
+  .song-card .eyebrow { color:var(--era); margin:0; }
+  .song-card h2 { font-size:1.08rem; line-height:1.25; }
+  .song-card h2 a { text-decoration:none; }
+  .song-card h2 a:hover { color:var(--era); text-decoration:underline; text-underline-offset:.18em; }
+  .song-card__actions { display:flex; flex-wrap:wrap; gap:.7rem; margin-top:auto; padding-top:.3rem; }
+  .song-card__actions a,.song-card__actions button { border:0; padding:0; background:none; color:var(--era); font:650 .73rem/1 var(--mono); cursor:pointer; text-decoration:none; }
+  .song-card__actions a:hover,.song-card__actions button:hover { color:var(--ink); text-decoration:underline; }
+</style>
+
+<script>
+  const grid = document.getElementById('song-grid')!;
+  const cards = Array.from(grid.querySelectorAll<HTMLElement>('.song-card'));
+  const query = document.getElementById('song-query') as HTMLInputElement;
+  const era = document.getElementById('song-era') as HTMLSelectElement;
+  const kind = document.getElementById('song-kind') as HTMLSelectElement;
+  const source = document.getElementById('song-source') as HTMLSelectElement;
+  const album = document.getElementById('song-album') as HTMLSelectElement;
+  const sort = document.getElementById('song-sort') as HTMLSelectElement;
+  const count = document.getElementById('song-count')!;
+  const empty = document.getElementById('song-empty')!;
+  const controls = [query, era, kind, source, album, sort];
+
+  const params = new URLSearchParams(location.search);
+  query.value = params.get('q') ?? '';
+  for (const [control, key] of [[era, 'era'], [kind, 'kind'], [source, 'source'], [album, 'album'], [sort, 'sort']] as const) {
+    const value = params.get(key);
+    if (value && [...control.options].some((option) => option.value === value)) control.value = value;
+  }
+
+  function apply() {
+    const term = query.value.trim().toLowerCase();
+    const visible = cards.filter((card) => {
+      const show = (!term || card.dataset.title!.includes(term))
+        && (era.value === 'all' || card.dataset.era === era.value)
+        && (kind.value === 'all' || card.dataset.kind === kind.value)
+        && (source.value === 'all' || card.dataset.sources!.split(' ').includes(source.value))
+        && (album.value === 'all' || card.dataset.album === album.value);
+      card.hidden = !show;
+      return show;
+    });
+    const ordered = [...cards].sort((left, right) => {
+      if (sort.value === 'az') return left.dataset.title!.localeCompare(right.dataset.title!);
+      if (sort.value === 'newest') return Date.parse(right.dataset.date || '1900') - Date.parse(left.dataset.date || '1900');
+      if (sort.value === 'duration') return Number(right.dataset.duration) - Number(left.dataset.duration);
+      return Number(left.dataset.index) - Number(right.dataset.index);
+    });
+    for (const card of ordered) grid.append(card);
+    count.textContent = `${visible.length} of ${cards.length} songs`;
+    empty.hidden = visible.length > 0;
+    const nextParams = new URLSearchParams();
+    if (term) nextParams.set('q', term);
+    for (const [control, key] of [[era, 'era'], [kind, 'kind'], [source, 'source'], [album, 'album'], [sort, 'sort']] as const) {
+      if (control.value !== 'all' && control.value !== 'catalog') nextParams.set(key, control.value);
+    }
+    history.replaceState(null, '', `${location.pathname}${nextParams.size ? `?${nextParams}` : ''}`);
+  }
+  for (const control of controls) control.addEventListener(control === query ? 'input' : 'change', apply);
+  document.getElementById('reset')!.addEventListener('click', () => { query.value = ''; for (const select of [era, kind, source, album]) select.value = 'all'; sort.value = 'catalog'; apply(); });
+  document.getElementById('surprise')!.addEventListener('click', () => {
+    const visible = cards.filter((card) => !card.hidden);
+    const selected = visible[Math.floor(Math.random() * visible.length)];
+    selected?.querySelector<HTMLAnchorElement>('h2 a')?.click();
+  });
+  apply();
+</script>

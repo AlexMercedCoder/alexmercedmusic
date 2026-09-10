@@ -1,0 +1,41 @@
+<aside class="mini-player" id="mini-player" hidden aria-label="Music player">
+  <div class="mini-player__meta">
+    <span class="eyebrow">Now playing</span>
+    <strong id="mini-player-title">Alex Merced Music</strong>
+  </div>
+  <iframe id="mini-player-frame" title="Music player" allow="autoplay; encrypted-media; picture-in-picture" loading="lazy"></iframe>
+  <button type="button" id="mini-player-close" aria-label="Close music player">×</button>
+</aside>
+
+<script>
+  const player = document.getElementById('mini-player') as HTMLElement;
+  const frame = document.getElementById('mini-player-frame') as HTMLIFrameElement;
+  const title = document.getElementById('mini-player-title')!;
+  const close = document.getElementById('mini-player-close') as HTMLButtonElement;
+  const storageKey = 'alexmercedmusic-player';
+
+  const show = (url: string, trackTitle: string) => {
+    frame.src = url;
+    title.textContent = trackTitle;
+    player.hidden = false;
+    try { sessionStorage.setItem(storageKey, JSON.stringify({ url, title: trackTitle })); } catch {}
+  };
+  const hide = () => {
+    player.hidden = true;
+    frame.src = '';
+    try { sessionStorage.removeItem(storageKey); } catch {}
+  };
+
+  document.addEventListener('click', (event) => {
+    const trigger = (event.target as Element).closest<HTMLElement>('[data-embed-url]');
+    if (!trigger?.dataset.embedUrl) return;
+    event.preventDefault();
+    show(trigger.dataset.embedUrl, trigger.dataset.trackTitle ?? 'Alex Merced Music');
+  });
+  close.addEventListener('click', hide);
+
+  try {
+    const saved = JSON.parse(sessionStorage.getItem(storageKey) ?? 'null');
+    if (saved?.url && saved?.title) show(saved.url, saved.title);
+  } catch {}
+</script>

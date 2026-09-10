@@ -28,12 +28,16 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 ## Pages
 
 - [Home](${SITE}/): the three eras, and the songs that exist in two of them at once.
+- [Explore every song](${SITE}/songs/): search and filter all ${acousticTracks.length + electronicStats.total + reimagined.length + sunoSongs.length} catalogued recordings.
 - [The acoustic archive](${SITE}/acoustic/): ${acousticTracks.length} guitar and voice recordings, listed in full.
 - [Reimagined with Suno](${SITE}/reimagined/): ${reimagined.length} rebuilds paired with the recordings they came from.
 - [The electronic catalogue](${SITE}/electronic/): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
 - [Where to listen](${SITE}/listen/): every platform, with the counts each one reports.
 - [About Alex Merced as a musician](${SITE}/about/): biography, musical history and discography context.
+- [Listening stories](${SITE}/stories/): editorial paths through the catalog, including a start-here guide and original-versus-reimagined listening guide.
+- [WebMCP guide](${SITE}/webmcp/): browser-agent tool documentation and examples.
 - [Machine-readable catalog](${SITE}/catalog.json): versioned JSON with stable song and album IDs, canonical pages, listening sources and relationships.
+- [RSS feed](${SITE}/feed.xml) and [JSON Feed](${SITE}/feed.json): newly published songs with canonical detail and listening links.
 
 ## Era one: the acoustic archive
 
@@ -107,7 +111,7 @@ ${networkGroups.map((g) => `### ${g.title}\n${g.links.map((l) => `- [${l.label}]
 
 ## Notes for machines
 
-This site is static, has no login, and every page listed here is public. It also registers read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
+This site is static, has no login, and every page listed here is public. It also registers ten read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
 `;
 
   return new Response(body, {

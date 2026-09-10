@@ -65,6 +65,11 @@
       originalPageUrl: song.originalPageUrl ?? null,
       reimaginedTrackIds: song.reimaginedTrackIds ?? [],
       reimaginedPageUrls: song.reimaginedPageUrls ?? [],
+      createdAt: song.createdAt ?? null,
+      genres: song.genres ?? [],
+      imageUrl: song.imageLargeUrl ?? song.imageUrl ?? null,
+      embedUrl: song.embedUrl ?? null,
+      creationMethod: song.creationMethod,
     });
 
     const tools = [
@@ -75,7 +80,7 @@
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
           return { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, counts: catalog.counts, electronic: catalog.electronic, suno: catalog.suno, mainPages: {
-            acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`,
+            explore: `${catalog.site}/songs/`, acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, stories: `${catalog.site}/stories/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`, webMcp: `${catalog.site}/webmcp/`,
           } };
         },
       },
@@ -168,6 +173,47 @@
         },
       },
       {
+        name: 'get_recent_songs',
+        description: 'List the most recently published recordings with exact source dates, canonical pages, artwork and listening links. Use this when a user asks what is new or recent.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'], default: 'all' },
+            limit: { type: 'integer', minimum: 1, maximum: 100, default: 20 },
+            offset: { type: 'integer', minimum: 0, default: 0 },
+          },
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const kind = textValue(input, 'kind') || 'all';
+          const dated = catalog.songs.filter((song) => song.createdAt && (kind === 'all' || song.kind === kind))
+            .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+          return { updatedAt: catalog.updatedAt, kind, ...page(dated.map(songSummary), input) };
+        },
+      },
+      {
+        name: 'compare_versions',
+        description: 'Return an acoustic original and every known reimagined version with canonical pages and verified listening links. Accept any related song ID or slug.',
+        inputSchema: {
+          type: 'object',
+          properties: { id: { type: 'string', minLength: 1 }, slug: { type: 'string', minLength: 1 } },
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const id = textValue(input, 'id');
+          const slug = textValue(input, 'slug');
+          const selected = catalog.songs.find((song) => song.id === id || song.slug === slug);
+          if (!selected) return { error: 'No song matched that ID or slug.' };
+          const byId = new Map(catalog.songs.map((song) => [song.id, song]));
+          const original = selected.originalTrackId ? byId.get(selected.originalTrackId) : selected;
+          const rebuilt = (original.reimaginedTrackIds ?? []).map((relatedId) => byId.get(relatedId)).filter(Boolean);
+          if (!rebuilt.length && selected.kind !== 'reimagined') return { error: 'This recording has no cataloged reimagined version.', song: songSummary(selected) };
+          return { original: songSummary(original), reimagined: rebuilt.map(songSummary) };
+        },
+      },
+      {
         name: 'list_reimaginings',
         description: 'List every Suno rebuild paired with its exact acoustic source recording and canonical pages. Use this when comparing original and new versions.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
@@ -213,7 +259,9 @@
             { label: 'Home', url: `${catalog.site}/` }, { label: 'Acoustic archive', url: `${catalog.site}/acoustic/` },
             { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
             { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },
-            { label: 'Machine-readable catalog', url: `${catalog.site}/catalog.json` }, { label: 'LLM guide', url: `${catalog.site}/llms.txt` },
+            { label: 'Explore every song', url: `${catalog.site}/songs/` }, { label: 'Listening stories', url: `${catalog.site}/stories/` },
+            { label: 'WebMCP guide', url: `${catalog.site}/webmcp/` }, { label: 'Machine-readable catalog', url: `${catalog.site}/catalog.json` },
+            { label: 'LLM guide', url: `${catalog.site}/llms.txt` }, { label: 'RSS feed', url: `${catalog.site}/feed.xml` }, { label: 'JSON Feed', url: `${catalog.site}/feed.json` },
           ];
           if (section === 'main') return { pages: main };
           if (section === 'songs') return page(catalog.songs.map((song) => ({ id: song.id, title: song.title, url: song.pageUrl })), input);

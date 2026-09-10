@@ -1,0 +1,13 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { acousticTracks, electronicStats, tutorials } from '../../data/catalog';
+---
+<Base title="From guitar to FL Studio" description="The path from Alex Merced's acoustic archive to electronic production, tutorials and a 274-track produced catalog.">
+  <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'From guitar to FL Studio'}]} />
+  <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">The tools changed</p><h1>From a camera in a room to a production catalog</h1><p class="lede">The earliest recordings make performance the whole arrangement. FL Studio opened a different problem: building the room, the rhythm and the ensemble inside the track.</p>
+  <h2>The first archive</h2><p>The surviving acoustic side contains {acousticTracks.length} accessible performances. They are direct and uneven in the useful way an archive can be: song ideas, finished pieces and improvisations remain next to one another.</p>
+  <h2>The produced catalog</h2><p>The electronic collection now resolves to {electronicStats.total} distinct tracks after titles from several platforms are normalized and duplicates merged. Its recurring vocabulary—glitch, melody, game music, tension and uplift—shows continuity even as the instrumentation changes.</p>
+  <h2>Production became teaching</h2><p>The same period produced {tutorials.length} FL Studio walkthroughs covering synthesis, sampling, mixing, mastering and sidechaining. Those videos eventually reached beyond the music itself and anticipate the technical education work that followed.</p>
+  <p><a class="btn" href="/electronic/">Explore the productions and tutorials</a></p></div></article>
+</Base>

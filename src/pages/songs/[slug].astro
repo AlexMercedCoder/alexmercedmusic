@@ -15,13 +15,19 @@ const reimaginings = (song.reimaginedTrackIds ?? []).flatMap((id) => {
 });
 const youtubeLink = song.links.find((link) => link.source === 'youtube');
 const youtubeId = youtubeLink ? new URL(youtubeLink.url).searchParams.get('v') : null;
+const soundcloudLink = song.links.find((link) => link.source.startsWith('soundcloud'));
+const playerUrl = youtubeId
+  ? `https://www.youtube-nocookie.com/embed/${youtubeId}`
+  : song.embedUrl ?? (soundcloudLink ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(soundcloudLink.url)}&color=%234fc4b8&auto_play=false&hide_related=true&show_comments=false` : null);
+const playerName = youtubeId ? 'YouTube' : song.embedUrl ? 'Suno' : soundcloudLink ? 'SoundCloud' : null;
 const section = song.kind === 'archive' ? 'Acoustic archive'
   : song.kind === 'electronic' ? 'Electronic catalogue'
     : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
 const sectionUrl = song.kind === 'archive' ? '/acoustic'
   : song.kind === 'electronic' ? '/electronic' : '/reimagined';
-const duration = song.seconds
-  ? `PT${Math.floor(song.seconds / 60)}M${song.seconds % 60}S`
+const durationSeconds = song.seconds ?? song.durationSeconds;
+const duration = durationSeconds
+  ? `PT${Math.floor(durationSeconds / 60)}M${Math.round(durationSeconds % 60)}S`
   : song.length
     ? `PT${Number(song.length.split(':')[0])}M${Number(song.length.split(':')[1])}S`
     : undefined;
@@ -37,12 +43,26 @@ const jsonLd = [
     byArtist: { '@id': `${SITE}/#musicgroup` },
     sameAs: song.links.map((link) => link.url),
     ...(duration ? { duration } : {}),
+    ...(song.createdAt ? { datePublished: song.createdAt } : {}),
+    ...(song.genres?.length ? { genre: song.genres } : {}),
+    ...(song.imageLargeUrl || song.imageUrl ? { image: song.imageLargeUrl ?? song.imageUrl } : {}),
     ...(song.albumPageUrl ? { inAlbum: { '@id': `${song.albumPageUrl}#album` } } : {}),
     ...(original ? { isBasedOn: { '@id': `${original.pageUrl}#recording` } } : {}),
     ...(reimaginings.length ? {
       workExample: reimaginings.map((related) => ({ '@id': `${related.pageUrl}#recording` })),
     } : {}),
   },
+  ...(youtubeId && song.imageUrl && song.createdAt ? [{
+    '@type': 'VideoObject',
+    '@id': `${song.pageUrl}#video`,
+    name: `${song.title} by Alex Merced`,
+    description: song.description,
+    thumbnailUrl: [song.imageLargeUrl ?? song.imageUrl],
+    uploadDate: song.createdAt,
+    embedUrl: playerUrl,
+    contentUrl: youtubeLink!.url,
+    ...(duration ? { duration } : {}),
+  }] : []),
   {
     '@type': 'BreadcrumbList',
     '@id': `${song.pageUrl}#breadcrumbs`,
@@ -60,7 +80,7 @@ const jsonLd = [
   description={song.description}
   jsonLd={jsonLd}
   ogType="music.song"
-  ogImage={song.era === 'acoustic' ? '/images/portrait-acoustic.webp' : '/og.png'}
+  ogImage={song.imageLargeUrl ?? song.imageUrl ?? `/social/songs/${song.slug}.png`}
   imageAlt={`${song.title} by Alex Merced`}
   dateModified={CATALOG_UPDATED_AT}
 >
@@ -76,27 +96,43 @@ const jsonLd = [
           <div><dt>Artist</dt><dd><a href="/about">Alex Merced</a></dd></div>
           <div><dt>Type</dt><dd>{song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
           {song.style && <div><dt>Rebuilt as</dt><dd>{song.style}</dd></div>}
-          {(song.length || song.seconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(song.seconds! / 60)}:${String(song.seconds! % 60).padStart(2, '0')}`}</dd></div>}
+          {(song.length || durationSeconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(durationSeconds! / 60)}:${String(Math.round(durationSeconds! % 60)).padStart(2, '0')}`}</dd></div>}
+          {song.createdAt && <div><dt>Published</dt><dd><time datetime={song.createdAt}>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(song.createdAt))}</time></dd></div>}
+          {song.genres?.length && <div><dt>Style</dt><dd>{song.genres.join(' · ')}</dd></div>}
+          {song.model && <div><dt>Suno model</dt><dd>{song.model}</dd></div>}
           {song.album && <div><dt>Album</dt><dd><a href={song.albumPageUrl!.replace(SITE, '')}>{song.album}</a></dd></div>}
-          {song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
+          {!song.createdAt && song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
         </dl>
 
         <h2 class="detail__heading">Listen</h2>
         <div class="btn-row">
           {song.links.map((link) => <a class="btn btn--primary" href={link.url}>{link.label} ↗</a>)}
+          {playerUrl && <button class="btn" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play here on {playerName}</button>}
         </div>
       </div>
 
-      {youtubeId && (
+      {playerUrl && (
         <div class="embed">
           <iframe
-            src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
-            title={`${song.title} by Alex Merced on YouTube`}
+            src={playerUrl}
+            title={`${song.title} by Alex Merced on ${playerName}`}
             loading="lazy"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
           ></iframe>
         </div>
+      )}
+    </div>
+
+    <div class="shell process-note">
+      <h2>How this recording was made</h2>
+      <p>{song.creationMethod}</p>
+      {song.kind === 'generated' && <p>The musical arrangement and performance were generated with Suno from Alex’s creative direction. The title, published source, model label, style tags, artwork and text shown here come from the public recording metadata.</p>}
+      {song.lyrics && (
+        <details class="lyrics">
+          <summary>Read the published lyrics</summary>
+          <pre>{song.lyrics}</pre>
+        </details>
       )}
     </div>
 
