@@ -49,7 +49,7 @@ export const acousticPlaylist = {
 };
 
 export const youtubeArchiveTracks: Track[] = [
-  { title: 'Eadd9 Tuning Improv', length: '4:05', posted: '18 years ago', url: 'https://www.youtube.com/watch?v=LzAFKiI72QA' },
+  { title: 'Eadd9 Improv', length: '4:05', posted: '18 years ago', url: 'https://www.youtube.com/watch?v=LzAFKiI72QA' },
   { title: 'Alex Merced - A Beautiful Dying Radio', length: '3:13', posted: '19 years ago', url: 'https://www.youtube.com/watch?v=ZLdugTA_p1s' },
   { title: 'Alex Merced - Tell my heart', length: '2:10', posted: '17 years ago', url: 'https://www.youtube.com/watch?v=D3TLm0TKvdc' },
   { title: 'These Days Video', length: '1:56', posted: '20 years ago', url: 'https://www.youtube.com/watch?v=yd6KNuNul6I' },
@@ -187,6 +187,7 @@ export const reimagined: Reimagining[] = [
     title: 'Solemn Thoughts',
     style: 'Indie disco',
     length: '4:17',
+    original: 'Eadd9 Improv',
     url: 'https://www.youtube.com/watch?v=utHZCYF6FwM',
     links: [
       { source: 'youtube', url: 'https://www.youtube.com/watch?v=utHZCYF6FwM' },
