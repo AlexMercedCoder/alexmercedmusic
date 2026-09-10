@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { platforms } from '../data/catalog';
+import { platforms, sunoPlaylists } from '../data/catalog';
 
 const label: Record<string, string> = {
   acoustic: 'Acoustic',
@@ -24,6 +24,20 @@ const label: Record<string, string> = {
         none of it has been consolidated. This is the whole map, with the counts each
         platform reports.
       </p>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Curated on Suno</p>
+        <h2>{sunoPlaylists.length} public playlists</h2>
+        <p>Browse the generated catalog by project, subject and mood.</p>
+      </div>
+      <div class="source-links">
+        {sunoPlaylists.map((playlist) => <a href={playlist.url}>{playlist.name} · {playlist.songCount} songs ↗</a>)}
+      </div>
+      <div class="btn-row" style="margin-top:1.4rem"><a class="btn" href="/suno/">Playlist artwork and runtimes</a></div>
     </div>
   </section>
 

@@ -214,6 +214,15 @@
         },
       },
       {
+        name: 'list_suno_playlists',
+        description: 'List every public Alex Merced Suno playlist with its stable URL, artwork, song count and runtime. Use this when a user wants a themed or project-based listening path.',
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async (_input, signal) => {
+          const catalog = await getCatalog(signal);
+          return { updatedAt: catalog.updatedAt, count: catalog.suno.playlists.length, playlists: catalog.suno.playlists };
+        },
+      },
+      {
         name: 'list_reimaginings',
         description: 'List every Suno rebuild paired with its exact acoustic source recording and canonical pages. Use this when comparing original and new versions.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
@@ -258,6 +267,7 @@
           const main = [
             { label: 'Home', url: `${catalog.site}/` }, { label: 'Acoustic archive', url: `${catalog.site}/acoustic/` },
             { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
+            { label: 'Suno playlists', url: `${catalog.site}/suno/` },
             { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },
             { label: 'Explore every song', url: `${catalog.site}/songs/` }, { label: 'Listening stories', url: `${catalog.site}/stories/` },
             { label: 'WebMCP guide', url: `${catalog.site}/webmcp/` }, { label: 'Machine-readable catalog', url: `${catalog.site}/catalog.json` },

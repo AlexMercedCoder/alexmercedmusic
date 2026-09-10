@@ -12,6 +12,7 @@ import albumsData from './albums.json';
 import electronicTracksData from './electronic-tracks.json';
 import sunoSongsData from './suno-songs.json';
 import sunoCoversData from './suno-covers.json';
+import sunoPlaylistsData from './suno-playlists.json';
 import youtubeMetadataData from './youtube-metadata.json';
 
 export type Era = 'acoustic' | 'electronic' | 'ai';
@@ -46,6 +47,8 @@ export type Track = {
 
 export type YouTubeMetadata = { publishedAt: string; title?: string; imageUrl?: string };
 export const youtubeMetadata = youtubeMetadataData as Record<string, YouTubeMetadata>;
+export type SunoPlaylist = { id: string; name: string; url: string; imageUrl?: string; songCount: number; durationSeconds?: number; description?: string };
+export const sunoPlaylists = sunoPlaylistsData as SunoPlaylist[];
 
 // ---------------------------------------------------------------- acoustic
 

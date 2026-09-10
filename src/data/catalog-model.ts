@@ -9,6 +9,7 @@ import {
   sunoCovers,
   sunoPublishedCount,
   sunoSongs,
+  sunoPlaylists,
   sunoStyle,
   youtubeMetadata,
   type Era,
@@ -16,7 +17,7 @@ import {
 } from './catalog';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.1.0';
+export const CATALOG_SCHEMA_VERSION = '1.2.0';
 export const CATALOG_UPDATED_AT = '2026-09-10';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -300,9 +301,10 @@ export const publicCatalog = {
     generated: songs.filter((song) => song.kind === 'generated').length,
     albums: catalogAlbums.length,
     sunoPublished: sunoPublishedCount,
+    sunoPlaylists: sunoPlaylists.length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
-  suno: { style: sunoStyle, publishedCount: sunoPublishedCount },
+  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: sunoPlaylists },
   songs,
   albums: catalogAlbums,
   platforms,

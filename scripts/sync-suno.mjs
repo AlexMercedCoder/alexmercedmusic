@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 const root = new URL('../', import.meta.url);
 const outputUrl = new URL('src/data/suno-songs.json', root);
 const coversOutputUrl = new URL('src/data/suno-covers.json', root);
+const playlistsOutputUrl = new URL('src/data/suno-playlists.json', root);
 const catalogUrl = new URL('src/data/catalog.ts', root);
 const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
@@ -16,6 +17,7 @@ const reimaginedSection = catalogSource.split('// ------------------------------
 const coverIds = new Set([...reimaginedSection.matchAll(/suno\.com\/song\/([a-f0-9-]{36})/g)].map((match) => match[1]));
 
 const pages = [];
+let profilePlaylists = [];
 let page = 1;
 let total = Infinity;
 while (pages.flat().length < total && page <= 100) {
@@ -28,6 +30,7 @@ while (pages.flat().length < total && page <= 100) {
   const data = await response.json();
   if (data.handle !== 'alexmerced') throw new Error(`Unexpected Suno profile: ${data.handle ?? 'missing handle'}.`);
   total = Number(data.num_total_clips);
+  if (page === 1) profilePlaylists = Array.isArray(data.playlists) ? data.playlists : [];
   if (!Array.isArray(data.clips) || data.clips.length === 0) break;
   pages.push(data.clips);
   page += 1;
@@ -69,6 +72,17 @@ const coverSongs = publicClips
   .filter((clip) => coverIds.has(clip.id))
   .map(toSong)
   .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+const playlists = profilePlaylists
+  .filter((playlist) => playlist.is_public && !playlist.is_trashed && !playlist.is_hidden && playlist.name)
+  .map((playlist) => ({
+    id: playlist.id,
+    name: playlist.name.trim(),
+    url: `https://suno.com/playlist/${playlist.id}`,
+    imageUrl: playlist.image_url || undefined,
+    songCount: Number(playlist.song_count ?? playlist.num_total_results ?? 0),
+    durationSeconds: Number(playlist.total_duration ?? 0) || undefined,
+    description: playlist.description?.trim() || undefined,
+  }));
 
 const ids = new Set(songs.map((song) => song.id));
 if (ids.size !== songs.length) throw new Error('Suno returned duplicate public song IDs.');
@@ -78,10 +92,13 @@ if (songs.length + coverIds.size !== total) {
 
 const serialized = `${JSON.stringify(songs, null, 2)}\n`;
 const serializedCovers = `${JSON.stringify(coverSongs, null, 2)}\n`;
+const serializedPlaylists = `${JSON.stringify(playlists, null, 2)}\n`;
 let current = '';
 let currentCovers = '';
+let currentPlaylists = '';
 try { current = await readFile(outputUrl, 'utf8'); } catch {}
 try { currentCovers = await readFile(coversOutputUrl, 'utf8'); } catch {}
+try { currentPlaylists = await readFile(playlistsOutputUrl, 'utf8'); } catch {}
 const catalogReplacement = 'export const sunoSongs: Track[] = sunoSongsData as Track[];\n\n';
 const migratedCatalogSource = catalogSource.includes('export const sunoSongs: Track[] = [')
   ? catalogSource.replace(/export const sunoSongs: Track\[\] = \[[\s\S]*?(?=export const sunoStyle)/, catalogReplacement)
@@ -96,21 +113,22 @@ const changed = songs.filter((song) => {
   return old && JSON.stringify(old) !== JSON.stringify(song);
 });
 
-console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} cover generations.`);
+console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} cover generations; ${playlists.length} public playlists.`);
 console.log(`Diff: ${added.length} added, ${removed.length} removed, ${changed.length} metadata changes.`);
 for (const song of added) console.log(`+ ${song.title} (${song.id})`);
 for (const song of removed) console.log(`- ${song.title} (${song.id})`);
 for (const song of changed.slice(0, 20)) console.log(`~ ${song.title} (${song.id})`);
 
-if (current === serialized && currentCovers === serializedCovers && migratedCatalogSource === catalogSource) process.exit(0);
+if (current === serialized && currentCovers === serializedCovers && currentPlaylists === serializedPlaylists && migratedCatalogSource === catalogSource) process.exit(0);
 if (!shouldWrite) {
   console.error('Run npm run sync:suno -- --write to accept this reviewed catalog update.');
   process.exit(1);
 }
 await writeFile(outputUrl, serialized);
 await writeFile(coversOutputUrl, serializedCovers);
+await writeFile(playlistsOutputUrl, serializedPlaylists);
 if (migratedCatalogSource !== catalogSource) await writeFile(catalogUrl, migratedCatalogSource);
-if (current !== serialized || currentCovers !== serializedCovers) {
+if (current !== serialized || currentCovers !== serializedCovers || currentPlaylists !== serializedPlaylists) {
   const modelSource = await readFile(catalogModelUrl, 'utf8');
   const astroConfigSource = await readFile(astroConfigUrl, 'utf8');
   const today = new Date().toISOString().slice(0, 10);

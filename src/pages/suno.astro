@@ -1,0 +1,81 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { sunoPlaylists, sunoPublishedCount, sunoSongs } from '../data/catalog';
+import { SITE } from '../data/catalog-model';
+
+const runtime = (seconds?: number) => {
+  if (!seconds) return undefined;
+  const hours = Math.floor(seconds / 3600);
+  const minutes = Math.round((seconds % 3600) / 60);
+  return hours ? `${hours} hr ${minutes} min` : `${minutes} min`;
+};
+const jsonLd = [{
+  '@type': 'CollectionPage',
+  '@id': `${SITE}/suno/#page`,
+  name: 'Alex Merced’s Suno playlists',
+  url: `${SITE}/suno/`,
+  about: { '@id': `${SITE}/#musicgroup` },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: sunoPlaylists.length,
+    itemListElement: sunoPlaylists.map((playlist, index) => ({
+      '@type': 'MusicPlaylist',
+      position: index + 1,
+      name: playlist.name,
+      url: playlist.url,
+      numTracks: playlist.songCount,
+      image: playlist.imageUrl,
+      byArtist: { '@id': `${SITE}/#musicgroup` },
+    })),
+  },
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Suno playlists', item: `${SITE}/suno/` },
+  ],
+}];
+---
+
+<Base title="Suno playlists" description={`All ${sunoPlaylists.length} public Alex Merced playlists on Suno, with direct links, artwork, track counts and runtimes.`} keywords={['Alex Merced Suno', 'Suno playlists', 'AI music playlists']} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno playlists' }]} />
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <p class="eyebrow">Public Suno collections</p>
+      <h1>Choose a thread through the songs</h1>
+      <p class="lede">Alex’s {sunoPublishedCount} public Suno generations are organized into {sunoPlaylists.length} playlists by project, subject and mood. These links and counts come directly from the public Suno profile.</p>
+      <div class="btn-row" style="margin-top:1.6rem">
+        <a class="btn btn--primary" href="https://suno.com/@alexmerced">Open the Suno profile ↗</a>
+        <a class="btn" href="/songs/?source=suno">Explore all {sunoSongs.length} catalog songs</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <div class="grid grid--2">
+        {sunoPlaylists.map((playlist) => (
+          <article class="card playlist-card">
+            {playlist.imageUrl && <img src={playlist.imageUrl} width="240" height="240" loading="lazy" alt={`Artwork for ${playlist.name}`} />}
+            <div>
+              <p class="eyebrow">Suno playlist</p>
+              <h2>{playlist.name}</h2>
+              <p>{playlist.songCount} songs{runtime(playlist.durationSeconds) ? ` · ${runtime(playlist.durationSeconds)}` : ''}</p>
+              {playlist.description && <p>{playlist.description}</p>}
+              <p><a class="song-link" href={playlist.url}>Listen on Suno</a></p>
+            </div>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .playlist-card { display:grid; grid-template-columns:7rem 1fr; gap:1rem; align-items:start; }
+  .playlist-card img { width:7rem; aspect-ratio:1; object-fit:cover; border-radius:var(--radius); }
+  .playlist-card h2 { font-size:1.25rem; margin-top:.35rem; }
+  .playlist-card p:last-child { margin-bottom:0; }
+  @media (max-width:34rem) { .playlist-card { grid-template-columns:5rem 1fr; } .playlist-card img { width:5rem; } }
+</style>

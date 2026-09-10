@@ -10,7 +10,7 @@ const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
 
-assert.equal(catalog.schemaVersion, '1.1.0');
+assert.equal(catalog.schemaVersion, '1.2.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -54,19 +54,26 @@ for (const album of catalog.albums) {
 }
 
 const generatedSongs = catalog.songs.filter((song) => song.kind === 'generated');
-assert.equal(generatedSongs.length, 145);
+assert.equal(generatedSongs.length, 171);
 assert.ok(generatedSongs.every((song) => song.createdAt && song.durationSeconds && song.imageUrl && song.embedUrl), 'Every generated Suno song must retain its public metadata.');
-assert.ok(generatedSongs.filter((song) => song.genres?.length).length >= 140, 'The Suno style metadata recovery rate is unexpectedly low.');
+assert.ok(generatedSongs.filter((song) => song.genres?.length).length >= Math.floor(generatedSongs.length * 0.95), 'The Suno style metadata recovery rate is unexpectedly low.');
 assert.equal(JSON.parse(read('src/data/suno-covers.json')).length, 12);
+const sunoPlaylists = JSON.parse(read('src/data/suno-playlists.json'));
+assert.equal(sunoPlaylists.length, 7);
+assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
+assert.deepEqual(catalog.suno.playlists, sunoPlaylists);
+assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0));
 assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
 
-for (const path of ['dist/songs/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
+for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
 }
 const explorer = read('dist/songs/index.html');
 for (const pageUrl of songPages) assert.ok(explorer.includes(pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the song explorer.`);
 assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
+const sunoPage = read('dist/suno/index.html');
+for (const playlist of sunoPlaylists) assert.ok(sunoPage.includes(playlist.url), `${playlist.name} is missing from the Suno page.`);
 
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
@@ -106,7 +113,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -132,6 +139,9 @@ assert.ok(recent.items.every((song) => song.createdAt));
 const comparison = JSON.parse(await getTool('compare_versions').execute({ id: solemn.id }));
 assert.equal(comparison.original.id, solemn.originalTrackId);
 assert.ok(comparison.reimagined.some((song) => song.id === solemn.id));
+const playlistResult = JSON.parse(await getTool('list_suno_playlists').execute({}));
+assert.equal(playlistResult.count, 7);
+assert.deepEqual(playlistResult.playlists, sunoPlaylists);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));

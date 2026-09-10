@@ -9,6 +9,7 @@ const tools = [
   ['list_songs', 'Paginated catalog browsing without a search term.'],
   ['get_recent_songs', 'The most recently published dated recordings.'],
   ['compare_versions', 'An original recording and every known reimagined version.'],
+  ['list_suno_playlists', 'Every public Suno playlist with its direct URL, artwork, song count and runtime.'],
   ['list_reimaginings', 'Every original/reimagined pair.'],
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
@@ -22,7 +23,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers ten read-only browser tools. Agents can find recordings, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers eleven read-only browser tools. Agents can find recordings, browse Suno playlists, compare versions and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}

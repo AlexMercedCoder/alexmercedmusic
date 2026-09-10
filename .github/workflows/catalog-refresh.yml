@@ -37,7 +37,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add src/data/suno-songs.json src/data/suno-covers.json src/data/catalog-model.ts astro.config.mjs
+          git add src/data/suno-songs.json src/data/suno-covers.json src/data/suno-playlists.json src/data/catalog-model.ts astro.config.mjs
           git commit -m "Refresh Suno catalog"
           git push origin "$branch"
           gh pr create --base main --head "$branch" --title "Refresh Suno catalog" --body "Automated public-catalog refresh. The build, metadata relationships, generated pages, structured data, feeds, and WebMCP contract passed validation."

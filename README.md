@@ -13,7 +13,7 @@ Part of the Alex Merced network of sites.
 - SEO surfaces: canonical tags, unique social artwork, Open Graph, JSON-LD
   (`WebSite`, `Person`, `MusicGroup`, `MusicRecording`, `MusicPlaylist`,
   `MusicAlbum`, `VideoObject`), sitemap, RSS/JSON feeds, and `llms.txt`
-- Ten read-only WebMCP tools so an agent can query and navigate the catalogue
+- Eleven read-only WebMCP tools so an agent can query playlists and navigate the catalogue
 - Stable canonical pages for every song and album, connected with JSON-LD
 - Versioned machine-readable catalog at `/catalog.json`
 - Search and filtering across the complete catalogue at `/songs/`
@@ -45,7 +45,8 @@ npm run sync:youtube -- --write
 ```
 
 The Suno command walks the public profile API, preserves rich public metadata,
-distinguishes catalog songs from the 12 reimagining generations, and reports
+distinguishes catalog songs from the 12 reimagining generations, captures all
+public playlists with their current counts and runtimes, and reports
 additions, removals, and metadata changes. A scheduled GitHub Action runs this
 daily and opens a tested catalog-refresh pull request when something changes.
 The YouTube command refreshes exact public upload dates and thumbnails.
