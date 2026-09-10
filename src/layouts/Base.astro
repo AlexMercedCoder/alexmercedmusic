@@ -10,13 +10,26 @@ export interface Props {
   /** Extra JSON-LD nodes merged into the site graph for this page. */
   jsonLd?: Record<string, unknown>[];
   keywords?: string[];
-  ogType?: 'website' | 'article' | 'music.album';
+  ogType?: 'website' | 'article' | 'music.album' | 'music.song';
+  ogImage?: string;
+  imageAlt?: string;
+  dateModified?: string;
 }
 
-const { title, description, jsonLd = [], keywords = [], ogType = 'website' } = Astro.props;
+const {
+  title,
+  description,
+  jsonLd = [],
+  keywords = [],
+  ogType = 'website',
+  ogImage = '/og.png',
+  imageAlt = 'Alex Merced Music',
+  dateModified,
+} = Astro.props;
 
 const SITE = 'https://alexmercedmusic.com';
-const canonical = new URL(Astro.url.pathname.replace(/\/$/, '') || '/', SITE).href;
+const canonicalPath = Astro.url.pathname === '/' ? '/' : `${Astro.url.pathname.replace(/\/+$/, '')}/`;
+const canonical = new URL(canonicalPath, SITE).href;
 const fullTitle = Astro.url.pathname === '/' ? title : `${title} | Alex Merced Music`;
 
 const baseGraph = [
@@ -87,15 +100,17 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <meta property="og:description" content={description} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:image" content={`${SITE}/og.png`} />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Alex Merced Music" />
+    <meta property="og:image" content={new URL(ogImage, SITE).href} />
+    <meta property="og:image:alt" content={imageAlt} />
+    {ogImage === '/og.png' && <meta property="og:image:width" content="1200" />}
+    {ogImage === '/og.png' && <meta property="og:image:height" content="630" />}
+    {dateModified && <meta property="article:modified_time" content={dateModified} />}
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
     <meta name="twitter:description" content={description} />
-    <meta name="twitter:image" content={`${SITE}/og.png`} />
+    <meta name="twitter:image" content={new URL(ogImage, SITE).href} />
+    <meta name="twitter:image:alt" content={imageAlt} />
 
     <link rel="alternate" type="text/plain" href="/llms.txt" title="llms.txt" />
     <link rel="sitemap" type="application/xml" href="/sitemap-index.xml" />

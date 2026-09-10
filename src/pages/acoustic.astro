@@ -8,6 +8,9 @@ import {
   soundcloudAcousticTracks,
   youtubeArchiveTracks,
 } from '../data/catalog';
+import { SITE, songByPrimaryUrl } from '../data/catalog-model';
+
+const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 
 const rebuiltByOriginal = new Map(
   reimagined.filter((r) => r.original).map((r) => [r.original, r]),
@@ -16,7 +19,7 @@ const rebuiltByOriginal = new Map(
 const jsonLd = [
   {
     '@type': 'MusicPlaylist',
-    '@id': 'https://alexmercedmusic.com/acoustic#playlist',
+    '@id': 'https://alexmercedmusic.com/acoustic/#playlist',
     name: acousticPlaylist.title,
     url: acousticPlaylist.url,
     numTracks: youtubeArchiveTracks.length,
@@ -24,9 +27,11 @@ const jsonLd = [
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     track: youtubeArchiveTracks.map((t, i) => ({
       '@type': 'MusicRecording',
+      '@id': `${songByPrimaryUrl.get(t.url!)?.pageUrl}#recording`,
       position: i + 1,
       name: t.title,
-      url: t.url,
+      url: songByPrimaryUrl.get(t.url!)?.pageUrl,
+      sameAs: t.url,
       byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     })),
   },
@@ -86,7 +91,7 @@ const jsonLd = [
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span>
-              {t.url ? <a class="song-link" href={t.url}>{t.title}</a> : t.title}
+              {detailUrl(t.url) ? <a class="song-link" href={detailUrl(t.url)}>{t.title}</a> : t.title}
               {rebuiltByOriginal.has(t.title) && (
                 <span class="source-links source-links--inline">
                   <a href={t.url}>Original ↗</a>
@@ -109,7 +114,7 @@ const jsonLd = [
         {channelAcousticTracks.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span><a class="song-link" href={t.url}>{t.title}</a></span>
+            <span><a class="song-link" href={detailUrl(t.url)}>{t.title}</a></span>
             <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>
           </li>
         ))}
@@ -123,7 +128,7 @@ const jsonLd = [
         {soundcloudAcousticTracks.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span><a class="song-link" href={t.url}>{t.title}</a></span>
+            <span><a class="song-link" href={detailUrl(t.url)}>{t.title}</a></span>
             <span class="len"><a class="platform-link" href={t.url}>SoundCloud ↗</a></span>
           </li>
         ))}

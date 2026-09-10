@@ -5,9 +5,10 @@ import {
   albums, electronicTracks, electronicStats, electronicRuntime,
   sunoSongs, sunoStyle, sunoPublishedCount, platforms, tutorials,
 } from '../data/catalog';
+import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 import { networkGroups } from '../data/network';
 
-const SITE = 'https://alexmercedmusic.com';
+const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl : undefined;
 const directLinks = (links: { source: string; url: string; label?: string }[] | undefined, fallback?: string) => {
   const list = links?.length ? links : fallback ? [{ source: 'listen', url: fallback }] : [];
   return list.map((link) => `[${link.label ?? link.source}](${link.url})`).join(', ');
@@ -27,10 +28,12 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 ## Pages
 
 - [Home](${SITE}/): the three eras, and the songs that exist in two of them at once.
-- [The acoustic archive](${SITE}/acoustic): ${acousticTracks.length} guitar and voice recordings, listed in full.
-- [Reimagined with Suno](${SITE}/reimagined): ${reimagined.length} rebuilds paired with the recordings they came from.
-- [The electronic catalogue](${SITE}/electronic): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
-- [Where to listen](${SITE}/listen): every platform, with the counts each one reports.
+- [The acoustic archive](${SITE}/acoustic/): ${acousticTracks.length} guitar and voice recordings, listed in full.
+- [Reimagined with Suno](${SITE}/reimagined/): ${reimagined.length} rebuilds paired with the recordings they came from.
+- [The electronic catalogue](${SITE}/electronic/): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
+- [Where to listen](${SITE}/listen/): every platform, with the counts each one reports.
+- [About Alex Merced as a musician](${SITE}/about/): biography, musical history and discography context.
+- [Machine-readable catalog](${SITE}/catalog.json): versioned JSON with stable song and album IDs, canonical pages, listening sources and relationships.
 
 ## Era one: the acoustic archive
 
@@ -40,15 +43,15 @@ Titles are recorded here as they were typed at the time, including the inconsist
 
 ### YouTube archive playlist
 
-${youtubeArchiveTracks.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
+${youtubeArchiveTracks.map((t) => `- [${t.title}](${detailUrl(t.url)})${t.length ? ` (${t.length})` : ''} — [YouTube](${t.url})`).join('\n')}
 
 ### Additional music-channel performances
 
-${channelAcousticTracks.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
+${channelAcousticTracks.map((t) => `- [${t.title}](${detailUrl(t.url)})${t.length ? ` (${t.length})` : ''} — [YouTube](${t.url})`).join('\n')}
 
 ### SoundCloud-only singer-songwriter recordings
 
-${soundcloudAcousticTracks.map((t) => `- [${t.title}](${t.url})`).join('\n')}
+${soundcloudAcousticTracks.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [SoundCloud](${t.url})`).join('\n')}
 
 YouTube reports ${acousticPlaylist.totalEntries} archive-playlist entries; ${acousticPlaylist.unavailableEntries} unavailable videos are hidden, leaving ${youtubeArchiveTracks.length} accessible direct links in that playlist.
 
@@ -70,7 +73,7 @@ ${albums.map((a) => `#### [${a.title}](${a.url}) (${a.released.slice(0, 4)})\n${
 
 ### Every produced track
 
-${electronicTracks.map((t) => `- ${t.title} (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')}) — ${directLinks(t.links, t.url)}`).join('\n')}
+${electronicTracks.map((t) => `- [${t.title}](${detailUrl(t.url)}) (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')}) — ${directLinks(t.links, t.url)}`).join('\n')}
 
 ### FL Studio tutorials
 
@@ -82,7 +85,7 @@ ${tutorials.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : 
 
 ${reimagined.length} songs from the archive run through Suno in styles they were never written for. ${paired.length} of the ${reimagined.length} have an accessible original recording in the archive above. Seven have YouTube videos; all eight link to their currently published Suno generation.
 
-${reimagined.map((r) => `- ${r.title}, as ${r.style.toLowerCase()}${r.original ? `, from "${r.original}"` : ', original not in the archive'} — ${directLinks(r.links, r.url)}`).join('\n')}
+${reimagined.map((r) => `- [${r.title}](${detailUrl(r.url)}), as ${r.style.toLowerCase()}${r.original ? `, from "${r.original}"` : ', original not in the archive'} — ${directLinks(r.links, r.url)}`).join('\n')}
 
 Playlist: ${reimaginedPlaylist.url}
 
@@ -90,7 +93,7 @@ Newer songs written with Suno rather than rebuilt, filed under "${sunoStyle}":
 
 Suno currently reports ${sunoPublishedCount} published songs in total.
 
-${sunoSongs.map((t) => `- [${t.title}](${t.url})`).join('\n')}
+${sunoSongs.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [Suno](${t.url})`).join('\n')}
 
 ## Where the music is hosted
 
@@ -104,7 +107,7 @@ ${networkGroups.map((g) => `### ${g.title}\n${g.links.map((l) => `- [${l.label}]
 
 ## Notes for machines
 
-This site is static, has no login, and every page listed here is public. It also registers WebMCP tools in the browser, so an agent on the page can query the catalogue directly: music_overview, search_songs, list_reimaginings, list_albums and where_to_listen.
+This site is static, has no login, and every page listed here is public. It also registers read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
 `;
 
   return new Response(body, {

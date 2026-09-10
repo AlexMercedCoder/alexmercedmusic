@@ -8,7 +8,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "validate": "npm run check && npm run build && node scripts/validate-site.mjs",
+    "test": "npm run validate"
   },
   "dependencies": {
     "@astrojs/sitemap": "^3.7.3",

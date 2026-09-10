@@ -1,0 +1,121 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { CATALOG_UPDATED_AT, SITE, songById, songs, type CatalogSong } from '../../data/catalog-model';
+
+export function getStaticPaths() {
+  return songs.map((song) => ({ params: { slug: song.slug }, props: { song } }));
+}
+
+const { song } = Astro.props as { song: CatalogSong };
+const original = song.originalTrackId ? songById.get(song.originalTrackId) : undefined;
+const reimaginings = (song.reimaginedTrackIds ?? []).flatMap((id) => {
+  const related = songById.get(id);
+  return related ? [related] : [];
+});
+const youtubeLink = song.links.find((link) => link.source === 'youtube');
+const youtubeId = youtubeLink ? new URL(youtubeLink.url).searchParams.get('v') : null;
+const section = song.kind === 'archive' ? 'Acoustic archive'
+  : song.kind === 'electronic' ? 'Electronic catalogue'
+    : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
+const sectionUrl = song.kind === 'archive' ? '/acoustic'
+  : song.kind === 'electronic' ? '/electronic' : '/reimagined';
+const duration = song.seconds
+  ? `PT${Math.floor(song.seconds / 60)}M${song.seconds % 60}S`
+  : song.length
+    ? `PT${Number(song.length.split(':')[0])}M${Number(song.length.split(':')[1])}S`
+    : undefined;
+const recordingId = `${song.pageUrl}#recording`;
+
+const jsonLd = [
+  {
+    '@type': 'MusicRecording',
+    '@id': recordingId,
+    name: song.title,
+    url: song.pageUrl,
+    description: song.description,
+    byArtist: { '@id': `${SITE}/#musicgroup` },
+    sameAs: song.links.map((link) => link.url),
+    ...(duration ? { duration } : {}),
+    ...(song.albumPageUrl ? { inAlbum: { '@id': `${song.albumPageUrl}#album` } } : {}),
+    ...(original ? { isBasedOn: { '@id': `${original.pageUrl}#recording` } } : {}),
+    ...(reimaginings.length ? {
+      workExample: reimaginings.map((related) => ({ '@id': `${related.pageUrl}#recording` })),
+    } : {}),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    '@id': `${song.pageUrl}#breadcrumbs`,
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: section, item: `${SITE}${sectionUrl}/` },
+      { '@type': 'ListItem', position: 3, name: song.title, item: song.pageUrl },
+    ],
+  },
+];
+---
+
+<Base
+  title={song.title}
+  description={song.description}
+  jsonLd={jsonLd}
+  ogType="music.song"
+  ogImage={song.era === 'acoustic' ? '/images/portrait-acoustic.webp' : '/og.png'}
+  imageAlt={`${song.title} by Alex Merced`}
+  dateModified={CATALOG_UPDATED_AT}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: section, href: sectionUrl }, { label: song.title }]} />
+  <article class="section detail" data-era={song.era}>
+    <div class="shell detail__grid">
+      <div>
+        <p class="eyebrow">{section}</p>
+        <h1>{song.title}</h1>
+        <p class="lede">{song.description}</p>
+
+        <dl class="facts">
+          <div><dt>Artist</dt><dd><a href="/about">Alex Merced</a></dd></div>
+          <div><dt>Type</dt><dd>{song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
+          {song.style && <div><dt>Rebuilt as</dt><dd>{song.style}</dd></div>}
+          {(song.length || song.seconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(song.seconds! / 60)}:${String(song.seconds! % 60).padStart(2, '0')}`}</dd></div>}
+          {song.album && <div><dt>Album</dt><dd><a href={song.albumPageUrl!.replace(SITE, '')}>{song.album}</a></dd></div>}
+          {song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
+        </dl>
+
+        <h2 class="detail__heading">Listen</h2>
+        <div class="btn-row">
+          {song.links.map((link) => <a class="btn btn--primary" href={link.url}>{link.label} ↗</a>)}
+        </div>
+      </div>
+
+      {youtubeId && (
+        <div class="embed">
+          <iframe
+            src={`https://www.youtube-nocookie.com/embed/${youtubeId}`}
+            title={`${song.title} by Alex Merced on YouTube`}
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      )}
+    </div>
+
+    {(original || reimaginings.length > 0) && (
+      <div class="shell relationship">
+        <h2>Original and reimagined versions</h2>
+        {original && (
+          <div class="relationship__item" data-era="acoustic">
+            <div><span class="eyebrow">Original recording</span><a class="song-link" href={original.pageUrl.replace(SITE, '')}>{original.title}</a></div>
+            <div class="source-links">{original.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div>
+          </div>
+        )}
+        {reimaginings.map((related) => (
+          <div class="relationship__item" data-era="ai">
+            <div><span class="eyebrow">Reimagined version</span><a class="song-link" href={related.pageUrl.replace(SITE, '')}>{related.title}</a></div>
+            <div class="source-links">{related.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div>
+          </div>
+        ))}
+      </div>
+    )}
+  </article>
+</Base>

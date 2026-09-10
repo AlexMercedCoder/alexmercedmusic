@@ -8,6 +8,10 @@ import {
   reverbnationFeatured,
   tutorials,
 } from '../data/catalog';
+import { SITE, catalogAlbums, songByPrimaryUrl } from '../data/catalog-model';
+
+const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
+const albumDetailUrl = new Map(catalogAlbums.map((album) => [album.title, album.pageUrl.replace(SITE, '')]));
 
 const albumEntries = albums.map((album) => ({
   ...album,
@@ -21,12 +25,14 @@ const albumEntries = albums.map((album) => ({
 const jsonLd = [
   ...albumEntries.map((a) => ({
     '@type': 'MusicAlbum',
+    '@id': `https://alexmercedmusic.com${albumDetailUrl.get(a.title)}#album`,
     name: a.title,
-    url: a.url,
+    url: `https://alexmercedmusic.com${albumDetailUrl.get(a.title)}`,
+    sameAs: a.url,
     datePublished: a.released,
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     numTracks: a.tracks.length,
-    track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t.title, url: t.url })),
+    track: a.tracks.map((t, i) => ({ '@type': 'MusicRecording', position: i + 1, name: t.title, url: detailUrl(t.url), sameAs: t.url })),
   })),
   {
     '@type': 'MusicPlaylist',
@@ -94,13 +100,13 @@ const label: Record<string, string> = {
       <div class="grid grid--2">
         {albumEntries.map((album) => (
           <article class="card card--era" data-era="electronic">
-            <h3><a href={album.url}>{album.title}</a></h3>
+            <h3><a href={albumDetailUrl.get(album.title)}>{album.title}</a></h3>
             <p class="pair__style">{album.tracks.length} tracks · {album.released.slice(0, 4)}</p>
             <ol class="tracks" style="margin-top:0.4rem">
               {album.tracks.map((t, i) => (
                 <li>
                   <span class="num">{String(i + 1).padStart(2, '0')}</span>
-                  <span>{t.url ? <a href={t.url}>{t.title}</a> : t.title}</span>
+                  <span>{t.url ? <a href={detailUrl(t.url)}>{t.title}</a> : t.title}</span>
                   <span class="len"></span>
                 </li>
               ))}
@@ -150,7 +156,7 @@ const label: Record<string, string> = {
         {electronicTracks.map((t, i) => (
           <li data-title={t.title.toLowerCase()} data-sources={t.sources.join(' ')}>
             <span class="num">{String(i + 1).padStart(3, '0')}</span>
-            <a href={t.url}>{t.title}</a>
+            <a href={detailUrl(t.url)}>{t.title}</a>
             <span class="tags">
               {(t.links ?? [{ source: t.sources[0], url: t.url }]).map((link) => (
                 <a href={link.url} data-src={link.source}>{label[link.source] ?? link.source}</a>
@@ -176,7 +182,7 @@ const label: Record<string, string> = {
             {reverbnationFeatured.map((t, i) => {
               const track = electronicTracks.find((candidate) => candidate.title === t);
               const url = track?.links?.find((link) => link.source === 'reverbnation')?.url ?? track?.url;
-              return <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{url ? <a href={url}>{t}</a> : t}</span><span class="len"></span></li>;
+              return <li><span class="num">{String(i + 1).padStart(2, '0')}</span><span>{url ? <a href={detailUrl(url)}>{t}</a> : t}</span><span class="len"></span></li>;
             })}
           </ol>
         </div>

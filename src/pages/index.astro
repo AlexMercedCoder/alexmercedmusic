@@ -4,9 +4,11 @@ import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
   albums, electronicStats, electronicRuntime, sunoSongs, platforms,
 } from '../data/catalog';
+import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 
 const paired = reimagined;
 const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
+const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 
 const jsonLd = [
   {
@@ -81,7 +83,7 @@ const jsonLd = [
               <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
               <div class="pair__title">
                 {song.original && acousticUrls.get(song.original)
-                  ? <a class="song-link" href={acousticUrls.get(song.original)}>{song.original}</a>
+                  ? <a class="song-link" href={detailUrl(acousticUrls.get(song.original))}>{song.original}</a>
                   : song.original ?? 'An earlier song of his'}
               </div>
               {song.original && acousticUrls.get(song.original) ? (
@@ -95,7 +97,7 @@ const jsonLd = [
             <div class="pair__arrow" aria-hidden="true">&rarr;</div>
             <div class="pair__side pair__now">
               <small>Rebuilt as</small>
-              <div class="pair__title"><a class="song-link" href={song.url}>{song.title}</a></div>
+              <div class="pair__title"><a class="song-link" href={detailUrl(song.url)}>{song.title}</a></div>
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
               <div class="source-links">
                 {song.links?.map((link) => (

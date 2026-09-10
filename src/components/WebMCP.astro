@@ -1,194 +1,255 @@
----
-import {
-  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, electronicTracks, electronicStats, electronicRuntime,
-  sunoSongs, sunoStyle, sunoPublishedCount, platforms, tutorials,
-  reverbnationFeatured,
-} from '../data/catalog';
-
-const catalog = {
-  acoustic: {
-    playlist: acousticPlaylist,
-    count: acousticTracks.length,
-    tracks: acousticTracks,
-  },
-  reimagined: {
-    playlist: reimaginedPlaylist,
-    count: reimagined.length,
-    songs: reimagined,
-  },
-  electronic: {
-    albums,
-    tracks: electronicTracks,
-    stats: { ...electronicStats, runtime: electronicRuntime },
-    reverbnationFeatured,
-    tutorials,
-  },
-  now: { suno: sunoSongs, style: sunoStyle, publishedCount: sunoPublishedCount },
-  platforms,
-};
----
-
-<script is:inline define:vars={{ catalog }}>
-  (function () {
-    // The proposal has moved between navigator and document; accept either, and
-    // keep watching briefly, because a runtime injected by an extension can
-    // arrive after this page has finished loading.
+<script is:inline>
+  (() => {
     const WAIT_MS = 10000;
     const POLL_MS = 250;
+    const annotations = {
+      readOnlyHint: true,
+      consequentialHint: false,
+      untrustedContentHint: false,
+    };
+    let catalogPromise;
+    let registrationController;
 
-    const find = () => {
-      const nav = navigator, doc = document;
-      if (nav.modelContext && typeof nav.modelContext.registerTool === 'function') return nav.modelContext;
-      if (doc.modelContext && typeof doc.modelContext.registerTool === 'function') return doc.modelContext;
+    const getContext = () => {
+      if (document.modelContext && typeof document.modelContext.registerTool === 'function') return document.modelContext;
+      if (navigator.modelContext && typeof navigator.modelContext.registerTool === 'function') return navigator.modelContext;
       return null;
     };
 
-    const ok = (value) => ({ content: [{ type: 'text', text: JSON.stringify(value, null, 2) }] });
-    const term = (input, key) => String((input && input[key]) || '').trim().toLowerCase();
+    const getCatalog = async (signal) => {
+      if (signal?.aborted) throw new DOMException('The tool call was cancelled.', 'AbortError');
+      if (!catalogPromise) {
+        catalogPromise = fetch('/catalog.json', { signal })
+          .then((response) => {
+            if (!response.ok) throw new Error(`Catalog request failed with ${response.status}`);
+            return response.json();
+          })
+          .catch((error) => {
+            catalogPromise = undefined;
+            throw error;
+          });
+      }
+      return catalogPromise;
+    };
 
-    const everyTrack = [
-      ...catalog.acoustic.tracks.map((t) => ({ ...t, era: 'acoustic' })),
-      ...catalog.reimagined.songs.map((t) => ({ ...t, era: 'ai' })),
-      ...catalog.electronic.tracks.map((t) => ({ ...t, era: 'electronic' })),
-      ...catalog.now.suno.map((t) => ({ ...t, era: 'ai' })),
-    ];
+    const json = (value) => JSON.stringify(value, null, 2);
+    const textValue = (input, key) => String(input?.[key] ?? '').trim();
+    const numberValue = (input, key, fallback, minimum, maximum) => {
+      const parsed = Number(input?.[key]);
+      return Number.isFinite(parsed) ? Math.min(maximum, Math.max(minimum, Math.floor(parsed))) : fallback;
+    };
+    const page = (items, input) => {
+      const offset = numberValue(input, 'offset', 0, 0, Number.MAX_SAFE_INTEGER);
+      const limit = numberValue(input, 'limit', 25, 1, 100);
+      return {
+        totalResults: items.length,
+        offset,
+        limit,
+        truncated: offset + limit < items.length,
+        nextOffset: offset + limit < items.length ? offset + limit : null,
+        items: items.slice(offset, offset + limit),
+      };
+    };
+    const songSummary = (song) => ({
+      id: song.id,
+      slug: song.slug,
+      title: song.title,
+      era: song.era,
+      kind: song.kind,
+      pageUrl: song.pageUrl,
+      album: song.album ?? null,
+      style: song.style ?? null,
+      length: song.length ?? (song.seconds ? `${Math.floor(song.seconds / 60)}:${String(song.seconds % 60).padStart(2, '0')}` : null),
+      links: song.links,
+      originalTrackId: song.originalTrackId ?? null,
+      originalPageUrl: song.originalPageUrl ?? null,
+      reimaginedTrackIds: song.reimaginedTrackIds ?? [],
+      reimaginedPageUrls: song.reimaginedPageUrls ?? [],
+    });
 
     const tools = [
       {
         name: 'music_overview',
-        description:
-          'Summarise the music Alex Merced has released: how many recordings there are in each of the three eras, what each era is, and where each one is hosted.',
-        inputSchema: { type: 'object', properties: {} },
-        execute: () => ok({
-          eras: {
-            acoustic: {
-              what: 'Guitar and voice recordings written and performed by Alex Merced, uploaded from the mid-2000s onward.',
-              recordings: catalog.acoustic.count,
-              where: catalog.acoustic.playlist.url,
-            },
-            electronic: {
-              what: 'Produced electronic music, made largely in FL Studio and filed under electronica, electro pop and glitch hop.',
-              tracks: catalog.electronic.stats.total,
-              runtime: catalog.electronic.stats.runtime,
-              albums: catalog.electronic.albums.length,
-              spreadOver: {
-                reverbnation: catalog.electronic.stats.onReverbNation,
-                soundcloud: catalog.electronic.stats.onSoundCloud,
-                youtube: catalog.electronic.stats.onYouTube,
-              },
-              note: 'No single profile holds the whole catalogue. The numbers above are the merged, deduplicated set.',
-              where: 'https://legacy.reverbnation.com/alexmerced',
-            },
-            ai: {
-              what: 'Songs from the acoustic catalogue rebuilt with Suno, plus newer songs generated from scratch.',
-              covers: catalog.reimagined.count,
-            newSongs: catalog.now.suno.length,
-            totalPublishedOnSuno: catalog.now.publishedCount,
-              where: catalog.reimagined.playlist.url,
-            },
+        description: 'Get a concise overview of Alex Merced Music, including current counts for acoustic, electronic, reimagined, and newly generated songs. Use this first when a user asks what music is available.',
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async (_input, signal) => {
+          const catalog = await getCatalog(signal);
+          return { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, counts: catalog.counts, electronic: catalog.electronic, suno: catalog.suno, mainPages: {
+            acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`,
+          } };
+        },
+      },
+      {
+        name: 'get_song',
+        description: 'Get one exact song record, including its canonical page, listening sources, album, and original or reimagined relationships. Use an ID or slug from another catalog tool; exact title is also accepted.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            id: { type: 'string', minLength: 1, description: 'Stable song ID.' },
+            slug: { type: 'string', minLength: 1, description: 'Canonical song-page slug.' },
+            title: { type: 'string', minLength: 1, description: 'Exact song title, case-insensitive.' },
           },
-          platforms: catalog.platforms,
-        }),
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const id = textValue(input, 'id');
+          const slug = textValue(input, 'slug').toLowerCase();
+          const title = textValue(input, 'title').toLowerCase();
+          if (!id && !slug && !title) return { error: 'Provide id, slug, or title.' };
+          const matches = catalog.songs.filter((song) =>
+            (id && song.id === id) || (slug && song.slug === slug) || (title && song.title.toLowerCase() === title));
+          return matches.length === 1
+            ? { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, song: matches[0] }
+            : { found: matches.length, songs: matches.map(songSummary), error: matches.length ? 'The title is ambiguous; retry with an ID or slug.' : 'No exact song matched.' };
+        },
       },
       {
         name: 'search_songs',
-        description:
-          'Find a song by title across every era. Returns the era it belongs to, its runtime where the host reports one, and the album it came from for the electronic tracks.',
+        description: 'Search song titles and descriptions across every era. Use this for partial titles or broad discovery; filter by era, kind, album, or source and paginate large result sets.',
         inputSchema: {
           type: 'object',
-          properties: { query: { type: 'string', description: 'Part of a song title.' } },
+          properties: {
+            query: { type: 'string', minLength: 1, description: 'Words from a title or description.' },
+            era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'] },
+            kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'] },
+            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno'] },
+            album: { type: 'string', minLength: 1 },
+            limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 },
+            offset: { type: 'integer', minimum: 0, default: 0 },
+          },
           required: ['query'],
+          additionalProperties: false,
         },
-        execute: (input) => {
-          const q = term(input, 'query');
-          if (!q) return ok({ error: 'Give a query.', total: everyTrack.length });
-          const hits = everyTrack.filter((t) => t.title.toLowerCase().includes(q));
-          return ok({ query: q, found: hits.length, songs: hits.slice(0, 40) });
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const query = textValue(input, 'query').toLowerCase();
+          if (!query) return { error: 'Provide a non-empty query.' };
+          const era = textValue(input, 'era') || 'all';
+          const kind = textValue(input, 'kind') || 'all';
+          const source = textValue(input, 'source') || 'all';
+          const album = textValue(input, 'album').toLowerCase();
+          const matches = catalog.songs.filter((song) =>
+            `${song.title} ${song.description}`.toLowerCase().includes(query)
+            && (era === 'all' || song.era === era)
+            && (kind === 'all' || song.kind === kind)
+            && (source === 'all' || song.links.some((link) => link.source === source))
+            && (!album || song.album?.toLowerCase().includes(album)));
+          return { query, filters: { era, kind, source, album: album || null }, ...page(matches.map(songSummary), input) };
+        },
+      },
+      {
+        name: 'list_songs',
+        description: 'List catalog songs without requiring a search term. Use filters and pagination to browse an era, song kind, album, or hosting source without downloading the entire catalog.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'], default: 'all' },
+            kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'], default: 'all' },
+            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno'], default: 'all' },
+            album: { type: 'string', minLength: 1 },
+            limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 },
+            offset: { type: 'integer', minimum: 0, default: 0 },
+          },
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const era = textValue(input, 'era') || 'all';
+          const kind = textValue(input, 'kind') || 'all';
+          const source = textValue(input, 'source') || 'all';
+          const album = textValue(input, 'album').toLowerCase();
+          const matches = catalog.songs.filter((song) =>
+            (era === 'all' || song.era === era)
+            && (kind === 'all' || song.kind === kind)
+            && (source === 'all' || song.links.some((link) => link.source === source))
+            && (!album || song.album?.toLowerCase().includes(album)));
+          return { filters: { era, kind, source, album: album || null }, ...page(matches.map(songSummary), input) };
         },
       },
       {
         name: 'list_reimaginings',
-        description:
-          'List the songs rebuilt with Suno, each paired with the acoustic recording it reworks. Every video opens with a clip of that original, so the pairing is the point of the series.',
-        inputSchema: { type: 'object', properties: {} },
-        execute: () => ok({
-          playlist: catalog.reimagined.playlist,
-          pairs: catalog.reimagined.songs.map((s) => ({
-            reimagined: s.title,
-            style: s.style,
-            length: s.length,
-            originalRecording: s.original ?? null,
-            directLinks: s.links ?? (s.url ? [{ source: 'listen', url: s.url }] : []),
-            originalUrl: s.original
-              ? catalog.acoustic.tracks.find((track) => track.title === s.original)?.url ?? null
-              : null,
-            originalInArchive: Boolean(s.original),
-          })),
-        }),
+        description: 'List every Suno rebuild paired with its exact acoustic source recording and canonical pages. Use this when comparing original and new versions.',
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async (_input, signal) => {
+          const catalog = await getCatalog(signal);
+          const songsById = new Map(catalog.songs.map((song) => [song.id, song]));
+          return { updatedAt: catalog.updatedAt, pairs: catalog.songs.filter((song) => song.kind === 'reimagined').map((rebuilt) => ({ rebuilt: songSummary(rebuilt), original: rebuilt.originalTrackId ? songSummary(songsById.get(rebuilt.originalTrackId)) : null })) };
+        },
       },
       {
         name: 'list_albums',
-        description:
-          'List the electronic albums with their complete tracklists, plus the merged catalogue statistics. The album pages on SoundCloud show only five tracks each, so these lists are more complete than the host.',
-        inputSchema: { type: 'object', properties: {} },
-        execute: () => ok({
-          albums: catalog.electronic.albums.map((album) => ({
-            ...album,
-            tracks: album.tracks.map((title) => {
-              const track = catalog.electronic.tracks.find((candidate) => candidate.album === album.title && candidate.title === title);
-              const url = track?.links?.find((link) => link.source === 'soundcloud-albums')?.url ?? track?.url ?? null;
-              return { title, url };
-            }),
-          })),
-          stats: catalog.electronic.stats,
-          note: 'Use search_songs to look inside the full set of ' + catalog.electronic.stats.total + ' produced tracks.',
-        }),
+        description: 'List the electronic albums and their canonical pages. Optionally select one album by ID or slug to receive its complete ordered track records.',
+        inputSchema: { type: 'object', properties: { id: { type: 'string', minLength: 1 }, slug: { type: 'string', minLength: 1 } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const id = textValue(input, 'id');
+          const slug = textValue(input, 'slug');
+          const selected = id || slug ? catalog.albums.find((album) => album.id === id || album.slug === slug) : null;
+          if ((id || slug) && !selected) return { error: 'No album matched.', albums: catalog.albums };
+          if (!selected) return { updatedAt: catalog.updatedAt, albums: catalog.albums };
+          const songsById = new Map(catalog.songs.map((song) => [song.id, song]));
+          return { updatedAt: catalog.updatedAt, album: selected, tracks: selected.trackIds.map((trackId) => songSummary(songsById.get(trackId))) };
+        },
       },
       {
         name: 'where_to_listen',
-        description:
-          'Where the music is hosted. Filter by era with acoustic, electronic or ai, or leave it empty for everything.',
-        inputSchema: {
-          type: 'object',
-          properties: { era: { type: 'string', description: 'acoustic, electronic, ai, or all.' } },
+        description: 'List verified music platforms for one era or the entire catalog. Use this when a user wants a profile, playlist, or service rather than a specific song.',
+        inputSchema: { type: 'object', properties: { era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'], default: 'all' } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const era = textValue(input, 'era') || 'all';
+          return { era, platforms: catalog.platforms.filter((platform) => era === 'all' || platform.era === era || platform.era === 'all') };
         },
-        execute: (input) => {
-          const era = term(input, 'era');
-          const list = !era || era === 'all'
-            ? catalog.platforms
-            : catalog.platforms.filter((p) => p.era === era || p.era === 'all');
-          return ok({ era: era || 'all', platforms: list });
+      },
+      {
+        name: 'navigate_catalog',
+        description: 'Get canonical internal URLs for the catalog, artist profile, machine-readable data, albums, and individual songs. Use this to navigate the site or give a user a durable AlexMercedMusic.com link.',
+        inputSchema: { type: 'object', properties: { section: { type: 'string', enum: ['all', 'main', 'songs', 'albums'], default: 'main' }, limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 }, offset: { type: 'integer', minimum: 0, default: 0 } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const section = textValue(input, 'section') || 'main';
+          const main = [
+            { label: 'Home', url: `${catalog.site}/` }, { label: 'Acoustic archive', url: `${catalog.site}/acoustic/` },
+            { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
+            { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },
+            { label: 'Machine-readable catalog', url: `${catalog.site}/catalog.json` }, { label: 'LLM guide', url: `${catalog.site}/llms.txt` },
+          ];
+          if (section === 'main') return { pages: main };
+          if (section === 'songs') return page(catalog.songs.map((song) => ({ id: song.id, title: song.title, url: song.pageUrl })), input);
+          if (section === 'albums') return { albums: catalog.albums.map((album) => ({ id: album.id, title: album.title, url: album.pageUrl })) };
+          return { pages: main, songs: page(catalog.songs.map((song) => ({ id: song.id, title: song.title, url: song.pageUrl })), input), albums: catalog.albums };
         },
       },
     ];
 
-    const register = (ctx) => {
-      for (const tool of tools) {
-        try {
-          ctx.registerTool({
-            name: tool.name,
-            description: tool.description,
-            inputSchema: tool.inputSchema,
-            execute: async (input) => {
-              try { return tool.execute(input || {}); }
-              catch (error) {
-                return { content: [{ type: 'text', text: JSON.stringify({ error: String(error) }) }], isError: true };
-              }
-            },
-          });
-        } catch { /* already registered, or unsupported */ }
-      }
+    const register = async (context) => {
+      registrationController?.abort();
+      registrationController = new AbortController();
+      const options = { signal: registrationController.signal };
+      const registrations = await Promise.allSettled(tools.map((tool) => context.registerTool({
+        name: tool.name,
+        description: tool.description,
+        inputSchema: tool.inputSchema,
+        annotations,
+        execute: async (input, clientContext = {}) => {
+          try { return json(await tool.execute(input ?? {}, clientContext.signal)); }
+          catch (error) { return json({ error: error instanceof Error ? error.message : String(error) }); }
+        },
+      }, options)));
+      const failures = registrations.filter((result) => result.status === 'rejected');
+      if (failures.length) console.warn(`WebMCP: ${failures.length} of ${tools.length} tools failed to register.`, failures);
     };
 
-    const now = find();
-    if (now) { register(now); return; }
+    window.addEventListener('pagehide', () => registrationController?.abort(), { once: true });
+    const context = getContext();
+    if (context) { void register(context); return; }
 
     const started = Date.now();
-    const timer = setInterval(() => {
-      const ctx = find();
-      if (ctx) { clearInterval(timer); register(ctx); return; }
-      if (Date.now() - started > WAIT_MS) clearInterval(timer);
+    const timer = window.setInterval(() => {
+      const delayedContext = getContext();
+      if (delayedContext) { window.clearInterval(timer); void register(delayedContext); }
+      else if (Date.now() - started > WAIT_MS) window.clearInterval(timer);
     }, POLL_MS);
   })();
 </script>

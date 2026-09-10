@@ -13,6 +13,8 @@ Part of the Alex Merced network of sites.
 - SEO surfaces: canonical tags, Open Graph, JSON-LD (`WebSite`, `Person`,
   `MusicGroup`, `MusicPlaylist`, `MusicAlbum`), `sitemap.xml`, `llms.txt`
 - WebMCP tools so an agent visiting the page can query the catalogue
+- Stable canonical pages for every song and album, connected with JSON-LD
+- Versioned machine-readable catalog at `/catalog.json`
 
 ## Develop
 

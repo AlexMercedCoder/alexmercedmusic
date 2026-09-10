@@ -1,0 +1,68 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { CATALOG_UPDATED_AT, SITE, catalogAlbums, songById, type CatalogAlbum } from '../../data/catalog-model';
+
+export function getStaticPaths() {
+  return catalogAlbums.map((album) => ({ params: { slug: album.slug }, props: { album } }));
+}
+
+const { album } = Astro.props as { album: CatalogAlbum };
+const tracks = album.trackIds.flatMap((id) => {
+  const song = songById.get(id);
+  return song ? [song] : [];
+});
+const jsonLd = [
+  {
+    '@type': 'MusicAlbum',
+    '@id': `${album.pageUrl}#album`,
+    name: album.title,
+    url: album.pageUrl,
+    sameAs: album.sourceUrl,
+    datePublished: album.released,
+    byArtist: { '@id': `${SITE}/#musicgroup` },
+    numTracks: tracks.length,
+    track: tracks.map((track, index) => ({ '@id': `${track.pageUrl}#recording`, position: index + 1 })),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: 'Electronic catalogue', item: `${SITE}/electronic/` },
+      { '@type': 'ListItem', position: 3, name: album.title, item: album.pageUrl },
+    ],
+  },
+];
+---
+
+<Base
+  title={album.title}
+  description={`${album.title} is an electronic album by Alex Merced, released in ${album.released.slice(0, 4)}. Explore its complete ${tracks.length}-track listing with direct listening links.`}
+  jsonLd={jsonLd}
+  ogType="music.album"
+  dateModified={CATALOG_UPDATED_AT}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Electronic catalogue', href: '/electronic' }, { label: album.title }]} />
+  <article class="section" data-era="electronic">
+    <div class="shell">
+      <p class="eyebrow">Electronic album · {album.released.slice(0, 4)}</p>
+      <h1>{album.title}</h1>
+      <p class="lede">A complete {tracks.length}-track electronic album by Alex Merced, produced in FL Studio and published on SoundCloud.</p>
+      <div class="btn-row" style="margin-top:1.8rem"><a class="btn btn--primary" href={album.sourceUrl}>Listen to the album ↗</a></div>
+    </div>
+  </article>
+  <section class="section" data-era="electronic">
+    <div class="shell">
+      <h2 style="margin-bottom:1.4rem">Track listing</h2>
+      <ol class="tracks">
+        {tracks.map((track, index) => (
+          <li>
+            <span class="num">{String(index + 1).padStart(2, '0')}</span>
+            <span><a class="song-link" href={track.pageUrl.replace(SITE, '')}>{track.title}</a></span>
+            <span class="len">{track.seconds ? `${Math.floor(track.seconds / 60)}:${String(track.seconds % 60).padStart(2, '0')}` : ''}</span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </section>
+</Base>

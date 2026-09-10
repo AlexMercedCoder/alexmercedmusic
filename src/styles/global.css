@@ -134,6 +134,35 @@ p:last-child { margin-bottom: 0; }
 .section__head { max-width: 46rem; margin-bottom: 2.5rem; }
 .section__head h2 { margin-bottom: 0.7rem; }
 
+/* ---------------------------------------------------------------- breadcrumbs and detail pages */
+
+.breadcrumbs { padding-top: 1.25rem; }
+.breadcrumbs ol { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.45rem; }
+.breadcrumbs li { color: var(--ink-faint); font: 500 0.74rem/1.4 var(--mono); }
+.breadcrumbs li + li::before { content: '/'; margin-right: 0.45rem; color: var(--rule); }
+.breadcrumbs a { color: var(--ink-soft); text-underline-offset: 0.18em; }
+
+.detail__grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.8fr); gap: clamp(2rem, 6vw, 5rem); align-items: start; }
+.detail__heading { margin: 2rem 0 1rem; font-size: 1.5rem; }
+.facts { margin: 2rem 0 0; border-top: 1px solid var(--rule); }
+.facts div { display: grid; grid-template-columns: 8rem 1fr; gap: 1rem; padding: 0.65rem 0; border-bottom: 1px solid var(--rule); }
+.facts dt { color: var(--ink-faint); font: 600 0.72rem/1.6 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; }
+.facts dd { margin: 0; color: var(--ink-soft); }
+.embed { position: relative; aspect-ratio: 16 / 9; background: var(--night-800); border: 1px solid var(--rule); border-radius: var(--radius); overflow: hidden; }
+.embed iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.relationship { margin-top: 4rem; }
+.relationship h2 { margin-bottom: 1rem; }
+.relationship__item { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; padding: 1rem 0; border-top: 1px solid var(--rule); }
+.relationship__item .eyebrow { margin-bottom: 0.45rem; color: var(--era); }
+.prose__body { max-width: 52rem; margin-top: clamp(3rem, 7vw, 6rem); }
+.prose__body h2 { margin: 2.6rem 0 0.8rem; }
+.prose__body p { color: var(--ink-soft); }
+
+@media (max-width: 800px) {
+  .detail__grid { grid-template-columns: 1fr; }
+  .relationship__item { align-items: flex-start; flex-direction: column; }
+}
+
 /* ---------------------------------------------------------------- cards */
 
 .card {

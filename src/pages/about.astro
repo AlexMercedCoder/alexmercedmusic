@@ -1,0 +1,54 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { acousticTracks, albums, electronicStats, reimagined, sunoSongs } from '../data/catalog';
+import { SITE } from '../data/catalog-model';
+
+const jsonLd = [{
+  '@type': 'ProfilePage',
+  '@id': `${SITE}/about/#page`,
+  url: `${SITE}/about/`,
+  name: 'About Alex Merced as a musician',
+  mainEntity: { '@id': 'https://alexmerced.com/#alexmerced' },
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'About', item: `${SITE}/about/` },
+  ],
+}];
+---
+
+<Base
+  title="About Alex Merced as a musician"
+  description="The musical history of Alex Merced: singer-songwriter recordings, electronic production in FL Studio, and new experiments with Suno."
+  jsonLd={jsonLd}
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'About' }]} />
+  <article class="section prose">
+    <div class="shell hero__grid">
+      <div>
+        <p class="eyebrow">Biography and discography</p>
+        <h1>Alex Merced,<br />the musician</h1>
+        <p class="lede">Before the work in data, developer education and AI, there were songs: a guitar and a camera, then FL Studio, then a new way to revisit old writing with generative tools.</p>
+      </div>
+      <img class="hero__portrait" src="/images/portrait-hero.webp" width="900" height="900" alt="Portrait of Alex Merced" />
+    </div>
+    <div class="shell prose__body">
+      <h2>The acoustic archive</h2>
+      <p>Alex began publishing singer-songwriter performances in the mid-2000s. The surviving archive contains {acousticTracks.length} accessible recordings across YouTube and SoundCloud: finished songs, improvisations, alternate takes and ideas preserved in the form in which they were originally shared.</p>
+      <p><a href="/acoustic">Explore the acoustic archive</a></p>
+
+      <h2>Electronic production</h2>
+      <p>His work later moved into FL Studio and electronic production. The catalog now indexes {electronicStats.total} deduplicated tracks across ReverbNation, SoundCloud and YouTube, including {albums.length} complete albums. The sources describe the music with labels including electronica, electro pop and glitch hop.</p>
+      <p><a href="/electronic">Explore the electronic catalog</a></p>
+
+      <h2>Reimagining earlier songs</h2>
+      <p>More recently, Alex used Suno to rebuild {reimagined.length} songs from the archive in arrangements ranging from disco house to salsa and rock. This site keeps each rebuilt recording connected to the original performance so the change can be heard in context. Another {sunoSongs.length} published songs document the newer generated work.</p>
+      <p><a href="/reimagined">Compare the originals and reimagined versions</a></p>
+
+      <h2>A catalog, not a streaming host</h2>
+      <p>The recordings remain on the services where they were published. AlexMercedMusic.com is the index: it identifies the recordings, connects related versions and provides direct links to every verified source.</p>
+    </div>
+  </article>
+</Base>

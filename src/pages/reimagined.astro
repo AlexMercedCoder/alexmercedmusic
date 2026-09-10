@@ -1,13 +1,15 @@
 ---
 import Base from '../layouts/Base.astro';
 import { acousticTracks, reimagined, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
+import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 
 const originals = new Map(acousticTracks.map((track) => [track.title, track.url]));
+const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 
 const jsonLd = [
   {
     '@type': 'MusicPlaylist',
-    '@id': 'https://alexmercedmusic.com/reimagined#playlist',
+    '@id': 'https://alexmercedmusic.com/reimagined/#playlist',
     name: reimaginedPlaylist.title,
     url: reimaginedPlaylist.url,
     numTracks: reimagined.length,
@@ -15,9 +17,10 @@ const jsonLd = [
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     track: reimagined.map((t, i) => ({
       '@type': 'MusicRecording',
+      '@id': `${songByPrimaryUrl.get(t.url!)?.pageUrl}#recording`,
       position: i + 1,
       name: t.title,
-      url: t.url,
+      url: songByPrimaryUrl.get(t.url!)?.pageUrl,
       sameAs: t.links?.map((link) => link.url),
       byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     })),
@@ -65,7 +68,7 @@ const jsonLd = [
               <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
               <div class="pair__title">
                 {song.original && originals.get(song.original)
-                  ? <a class="song-link" href={originals.get(song.original)}>{song.original}</a>
+                  ? <a class="song-link" href={detailUrl(originals.get(song.original))}>{song.original}</a>
                   : song.original ?? 'An earlier song of his'}
               </div>
               {song.original && originals.get(song.original) ? (
@@ -79,7 +82,7 @@ const jsonLd = [
             <div class="pair__arrow" aria-hidden="true">&rarr;</div>
             <div class="pair__side pair__now">
               <small>Rebuilt as</small>
-              <div class="pair__title"><a class="song-link" href={song.url}>{song.title}</a></div>
+              <div class="pair__title"><a class="song-link" href={detailUrl(song.url)}>{song.title}</a></div>
               <div class="pair__style">{song.style}{song.length ? ` · ${song.length}` : ''}</div>
               <div class="source-links">
                 {song.links?.map((link) => (
@@ -106,7 +109,7 @@ const jsonLd = [
         {sunoSongs.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span>{t.url ? <a class="song-link" href={t.url}>{t.title}</a> : t.title}</span>
+            <span>{t.url ? <a class="song-link" href={detailUrl(t.url)}>{t.title}</a> : t.title}</span>
             <span class="len"><a class="platform-link" href={t.url}>Suno ↗</a></span>
           </li>
         ))}
