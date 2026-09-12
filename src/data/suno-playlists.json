@@ -1,5 +1,13 @@
 [
   {
+    "id": "53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
+    "name": "Economics In one Playlist",
+    "url": "https://suno.com/playlist/53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
+    "imageUrl": "https://cdn2.suno.ai/image_9f44fed5-03c8-4b99-8dd2-691fe41fdbf1.jpeg",
+    "songCount": 7,
+    "durationSeconds": 1425.9599999999998
+  },
+  {
     "id": "7e4bd076-c713-4a0d-a1bf-b794491be738",
     "name": "The Cost Of War In Peace, Life and Treasure",
     "url": "https://suno.com/playlist/7e4bd076-c713-4a0d-a1bf-b794491be738",
@@ -52,16 +60,16 @@
     "name": "Political",
     "url": "https://suno.com/playlist/addc06e6-4dfd-47ef-a675-cf5c16f1c350",
     "imageUrl": "https://cdn2.suno.ai/image_a6d5215e-ff24-4d5f-ba39-17ca575a95cd.jpeg",
-    "songCount": 6,
-    "durationSeconds": 2220.08
+    "songCount": 13,
+    "durationSeconds": 3646.0399999999995
   },
   {
     "id": "16797847-dedf-46f4-8a58-1628cc3c64b4",
     "name": "Fun Songs",
     "url": "https://suno.com/playlist/16797847-dedf-46f4-8a58-1628cc3c64b4",
     "imageUrl": "https://cdn2.suno.ai/image_c3b1c91d-4f2d-40e7-ab43-44c5b62acac9.jpeg",
-    "songCount": 80,
-    "durationSeconds": 17809.04
+    "songCount": 81,
+    "durationSeconds": 18020.64
   },
   {
     "id": "09aa165b-1ca1-4f80-9903-1046c0e2a649",

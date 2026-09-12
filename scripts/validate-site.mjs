@@ -64,7 +64,7 @@ const sunoPlaylists = catalog.suno.playlists;
 assert.equal(sunoPlaylists.length, sourceSunoPlaylists.length);
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
 assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel));
-assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 4);
+assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
 assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
 
 for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {

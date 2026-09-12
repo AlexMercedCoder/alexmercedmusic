@@ -60,6 +60,10 @@ export type SunoPlaylist = {
 };
 
 const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>> = {
+  '53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4': {
+    description: 'An educational album exploring economics, markets and the tradeoffs behind economic policy.',
+    collectionType: 'album', collectionLabel: 'Economics album',
+  },
   '7e4bd076-c713-4a0d-a1bf-b794491be738': {
     description: 'A concept album about the plight of war and what it costs in peace, life and treasure.',
     collectionType: 'album', collectionLabel: 'Concept album',

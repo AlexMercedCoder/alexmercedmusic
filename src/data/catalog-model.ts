@@ -18,7 +18,7 @@ import {
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '1.3.0';
-export const CATALOG_UPDATED_AT = '2026-09-11';
+export const CATALOG_UPDATED_AT = '2026-09-12';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
