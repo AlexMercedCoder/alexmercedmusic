@@ -10,6 +10,20 @@ const runtime = (seconds?: number) => {
   const minutes = Math.round((seconds % 3600) / 60);
   return hours ? `${hours} hr ${minutes} min` : `${minutes} min`;
 };
+const groups = [
+  {
+    eyebrow: 'Album-length projects',
+    title: 'Albums and concept albums',
+    description: 'Focused sequences built around a sustained inner conflict or a single larger idea.',
+    playlists: sunoPlaylists.filter((playlist) => playlist.collectionType === 'album'),
+  },
+  {
+    eyebrow: 'Browse by theme',
+    title: 'Thematic and cover collections',
+    description: 'Broader listening pools organized by mood, subject or production approach.',
+    playlists: sunoPlaylists.filter((playlist) => playlist.collectionType !== 'album'),
+  },
+];
 const jsonLd = [{
   '@type': 'CollectionPage',
   '@id': `${SITE}/suno/#page`,
@@ -20,12 +34,13 @@ const jsonLd = [{
     '@type': 'ItemList',
     numberOfItems: sunoPlaylists.length,
     itemListElement: sunoPlaylists.map((playlist, index) => ({
-      '@type': 'MusicPlaylist',
+      '@type': playlist.collectionType === 'album' ? 'MusicAlbum' : 'MusicPlaylist',
       position: index + 1,
       name: playlist.name,
       url: playlist.url,
       numTracks: playlist.songCount,
       image: playlist.imageUrl,
+      description: playlist.description,
       byArtist: { '@id': `${SITE}/#musicgroup` },
     })),
   },
@@ -52,30 +67,37 @@ const jsonLd = [{
     </div>
   </section>
 
-  <section class="section section--tight" data-era="ai">
-    <div class="shell">
-      <div class="grid grid--2">
-        {sunoPlaylists.map((playlist) => (
-          <article class="card playlist-card">
-            {playlist.imageUrl && <img src={playlist.imageUrl} width="240" height="240" loading="lazy" alt={`Artwork for ${playlist.name}`} />}
-            <div>
-              <p class="eyebrow">Suno playlist</p>
-              <h2>{playlist.name}</h2>
-              <p>{playlist.songCount} songs{runtime(playlist.durationSeconds) ? ` · ${runtime(playlist.durationSeconds)}` : ''}</p>
-              {playlist.description && <p>{playlist.description}</p>}
-              <p><a class="song-link" href={playlist.url}>Listen on Suno</a></p>
-            </div>
-          </article>
-        ))}
+  {groups.map((group) => (
+    <section class="section section--tight" data-era="ai">
+      <div class="shell">
+        <div class="section__head">
+          <p class="eyebrow">{group.eyebrow}</p>
+          <h2>{group.title}</h2>
+          <p>{group.description}</p>
+        </div>
+        <div class="grid grid--2">
+          {group.playlists.map((playlist) => (
+            <article class="card playlist-card">
+              {playlist.imageUrl && <img src={playlist.imageUrl} width="240" height="240" loading="lazy" alt={`Artwork for ${playlist.name}`} />}
+              <div>
+                <p class="eyebrow">{playlist.collectionLabel}</p>
+                <h3>{playlist.name}</h3>
+                <p>{playlist.songCount} songs{runtime(playlist.durationSeconds) ? ` · ${runtime(playlist.durationSeconds)}` : ''}</p>
+                <p>{playlist.description}</p>
+                <p><a class="song-link" href={playlist.url}>Listen on Suno</a></p>
+              </div>
+            </article>
+          ))}
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  ))}
 </Base>
 
 <style>
   .playlist-card { display:grid; grid-template-columns:7rem 1fr; gap:1rem; align-items:start; }
   .playlist-card img { width:7rem; aspect-ratio:1; object-fit:cover; border-radius:var(--radius); }
-  .playlist-card h2 { font-size:1.25rem; margin-top:.35rem; }
+  .playlist-card h3 { font-size:1.25rem; margin-top:.35rem; }
   .playlist-card p:last-child { margin-bottom:0; }
   @media (max-width:34rem) { .playlist-card { grid-template-columns:5rem 1fr; } .playlist-card img { width:5rem; } }
 </style>

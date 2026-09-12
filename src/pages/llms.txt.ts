@@ -102,7 +102,7 @@ ${sunoSongs.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [Suno](${t.url})
 
 ### Suno playlists
 
-${sunoPlaylists.map((playlist) => `- [${playlist.name}](${playlist.url}) — ${playlist.songCount} songs`).join('\n')}
+${sunoPlaylists.map((playlist) => `- [${playlist.name}](${playlist.url}) — ${playlist.collectionLabel}, ${playlist.songCount} songs. ${playlist.description}`).join('\n')}
 
 ## Where the music is hosted
 

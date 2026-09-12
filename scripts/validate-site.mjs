@@ -10,7 +10,7 @@ const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
 
-assert.equal(catalog.schemaVersion, '1.2.0');
+assert.equal(catalog.schemaVersion, '1.3.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -54,15 +54,17 @@ for (const album of catalog.albums) {
 }
 
 const generatedSongs = catalog.songs.filter((song) => song.kind === 'generated');
-assert.equal(generatedSongs.length, 171);
+const sourceSunoSongs = JSON.parse(read('src/data/suno-songs.json'));
+assert.equal(generatedSongs.length, sourceSunoSongs.length);
 assert.ok(generatedSongs.every((song) => song.createdAt && song.durationSeconds && song.imageUrl && song.embedUrl), 'Every generated Suno song must retain its public metadata.');
 assert.ok(generatedSongs.filter((song) => song.genres?.length).length >= Math.floor(generatedSongs.length * 0.95), 'The Suno style metadata recovery rate is unexpectedly low.');
 assert.equal(JSON.parse(read('src/data/suno-covers.json')).length, 12);
-const sunoPlaylists = JSON.parse(read('src/data/suno-playlists.json'));
-assert.equal(sunoPlaylists.length, 7);
+const sourceSunoPlaylists = JSON.parse(read('src/data/suno-playlists.json'));
+const sunoPlaylists = catalog.suno.playlists;
+assert.equal(sunoPlaylists.length, sourceSunoPlaylists.length);
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
-assert.deepEqual(catalog.suno.playlists, sunoPlaylists);
-assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0));
+assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel));
+assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 4);
 assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
 
 for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
@@ -140,7 +142,7 @@ const comparison = JSON.parse(await getTool('compare_versions').execute({ id: so
 assert.equal(comparison.original.id, solemn.originalTrackId);
 assert.ok(comparison.reimagined.some((song) => song.id === solemn.id));
 const playlistResult = JSON.parse(await getTool('list_suno_playlists').execute({}));
-assert.equal(playlistResult.count, 7);
+assert.equal(playlistResult.count, sunoPlaylists.length);
 assert.deepEqual(playlistResult.playlists, sunoPlaylists);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);

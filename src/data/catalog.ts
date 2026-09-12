@@ -47,8 +47,70 @@ export type Track = {
 
 export type YouTubeMetadata = { publishedAt: string; title?: string; imageUrl?: string };
 export const youtubeMetadata = youtubeMetadataData as Record<string, YouTubeMetadata>;
-export type SunoPlaylist = { id: string; name: string; url: string; imageUrl?: string; songCount: number; durationSeconds?: number; description?: string };
-export const sunoPlaylists = sunoPlaylistsData as SunoPlaylist[];
+export type SunoPlaylist = {
+  id: string;
+  name: string;
+  url: string;
+  imageUrl?: string;
+  songCount: number;
+  durationSeconds?: number;
+  description: string;
+  collectionType: 'album' | 'theme' | 'covers';
+  collectionLabel: string;
+};
+
+const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>> = {
+  '7e4bd076-c713-4a0d-a1bf-b794491be738': {
+    description: 'A concept album about the plight of war and what it costs in peace, life and treasure.',
+    collectionType: 'album', collectionLabel: 'Concept album',
+  },
+  'e8453402-b6d4-4064-b599-508a6c2e1edb': {
+    description: 'A deeply introspective album exploring Alex’s inner conflicts.',
+    collectionType: 'album', collectionLabel: 'Introspective album',
+  },
+  '73370017-9f5c-4f67-85e6-95e60b13cdba': {
+    description: 'A deeply introspective album exploring Alex’s inner conflicts.',
+    collectionType: 'album', collectionLabel: 'Introspective album',
+  },
+  'a146d06a-7f10-4069-87fd-cb7c092c0657': {
+    description: 'A deeply introspective album exploring Alex’s inner conflicts.',
+    collectionType: 'album', collectionLabel: 'Introspective album',
+  },
+  'a69850f0-d17e-477e-bcef-37d3705efcfb': {
+    description: 'Suno arrangements of songs from Alex’s older acoustic catalog.',
+    collectionType: 'covers', collectionLabel: 'Acoustic cover series',
+  },
+  'cb4ce716-4820-4a79-a1b0-e26285ada284': {
+    description: 'Educational songs Alex made about professional topics in technology.',
+    collectionType: 'theme', collectionLabel: 'Educational collection',
+  },
+  'addc06e6-4dfd-47ef-a675-cf5c16f1c350': {
+    description: 'Songs about politics and economics.',
+    collectionType: 'theme', collectionLabel: 'Topical collection',
+  },
+  '16797847-dedf-46f4-8a58-1628cc3c64b4': {
+    description: 'A broad collection of playful songs.',
+    collectionType: 'theme', collectionLabel: 'Playful collection',
+  },
+  '09aa165b-1ca1-4f80-9903-1046c0e2a649': {
+    description: 'A broad collection of Alex’s more introspective songs.',
+    collectionType: 'theme', collectionLabel: 'Introspective collection',
+  },
+  '272034e9-28cb-4b1e-8ca6-7da96e2704e3': {
+    description: 'Cover songs arranged around an AI-generated version of Alex’s voice.',
+    collectionType: 'covers', collectionLabel: 'AI voice cover series',
+  },
+};
+
+export const sunoPlaylists: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>[])
+  .map((playlist) => ({
+    ...playlist,
+    ...(sunoPlaylistEditorial[playlist.id] ?? {
+      description: 'A public Suno playlist by Alex Merced.',
+      collectionType: 'theme' as const,
+      collectionLabel: 'Suno collection',
+    }),
+  }));
 
 // ---------------------------------------------------------------- acoustic
 

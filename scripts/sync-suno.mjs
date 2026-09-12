@@ -131,7 +131,7 @@ if (migratedCatalogSource !== catalogSource) await writeFile(catalogUrl, migrate
 if (current !== serialized || currentCovers !== serializedCovers || currentPlaylists !== serializedPlaylists) {
   const modelSource = await readFile(catalogModelUrl, 'utf8');
   const astroConfigSource = await readFile(astroConfigUrl, 'utf8');
-  const today = new Date().toISOString().slice(0, 10);
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
   await writeFile(catalogModelUrl, modelSource.replace(/CATALOG_UPDATED_AT = '\d{4}-\d{2}-\d{2}'/, `CATALOG_UPDATED_AT = '${today}'`));
   await writeFile(astroConfigUrl, astroConfigSource.replace(/item\.lastmod = '\d{4}-\d{2}-\d{2}'/, `item.lastmod = '${today}'`));
 }
