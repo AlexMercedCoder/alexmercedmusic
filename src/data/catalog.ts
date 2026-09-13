@@ -60,6 +60,10 @@ export type SunoPlaylist = {
 };
 
 const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>> = {
+  'abf459c8-27e4-4382-a9a5-77769146b46b': {
+    description: 'Songs about nostalgia, memory, food and the familiar comforts that connect them.',
+    collectionType: 'theme', collectionLabel: 'Nostalgic collection',
+  },
   '53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4': {
     description: 'An educational album exploring economics, markets and the tradeoffs behind economic policy.',
     collectionType: 'album', collectionLabel: 'Economics album',

@@ -1,11 +1,19 @@
 [
   {
+    "id": "abf459c8-27e4-4382-a9a5-77769146b46b",
+    "name": "Nostalgia and Food",
+    "url": "https://suno.com/playlist/abf459c8-27e4-4382-a9a5-77769146b46b",
+    "imageUrl": "https://cdn2.suno.ai/image_7de82330-e71c-4675-9504-6371a7f3e59b.jpeg",
+    "songCount": 27,
+    "durationSeconds": 5884.08
+  },
+  {
     "id": "53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
     "name": "Economics In one Playlist",
     "url": "https://suno.com/playlist/53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
     "imageUrl": "https://cdn2.suno.ai/image_9f44fed5-03c8-4b99-8dd2-691fe41fdbf1.jpeg",
-    "songCount": 7,
-    "durationSeconds": 1425.9599999999998
+    "songCount": 13,
+    "durationSeconds": 2786.32
   },
   {
     "id": "7e4bd076-c713-4a0d-a1bf-b794491be738",
@@ -52,32 +60,32 @@
     "name": "Professional topics",
     "url": "https://suno.com/playlist/cb4ce716-4820-4a79-a1b0-e26285ada284",
     "imageUrl": "https://cdn2.suno.ai/image_cc33cc88-498f-47e2-9a9c-82c30cb487ea.jpeg",
-    "songCount": 4,
-    "durationSeconds": 1413.52
+    "songCount": 7,
+    "durationSeconds": 2105.8
   },
   {
     "id": "addc06e6-4dfd-47ef-a675-cf5c16f1c350",
     "name": "Political",
     "url": "https://suno.com/playlist/addc06e6-4dfd-47ef-a675-cf5c16f1c350",
     "imageUrl": "https://cdn2.suno.ai/image_a6d5215e-ff24-4d5f-ba39-17ca575a95cd.jpeg",
-    "songCount": 13,
-    "durationSeconds": 3646.0399999999995
+    "songCount": 16,
+    "durationSeconds": 4333.999999999999
   },
   {
     "id": "16797847-dedf-46f4-8a58-1628cc3c64b4",
     "name": "Fun Songs",
     "url": "https://suno.com/playlist/16797847-dedf-46f4-8a58-1628cc3c64b4",
     "imageUrl": "https://cdn2.suno.ai/image_c3b1c91d-4f2d-40e7-ab43-44c5b62acac9.jpeg",
-    "songCount": 81,
-    "durationSeconds": 18020.64
+    "songCount": 100,
+    "durationSeconds": 22256.120000000003
   },
   {
     "id": "09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "name": "Deep Songs",
     "url": "https://suno.com/playlist/09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "imageUrl": "https://cdn2.suno.ai/image_dd6aef5f-c95c-49d2-8984-80868c3a84d2.jpeg",
-    "songCount": 117,
-    "durationSeconds": 27775.120000000006
+    "songCount": 120,
+    "durationSeconds": 28442.840000000007
   },
   {
     "id": "272034e9-28cb-4b1e-8ca6-7da96e2704e3",
