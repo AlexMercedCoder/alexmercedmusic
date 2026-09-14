@@ -10,7 +10,7 @@ const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
 
-assert.equal(catalog.schemaVersion, '1.4.0');
+assert.equal(catalog.schemaVersion, '1.5.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -70,10 +70,13 @@ assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).len
 for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
 }
-assert.ok(existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The complete Suno prompting PDF is missing.');
 const promptingPage = read('dist/suno-prompting-guide/index.html');
 assert.ok(promptingPage.includes('TechArticle') && promptingPage.includes('FAQPage'), 'The prompting guide is missing structured data.');
-assert.ok(promptingPage.includes('/guides/suno-prompting-field-guide.pdf'), 'The prompting guide does not link to the complete PDF.');
+assert.ok(!promptingPage.includes('.pdf'), 'The prompting guide must not publish or link to the source PDF.');
+assert.ok(!existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The source PDF must not be included in the built site.');
+for (const section of ['Genre atlas', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
+  assert.ok(promptingPage.includes(section), `The prompting guide is missing the ${section} section.`);
+}
 for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts']) {
   const source = read(path);
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);
@@ -156,7 +159,9 @@ assert.equal(playlistResult.count, sunoPlaylists.length);
 assert.deepEqual(playlistResult.playlists, sunoPlaylists);
 const promptingResult = JSON.parse(await getTool('get_suno_prompting_guide').execute({}));
 assert.equal(promptingResult.guide.formula, catalog.guides.sunoPrompting.formula);
-assert.equal(promptingResult.guide.pdfUrl, `${catalog.site}/guides/suno-prompting-field-guide.pdf`);
+assert.equal(promptingResult.guide.pageUrl, `${catalog.site}/suno-prompting-guide/`);
+assert.equal(promptingResult.guide.genreFamilies.length, 4);
+assert.equal(promptingResult.guide.recipes.length, 16);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));

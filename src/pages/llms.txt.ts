@@ -33,7 +33,7 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 - [The acoustic archive](${SITE}/acoustic/): ${acousticTracks.length} guitar and voice recordings, listed in full.
 - [Reimagined with Suno](${SITE}/reimagined/): ${reimagined.length} rebuilds paired with the recordings they came from.
 - [Suno playlists](${SITE}/suno/): all ${sunoPlaylists.length} public playlists with direct URLs, artwork, song counts and runtimes.
-- [Suno Prompting Field Guide](${sunoPromptingGuide.pageUrl}): a practical guide to prompt structure, lyrics, controls, troubleshooting and copy-ready recipes. The [complete PDF](${sunoPromptingGuide.pdfUrl}) includes the full vocabulary index and source notes.
+- [Suno Prompting Field Guide](${sunoPromptingGuide.pageUrl}): a web-native reference for prompt structure, genres, instruments, vocals, rhythm, harmony, arrangement, production, lyrics, hybrid design, controls, troubleshooting, recipes and evaluation.
 - [The electronic catalogue](${SITE}/electronic/): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
 - [Where to listen](${SITE}/listen/): every platform, with the counts each one reports.
 - [About Alex Merced as a musician](${SITE}/about/): biography, musical history and discography context.
@@ -115,8 +115,6 @@ Prompt formula: ${sunoPromptingGuide.formula}
 ${sunoPromptingGuide.evidenceNote}
 
 Guide: ${sunoPromptingGuide.pageUrl}
-
-Complete PDF: ${sunoPromptingGuide.pdfUrl}
 
 ## Where the music is hosted
 

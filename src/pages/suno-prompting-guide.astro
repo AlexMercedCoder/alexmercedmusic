@@ -36,7 +36,6 @@ const jsonLd = [
     publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
     about: ['Suno', 'music prompting', 'song arrangement', 'music production'],
     proficiencyLevel: 'Beginner to advanced',
-    isBasedOn: guide.pdfUrl,
   },
   {
     '@type': 'FAQPage',
@@ -77,7 +76,7 @@ const jsonLd = [
       </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="#prompt-architecture">Build a prompt</a>
-        <a class="btn" href={guide.pdfUrl}>Read the complete 37-page PDF</a>
+        <a class="btn" href="#genre-atlas">Browse the sound palette</a>
         <a class="btn" href="/suno/">Browse Alex’s Suno catalog</a>
       </div>
     </div>
@@ -87,7 +86,11 @@ const jsonLd = [
     <div class="shell">
       <a href="#mental-model">Mental model</a>
       <a href="#prompt-architecture">Prompt architecture</a>
+      <a href="#genre-atlas">Genres</a>
+      <a href="#sound-design">Sound design</a>
+      <a href="#arrangement">Arrangement</a>
       <a href="#lyrics">Lyrics</a>
+      <a href="#hybrids">Hybrids</a>
       <a href="#controls">Controls</a>
       <a href="#troubleshooting">Troubleshooting</a>
       <a href="#recipes">Recipes</a>
@@ -140,6 +143,106 @@ const jsonLd = [
         </article>
       ))}
     </div>
+    <div class="shell density-grid">
+      {guide.promptDensity.map((item) => (
+        <article>
+          <h3>{item.level}</h3>
+          <p><strong>Use:</strong> {item.use}</p>
+          <p><strong>Result:</strong> {item.result}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--tight" id="genre-atlas" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Genre atlas</p>
+        <h2>Choose a musical neighborhood</h2>
+        <p>A genre term carries rhythm, instrumentation, harmony, vocal behavior and production history. Start with one primary genre. Add a second only when it has a clear role.</p>
+      </div>
+      <div class="atlas-grid">
+        {guide.genreFamilies.map((family) => (
+          <article class="reference-card">
+            <h3>{family.name}</h3>
+            <dl>
+              {family.terms.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}
+            </dl>
+          </article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="sound-design" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Instrumentation and voice</p>
+        <h2>Give every sound a job</h2>
+        <p>Use the pattern instrument + role + articulation + processing. “Baritone guitar, foreground rhythm role, palm-muted syncopation, dry overdrive” gives more direction than “guitar.”</p>
+      </div>
+      <div class="atlas-grid">
+        {guide.instrumentFamilies.map((family) => (
+          <article class="reference-card">
+            <h3>{family.name}</h3>
+            <dl>
+              {family.items.map(([instrument, character, direction]) => <><dt>{instrument}</dt><dd>{character}. Try {direction}.</dd></>)}
+            </dl>
+          </article>
+        ))}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Vocal design</p>
+        <h2>Separate identity from performance</h2>
+        <p>Build a voice from range, weight and texture, then describe how it performs and how close it feels to the listener.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.vocalDimensions.map((item) => <article><h3>{item.name}</h3><p>{item.examples}</p></article>)}
+      </div>
+      <aside class="principle">
+        <strong>Example voice</strong>
+        <span>Mature nasal midrange baritone, exaggerated theatrical diction, fast patter, lo-fi AM radio filter, shellac crackle, narrow bandwidth and light megaphone distortion.</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="arrangement" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Rhythm, harmony and form</p>
+        <h2>Describe motion over time</h2>
+        <p>Tempo gives speed, groove gives placement, and meter gives the recurring beat framework. Harmony sets color. Arrangement gives the song a destination.</p>
+      </div>
+      <div class="reference-columns">
+        <article class="reference-card">
+          <h3>Groove</h3>
+          <dl>{guide.rhythmTerms.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+        <article class="reference-card">
+          <h3>Meter</h3>
+          <dl>{guide.meters.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+        <article class="reference-card">
+          <h3>Harmony</h3>
+          <dl>{guide.harmonyTerms.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+        <article class="reference-card">
+          <h3>Melody</h3>
+          <dl>{guide.melodicTerms.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+      </div>
+      <div class="pattern-strip">
+        {guide.arrangementPatterns.map(([name, method]) => <article><h3>{name}</h3><p>{method}</p></article>)}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Production and mix</p>
+        <h2>Place the recording in a physical space</h2>
+        <p>Choose a few compatible traits. Distance, width, frequency balance, dynamics, clarity, surface and room size are all audible directions.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.productionFamilies.map((item) => <article><h3>{item.name}</h3><p>{item.terms}</p></article>)}
+      </div>
+    </div>
   </section>
 
   <section class="section section--tight" id="lyrics" data-era="ai">
@@ -155,12 +258,47 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="hybrids" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">References and hybrid genres</p>
+        <h2>Translate influence into audible traits</h2>
+        <p>Use artist names for private listening analysis, then rewrite the reference as genre, era, rhythm, harmony, instruments, voice, arrangement and production. Describe the musical behavior instead of asking for direct imitation.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Dimension</th><th>Question</th><th>Example answer</th></tr></thead>
+          <tbody>{guide.artistTranslation.map((item) => <tr><th scope="row">{item.dimension}</th><td>{item.question}</td><td>{item.example}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <h2>Give each genre a separate role</h2>
+        <p>A clear hybrid assigns structure, timbre, rhythm, voice or production to each influence.</p>
+      </div>
+      <div class="hybrid-grid">
+        {guide.hybridPatterns.map(([name, method, example]) => (
+          <article><h3>{name}</h3><p>{method}</p><p><strong>Example:</strong> {example}</p></article>
+        ))}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Exclude field</p>
+        <h2>Remove defaults directly</h2>
+      </div>
+      <div class="exclude-grid">
+        {guide.excludeSets.map(([goal, terms]) => <article><h3>{goal}</h3><p>{terms}</p></article>)}
+      </div>
+    </div>
+  </section>
+
   <section class="section section--tight" id="controls" data-era="ai">
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Advanced controls</p>
         <h2>Choose the smallest useful intervention</h2>
         <p>Lock the parts that already work. Use a targeted control when the problem is local.</p>
+      </div>
+      <div class="model-grid">
+        {guide.models.map((model) => <article><h3>{model.name}</h3><p><strong>{model.use}</strong></p><p>{model.approach}</p></article>)}
       </div>
       <div class="table-wrap">
         <table>
@@ -171,6 +309,10 @@ const jsonLd = [
             ))}
           </tbody>
         </table>
+      </div>
+      <div class="protocol-card">
+        <h3>A/B testing protocol</h3>
+        <ol>{guide.testProtocol.map((step) => <li>{step}</li>)}</ol>
       </div>
     </div>
   </section>
@@ -205,8 +347,14 @@ const jsonLd = [
           </details>
         ))}
       </div>
-      <p class="pdf-note">The complete PDF includes more recipes plus genre, instrument, vocal, rhythm, harmony, arrangement and production vocabulary.</p>
-      <p><a class="btn" href={guide.pdfUrl}>Open the complete field guide</a></p>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Master vocabulary</p>
+        <h2>Pick one or two terms from each useful family</h2>
+        <p>Do not paste every term into one prompt. Use this palette to replace vague adjectives with specific performance and recording choices.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.vocabulary.map((item) => <article><h3>{item.family}</h3><p>{item.terms}</p></article>)}
+      </div>
     </div>
   </section>
 
@@ -226,6 +374,16 @@ const jsonLd = [
         <p>Suno changes quickly. Check current model names, feature access and control behavior against Suno’s Help Center.</p>
         <p><a href="https://help.suno.com/">Visit the Suno Help Center</a></p>
       </aside>
+    </div>
+    <div class="shell template-grid">
+      <article class="prompt-card"><p class="eyebrow">Minimal template</p><p>{guide.templates.minimal}</p></article>
+      <article class="prompt-card"><p class="eyebrow">Advanced template</p><p>{guide.templates.advanced}</p></article>
+    </div>
+    <div class="shell scorecard">
+      <h3>Score each candidate from 1 to 5</h3>
+      <div class="vocab-grid">
+        {guide.evaluation.map(([dimension, question]) => <article><h3>{dimension}</h3><p>{question}</p></article>)}
+      </div>
     </div>
   </section>
 
@@ -263,6 +421,23 @@ const jsonLd = [
   .field-grid article { padding:1.2rem; background:var(--night-800); }
   .field-grid h3 { color:var(--ai); margin-bottom:.55rem; }
   .field-grid p { color:var(--ink-soft); margin:0; }
+  .density-grid { display:grid; grid-template-columns:repeat(4, 1fr); gap:1rem; margin-top:1rem; }
+  .density-grid article, .vocab-grid article, .hybrid-grid article, .exclude-grid article, .model-grid article, .pattern-strip article { padding:1.1rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }
+  .density-grid h3, .vocab-grid h3, .hybrid-grid h3, .exclude-grid h3, .model-grid h3, .pattern-strip h3 { margin-bottom:.5rem; font-size:1rem; color:var(--ai); }
+  .density-grid p, .vocab-grid p, .hybrid-grid p, .exclude-grid p, .model-grid p, .pattern-strip p { color:var(--ink-soft); margin:.3rem 0 0; }
+  .atlas-grid, .reference-columns { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; }
+  .reference-card { padding:1.3rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }
+  .reference-card h3 { color:var(--ai); margin-bottom:1rem; }
+  .reference-card dl { display:grid; grid-template-columns:minmax(8rem, .42fr) 1fr; margin:0; }
+  .reference-card dt, .reference-card dd { padding:.6rem 0; border-top:1px solid var(--rule-soft); }
+  .reference-card dt { color:var(--ink); font-weight:700; padding-right:1rem; }
+  .reference-card dd { color:var(--ink-soft); margin:0; }
+  .subsection-head { margin-top:clamp(2.5rem, 6vw, 5rem); }
+  .vocab-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1rem; }
+  .pattern-strip, .hybrid-grid, .exclude-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1rem; margin-top:1rem; }
+  .model-grid { display:grid; grid-template-columns:repeat(3, minmax(0, 1fr)); gap:1rem; margin-bottom:1.5rem; }
+  .protocol-card { margin-top:1.5rem; padding:1.3rem; border-left:3px solid var(--ai); background:var(--night-800); }
+  .protocol-card ol { color:var(--ink-soft); margin:1rem 0 0; padding-left:1.3rem; display:grid; gap:.55rem; }
   .check-list { padding:0; margin:1.5rem 0 0; list-style:none; display:grid; gap:.75rem; counter-reset:check; }
   .check-list li { position:relative; padding-left:2rem; color:var(--ink-soft); }
   .check-list li::before { position:absolute; left:0; color:var(--ai); font:700 .76rem/1.65 var(--mono); }
@@ -286,14 +461,15 @@ const jsonLd = [
   .recipe-grid summary, .faq-list summary { cursor:pointer; padding:1rem 1.1rem; color:var(--ink); font-weight:700; }
   .recipe-grid details[open] summary, .faq-list details[open] summary { color:var(--ai); border-bottom:1px solid var(--rule); }
   .recipe-grid p, .faq-list p { color:var(--ink-soft); padding:1rem 1.1rem; margin:0; }
-  .pdf-note { color:var(--ink-soft); margin-top:1.5rem; }
   .evidence-card { padding:1.4rem; border-top:3px solid var(--ai); }
   .evidence-card h3 { font-size:1.35rem; margin-bottom:1rem; }
   .evidence-card p { color:var(--ink-soft); }
   .faq-list { display:grid; gap:.75rem; max-width:52rem; }
+  .template-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
+  .scorecard { margin-top:3rem; }
   @media (max-width:800px) {
     .guide-nav { top:113px; }
-    .guide-split, .field-grid, .recipe-grid { grid-template-columns:1fr; }
+    .guide-split, .field-grid, .recipe-grid, .density-grid, .atlas-grid, .reference-columns, .vocab-grid, .pattern-strip, .hybrid-grid, .exclude-grid, .model-grid, .template-grid { grid-template-columns:1fr; }
     .principle, .trouble-list article { grid-template-columns:1fr; }
   }
   @media (max-width:560px) { .guide-nav { top:145px; } }
