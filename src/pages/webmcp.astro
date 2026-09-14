@@ -11,6 +11,9 @@ const tools = [
   ['compare_versions', 'An original recording and every known reimagined version.'],
   ['list_suno_playlists', 'Every public Suno playlist with its direct URL, artwork, song count and runtime.'],
   ['get_suno_prompting_guide', 'Structured prompt architecture, sound palettes, recipes, controls, troubleshooting and evaluation guidance.'],
+  ['get_suno_prompting_section', 'One focused guide section, such as vocals, rhythm, production, recipes or troubleshooting.'],
+  ['search_suno_prompting_guide', 'Search the guide for a musical term, problem, genre, instrument or production idea.'],
+  ['compose_suno_prompt', 'Assemble a focused Style prompt from separate musical choices without sending data to Suno.'],
   ['list_reimaginings', 'Every original/reimagined pair.'],
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
@@ -24,7 +27,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers twelve read-only browser tools. Agents can find recordings, browse Suno playlists, read the prompting guide, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers fifteen read-only browser tools. Agents can find recordings, browse Suno playlists, search prompting guidance, assemble a Style prompt, compare versions and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}
@@ -34,6 +37,12 @@ const tools = [
         <li>Call <code>search_songs</code> with <code>{`{"query":"Solemn Thoughts"}`}</code>.</li>
         <li>Use the returned stable ID with <code>compare_versions</code>.</li>
         <li>Open the returned canonical AlexMercedMusic.com page or a verified listening source.</li>
+      </ol>
+      <h2>Prompting workflow</h2>
+      <ol>
+        <li>Call <code>search_suno_prompting_guide</code> with a term such as <code>{`{"query":"close-mic"}`}</code>.</li>
+        <li>Call <code>get_suno_prompting_section</code> for the relevant reference section.</li>
+        <li>Pass the selected traits to <code>compose_suno_prompt</code> to receive a clean Style prompt and optional Exclude field.</li>
       </ol>
       <h2>Direct machine access</h2>
       <p>Clients without WebMCP can use the versioned <a href="/catalog.json">JSON catalog</a>, <a href="/llms.txt">LLM guide</a>, <a href="/feed.json">JSON Feed</a>, or <a href="/feed.xml">RSS feed</a>. All tools are read-only and have no login or side effects.</p>

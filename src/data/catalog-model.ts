@@ -18,7 +18,7 @@ import {
 import { sunoPromptingGuide } from './suno-prompting-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.5.0';
+export const CATALOG_SCHEMA_VERSION = '1.6.0';
 export const CATALOG_UPDATED_AT = '2026-09-13';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';

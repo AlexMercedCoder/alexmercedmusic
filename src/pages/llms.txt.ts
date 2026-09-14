@@ -128,7 +128,7 @@ ${networkGroups.map((g) => `### ${g.title}\n${g.links.map((l) => `- [${l.label}]
 
 ## Notes for machines
 
-This site is static, has no login, and every page listed here is public. It also registers twelve read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_suno_playlists, get_suno_prompting_guide, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
+This site is static, has no login, and every page listed here is public. It also registers fifteen read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_suno_playlists, get_suno_prompting_guide, get_suno_prompting_section, search_suno_prompting_guide, compose_suno_prompt, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
 `;
 
   return new Response(body, {

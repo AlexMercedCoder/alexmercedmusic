@@ -34,6 +34,9 @@
 
     const json = (value) => JSON.stringify(value, null, 2);
     const textValue = (input, key) => String(input?.[key] ?? '').trim();
+    const promptValue = (input, key) => Array.isArray(input?.[key])
+      ? input[key].map((value) => String(value).trim()).filter(Boolean).join(', ')
+      : textValue(input, key);
     const numberValue = (input, key, fallback, minimum, maximum) => {
       const parsed = Number(input?.[key]);
       return Number.isFinite(parsed) ? Math.min(maximum, Math.max(minimum, Math.floor(parsed))) : fallback;
@@ -71,6 +74,32 @@
       embedUrl: song.embedUrl ?? null,
       creationMethod: song.creationMethod,
     });
+    const promptingSections = (guide) => ({
+      fundamentals: { formula: guide.formula, example: guide.example, layers: guide.layers, fieldGuidance: guide.fieldGuidance, promptDensity: guide.promptDensity, templates: guide.templates },
+      genres: guide.genreFamilies,
+      instruments: guide.instrumentFamilies,
+      vocals: guide.vocalDimensions,
+      rhythm: { rhythmTerms: guide.rhythmTerms, meters: guide.meters },
+      harmony: { harmonyTerms: guide.harmonyTerms, melodicTerms: guide.melodicTerms },
+      arrangement: guide.arrangementPatterns,
+      production: guide.productionFamilies,
+      lyrics: { principles: guide.lyricPrinciples, example: guide.lyricExample },
+      hybrids: { artistTranslation: guide.artistTranslation, hybridPatterns: guide.hybridPatterns, excludeSets: guide.excludeSets },
+      controls: { models: guide.models, controls: guide.controls },
+      troubleshooting: guide.troubleshooting,
+      recipes: guide.recipes,
+      vocabulary: guide.vocabulary,
+      workflow: { testProtocol: guide.testProtocol, checklist: guide.checklist, evaluation: guide.evaluation },
+    });
+    const searchPromptingValues = (value, query, path = [], results = []) => {
+      if (typeof value === 'string') {
+        if (value.toLowerCase().includes(query)) results.push({ path: path.join('.'), value });
+        return results;
+      }
+      if (Array.isArray(value)) value.forEach((item, index) => searchPromptingValues(item, query, [...path, String(index)], results));
+      else if (value && typeof value === 'object') Object.entries(value).forEach(([key, item]) => searchPromptingValues(item, query, [...path, key], results));
+      return results;
+    };
 
     const tools = [
       {
@@ -229,6 +258,76 @@
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
           return { updatedAt: catalog.updatedAt, guide: catalog.guides.sunoPrompting };
+        },
+      },
+      {
+        name: 'get_suno_prompting_section',
+        description: 'Get one focused part of the Suno prompting guide. Omit section to list the available section names. Use this instead of the full guide when the question concerns one musical dimension.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            section: { type: 'string', enum: ['fundamentals', 'genres', 'instruments', 'vocals', 'rhythm', 'harmony', 'arrangement', 'production', 'lyrics', 'hybrids', 'controls', 'troubleshooting', 'recipes', 'vocabulary', 'workflow'] },
+          },
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const sections = promptingSections(catalog.guides.sunoPrompting);
+          const section = textValue(input, 'section');
+          if (!section) return { pageUrl: catalog.guides.sunoPrompting.pageUrl, sections: Object.keys(sections) };
+          return { pageUrl: catalog.guides.sunoPrompting.pageUrl, section, content: sections[section] };
+        },
+      },
+      {
+        name: 'search_suno_prompting_guide',
+        description: 'Search every Suno prompting reference, including genres, instruments, vocals, rhythm, harmony, production, controls, recipes and troubleshooting. Returns matching passages with their section paths.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            query: { type: 'string', minLength: 1, description: 'A musical term, problem, genre, instrument, vocal trait or production idea.' },
+            limit: { type: 'integer', minimum: 1, maximum: 50, default: 20 },
+          },
+          required: ['query'],
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const query = textValue(input, 'query').toLowerCase();
+          if (!query) return { error: 'Provide a non-empty query.' };
+          const matches = searchPromptingValues(promptingSections(catalog.guides.sunoPrompting), query);
+          return { query, pageUrl: catalog.guides.sunoPrompting.pageUrl, ...page(matches, input) };
+        },
+      },
+      {
+        name: 'compose_suno_prompt',
+        description: 'Assemble a focused Suno Style prompt from separate musical choices. This formats the user supplied direction and does not generate music or send data to Suno.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            genre: { type: 'string', minLength: 1 },
+            era: { type: 'string' },
+            tempoGroove: { type: 'string' },
+            instruments: { oneOf: [{ type: 'string' }, { type: 'array', items: { type: 'string' }, minItems: 1 }], description: 'Three to five defining instruments with roles when possible, as text or a list.' },
+            vocal: { type: 'string' },
+            arrangement: { type: 'string' },
+            production: { oneOf: [{ type: 'string' }, { type: 'array', items: { type: 'string' }, minItems: 1 }] },
+            ending: { type: 'string' },
+            exclude: { oneOf: [{ type: 'string' }, { type: 'array', items: { type: 'string' }, minItems: 1 }] },
+          },
+          required: ['genre'],
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const fields = ['genre', 'era', 'tempoGroove', 'instruments', 'vocal', 'arrangement', 'production', 'ending'];
+          const clauses = fields.map((key) => promptValue(input, key)).filter(Boolean);
+          return {
+            stylePrompt: clauses.join(', '),
+            exclude: promptValue(input, 'exclude') || null,
+            formula: catalog.guides.sunoPrompting.formula,
+            guideUrl: catalog.guides.sunoPrompting.pageUrl,
+            note: clauses.length < 4 ? 'Add more musical dimensions if you need a more focused result.' : 'Generate multiple candidates and change one dimension at a time.',
+          };
         },
       },
       {

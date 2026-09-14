@@ -10,7 +10,7 @@ const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
 
-assert.equal(catalog.schemaVersion, '1.5.0');
+assert.equal(catalog.schemaVersion, '1.6.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -128,7 +128,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_prompting_guide', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -162,6 +162,20 @@ assert.equal(promptingResult.guide.formula, catalog.guides.sunoPrompting.formula
 assert.equal(promptingResult.guide.pageUrl, `${catalog.site}/suno-prompting-guide/`);
 assert.equal(promptingResult.guide.genreFamilies.length, 4);
 assert.equal(promptingResult.guide.recipes.length, 16);
+const promptingSections = JSON.parse(await getTool('get_suno_prompting_section').execute({}));
+assert.ok(promptingSections.sections.includes('vocals') && promptingSections.sections.includes('troubleshooting'));
+const vocals = JSON.parse(await getTool('get_suno_prompting_section').execute({ section: 'vocals' }));
+assert.equal(vocals.section, 'vocals');
+assert.equal(vocals.content.length, catalog.guides.sunoPrompting.vocalDimensions.length);
+const promptingSearch = JSON.parse(await getTool('search_suno_prompting_guide').execute({ query: 'close-mic', limit: 5 }));
+assert.ok(promptingSearch.totalResults > 0);
+assert.ok(promptingSearch.items.every((item) => item.value.toLowerCase().includes('close-mic')));
+const composedPrompt = JSON.parse(await getTool('compose_suno_prompt').execute({ genre: 'art rock', tempoGroove: '104 BPM in 7/8', instruments: 'angular clean guitar and elastic bass', vocal: 'theatrical baritone', ending: 'hard stop', exclude: 'arena drums' }));
+assert.equal(composedPrompt.stylePrompt, 'art rock, 104 BPM in 7/8, angular clean guitar and elastic bass, theatrical baritone, hard stop');
+assert.equal(composedPrompt.exclude, 'arena drums');
+const composedPromptWithLists = JSON.parse(await getTool('compose_suno_prompt').execute({ genre: 'indie folk', instruments: ['fingerpicked acoustic guitar', 'upright bass'], production: ['warm tape saturation'], exclude: ['EDM drops', 'trap hi-hats'] }));
+assert.equal(composedPromptWithLists.stylePrompt, 'indie folk, fingerpicked acoustic guitar, upright bass, warm tape saturation');
+assert.equal(composedPromptWithLists.exclude, 'EDM drops, trap hi-hats');
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));
