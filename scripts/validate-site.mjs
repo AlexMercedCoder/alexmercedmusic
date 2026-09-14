@@ -10,7 +10,7 @@ const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
 
-assert.equal(catalog.schemaVersion, '1.3.0');
+assert.equal(catalog.schemaVersion, '1.4.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -67,8 +67,17 @@ assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/p
 assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
 assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
 
-for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
+for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
+}
+assert.ok(existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The complete Suno prompting PDF is missing.');
+const promptingPage = read('dist/suno-prompting-guide/index.html');
+assert.ok(promptingPage.includes('TechArticle') && promptingPage.includes('FAQPage'), 'The prompting guide is missing structured data.');
+assert.ok(promptingPage.includes('/guides/suno-prompting-field-guide.pdf'), 'The prompting guide does not link to the complete PDF.');
+for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts']) {
+  const source = read(path);
+  assert.ok(!source.includes('—'), `${path} contains an em dash.`);
+  assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
 }
 const explorer = read('dist/songs/index.html');
 for (const pageUrl of songPages) assert.ok(explorer.includes(pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the song explorer.`);
@@ -80,6 +89,7 @@ for (const playlist of sunoPlaylists) assert.ok(sunoPage.includes(playlist.url),
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
 for (const album of catalog.albums) assert.ok(sitemap.includes(`<loc>${album.pageUrl}</loc>`));
+assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/suno-prompting-guide/</loc>'));
 
 const webMcpSource = read('src/components/WebMCP.astro');
 const script = webMcpSource.match(/<script is:inline>([\s\S]*)<\/script>/)?.[1];
@@ -115,7 +125,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_prompting_guide', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -144,6 +154,9 @@ assert.ok(comparison.reimagined.some((song) => song.id === solemn.id));
 const playlistResult = JSON.parse(await getTool('list_suno_playlists').execute({}));
 assert.equal(playlistResult.count, sunoPlaylists.length);
 assert.deepEqual(playlistResult.playlists, sunoPlaylists);
+const promptingResult = JSON.parse(await getTool('get_suno_prompting_guide').execute({}));
+assert.equal(promptingResult.guide.formula, catalog.guides.sunoPrompting.formula);
+assert.equal(promptingResult.guide.pdfUrl, `${catalog.site}/guides/suno-prompting-field-guide.pdf`);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));

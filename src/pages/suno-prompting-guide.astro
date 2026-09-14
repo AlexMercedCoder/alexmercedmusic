@@ -1,0 +1,300 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { sunoPromptingGuide as guide } from '../data/suno-prompting-guide';
+import { SITE } from '../data/catalog-model';
+
+const faqs = [
+  {
+    question: 'How should a Suno style prompt be structured?',
+    answer: 'Start with one dominant genre, then add era, tempo or groove, defining instruments, vocal character, arrangement, production and an intentional ending.',
+  },
+  {
+    question: 'Where should musical directions and lyrics go?',
+    answer: 'Put global musical direction in Style. Put singable text and restrained section cues in Lyrics. Put unwanted instruments and traits in Exclude.',
+  },
+  {
+    question: 'How can an artist reference be made prompt-safe?',
+    answer: 'Translate the reference into audible traits such as genre, era, rhythm, instrumentation, vocal delivery, arrangement and production. Do not ask for direct imitation.',
+  },
+  {
+    question: 'What is the best way to improve a weak generation?',
+    answer: 'Identify the failing prompt layer, change one or two clauses, generate multiple candidates and compare the same criteria each time.',
+  },
+];
+
+const jsonLd = [
+  {
+    '@type': 'TechArticle',
+    '@id': `${SITE}/suno-prompting-guide/#article`,
+    headline: guide.title,
+    description: guide.description,
+    url: guide.pageUrl,
+    datePublished: '2026-09-13',
+    dateModified: '2026-09-13',
+    author: { '@id': 'https://alexmerced.com/#alexmerced' },
+    publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
+    about: ['Suno', 'music prompting', 'song arrangement', 'music production'],
+    proficiencyLevel: 'Beginner to advanced',
+    isBasedOn: guide.pdfUrl,
+  },
+  {
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  },
+  {
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+      { '@type': 'ListItem', position: 2, name: guide.title, item: guide.pageUrl },
+    ],
+  },
+];
+---
+
+<Base
+  title="Suno Prompting Field Guide"
+  description={guide.description}
+  keywords={['Suno prompting guide', 'Suno prompts', 'Suno style prompt', 'music prompting', 'Suno v6']}
+  jsonLd={jsonLd}
+  ogType="article"
+  dateModified="2026-09-13"
+>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno Prompting Field Guide' }]} />
+
+  <section class="section guide-hero" data-era="ai">
+    <div class="shell">
+      <p class="eyebrow">Practical music direction</p>
+      <h1>Write prompts that describe sound</h1>
+      <p class="lede">Use genre, rhythm, instruments, voice, arrangement and production to tell Suno what the listener should hear. Treat every term as musical direction, not a guaranteed command.</p>
+      <div class="guide-meta">
+        <span>{guide.edition}</span>
+        <span>{guide.scope}</span>
+      </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="#prompt-architecture">Build a prompt</a>
+        <a class="btn" href={guide.pdfUrl}>Read the complete 37-page PDF</a>
+        <a class="btn" href="/suno/">Browse Alex’s Suno catalog</a>
+      </div>
+    </div>
+  </section>
+
+  <nav class="guide-nav" aria-label="Guide sections">
+    <div class="shell">
+      <a href="#mental-model">Mental model</a>
+      <a href="#prompt-architecture">Prompt architecture</a>
+      <a href="#lyrics">Lyrics</a>
+      <a href="#controls">Controls</a>
+      <a href="#troubleshooting">Troubleshooting</a>
+      <a href="#recipes">Recipes</a>
+      <a href="#checklist">Checklist</a>
+    </div>
+  </nav>
+
+  <section class="section section--tight" id="mental-model" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">The mental model</p>
+        <h2>Describe audible behavior</h2>
+        <p>Suno interprets a prompt as a set of musical associations. A focused prompt establishes a clear identity while leaving room for performance and arrangement choices.</p>
+      </div>
+      <div class="grid grid--3 layer-grid">
+        {guide.layers.map((layer, index) => (
+          <article class="card card--era" data-era="ai">
+            <p class="layer-number">0{index + 1}</p>
+            <h3>{layer.name}</h3>
+            <p><strong>{layer.question}</strong></p>
+            <p>{layer.examples}</p>
+          </article>
+        ))}
+      </div>
+      <aside class="principle">
+        <strong>Use concrete language.</strong>
+        <span>Replace “epic” with “rising strings, massed drums, choir and a final key change.” Replace “innovative” with the musical event you want to hear.</span>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="prompt-architecture" data-era="ai">
+    <div class="shell guide-split">
+      <div>
+        <p class="eyebrow">Prompt architecture</p>
+        <h2>Give each clause one job</h2>
+        <p class="lede">Six to ten meaningful clauses are a strong default. Start with identity, move through performance, then finish with recording character and the ending.</p>
+        <div class="formula" aria-label="Prompt formula">{guide.formula}</div>
+      </div>
+      <div class="prompt-card">
+        <p class="eyebrow">Focused example</p>
+        <p>{guide.example}</p>
+      </div>
+    </div>
+    <div class="shell field-grid">
+      {guide.fieldGuidance.map((item) => (
+        <article>
+          <h3>{item.field}</h3>
+          <p>{item.use}</p>
+        </article>
+      ))}
+    </div>
+  </section>
+
+  <section class="section section--tight" id="lyrics" data-era="ai">
+    <div class="shell guide-split">
+      <div>
+        <p class="eyebrow">Lyrics and sections</p>
+        <h2>Format for breath and structure</h2>
+        <ul class="check-list compact">
+          {guide.lyricPrinciples.map((principle) => <li>{principle}</li>)}
+        </ul>
+      </div>
+      <pre class="lyric-example"><code>{guide.lyricExample}</code></pre>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="controls" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Advanced controls</p>
+        <h2>Choose the smallest useful intervention</h2>
+        <p>Lock the parts that already work. Use a targeted control when the problem is local.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Control</th><th>What it changes</th><th>Working method</th></tr></thead>
+          <tbody>
+            {guide.controls.map((control) => (
+              <tr><th scope="row">{control.name}</th><td>{control.purpose}</td><td>{control.method}</td></tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="troubleshooting" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Troubleshooting</p>
+        <h2>Revise one layer at a time</h2>
+        <p>Each revision should test a specific cause. Keep the model, lyrics and sliders fixed while testing a style-prompt change.</p>
+      </div>
+      <div class="trouble-list">
+        {guide.troubleshooting.map((item) => (
+          <article><h3>{item.symptom}</h3><p>{item.revision}</p></article>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="recipes" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Copy-ready starting points</p>
+        <h2>Prompt recipes</h2>
+        <p>Use these as test cases. Change one dimension at a time so you can hear what each revision did.</p>
+      </div>
+      <div class="recipe-grid">
+        {guide.recipes.map((recipe, index) => (
+          <details open={index === 0}>
+            <summary>{recipe.name}</summary>
+            <p>{recipe.prompt}</p>
+          </details>
+        ))}
+      </div>
+      <p class="pdf-note">The complete PDF includes more recipes plus genre, instrument, vocal, rhythm, harmony, arrangement and production vocabulary.</p>
+      <p><a class="btn" href={guide.pdfUrl}>Open the complete field guide</a></p>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="checklist" data-era="ai">
+    <div class="shell guide-split">
+      <div>
+        <p class="eyebrow">Before generating</p>
+        <h2>Prompt checklist</h2>
+        <ol class="check-list numbered">
+          {guide.checklist.map((item) => <li>{item}</li>)}
+        </ol>
+      </div>
+      <aside class="evidence-card">
+        <p class="eyebrow">Evidence boundary</p>
+        <h3>Controls are explicit. Musical language is probabilistic.</h3>
+        <p>{guide.evidenceNote}</p>
+        <p>Suno changes quickly. Check current model names, feature access and control behavior against Suno’s Help Center.</p>
+        <p><a href="https://help.suno.com/">Visit the Suno Help Center</a></p>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Common questions</p>
+        <h2>Short answers</h2>
+      </div>
+      <div class="faq-list">
+        {faqs.map((faq) => <details><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}
+      </div>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .guide-hero .lede { max-width: 54rem; }
+  .guide-meta { display:flex; flex-wrap:wrap; gap:.55rem; margin:1.5rem 0; }
+  .guide-meta span { border:1px solid color-mix(in srgb, var(--ai) 45%, var(--rule)); border-radius:999px; padding:.35rem .7rem; color:var(--ink-soft); font:500 .72rem/1.2 var(--mono); }
+  .guide-nav { position:sticky; top:68px; z-index:30; border-block:1px solid var(--rule-soft); background:color-mix(in srgb, var(--night-900) 94%, transparent); backdrop-filter:blur(10px); }
+  .guide-nav .shell { display:flex; gap:1.2rem; overflow-x:auto; padding-block:.8rem; }
+  .guide-nav a { color:var(--ink-soft); font:600 .72rem/1 var(--mono); text-decoration:none; white-space:nowrap; }
+  .guide-nav a:hover { color:var(--ai); }
+  .layer-number { color:var(--ai) !important; font:650 .72rem/1 var(--mono); margin:0; }
+  .layer-grid strong { color:var(--ink); }
+  .principle { margin-top:1.2rem; padding:1.1rem 1.3rem; border-left:3px solid var(--ai); background:var(--night-800); display:grid; grid-template-columns:auto 1fr; gap:.8rem 1.2rem; }
+  .principle span { color:var(--ink-soft); }
+  .guide-split { display:grid; grid-template-columns:minmax(0, 1fr) minmax(20rem, .9fr); gap:clamp(2rem, 6vw, 5rem); align-items:start; }
+  .formula, .prompt-card, .lyric-example, .evidence-card { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }
+  .formula { margin-top:1.5rem; padding:1rem 1.2rem; color:var(--ai); font:650 .84rem/1.7 var(--mono); }
+  .prompt-card { padding:1.4rem; border-top:3px solid var(--ai); }
+  .prompt-card p:last-child { color:var(--ink-soft); }
+  .field-grid { display:grid; grid-template-columns:repeat(3, 1fr); gap:1px; margin-top:2rem; background:var(--rule); border:1px solid var(--rule); }
+  .field-grid article { padding:1.2rem; background:var(--night-800); }
+  .field-grid h3 { color:var(--ai); margin-bottom:.55rem; }
+  .field-grid p { color:var(--ink-soft); margin:0; }
+  .check-list { padding:0; margin:1.5rem 0 0; list-style:none; display:grid; gap:.75rem; counter-reset:check; }
+  .check-list li { position:relative; padding-left:2rem; color:var(--ink-soft); }
+  .check-list li::before { position:absolute; left:0; color:var(--ai); font:700 .76rem/1.65 var(--mono); }
+  .check-list.compact li::before { content:'✓'; }
+  .check-list.numbered li { counter-increment:check; }
+  .check-list.numbered li::before { content:counter(check, decimal-leading-zero); }
+  .lyric-example { margin:0; padding:1.3rem; white-space:pre-wrap; color:var(--ink-soft); font:400 .82rem/1.7 var(--mono); overflow:auto; }
+  .table-wrap { overflow-x:auto; border:1px solid var(--rule); border-radius:var(--radius); }
+  table { width:100%; border-collapse:collapse; min-width:44rem; }
+  th, td { padding:.85rem 1rem; text-align:left; vertical-align:top; border-bottom:1px solid var(--rule); }
+  thead th { color:var(--ink-faint); background:var(--night-700); font:650 .7rem/1.3 var(--mono); letter-spacing:.08em; text-transform:uppercase; }
+  tbody th { color:var(--ai); font-size:.92rem; }
+  tbody td { color:var(--ink-soft); font-size:.92rem; }
+  tbody tr:last-child > * { border-bottom:0; }
+  .trouble-list { border-top:1px solid var(--rule); }
+  .trouble-list article { display:grid; grid-template-columns:minmax(13rem, .45fr) 1fr; gap:1.5rem; padding:1rem 0; border-bottom:1px solid var(--rule); }
+  .trouble-list h3 { font-size:1rem; }
+  .trouble-list p { color:var(--ink-soft); margin:0; }
+  .recipe-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; }
+  .recipe-grid details, .faq-list details { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }
+  .recipe-grid summary, .faq-list summary { cursor:pointer; padding:1rem 1.1rem; color:var(--ink); font-weight:700; }
+  .recipe-grid details[open] summary, .faq-list details[open] summary { color:var(--ai); border-bottom:1px solid var(--rule); }
+  .recipe-grid p, .faq-list p { color:var(--ink-soft); padding:1rem 1.1rem; margin:0; }
+  .pdf-note { color:var(--ink-soft); margin-top:1.5rem; }
+  .evidence-card { padding:1.4rem; border-top:3px solid var(--ai); }
+  .evidence-card h3 { font-size:1.35rem; margin-bottom:1rem; }
+  .evidence-card p { color:var(--ink-soft); }
+  .faq-list { display:grid; gap:.75rem; max-width:52rem; }
+  @media (max-width:800px) {
+    .guide-nav { top:113px; }
+    .guide-split, .field-grid, .recipe-grid { grid-template-columns:1fr; }
+    .principle, .trouble-list article { grid-template-columns:1fr; }
+  }
+  @media (max-width:560px) { .guide-nav { top:145px; } }
+</style>

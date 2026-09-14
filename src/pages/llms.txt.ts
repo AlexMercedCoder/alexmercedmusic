@@ -7,6 +7,7 @@ import {
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 import { networkGroups } from '../data/network';
+import { sunoPromptingGuide } from '../data/suno-prompting-guide';
 
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl : undefined;
 const directLinks = (links: { source: string; url: string; label?: string }[] | undefined, fallback?: string) => {
@@ -32,6 +33,7 @@ Nothing on this site is hosted here. Every recording lives on the platform it wa
 - [The acoustic archive](${SITE}/acoustic/): ${acousticTracks.length} guitar and voice recordings, listed in full.
 - [Reimagined with Suno](${SITE}/reimagined/): ${reimagined.length} rebuilds paired with the recordings they came from.
 - [Suno playlists](${SITE}/suno/): all ${sunoPlaylists.length} public playlists with direct URLs, artwork, song counts and runtimes.
+- [Suno Prompting Field Guide](${sunoPromptingGuide.pageUrl}): a practical guide to prompt structure, lyrics, controls, troubleshooting and copy-ready recipes. The [complete PDF](${sunoPromptingGuide.pdfUrl}) includes the full vocabulary index and source notes.
 - [The electronic catalogue](${SITE}/electronic/): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
 - [Where to listen](${SITE}/listen/): every platform, with the counts each one reports.
 - [About Alex Merced as a musician](${SITE}/about/): biography, musical history and discography context.
@@ -104,6 +106,18 @@ ${sunoSongs.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [Suno](${t.url})
 
 ${sunoPlaylists.map((playlist) => `- [${playlist.name}](${playlist.url}) — ${playlist.collectionLabel}, ${playlist.songCount} songs. ${playlist.description}`).join('\n')}
 
+## Suno prompting guide
+
+${sunoPromptingGuide.description}
+
+Prompt formula: ${sunoPromptingGuide.formula}
+
+${sunoPromptingGuide.evidenceNote}
+
+Guide: ${sunoPromptingGuide.pageUrl}
+
+Complete PDF: ${sunoPromptingGuide.pdfUrl}
+
 ## Where the music is hosted
 
 ${platforms.map((p) => `- [${p.label}](${p.url})${p.stat ? ` (${p.stat})` : ''}: ${p.note}`).join('\n')}
@@ -116,7 +130,7 @@ ${networkGroups.map((g) => `### ${g.title}\n${g.links.map((l) => `- [${l.label}]
 
 ## Notes for machines
 
-This site is static, has no login, and every page listed here is public. It also registers eleven read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_suno_playlists, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
+This site is static, has no login, and every page listed here is public. It also registers twelve read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_suno_playlists, get_suno_prompting_guide, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
 `;
 
   return new Response(body, {
