@@ -8,7 +8,7 @@ export default defineConfig({
   integrations: [sitemap({
     serialize(item) {
       if (item.url.includes('/songs/') || item.url.includes('/albums/')) {
-        item.lastmod = '2026-09-13';
+        item.lastmod = '2026-09-15';
       }
       return item;
     },
