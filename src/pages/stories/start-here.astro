@@ -15,7 +15,7 @@ const picks = [
   ['YOUR NAME IS ALREADY TALKING', 'A newer generated song tied to Alex’s broader creative work.'],
 ].map(([title,note]) => ({ song: songs.find((candidate) => candidate.title === title && (title !== 'Solemn Thoughts' || candidate.kind === 'reimagined')), note })).filter((item) => item.song);
 ---
-<Base title="Start here: ten songs across twenty years" description="A ten-song guided introduction to Alex Merced's acoustic, electronic, reimagined and generated music.">
+<Base title="Ten songs across twenty years" description="A ten-song guided introduction to Alex Merced's acoustic, electronic, reimagined and generated music.">
   <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Start here'}]} />
   <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">A listening path</p><h1>Ten songs across twenty years</h1><p class="lede">This is not a ranking. It is a route through the archive: a room and a guitar, a long stretch of electronic production, and songs old and new arranged with generative tools.</p>
   <ol class="guide-list">{picks.map(({song,note},index) => <li data-era={song!.era}><span>{String(index+1).padStart(2,'0')}</span><div><h2><a href={song!.pageUrl.replace(SITE,'')}>{song!.title}</a></h2><p>{note}</p></div></li>)}</ol>

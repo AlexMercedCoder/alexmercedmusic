@@ -10,6 +10,8 @@ const tools = [
   ['get_recent_songs', 'The most recently published dated recordings.'],
   ['compare_versions', 'An original recording and every known reimagined version.'],
   ['list_suno_playlists', 'Every public Suno playlist with its direct URL, artwork, song count and runtime.'],
+  ['get_suno_playlist', 'One playlist and its ordered local song records.'],
+  ['get_catalog_updates_since', 'Dated recordings published after an ISO date for lightweight polling.'],
   ['get_suno_prompting_guide', 'Structured prompt architecture, sound palettes, recipes, controls, troubleshooting and evaluation guidance.'],
   ['get_suno_prompting_section', 'One focused guide section, such as vocals, rhythm, production, recipes or troubleshooting.'],
   ['search_suno_prompting_guide', 'Search the guide for a musical term, problem, genre, instrument or production idea.'],
@@ -27,7 +29,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers fifteen read-only browser tools. Agents can find recordings, browse Suno playlists, search prompting guidance, assemble a Style prompt, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers seventeen read-only browser tools. Agents can find recordings, inspect ordered Suno playlists, poll for newer publications, search prompting guidance, assemble a Style prompt, compare versions and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}
@@ -45,7 +47,7 @@ const tools = [
         <li>Pass the selected traits to <code>compose_suno_prompt</code> to receive a clean Style prompt and optional Exclude field.</li>
       </ol>
       <h2>Direct machine access</h2>
-      <p>Clients without WebMCP can use the versioned <a href="/catalog.json">JSON catalog</a>, <a href="/llms.txt">LLM guide</a>, <a href="/feed.json">JSON Feed</a>, or <a href="/feed.xml">RSS feed</a>. All tools are read-only and have no login or side effects.</p>
+      <p>Clients without WebMCP can use the <a href="/catalog-summary.json">catalog summary</a>, versioned <a href="/catalog.json">JSON catalog</a>, <a href="/catalog.schema.json">JSON Schema</a>, lightweight <a href="/song-index.json">song index</a>, concise <a href="/llms.txt">LLM guide</a>, <a href="/llms-full.txt">full text catalog</a>, <a href="/feed.json">JSON Feed</a>, or <a href="/feed.xml">RSS feed</a>. All tools are read-only and have no login or side effects.</p>
       <p><a class="btn" href={`${SITE}/songs/`}>Open the human song explorer</a></p>
     </div>
   </article>

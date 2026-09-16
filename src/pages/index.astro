@@ -2,13 +2,15 @@
 import Base from '../layouts/Base.astro';
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, electronicStats, electronicRuntime, sunoSongs, platforms,
+  albums, electronicStats, electronicRuntime, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 
 const paired = reimagined;
 const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
+const recentSuno = sunoSongs.slice(0, 6);
+const featuredPlaylists = sunoPlaylists.filter((playlist) => playlist.collectionType === 'album');
 
 const jsonLd = [
   {
@@ -61,7 +63,7 @@ const jsonLd = [
       <div class="stats" style="margin-top:2.5rem">
         <div data-era="acoustic"><b>{acousticTracks.length}</b><span>Acoustic recordings</span></div>
         <div data-era="electronic"><b>{electronicStats.total}</b><span>Electronic tracks</span></div>
-        <div data-era="ai"><b>{reimagined.length}</b><span>Rebuilt with Suno</span></div>
+        <div data-era="ai"><b>{sunoPublishedCount}</b><span>Public Suno generations</span></div>
         <div data-era="all"><b>20</b><span>Years of it</span></div>
       </div>
     </div>
@@ -153,8 +155,34 @@ const jsonLd = [
             generated on Suno, tagged indie prog, and the occasional acoustic take when a
             guitar is within reach.
           </p>
-          <p><a href="/songs/?era=ai">Browse all Suno songs</a></p>
+          <p><a href="/songs/?kind=generated">Browse all generated songs</a></p>
         </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <div class="section__head"><p class="eyebrow">Recently published</p><h2>Latest Suno songs</h2><p>Open the local details, published lyrics and direct Suno source for the newest catalog entries.</p></div>
+      <div class="grid grid--3">
+        {recentSuno.map((song) => (
+          <article class="card card--era" data-era="ai">
+            {song.imageUrl && <img class="release-art" src={song.imageUrl} width="320" height="320" loading="lazy" alt={`Artwork for ${song.title}`} />}
+            <h3><a href={detailUrl(song.url)}>{song.title}</a></h3>
+            <p>{song.genres?.slice(0, 3).join(' · ') || 'Suno generation'}</p>
+            <div class="source-links"><a href={detailUrl(song.url)}>Details</a><a href={song.url}>Suno ↗</a></div>
+          </article>
+        ))}
+      </div>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/songs/?kind=generated">All generated songs</a><a class="btn" href="/suno/">Browse Suno playlists</a></div>
+    </div>
+  </section>
+
+  <section class="section" data-era="ai">
+    <div class="shell">
+      <div class="section__head"><p class="eyebrow">Album-length projects</p><h2>Focused Suno albums</h2><p>Five sequences explore economics, war and inner conflict as connected projects rather than loose singles.</p></div>
+      <div class="grid grid--3">
+        {featuredPlaylists.map((playlist) => <article class="card card--era" data-era="ai"><h3><a href={playlist.pageUrl}>{playlist.name}</a></h3><p>{playlist.description}</p><p>{playlist.songCount} songs</p></article>)}
       </div>
     </div>
   </section>

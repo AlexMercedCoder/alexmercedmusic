@@ -13,9 +13,9 @@ Part of the Alex Merced network of sites.
 - SEO surfaces: canonical tags, unique social artwork, Open Graph, JSON-LD
   (`WebSite`, `Person`, `MusicGroup`, `MusicRecording`, `MusicPlaylist`,
   `MusicAlbum`, `VideoObject`), sitemap, RSS/JSON feeds, and `llms.txt`
-- Eleven read-only WebMCP tools so an agent can query playlists and navigate the catalogue
+- Seventeen read-only WebMCP tools so an agent can query ordered playlists, poll for new publications, use the prompting guide and navigate the catalog
 - Stable canonical pages for every song and album, connected with JSON-LD
-- Versioned machine-readable catalog at `/catalog.json`
+- Versioned machine-readable catalog at `/catalog.json`, with a JSON Schema, compact summary and lightweight song index
 - Search and filtering across the complete catalogue at `/songs/`
 - Embedded playback and a session-persistent mini-player
 

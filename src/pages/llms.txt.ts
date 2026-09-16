@@ -1,137 +1,49 @@
 import type { APIRoute } from 'astro';
-import {
-  acousticTracks, acousticPlaylist, channelAcousticTracks, soundcloudAcousticTracks,
-  youtubeArchiveTracks, reimagined, reimaginedPlaylist,
-  albums, electronicTracks, electronicStats, electronicRuntime,
-  sunoSongs, sunoStyle, sunoPublishedCount, sunoPlaylists, platforms, tutorials,
-} from '../data/catalog';
-import { SITE, songByPrimaryUrl } from '../data/catalog-model';
-import { networkGroups } from '../data/network';
-import { sunoPromptingGuide } from '../data/suno-prompting-guide';
+import { publicCatalog } from '../data/catalog-model';
 
-const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl : undefined;
-const directLinks = (links: { source: string; url: string; label?: string }[] | undefined, fallback?: string) => {
-  const list = links?.length ? links : fallback ? [{ source: 'listen', url: fallback }] : [];
-  return list.map((link) => `[${link.label ?? link.source}](${link.url})`).join(', ');
-};
-
-export const GET: APIRoute = async () => {
-  const paired = reimagined.filter((r) => r.original);
-
+export const GET: APIRoute = () => {
+  const recent = publicCatalog.songs.filter((song) => song.createdAt).slice().sort((a, b) => Date.parse(b.createdAt!) - Date.parse(a.createdAt!)).slice(0, 12);
   const body = `# Alex Merced Music
 
-> Two decades of music by Alex Merced: archive recordings from the mid-2000s, electronic music produced in FL Studio, and eight older songs rebuilt with Suno. Every accessible recording is linked directly to its current host.
+> A public index of Alex Merced's acoustic archive, electronic productions, Suno songs, reimagined recordings and Suno prompting reference.
 
-Alex Merced is better known now for data and AI, where he works in developer relations and writes about lakehouse architecture. Music came first and has never entirely stopped. The catalogue divides into three eras, and the third folds back into the first: the Suno covers rework songs from the acoustic archive, and each one opens with a clip of the original recording.
+Catalog updated: ${publicCatalog.updatedAt}
+Catalog schema: ${publicCatalog.schemaVersion}
+Songs: ${publicCatalog.counts.songs}
+Public Suno generations: ${publicCatalog.counts.sunoPublished}
 
-Nothing on this site is hosted here. Every recording lives on the platform it was uploaded to at the time, and this site is the index.
+## Primary pages
 
-## Pages
+- [Home](${publicCatalog.site}/)
+- [Explore songs](${publicCatalog.site}/songs/)
+- [Acoustic archive](${publicCatalog.site}/acoustic/)
+- [Electronic catalog](${publicCatalog.site}/electronic/)
+- [Reimagined songs](${publicCatalog.site}/reimagined/)
+- [Suno playlists](${publicCatalog.site}/suno/)
+- [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
+- [WebMCP guide](${publicCatalog.site}/webmcp/)
 
-- [Home](${SITE}/): the three eras, and the songs that exist in two of them at once.
-- [Explore every song](${SITE}/songs/): search and filter all ${acousticTracks.length + electronicStats.total + reimagined.length + sunoSongs.length} catalogued recordings.
-- [The acoustic archive](${SITE}/acoustic/): ${acousticTracks.length} guitar and voice recordings, listed in full.
-- [Reimagined with Suno](${SITE}/reimagined/): ${reimagined.length} rebuilds paired with the recordings they came from.
-- [Suno playlists](${SITE}/suno/): all ${sunoPlaylists.length} public playlists with direct URLs, artwork, song counts and runtimes.
-- [Suno Prompting Field Guide](${sunoPromptingGuide.pageUrl}): a web-native reference for prompt structure, genres, instruments, vocals, rhythm, harmony, arrangement, production, lyrics, hybrid design, controls, troubleshooting, recipes and evaluation.
-- [The electronic catalogue](${SITE}/electronic/): ${electronicStats.total} produced tracks, ${albums.length} albums, and the FL Studio tutorials.
-- [Where to listen](${SITE}/listen/): every platform, with the counts each one reports.
-- [About Alex Merced as a musician](${SITE}/about/): biography, musical history and discography context.
-- [Listening stories](${SITE}/stories/): editorial paths through the catalog, including a start-here guide and original-versus-reimagined listening guide.
-- [WebMCP guide](${SITE}/webmcp/): browser-agent tool documentation and examples.
-- [Machine-readable catalog](${SITE}/catalog.json): versioned JSON with stable song and album IDs, canonical pages, listening sources and relationships.
-- [RSS feed](${SITE}/feed.xml) and [JSON Feed](${SITE}/feed.json): newly published songs with canonical detail and listening links.
+## Machine-readable resources
 
-## Era one: the acoustic archive
+- [Catalog summary](${publicCatalog.site}/catalog-summary.json)
+- [Full versioned catalog](${publicCatalog.site}/catalog.json)
+- [Catalog JSON Schema](${publicCatalog.site}/catalog.schema.json)
+- [Lightweight song index](${publicCatalog.site}/song-index.json)
+- [Full text catalog guide](${publicCatalog.site}/llms-full.txt)
+- [RSS feed](${publicCatalog.site}/feed.xml)
+- [JSON Feed](${publicCatalog.site}/feed.json)
 
-Guitar and voice recordings uploaded from the mid-2000s onward. ${acousticTracks.length} accessible recordings are indexed across the archive playlist, the music channel and the second SoundCloud account.
+## Suno playlists
 
-Titles are recorded here as they were typed at the time, including the inconsistent capitalisation, because that is what you find when you go and look.
+${publicCatalog.suno.playlists.map((playlist) => `- [${playlist.name}](${playlist.pageUrl}): ${playlist.songCount} songs. ${playlist.description}`).join('\n')}
 
-### YouTube archive playlist
+## Recent songs
 
-${youtubeArchiveTracks.map((t) => `- [${t.title}](${detailUrl(t.url)})${t.length ? ` (${t.length})` : ''} — [YouTube](${t.url})`).join('\n')}
+${recent.map((song) => `- [${song.title}](${song.pageUrl})${song.createdAt ? `, ${song.createdAt.slice(0, 10)}` : ''}`).join('\n')}
 
-### Additional music-channel performances
+## Browser agent tools
 
-${channelAcousticTracks.map((t) => `- [${t.title}](${detailUrl(t.url)})${t.length ? ` (${t.length})` : ''} — [YouTube](${t.url})`).join('\n')}
-
-### SoundCloud-only singer-songwriter recordings
-
-${soundcloudAcousticTracks.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [SoundCloud](${t.url})`).join('\n')}
-
-YouTube reports ${acousticPlaylist.totalEntries} archive-playlist entries; ${acousticPlaylist.unavailableEntries} unavailable videos are hidden, leaving ${youtubeArchiveTracks.length} accessible direct links in that playlist.
-
-Playlist: ${acousticPlaylist.url}
-
-## Era two: the electronic catalogue
-
-Produced electronic music, made largely in FL Studio. ReverbNation files it under electronica, electro pop and glitch hop, out of Brooklyn, and reports 6.6 thousand fans.
-
-${electronicStats.total} tracks survive in total, ${electronicRuntime} of runtime. They are spread across ReverbNation, two SoundCloud accounts and YouTube, and no single source holds them all: ${electronicStats.onReverbNation} are on ReverbNation, ${electronicStats.onSoundCloud} on SoundCloud, ${electronicStats.onYouTube} on YouTube, and ${electronicStats.inAlbums} sit on one of the ${albums.length} albums. The list below is deduplicated on title and retains a direct link for every verified source.
-
-### The albums
-
-${albums.map((a) => `#### [${a.title}](${a.url}) (${a.released.slice(0, 4)})\n${a.tracks.map((title) => {
-  const track = electronicTracks.find((candidate) => candidate.album === a.title && candidate.title === title);
-  const url = track?.links?.find((link) => link.source === 'soundcloud-albums')?.url ?? track?.url;
-  return url ? `- [${title}](${url})` : `- ${title}`;
-}).join('\n')}`).join('\n\n')}
-
-### Every produced track
-
-${electronicTracks.map((t) => `- [${t.title}](${detailUrl(t.url)}) (${Math.floor(t.seconds / 60)}:${String(t.seconds % 60).padStart(2, '0')}) — ${directLinks(t.links, t.url)}`).join('\n')}
-
-### FL Studio tutorials
-
-Recorded alongside the music, and by view count the most watched thing on the channel.
-
-${tutorials.map((t) => `- [${t.title}](${t.url})${t.length ? ` (${t.length})` : ''}`).join('\n')}
-
-## Era three: rebuilt with Suno
-
-${reimagined.length} songs from the archive run through Suno in styles they were never written for. ${paired.length} of the ${reimagined.length} have an accessible original recording in the archive above. Seven have YouTube videos; all eight link to their currently published Suno generation.
-
-${reimagined.map((r) => `- [${r.title}](${detailUrl(r.url)}), as ${r.style.toLowerCase()}${r.original ? `, from "${r.original}"` : ', original not in the archive'} — ${directLinks(r.links, r.url)}`).join('\n')}
-
-Playlist: ${reimaginedPlaylist.url}
-
-Newer songs written with Suno rather than rebuilt, filed under "${sunoStyle}":
-
-Suno currently reports ${sunoPublishedCount} published songs in total.
-
-${sunoSongs.map((t) => `- [${t.title}](${detailUrl(t.url)}) — [Suno](${t.url})`).join('\n')}
-
-### Suno playlists
-
-${sunoPlaylists.map((playlist) => `- [${playlist.name}](${playlist.url}) — ${playlist.collectionLabel}, ${playlist.songCount} songs. ${playlist.description}`).join('\n')}
-
-## Suno prompting guide
-
-${sunoPromptingGuide.description}
-
-Prompt formula: ${sunoPromptingGuide.formula}
-
-${sunoPromptingGuide.evidenceNote}
-
-Guide: ${sunoPromptingGuide.pageUrl}
-
-## Where the music is hosted
-
-${platforms.map((p) => `- [${p.label}](${p.url})${p.stat ? ` (${p.stat})` : ''}: ${p.note}`).join('\n')}
-
-## The rest of Alex Merced's work
-
-Music is the older half. The current work is data and AI.
-
-${networkGroups.map((g) => `### ${g.title}\n${g.links.map((l) => `- [${l.label}](${l.url})`).join('\n')}`).join('\n\n')}
-
-## Notes for machines
-
-This site is static, has no login, and every page listed here is public. It also registers fifteen read-only WebMCP tools in the browser: music_overview, get_song, search_songs, list_songs, get_recent_songs, compare_versions, list_suno_playlists, get_suno_prompting_guide, get_suno_prompting_section, search_suno_prompting_guide, compose_suno_prompt, list_reimaginings, list_albums, where_to_listen and navigate_catalog. Prefer stable IDs and canonical page URLs returned by those tools when referring to a recording.
+The site registers 17 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for discovery, get_song for an exact record, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, and the Suno prompting tools for focused reference work. Tool results return stable IDs and canonical URLs.
 `;
-
-  return new Response(body, {
-    headers: { 'content-type': 'text/plain; charset=utf-8' },
-  });
+  return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
 };

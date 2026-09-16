@@ -57,7 +57,19 @@ export type SunoPlaylist = {
   description: string;
   collectionType: 'album' | 'theme' | 'covers';
   collectionLabel: string;
+  trackIds: string[];
+  tracks: Array<{ id: string; title: string; url: string; createdAt?: string; durationSeconds?: number; imageUrl?: string }>;
+  slug: string;
+  pageUrl: string;
 };
+
+const playlistSlug = (value: string) => value
+  .normalize('NFKD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .toLowerCase()
+  .replace(/&/g, ' and ')
+  .replace(/[^a-z0-9]+/g, '-')
+  .replace(/^-|-$/g, '');
 
 const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>> = {
   'abf459c8-27e4-4382-a9a5-77769146b46b': {
@@ -110,9 +122,11 @@ const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | '
   },
 };
 
-export const sunoPlaylists: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>[])
+export const sunoPlaylists: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel' | 'slug' | 'pageUrl'>[])
   .map((playlist) => ({
     ...playlist,
+    slug: playlistSlug(playlist.name),
+    pageUrl: `/suno/playlists/${playlistSlug(playlist.name)}/`,
     ...(sunoPlaylistEditorial[playlist.id] ?? {
       description: 'A public Suno playlist by Alex Merced.',
       collectionType: 'theme' as const,

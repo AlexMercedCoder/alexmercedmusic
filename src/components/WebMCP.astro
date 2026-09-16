@@ -244,11 +244,42 @@
       },
       {
         name: 'list_suno_playlists',
-        description: 'List every public Alex Merced Suno playlist with its stable URL, artwork, song count and runtime. Use this when a user wants a themed or project-based listening path.',
+        description: 'List every public Alex Merced Suno playlist with its local page, source URL, artwork, song count and runtime. Use this when a user wants a themed or project-based listening path.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
-          return { updatedAt: catalog.updatedAt, count: catalog.suno.playlists.length, playlists: catalog.suno.playlists };
+          return { updatedAt: catalog.updatedAt, count: catalog.suno.playlists.length, playlists: catalog.suno.playlists.map(({ trackIds, sourceTracks, ...playlist }) => playlist) };
+        },
+      },
+      {
+        name: 'get_suno_playlist',
+        description: 'Get one Suno playlist and its ordered track records. Accept a playlist ID, slug or exact name from list_suno_playlists.',
+        inputSchema: { type: 'object', properties: { id: { type: 'string', minLength: 1 }, slug: { type: 'string', minLength: 1 }, name: { type: 'string', minLength: 1 } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const id = textValue(input, 'id');
+          const slug = textValue(input, 'slug').toLowerCase();
+          const name = textValue(input, 'name').toLowerCase();
+          if (!id && !slug && !name) return { error: 'Provide id, slug, or name.' };
+          const playlist = catalog.suno.playlists.find((item) => item.id === id || item.slug === slug || item.name.toLowerCase() === name);
+          if (!playlist) return { error: 'No Suno playlist matched.' };
+          const bySunoUrl = new Map(catalog.songs.flatMap((song) => song.links.filter((link) => link.source === 'suno').map((link) => [link.url, song])));
+          const { sourceTracks, ...playlistSummary } = playlist;
+          return { updatedAt: catalog.updatedAt, playlist: playlistSummary, tracks: sourceTracks.map((source) => { const song = bySunoUrl.get(source.url); return song ? { source, catalogSong: songSummary(song) } : { source, catalogSong: null }; }) };
+        },
+      },
+      {
+        name: 'get_catalog_updates_since',
+        description: 'Poll for songs published since an ISO date. Returns dated catalog records in newest-first order and the current catalog update date.',
+        inputSchema: { type: 'object', properties: { since: { type: 'string', minLength: 4, description: 'ISO date or timestamp.' }, kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'], default: 'all' }, limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 }, offset: { type: 'integer', minimum: 0, default: 0 } }, required: ['since'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const since = textValue(input, 'since');
+          const timestamp = Date.parse(since);
+          if (!Number.isFinite(timestamp)) return { error: 'Provide a valid ISO date or timestamp.' };
+          const kind = textValue(input, 'kind') || 'all';
+          const matches = catalog.songs.filter((song) => song.createdAt && Date.parse(song.createdAt) > timestamp && (kind === 'all' || song.kind === kind)).sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+          return { since, updatedAt: catalog.updatedAt, kind, ...page(matches.map(songSummary), input) };
         },
       },
       {

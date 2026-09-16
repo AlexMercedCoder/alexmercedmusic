@@ -4,6 +4,8 @@ import SiteHeader from '../components/SiteHeader.astro';
 import SiteFooter from '../components/SiteFooter.astro';
 import WebMCP from '../components/WebMCP.astro';
 import MiniPlayer from '../components/MiniPlayer.astro';
+import SiteAnalytics from '../components/SiteAnalytics.astro';
+import { ClientRouter } from 'astro:transitions';
 
 export interface Props {
   title: string;
@@ -32,6 +34,9 @@ const SITE = 'https://alexmercedmusic.com';
 const canonicalPath = Astro.url.pathname === '/' ? '/' : `${Astro.url.pathname.replace(/\/+$/, '')}/`;
 const canonical = new URL(canonicalPath, SITE).href;
 const fullTitle = Astro.url.pathname === '/' ? title : `${title} | Alex Merced Music`;
+const metaDescription = description.length > 160
+  ? `${description.slice(0, 156).replace(/\s+\S*$/, '')}...`
+  : description;
 
 const baseGraph = [
   {
@@ -87,7 +92,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{fullTitle}</title>
-    <meta name="description" content={description} />
+    <meta name="description" content={metaDescription} />
     {keywords.length > 0 && <meta name="keywords" content={keywords.join(', ')} />}
     <link rel="canonical" href={canonical} />
     <meta name="author" content="Alex Merced" />
@@ -98,7 +103,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <meta property="og:type" content={ogType} />
     <meta property="og:site_name" content="Alex Merced Music" />
     <meta property="og:title" content={fullTitle} />
-    <meta property="og:description" content={description} />
+    <meta property="og:description" content={metaDescription} />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content="en_US" />
     <meta property="og:image" content={new URL(ogImage, SITE).href} />
@@ -109,7 +114,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={fullTitle} />
-    <meta name="twitter:description" content={description} />
+    <meta name="twitter:description" content={metaDescription} />
     <meta name="twitter:image" content={new URL(ogImage, SITE).href} />
     <meta name="twitter:image:alt" content={imageAlt} />
 
@@ -121,6 +126,7 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
     <script type="application/ld+json" set:html={JSON.stringify(graph)} />
+    <ClientRouter />
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to main content</a>
@@ -131,5 +137,6 @@ const graph = { '@context': 'https://schema.org', '@graph': [...baseGraph, ...js
     </main>
     <MiniPlayer />
     <SiteFooter />
+    <SiteAnalytics />
   </body>
 </html>

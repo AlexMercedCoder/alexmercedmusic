@@ -24,7 +24,7 @@ const section = song.kind === 'archive' ? 'Acoustic archive'
   : song.kind === 'electronic' ? 'Electronic catalogue'
     : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
 const sectionUrl = song.kind === 'archive' ? '/acoustic'
-  : song.kind === 'electronic' ? '/electronic' : '/reimagined';
+  : song.kind === 'electronic' ? '/electronic' : song.kind === 'reimagined' ? '/reimagined' : '/suno';
 const durationSeconds = song.seconds ?? song.durationSeconds;
 const duration = durationSeconds
   ? `PT${Math.floor(durationSeconds / 60)}M${Math.round(durationSeconds % 60)}S`
@@ -32,6 +32,18 @@ const duration = durationSeconds
     ? `PT${Number(song.length.split(':')[0])}M${Number(song.length.split(':')[1])}S`
     : undefined;
 const recordingId = `${song.pageUrl}#recording`;
+const normalizedTitle = (value: string) => value.replace(/^alex merced\s*[-–:]\s*/i, '');
+const baseSeoTitle = normalizedTitle(song.title);
+const titleMatches = songs.filter((candidate) => normalizedTitle(candidate.title).toLowerCase() === baseSeoTitle.toLowerCase());
+const matchNumber = titleMatches.findIndex((candidate) => candidate.id === song.id) + 1;
+const titleQualifier = titleMatches.length > 1 ? `${song.kind} ${matchNumber}` : '';
+const qualifiedSeoTitle = titleQualifier ? `${baseSeoTitle} (${titleQualifier})` : baseSeoTitle;
+const finalTitleToken = qualifiedSeoTitle.split(/\s+/).at(-1) ?? '';
+const seoTitle = qualifiedSeoTitle.length > 35 ? `${qualifiedSeoTitle.slice(0, 27).trim()}… ${finalTitleToken.slice(-6)}` : qualifiedSeoTitle;
+const songIndex = songs.findIndex((candidate) => candidate.id === song.id);
+const previous = songIndex > 0 ? songs[songIndex - 1] : undefined;
+const next = songIndex < songs.length - 1 ? songs[songIndex + 1] : undefined;
+const related = songs.filter((candidate) => candidate.id !== song.id && (candidate.album === song.album && song.album || candidate.kind === song.kind && candidate.genres?.some((genre) => song.genres?.includes(genre)))).slice(0, 4);
 
 const jsonLd = [
   {
@@ -76,13 +88,13 @@ const jsonLd = [
 ---
 
 <Base
-  title={song.title}
+  title={seoTitle}
   description={song.description}
   jsonLd={jsonLd}
   ogType="music.song"
   ogImage={song.imageLargeUrl ?? song.imageUrl ?? `/social/songs/${song.slug}.png`}
   imageAlt={`${song.title} by Alex Merced`}
-  dateModified={CATALOG_UPDATED_AT}
+  dateModified={song.createdAt?.slice(0, 10) ?? CATALOG_UPDATED_AT}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: section, href: sectionUrl }, { label: song.title }]} />
   <article class="section detail" data-era={song.era}>
@@ -90,6 +102,7 @@ const jsonLd = [
       <div>
         <p class="eyebrow">{section}</p>
         <h1>{song.title}</h1>
+        {titleMatches.length > 1 && <p class="eyebrow">{titleQualifier}</p>}
         <p class="lede">{song.description}</p>
 
         <dl class="facts">
@@ -111,17 +124,7 @@ const jsonLd = [
         </div>
       </div>
 
-      {playerUrl && (
-        <div class="embed">
-          <iframe
-            src={playerUrl}
-            title={`${song.title} by Alex Merced on ${playerName}`}
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen
-          ></iframe>
-        </div>
-      )}
+      {playerUrl && <div class="embed embed--poster">{(song.imageLargeUrl || song.imageUrl) && <img src={song.imageLargeUrl ?? song.imageUrl} width="600" height="600" alt={`Artwork for ${song.title}`} />}<button class="btn btn--primary" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play on {playerName}</button></div>}
     </div>
 
     <div class="shell process-note">
@@ -153,5 +156,10 @@ const jsonLd = [
         ))}
       </div>
     )}
+    <div class="shell relationship">
+      <h2>Keep listening</h2>
+      {related.length > 0 && <div class="grid grid--2">{related.map((item) => <article class="card card--era" data-era={item.era}><p class="eyebrow">Related recording</p><h3><a href={item.pageUrl.replace(SITE, '')}>{item.title}</a></h3><p>{item.album ?? item.genres?.slice(0, 2).join(' · ') ?? item.kind}</p></article>)}</div>}
+      <div class="btn-row" style="margin-top:1.5rem">{previous && <a class="btn" href={previous.pageUrl.replace(SITE, '')}>← {previous.title}</a>}{next && <a class="btn" href={next.pageUrl.replace(SITE, '')}>{next.title} →</a>}<a class="btn" href="/songs/">Explore all songs</a></div>
+    </div>
   </article>
 </Base>

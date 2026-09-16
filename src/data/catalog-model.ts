@@ -18,7 +18,7 @@ import {
 import { sunoPromptingGuide } from './suno-prompting-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.6.0';
+export const CATALOG_SCHEMA_VERSION = '1.7.0';
 export const CATALOG_UPDATED_AT = '2026-09-16';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -157,7 +157,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'acoustic' as const,
     kind: 'archive' as const,
-    description: `${track.title} is an acoustic archive recording written and performed by Alex Merced${source?.publishedAt ? `, published ${formatDate(source.publishedAt)}` : ''}. This page collects its verified listening source and any known later reimagining.`,
+    description: `${track.title} is an acoustic archive recording by Alex Merced${source?.publishedAt ? `, published ${formatDate(source.publishedAt)}` : ''}. Hear the verified source and any known reimagining.`,
     links: linksFor(track.links, track.url, 'recording'),
     length: track.length,
     posted: track.posted,
@@ -173,7 +173,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'electronic' as const,
     kind: 'electronic' as const,
-    description: `${track.title} is an electronic track produced by Alex Merced${track.album ? ` and collected on ${track.album}` : ''}. This page brings together every verified place to hear it.`,
+    description: `${track.title} is an electronic track produced by Alex Merced${track.album ? ` for ${track.album}` : ''}. Hear it from every verified source.`,
     links: linksFor(track.links, track.url, 'recording'),
     seconds: track.seconds,
     album: track.album,
@@ -192,7 +192,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'ai' as const,
     kind: 'reimagined' as const,
-    description: `${track.title} reimagines an earlier Alex Merced recording as ${track.style.toLowerCase()}. The original and every verified rebuilt version are linked together here.`,
+    description: `${track.title} reimagines an earlier Alex Merced recording as ${track.style.toLowerCase()}. Compare the original and verified rebuilt versions.`,
     links: linksFor(track.links, track.url, 'generation'),
     length: track.length,
     style: track.style,
@@ -213,7 +213,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'ai' as const,
     kind: 'generated' as const,
-    description: `${track.title} is a newer song created by Alex Merced with Suno${track.genres?.length ? ` in a style described as ${track.genres.slice(0, 3).join(', ')}` : ''}${track.createdAt ? `, published ${formatDate(track.createdAt)}` : ''}. This page preserves its verified creation details and published generation.`,
+    description: `${track.title} is a Suno song by Alex Merced${track.genres?.length ? ` blending ${track.genres.slice(0, 2).join(' and ')}` : ''}${track.createdAt ? `, published ${formatDate(track.createdAt)}` : ''}. Hear it and view its verified details.`,
     links: linksFor(track.links, track.url, 'generation'),
     length: track.length,
     posted: track.posted,
@@ -290,6 +290,16 @@ export const songBySlug = new Map(songs.map((song) => [song.slug, song]));
 export const songByPrimaryUrl = new Map(songs.flatMap((song) => song.links.map((link) => [link.url, song] as const)));
 export const albumById = new Map(catalogAlbums.map((album) => [album.id, album]));
 
+export const catalogSunoPlaylists = sunoPlaylists.map(({ tracks: sourceTracks, ...playlist }) => ({
+  ...playlist,
+  pageUrl: `${SITE}${playlist.pageUrl}`,
+  sourceTracks,
+  trackIds: playlist.trackIds.flatMap((clipId) => {
+    const song = songByPrimaryUrl.get(`https://suno.com/song/${clipId}`);
+    return song ? [song.id] : [];
+  }),
+}));
+
 export const publicCatalog = {
   schemaVersion: CATALOG_SCHEMA_VERSION,
   updatedAt: CATALOG_UPDATED_AT,
@@ -305,7 +315,7 @@ export const publicCatalog = {
     sunoPlaylists: sunoPlaylists.length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
-  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: sunoPlaylists },
+  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: catalogSunoPlaylists },
   guides: { sunoPrompting: sunoPromptingGuide },
   songs,
   albums: catalogAlbums,

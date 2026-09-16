@@ -5,13 +5,6 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://alexmercedmusic.com',
   trailingSlash: 'always',
-  integrations: [sitemap({
-    serialize(item) {
-      if (item.url.includes('/songs/') || item.url.includes('/albums/')) {
-        item.lastmod = '2026-09-16';
-      }
-      return item;
-    },
-  })],
+  integrations: [sitemap()],
   build: { format: 'directory' },
 });

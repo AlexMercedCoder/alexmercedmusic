@@ -37,7 +37,8 @@ const jsonLd = [{
       '@type': playlist.collectionType === 'album' ? 'MusicAlbum' : 'MusicPlaylist',
       position: index + 1,
       name: playlist.name,
-      url: playlist.url,
+      url: `${SITE}${playlist.pageUrl}`,
+      sameAs: playlist.url,
       numTracks: playlist.songCount,
       image: playlist.imageUrl,
       description: playlist.description,
@@ -62,7 +63,7 @@ const jsonLd = [{
       <p class="lede">Alex’s {sunoPublishedCount} public Suno generations are organized into {sunoPlaylists.length} playlists by project, subject and mood. These links and counts come directly from the public Suno profile.</p>
       <div class="btn-row" style="margin-top:1.6rem">
         <a class="btn btn--primary" href="https://suno.com/@alexmerced">Open the Suno profile ↗</a>
-        <a class="btn" href="/songs/?source=suno">Explore all {sunoSongs.length} catalog songs</a>
+        <a class="btn" href="/songs/?kind=generated">Explore all {sunoSongs.length} generated songs</a>
         <a class="btn" href="/suno-prompting-guide/">Read the prompting guide</a>
       </div>
     </div>
@@ -82,10 +83,10 @@ const jsonLd = [{
               {playlist.imageUrl && <img src={playlist.imageUrl} width="240" height="240" loading="lazy" alt={`Artwork for ${playlist.name}`} />}
               <div>
                 <p class="eyebrow">{playlist.collectionLabel}</p>
-                <h3>{playlist.name}</h3>
+                <h3><a href={playlist.pageUrl}>{playlist.name}</a></h3>
                 <p>{playlist.songCount} songs{runtime(playlist.durationSeconds) ? ` · ${runtime(playlist.durationSeconds)}` : ''}</p>
                 <p>{playlist.description}</p>
-                <p><a class="song-link" href={playlist.url}>Listen on Suno</a></p>
+                <div class="btn-row"><a class="btn btn--primary" href={playlist.pageUrl}>View track list</a><a class="btn" href={playlist.url}>Listen on Suno ↗</a></div>
               </div>
             </article>
           ))}

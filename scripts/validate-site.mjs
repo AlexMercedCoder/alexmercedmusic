@@ -9,8 +9,9 @@ const songIds = new Set(catalog.songs.map((song) => song.id));
 const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
+const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.6.0');
+assert.equal(catalog.schemaVersion, '1.7.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -36,6 +37,12 @@ for (const song of catalog.songs) {
   const pagePath = new URL(`dist/songs/${song.slug}/index.html`, root);
   assert.ok(existsSync(pagePath), `Missing built page for ${song.title}.`);
   const html = readFileSync(pagePath, 'utf8');
+  const metaTitle = html.match(/<title>(.*?)<\/title>/)?.[1];
+  const metaDescription = html.match(/<meta name="description" content="([^"]*)"/)?.[1];
+  assert.ok(metaTitle && !songMetaTitles.has(metaTitle), `${song.title} has a missing or duplicate page title.`);
+  songMetaTitles.add(metaTitle);
+  assert.ok(metaDescription && metaDescription.length <= 160, `${song.title} has an oversized meta description.`);
+  assert.ok(!/<iframe[^>]+src=/.test(html), `${song.title} loads a third-party player before user intent.`);
   assert.ok(html.includes(`<link rel="canonical" href="${song.pageUrl}">`), `${song.title} has the wrong canonical.`);
   assert.ok(html.includes('BreadcrumbList'), `${song.title} is missing breadcrumb structured data.`);
   assert.ok(html.includes('MusicRecording'), `${song.title} is missing recording structured data.`);
@@ -63,11 +70,11 @@ const sourceSunoPlaylists = JSON.parse(read('src/data/suno-playlists.json'));
 const sunoPlaylists = catalog.suno.playlists;
 assert.equal(sunoPlaylists.length, sourceSunoPlaylists.length);
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
-assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel));
+assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel && playlist.trackIds.length > 0 && playlist.sourceTracks.length === playlist.songCount && playlist.pageUrl));
 assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
 assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
 
-for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json']) {
+for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
 }
 const promptingPage = read('dist/suno-prompting-guide/index.html');
@@ -83,11 +90,20 @@ for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-promp
   assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
 }
 const explorer = read('dist/songs/index.html');
-for (const pageUrl of songPages) assert.ok(explorer.includes(pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the song explorer.`);
+assert.equal((explorer.match(/<article class="song-card/g) ?? []).length, 48, 'The initial song explorer payload must stay paginated.');
+const songIndex = JSON.parse(read('dist/song-index.json'));
+assert.equal(songIndex.count, catalog.songs.length);
+for (const pageUrl of songPages) assert.ok(songIndex.songs.some((song) => song.pageUrl === pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the lightweight song index.`);
 assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
 const sunoPage = read('dist/suno/index.html');
 for (const playlist of sunoPlaylists) assert.ok(sunoPage.includes(playlist.url), `${playlist.name} is missing from the Suno page.`);
+for (const playlist of sunoPlaylists) {
+  const path = `dist/suno/playlists/${playlist.slug}/index.html`;
+  assert.ok(existsSync(new URL(path, root)), `${playlist.name} is missing its local page.`);
+  const html = read(path);
+  assert.ok(html.includes(playlist.url) && html.includes('BreadcrumbList'), `${playlist.name} is missing source or structured data.`);
+}
 
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
@@ -128,7 +144,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -156,7 +172,13 @@ assert.equal(comparison.original.id, solemn.originalTrackId);
 assert.ok(comparison.reimagined.some((song) => song.id === solemn.id));
 const playlistResult = JSON.parse(await getTool('list_suno_playlists').execute({}));
 assert.equal(playlistResult.count, sunoPlaylists.length);
-assert.deepEqual(playlistResult.playlists, sunoPlaylists);
+assert.ok(playlistResult.playlists.every((item) => !('trackIds' in item) && !('sourceTracks' in item)));
+assert.deepEqual(playlistResult.playlists.map((item) => item.id), sunoPlaylists.map((item) => item.id));
+const playlist = JSON.parse(await getTool('get_suno_playlist').execute({ id: sunoPlaylists[0].id }));
+assert.equal(playlist.playlist.id, sunoPlaylists[0].id);
+assert.equal(playlist.tracks.length, sunoPlaylists[0].sourceTracks.length);
+const updates = JSON.parse(await getTool('get_catalog_updates_since').execute({ since: '2026-01-01', kind: 'generated', limit: 5 }));
+assert.ok(updates.totalResults > 0 && updates.items.length === 5);
 const promptingResult = JSON.parse(await getTool('get_suno_prompting_guide').execute({}));
 assert.equal(promptingResult.guide.formula, catalog.guides.sunoPrompting.formula);
 assert.equal(promptingResult.guide.pageUrl, `${catalog.site}/suno-prompting-guide/`);

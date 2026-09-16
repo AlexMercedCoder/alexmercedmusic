@@ -1,0 +1,81 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { SITE, catalogSunoPlaylists, songByPrimaryUrl, type CatalogSong } from '../../../data/catalog-model';
+
+export function getStaticPaths() {
+  return catalogSunoPlaylists.map((playlist) => ({
+    params: { slug: playlist.slug },
+    props: { playlist, tracks: playlist.sourceTracks.map((source) => ({ source, song: songByPrimaryUrl.get(source.url) })) },
+  }));
+}
+
+const { playlist, tracks } = Astro.props as {
+  playlist: (typeof catalogSunoPlaylists)[number];
+  tracks: Array<{ source: (typeof catalogSunoPlaylists)[number]['sourceTracks'][number]; song?: CatalogSong }>;
+};
+const minutes = playlist.durationSeconds ? Math.round(playlist.durationSeconds / 60) : undefined;
+const pageTitle = playlist.name.length > 35 ? `${playlist.name.slice(0, 34).trim()}…` : playlist.name;
+const jsonLd = [{
+  '@type': playlist.collectionType === 'album' ? 'MusicAlbum' : 'MusicPlaylist',
+  '@id': `${playlist.pageUrl}#playlist`,
+  name: playlist.name,
+  url: playlist.pageUrl,
+  sameAs: playlist.url,
+  description: playlist.description,
+  image: playlist.imageUrl,
+  numTracks: playlist.songCount,
+  byArtist: { '@id': `${SITE}/#musicgroup` },
+  track: tracks.map(({ source, song }, index) => song ? { '@id': `${song.pageUrl}#recording`, position: index + 1 } : { '@type': 'MusicRecording', name: source.title, url: source.url, position: index + 1 }),
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Suno playlists', item: `${SITE}/suno/` },
+    { '@type': 'ListItem', position: 3, name: playlist.name, item: playlist.pageUrl },
+  ],
+}];
+---
+
+<Base title={pageTitle} description={`${playlist.description} Browse ${playlist.songCount} songs in playlist order and open each recording directly.`} jsonLd={jsonLd} ogType={playlist.collectionType === 'album' ? 'music.album' : 'website'} ogImage={playlist.imageUrl} imageAlt={`Artwork for ${playlist.name}`}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno playlists', href: '/suno/' }, { label: playlist.name }]} />
+  <article class="section detail" data-era="ai">
+    <div class="shell detail__grid">
+      <div>
+        <p class="eyebrow">{playlist.collectionLabel}</p>
+        <h1>{playlist.name}</h1>
+        <p class="lede">{playlist.description}</p>
+        <dl class="facts">
+          <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
+          <div><dt>Tracks</dt><dd>{playlist.songCount}</dd></div>
+          {minutes && <div><dt>Runtime</dt><dd>{Math.floor(minutes / 60) ? `${Math.floor(minutes / 60)} hr ${minutes % 60} min` : `${minutes} min`}</dd></div>}
+          <div><dt>Source</dt><dd>Public Suno playlist</dd></div>
+        </dl>
+        <div class="btn-row" style="margin-top:1.5rem">
+          <a class="btn btn--primary" href={playlist.url}>Listen on Suno ↗</a>
+          <a class="btn" href="/suno/">All Suno playlists</a>
+        </div>
+      </div>
+      {playlist.imageUrl && <img class="artwork" src={playlist.imageUrl} width="600" height="600" alt={`Artwork for ${playlist.name}`} />}
+    </div>
+    <div class="shell playlist-tracks">
+      <h2>Track list</h2>
+      <p>{playlist.trackIds.length} tracks have local catalog pages. Every remaining playlist entry links directly to its Suno recording.</p>
+      <ol class="tracks">
+        {tracks.map(({ source, song }, index) => (
+          <li>
+            <span class="num">{String(index + 1).padStart(2, '0')}</span>
+            <span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span>
+            <span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a></span>
+          </li>
+        ))}
+      </ol>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .playlist-tracks { margin-top:4rem; }
+  .playlist-tracks h2 { margin-bottom:.7rem; }
+  .playlist-tracks > p { color:var(--ink-soft); }
+</style>

@@ -11,16 +11,16 @@ const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
 const shouldWrite = process.argv.includes('--write');
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-const fetchPage = async (url, pageNumber) => {
+const fetchPage = async (url, label) => {
   for (let attempt = 0; attempt < 6; attempt += 1) {
     const response = await fetch(url, { headers: { 'user-agent': 'AlexMercedMusic catalog sync/1.0 (+https://alexmercedmusic.com)' } });
     if (response.ok) return response;
-    if (response.status !== 429 || attempt === 5) throw new Error(`Suno page ${pageNumber} failed with HTTP ${response.status}.`);
+    if (response.status !== 429 || attempt === 5) throw new Error(`Suno ${label} failed with HTTP ${response.status}.`);
     const retryAfterSeconds = Number(response.headers.get('retry-after'));
     const delay = Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
       ? retryAfterSeconds * 1000
       : 2000 * (2 ** attempt);
-    console.warn(`Suno page ${pageNumber} was rate limited; retrying in ${Math.ceil(delay / 1000)} seconds.`);
+    console.warn(`Suno ${label} was rate limited; retrying in ${Math.ceil(delay / 1000)} seconds.`);
     await wait(delay);
   }
 };
@@ -39,7 +39,7 @@ while (pages.flat().length < total && page <= 100) {
   url.searchParams.set('page', String(page));
   url.searchParams.set('playlists_sort_by', 'created_at');
   url.searchParams.set('clips_sort_by', 'created_at');
-  const response = await fetchPage(url, page);
+  const response = await fetchPage(url, `profile page ${page}`);
   const data = await response.json();
   if (data.handle !== 'alexmerced') throw new Error(`Unexpected Suno profile: ${data.handle ?? 'missing handle'}.`);
   total = Number(data.num_total_clips);
@@ -76,6 +76,14 @@ const toSong = (clip) => ({
     model: clip.major_model_version || undefined,
     lyrics: looksLikeLyrics(clip.metadata?.prompt) ? clip.metadata.prompt.trim() : undefined,
   });
+const toPlaylistTrack = (clip) => ({
+  id: clip.id,
+  title: clip.title.trim(),
+  url: `https://suno.com/song/${clip.id}`,
+  createdAt: clip.created_at,
+  durationSeconds: Number(clip.metadata?.duration ?? 0) || undefined,
+  imageUrl: clip.image_url || undefined,
+});
 
 const publicClips = allClips.filter((clip) => clip.is_public && !clip.is_trashed && clip.title);
 const songs = publicClips
@@ -86,7 +94,7 @@ const coverSongs = publicClips
   .filter((clip) => coverIds.has(clip.id))
   .map(toSong)
   .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
-const playlists = profilePlaylists
+const playlistSummaries = profilePlaylists
   .filter((playlist) => playlist.is_public && !playlist.is_trashed && !playlist.is_hidden && playlist.name)
   .map((playlist) => ({
     id: playlist.id,
@@ -97,6 +105,38 @@ const playlists = profilePlaylists
     durationSeconds: Number(playlist.total_duration ?? 0) || undefined,
     description: playlist.description?.trim() || undefined,
   }));
+
+const playlists = [];
+for (const playlist of playlistSummaries) {
+  const trackIds = [];
+  const playlistTracks = [];
+  let playlistPage = 1;
+  let playlistTotal = playlist.songCount;
+  while (trackIds.length < playlistTotal && playlistPage <= 100) {
+    const url = new URL(`https://studio-api.prod.suno.com/api/playlist/${playlist.id}/`);
+    url.searchParams.set('page', String(playlistPage));
+    const response = await fetchPage(url, `playlist ${playlist.name} page ${playlistPage}`);
+    const data = await response.json();
+    playlistTotal = Number(data.num_total_results ?? playlistTotal);
+    const pageIds = (Array.isArray(data.playlist_clips) ? data.playlist_clips : [])
+      .map((item) => item.clip?.id)
+      .filter(Boolean);
+    playlistTracks.push(...(Array.isArray(data.playlist_clips) ? data.playlist_clips : [])
+      .map((item) => item.clip)
+      .filter((clip) => clip?.id && clip?.title)
+      .map(toPlaylistTrack));
+    if (pageIds.length === 0) break;
+    trackIds.push(...pageIds);
+    playlistPage += 1;
+    await wait(300);
+  }
+  const uniqueTrackIds = [...new Set(trackIds)];
+  if (uniqueTrackIds.length !== playlistTotal) {
+    throw new Error(`Expected ${playlistTotal} tracks in ${playlist.name} but received ${uniqueTrackIds.length}.`);
+  }
+  const uniqueTracks = [...new Map(playlistTracks.map((track) => [track.id, track])).values()];
+  playlists.push({ ...playlist, songCount: playlistTotal, trackIds: uniqueTrackIds, tracks: uniqueTracks });
+}
 
 const ids = new Set(songs.map((song) => song.id));
 if (ids.size !== songs.length) throw new Error('Suno returned duplicate public song IDs.');
