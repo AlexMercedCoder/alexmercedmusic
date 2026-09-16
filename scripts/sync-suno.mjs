@@ -10,6 +10,20 @@ const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
 const shouldWrite = process.argv.includes('--write');
+const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
+const fetchPage = async (url, pageNumber) => {
+  for (let attempt = 0; attempt < 6; attempt += 1) {
+    const response = await fetch(url, { headers: { 'user-agent': 'AlexMercedMusic catalog sync/1.0 (+https://alexmercedmusic.com)' } });
+    if (response.ok) return response;
+    if (response.status !== 429 || attempt === 5) throw new Error(`Suno page ${pageNumber} failed with HTTP ${response.status}.`);
+    const retryAfterSeconds = Number(response.headers.get('retry-after'));
+    const delay = Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
+      ? retryAfterSeconds * 1000
+      : 2000 * (2 ** attempt);
+    console.warn(`Suno page ${pageNumber} was rate limited; retrying in ${Math.ceil(delay / 1000)} seconds.`);
+    await wait(delay);
+  }
+};
 
 const catalogSource = await readFile(catalogUrl, 'utf8');
 const reimaginedSection = catalogSource.split('// ---------------------------------------------------------------- reimagined')[1]
@@ -25,8 +39,7 @@ while (pages.flat().length < total && page <= 100) {
   url.searchParams.set('page', String(page));
   url.searchParams.set('playlists_sort_by', 'created_at');
   url.searchParams.set('clips_sort_by', 'created_at');
-  const response = await fetch(url, { headers: { 'user-agent': 'AlexMercedMusic catalog sync/1.0 (+https://alexmercedmusic.com)' } });
-  if (!response.ok) throw new Error(`Suno page ${page} failed with HTTP ${response.status}.`);
+  const response = await fetchPage(url, page);
   const data = await response.json();
   if (data.handle !== 'alexmerced') throw new Error(`Unexpected Suno profile: ${data.handle ?? 'missing handle'}.`);
   total = Number(data.num_total_clips);
@@ -34,6 +47,7 @@ while (pages.flat().length < total && page <= 100) {
   if (!Array.isArray(data.clips) || data.clips.length === 0) break;
   pages.push(data.clips);
   page += 1;
+  await wait(300);
 }
 
 const allClips = pages.flat();
