@@ -1,5 +1,152 @@
 [
   {
+    "id": "4936a598-de26-4a15-9c9d-36df88300908",
+    "name": "Your Are good Enough",
+    "url": "https://suno.com/playlist/4936a598-de26-4a15-9c9d-36df88300908",
+    "imageUrl": "https://cdn2.suno.ai/image_8f47b7d3-3f43-40be-aa2c-3eedab44f4a6.jpeg",
+    "songCount": 15,
+    "durationSeconds": 3543.8800000000006,
+    "trackIds": [
+      "8f47b7d3-3f43-40be-aa2c-3eedab44f4a6",
+      "6c506d0e-a2fc-4b65-9fdd-399591a3bbb2",
+      "118f6c1a-f753-459f-a220-39da6edf1bff",
+      "e202fdd3-dc67-4da2-849d-c1aef01861ba",
+      "c8f78bf9-4d76-42e5-947d-883e5c69506c",
+      "98703997-dc8c-4d74-a9ef-cf7cd51ec235",
+      "fe8e4aa4-852c-4cd8-9676-25f2cd0fb404",
+      "48a0f3de-9000-4fc0-b472-91a121d69a22",
+      "b7b2fa78-e969-49f8-af4f-45215cda37fb",
+      "3a3c68c6-f46d-42fb-b825-5185e09d21c6",
+      "f64678c1-d0bc-4db7-82e2-a327f0e90159",
+      "e02656d2-c3b4-44e3-9e6d-358d63255eb3",
+      "cec4c267-0d8a-4030-ab61-770248631811",
+      "5eaca093-9491-495c-93fb-dc355d07f70b",
+      "a1582066-13bd-4daa-b8d6-2e98823b2ff2"
+    ],
+    "tracks": [
+      {
+        "id": "8f47b7d3-3f43-40be-aa2c-3eedab44f4a6",
+        "title": "Comfortable As I Am",
+        "url": "https://suno.com/song/8f47b7d3-3f43-40be-aa2c-3eedab44f4a6",
+        "createdAt": "2026-09-17T10:06:33.115Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_8f47b7d3-3f43-40be-aa2c-3eedab44f4a6.jpeg"
+      },
+      {
+        "id": "6c506d0e-a2fc-4b65-9fdd-399591a3bbb2",
+        "title": "Rooted Deep, Running Free",
+        "url": "https://suno.com/song/6c506d0e-a2fc-4b65-9fdd-399591a3bbb2",
+        "createdAt": "2026-09-17T10:00:29.681Z",
+        "durationSeconds": 267.2,
+        "imageUrl": "https://cdn2.suno.ai/image_6c506d0e-a2fc-4b65-9fdd-399591a3bbb2.jpeg"
+      },
+      {
+        "id": "118f6c1a-f753-459f-a220-39da6edf1bff",
+        "title": "Good in My Skin",
+        "url": "https://suno.com/song/118f6c1a-f753-459f-a220-39da6edf1bff",
+        "createdAt": "2026-09-17T08:27:17.050Z",
+        "durationSeconds": 214.76,
+        "imageUrl": "https://cdn2.suno.ai/image_118f6c1a-f753-459f-a220-39da6edf1bff.jpeg"
+      },
+      {
+        "id": "e202fdd3-dc67-4da2-849d-c1aef01861ba",
+        "title": "Moving Free",
+        "url": "https://suno.com/song/e202fdd3-dc67-4da2-849d-c1aef01861ba",
+        "createdAt": "2026-09-17T08:27:17.050Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_e202fdd3-dc67-4da2-849d-c1aef01861ba.jpeg"
+      },
+      {
+        "id": "c8f78bf9-4d76-42e5-947d-883e5c69506c",
+        "title": "Break the Barrier",
+        "url": "https://suno.com/song/c8f78bf9-4d76-42e5-947d-883e5c69506c",
+        "createdAt": "2026-09-17T07:16:43.091Z",
+        "durationSeconds": 247.64,
+        "imageUrl": "https://cdn2.suno.ai/image_c8f78bf9-4d76-42e5-947d-883e5c69506c.jpeg"
+      },
+      {
+        "id": "98703997-dc8c-4d74-a9ef-cf7cd51ec235",
+        "title": "The Pages Bend",
+        "url": "https://suno.com/song/98703997-dc8c-4d74-a9ef-cf7cd51ec235",
+        "createdAt": "2026-09-16T22:22:33.688Z",
+        "durationSeconds": 262.04,
+        "imageUrl": "https://cdn2.suno.ai/image_98703997-dc8c-4d74-a9ef-cf7cd51ec235.jpeg"
+      },
+      {
+        "id": "fe8e4aa4-852c-4cd8-9676-25f2cd0fb404",
+        "title": "Different Hands, Different",
+        "url": "https://suno.com/song/fe8e4aa4-852c-4cd8-9676-25f2cd0fb404",
+        "createdAt": "2026-09-16T22:17:32.617Z",
+        "durationSeconds": 267.24,
+        "imageUrl": "https://cdn2.suno.ai/image_fe8e4aa4-852c-4cd8-9676-25f2cd0fb404.jpeg"
+      },
+      {
+        "id": "48a0f3de-9000-4fc0-b472-91a121d69a22",
+        "title": "Do You Boo",
+        "url": "https://suno.com/song/48a0f3de-9000-4fc0-b472-91a121d69a22",
+        "createdAt": "2026-09-15T15:18:19.194Z",
+        "durationSeconds": 228.72,
+        "imageUrl": "https://cdn2.suno.ai/image_48a0f3de-9000-4fc0-b472-91a121d69a22.jpeg"
+      },
+      {
+        "id": "b7b2fa78-e969-49f8-af4f-45215cda37fb",
+        "title": "I Am Enough",
+        "url": "https://suno.com/song/b7b2fa78-e969-49f8-af4f-45215cda37fb",
+        "createdAt": "2026-09-17T12:35:19.877Z",
+        "durationSeconds": 255.6,
+        "imageUrl": "https://cdn2.suno.ai/image_b7b2fa78-e969-49f8-af4f-45215cda37fb.jpeg"
+      },
+      {
+        "id": "3a3c68c6-f46d-42fb-b825-5185e09d21c6",
+        "title": "Good As I Am",
+        "url": "https://suno.com/song/3a3c68c6-f46d-42fb-b825-5185e09d21c6",
+        "createdAt": "2026-09-17T12:50:31.279Z",
+        "durationSeconds": 231.6,
+        "imageUrl": "https://cdn2.suno.ai/image_3a3c68c6-f46d-42fb-b825-5185e09d21c6.jpeg"
+      },
+      {
+        "id": "f64678c1-d0bc-4db7-82e2-a327f0e90159",
+        "title": "For Me, For Me",
+        "url": "https://suno.com/song/f64678c1-d0bc-4db7-82e2-a327f0e90159",
+        "createdAt": "2026-09-17T12:54:45.362Z",
+        "durationSeconds": 230.28,
+        "imageUrl": "https://cdn2.suno.ai/image_f64678c1-d0bc-4db7-82e2-a327f0e90159.jpeg"
+      },
+      {
+        "id": "e02656d2-c3b4-44e3-9e6d-358d63255eb3",
+        "title": "Nobody Better Than You",
+        "url": "https://suno.com/song/e02656d2-c3b4-44e3-9e6d-358d63255eb3",
+        "createdAt": "2026-09-17T13:12:29.572Z",
+        "durationSeconds": 242.28,
+        "imageUrl": "https://cdn2.suno.ai/image_e02656d2-c3b4-44e3-9e6d-358d63255eb3.jpeg"
+      },
+      {
+        "id": "cec4c267-0d8a-4030-ab61-770248631811",
+        "title": "You Are The Absolute",
+        "url": "https://suno.com/song/cec4c267-0d8a-4030-ab61-770248631811",
+        "createdAt": "2026-09-17T13:25:41.108Z",
+        "durationSeconds": 228.8,
+        "imageUrl": "https://cdn2.suno.ai/image_cec4c267-0d8a-4030-ab61-770248631811.jpeg"
+      },
+      {
+        "id": "5eaca093-9491-495c-93fb-dc355d07f70b",
+        "title": "Best You There Is",
+        "url": "https://suno.com/song/5eaca093-9491-495c-93fb-dc355d07f70b",
+        "createdAt": "2026-09-17T13:23:43.371Z",
+        "durationSeconds": 223.04,
+        "imageUrl": "https://cdn2.suno.ai/image_5eaca093-9491-495c-93fb-dc355d07f70b.jpeg"
+      },
+      {
+        "id": "a1582066-13bd-4daa-b8d6-2e98823b2ff2",
+        "title": "Best You There Is",
+        "url": "https://suno.com/song/a1582066-13bd-4daa-b8d6-2e98823b2ff2",
+        "createdAt": "2026-09-17T13:23:43.371Z",
+        "durationSeconds": 210.28,
+        "imageUrl": "https://cdn2.suno.ai/image_a1582066-13bd-4daa-b8d6-2e98823b2ff2.jpeg"
+      }
+    ]
+  },
+  {
     "id": "abf459c8-27e4-4382-a9a5-77769146b46b",
     "name": "Nostalgia and Food",
     "url": "https://suno.com/playlist/abf459c8-27e4-4382-a9a5-77769146b46b",
@@ -1255,8 +1402,8 @@
     "name": "Fun Songs",
     "url": "https://suno.com/playlist/16797847-dedf-46f4-8a58-1628cc3c64b4",
     "imageUrl": "https://cdn2.suno.ai/image_c3b1c91d-4f2d-40e7-ab43-44c5b62acac9.jpeg",
-    "songCount": 124,
-    "durationSeconds": 27370.84,
+    "songCount": 136,
+    "durationSeconds": 29970.960000000003,
     "trackIds": [
       "c3b1c91d-4f2d-40e7-ab43-44c5b62acac9",
       "386dadd4-cf0c-417b-8c7c-65491100f943",
@@ -1381,7 +1528,19 @@
       "303075ba-3a99-41dd-8835-dc2643a2ffd6",
       "83c765fb-1f03-4f06-bf63-cecfb473b3dd",
       "6affb469-9df9-40b8-a5fd-09b6689adc5b",
-      "8a59936f-4582-45eb-8ed7-ddae250e8cfe"
+      "8a59936f-4582-45eb-8ed7-ddae250e8cfe",
+      "2d710aa1-4edc-457a-a2c8-7b617413f730",
+      "838452e7-86b2-4033-8cf7-d3e540bf5dd7",
+      "90a9f80f-6ec9-4d6f-8c54-f5c659477a58",
+      "a48dbad7-386b-457b-a0e9-d394211cd2e6",
+      "77ebfc0b-5d17-48df-a9de-ca127f1f8bca",
+      "61a2ecf8-ebad-44cd-8c73-f4792c20714a",
+      "92442582-86c3-45ff-8942-fd4dc6a67364",
+      "026e6a10-f80b-47bf-8e28-e5bbe3e655a8",
+      "23417cbe-d0f6-473e-9916-8528f2e0e50b",
+      "3a8a65d1-220e-4125-92c5-ffe5a50f2f0e",
+      "a3d078a3-5c82-4a27-b514-108db7836234",
+      "501f3942-3ae7-4574-adf0-255cca2821c4"
     ],
     "tracks": [
       {
@@ -2375,6 +2534,102 @@
         "createdAt": "2026-09-14T04:53:19.066Z",
         "durationSeconds": 196.72,
         "imageUrl": "https://cdn2.suno.ai/image_8a59936f-4582-45eb-8ed7-ddae250e8cfe.jpeg"
+      },
+      {
+        "id": "2d710aa1-4edc-457a-a2c8-7b617413f730",
+        "title": "Ship Five In Paris",
+        "url": "https://suno.com/song/2d710aa1-4edc-457a-a2c8-7b617413f730",
+        "createdAt": "2026-09-16T16:56:36.860Z",
+        "durationSeconds": 237.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2d710aa1-4edc-457a-a2c8-7b617413f730.jpeg"
+      },
+      {
+        "id": "838452e7-86b2-4033-8cf7-d3e540bf5dd7",
+        "title": "Stuffed Capybara",
+        "url": "https://suno.com/song/838452e7-86b2-4033-8cf7-d3e540bf5dd7",
+        "createdAt": "2026-09-16T16:42:41.429Z",
+        "durationSeconds": 182.6,
+        "imageUrl": "https://cdn2.suno.ai/image_838452e7-86b2-4033-8cf7-d3e540bf5dd7.jpeg"
+      },
+      {
+        "id": "90a9f80f-6ec9-4d6f-8c54-f5c659477a58",
+        "title": "Closest Ship Center",
+        "url": "https://suno.com/song/90a9f80f-6ec9-4d6f-8c54-f5c659477a58",
+        "createdAt": "2026-09-16T15:52:21.092Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_90a9f80f-6ec9-4d6f-8c54-f5c659477a58.jpeg"
+      },
+      {
+        "id": "a48dbad7-386b-457b-a0e9-d394211cd2e6",
+        "title": "Exit 42",
+        "url": "https://suno.com/song/a48dbad7-386b-457b-a0e9-d394211cd2e6",
+        "createdAt": "2026-09-16T14:42:28.336Z",
+        "durationSeconds": 210.72,
+        "imageUrl": "https://cdn2.suno.ai/image_a48dbad7-386b-457b-a0e9-d394211cd2e6.jpeg"
+      },
+      {
+        "id": "77ebfc0b-5d17-48df-a9de-ca127f1f8bca",
+        "title": "Last Box Closed",
+        "url": "https://suno.com/song/77ebfc0b-5d17-48df-a9de-ca127f1f8bca",
+        "createdAt": "2026-09-16T14:32:59.605Z",
+        "durationSeconds": 209.16,
+        "imageUrl": "https://cdn2.suno.ai/image_77ebfc0b-5d17-48df-a9de-ca127f1f8bca.jpeg"
+      },
+      {
+        "id": "61a2ecf8-ebad-44cd-8c73-f4792c20714a",
+        "title": "On Your Sleeves",
+        "url": "https://suno.com/song/61a2ecf8-ebad-44cd-8c73-f4792c20714a",
+        "createdAt": "2026-09-16T13:06:40.539Z",
+        "durationSeconds": 244.4,
+        "imageUrl": "https://cdn2.suno.ai/image_61a2ecf8-ebad-44cd-8c73-f4792c20714a.jpeg"
+      },
+      {
+        "id": "92442582-86c3-45ff-8942-fd4dc6a67364",
+        "title": "Snore Control",
+        "url": "https://suno.com/song/92442582-86c3-45ff-8942-fd4dc6a67364",
+        "createdAt": "2026-09-16T10:11:59.300Z",
+        "durationSeconds": 226.2,
+        "imageUrl": "https://cdn2.suno.ai/image_92442582-86c3-45ff-8942-fd4dc6a67364.jpeg"
+      },
+      {
+        "id": "026e6a10-f80b-47bf-8e28-e5bbe3e655a8",
+        "title": "Solo McDonalds in Paris",
+        "url": "https://suno.com/song/026e6a10-f80b-47bf-8e28-e5bbe3e655a8",
+        "createdAt": "2026-09-16T09:52:21.266Z",
+        "durationSeconds": 188,
+        "imageUrl": "https://cdn2.suno.ai/image_026e6a10-f80b-47bf-8e28-e5bbe3e655a8.jpeg"
+      },
+      {
+        "id": "23417cbe-d0f6-473e-9916-8528f2e0e50b",
+        "title": "Always Night Somewhere",
+        "url": "https://suno.com/song/23417cbe-d0f6-473e-9916-8528f2e0e50b",
+        "createdAt": "2026-09-16T07:48:12.141Z",
+        "durationSeconds": 204.4,
+        "imageUrl": "https://cdn2.suno.ai/image_23417cbe-d0f6-473e-9916-8528f2e0e50b.jpeg"
+      },
+      {
+        "id": "3a8a65d1-220e-4125-92c5-ffe5a50f2f0e",
+        "title": "Set Yourself Free",
+        "url": "https://suno.com/song/3a8a65d1-220e-4125-92c5-ffe5a50f2f0e",
+        "createdAt": "2026-09-16T06:18:27.372Z",
+        "durationSeconds": 262,
+        "imageUrl": "https://cdn2.suno.ai/image_3a8a65d1-220e-4125-92c5-ffe5a50f2f0e.jpeg"
+      },
+      {
+        "id": "a3d078a3-5c82-4a27-b514-108db7836234",
+        "title": "Lift the Spirits",
+        "url": "https://suno.com/song/a3d078a3-5c82-4a27-b514-108db7836234",
+        "createdAt": "2026-09-16T06:03:04.288Z",
+        "durationSeconds": 248.12,
+        "imageUrl": "https://cdn2.suno.ai/image_a3d078a3-5c82-4a27-b514-108db7836234.jpeg"
+      },
+      {
+        "id": "501f3942-3ae7-4574-adf0-255cca2821c4",
+        "title": "Move First",
+        "url": "https://suno.com/song/501f3942-3ae7-4574-adf0-255cca2821c4",
+        "createdAt": "2026-09-16T05:54:49.424Z",
+        "durationSeconds": 207.32,
+        "imageUrl": "https://cdn2.suno.ai/image_501f3942-3ae7-4574-adf0-255cca2821c4.jpeg"
       }
     ]
   },
@@ -2383,8 +2638,8 @@
     "name": "Deep Songs",
     "url": "https://suno.com/playlist/09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "imageUrl": "https://cdn2.suno.ai/image_dd6aef5f-c95c-49d2-8984-80868c3a84d2.jpeg",
-    "songCount": 131,
-    "durationSeconds": 30953.200000000004,
+    "songCount": 134,
+    "durationSeconds": 31699.200000000004,
     "trackIds": [
       "dd6aef5f-c95c-49d2-8984-80868c3a84d2",
       "32d5ef7d-1429-4645-b802-5586c40ee732",
@@ -2516,7 +2771,10 @@
       "01dc3281-6ce1-4ece-991b-5fb04964d1d4",
       "9c2388b0-417c-4c9a-b94d-508e8fcf0371",
       "431a811b-e4c7-4d51-b5e3-ec848a78c905",
-      "99afa0e5-4f6f-441b-b8af-d69569668cc8"
+      "99afa0e5-4f6f-441b-b8af-d69569668cc8",
+      "c51c934a-d86f-485a-b45a-6ddc15eebd31",
+      "961c3c2d-6b1e-47a9-8798-b9b4b4704f43",
+      "ea7c82d3-8e63-4621-a5cf-9d267661b282"
     ],
     "tracks": [
       {
@@ -3566,6 +3824,30 @@
         "createdAt": "2026-09-14T01:05:19.520Z",
         "durationSeconds": 261.96,
         "imageUrl": "https://cdn2.suno.ai/image_99afa0e5-4f6f-441b-b8af-d69569668cc8.jpeg"
+      },
+      {
+        "id": "c51c934a-d86f-485a-b45a-6ddc15eebd31",
+        "title": "Mirror Check",
+        "url": "https://suno.com/song/c51c934a-d86f-485a-b45a-6ddc15eebd31",
+        "createdAt": "2026-09-16T05:17:11.886Z",
+        "durationSeconds": 240.84,
+        "imageUrl": "https://cdn2.suno.ai/image_c51c934a-d86f-485a-b45a-6ddc15eebd31.jpeg"
+      },
+      {
+        "id": "961c3c2d-6b1e-47a9-8798-b9b4b4704f43",
+        "title": "The Chase",
+        "url": "https://suno.com/song/961c3c2d-6b1e-47a9-8798-b9b4b4704f43",
+        "createdAt": "2026-09-15T20:29:53.335Z",
+        "durationSeconds": 247.2,
+        "imageUrl": "https://cdn2.suno.ai/image_961c3c2d-6b1e-47a9-8798-b9b4b4704f43.jpeg"
+      },
+      {
+        "id": "ea7c82d3-8e63-4621-a5cf-9d267661b282",
+        "title": "Least Wanted",
+        "url": "https://suno.com/song/ea7c82d3-8e63-4621-a5cf-9d267661b282",
+        "createdAt": "2026-09-15T20:07:06.176Z",
+        "durationSeconds": 257.96,
+        "imageUrl": "https://cdn2.suno.ai/image_ea7c82d3-8e63-4621-a5cf-9d267661b282.jpeg"
       }
     ]
   },
