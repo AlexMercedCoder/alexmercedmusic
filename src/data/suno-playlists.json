@@ -4,11 +4,17 @@
     "name": "Songs For Love Over Hate",
     "url": "https://suno.com/playlist/fcd1a9e2-61d1-45d7-9b49-dd6df1f77c3d",
     "imageUrl": "https://cdn2.suno.ai/image_b66f5d4d-824e-4cf0-b54c-02e3dda27938.jpeg",
-    "songCount": 2,
-    "durationSeconds": 452.76,
+    "songCount": 8,
+    "durationSeconds": 2018.52,
     "trackIds": [
       "b66f5d4d-824e-4cf0-b54c-02e3dda27938",
-      "afea4bb9-8096-447b-b78c-30175f45145e"
+      "afea4bb9-8096-447b-b78c-30175f45145e",
+      "01019305-c86d-42bf-a89d-98470190607d",
+      "6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+      "322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+      "6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+      "9020e75e-4f71-4432-bef8-7a3211b760ea",
+      "f436ad43-0cbe-4eb2-a384-93de4af5cd27"
     ],
     "tracks": [
       {
@@ -26,6 +32,54 @@
         "createdAt": "2026-09-19T08:54:16.085Z",
         "durationSeconds": 208,
         "imageUrl": "https://cdn2.suno.ai/image_afea4bb9-8096-447b-b78c-30175f45145e.jpeg"
+      },
+      {
+        "id": "01019305-c86d-42bf-a89d-98470190607d",
+        "title": "Room at the Table",
+        "url": "https://suno.com/song/01019305-c86d-42bf-a89d-98470190607d",
+        "createdAt": "2026-09-19T09:04:58.715Z",
+        "durationSeconds": 281.2,
+        "imageUrl": "https://cdn2.suno.ai/image_01019305-c86d-42bf-a89d-98470190607d.jpeg"
+      },
+      {
+        "id": "6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+        "title": "One Human Race",
+        "url": "https://suno.com/song/6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+        "createdAt": "2026-09-19T09:33:43.345Z",
+        "durationSeconds": 256.84,
+        "imageUrl": "https://cdn2.suno.ai/image_6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd.jpeg"
+      },
+      {
+        "id": "322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+        "title": "Different Names, Different",
+        "url": "https://suno.com/song/322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+        "createdAt": "2026-09-19T09:33:27.922Z",
+        "durationSeconds": 275,
+        "imageUrl": "https://cdn2.suno.ai/image_322940a5-73a8-4f08-a81b-e26c2e6c8ddd.jpeg"
+      },
+      {
+        "id": "6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+        "title": "One Room, One Face",
+        "url": "https://suno.com/song/6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+        "createdAt": "2026-09-19T09:39:15.784Z",
+        "durationSeconds": 276,
+        "imageUrl": "https://cdn2.suno.ai/image_6aa90a6c-1a40-4169-be43-32d1cbbdf21c.jpeg"
+      },
+      {
+        "id": "9020e75e-4f71-4432-bef8-7a3211b760ea",
+        "title": "Leave a Chair",
+        "url": "https://suno.com/song/9020e75e-4f71-4432-bef8-7a3211b760ea",
+        "createdAt": "2026-09-19T10:49:39.890Z",
+        "durationSeconds": 237.12,
+        "imageUrl": "https://cdn2.suno.ai/image_9020e75e-4f71-4432-bef8-7a3211b760ea.jpeg"
+      },
+      {
+        "id": "f436ad43-0cbe-4eb2-a384-93de4af5cd27",
+        "title": "Room Enough at the Table",
+        "url": "https://suno.com/song/f436ad43-0cbe-4eb2-a384-93de4af5cd27",
+        "createdAt": "2026-09-19T10:49:17.736Z",
+        "durationSeconds": 239.6,
+        "imageUrl": "https://cdn2.suno.ai/image_f436ad43-0cbe-4eb2-a384-93de4af5cd27.jpeg"
       }
     ]
   },
@@ -1903,8 +1957,8 @@
     "name": "Fun Songs",
     "url": "https://suno.com/playlist/16797847-dedf-46f4-8a58-1628cc3c64b4",
     "imageUrl": "https://cdn2.suno.ai/image_c3b1c91d-4f2d-40e7-ab43-44c5b62acac9.jpeg",
-    "songCount": 139,
-    "durationSeconds": 30667.72,
+    "songCount": 140,
+    "durationSeconds": 30872.52,
     "trackIds": [
       "c3b1c91d-4f2d-40e7-ab43-44c5b62acac9",
       "386dadd4-cf0c-417b-8c7c-65491100f943",
@@ -2044,7 +2098,8 @@
       "501f3942-3ae7-4574-adf0-255cca2821c4",
       "24838eb5-ad78-41ab-a77f-e62097483816",
       "56450e14-bf6e-4739-8d96-eddf8f21e6bf",
-      "3ae52413-06ad-4647-b994-b453fa3134e9"
+      "3ae52413-06ad-4647-b994-b453fa3134e9",
+      "a9843a82-a541-4e75-a63c-841ca9e2e427"
     ],
     "tracks": [
       {
@@ -3158,6 +3213,14 @@
         "createdAt": "2026-09-19T08:49:33.453Z",
         "durationSeconds": 203.6,
         "imageUrl": "https://cdn2.suno.ai/image_3ae52413-06ad-4647-b994-b453fa3134e9.jpeg"
+      },
+      {
+        "id": "a9843a82-a541-4e75-a63c-841ca9e2e427",
+        "title": "Stranger Way",
+        "url": "https://suno.com/song/a9843a82-a541-4e75-a63c-841ca9e2e427",
+        "createdAt": "2026-09-19T11:43:45.736Z",
+        "durationSeconds": 204.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a9843a82-a541-4e75-a63c-841ca9e2e427.jpeg"
       }
     ]
   },
