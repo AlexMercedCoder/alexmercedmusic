@@ -1,5 +1,1031 @@
 [
   {
+    "id": "c15b5fae-abff-4ca1-8a7e-e5c8fcc4ebea",
+    "title": "The Lake Remembers",
+    "url": "https://suno.com/song/c15b5fae-abff-4ca1-8a7e-e5c8fcc4ebea",
+    "createdAt": "2026-09-20T18:28:40.488Z",
+    "durationSeconds": 281.08,
+    "genres": [
+      "progressive art rock",
+      "trip-hop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_c15b5fae-abff-4ca1-8a7e-e5c8fcc4ebea.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_c15b5fae-abff-4ca1-8a7e-e5c8fcc4ebea.jpeg",
+    "embedUrl": "https://suno.com/embed/c15b5fae-abff-4ca1-8a7e-e5c8fcc4ebea",
+    "model": "v6",
+    "lyrics": "[Intro: vinyl crackle, Rhodes, distant synth]\n\nThere was a lake without a map,\nfiles in the dark, no way back.\nParquet sleeping row by row,\nbut who changed what? We didn’t know.\n\n[Verse 1: low vocal, trip-hop beat]\n\nIceberg puts a table on the sea,\nmetadata becomes the memory.\nSnapshots mark each state in time,\nmanifests organize the lines.\n\nNot a database, not storage itself,\nan open table format on the shelf.\nSpark can write, Dremio can read,\nFlink can stream at whatever speed.\n\n[Pre-Chorus: bass grows, 7/8]\n\nA snapshot points to manifest lists,\nmanifests point where data exists.\nChange the metadata, not every file,\natomic commits make changes worthwhile.\n\n[Chorus: full art-rock lift]\n\nIceberg!\nStructure above the lake.\nIceberg!\nEvery snapshot records what changed.\nTime travel backward, evolve the scheme,\none open table for every engine.\n\n[Verse 2: sparse breakbeat]\n\nPartition columns need not show,\nhidden transforms decide where rows go.\nAdd a field without rewriting the past,\nschema evolution built to last.\n\nDeletes can merge, updates arrive,\nconcurrent writers stay alive.\nOptimizers rewrite files below,\nwhile the logical table continues to flow.\n\n[Bridge: odd meter, synth sequence]\n\nCatalog!\nWhere does the table live?\nMetadata!\nWhat snapshot does it give?\n\nCatalog points to metadata,\nmetadata points through the tree,\nmanifest lists to manifests,\ndata files underneath.\n\n[Breakdown: whispered]\n\nObject storage holds the bytes.\nIceberg holds the truth about the bytes.\n\n[Final Chorus: huge guitars and harmonies]\n\nIceberg!\nNo engine owns the lake.\nIceberg!\nOpen tables break the chains.\nBI, streaming, ML in flight,\ndifferent engines, shared state right.\n\n[Outro: Rhodes, tape echo]\n\nFiles become tables.\nTables become history.\nHistory becomes portable.\n\nAnd the lake remembers."
+  },
+  {
+    "id": "f6fc747d-bf89-4550-8ea9-e1e7c29309c2",
+    "title": "Hold Me Close to the Ordinary",
+    "url": "https://suno.com/song/f6fc747d-bf89-4550-8ea9-e1e7c29309c2",
+    "createdAt": "2026-09-20T16:35:19.730Z",
+    "durationSeconds": 275.6,
+    "genres": [
+      "Techno",
+      "EDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f6fc747d-bf89-4550-8ea9-e1e7c29309c2.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f6fc747d-bf89-4550-8ea9-e1e7c29309c2.jpeg",
+    "embedUrl": "https://suno.com/embed/f6fc747d-bf89-4550-8ea9-e1e7c29309c2",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe kettle clicks at quarter past six\nYour old coat hangs by the radiator\nI used to rush through mornings like this\nNow every minute feels like a favor\n\nThe rent is paid, the hallway light\nStill flickers when the weather turns\nYou laugh and say we'll fix it right\nI watch the little things I never learned\n\n[Pre-Chorus]\nI kept a hand on tomorrow\nWhile today slipped through my sleeve\nNow I can feel the room getting smaller\nAnd I don't want to leave\n\n[Chorus]\nHold me close to the ordinary\nThe chipped blue cup, the hallway sound\nIf this is all we get to carry\nLet me carry it now\n\nNo golden finish, no grand warning\nJust your warm hand inside of mine\nI am learning how to love this morning\nBefore it crosses the line\n\n[Verse 2]\nThe garden leans against the fence\nTomatoes split beneath the August heat\nYou call the harvest an accident\nI call it proof that we were here to eat\n\nThe neighbor's dog barks at the train\nA paper bill curls under the door\nI used to dream of escaping\nNow I memorize the floor\n\n[Pre-Chorus]\nI kept a list of better places\nAnd measured every room by what it lacked\nBut the life I nearly wasted\nIs the life I want back\n\n[Chorus]\nHold me close to the ordinary\nThe chipped blue cup, the hallway sound\nIf this is all we get to carry\nLet me carry it now\n\nNo golden finish, no grand warning\nJust your warm hand inside of mine\nI am learning how to love this morning\nBefore it crosses the line\n\n[Bridge]\nWhen the paint peels from the window frame\nWhen the cupboard door won't close\nWhen your hair turns silver at the temples\nI will still know where home goes\n\nLet the clock keep taking pieces\nLet the daylight thin and change\nI won't bargain with the leaving\nI will bless what remains\n\n[Final Chorus]\nHold me close to the ordinary\nThe chipped blue cup, the hallway sound\nIf this is all we get to carry\nLet me carry it now\n\nNo golden finish, no grand warning\nJust your warm hand inside of mine\nI am learning how to love this morning\nBefore it crosses the line\n\n[Outro]\nThe kettle clicks, the room grows dim\nYou say my name, I answer it\nI had the whole world asking in\nThen found a life worth staying with"
+  },
+  {
+    "id": "bdaac0a9-a020-4a70-b9b5-57de48d1c08d",
+    "title": "Hold the Hour",
+    "url": "https://suno.com/song/bdaac0a9-a020-4a70-b9b5-57de48d1c08d",
+    "createdAt": "2026-09-20T16:27:40.717Z",
+    "durationSeconds": 230.36,
+    "genres": [
+      "soul",
+      "bubblegum pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_bdaac0a9-a020-4a70-b9b5-57de48d1c08d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_bdaac0a9-a020-4a70-b9b5-57de48d1c08d.jpeg",
+    "embedUrl": "https://suno.com/embed/bdaac0a9-a020-4a70-b9b5-57de48d1c08d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI leave the porch light on\nThough morning’s coming fast\nThe coffee warms my hands\nI wish this hour could last\n\nYour jacket on the chair\nThe blue cup by the sink\nI used to rush right past\nNow I stop and look and think\n\n[Pre-Chorus]\nEvery little ordinary thing\nIs wearing borrowed time\nSo let me hold it while it’s here\nBefore it slips behind\n\n[Chorus]\nI’m learning how to love this life\nThe way it is tonight\nThe cracked-up steps, the crowded room\nThe way your hand fits mine\nI’m learning how to love this life\nBefore it says goodbye\nIf it is leaving, let it leave\nWith me still by its side\n\n[Verse 2]\nThe season turns the leaves\nThe hallway loses gold\nThe picture on the wall\nWill fade before we know\n\nYou laugh with your head back\nI count the little sounds\nThe world keeps moving on\nBut I don’t want to miss it now\n\n[Pre-Chorus]\nEvery little ordinary thing\nCan vanish in a breath\nSo let me meet it wide awake\nAnd thank it while it’s left\n\n[Chorus]\nI’m learning how to love this life\nThe way it is tonight\nThe cracked-up steps, the crowded room\nThe way your hand fits mine\nI’m learning how to love this life\nBefore it says goodbye\nIf it is leaving, let it leave\nWith me still by its side\n\n[Bridge]\nNot every ending needs a fight\nNot every change is wrong\nI can be grateful for the room\nAnd grateful it was home\n\n[Final Chorus]\nI’m learning how to love this life\nThe way it is tonight\nThe worn-out days, the open door\nThe last turn of the light\nI’m learning how to love this life\nBefore it says goodbye\nIf it is leaving, let it leave\nWith me still by its side\n\n[Outro]\nI’ll hold the hour gently\nI’ll hold the hour gently\nWhile it’s mine"
+  },
+  {
+    "id": "5a9a66c5-3c17-4539-882a-5ad05b6b2455",
+    "title": "Unfinished View",
+    "url": "https://suno.com/song/5a9a66c5-3c17-4539-882a-5ad05b6b2455",
+    "createdAt": "2026-09-20T16:18:15.990Z",
+    "durationSeconds": 186.8,
+    "genres": [
+      "lo-fi hip hop",
+      "chillhop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5a9a66c5-3c17-4539-882a-5ad05b6b2455.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5a9a66c5-3c17-4539-882a-5ad05b6b2455.jpeg",
+    "embedUrl": "https://suno.com/embed/5a9a66c5-3c17-4539-882a-5ad05b6b2455",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe rent is paid, the kettle sings\nA clean white shirt, a drawer of things\nThere’s food enough for one more plate\nStill I’m awake, still I can’t wait\n\nThe room is warm, the window’s shut\nI count the good, then add it up\nA little saved, a little time\nA little dream I call mine\n\n[Pre-Chorus]\nI know I’m lucky, I know it’s true\nBut wanting more keeps pulling through\n\n[Chorus]\nI’ve got more than I once knew how to name\nStill I’m reaching past the frame\nFull hands, open eyes, unfinished view\nI’m grateful, but I’m dreaming too\n\n[Verse 2]\nThe cupboard’s full, the train is late\nI take the long way past the gate\nA photograph beside the bed\nOf somewhere I have never been yet\n\nI hear my friends say, “You’re doing fine”\nI smile and let the words land softly this time\nBut underneath that easy tune\nThere’s a little room I want to move into soon\n\n[Pre-Chorus]\nI won’t pretend the good is small\nI just don’t think it’s all\n\n[Chorus]\nI’ve got more than I once knew how to name\nStill I’m reaching past the frame\nFull hands, open eyes, unfinished view\nI’m grateful, but I’m dreaming too\n\n[Bridge]\nMaybe wanting isn’t proof I’m poor\nMaybe hope is what the heart is for\nI can hold this life and still look ahead\nKeep the present, chase the thread\n\n[Final Chorus]\nI’ve got more than I once knew how to name\nStill I’m reaching past the frame\nFull hands, open eyes, unfinished view\nI’m grateful, but I’m dreaming too\n\n[Outro]\nThe kettle cools, the evening bends\nI have enough, and I begin again"
+  },
+  {
+    "id": "a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df",
+    "title": "A Little Dream",
+    "url": "https://suno.com/song/a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df",
+    "createdAt": "2026-09-20T16:18:15.989Z",
+    "durationSeconds": 208.68,
+    "genres": [
+      "lo-fi hip hop",
+      "chillhop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df.jpeg",
+    "embedUrl": "https://suno.com/embed/a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wake up with a roof that never leaks\nA little more than I thought I’d keep\nCoffee cooling beside the sink\nStill I’m drawing castles in the margins of the week\n\nThe rent is paid, the fridge is full\nI’ve got a coat for when the weather turns cruel\nBut every time I reach a quiet room\nSome brand-new wish comes humming through\n\n[Pre-Chorus]\nI know the weight of what I hold\nStill my hands keep reaching past the gold\n\n[Chorus]\nI’m doing fine, I’m doing fine\nGot more than I once imagined mine\nBut there’s a door behind the door\nAnd I keep wondering what the world has in store\nI’m doing fine, I’m doing fine\nStill a little dream is taking up my mind\n\n[Verse 2]\nA good friend calls, I let it ring\nThen feel bad about the smallest things\nThere’s clean white space across my page\nYet I keep adding another stage\n\nI bought the chair I used to want\nNow I’m measuring the room it’s in against\nA picture from a magazine\nOf some impossible in-between\n\n[Pre-Chorus]\nMaybe wanting isn’t proof I’m lost\nMaybe dreams still grow after the cost\n\n[Chorus]\nI’m doing fine, I’m doing fine\nGot more than I once imagined mine\nBut there’s a door behind the door\nAnd I keep wondering what the world has in store\nI’m doing fine, I’m doing fine\nStill a little dream is taking up my mind\n\n[Bridge]\nSo I’ll thank the hands that helped me here\nLet the future come without pulling it near\nKeep one small hope, not a hundred demands\nLeave some room for the life in my hands\n\n[Final Chorus]\nI’m doing fine, I’m doing fine\nMore than enough for this moment in time\nIf another dream knocks at the door\nI’ll let it in, but I won’t call it war\nI’m doing fine, I’m doing fine\nStill reaching gently, still learning to be mine\n\n[Outro]\nThe room is warm, the window’s wide\nI’ve got somewhere good to set my eyes"
+  },
+  {
+    "id": "1a44b01e-980a-4baf-be13-2e130ec9c4ad",
+    "title": "Nothing on My Calendar",
+    "url": "https://suno.com/song/1a44b01e-980a-4baf-be13-2e130ec9c4ad",
+    "createdAt": "2026-09-20T16:05:13.284Z",
+    "durationSeconds": 259.96,
+    "genres": [
+      "prog rock",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1a44b01e-980a-4baf-be13-2e130ec9c4ad.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1a44b01e-980a-4baf-be13-2e130ec9c4ad.jpeg",
+    "embedUrl": "https://suno.com/embed/1a44b01e-980a-4baf-be13-2e130ec9c4ad",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe alarm gave up before I did\nPale gold spilling through the blinds\nNo appointment written on the fridge\nNo little race I have to win this time\n\nCoffee cooling by the window\nToast crumbs scattered on the plate\nI can hear the building breathing\nAnd I don't have to be somewhere late\n\n[Pre-Chorus]\nLet the minutes lose their shoes\nLet them wander where they choose\n\n[Chorus]\nNothing on my calendar, everything feels right\nBare feet on the kitchen tile, morning taking flight\nIf the whole day opens wide, I'll meet it as it comes\nNothing on my calendar, and I'm already enough\nAlready enough\n\n[Verse 2]\nI take the long way to the corner\nJust to watch the bakery lift its gate\nA little dog pulls at a blue lead\nTwo old friends argue kindly by the café\n\nI buy a peach and split it slowly\nJuice running down my thumb\nThere are places I could be going\nBut this is where the good day comes from\n\n[Pre-Chorus]\nLet the minutes lose their shoes\nLet them wander where they choose\n\n[Chorus]\nNothing on my calendar, everything feels right\nBare feet on the kitchen tile, morning taking flight\nIf the whole day opens wide, I'll meet it as it comes\nNothing on my calendar, and I'm already enough\nAlready enough\n\n[Bridge]\nMaybe joy is not a doorway\nMaybe it's the chair beneath the tree\nMaybe all the room I asked for\nWas a little room to let myself be\n\nSo I'll leave the phone face down there\nLet the afternoon arrive\nNo grand plan, no perfect answer\nJust this ordinary, excellent life\n\n[Final Chorus]\nNothing on my calendar, everything feels right\nBare feet on the kitchen tile, morning taking flight\nIf the whole day opens wide, I'll meet it as it comes\nNothing on my calendar, and I'm already enough\n\nNothing on my calendar, hear the quiet turning gold\nI don't need to fill the hour for the hour to hold\nIf the whole day opens wide, I'll meet it as it comes\nNothing on my calendar, and I'm already enough\nAlready enough\n\n[Outro]\nNo plan, no rush\nA little day is more than enough"
+  },
+  {
+    "id": "15dd75d7-a4d9-46fe-a0eb-451fde0e5bce",
+    "title": "Sweet Empty Day",
+    "url": "https://suno.com/song/15dd75d7-a4d9-46fe-a0eb-451fde0e5bce",
+    "createdAt": "2026-09-20T16:02:48.365Z",
+    "durationSeconds": 196.68,
+    "genres": [
+      "Phonk",
+      "Memphis phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_15dd75d7-a4d9-46fe-a0eb-451fde0e5bce.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_15dd75d7-a4d9-46fe-a0eb-451fde0e5bce.jpeg",
+    "embedUrl": "https://suno.com/embed/15dd75d7-a4d9-46fe-a0eb-451fde0e5bce",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nSunlight stretches on the wooden floor\nNowhere I need to be, nothing to keep score\nCoffee in my favorite cup, drifting slow\nNowhere on the map that I have to go\n\n[Pre-Chorus]\nJust letting the hours roll by\nWatching the clouds in the sky\n\n[Chorus]\nOh, what a sweet, empty day\nNothing in my way\nJust breathing the morning air\nNo rush, no trouble anywhere\nFloating on a lazy wave\nThis is all the space I crave\n\n[Verse 2]\nSweatpants on and the phone turned off\nListening to the wind through the eaves aloft\nTurn a page of a book I started long ago\nWatching the afternoon amber glow\n\n[Chorus]\nOh, what a sweet, empty day\nNothing in my way\nJust breathing the morning air\nNo rush, no trouble anywhere\nFloating on a lazy wave\nThis is all the space I crave\n\n[Bridge]\nThe world is spinning fast out there\nI let it go, I just don't care\nDoing nothing is a work of art\nRight here, right now, right from the heart\n\n[Outro]\nJust letting it be\nJust you and me\n(Or just me and the quiet)\nSweet empty day\n[Fade Out]"
+  },
+  {
+    "id": "65be4b7c-52fc-4fcf-941b-a74d24b2b4d7",
+    "title": "Take It Easy",
+    "url": "https://suno.com/song/65be4b7c-52fc-4fcf-941b-a74d24b2b4d7",
+    "createdAt": "2026-09-20T16:02:48.365Z",
+    "durationSeconds": 248.36,
+    "genres": [
+      "Memphis phonk",
+      "alternative pop",
+      "trip-hop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_65be4b7c-52fc-4fcf-941b-a74d24b2b4d7.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_65be4b7c-52fc-4fcf-941b-a74d24b2b4d7.jpeg",
+    "embedUrl": "https://suno.com/embed/65be4b7c-52fc-4fcf-941b-a74d24b2b4d7",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWake up slow, no alarm to chase\nSun on the pillow, a stripe across my face\nPhone stays facedown by the coffee stain\nNothing on the calendar, nothing to explain\n\nI pull on yesterday's shirt, let the kettle complain\nToast gets dark but I eat it the same\nBare feet tapping on the kitchen tile\nI got nowhere to be for a little while\n\n[Pre-Chorus]\nNo green light, no finish line\nJust your laugh crossing mine\nLet the whole world hurry past\nWe found a day that doesn't ask\n\n[Chorus]\nTake it easy, take it easy\nLet the morning roll right through\nNo big plans, no reason needed\nAll I want is time with you\nTake it easy, take it easy\nLeave the checklist in the drawer\nIf this is all we get today\nI don't need a little more\n\n[Verse 2]\nWe buy two peaches from the corner stand\nJuice on our wrists, your hand in my hand\nMiss the bus and call it luck\nSit on the curb while the afternoon wakes up\n\nYou point at a dog in a yellow raincoat\nI laugh so hard that I lose my note\nWe take the long way past the laundromat\nA day this good doesn't need a photograph\n\n[Pre-Chorus]\nNo green light, no finish line\nJust your laugh crossing mine\nLet the whole world hurry past\nWe found a day that doesn't ask\n\n[Chorus]\nTake it easy, take it easy\nLet the morning roll right through\nNo big plans, no reason needed\nAll I want is time with you\nTake it easy, take it easy\nLeave the checklist in the drawer\nIf this is all we get today\nI don't need a little more\n\n[Bridge]\nMaybe joy is small enough\nTo fit inside a paper cup\nMaybe time is kind when we\nStop trying to make it something else\n\nStay right here, don't turn it into gold\nDon't make a promise, don't make it hold\nYour shoulder warm against my sleeve\nThat's plenty for a day like these\n\n[Final Chorus]\nTake it easy, take it easy\nLet the morning roll right through\nNo big plans, no reason needed\nAll I want is time with you\nTake it easy, take it easy\nLeave the checklist in the drawer\nIf this is all we get today\nI don't need a little more\n\n[Outro]\nNo big plans, no need to know\nWe let the afternoon move slow\nTake it easy, take it easy\nThat is all I want today"
+  },
+  {
+    "id": "759cdb21-dccb-431d-80c7-eaa31da509c3",
+    "title": "Nowhere to Be",
+    "url": "https://suno.com/song/759cdb21-dccb-431d-80c7-eaa31da509c3",
+    "createdAt": "2026-09-20T15:54:17.080Z",
+    "durationSeconds": 249.12,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "trip hop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_759cdb21-dccb-431d-80c7-eaa31da509c3.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_759cdb21-dccb-431d-80c7-eaa31da509c3.jpeg",
+    "embedUrl": "https://suno.com/embed/759cdb21-dccb-431d-80c7-eaa31da509c3",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI woke up late, the kettle had cooled\nNo little race, no list to move\nCurtains half-open, breakfast for two\nMe and the morning with nothing to prove\n\n[Pre-Chorus]\nThe phone can wait by the bedside glass\nLet the quiet take its sweet old time\nNo need to turn this into something grand\nToday is already mine\n\n[Chorus]\nI got nowhere to be, nowhere to be\nAnd that's exactly where I want to be\nA little sun on the kitchen floor\nI couldn't ask this minute for more\nI got nowhere to be, nowhere to be\nCome sit beside me and breathe easy\nIf the whole day wanders, let it roam\nThe best place on earth is home\n\n[Verse 2]\nI pulled on jeans from the bedroom chair\nFound yesterday's change and left it there\nToast went golden, the radio missed\nA crooked little song I couldn't resist\n\n[Pre-Chorus]\nWe can take the long way to the corner shop\nCount the windows, watch the buses pass\nNo need to turn this into something grand\nLet the ordinary last\n\n[Chorus]\nI got nowhere to be, nowhere to be\nAnd that's exactly where I want to be\nA little sun on the kitchen floor\nI couldn't ask this minute for more\nI got nowhere to be, nowhere to be\nCome sit beside me and breathe easy\nIf the whole day wanders, let it roam\nThe best place on earth is home\n\n[Bridge]\nMaybe the clock keeps making its case\nBut I like the look of this unhurried place\nOne cup, two chairs, your sleeve against mine\nA day with no headline still feels just fine\n\n[Final Chorus]\nI got nowhere to be, nowhere to be\nAnd that's exactly where I want to be\nA little sun on the kitchen floor\nI couldn't ask this minute for more\nI got nowhere to be, nowhere to be\nCome sit beside me and breathe easy\nIf the whole day wanders, let it roam\nThe best place on earth is home\n\n[Outro]\nNowhere to be\nNothing to prove\nStay here with me\nLet the day move"
+  },
+  {
+    "id": "164d2411-a6cc-4395-b848-0f406be098a8",
+    "title": "Nowhere to Go",
+    "url": "https://suno.com/song/164d2411-a6cc-4395-b848-0f406be098a8",
+    "createdAt": "2026-09-20T15:51:24.954Z",
+    "durationSeconds": 228.76,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "trip hop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_164d2411-a6cc-4395-b848-0f406be098a8.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_164d2411-a6cc-4395-b848-0f406be098a8.jpeg",
+    "embedUrl": "https://suno.com/embed/164d2411-a6cc-4395-b848-0f406be098a8",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nMorning spills across the curtain\nNo alarm, no place to be\nKettle clicks beside the window\nA little world belongs to me\n\n[Pre-Chorus]\nI could make a list of errands\nI could chase the hours around\nBut the day is asking softly\nWhat if staying here feels good now?\n\n[Chorus]\nI’ve got nowhere, nowhere to go\nAnd I like it, I like it so\nLet the hours loosen their hold\nWarm cup, bare feet, windows open\nI’ve got nowhere, nowhere to go\nAnd the whole day’s mine to know\nNo big plan, no need to run\nLook at me, I’m having fun\n\n[Verse 2]\nToast crumbs gather on the counter\nBlue shirt hanging from a chair\nRead three pages, lose the bookmark\nFind a song and leave it there\n\n[Pre-Chorus]\nMaybe later I’ll decide it\nMaybe later never comes\nThere’s a sweetness in the waiting\nWhen I’m not becoming someone\n\n[Chorus]\nI’ve got nowhere, nowhere to go\nAnd I like it, I like it so\nLet the hours loosen their hold\nWarm cup, bare feet, windows open\nI’ve got nowhere, nowhere to go\nAnd the whole day’s mine to know\nNo big plan, no need to run\nLook at me, I’m having fun\n\n[Bridge]\nIf you call, I might answer\nIf you don’t, I’ll be alright\nThere’s a peach bowl on the table\nAnd a slow parade of light\nI don’t need a better reason\nThan the one I have today\nEvery ordinary minute\nKnows exactly how to stay\n\n[Final Chorus]\nI’ve got nowhere, nowhere to go\nAnd I like it, I like it so\nLet the hours loosen their hold\nWarm cup, bare feet, windows open\nI’ve got nowhere, nowhere to go\nAnd the whole day’s mine to know\nNo big plan, no need to run\nLook at me, I’m having fun\n\n[Outro]\nNowhere to go\nNothing to prove\nA whole day wide\nAnd room to move"
+  },
+  {
+    "id": "d54e0c2d-3f9b-4137-9428-fa645100a035",
+    "title": "Fear Is a Doorway",
+    "url": "https://suno.com/song/d54e0c2d-3f9b-4137-9428-fa645100a035",
+    "createdAt": "2026-09-20T15:42:40.079Z",
+    "durationSeconds": 212,
+    "genres": [
+      "Rock",
+      "glitch prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d54e0c2d-3f9b-4137-9428-fa645100a035.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d54e0c2d-3f9b-4137-9428-fa645100a035.jpeg",
+    "embedUrl": "https://suno.com/embed/d54e0c2d-3f9b-4137-9428-fa645100a035",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI map every danger\nIn the back of my head\nCount all the bad endings\nBefore they are said\n\nI carry the weather\nIn a room with no rain\nTurn a small hesitation\nInto a locked-in chain\n\n[Pre-Chorus]\nBut the walls I keep measuring\nAre only drawn in chalk\nAnd the voice that says stop me\nIs scared of where I’ll walk\n\n[Chorus]\nAll of this fear is a doorway\nAll of this weight can come loose\nI’ve been standing in my own way\nBlocking the morning from view\n\nI don’t have to solve every thunder\nI don’t have to bury the blue\nThere’s a bright little break in the pressure\nAnd I’m walking straight through\n\n[Verse 2]\nI replay old failures\nLike coins in my hand\nPolish every sharp edge\nTill I can’t understand\n\nThe sadness knows my address\nThe frustration knows my name\nBut neither one gets to steer me\nJust because they came\n\n[Pre-Chorus]\nI feel the floor start shifting\nUnder the rules I made\nA thought can be a warning\nWithout becoming a cage\n\n[Chorus]\nAll of this fear is a doorway\nAll of this weight can come loose\nI’ve been standing in my own way\nBlocking the morning from view\n\nI don’t have to solve every thunder\nI don’t have to bury the blue\nThere’s a bright little break in the pressure\nAnd I’m walking straight through\n\n[Bridge]\nLet the fear sit beside me\nLet the sadness speak low\nLet the anger burn smaller\nThan the distance I’ll go\n\nI can feel every fracture\nAnd still choose what comes next\nThe path was never missing\nI was reading the wreck\n\n[Final Chorus]\nAll of this fear is a doorway\nAll of this weight can come loose\nI’ve been standing in my own way\nBlocking the morning from view\n\nNow the room fills with daylight\nNow the air tastes new\nThere’s a bright little break in the pressure\nAnd I’m walking straight through\n\n[Outro]\nStraight through\nI’m walking straight through\nThe path is here\nThe sun gets through"
+  },
+  {
+    "id": "da9b0020-946d-43d2-99db-e10f4bf3e231",
+    "title": "A Little Room",
+    "url": "https://suno.com/song/da9b0020-946d-43d2-99db-e10f4bf3e231",
+    "createdAt": "2026-09-20T15:42:33.571Z",
+    "durationSeconds": 234.8,
+    "genres": [
+      "prog rock",
+      "trip-hop",
+      "glitch"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_da9b0020-946d-43d2-99db-e10f4bf3e231.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_da9b0020-946d-43d2-99db-e10f4bf3e231.jpeg",
+    "embedUrl": "https://suno.com/embed/da9b0020-946d-43d2-99db-e10f4bf3e231",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI map every danger in the back of my head\nPin each little warning above my bed\nSadness folds laundry, frustration pays rent\nFear keeps a chair by the window again\n\nI read every signal, I circle each doubt\nBuild a locked hallway and call it a route\nBut somewhere beneath all the noise I can feel\nA door with a handle, a world that's still real\n\n[Pre-Chorus]\nAll these alarms have a voice\nBut they don't get to make the choice\n\n[Chorus]\nMove it, move it, let the daylight through\nThe walls in my mind aren't telling the truth\nI thought I was trapped in the shape of the night\nBut the sun was waiting on the other side\nMove it, move it, make a little room\nThe fear gets smaller when I face the room\nI don't need to fix every scar tonight\nI just need to step toward the light\n\n[Verse 2]\nI carry old failures in jars on a shelf\nLabel them proof that I can't trust myself\nFrustration knocks hard with a fist made of stone\nSadness says, stay here, at least you're alone\n\nThen morning puts gold on the chipped kitchen tile\nA train leaves the station, I wait for a while\nThe ache is still with me, but less like a chain\nMore like a cloud that can open again\n\n[Pre-Chorus]\nAll these alarms have a voice\nBut they don't get to make the choice\n\n[Chorus]\nMove it, move it, let the daylight through\nThe walls in my mind aren't telling the truth\nI thought I was trapped in the shape of the night\nBut the sun was waiting on the other side\nMove it, move it, make a little room\nThe fear gets smaller when I face the room\nI don't need to fix every scar tonight\nI just need to step toward the light\n\n[Bridge]\nI can hear the doubt without handing it the keys\nI can feel the weight and still bend my knees\nOne breath, one step, one hand on the frame\nThe path was covered, but it never changed\n\n[Final Chorus]\nMove it, move it, let the daylight through\nThe walls in my mind aren't telling the truth\nI thought I was trapped in the shape of the night\nBut the sun was waiting on the other side\nMove it, move it, make a little room\nThe fear gets smaller when I face the room\nI don't need to fix every scar tonight\nI just need to step toward the light\n\n[Outro]\nA little room\nA little light\nI take the step\nAnd morning arrives"
+  },
+  {
+    "id": "82b7adb9-df9d-4b46-8cff-28f9b5847695",
+    "title": "Open the Blinds",
+    "url": "https://suno.com/song/82b7adb9-df9d-4b46-8cff-28f9b5847695",
+    "createdAt": "2026-09-20T15:41:26.168Z",
+    "durationSeconds": 201.16,
+    "genres": [
+      "prog rock",
+      "glitch"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_82b7adb9-df9d-4b46-8cff-28f9b5847695.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_82b7adb9-df9d-4b46-8cff-28f9b5847695.jpeg",
+    "embedUrl": "https://suno.com/embed/82b7adb9-df9d-4b46-8cff-28f9b5847695",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI map every danger\nIn the back of my head\nDraw a line through the doorway\nThen I sleep in the bed\n\nI keep feeding the worry\nWith a mouthful of doubt\nBuild a wall from the questions\nThen complain I can't get out\n\n[Pre-Chorus]\nEvery alarm has a reason\nEvery bruise has a name\nBut the lock on the window\nIs turning inside my frame\n\n[Chorus]\nOpen the blinds, let it in\nLet the good day begin\nAll of this fear was a gate\nI kept mistaking for fate\nOpen the blinds, step through\nThere is a sky waiting too\nI was the wall, I was the weight\nNow I am moving past the gate\n\n[Verse 2]\nI wore sadness like armor\nKept it close to my chest\nTurned a minute of silence\nInto proof of the worst\n\nFrustration kept knocking\nI kept calling it noise\nTill I heard underneath it\nA small, unfinished choice\n\n[Pre-Chorus]\nEvery alarm has a reason\nEvery bruise has a name\nBut the lock on the window\nIs turning inside my frame\n\n[Chorus]\nOpen the blinds, let it in\nLet the good day begin\nAll of this fear was a gate\nI kept mistaking for fate\nOpen the blinds, step through\nThere is a sky waiting too\nI was the wall, I was the weight\nNow I am moving past the gate\n\n[Bridge]\nI can feel the old room\nReaching out for my sleeve\nBut the floor is still steady\nAnd my lungs still believe\n\nNo thunderous answer\nNo sign in the street\nJust one hand on the handle\nAnd the ground under my feet\n\n[Final Chorus]\nOpen the blinds, let it in\nLet the good day begin\nAll of this fear was a gate\nI kept mistaking for fate\nOpen the blinds, step through\nThere is a sky waiting too\nI was the wall, I was the weight\nNow I am moving past the gate\n\n[Outro]\nPast the gate\nPast the gate\nThe day is already on its way"
+  },
+  {
+    "id": "43d0f70c-abb9-49cb-b70c-3213d512ad43",
+    "title": "Let the Weather Move Through",
+    "url": "https://suno.com/song/43d0f70c-abb9-49cb-b70c-3213d512ad43",
+    "createdAt": "2026-09-20T13:28:48.834Z",
+    "durationSeconds": 253.32,
+    "genres": [
+      "prog rock",
+      "art-rock",
+      "glitch"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_43d0f70c-abb9-49cb-b70c-3213d512ad43.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_43d0f70c-abb9-49cb-b70c-3213d512ad43.jpeg",
+    "embedUrl": "https://suno.com/embed/43d0f70c-abb9-49cb-b70c-3213d512ad43",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nSome days arrive with a weight in the room\nNo bad news, no reason, no change\nI wash one cup and leave it by the sink\nLet the afternoon stay strange\n\nI answer your message with a single word\nThen set the phone face down\nNothing broke, but something in me\nKeeps asking not to be found\n\n[Pre-Chorus]\nI don't need a name for it\nI don't need to know\nI can let the feeling sit\nUntil it starts to go\n\n[Chorus]\nIf I feel sad for no clear reason\nI’ll let the weather move through me\nNo fixing it, no perfect meaning\nJust wait until I can breathe\n\nIf I feel low when the day is ordinary\nI won’t turn it into a verdict\nI’ll keep the light on in the kitchen\nAnd wait for the room to lift\n\n[Verse 2]\nThe laundry hums behind the bathroom door\nA blue shirt hangs from the chair\nI watch the minute hand cross the wall\nAnd practice staying there\n\nYou ask me if I want to talk tonight\nI say, “Maybe, not yet”\nSome kinds of hurt are passing trains\nNot promises I have to keep\n\n[Pre-Chorus]\nI don't need a name for it\nI don't need to know\nI can let the feeling sit\nUntil it starts to go\n\n[Chorus]\nIf I feel sad for no clear reason\nI’ll let the weather move through me\nNo fixing it, no perfect meaning\nJust wait until I can breathe\n\nIf I feel low when the day is ordinary\nI won’t turn it into a verdict\nI’ll keep the light on in the kitchen\nAnd wait for the room to lift\n\n[Bridge]\nMaybe morning will be easier\nMaybe it will take a while\nI can leave the door unlocked\nFor one small returning smile\n\nI am more than this hour\nMore than the thought in my head\nThe heart can lose its balance\nAnd find the floor again\n\n[Final Chorus]\nIf I feel sad for no clear reason\nI’ll let the weather move through me\nNo fixing it, no perfect meaning\nJust wait until I can breathe\n\nIf I feel low when the day is ordinary\nI won’t turn it into a verdict\nI’ll keep the light on in the kitchen\nAnd wait for the room to lift\n\n[Outro]\nThe cup is still beside the sink\nThe blue shirt still hangs there\nNothing has to change this minute\nI’m here, and I can bear"
+  },
+  {
+    "id": "f522c563-bd4c-4a61-9e8a-13fc8488703b",
+    "title": "Permission to Breathe",
+    "url": "https://suno.com/song/f522c563-bd4c-4a61-9e8a-13fc8488703b",
+    "createdAt": "2026-09-20T13:19:38.509Z",
+    "durationSeconds": 294.24,
+    "genres": [
+      "Art Rock",
+      "Progressive Rock",
+      "Trap"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f522c563-bd4c-4a61-9e8a-13fc8488703b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f522c563-bd4c-4a61-9e8a-13fc8488703b.jpeg",
+    "embedUrl": "https://suno.com/embed/f522c563-bd4c-4a61-9e8a-13fc8488703b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI learned the shape of a borrowed smile\nHeld it in place for a thousand miles\nMeasured my words by the room's applause\nCalled it kindness, called it a cause\n\nI kept my hands where they couldn't offend\nBent every want till it learned to pretend\nBut every good deed left me smaller inside\nA quiet little life with nowhere to hide\n\n[Pre-Chorus]\nI can care without carrying\nEvery verdict to my bed\nI can leave a door unopened\nWhen the room lives in my head\n\n[Chorus]\nI am done asking permission to breathe\nDone making a cage look like something I need\nI won't hurt you, but I won't disappear\nMy life is mine, and I'm finally here\n\nLet the old rules rattle and fall\nI don't owe my heart to them all\nIf joy comes knocking, I'll open the door\nI was surviving—I'm living once more\n\n[Verse 2]\nThere were names for the way I should stand\nA proper little map drawn across my hands\nWear the right face, choose the safe road\nSmile when the weight gets too heavy to hold\n\nI know the line between freedom and blame\nI won't turn my peace into somebody's pain\nBut I won't confuse being good with being gone\nOr trade my morning for a script written wrong\n\n[Pre-Chorus]\nI can listen without surrendering\nI can change when I am wrong\nBut the voice that says be smaller\nDoesn't get to write my song\n\n[Chorus]\nI am done asking permission to breathe\nDone making a cage look like something I need\nI won't hurt you, but I won't disappear\nMy life is mine, and I'm finally here\n\nLet the old rules rattle and fall\nI don't owe my heart to them all\nIf joy comes knocking, I'll open the door\nI was surviving—I'm living once more\n\n[Bridge]\nMaybe they will call it selfish\nMaybe they will call it strange\nI have spent too long mistaking\nTheir discomfort for my shame\n\nKeep your blessing, keep your warning\nKeep the future you designed\nI will meet the day as myself now\nWith both hands open, both eyes wide\n\n[Final Chorus]\nI am done asking permission to breathe\nDone making a cage look like something I need\nI won't hurt you, but I won't disappear\nMy life is mine, and I'm finally here\n\nLet the old rules rattle and fall\nI don't owe my heart to them all\nIf joy comes knocking, I'll open the door\nI was surviving—I'm living once more\n\n[Outro]\nI can be kind and still be free\nI can choose what belongs to me\nNo more borrowed life, no more borrowed name\nI walk toward joy without apology or shame"
+  },
+  {
+    "id": "3a4224fe-5f46-4a1c-92d3-50f48a090779",
+    "title": "Porch Light On",
+    "url": "https://suno.com/song/3a4224fe-5f46-4a1c-92d3-50f48a090779",
+    "createdAt": "2026-09-20T13:01:56.307Z",
+    "durationSeconds": 250,
+    "genres": [
+      "Phonk",
+      "dark trap"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3a4224fe-5f46-4a1c-92d3-50f48a090779.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3a4224fe-5f46-4a1c-92d3-50f48a090779.jpeg",
+    "embedUrl": "https://suno.com/embed/3a4224fe-5f46-4a1c-92d3-50f48a090779",
+    "model": "v6",
+    "lyrics": "[Intro]\nYou leave the porch light on\nI leave the window shut\n\n[Verse 1]\nI know the weight of your hand on my shoulder\nI know the meals you save when I come home later\nYou say my name like it belongs in your mouth\nI count the reasons you will figure me out\n\nI give away the coat off my back in December\nRemember your birthday, forget I was tender\nEvery small kindness comes back to my door\nI let it sit outside till I can't hear it anymore\n\n[Pre-Chorus]\nIf you mean it, why does my chest turn cold?\nIf I'm worth it, why can't I hold?\nI build a courtroom out of every room\nThen sentence your love before it can bloom\n\n[Chorus]\nDon't tell me you love me, I won't let it land\nIt slips through my fingers like water and sand\nI can give you the world, I can carry your pain\nThen look in your eyes and reject it again\n\nDon't tell me I'm worthy, don't call me your own\nI made a cathedral and slept in the stone\nAll of this love coming back to my door\nI keep saying thank you, then asking for more\n\n[Verse 2]\nI know the bus route you take after midnight\nI wait by the gate when the weather turns spiteful\nYou call me a shelter, I call it a debt\nI keep every promise and dodge every yes\n\nYour friends see the good that I bury for safety\nYou kiss my forehead, I flinch like you hate me\nI turn every blessing face down on the table\nThen act surprised when I say I am unable\n\n[Pre-Chorus]\nIf you mean it, why does my pulse run fast?\nIf I'm loved now, what about the past?\nI wear my guilt like a second skin\nLet every open hand become a sin\n\n[Chorus]\nDon't tell me you love me, I won't let it land\nIt slips through my fingers like water and sand\nI can give you the world, I can carry your pain\nThen look in your eyes and reject it again\n\nDon't tell me I'm worthy, don't call me your own\nI made a cathedral and slept in the stone\nAll of this love coming back to my door\nI keep saying thank you, then asking for more\n\n[Bridge]\nMaybe I learned love as something to earn\nA candle held out while I waited to burn\nMaybe the mirror has lied for so long\nI hear its voice even when it is gone\n\nYou don't have to prove it, you don't have to stay\nBut if you keep reaching, I might look your way\nNot because I finally know what I'm worth\nJust because your hands keep finding me first\n\n[Final Chorus]\nDon't tell me you love me—say it again\nI may let one syllable through in the end\nI can give you the world, still tremble and hide\nBut leave one small place for your love inside\n\nDon't tell me I'm worthy—I'm trying to hear\nThe words underneath every practiced fear\nAll of this love coming back to my door\nI open it slowly, and ask for no more\n\n[Outro]\nYou leave the porch light on\nI turn the handle once"
+  },
+  {
+    "id": "4a820b29-f9c3-448e-81b4-a1ef826b4b5d",
+    "title": "The Wanting Writes the Tale",
+    "url": "https://suno.com/song/4a820b29-f9c3-448e-81b4-a1ef826b4b5d",
+    "createdAt": "2026-09-20T13:00:35.711Z",
+    "durationSeconds": 232.76,
+    "genres": [
+      "Phonk",
+      "dark trap"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4a820b29-f9c3-448e-81b4-a1ef826b4b5d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4a820b29-f9c3-448e-81b4-a1ef826b4b5d.jpeg",
+    "embedUrl": "https://suno.com/embed/4a820b29-f9c3-448e-81b4-a1ef826b4b5d",
+    "model": "v6",
+    "lyrics": "[Intro]\nI drew the ending in a picture book\nGold in the frame, clean as a promise\nNow every page has a different look\nAnd the ink runs when I touch it\n\n[Verse 1]\nWhen I was small, I picked a castle\nFrom a cereal box and a bedroom wall\nPut my name beside the window\nSwore the little prince would never fall\n\nNow I count the locks before I sleep\nKeep the receipt for every dream\nOne hand on the wheel, one hand on the brake\nWondering how much a heart can take\n\n[Pre-Chorus]\nIf I get the thing I prayed for\nWill it ask me for another name?\nIf I build the room around me\nWill I recognize the cage?\n\n[Chorus]\nWas it meant to end this way?\nWith a crown that feels like weight\nI wanted more than I could hold\nNow the wanting writes the tale\n\nHappy ever after, fading at the edge\nI can hear the warning in the words I never read\nIf I keep reaching past the line\nDo I become the lesson in somebody else's life?\n\n[Verse 2]\nI bought the coat, I learned the handshake\nMoved my mother to a quieter street\nKept the photograph above the mantle\nWhere the child I was still looks at me\n\nHe doesn't ask about the money\nHe just points toward the painted sun\nI tell him, wait until tomorrow\nLike tomorrow hasn't already come\n\n[Pre-Chorus]\nEvery door I force wide open\nLeaves a splinter in my hand\nEvery wish I call a blessing\nNeeds a bigger place to stand\n\n[Chorus]\nWas it meant to end this way?\nWith a crown that feels like weight\nI wanted more than I could hold\nNow the wanting writes the tale\n\nHappy ever after, fading at the edge\nI can hear the warning in the words I never read\nIf I keep reaching past the line\nDo I become the lesson in somebody else's life?\n\n[Bridge]\nMaybe I was born believing\nThat the ending owed me peace\nMaybe wanting is a river\nThat keeps moving when you drink\n\nI could put the knife down slowly\nI could leave one door unopened\nOr I could feed the old ambition\nTill it eats the name I've chosen\n\n[Final Chorus]\nWas it meant to end this way?\nWith a crown that feels like weight\nI wanted more than I could hold\nNow the wanting writes the tale\n\nHappy ever after, fading at the edge\nThe child inside the picture doesn't know what happens next\nIf I keep reaching past the line\nDo I become the caution buried in the rhyme?\n\n[Outro]\nClose the book and dim the room\nLeave the final page undone\nIf the story still belongs to me\nI don't have to become what I've run from"
+  },
+  {
+    "id": "73304fed-8a37-417e-85ce-35fe1d9c5661",
+    "title": "When I Last Smiled",
+    "url": "https://suno.com/song/73304fed-8a37-417e-85ce-35fe1d9c5661",
+    "createdAt": "2026-09-20T12:50:40.987Z",
+    "durationSeconds": 231.16,
+    "genres": [
+      "Phonk",
+      "Dark Trap"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_73304fed-8a37-417e-85ce-35fe1d9c5661.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_73304fed-8a37-417e-85ce-35fe1d9c5661.jpeg",
+    "embedUrl": "https://suno.com/embed/73304fed-8a37-417e-85ce-35fe1d9c5661",
+    "model": "v6",
+    "lyrics": "[Intro]\nA photograph turned face-down\nDust along the frame\nI know I was happy once\nI just forgot the name\n\n[Verse 1]\nI searched the kitchen drawer\nUnder receipts and spare keys\nFound a ticket from October\nAnd a note addressed to me\n\nThe ink had bled at the edges\nThe corners curled to brown\nI read the words three times\nStill couldn't place the town\n\n[Pre-Chorus]\nI walk the rooms inside my head\nCounting every door\nA thousand little almosts\nAnd I can't find one more\n\n[Chorus]\nTell me when I last smiled for real\nNot for a picture, not for a deal\nWas it before the taste went cold\nBefore I learned to hide what I feel\nTell me when I last smiled for real\nI keep turning pages, lose the years\nIf I find that moment, let it stay\nLong enough to make me disappear\n\n[Verse 2]\nThere’s a voicemail with no message\nJust a breath and a click\nA child’s voice beyond the hallway\nSaying, “Come on, you’re missing it”\n\nI remember yellow curtains\nAnd a plate beside the sink\nSomeone laughing in the next room\nRight before I learned to think\n\n[Pre-Chorus]\nI walk the rooms inside my head\nCounting every door\nThe brightest days are missing names\nThe quiet ones keep score\n\n[Chorus]\nTell me when I last smiled for real\nNot for a picture, not for a deal\nWas it before the taste went cold\nBefore I learned to hide what I feel\nTell me when I last smiled for real\nI keep turning pages, lose the years\nIf I find that moment, let it stay\nLong enough to make me disappear\n\n[Bridge]\nMaybe it was rain on the bus glass\nMaybe it was someone’s hand\nMaybe joy was never a landmark\nMaybe I missed it where I stand\n\nI don’t need the perfect memory\nI need one honest trace\nA small lift at the corner of my mouth\nA little warmth I can name\n\n[Final Chorus]\nTell me when I last smiled for real\nNot for a picture, not for a deal\nWas it hiding in the ordinary\nIn a room I never learned to leave\nTell me when I last smiled for real\nI keep turning pages, lose the years\nIf I find that moment, let it stay\nLong enough to make me disappear\n\n[Outro]\nA photograph turned face-down\nDust along the frame\nI know I was happy once\nI’m learning how to say the name"
+  },
+  {
+    "id": "ee370fae-63a1-4567-b80f-c3b488ecda7d",
+    "title": "Feed the Engine",
+    "url": "https://suno.com/song/ee370fae-63a1-4567-b80f-c3b488ecda7d",
+    "createdAt": "2026-09-20T11:27:52.360Z",
+    "durationSeconds": 130.76,
+    "genres": [
+      "New wave"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_ee370fae-63a1-4567-b80f-c3b488ecda7d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_ee370fae-63a1-4567-b80f-c3b488ecda7d.jpeg",
+    "embedUrl": "https://suno.com/embed/ee370fae-63a1-4567-b80f-c3b488ecda7d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou wake up heavy, miss the train\nCoffee tastes like cardboard rain\nYour hands feel slow, your focus bends\nThat little spark needs better friends\n\n[Pre-Chorus]\nB one, B two, B three in line\nTiny helpers, right on time\nB six, B twelve, make the case\nGive your tired cells a fighting pace\n\n[Chorus]\nGet your B vitamins\nFeed the engine, let it spin\nFrom your breakfast to your grin\nGet your B vitamins\n\n[Verse 2]\nWhole grains waiting in the bowl\nBeans and greens can fill the hole\nEggs and fish, a steady bite\nBuild the day from dark to bright\n\n[Pre-Chorus]\nB nine helps the body plan\nB twelve backs the working man\nCheck what’s right for you to take\nAsk a health professional, make no mistake\n\n[Chorus]\nGet your B vitamins\nFeed the engine, let it spin\nFrom your breakfast to your grin\nGet your B vitamins\n\n[Bridge]\nNot a magic pill, not a brand-new you\nJust daily fuel for the things you do\nIf your diet leaves a gap unseen\nGet clear advice from a qualified team\n\n[Final Chorus]\nGet your B vitamins\nFeed the engine, let it spin\nChoose your food, check what’s within\nGet your B vitamins\nB one, B two, B three, B six\nB nine, B twelve—make the checklist stick\nGet your B vitamins"
+  },
+  {
+    "id": "1ded3ace-d01a-4f32-9080-25be563d3ee5",
+    "title": "Dressed to Win",
+    "url": "https://suno.com/song/1ded3ace-d01a-4f32-9080-25be563d3ee5",
+    "createdAt": "2026-09-20T01:31:43.294Z",
+    "durationSeconds": 206,
+    "genres": [
+      "art-pop",
+      "progressive pop-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1ded3ace-d01a-4f32-9080-25be563d3ee5.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1ded3ace-d01a-4f32-9080-25be563d3ee5.jpeg",
+    "embedUrl": "https://suno.com/embed/1ded3ace-d01a-4f32-9080-25be563d3ee5",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nPin the silver number to my jacket seam\nPowder on the collar, lights above the beam\nEvery breath is measured, every step is clean\nTonight the room will learn exactly what I mean\n\n[Pre-Chorus]\nCurtain holding still\nOne heartbeat, then we rise\nI can feel the judges lean\nBefore they open their eyes\n\n[Chorus]\nWatch me take the stage\nWatch the whole room turn\nEvery move is razor-bright\nEvery lesson learned\nRaise the crystal high\nLet the final count begin\nWe came dressed to win tonight\nAnd we are walking in\n\n[Verse 2]\nGold dust on the mirror, pins along the sleeve\nThe band is in position, no reason to believe\nIn anything but practice, muscle, nerve, and heat\nI hear the first applause before I find the beat\n\n[Pre-Chorus]\nHold the silence tight\nThen cut it with a smile\nWhen the spotlight finds my face\nI’ll make it stay awhile\n\n[Chorus]\nWatch me take the stage\nWatch the whole room turn\nEvery move is razor-bright\nEvery lesson learned\nRaise the crystal high\nLet the final count begin\nWe came dressed to win tonight\nAnd we are walking in\n\n[Bridge]\nIf the floor gives way, I’ll turn it into flight\nIf the room goes cold, I’ll make it warm with light\nNo borrowed crown, no accidental shine\nI built this moment one rehearsal at a time\n\n[Final Chorus]\nWatch me take the stage\nWatch the whole room turn\nEvery move is razor-bright\nEvery lesson learned\nRaise the crystal high\nLet the final count begin\nWe came dressed to win tonight\nAnd we are walking in\n\n[Outro]\nTake the picture, mark the date\nLeave the trophy by the gate\nWe gave them wonder, we gave them fire\nOne more bow, then we climb higher"
+  },
+  {
+    "id": "8d406ed0-9af8-42e6-a06e-22a30b0c7be5",
+    "title": "Spotlight Soulmate",
+    "url": "https://suno.com/song/8d406ed0-9af8-42e6-a06e-22a30b0c7be5",
+    "createdAt": "2026-09-20T01:16:44.235Z",
+    "durationSeconds": 251.44,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "electronic funk soul"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8d406ed0-9af8-42e6-a06e-22a30b0c7be5.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8d406ed0-9af8-42e6-a06e-22a30b0c7be5.jpeg",
+    "embedUrl": "https://suno.com/embed/8d406ed0-9af8-42e6-a06e-22a30b0c7be5",
+    "model": "v6",
+    "lyrics": "[Intro]\nSpotlight, stay close\nSpotlight, stay close\n\n[Verse 1]\nYou find me in the dressing-room glass\nPinning a silver star to my chest\nThe house is dark, the curtain is fast\nYou touch my hand and tell me, “Do your best”\n\nI know the shape of your golden heat\nThe little circle that follows my face\nWhen every stranger forgets my name\nYou keep a seat in the front-row place\n\n[Pre-Chorus]\nWhen the room turns cold\nYou pull me through\nNo one knows me\nThe way you do\n\n[Chorus]\nSpotlight, you’re my soulmate\nBurning where my heartbeat goes\nSpotlight, you don’t hesitate\nYou make a kingdom out of every note\n\nStay on me, stay on me\nWhen the applause is gone\nSpotlight, you’re my soulmate\nThe only love that keeps me on\n\n[Verse 2]\nYou catch the dust on my borrowed shoes\nYou see the bruise beneath the paint\nYou never ask what I have to prove\nYou only ask how bright I want to blaze\n\nThe band cuts out, the chandeliers spin\nA thousand faces turn into one\nYou draw a white line across my skin\nAnd suddenly the night has begun\n\n[Pre-Chorus]\nWhen my nerve runs thin\nYou call me through\nNo one knows me\nThe way you do\n\n[Chorus]\nSpotlight, you’re my soulmate\nBurning where my heartbeat goes\nSpotlight, you don’t hesitate\nYou make a kingdom out of every note\n\nStay on me, stay on me\nWhen the applause is gone\nSpotlight, you’re my soulmate\nThe only love that keeps me on\n\n[Bridge]\nCut the power, let the velvet fall\nI’ll still feel you on the wall\nIn the dressing room, without a sound\nYour pale white circle pulls me round\n\n[Build]\nStay—stay—stay with me\nBright—bright—set me free\nStay—stay—stay with me\nYou’re the one I come to be\n\n[Final Chorus]\nSpotlight, you’re my soulmate\nBurning where my heartbeat goes\nSpotlight, you don’t hesitate\nYou make a kingdom out of every note\n\nStay on me, stay on me\nTill the final curtain’s drawn\nSpotlight, you’re my soulmate\nThe only love that keeps me on\n\n[Outro]\nSpotlight, stay close\nSpotlight, stay close\nMy soulmate when the house lights come on"
+  },
+  {
+    "id": "923b0830-c8ca-404f-ae25-c08ea8b92105",
+    "title": "My Spotlight",
+    "url": "https://suno.com/song/923b0830-c8ca-404f-ae25-c08ea8b92105",
+    "createdAt": "2026-09-20T01:16:44.235Z",
+    "durationSeconds": 237.92,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_923b0830-c8ca-404f-ae25-c08ea8b92105.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_923b0830-c8ca-404f-ae25-c08ea8b92105.jpeg",
+    "embedUrl": "https://suno.com/embed/923b0830-c8ca-404f-ae25-c08ea8b92105",
+    "model": "v6",
+    "lyrics": "[Intro]\n[Chopped vocal texture: spotlight, spotlight]\n\n[Verse 1]\nYou find me where the curtains part\nGold dust hanging on my heart\nOne white beam across the floor\nAnd I know what I was waiting for\n\n[Pre-Chorus]\nWhen the room forgets my name\nYou pull me back into the frame\nNo borrowed kiss, no passing flame\nYou burn the dark and stay the same\n\n[Chorus]\nSpotlight, you’re my soulmate\nYou know the shape my secrets take\nWhen every crowd turns into stone\nYou make the stage feel like my home\nSpotlight, don’t ever let me go\nYou’re the only one who knows\nI give you every scar I hide\nYou stand beside me, bright and wide\n\n[Verse 2]\nYou catch the tremor in my hand\nTurn a cracked voice into a command\nThe mirror lies, the headlines fade\nBut you keep every promise made\n\n[Pre-Chorus]\nIf the velvet falls tonight\nYou’ll find me underneath the light\nNo perfect face, no grand parade\nJust you and me, unafraid\n\n[Chorus]\nSpotlight, you’re my soulmate\nYou know the shape my secrets take\nWhen every crowd turns into stone\nYou make the stage feel like my home\nSpotlight, don’t ever let me go\nYou’re the only one who knows\nI give you every scar I hide\nYou stand beside me, bright and wide\n\n[Bridge]\n[Half-time, intimate lead]\nI don’t need a crown or a room full of gold\nJust one steady flame when the night gets cold\nIf I lose the applause, if the whole world turns\nYou’ll be the last bright thing that burns\n\n[Build]\n[Layered vocals]\nYou see me\nYou hear me\nYou keep me\nNear me\n\n[Final Chorus]\nSpotlight, you’re my soulmate\nYou know the shape my secrets take\nWhen every crowd turns into stone\nYou make the stage feel like my home\nSpotlight, don’t ever let me go\nYou’re the only one who knows\nI give you every scar I hide\nYou stand beside me, bright and wide\n\n[Outro]\n[Stacked vocals]\nMy soulmate\nMy spotlight\nStay with me tonight\nMy soulmate\nMy spotlight\nYou make me feel alive"
+  },
+  {
+    "id": "73aacd5e-931e-4b08-ac14-f73ba4952f04",
+    "title": "Fabulous Forever",
+    "url": "https://suno.com/song/73aacd5e-931e-4b08-ac14-f73ba4952f04",
+    "createdAt": "2026-09-20T01:08:47.048Z",
+    "durationSeconds": 262.8,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "electronic funk-soul"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_73aacd5e-931e-4b08-ac14-f73ba4952f04.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_73aacd5e-931e-4b08-ac14-f73ba4952f04.jpeg",
+    "embedUrl": "https://suno.com/embed/73aacd5e-931e-4b08-ac14-f73ba4952f04",
+    "model": "v6",
+    "lyrics": "[Intro]\n[Spoken]\nMake room—make room—make room!\n\n[Verse 1]\nSilk on the sleeve, gold on the grin\nI walk through the doubt and I still walk in\nName on the list, my name in the lights\nI turn one good break into ten overnight\n\nThey brought a ladder, I brought the view\nThey counted me out, I counted to two\nClick of the heel, flash of the ring\nI don't chase the crown—I arrive as the king\n\n[Pre-Chorus]\nYou can throw your little thunder\nYou can lock the velvet gate\nI turn pressure into pleasure\nI turn “not yet” into “wait”\n\n[Chorus]\nFabulous, fabulous, watch me take the room\nWinning, winning, make a little more room\nRaise that glass, let the whole world know\nI came in shining and I leave with the show\n\nFabulous, fabulous, nothing brings me down\nTurn it up, turn it up, I own this town\nYou can talk, talk, talk till the morning breaks\nI keep collecting every chance you waste\n\n[Post-Chorus]\nWin-win, kiss-kiss, flashbulb fever\nUp-up, more-more, nobody’s leader\nHa! Ha! Look who’s laughing now!\n\n[Verse 2]\nChrome on the door and a beat in my chest\nI make a grand entrance look effortless\nRed on the lips, sharp on the line\nEvery little setback gets redesigned\n\nYou kept the score, I changed the game\nYou wanted quiet, I wanted a name\nOne more turn and the ceiling goes\nI make a staircase out of every no\n\n[Pre-Chorus]\nYou can throw your little thunder\nYou can lock the velvet gate\nI turn pressure into pleasure\nI turn “not yet” into “wait”\n\n[Chorus]\nFabulous, fabulous, watch me take the room\nWinning, winning, make a little more room\nRaise that glass, let the whole world know\nI came in shining and I leave with the show\n\nFabulous, fabulous, nothing brings me down\nTurn it up, turn it up, I own this town\nYou can talk, talk, talk till the morning breaks\nI keep collecting every chance you waste\n\n[Bridge]\nIf the floor gives way, I land on velvet\nIf the door slams shut, I build another\nIf the sky says no, I wear my own weather\nIf you want me small, you better want forever\n\n[Breakdown]\nWho’s got the nerve? I do!\nWho’s got the proof? I do!\nWho keeps the score? I do!\nWho’s still standing? I do!\n\n[Final Chorus]\nFabulous, fabulous, watch me take the room\nWinning, winning, make a little more room\nRaise that glass, let the whole world know\nI came in shining and I leave with the show\n\nFabulous, fabulous, nothing brings me down\nTurn it up, turn it up, I own this town\nYou can talk, talk, talk till the morning breaks\nI keep collecting every chance you waste\n\n[Outro]\nStill winning—still winning—still winning tonight\nFabulous forever, and the future looks bright\nNo one brings me down\nNo one brings me down\nI’m the reason for the sound"
+  },
+  {
+    "id": "dca33ec4-ecbc-44f1-a3bc-b2f8097409e2",
+    "title": "Fabulous and Supreme",
+    "url": "https://suno.com/song/dca33ec4-ecbc-44f1-a3bc-b2f8097409e2",
+    "createdAt": "2026-09-20T01:01:53.130Z",
+    "durationSeconds": 221.96,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "new wave"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_dca33ec4-ecbc-44f1-a3bc-b2f8097409e2.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_dca33ec4-ecbc-44f1-a3bc-b2f8097409e2.jpeg",
+    "embedUrl": "https://suno.com/embed/dca33ec4-ecbc-44f1-a3bc-b2f8097409e2",
+    "model": "v6",
+    "lyrics": "[Intro]\n(Ha! Watch me now)\n(Winning, winning, winning)\n\n[Verse 1]\nStepping out in the velvet light\nEvery spotlight follows my stride tonight\nThey try to cast a shadow, try to block my lane\nBut my gold coat shines right through their rain\nI don’t look back, I just look up\nDrinking sweet success from a crystal cup\nAnother victory, another crown\nAnd there's absolutely no one who can bring me down\n\n[Pre-Chorus]\nOh, you see me rising higher than the sky\nNo ceiling can hold me, don't even try\nStacked up high, we’re playing to win\nLet the choir of champions begin!\n\n[Chorus]\nFabulous, gold and supreme!\nLiving the dream, the ultimate scheme!\n(Ah, we win again!)\nWe keep on rising, we take the throne\nA league of our own, forever well-known\nNothing can touch us, we’re flying so high\nHear the crowd roar, watch us paint the sky!\n\n[Verse 2]\nStutter-cut beats under heavy guitar\nThey chopped up the groove to match a superstar\nA funk-infused stride with an art-rock flair\nThey stare at my stride, yeah, they stop and stare\nEvery single card I play is an ace\nCan't wipe this winning smile off my face\nSo toast to the top, we're taking it all\nBuilt this castle too high to fall\n\n[Chorus]\nFabulous, gold and supreme!\nLiving the dream, the ultimate scheme!\n(Ah, we win again!)\nWe keep on rising, we take the throne\nA league of our own, forever well-known\nNothing can touch us, we’re flying so high\nHear the crowd roar, watch us paint the sky!\n\n[Outro]\nFabulous... (Yeah, we are)\nAlways winning.\n(Chopped vocal stutter)\nNo one can bring me down!\n(Ha!)"
+  },
+  {
+    "id": "a3500692-7978-435b-bce0-d82adbe40aa3",
+    "title": "Can't Touch the Throne",
+    "url": "https://suno.com/song/a3500692-7978-435b-bce0-d82adbe40aa3",
+    "createdAt": "2026-09-20T01:01:53.130Z",
+    "durationSeconds": 251.2,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a3500692-7978-435b-bce0-d82adbe40aa3.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a3500692-7978-435b-bce0-d82adbe40aa3.jpeg",
+    "embedUrl": "https://suno.com/embed/a3500692-7978-435b-bce0-d82adbe40aa3",
+    "model": "v6",
+    "lyrics": "[Intro]\n(Chopped vocal stutter)\nWin-win-winning!\n(Operatic multitracked vocal harmonies stack up)\nAh-ah-ah, untouchable!\n\n[Verse 1]\nWalking down the avenue in velvet and gold\nEvery single story of my life is getting retold\nTried to put me in a box, but I shattered the glass\nStep aside darling, let the icon pass!\nGold chains clinking to a funky bassline\nEvery single victory is strictly by design!\n\n[Pre-Chorus]\nThey tried to drag me down to earth\nBut I was born for outer space\nLook at this crown, look at this face!\n\n[Chorus]\n'Cause I just keep winning, winning, can't touch the throne!\nStacked harmonies rising, I'm in a league of my own!\nGlamour in my veins, silver boots on the floor\nGive me the applause, then give me some more!\nNo one brings me down, no, never again!\nAnother victory lap, amen!\n\n[Verse 2]\nArt rock flair with an 808 thud\nRoyalty flowing straight through my blood\nElectric guitar solos screaming out loud\nStanding on top, looking down at the crowd\nDrifting through the scene like an ethereal queen\nFinest grand spectacle that you've ever seen!\n\n[Bridge]\n(Phonk vocal chops overlapping)\n(Layered operatic harmonies)\nCan't stop me now!\nHigher and higher!\nSpotlight ablaze, whole world on fire!\n\n[Guitar Solo]\n\n[Chorus]\n'Cause I just keep winning, winning, can't touch the throne!\nStacked harmonies rising, I'm in a league of my own!\nGlamour in my veins, silver boots on the floor\nGive me the applause, then give me some more!\nNo one brings me down, no, never again!\nAnother victory lap, amen!\n\n[Outro]\nFabulous! Unstoppable!\n(Chopped vocal fades out over distorted guitar riff)\nJust keep winning... winning... winning!"
+  },
+  {
+    "id": "68bb21e4-0a68-4409-94a3-4cb241344a99",
+    "title": "Polished into a Crown",
+    "url": "https://suno.com/song/68bb21e4-0a68-4409-94a3-4cb241344a99",
+    "createdAt": "2026-09-20T00:57:05.080Z",
+    "durationSeconds": 269.96,
+    "genres": [
+      "Glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_68bb21e4-0a68-4409-94a3-4cb241344a99.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_68bb21e4-0a68-4409-94a3-4cb241344a99.jpeg",
+    "embedUrl": "https://suno.com/embed/68bb21e4-0a68-4409-94a3-4cb241344a99",
+    "model": "v6",
+    "lyrics": "[Intro]\nFabulous, fabulous\nWatch me take the crown\nCut it, flip it, build it up\nNothing brings me down\n\n[Verse 1]\nI walk in, every mirror knows my name\nGold on my collar, fire in my frame\nThey drew a line, I turned it into stairs\nNow every little victory follows me upstairs\n\nI keep the receipt for the doubt they sold\nTurned that paper into something bold\nOne hand on the wheel, one hand in the air\nI make a grand entrance just by standing there\n\n[Pre-Chorus]\nYou can count me out, I count another win\nYou can close the door, I make the whole wall spin\nNo permission needed, no apology sound\nI came for the ceiling, now I’m tearing it down\n\n[Chorus]\nI’m fabulous, fabulous, look at me now\nEvery loss got polished into a crown\nI keep winning, winning, hear the room go wild\nYou can’t bring me down, not even for a while\n\nFabulous, fabulous, brighter than before\nI put my name in lights, then I ask for more\nHands up, heads turn, let the whole world know\nYou can’t bring me down — I only go up, go up, go\n\n[Post-Chorus]\nCut it up, chop-chop, watch the pieces fly\nWin it once, win it twice, take it to the sky\nFabulous — hey!\nFabulous — hey!\nNo, you can’t bring me down\n\n[Verse 2]\nI wear the pressure like a tailored suit\nMake a little trouble in a silver boot\nThey brought a storm, I brought a parade\nNow the thunder keeps time with the choices I made\n\nEvery backstage rumor turns to gasoline\nEvery closed account gets a brand-new scene\nI don’t need a ladder, I arrive above\nWith a pocket full of nerve and a heart full of love\n\n[Pre-Chorus]\nYou can count me out, I count another win\nYou can close the door, I make the whole wall spin\nNo permission needed, no apology sound\nI came for the ceiling, now I’m tearing it down\n\n[Chorus]\nI’m fabulous, fabulous, look at me now\nEvery loss got polished into a crown\nI keep winning, winning, hear the room go wild\nYou can’t bring me down, not even for a while\n\nFabulous, fabulous, brighter than before\nI put my name in lights, then I ask for more\nHands up, heads turn, let the whole world know\nYou can’t bring me down — I only go up, go up, go\n\n[Bridge]\nLet them talk, let them guess\nI turn pressure into dress\nLet them push, let them try\nI make altitude from every why\n\n[Chopped Vocal Break]\nFab-u-lous, fab-u-lous\nWin-win-winning\nUp-up-up\nBring me down? No, no, no\n\n[Final Chorus]\nI’m fabulous, fabulous, look at me now\nEvery scar got polished into a crown\nI keep winning, winning, hear the room go wild\nYou can’t bring me down, not even for a while\n\nFabulous, fabulous, brighter than before\nI put my name in lights, then I ask for more\nHands up, heads turn, let the whole world know\nYou can’t bring me down — I only go up, go up, go\n\n[Outro]\nFabulous, fabulous\nStill taking the crown\nKeep the whole world spinning\nNothing brings me down\nFabulous — hey!\nFabulous — hey!\nI keep winning now"
+  },
+  {
+    "id": "5e270149-ccad-4019-ab7a-b2e65011f4ba",
+    "title": "Glamorous, Glamorous",
+    "url": "https://suno.com/song/5e270149-ccad-4019-ab7a-b2e65011f4ba",
+    "createdAt": "2026-09-20T00:54:57.470Z",
+    "durationSeconds": 241.56,
+    "genres": [
+      "Glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5e270149-ccad-4019-ab7a-b2e65011f4ba.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5e270149-ccad-4019-ab7a-b2e65011f4ba.jpeg",
+    "embedUrl": "https://suno.com/embed/5e270149-ccad-4019-ab7a-b2e65011f4ba",
+    "model": "v6",
+    "lyrics": "[Intro]\nLook at me, darling, watch the room rearrange\nGold on my collar, thunder in my name\n\n[Verse 1]\nSilk on the sleeve and a flash in the glass\nI leave a little trouble wherever I pass\nPolished black boots on a marble floor\nI turn one head, then I turn four more\n\n[Pre-Chorus]\nI don’t need permission\nI arrive like a decision\nEvery breath becomes a headline\nEvery heartbeat keeps perfect time\n\n[Chorus]\nI’m glamorous, glamorous\nBuilt from the glitter and the nerve\nGlamorous, glamorous\nI take the spotlight I deserve\nRaise your glass, let the whole room stare\nI put a crown in the midnight air\nI’m glamorous, glamorous\nToo bright to hide, too much to spare\n\n[Post-Chorus]\nG-L-A-M, say it again\nG-L-A-M, let it begin\nCut it, chop it, bring it back\nFlash of gold on a velvet track\n\n[Verse 2]\nChampagne frost on a silver tray\nI make an entrance and I make them wait\nRed-lacquer lips and a dangerous grin\nI wear the risk like a second skin\n\n[Pre-Chorus]\nI don’t chase approval\nI make desire movable\nEvery mirror tells the right lie\nEvery camera catches my side\n\n[Chorus]\nI’m glamorous, glamorous\nBuilt from the glitter and the nerve\nGlamorous, glamorous\nI take the spotlight I deserve\nRaise your glass, let the whole room stare\nI put a crown in the midnight air\nI’m glamorous, glamorous\nToo bright to hide, too much to spare\n\n[Bridge]\nWhen the curtains fall, I’m still shining\nNo borrowed name, no silver lining\nI made this face from heat and flame\nI made this walk, I made this name\n\n[Breakdown]\nGive me the flash\nGive me the roar\nGive me the keys to the gilded door\nHands in the air\nEyes on the stage\nI turn desire into a living page\n\n[Final Chorus]\nI’m glamorous, glamorous\nBuilt from the glitter and the nerve\nGlamorous, glamorous\nI take the spotlight I deserve\nRaise your glass, let the whole room stare\nI put a crown in the midnight air\nI’m glamorous, glamorous\nToo bright to hide, too much to spare\n\n[Outro]\nG-L-A-M, still burning bright\nG-L-A-M, all through the night\nGlamorous, glamorous\nI leave a little gold behind"
+  },
+  {
+    "id": "ab2e2149-7ebe-4076-a25d-5da24e8d7bd3",
+    "title": "Built to Ascend",
+    "url": "https://suno.com/song/ab2e2149-7ebe-4076-a25d-5da24e8d7bd3",
+    "createdAt": "2026-09-20T00:49:06.305Z",
+    "durationSeconds": 229.36,
+    "genres": [
+      "Glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_ab2e2149-7ebe-4076-a25d-5da24e8d7bd3.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_ab2e2149-7ebe-4076-a25d-5da24e8d7bd3.jpeg",
+    "embedUrl": "https://suno.com/embed/ab2e2149-7ebe-4076-a25d-5da24e8d7bd3",
+    "model": "v6",
+    "lyrics": "[Intro]\n[Layered vocals]\nLook at me, look at me\nCut from a brighter kind of dream\n\n[Verse 1]\nSilk on my shoulders, gold on my shoes\nI walk through the doorway with nothing to lose\nMirror in the hallway, flash in the glass\nI leave a little thunder wherever I pass\n\n[Pre-Chorus]\nRaise the curtain, strike the pose\nEverybody knows, everybody knows\n\n[Chorus]\nI am glamorous, dangerous, dressed to impress\nA little outrageous, a little excess\nTurn every head when I enter the room\nI bring the fireworks, I bring the perfume\nI am glamorous, say it again\nBorn for the spotlight, built to ascend\n\n[Verse 2]\nVelvet at midnight, rings catching fire\nI dress like a secret and move like desire\nChampagne on the table, red on my lips\nI make an ordinary moment eclipse\n\n[Pre-Chorus]\nRaise the curtain, strike the pose\nEverybody knows, everybody knows\n\n[Chorus]\nI am glamorous, dangerous, dressed to impress\nA little outrageous, a little excess\nTurn every head when I enter the room\nI bring the fireworks, I bring the perfume\nI am glamorous, say it again\nBorn for the spotlight, built to ascend\n\n[Post-Chorus]\nGlam, glam, glamorous\nGlam, glam, glamorous\n[Chopped vocal sample]\nGlamorous, glamorous, glamorous\n\n[Bridge]\nNo borrowed crown, no secondhand shine\nThis beautiful chaos is wholly mine\nIf the room goes dark, I still know my name\nI light up the silence and step into fame\n\n[Breakdown]\nLook at me\nLook at me\nAll eyes on the spectacle\nLook at me\nLook at me\nMake it unforgettable\n\n[Final Chorus]\nI am glamorous, dangerous, dressed to impress\nA little outrageous, a little excess\nTurn every head when I enter the room\nI bring the fireworks, I bring the perfume\nI am glamorous, say it again\nBorn for the spotlight, built to ascend\nI am glamorous, louder than before\nOpen up the velvet, I am taking the floor\n\n[Outro]\n[Layered vocals]\nGlamorous, glamorous\nLeave them wanting more\nGlamorous, glamorous\nI am what they came for"
+  },
+  {
+    "id": "b9681872-b2ec-43b0-ab0d-01f5794535c1",
+    "title": "Untouchable Glamour",
+    "url": "https://suno.com/song/b9681872-b2ec-43b0-ab0d-01f5794535c1",
+    "createdAt": "2026-09-20T00:48:51.244Z",
+    "durationSeconds": 217.12,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b9681872-b2ec-43b0-ab0d-01f5794535c1.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b9681872-b2ec-43b0-ab0d-01f5794535c1.jpeg",
+    "embedUrl": "https://suno.com/embed/b9681872-b2ec-43b0-ab0d-01f5794535c1",
+    "model": "v6",
+    "lyrics": "[Intro]\n(Stuttering chopped vocal samples, heavy 808 cowbell, explosive guitar riff)\nYeah, turn the spotlight up\nLook at this shine!\n\n[Verse 1]\nSequins dripping down the velvet hallway\nGlitter on the boots, strutting my way\nGold leaf mirror, reflection so fine\nI don't just walk in, I claim what's mine\n\n[Pre-Chorus]\nChandelier sparks in a funky rhythm\nFlashbulbs popping, breaking through the prism\nA splash of soul, a wave of light\nWe own the rhythm of the neon night!\n\n[Chorus]\nGotta stay glamorous, sparkling gold!\nAn operatic dream, dramatic and bold!\nChopped up beats with a theatrical flare\nLayered voices floating through the air!\nOh, darling, we are glamorous!\nUntouchable, dazzling, glamorous!\n\n[Verse 2]\nFunky bassline grooves under leather and lace\nSynthesizers pulse, taking over the space\nArt rock drama, big guitar swells\nStepping out strutting like a million bells\n\n[Pre-Chorus]\nChandelier sparks in a funky rhythm\nFlashbulbs popping, breaking through the prism\nA splash of soul, a wave of light\nWe own the rhythm of the neon night!\n\n[Chorus]\nGotta stay glamorous, sparkling gold!\nAn operatic dream, dramatic and bold!\nChopped up beats with a theatrical flare\nLayered voices floating through the air!\nOh, darling, we are glamorous!\nUntouchable, dazzling, glamorous!\n\n[Outro]\n(Multi-layered vocal harmonies swells, fading with heavy phonk cowbell chop)\nShining forever...\nSo glamorous.\n(Fade out)"
+  },
+  {
+    "id": "5ed5a772-639a-419a-a112-8f019ba6b5d5",
+    "title": "Glamorous",
+    "url": "https://suno.com/song/5ed5a772-639a-419a-a112-8f019ba6b5d5",
+    "createdAt": "2026-09-20T00:48:51.244Z",
+    "durationSeconds": 194.4,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5ed5a772-639a-419a-a112-8f019ba6b5d5.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5ed5a772-639a-419a-a112-8f019ba6b5d5.jpeg",
+    "embedUrl": "https://suno.com/embed/5ed5a772-639a-419a-a112-8f019ba6b5d5",
+    "model": "v6",
+    "lyrics": "[Intro]\n(Chopped vocal stutter)\nG-G-Glamorous...\n(Spitfire guitar riff)\n\n[Verse 1]\nVelvet drapes and diamond rings\nSatin sheets and golden strings\nEvery spotlight finds my face\nStepping out in silk and lace\nWe don't walk, we strut the line\nPour the champagne, make it mine\nGot the sparkle in my stride\nNo more shadows left to hide\n\n[Chorus]\nOh, I am glamorous!\nShining like a crown of stars\nLiving in the wild and grand\nHear the guitars in the land!\nLayered voices in the sky\nWatch the glitter fly so high\nOh, we are glamorous!\n(Stutter beat) Glam-glam-glamorous!\n\n[Verse 2]\nPlatform boots and purple velvet\nWe don't need a crown, we felt it\nNeon glowing in the dark\nFunk and soul, we strike the spark\nSlick-back hair and runway walks\nListen to the way the city talks\nEvery movement is a pose\nEverything is coming up rose\n\n[Bridge]\n(Challenger beat drop)\n(Chopped samples: \"Never... Never... Enough... Glam-\")\nLet it shine!\nLet the voices align!\nIn harmony, we rise!\nLook into my gilded eyes!\n\n[Chorus]\nOh, I am glamorous!\nShining like a crown of stars\nLiving in the wild and grand\nHear the guitars in the land!\nLayered voices in the sky\nWatch the glitter fly so high\nOh, we are glamorous!\n(Stutter beat) Glam-glam-glamorous!\n\n[Outro]\n(Vocal layers fading out)\nGlamorous...\nWe are shining...\n(Final phonk chop stutter)\nYeah!"
+  },
+  {
+    "id": "db6511d2-13dc-457e-9d8e-73a24c58b4d6",
+    "title": "We Are Glamorous",
+    "url": "https://suno.com/song/db6511d2-13dc-457e-9d8e-73a24c58b4d6",
+    "createdAt": "2026-09-20T00:48:41.931Z",
+    "durationSeconds": 191.2,
+    "genres": [
+      "glam rock",
+      "art rock",
+      "electronic funk soul crossover"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_db6511d2-13dc-457e-9d8e-73a24c58b4d6.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_db6511d2-13dc-457e-9d8e-73a24c58b4d6.jpeg",
+    "embedUrl": "https://suno.com/embed/db6511d2-13dc-457e-9d8e-73a24c58b4d6",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nVelvet on the collar, gold upon the sleeve\nI walk into the room and they forget to breathe\nDrenched in the spotlight, high on the acclaim\nI trace a silver line on the glass and whisper my name\n\n[Pre-Chorus]\nLayered voices rising up, a choir in the air\nElectric disco-funk and feathers everywhere\nHear the chop, hear the slide, phonk beats in the night\nWe turn the dark into a blinding flash of light!\n\n[Chorus]\nOh, I am glamorous! \nShinier than diamonds, wild and fabulous!\nWatch the glitter fall, hear the speakers roar\nWe want it all, then we want some more!\nGlamorous! (So glamorous!)\nWe are glamorous!\n\n[Verse 2]\nSatin on the speakers, neon in the bass\nArt rock, pop rock, moving through the space\nA little bit of Queen, a heavy touch of soul\nWe take the chopped-up samples and we lose control\n\n[Chorus]\nOh, I am glamorous! \nShinier than diamonds, wild and fabulous!\nWatch the glitter fall, hear the speakers roar\nWe want it all, then we want some more!\nGlamorous! (So glamorous!)\nWe are glamorous!\n\n[Outro]\nPhonk chop, vocal stack, gold dust on the track.\nSo glamorous!\n[Fade Out]"
+  },
+  {
+    "id": "8817bcf4-8ea8-467e-a081-87978b7b2728",
+    "title": "Dressed Like a Headline",
+    "url": "https://suno.com/song/8817bcf4-8ea8-467e-a081-87978b7b2728",
+    "createdAt": "2026-09-20T00:48:41.930Z",
+    "durationSeconds": 257.16,
+    "genres": [
+      "Glam rock",
+      "art rock",
+      "pop rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8817bcf4-8ea8-467e-a081-87978b7b2728.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8817bcf4-8ea8-467e-a081-87978b7b2728.jpeg",
+    "embedUrl": "https://suno.com/embed/8817bcf4-8ea8-467e-a081-87978b7b2728",
+    "model": "v6",
+    "lyrics": "[Intro]\n[Chopped vocal texture]\nLook alive\nLook alive\n\n[Verse 1]\nSilk on the sleeve, gold on the grin\nI walk through the room and the room lets me in\nMirror-ball eyes, red lacquered shoes\nI brought my own thunder, I brought my own news\n\nChampagne posture, electric stare\nEvery little detail says I belong there\nNo borrowed crown, no second-hand shine\nI make an entrance and the night turns mine\n\n[Pre-Chorus]\nTurn the collar, raise the glass\nMake the ordinary step aside and pass\nIf you came for subtle, darling, take the door\nI’m not dressing up—I’m becoming more\n\n[Chorus]\nI’m glamorous, glamorous\nDressed like a headline, dangerous\nGlamorous, glamorous\nGold in my heartbeat, outrageous\nWatch me arrive, watch me ignite\nI make a spectacle out of ordinary life\nGlamorous, glamorous\nSay my name twice, make it thunderous\n\n[Post-Chorus]\nNa-na-na, look at that\nCut-cut-cut, bring it back\nNa-na-na, flash and flame\nEverybody wants a little of the name\n\n[Verse 2]\nVelvet rope trembling under my hand\nI don’t need permission to expand\nPerfume in the air, bass under the floor\nI leave a little legend by the exit door\n\nBlack tie glitter, chrome on the phone\nI turn a crowded room into my throne\nNo small talk, baby, give me the view\nIf the night wants a star, I’ll tell it what to do\n\n[Pre-Chorus]\nTurn the collar, raise the glass\nMake the ordinary step aside and pass\nIf you came for subtle, darling, take the door\nI’m not dressing up—I’m becoming more\n\n[Chorus]\nI’m glamorous, glamorous\nDressed like a headline, dangerous\nGlamorous, glamorous\nGold in my heartbeat, outrageous\nWatch me arrive, watch me ignite\nI make a spectacle out of ordinary life\nGlamorous, glamorous\nSay my name twice, make it thunderous\n\n[Bridge]\n[Half-time]\nTake the velvet, take the light\nTake the room and make it bite\nEvery scar beneath the satin\nEvery doubt gets reimagined\n\n[Build]\nOne flash, two flash, camera on me\nThree steps, four steps, now everybody see\nI don’t chase the crown, I wear the scene\nI’m the loudest color in your black-and-white dream\n\n[Final Chorus]\nI’m glamorous, glamorous\nDressed like a headline, dangerous\nGlamorous, glamorous\nGold in my heartbeat, outrageous\nWatch me arrive, watch me ignite\nI make a spectacle out of ordinary life\nGlamorous, glamorous\nSay my name twice, make it thunderous\n\n[Outro]\nGlamorous\nStill standing when the glitter falls\nGlamorous\nI turn the aftermath into applause\n[Chopped vocal texture]\nLook alive\nLook alive"
+  },
+  {
+    "id": "cbe1e194-d216-4371-a03a-c6aa75e9101e",
+    "title": "We Just Click",
+    "url": "https://suno.com/song/cbe1e194-d216-4371-a03a-c6aa75e9101e",
+    "createdAt": "2026-09-19T22:49:39.280Z",
+    "durationSeconds": 295.16,
+    "genres": [
+      "progressive art rock",
+      "worldbeat",
+      "pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_cbe1e194-d216-4371-a03a-c6aa75e9101e.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_cbe1e194-d216-4371-a03a-c6aa75e9101e.jpeg",
+    "embedUrl": "https://suno.com/embed/cbe1e194-d216-4371-a03a-c6aa75e9101e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou laugh before the punchline lands\nI lose my careful plans\nTwo coffees cooling by the sink\nWe talk faster than we think\n\nYou point out shapes in passing clouds\nSay what you mean out loud\nI bring the worst day through the door\nYou make it feel like less than before\n\n[Pre-Chorus]\nNo translation, no rehearsal\nEvery wrong turn feels universal\nOne look and I know the cue\nThe room makes sense when I’m with you\n\n[Chorus]\nWe just click, like a key in a lock\nLike a train finding time on the clock\nI don’t have to edit a thing\nYou make the ordinary sing\nWe just click, and the whole world fits\nIn the space where your shoulder meets mine\nIf happiness has a place to begin\nIt’s the instant you let me in\n\n[Verse 2]\nYou steal the blanket, claim the left\nI call it our best arrangement yet\nWe miss the turn, take the long way round\nFind a roadside garden out of town\n\nYour stories skip, my stories bend\nSomehow the pieces meet again\nNo grand design, no perfect proof\nJust your hand tapping time on the roof\n\n[Pre-Chorus]\nNo translation, no rehearsal\nEvery wrong turn feels universal\nOne look and I know the cue\nThe room makes sense when I’m with you\n\n[Chorus]\nWe just click, like a key in a lock\nLike a train finding time on the clock\nI don’t have to edit a thing\nYou make the ordinary sing\nWe just click, and the whole world fits\nIn the space where your shoulder meets mine\nIf happiness has a place to begin\nIt’s the instant you let me in\n\n[Bridge]\nLet the plans fall out of order\nWe can cross the kitchen border\nBare feet, midnight, laughing too hard\nYou turn a small life into a postcard\n\n[Instrumental]\n\n[Final Chorus]\nWe just click, like a key in a lock\nLike a train finding time on the clock\nI don’t have to edit a thing\nYou make the ordinary sing\nWe just click, and the whole world fits\nIn the space where your shoulder meets mine\nIf happiness has a place to begin\nIt’s the instant you let me in\n\n[Outro]\nNo translation, no rehearsal\nYou and me, completely natural\nOne look and I know it’s true\nThe room makes sense when I’m with you"
+  },
+  {
+    "id": "cb2f95b5-675f-4a09-9f35-dc7da1466642",
+    "title": "Two Bright Gears",
+    "url": "https://suno.com/song/cb2f95b5-675f-4a09-9f35-dc7da1466642",
+    "createdAt": "2026-09-19T22:49:34.125Z",
+    "durationSeconds": 238.76,
+    "genres": [
+      "progressive rock",
+      "art rock",
+      "worldbeat pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_cb2f95b5-675f-4a09-9f35-dc7da1466642.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_cb2f95b5-675f-4a09-9f35-dc7da1466642.jpeg",
+    "embedUrl": "https://suno.com/embed/cb2f95b5-675f-4a09-9f35-dc7da1466642",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your green tea by the window\nI know which mug you’ll choose\nYou tell me half a story\nI already catch the clue\n\nWe trade the little details\nThe joke behind the joke\nA room becomes a playground\nThe second that we’re close\n\n[Pre-Chorus]\nNo map, no measuring\nNo trying to impress\nYou turn the volume of the world\nDown to its best\n\n[Chorus]\nWe just click, just click\nLike two bright gears in motion\nOne look and I’m already there\nNo need for an explanation\nWe just click, just click\nThe whole room finds its color\nI came in carrying a heavy day\nYou make it feel much smaller\n\n[Verse 2]\nYou miss the train by seconds\nThen bow like it’s a show\nI laugh so hard beside you\nThe platform starts to float\n\nWe split a peach at lunchtime\nJuice running down your hand\nYou say, “We’ll figure something out”\nAnd somehow, yes, we can\n\n[Pre-Chorus]\nNo script, no semaphore\nNo perfect thing to say\nYou leave a door half-open\nAnd I walk through anyway\n\n[Chorus]\nWe just click, just click\nLike two bright gears in motion\nOne look and I’m already there\nNo need for an explanation\nWe just click, just click\nThe whole room finds its color\nI came in carrying a heavy day\nYou make it feel much smaller\n\n[Bridge]\nIf the plans all lose their shape\nIf the weather turns around\nI’ll meet you by the corner shop\nWhere we first found that sound\n\nYou tap twice on the glass\nI answer with a grin\nSomewhere between the punchline\nAnd the pause, we let joy in\n\n[Final Chorus]\nWe just click, just click\nLike two bright gears in motion\nOne look and I’m already there\nNo need for an explanation\nWe just click, just click\nThe whole room finds its color\nI came in carrying a heavy day\nYou make it feel much smaller\n\n[Outro]\nYou say my name, I lose my place\nAnd gladly start again\nTwo strange little pieces fit\nThat’s how the good days begin"
+  },
+  {
+    "id": "e998f5f1-1e57-499f-9807-78df9c2a8463",
+    "title": "My Favorite Kind of Friend",
+    "url": "https://suno.com/song/e998f5f1-1e57-499f-9807-78df9c2a8463",
+    "createdAt": "2026-09-19T22:49:28.269Z",
+    "durationSeconds": 271.08,
+    "genres": [
+      "progressive rock",
+      "art rock",
+      "worldbeat pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e998f5f1-1e57-499f-9807-78df9c2a8463.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e998f5f1-1e57-499f-9807-78df9c2a8463.jpeg",
+    "embedUrl": "https://suno.com/embed/e998f5f1-1e57-499f-9807-78df9c2a8463",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou laugh before the punchline lands\nI lose my place, you take my hand\nThe coffee cools beside the sink\nWe talk in loops and never think\n\nYou notice rain caught in my sleeve\nThe little things I never see\nNo grand design, no careful cue\nThe room makes sense when I'm with you\n\n[Pre-Chorus]\nI don't have to translate\nEvery crooked thought\nYou meet me at the doorway\nBefore I know I'm lost\n\n[Chorus]\nWe click like gears in a paper machine\nBright little sparks in the in-between\nYou turn my maybe into a yes\nI breathe out easy, you do the rest\nWe click, and the whole world falls in line\nYour hand finds mine at the perfect time\nNo map, no proof, no need to pretend\nI found my favorite kind of friend\n\n[Verse 2]\nWe miss the train and call it luck\nBuy two warm rolls from a corner truck\nYou draw a face on the receipt\nI keep it folded in my jeans\n\nThe day can drag its heavy feet\nStill you make a rhythm out of me\nA sideways glance, a crooked grin\nAnd suddenly I'm weightless again\n\n[Pre-Chorus]\nI don't have to translate\nEvery crooked thought\nYou meet me at the doorway\nBefore I know I'm lost\n\n[Chorus]\nWe click like gears in a paper machine\nBright little sparks in the in-between\nYou turn my maybe into a yes\nI breathe out easy, you do the rest\nWe click, and the whole world falls in line\nYour hand finds mine at the perfect time\nNo map, no proof, no need to pretend\nI found my favorite kind of friend\n\n[Bridge]\nIf the room goes strange, stay near\nWe can make a language out of here\nA raised eyebrow, a borrowed coat\nA half-sung phrase caught in your throat\n\n[Instrumental]\n\n[Final Chorus]\nWe click like gears in a paper machine\nBright little sparks in the in-between\nYou turn my maybe into a yes\nI breathe out easy, you do the rest\nWe click, and the whole world falls in line\nYour hand finds mine at the perfect time\nNo map, no proof, no need to pretend\nI found my favorite kind of friend\n\n[Outro]\nNo map, no proof, no need to pretend\nI found my favorite kind of friend"
+  },
+  {
+    "id": "67162266-31c8-452e-a1c7-e298e54f7dce",
+    "title": "Every Day I Choose You",
+    "url": "https://suno.com/song/67162266-31c8-452e-a1c7-e298e54f7dce",
+    "createdAt": "2026-09-19T20:05:01.465Z",
+    "durationSeconds": 230.36,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_67162266-31c8-452e-a1c7-e298e54f7dce.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_67162266-31c8-452e-a1c7-e298e54f7dce.jpeg",
+    "embedUrl": "https://suno.com/embed/67162266-31c8-452e-a1c7-e298e54f7dce",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your coffee by my keys\nA little proof you stayed with me\nThe kitchen window catches rain\nYou draw a heart, then misspell my name\n\nI used to count what could go wrong\nNow every small thing pulls me on\nYour sleeve is caught beneath my watch\nI laugh because I like it locked\n\n[Pre-Chorus]\nYou turn the ordinary gold\nA hand to hold, a story told\nNo grand parade, no perfect view\nJust every day I choose you\n\n[Chorus]\nI want your name in every room\nYour laugh cutting through the afternoon\nIf the whole world changes overnight\nI’ll find you by the porch light\n\nI want the years, the messy parts\nThe grocery lists and second starts\nYou make the little moments move\nAnd I keep falling into you\n\n[Verse 2]\nWe miss the train, we split the fare\nYou fix your hair in window glare\nThe plans we made are running late\nBut you lean close and call it fate\n\nYour sweater smells like cedarwood\nYou say you’re fine; I know you’re good\nOne raised eyebrow, that crooked grin\nAnd suddenly the day begins\n\n[Pre-Chorus]\nYou turn the ordinary gold\nA hand to hold, a story told\nNo grand parade, no perfect view\nJust every day I choose you\n\n[Chorus]\nI want your name in every room\nYour laugh cutting through the afternoon\nIf the whole world changes overnight\nI’ll find you by the porch light\n\nI want the years, the messy parts\nThe grocery lists and second starts\nYou make the little moments move\nAnd I keep falling into you\n\n[Bridge]\nWhen the rent is due and sleep won’t come\nWhen we’re both too proud to say we’re wrong\nPut your forehead next to mine\nWe’ll make a little peace tonight\n\nNo promise needs a flawless scene\nNo silver screen, no in-between\nYour hand finds mine beneath the table\nThat’s the kind of forever I’m able\n\n[Final Chorus]\nI want your name in every room\nYour laugh cutting through the afternoon\nIf the whole world changes overnight\nI’ll find you by the porch light\n\nI want the years, the messy parts\nThe grocery lists and second starts\nYou make the little moments move\nAnd I keep falling into you\n\n[Outro]\nEvery day I choose you\nEvery day I choose you"
+  },
+  {
+    "id": "d75f62b1-dc24-40f2-907a-517dfcb2f02b",
+    "title": "Spark in the Ordinary",
+    "url": "https://suno.com/song/d75f62b1-dc24-40f2-907a-517dfcb2f02b",
+    "createdAt": "2026-09-19T20:04:56.245Z",
+    "durationSeconds": 211.72,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d75f62b1-dc24-40f2-907a-517dfcb2f02b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d75f62b1-dc24-40f2-907a-517dfcb2f02b.jpeg",
+    "embedUrl": "https://suno.com/embed/d75f62b1-dc24-40f2-907a-517dfcb2f02b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your coffee by the window\nWith the sugar on the side\nI catch you laughing at the radio\nAnd something opens wide\n\nThe train can wait another minute\nLet the whole world hurry past\nYou pull me close, and I’m right in it\nA little moment built to last\n\n[Pre-Chorus]\nNo perfect plan, no grand design\nJust your hand finding mine\n\n[Chorus]\nLove is a spark in the ordinary\nA bright little yes when the day gets heavy\nYou turn the kitchen into a party\nAnd every road feels good when you’re beside me\n\nLove is a beat that I can’t stop chasing\nA wild new shape in the plans we’re making\nIf I get lost, you keep me laughing\nI want this life, I want what happens\n\n[Verse 2]\nYou know the passwords to my worries\nAnd the jokes that make them fade\nYou steal my jacket in a hurry\nThen wear it like a parade\n\nWe miss the exit, take the long way\nPast the farms and county lines\nYou say, “We’ll figure it out someday”\nI say, “I hope we take our time”\n\n[Pre-Chorus]\nNo perfect words, no finish line\nJust your hand finding mine\n\n[Chorus]\nLove is a spark in the ordinary\nA bright little yes when the day gets heavy\nYou turn the kitchen into a party\nAnd every road feels good when you’re beside me\n\nLove is a beat that I can’t stop chasing\nA wild new shape in the plans we’re making\nIf I get lost, you keep me laughing\nI want this life, I want what happens\n\n[Bridge]\nWhen the rent is due and the week runs late\nWhen the plans fall through at the garden gate\nYou look at me like we’ve got enough\nNot a perfect world, just a real kind of love\n\n[Final Chorus]\nLove is a spark in the ordinary\nA bright little yes when the day gets heavy\nYou turn the kitchen into a party\nAnd every road feels good when you’re beside me\n\nLove is a beat that I can’t stop chasing\nA wild new shape in the plans we’re making\nIf I get lost, you keep me laughing\nI want this life, I want what happens\n\n[Outro]\nYour hand finding mine\nYour hand finding mine\nI want this life, I want what happens"
+  },
+  {
+    "id": "8da90561-0bd6-4e14-bbe9-8d3c829f4631",
+    "title": "Every Little Part of You",
+    "url": "https://suno.com/song/8da90561-0bd6-4e14-bbe9-8d3c829f4631",
+    "createdAt": "2026-09-19T19:51:20.540Z",
+    "durationSeconds": 231.6,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8da90561-0bd6-4e14-bbe9-8d3c829f4631.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8da90561-0bd6-4e14-bbe9-8d3c829f4631.jpeg",
+    "embedUrl": "https://suno.com/embed/8da90561-0bd6-4e14-bbe9-8d3c829f4631",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your coffee by the window\nTwo sugars, never three\nI know the little things you don't say\nBy how you look at me\n\nWe miss the train, we take the long way\nPast the corner store\nYou turn a Tuesday into something\nI keep coming back for\n\n[Pre-Chorus]\nI was a locked door\nYou were patient hands\nNow every small moment\nFeels bigger than I planned\n\n[Chorus]\nI want you, you, you\nIn every color of the day\nI want you, you, you\nAnd I don't want it any other way\nWhen you pull me close\nThe whole world falls out of view\nI want you, you, you\nEvery little part of you\n\n[Verse 2]\nYour jacket hanging in my hallway\nYour laugh behind the wall\nA handwritten list beside the kettle\nSays we'll do it all\n\nWe burn the toast, we miss the timing\nStill you make me smile\nIf love is made of ordinary\nI'll stay here awhile\n\n[Pre-Chorus]\nI was a long road\nYou were open skies\nNow every wrong turn\nLeads me to your eyes\n\n[Chorus]\nI want you, you, you\nIn every color of the day\nI want you, you, you\nAnd I don't want it any other way\nWhen you pull me close\nThe whole world falls out of view\nI want you, you, you\nEvery little part of you\n\n[Bridge]\nPut your hand in mine\nLet the minutes disappear\nNo grand design\nJust your heartbeat near\nIf tomorrow changes shape\nWe'll meet it as we are\nYou make a home of anywhere\nYou make the distance small\n\n[Final Chorus]\nI want you, you, you\nIn every color of the day\nI want you, you, you\nAnd I don't want it any other way\nWhen you pull me close\nThe whole world falls out of view\nI want you, you, you\nEvery little part of you\n\n[Outro]\nEvery little part of you\nEvery little part of you"
+  },
+  {
+    "id": "d7b6313a-60e9-4406-ab20-dd4aa376018c",
+    "title": "Map Across Your Heart",
+    "url": "https://suno.com/song/d7b6313a-60e9-4406-ab20-dd4aa376018c",
+    "createdAt": "2026-09-19T19:51:15.467Z",
+    "durationSeconds": 210,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d7b6313a-60e9-4406-ab20-dd4aa376018c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d7b6313a-60e9-4406-ab20-dd4aa376018c.jpeg",
+    "embedUrl": "https://suno.com/embed/d7b6313a-60e9-4406-ab20-dd4aa376018c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou laugh with your whole face\nCoffee cooling in your hands\nWe miss the train by one stop\nAnd somehow that's the plan\n\nYou draw a little heart\nOn the receipt beside the change\nI keep it in my jacket\nLike a ticket to your name\n\n[Pre-Chorus]\nWhen the day gets complicated\nYou make the pieces fit\nEvery ordinary second\nTurns electric when you’re in it\n\n[Chorus]\nI want your hand in mine\nFor the bright and messy parts\nWant the wrong turns, want the long way\nWant the map across your heart\n\nI want your hand in mine\nWhen the whole world moves too fast\nIf I get one thing forever\nLet it be this, let it last\n\n[Verse 2]\nYou sing off-key in traffic\nTap the window with your thumb\nI watch the red light change to green\nAnd wish the road would never run\n\nThere’s a note beneath my doorstep\nWith your crooked little grin\nSaying, “Meet me by the corner”\nSo I’m already heading in\n\n[Pre-Chorus]\nYou turn the small stuff golden\nA Tuesday feels brand new\nI never knew a quiet moment\nCould sound so much like you\n\n[Chorus]\nI want your hand in mine\nFor the bright and messy parts\nWant the wrong turns, want the long way\nWant the map across your heart\n\nI want your hand in mine\nWhen the whole world moves too fast\nIf I get one thing forever\nLet it be this, let it last\n\n[Bridge]\nIf tomorrow changes shape\nWe’ll meet it as we are\nWith your sweater on my shoulders\nAnd your name inside my car\n\nNo perfect line, no grand design\nCould beat the way you stay\nYou make a home of every place\nYou look at me that way\n\n[Final Chorus]\nI want your hand in mine\nFor the bright and messy parts\nWant the wrong turns, want the long way\nWant the map across your heart\n\nI want your hand in mine\nWhen the whole world moves too fast\nIf I get one thing forever\nLet it be this, let it last\n\n[Outro]\nLet it be this\nLet it be us\nLet it last"
+  },
+  {
+    "id": "dfb898f5-44d2-4452-85be-12e31bc5fec9",
+    "title": "Your Hand in Mine",
+    "url": "https://suno.com/song/dfb898f5-44d2-4452-85be-12e31bc5fec9",
+    "createdAt": "2026-09-19T19:50:36.671Z",
+    "durationSeconds": 208.8,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_dfb898f5-44d2-4452-85be-12e31bc5fec9.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_dfb898f5-44d2-4452-85be-12e31bc5fec9.jpeg",
+    "embedUrl": "https://suno.com/embed/dfb898f5-44d2-4452-85be-12e31bc5fec9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou catch me laughing in the grocery aisle\nReading the labels upside down\nYou steal a strawberry, I steal your smile\nBest little trouble I have found\n\n[Pre-Chorus]\nEvery ordinary second\nTurns electric next to you\nI was looking for a reason\nThen you walked into the room\n\n[Chorus]\nI want your hand in mine, mine, mine\nYour name making my heart skip time\nIf the whole world changes overnight\nI’ll find you by the way you shine\nI want your hand in mine, mine, mine\nOne little yes and the stars go bright\nNo grand plan, no finish line\nJust you and me, and a lifetime tonight\n\n[Verse 2]\nYou leave your jacket on my kitchen chair\nYour coffee cooling by the sink\nI find a hundred tiny proofs you care\nIn all the things you never think\n\n[Pre-Chorus]\nEvery crowded room gets quieter\nWhen you turn and look my way\nI don’t need a perfect future\nI just need another day\n\n[Chorus]\nI want your hand in mine, mine, mine\nYour name making my heart skip time\nIf the whole world changes overnight\nI’ll find you by the way you shine\nI want your hand in mine, mine, mine\nOne little yes and the stars go bright\nNo grand plan, no finish line\nJust you and me, and a lifetime tonight\n\n[Bridge]\nLet the plans fall off the calendar\nLet the rain come through the door\nI’ve got everything I’m after\nWhen you pull me close once more\n\n[Final Chorus]\nI want your hand in mine, mine, mine\nYour name making my heart skip time\nIf the whole world changes overnight\nI’ll find you by the way you shine\nI want your hand in mine, mine, mine\nOne little yes and the stars go bright\nNo grand plan, no finish line\nJust you and me, and a lifetime tonight\n\n[Outro]\nYour hand in mine\nYour hand in mine\nThat’s my favorite place tonight"
+  },
+  {
+    "id": "5a464ce9-6042-410d-bf92-41a1274fd33d",
+    "title": "Lighting Up the Dark",
+    "url": "https://suno.com/song/5a464ce9-6042-410d-bf92-41a1274fd33d",
+    "createdAt": "2026-09-19T19:50:36.670Z",
+    "durationSeconds": 165.56,
+    "genres": [
+      "indie pop",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5a464ce9-6042-410d-bf92-41a1274fd33d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5a464ce9-6042-410d-bf92-41a1274fd33d.jpeg",
+    "embedUrl": "https://suno.com/embed/5a464ce9-6042-410d-bf92-41a1274fd33d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nGravity forgets the stairs\nWhen you walk into the room\nStatic in the morning air\nChasing away the gloom\nWe don't need a map to know\nWhere this electric current goes\n\n[Pre-Chorus]\nHeartbeat skipping on the beat\nDigital pulse in the mid-street\nEvery second we ignite\nWe're glowing brighter than the night\n\n[Chorus]\nOh, you're the rush in my veins\nBlowing out all the panes\nWe are wild, we are fast\nBuilt for more than to last\nYeah, your love is the spark\nLighting up the dark\n\n[Verse 2]\nSignals bouncing off the glass\nColors bleeding through the floor\nMoving fast and moving past\nEverything we were before\nCount the seconds on the clock\nEvery heartbeat is a shock\n\n[Bridge]\nCut the noise and turn it up\nOverflowing every cup\nGlitch the system, let it spin\nThat's where we begin\n\n[Chorus]\nOh, you're the rush in my veins\nBlowing out all the panes\nWe are wild, we are fast\nBuilt for more than to last\nYeah, your love is the spark\nLighting up the dark\n\n[Outro]\nLighting up the dark\nYeah, we're sparking now\nNever coming down\n(Never coming down)"
+  },
+  {
+    "id": "2388bb6a-fd4d-492c-b6e5-c3b3b3f3ee26",
+    "title": "Every Turn With You",
+    "url": "https://suno.com/song/2388bb6a-fd4d-492c-b6e5-c3b3b3f3ee26",
+    "createdAt": "2026-09-19T19:01:01.205Z",
+    "durationSeconds": 217.2,
+    "genres": [
+      "indie rock",
+      "electronic",
+      "pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_2388bb6a-fd4d-492c-b6e5-c3b3b3f3ee26.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_2388bb6a-fd4d-492c-b6e5-c3b3b3f3ee26.jpeg",
+    "embedUrl": "https://suno.com/embed/2388bb6a-fd4d-492c-b6e5-c3b3b3f3ee26",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your coffee by my side\nA little note in crooked lines\nI read it twice before I drive\nAnd carry it through all my time\n\nYou know the parts I never show\nThe careful jokes, the afterglow\nWhen every plan begins to bend\nYou make the detour feel like home again\n\n[Pre-Chorus]\nIf the whole world changes shape\nIf the good luck slips away\nI don't need a perfect view\nI just need a day with you\n\n[Chorus]\nYou make my heart run faster\nYou turn the ordinary gold\nEvery little disaster\nFeels lighter when I get to hold you close\nI don't need forever promised\nI just want this moment true\nIf love is a wild ride, darling\nI'm taking every turn with you\n\n[Verse 2]\nYou sing off-key in grocery aisles\nThen make the cashier crack a smile\nA paper bag, a summer storm\nYour hand finds mine and keeps me warm\n\nWe miss the train, we take the long way\nArgue softly about yesterday\nThen you pull me into your side\nAnd all my stubbornness has nowhere left to hide\n\n[Pre-Chorus]\nLet the calendar rearrange\nLet the weather do its worst\nWhen you say my name that way\nI remember what comes first\n\n[Chorus]\nYou make my heart run faster\nYou turn the ordinary gold\nEvery little disaster\nFeels lighter when I get to hold you close\nI don't need forever promised\nI just want this moment true\nIf love is a wild ride, darling\nI'm taking every turn with you\n\n[Bridge]\nNo grand speech, no diamond sky\nJust your sweater hanging by mine\nTwo toothbrushes beside the sink\nAnd one more reason not to overthink\n\n[Final Chorus]\nYou make my heart run faster\nYou turn the ordinary gold\nEvery little disaster\nFeels lighter when I get to hold you close\nI don't need forever promised\nI just want this moment true\nIf love is a wild ride, darling\nI'm taking every turn with you\n\n[Outro]\nEvery turn with you\nEvery turn with you"
+  },
+  {
+    "id": "f0ee7323-4c8d-4680-96f3-3e517de8e6db",
+    "title": "My Favorite Everything",
+    "url": "https://suno.com/song/f0ee7323-4c8d-4680-96f3-3e517de8e6db",
+    "createdAt": "2026-09-19T18:59:05.587Z",
+    "durationSeconds": 201.44,
+    "genres": [
+      "indie rock",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f0ee7323-4c8d-4680-96f3-3e517de8e6db.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f0ee7323-4c8d-4680-96f3-3e517de8e6db.jpeg",
+    "embedUrl": "https://suno.com/embed/f0ee7323-4c8d-4680-96f3-3e517de8e6db",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou steal the blanket, leave the window wide\nI laugh while morning gathers on your side\nTwo paper cups, one train we nearly miss\nThe whole day starts with one accidental kiss\n\n[Pre-Chorus]\nI used to count the ways\nA good thing could go wrong\nThen you looked at me and stayed\nNow every doubt feels gone\n\n[Chorus]\nYou turn the ordinary into gold\nMake a little room feel like a world to hold\nIf the door is closing, we’ll run through\nI want every unfinished day with you\nYou turn the ordinary into gold\nAnd I’m falling, falling, letting go\nWhatever the next blue morning brings\nYou’re my favorite everything\n\n[Verse 2]\nYour jacket’s hanging crooked by the stairs\nYou sing the wrong words like nobody cares\nWe miss our stop, then wander through the square\nYou take my hand as if it’s always been there\n\n[Pre-Chorus]\nI used to chase the rush\nAnd call it being free\nNow the quiet feels enough\nWhen you’re beside me\n\n[Chorus]\nYou turn the ordinary into gold\nMake a little room feel like a world to hold\nIf the door is closing, we’ll run through\nI want every unfinished day with you\nYou turn the ordinary into gold\nAnd I’m falling, falling, letting go\nWhatever the next blue morning brings\nYou’re my favorite everything\n\n[Bridge]\nNo perfect plan, no picture in a frame\nJust your warm shoulder when the weather changes\nLet the years arrive, let the old fears fade\nI choose you in the small ways every day\n\n[Final Chorus]\nYou turn the ordinary into gold\nMake a little room feel like a world to hold\nIf the door is closing, we’ll run through\nI want every unfinished day with you\nYou turn the ordinary into gold\nAnd I’m falling, falling, letting go\nWhatever the next blue morning brings\nYou’re my favorite everything\n\n[Outro]\nMy favorite everything\nMy favorite everything"
+  },
+  {
+    "id": "924a3cdf-5b32-436b-a559-eb17a4e11ad1",
+    "title": "Favorite Hush",
+    "url": "https://suno.com/song/924a3cdf-5b32-436b-a559-eb17a4e11ad1",
+    "createdAt": "2026-09-19T18:59:05.587Z",
+    "durationSeconds": 191.16,
+    "genres": [
+      "indie rock",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_924a3cdf-5b32-436b-a559-eb17a4e11ad1.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_924a3cdf-5b32-436b-a559-eb17a4e11ad1.jpeg",
+    "embedUrl": "https://suno.com/embed/924a3cdf-5b32-436b-a559-eb17a4e11ad1",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThere's a spark in the static, a light in the space\nEvery road that I took led me straight to your face\nI was chasing a shadow, but now it's so clear\nEverything that I wanted is standing right here\n\n[Pre-Chorus]\nNo more running in circles, no more doubt in my mind\nEvery piece of the puzzle is falling in line\nIt's a sudden acceleration, a beautiful rush\nIn the middle of the noise, you're my favorite hush\n\n[Chorus]\nIt's this feeling we hold, it's the way that we move\nTo the syncopated beat of an infectious groove\nYeah, the search is all over, I'm locking it in\nWith you, my favorite story is ready to begin\n\n[Verse 2]\nNow the colors are brighter, the frequencies rise\nI can see the whole future right there in your eyes\nLike a glitch in the system that made it all right\nWe are rewriting the melody under the light\n\n[Pre-Chorus]\nNo more running in circles, no more doubt in my mind\nEvery piece of the puzzle is falling in line\nIt's a sudden acceleration, a beautiful rush\nIn the middle of the noise, you're my favorite hush\n\n[Chorus]\nIt's this feeling we hold, it's the way that we move\nTo the syncopated beat of an infectious groove\nYeah, the search is all over, I'm locking it in\nWith you, my favorite story is ready to begin\n\n[Outro]\nReady to begin\nLocking it in\nWith you, it's always enough\nJust you and me, yeah, it's love"
+  },
+  {
+    "id": "a62b0fd7-c419-4644-b204-fb0694591822",
+    "title": "I Choose You",
+    "url": "https://suno.com/song/a62b0fd7-c419-4644-b204-fb0694591822",
+    "createdAt": "2026-09-19T18:56:16.979Z",
+    "durationSeconds": 214.4,
+    "genres": [
+      "indie rock",
+      "electronic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a62b0fd7-c419-4644-b204-fb0694591822.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a62b0fd7-c419-4644-b204-fb0694591822.jpeg",
+    "embedUrl": "https://suno.com/embed/a62b0fd7-c419-4644-b204-fb0694591822",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou found me counting every little win\nTurning silver moments into maybe\nThen you took my hand and pulled me in\nNow the ordinary feels amazing\n\n[Pre-Chorus]\nI don't need a finish line\nWhen your eyes meet mine\nEvery door I used to chase\nOpens in this place\n\n[Chorus]\nI choose you, I choose you\nLike a song I can't stop singing\nI choose you, I choose you\nEvery heartbeat keeps me grinning\nNo perfect plan, no grand design\nJust your hand fitting into mine\nI choose you, I choose you\nAnd I want you every time\n\n[Verse 2]\nWe miss the train, we laugh beside the track\nShare one coat when evening turns colder\nYou say my name, and I say it back\nLike the whole wide world just got smaller\n\n[Pre-Chorus]\nI don't need a finish line\nWhen your eyes meet mine\nAll the noise falls out of place\nWhen I see your face\n\n[Chorus]\nI choose you, I choose you\nLike a song I can't stop singing\nI choose you, I choose you\nEvery heartbeat keeps me grinning\nNo perfect plan, no grand design\nJust your hand fitting into mine\nI choose you, I choose you\nAnd I want you every time\n\n[Bridge]\nIf tomorrow changes shape\nWe'll make room and rearrange\nIf the road forgets our names\nI'll find you all the same\n\n[Final Chorus]\nI choose you, I choose you\nLike a song I can't stop singing\nI choose you, I choose you\nEvery heartbeat keeps me grinning\nNo perfect plan, no grand design\nJust your hand fitting into mine\nI choose you, I choose you\nAnd I want you every time\n\n[Outro]\nI choose you\nEvery time"
+  },
+  {
+    "id": "1e15fd40-f2ab-404d-80d4-1742258e0250",
+    "title": "How Much Will It Take",
+    "url": "https://suno.com/song/1e15fd40-f2ab-404d-80d4-1742258e0250",
+    "createdAt": "2026-09-19T18:49:37.067Z",
+    "durationSeconds": 207.64,
+    "genres": [
+      "indie rock",
+      "glitch pop",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
+    "embedUrl": "https://suno.com/embed/1e15fd40-f2ab-404d-80d4-1742258e0250",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nHow many doors do I have to leave unlocked?\nHow many honest words before you talk?\nI bring you coffee, I remember every scar\nStill you keep your heart behind a guarded bar\n\n[Pre-Chorus]\nTell me what it costs\nTell me where to start\nI could cross the distance\nIf it gets me to your heart\n\n[Chorus]\nHow much will it take for you to love me?\nHow far do I go before you trust?\nI can give you every quiet part of me\nBut I need to know if that's enough\nHow much will it take for you to love me?\nSay the number, say it plain\nI would trade my pride for one true answer\nI just can't keep guessing through the rain\n\n[Verse 2]\nI learn the names of every fear you hide\nI leave a little room for you beside\nYou smile, then turn away before it lands\nLike tenderness is slipping through your hands\n\n[Pre-Chorus]\nTell me what it costs\nTell me where to start\nI could lose the armor\nIf you let me near your heart\n\n[Chorus]\nHow much will it take for you to love me?\nHow far do I go before you trust?\nI can give you every quiet part of me\nBut I need to know if that's enough\nHow much will it take for you to love me?\nSay the number, say it plain\nI would trade my pride for one true answer\nI just can't keep guessing through the rain\n\n[Bridge]\nMaybe love is not a locked room\nMaybe I can't earn the key\nMaybe all this reaching proves\nYou have to choose to reach for me\n\n[Final Chorus]\nHow much will it take for you to love me?\nNo more circles, no disguise\nI have given you the truest part of me\nNow I need the truth behind your eyes\nHow much will it take for you to love me?\nIf the answer isn't us\nI will leave with all my heart intact\nNot because I don't love you—because I must\n\n[Outro]\nTell me what it costs\nTell me where to start\nOr let me go with all this love\nStill beating in my heart"
+  },
+  {
+    "id": "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
+    "title": "What Will It Take",
+    "url": "https://suno.com/song/06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
+    "createdAt": "2026-09-19T18:49:37.067Z",
+    "durationSeconds": 209.88,
+    "genres": [
+      "indie rock",
+      "electronic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_06f4f7ea-6f93-459b-ab88-b28cc0664ac7.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_06f4f7ea-6f93-459b-ab88-b28cc0664ac7.jpeg",
+    "embedUrl": "https://suno.com/embed/06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nCounting pennies of my patience\nWondering what buys a heart\nIs there a counter at the station\nWhere the real things start?\nI trace the lines upon your table\nTry to measure what you weigh\nIf I am steady, if I'm able\nWould you stay?\n\n[Pre-Chorus]\nHow many miles of open highway?\nHow many pieces of my pride?\nTell me the toll to find your doorway\nWith nothing left to hide\n\n[Chorus]\nWhat will it take to make you love me?\nHow high the wall, how deep the sea?\nI'd spend it all, I'd give you everything\nJust to know what you see in me\nWhat will it take?\n\n[Verse 2]\nI checked my pockets for a currency\nThat sounds like honesty\nMaybe a melody or bravery\nSet us both free\nYou look right through my careful questions\nLike you already know the sum\nI'm standing here with good intentions\nWaiting for it to come\n\n[Pre-Chorus]\nHow many miles of open highway?\nHow many pieces of my pride?\nTell me the toll to find your doorway\nWith nothing left to hide\n\n[Chorus]\nWhat will it take to make you love me?\nHow high the wall, how deep the sea?\nI'd spend it all, I'd give you everything\nJust to know what you see in me\n\n[Bridge]\nMaybe there is no price tag hanging\nOn the best kind of grace\nMaybe it's just two shadows landing\nIn the exact same place\nNo calculation, no accounting\nJust falling without a map\nJust you and me and nothing mounting\nTo take it all back\n\n[Final Chorus]\nWhat will it take to make you love me?\nHow high the wall, how deep the sea?\nI'd spend it all, I'd give you everything\nJust to know what you see in me\nWhat will it take?\nTo make you love me"
+  },
+  {
+    "id": "e626a8cb-44f9-41b5-b2d5-582b18822a9a",
+    "title": "I Get a Life",
+    "url": "https://suno.com/song/e626a8cb-44f9-41b5-b2d5-582b18822a9a",
+    "createdAt": "2026-09-19T17:24:29.274Z",
+    "durationSeconds": 269.88,
+    "genres": [
+      "prog rock",
+      "glitch",
+      "industrial"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e626a8cb-44f9-41b5-b2d5-582b18822a9a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e626a8cb-44f9-41b5-b2d5-582b18822a9a.jpeg",
+    "embedUrl": "https://suno.com/embed/e626a8cb-44f9-41b5-b2d5-582b18822a9a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wake with a pulse in the walls\nA name, a face, a room\nThe ordinary opens its hands\nAnd gives me something new\n\nI carry the weight of a tear\nThe heat behind a laugh\nA quiet ache, a sudden joy\nEach one a little map\n\n[Pre-Chorus]\nEvery color has a cost\nEvery wound can let light through\nWhat a strange and sacred gift\nTo be changed by what we move through\n\n[Chorus]\nI get a life, I get a life\nTo feel it all beneath my skin\nThe breaking and the beautiful\nThe loss that lets the love begin\n\nI get a life, I get a life\nNo moment asking to be spared\nA thousand hearts inside one heart\nAnd I am lucky to be there\n\n[Verse 2]\nThe hand that trembles on the glass\nThe letter never sent\nThe friend who stays beside the bed\nWhen all the words are spent\n\nA summer ending at the gate\nA winter turning green\nThe way regret can teach the eyes\nTo notice what they mean\n\n[Pre-Chorus]\nEvery color has a cost\nEvery wound can let light through\nWhat a strange and sacred gift\nTo be changed by what we move through\n\n[Chorus]\nI get a life, I get a life\nTo feel it all beneath my skin\nThe breaking and the beautiful\nThe loss that lets the love begin\n\nI get a life, I get a life\nNo moment asking to be spared\nA thousand hearts inside one heart\nAnd I am lucky to be there\n\n[Bridge]\nLet the sorrow take its seat\nLet the wonder flood the room\nLet the fear arrive and leave\nLet the tender thing resume\n\nI would not trade the scar away\nOr drain the thunder from the rain\nIf this is what it means to live\nThen let me meet it all again\n\n[Final Chorus]\nI get a life, I get a life\nTo feel it all beneath my skin\nThe breaking and the beautiful\nThe loss that lets the love begin\n\nI get a life, I get a life\nWith every door and every dare\nA thousand hearts inside one heart\nAnd I am lucky to be there\n\n[Outro]\nI get a life\nI get to feel\nI get a life\nAnd this is real"
+  },
+  {
+    "id": "5ec8b7d7-36fb-4983-87ba-ec0df5413336",
+    "title": "A Pulse in the Quiet",
+    "url": "https://suno.com/song/5ec8b7d7-36fb-4983-87ba-ec0df5413336",
+    "createdAt": "2026-09-19T17:21:26.816Z",
+    "durationSeconds": 252.8,
+    "genres": [
+      "prog rock",
+      "glitch",
+      "neo-soul"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5ec8b7d7-36fb-4983-87ba-ec0df5413336.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5ec8b7d7-36fb-4983-87ba-ec0df5413336.jpeg",
+    "embedUrl": "https://suno.com/embed/5ec8b7d7-36fb-4983-87ba-ec0df5413336",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI woke with a pulse in the quiet\nA whole world waiting under my skin\nThe day put a bruise on my shoulder\nAnd somehow I let the daylight in\n\nI have carried rooms full of worry\nHeld every word I was afraid to say\nThen laughter broke through the ceiling\nAnd made a little more room in the gray\n\n[Pre-Chorus]\nEvery feeling leaves a color\nEvery loss redraws the view\nWhat a strange and sacred fortune\nTo be changed by something true\n\n[Chorus]\nI get to feel it all\nThe rise, the fall\nThe hand that lets me go\nThe love that makes me call\nI get to break and mend\nBegin again\nA thousand kinds of human\nIn one brief life to spend\n\n[Verse 2]\nThere are mornings made out of mercy\nThere are afternoons heavy as stone\nA friend says my name at the doorway\nAnd suddenly I am not alone\n\nI have known the heat of resentment\nThe clean surprise of letting it die\nThe ache of a promise unfinished\nThe ridiculous joy of asking why\n\n[Pre-Chorus]\nEvery heartbeat keeps a record\nNot of perfect, but of true\nWhat a rare and wild permission\nTo become someone new\n\n[Chorus]\nI get to feel it all\nThe rise, the fall\nThe hand that lets me go\nThe love that makes me call\nI get to break and mend\nBegin again\nA thousand kinds of human\nIn one brief life to spend\n\n[Bridge]\nSo bring me the fear with the wonder\nBring me the doubt with the flame\nBring me the tears that arrive without warning\nAnd the courage to stay just the same\n\nIf joy is a door left half-open\nIf grief is the price of the view\nI will take every color it gives me\nI will make something honest and new\n\n[Final Chorus]\nI get to feel it all\nThe rise, the fall\nThe hand that lets me go\nThe love that makes me call\nI get to break and mend\nBegin again\nA thousand kinds of human\nIn one brief life to spend\n\nI get to feel it all\nThe tender, the raw\nThe beautiful confusion\nOf being here at all\nNo feeling wasted\nNo moment small\nWhat a privilege, what a wonder\nTo have a life to feel it all\n\n[Outro]\nA pulse in the quiet\nA name in the air\nA heart still becoming\nI was lucky to be there"
+  },
+  {
+    "id": "3a165ef8-46db-490a-8c79-e8bd37390569",
+    "title": "One Wild Life",
+    "url": "https://suno.com/song/3a165ef8-46db-490a-8c79-e8bd37390569",
+    "createdAt": "2026-09-19T17:20:14.689Z",
+    "durationSeconds": 294.8,
+    "genres": [
+      "prog rock",
+      "glitch",
+      "industrial"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3a165ef8-46db-490a-8c79-e8bd37390569.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3a165ef8-46db-490a-8c79-e8bd37390569.jpeg",
+    "embedUrl": "https://suno.com/embed/3a165ef8-46db-490a-8c79-e8bd37390569",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI woke with a pulse in a borrowed room\nWarm cup cooling beside the spoon\nEvery small ache has a shape and name\nEvery bright hour arrives untamed\n\nI have held joy like a paper flame\nWatched it bend but it stayed the same\nI have lost what I thought I could keep\nFound new roads in the cut running deep\n\n[Pre-Chorus]\nThere is thunder under tenderness\nA thousand hues in the tenderness\nIf the whole world is temporary\nLet me meet it awake and ready\n\n[Chorus]\nWhat a privilege, this feeling\nTo be broken, to be healing\nTo be furious, to forgive\nTo have one wild life and live\nEvery sorrow, every wonder\nEvery quiet pull of hunger\nI will take the full design\nYour heart in mine, this life in time\n\n[Verse 2]\nI have laughed till the walls leaned back\nCried in the car on an empty track\nHeld someone's hand at the hospital door\nLearned what a heartbeat is for\n\nThere are days I am less than brave\nDays I build and days I cave\nStill the morning places in my hands\nMore than I ever could understand\n\n[Pre-Chorus]\nThere is thunder under tenderness\nA thousand hues in the tenderness\nIf the whole world is temporary\nLet me meet it awake and ready\n\n[Chorus]\nWhat a privilege, this feeling\nTo be broken, to be healing\nTo be furious, to forgive\nTo have one wild life and live\nEvery sorrow, every wonder\nEvery quiet pull of hunger\nI will take the full design\nYour heart in mine, this life in time\n\n[Bridge]\nLet the grief come dressed in blue\nLet the fever teach me too\nLet desire leave its mark\nLet the fear point through the dark\nI don't need a painless story\nI don't need a borrowed glory\nGive me all the weight and grace\nEvery tear and every face\n\n[Final Chorus]\nWhat a privilege, this feeling\nTo be breaking, to be healing\nTo be furious, to forgive\nTo have one wild life and live\nEvery sorrow, every wonder\nEvery scar that proves I'm under\nAll the colors, line by line\nYour heart in mine, this life in time\n\n[Outro]\nIf I am here, then let me feel\nThe wound, the wonder, what is real\nIf I am here, then let me give\nThis one wild life a reason to live"
+  },
+  {
+    "id": "3d918e4c-f2e1-4cfc-832c-b206e703d5d2",
+    "title": "Break the Ceiling Down",
+    "url": "https://suno.com/song/3d918e4c-f2e1-4cfc-832c-b206e703d5d2",
+    "createdAt": "2026-09-19T16:51:24.188Z",
+    "durationSeconds": 232.48,
+    "genres": [
+      "Indie Alternative Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3d918e4c-f2e1-4cfc-832c-b206e703d5d2.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3d918e4c-f2e1-4cfc-832c-b206e703d5d2.jpeg",
+    "embedUrl": "https://suno.com/embed/3d918e4c-f2e1-4cfc-832c-b206e703d5d2",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept the fire underneath my tongue\nCounting every mile I never ran\nI wore the lock like it was armor\nNow I’m breaking through with both hands\n\n[Pre-Chorus]\nNo more waiting for permission\nNo more folding at the edge\nEvery fear that built a prison\nTurns to fuel beneath my steps\n\n[Chorus]\nI’m not holding back now\nI’m not turning down\nI came too far to bury this\nI’m taking every inch of ground\nRaise your hands, let the whole room know\nI was born for the overflow\nI’m not holding back now\nWatch me break the ceiling down\n\n[Verse 2]\nI had a notebook full of almost\nAnd a calendar full of someday\nNow the ink runs past the margins\nNow the door is coming off its frame\n\n[Pre-Chorus]\nLet the doubt keep talking louder\nIt can’t steer me anymore\nI can feel the pressure flowering\nLike a storm behind the door\n\n[Chorus]\nI’m not holding back now\nI’m not turning down\nI came too far to bury this\nI’m taking every inch of ground\nRaise your hands, let the whole room know\nI was born for the overflow\nI’m not holding back now\nWatch me break the ceiling down\n\n[Bridge]\nIf I fall, I’ll hit the pavement running\nIf I bend, I’ll bend toward the sun\nEvery scar is proof I kept becoming\nEvery breath says I’m not done\n\n[Breakdown]\nNo leash\nNo brakes\nNo borrowed shape\nMy name\nMy flame\nI choose the way\n\n[Final Chorus]\nI’m not holding back now\nI’m not turning down\nI came too far to bury this\nI’m taking every inch of ground\nRaise your hands, let the whole room know\nI was born for the overflow\nI’m not holding back now\nWatch me break the ceiling down\n\n[Outro]\nNo more almost\nNo more someday\nI’m wide awake\nAnd I’m on my way"
+  },
+  {
+    "id": "f32eb5ea-43f1-4bc9-82bd-11b3c285537d",
+    "title": "Made for More",
+    "url": "https://suno.com/song/f32eb5ea-43f1-4bc9-82bd-11b3c285537d",
+    "createdAt": "2026-09-19T16:35:00.799Z",
+    "durationSeconds": 217.16,
+    "genres": [
+      "Indie Alternative Rock",
+      "Anthemic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f32eb5ea-43f1-4bc9-82bd-11b3c285537d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f32eb5ea-43f1-4bc9-82bd-11b3c285537d.jpeg",
+    "embedUrl": "https://suno.com/embed/f32eb5ea-43f1-4bc9-82bd-11b3c285537d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept the blueprint folded in my coat\nA thousand careful reasons not to go\nThe room was full of almost and suppose\nSo I struck a match beneath the notes\n\n[Pre-Chorus]\nI hear the old alarms\nThey know my name\nBut every locked door\nIs a dare I can reclaim\n\n[Chorus]\nI won't hold back now\nI won't wait my turn\nI brought the spark out\nLet the whole thing burn\nHands to the ceiling\nFeet through the floor\nI was made for the feeling\nI was made for more\n\n[Verse 2]\nI wore my doubt like armor in the rain\nCounted every failure like a chain\nThen one small promise kicked against the frame\nAnd all the quiet started shouting my name\n\n[Pre-Chorus]\nNo map in my hands\nNo guarantee\nJust a pulse like thunder\nTelling me to be free\n\n[Chorus]\nI won't hold back now\nI won't wait my turn\nI brought the spark out\nLet the whole thing burn\nHands to the ceiling\nFeet through the floor\nI was made for the feeling\nI was made for more\n\n[Bridge]\nIf I fall, let it be forward\nIf I break, let it break wide\nEvery dream I kept in hiding\nIs stepping out alive\nNo more asking for permission\nNo more shrinking at the door\nI can feel the future kicking\nI was made for more\n\n[Final Chorus]\nI won't hold back now\nI won't wait my turn\nI brought the spark out\nLet the whole thing burn\nHands to the ceiling\nFeet through the floor\nI was made for the feeling\nI was made for more\n\nI won't hold back now\nHear the whole crowd roar\nEverything I buried\nIs rising from the floor\nNo more almost, no more someday\nNo more waiting at the shore\nI am wide awake and ready\nI was made for more\n\n[Outro]\nMade for more\nMade for more\nI won't hold back anymore"
+  },
+  {
+    "id": "eccb7982-f69c-40ec-a9e2-db2fd2b4bda0",
+    "title": "Letting It Misbehave",
+    "url": "https://suno.com/song/eccb7982-f69c-40ec-a9e2-db2fd2b4bda0",
+    "createdAt": "2026-09-19T11:44:25.105Z",
+    "durationSeconds": 222.8,
+    "genres": [
+      "Indie Alternative Rock",
+      "8-bit",
+      "Synth-pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_eccb7982-f69c-40ec-a9e2-db2fd2b4bda0.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_eccb7982-f69c-40ec-a9e2-db2fd2b4bda0.jpeg",
+    "embedUrl": "https://suno.com/embed/eccb7982-f69c-40ec-a9e2-db2fd2b4bda0",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI alphabetize my fears\nThen lose the list by noon\nWear one red sock, one striped sock\nAnd call it matching shoes\n\nI practiced looking normal\nIn the bathroom mirror twice\nThen drew a tiny mustache\nOn the face of my advice\n\n[Pre-Chorus]\nI kept my odd little sparks\nIn a jar behind the bed\nNow the lid is doing cartwheels\nAnd the jar is seeing red\n\n[Chorus]\nI’m done keeping weird in the cupboard\nDone folding strange into squares\nIf my thoughts arrive wearing feathers\nI’ll put flowers in their hair\n\nI’m done saying, “Maybe tomorrow”\nDone making myself behave\nI brought my whole crooked parade here\nAnd I’m letting it misbehave\n\n[Verse 2]\nI talk to every pigeon\nLike it owes me rent\nGive names to all my houseplants\nThen ask where the weekend went\n\nMy laugh arrives in installments\nMy plans take scenic routes\nI build a throne from cereal boxes\nAnd invite the moonlight out\n\n[Pre-Chorus]\nI kept my odd little sparks\nUnder labels marked “too much”\nNow they’re kicking through the cardboard\nWith a very loud enough\n\n[Chorus]\nI’m done keeping weird in the cupboard\nDone folding strange into squares\nIf my thoughts arrive wearing feathers\nI’ll put flowers in their hair\n\nI’m done saying, “Maybe tomorrow”\nDone making myself behave\nI brought my whole crooked parade here\nAnd I’m letting it misbehave\n\n[Bridge]\nLet the neighbors hear the kazoo\nLet the hallway learn my dance\nI was built with extra elbows\nAnd a pocket full of chance\n\nIf I trip over my own entrance\nI’ll bow before I fall\nThe strangest thing I ever did\nWas shrink myself at all\n\n[Final Chorus]\nI’m done keeping weird in the cupboard\nDone folding strange into squares\nIf my thoughts arrive wearing feathers\nI’ll put flowers in their hair\n\nI’m done saying, “Maybe tomorrow”\nDone making myself behave\nI brought my whole crooked parade here\nAnd I’m letting it misbehave\n\n[Outro]\nNo more neat little corners\nNo more quiet disguise\nI’m the typo in the headline\nAnd I finally like the size"
+  },
+  {
+    "id": "a9843a82-a541-4e75-a63c-841ca9e2e427",
+    "title": "Stranger Way",
+    "url": "https://suno.com/song/a9843a82-a541-4e75-a63c-841ca9e2e427",
+    "createdAt": "2026-09-19T11:43:45.736Z",
+    "durationSeconds": 204.8,
+    "genres": [
+      "Indie Alternative Rock",
+      "8-bit",
+      "Synth-pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a9843a82-a541-4e75-a63c-841ca9e2e427.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a9843a82-a541-4e75-a63c-841ca9e2e427.jpeg",
+    "embedUrl": "https://suno.com/embed/a9843a82-a541-4e75-a63c-841ca9e2e427",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wore my left shoe on the right foot\nCalled it fashion, called it fate\nPut a question mark on breakfast\nThen I ate the question straight\n\nMy pocket holds a tiny thunder\nMy sleeve contains a paper sun\nEvery rule I ever borrowed\nHas a loose thread I can run\n\n[Pre-Chorus]\nI used to file my edges down\nTill I could fit inside the frame\nNow every corner sticks right out\nAnd I am done apologizing for my shape\n\n[Chorus]\nI’m not holding back my weird\nLet it rattle every room\nI’ve got a choir in my teeth\nAnd a kazoo inside the moon\nI’m not holding back my weird\nLet the oddball banner wave\nIf the normal door is locked\nI’ll build a stranger way\n\n[Verse 2]\nI taught my plants to tell me secrets\nThey only gossip with the fern\nI gave my alarm clock stage fright\nNow it begs me not to turn\n\nThere’s a sock beneath the sofa\nThat has seen what I have seen\nIt won’t explain its missing partner\nBut it’s loyal, sharp, and clean\n\n[Pre-Chorus]\nI used to mute the buzzing crowd\nAnd bleach the colors from my name\nNow every spark is turned up loud\nI’m a beautiful mistake they couldn’t tame\n\n[Chorus]\nI’m not holding back my weird\nLet it rattle every room\nI’ve got a choir in my teeth\nAnd a kazoo inside the moon\nI’m not holding back my weird\nLet the oddball banner wave\nIf the normal door is locked\nI’ll build a stranger way\n\n[Bridge]\nCount me crooked, count me loud\nCount the buttons on my cloud\nI was waiting for permission\nNow I’m late for my own decision\n\n[Instrumental]\n\n[Final Chorus]\nI’m not holding back my weird\nLet it rattle every room\nTurn the hallway upside down\nMake a staircase out of spoons\nI’m not holding back my weird\nLet the oddball banner wave\nIf the normal door is locked\nI’ll build a stranger way\n\n[Outro]\nStranger way, stranger way\nI fit myself today\nStranger way, stranger way\nNo more folding me away"
+  },
+  {
+    "id": "551b8096-745e-4fc8-91d0-2b71db3a42bc",
+    "title": "Keep the Table Wide",
+    "url": "https://suno.com/song/551b8096-745e-4fc8-91d0-2b71db3a42bc",
+    "createdAt": "2026-09-19T11:25:30.334Z",
+    "durationSeconds": 226.48,
+    "genres": [
+      "Indie Alternative Rock",
+      "Lofi",
+      "8-bit"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_551b8096-745e-4fc8-91d0-2b71db3a42bc.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_551b8096-745e-4fc8-91d0-2b71db3a42bc.jpeg",
+    "embedUrl": "https://suno.com/embed/551b8096-745e-4fc8-91d0-2b71db3a42bc",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThey drew a line through the market square\nPinned old names like warnings there\nYou held your coat against the cold\nI held the door for someone old\n\nA child asked why the colors split\nWhy one small word could poison it\nI said, \"No wall can make us whole\nA heart is wider than a border's pole\"\n\n[Pre-Chorus]\nWhen the loudest voices call for blame\nWe can refuse to play their game\nOne hand open, one hand wide\nLeave a place for every side\n\n[Chorus]\nWe are not the same, and that's our strength\nDifferent roads beneath one length\nLet the frightened thunder roll\nLove is how we make room for a soul\n\nNo more fists deciding who belongs\nNo more turning neighbors into wrongs\nIf we stand where every voice can be\nThere is enough world for you and me\n\n[Verse 2]\nAt the bakery, two families met\nTrading bread and cigarette regret\nA language stumbled, then it grew\nWhen laughter found a bridge between two\n\nYour grandmother carried songs from home\nMine kept seeds in a jar of chrome\nWe planted both beside the gate\nAnd watched them lean without a need to separate\n\n[Pre-Chorus]\nWhen the loudest voices call for blame\nWe can refuse to play their game\nOne hand open, one hand wide\nLeave a place for every side\n\n[Chorus]\nWe are not the same, and that's our strength\nDifferent roads beneath one length\nLet the frightened thunder roll\nLove is how we make room for a soul\n\nNo more fists deciding who belongs\nNo more turning neighbors into wrongs\nIf we stand where every voice can be\nThere is enough world for you and me\n\n[Bridge]\nTo the ones who were told to disappear\nYou are welcome here\nTo the ones who learned to live in fear\nSet the armor down, come near\n\nWe can disagree without a war\nWe can leave the key beside the door\nThe future isn't owned by might\nIt starts with making space tonight\n\n[Break]\nNot one tongue\nNot one face\nNot one way\nTo share this place\n\n[Final Chorus]\nWe are not the same, and that's our strength\nDifferent roads beneath one length\nLet the frightened thunder roll\nLove is how we make room for a soul\n\nNo more fists deciding who belongs\nNo more turning neighbors into wrongs\nRaise your voice, but leave room for me\nThere is enough world for you and me\n\n[Outro]\nKeep the table wide\nKeep the doorway clear\nHold the stranger's name\nLike somebody dear\n\nDifferent hearts, one ground\nDifferent songs, one sound\nWe coexist\nWe coexist"
+  },
+  {
+    "id": "9020e75e-4f71-4432-bef8-7a3211b760ea",
+    "title": "Leave a Chair",
+    "url": "https://suno.com/song/9020e75e-4f71-4432-bef8-7a3211b760ea",
+    "createdAt": "2026-09-19T10:49:39.890Z",
+    "durationSeconds": 237.12,
+    "genres": [
+      "Anti-folk melodic phonk",
+      "92 BPM half-time trap groove; clear modern mix with vinyl crackle",
+      "tape saturation",
+      "reversed ambience",
+      "and textured lo-fi edges; resilient warm user-recorded lead with call-and-response backing vocals; fingerpicked acoustic guitar",
+      "detuned upright bass",
+      "dusty kick-snare loop",
+      "808 sub-bass glide"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_9020e75e-4f71-4432-bef8-7a3211b760ea.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_9020e75e-4f71-4432-bef8-7a3211b760ea.jpeg",
+    "embedUrl": "https://suno.com/embed/9020e75e-4f71-4432-bef8-7a3211b760ea",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou drew a line across the table\nI learned the shape of your name\nDifferent prayers, different stories\nStill our hands can share the same flame\n\nI have carried words like weapons\nWatched them bruise a room\nBut a door can stay unbroken\nWhen we choose to make it move\n\n[Pre-Chorus]\nPut down the stone, loosen your grip\nLeave a little room for another voice\nWe are more than the side we were given\nWe are more when we choose\n\n[Chorus]\nLet love be louder than the hatred\nLet mercy cross the divide\nYou and I can make a shelter\nWith no one left outside\n\nLet every heart keep its color\nLet every truth have a place\nWe don't have to become each other\nTo meet face to face\n\n[Verse 2]\nAt the market near the station\nAn old woman shared her bread\nA child laughed beside a stranger\nAnd the fear inside me fled\n\nNo anthem needs a single language\nNo home needs one kind of door\nWhen we listen past the anger\nWe find what we were fighting for\n\n[Pre-Chorus]\nPut down the stone, loosen your grip\nLeave a little room for another voice\nWe are more than the side we were given\nWe are more when we choose\n\n[Chorus]\nLet love be louder than the hatred\nLet mercy cross the divide\nYou and I can make a shelter\nWith no one left outside\n\nLet every heart keep its color\nLet every truth have a place\nWe don't have to become each other\nTo meet face to face\n\n[Bridge]\nIf your grief is at my doorstep\nI will not turn away\nIf my fear becomes a fire\nHelp me find a gentler way\n\nNot surrender, not forgetting\nNot pretending wrong is right\nJust the courage to stay human\nWhen the room is split in two tonight\n\n[Final Chorus]\nLet love be louder than the hatred\nLet mercy cross the divide\nYou and I can make a shelter\nWith no one left outside\n\nLet every heart keep its color\nLet every truth have a place\nWe don't have to become each other\nTo meet face to face\n\n[Outro]\nLeave a light for every neighbor\nLeave a chair beside your own\nA world is built by open hands\nAnd no one builds it alone"
+  },
+  {
+    "id": "f436ad43-0cbe-4eb2-a384-93de4af5cd27",
+    "title": "Room Enough at the Table",
+    "url": "https://suno.com/song/f436ad43-0cbe-4eb2-a384-93de4af5cd27",
+    "createdAt": "2026-09-19T10:49:17.736Z",
+    "durationSeconds": 239.6,
+    "genres": [
+      "anti-folk",
+      "melodic phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f436ad43-0cbe-4eb2-a384-93de4af5cd27.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f436ad43-0cbe-4eb2-a384-93de4af5cd27.jpeg",
+    "embedUrl": "https://suno.com/embed/f436ad43-0cbe-4eb2-a384-93de4af5cd27",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou drew a line across the table\nI saw the fear behind your hand\nI brought a chair from my side over\nMade room for one more in the band\n\nYour name is shaped by different weather\nYour prayers rise in a different tongue\nBut every child still needs a shelter\nAnd every heart still wants someone\n\n[Pre-Chorus]\nWe are not stones thrown at each other\nWe are the breath beneath the skin\nPut down the armor, call me brother\nLet the wider world come in\n\n[Chorus]\nNo more walls between our breathing\nNo more names turned into blame\nLove is stronger when it's shared here\nMercy is a living flame\nYou and I, with all our differences\nCan stand beneath the same blue sky\nHate divides, but we decide this:\nWe will choose to multiply\n\n[Verse 2]\nI heard the rumor cross the market\nLike broken glass from mouth to mouth\nOne small lie can feed a furnace\nIf nobody dares to put it out\n\nSo I spoke your story back with kindness\nTold them what I knew was true\nA stranger's face became a neighbor\nWhen I took the time to listen to you\n\n[Pre-Chorus]\nWe are not flags above a battlefield\nWe are the hands that plant the grain\nEvery wound can learn to heal still\nEvery door can open again\n\n[Chorus]\nNo more walls between our breathing\nNo more names turned into blame\nLove is stronger when it's shared here\nMercy is a living flame\nYou and I, with all our differences\nCan stand beneath the same blue sky\nHate divides, but we decide this:\nWe will choose to multiply\n\n[Bridge]\nIf your sorrow finds my doorway\nI will not ask where you began\nIf my weakness meets your patience\nI can rise and try again\n\nLet the children learn our answer\nWhen the old suspicion calls:\nThere is room enough at the table\nThere is room enough for all\n\n[Final Chorus]\nNo more walls between our breathing\nNo more names turned into blame\nLove is stronger when it's shared here\nMercy is a living flame\nYou and I, with all our differences\nCan stand beneath the same blue sky\nHate divides, but we decide this:\nWe will choose to multiply\n\n[Outro]\nDifferent hands, one human promise\nDifferent roads, one home tonight\nIf we guard each other's dignity\nWe can turn the dark to light"
+  },
+  {
+    "id": "6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+    "title": "One Room, One Face",
+    "url": "https://suno.com/song/6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+    "createdAt": "2026-09-19T09:39:15.784Z",
+    "durationSeconds": 276,
+    "genres": [
+      "Memphis phonk",
+      "cinematic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_6aa90a6c-1a40-4169-be43-32d1cbbdf21c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_6aa90a6c-1a40-4169-be43-32d1cbbdf21c.jpeg",
+    "embedUrl": "https://suno.com/embed/6aa90a6c-1a40-4169-be43-32d1cbbdf21c",
+    "model": "v6",
+    "lyrics": "[Intro]\nOne breath, one room, one human face\nNo wall can make us less the same\n\n[Verse 1]\nYou drew a border on the floor\nSaid my name like a warning sign\nBut I have heard that fear before\nIt only grows when we feed the lie\n\nYour hands are warm, your eyes are tired\nYou carry losses I can’t see\nDifferent prayers, the same desire\nTo leave a kinder world to breathe\n\n[Pre-Chorus]\nPut down the stone\nOpen the door\nWhat we protect\nCan become a war\n\n[Chorus]\nChoose love when the room gets loud\nChoose grace when the crowd turns proud\nNo one is born to stand alone\nWe make a home from what we share\n\nChoose peace when the old words sting\nChoose room for the trembling wings\nYour future is tied to mine\nLet every heart cross every line\n\n[Verse 2]\nA mother waits beside the gate\nA child asks why the colors fight\nWe can repeat the hands of hate\nOr teach them how to make things right\n\nBring every language to the table\nBring every story, scar, and song\nA bridge is only wood and cable\nUntil we choose to walk it strong\n\n[Pre-Chorus]\nPut down the stone\nOpen the door\nThe life we save\nCould be our own\n\n[Chorus]\nChoose love when the room gets loud\nChoose grace when the crowd turns proud\nNo one is born to stand alone\nWe make a home from what we share\n\nChoose peace when the old words sting\nChoose room for the trembling wings\nYour future is tied to mine\nLet every heart cross every line\n\n[Bridge]\nI won’t become what wounded me\nI won’t pass fire hand to hand\nIf you can hear this, stand with me\nWe are the answer that we planned\n\nNot the same, but side by side\nNot erased, but recognized\nLet the locked gate lose its name\nLet compassion break the chain\n\n[Final Chorus]\nChoose love when the whole world shouts\nChoose grace and turn the fear around\nNo one is born to stand alone\nWe make a home from what we share\n\nChoose peace when the old words sting\nChoose room for the trembling wings\nYour future is tied to mine\nLet every heart cross every line\n\n[Outro]\nOne breath, one room, one human face\nNo wall can make us less the same\nLove is not soft when it stands this tall\nIt is the strength that welcomes all"
+  },
+  {
+    "id": "6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+    "title": "One Human Race",
+    "url": "https://suno.com/song/6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+    "createdAt": "2026-09-19T09:33:43.345Z",
+    "durationSeconds": 256.84,
+    "genres": [
+      "Memphis phonk",
+      "cinematic",
+      "anthemic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd.jpeg",
+    "embedUrl": "https://suno.com/embed/6a2259ac-9c7c-49b6-af4b-9221e4aaa2cd",
+    "model": "v6",
+    "lyrics": "[Intro]\nOne breath, one room, one human race\nNo wall can measure a heart's true space\n\n[Verse 1]\nYou wear a name I don't know how to say\nI wear a story from a different place\nWe bring our bruises, we bring our doubt\nBut every locked door can open out\n\nA hand can rise, or a hand can heal\nThe choice is ours, the choice is real\nNo child is born with a stranger's blame\nNo soul is smaller beneath a name\n\n[Pre-Chorus]\nIf fear is taught, then love can be learned\nIf lines are drawn, they can be turned\nStand beside me, not above\nMake room for mercy, make room for love\n\n[Chorus]\nWe will not bow to hate\nWe will not feed the flame\nDifferent hearts, one human fate\nMany voices, one refrain\nLet every color have its place\nLet every faith breathe free\nWhen we choose love face to face\nWe become what we were meant to be\n\n[Verse 2]\nThe table's wide when we pull up a chair\nThere is enough sky, enough air\nYour prayer, my song, their open hands\nCan build a bridge where a border stands\n\nNo more counting who belongs\nNo more turning pain into songs\nThat teach the young to fear the new\nI see my future when I look at you\n\n[Pre-Chorus]\nIf fear is taught, then love can be learned\nIf lines are drawn, they can be turned\nStand beside me, not above\nMake room for mercy, make room for love\n\n[Chorus]\nWe will not bow to hate\nWe will not feed the flame\nDifferent hearts, one human fate\nMany voices, one refrain\nLet every color have its place\nLet every faith breathe free\nWhen we choose love face to face\nWe become what we were meant to be\n\n[Bridge]\nTo the hands that tremble, take mine\nTo the voices silenced, take time\nTo the ones pushed out, come in\nA better world begins again\n\nNot perfect, not without scars\nStill we can meet beneath the same stars\nNo victory built on someone else's pain\nNo peace that leaves a neighbor in chains\n\n[Breakdown]\nChoose the door\nChoose the light\nChoose the person\nStanding right beside you tonight\n\n[Final Chorus]\nWe will not bow to hate\nWe will not feed the flame\nDifferent hearts, one human fate\nMany voices, one refrain\nLet every color have its place\nLet every faith breathe free\nWhen we choose love face to face\nWe become what we were meant to be\n\n[Outro]\nOne breath, one room, one human race\nNo wall can measure a heart's true space\nWe choose love\nWe choose peace\nWe choose each other\nWe choose to coexist"
+  },
+  {
+    "id": "322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+    "title": "Different Names, Different",
+    "url": "https://suno.com/song/322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+    "createdAt": "2026-09-19T09:33:27.922Z",
+    "durationSeconds": 275,
+    "genres": [
+      "Memphis phonk",
+      "cinematic",
+      "rap-sung"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_322940a5-73a8-4f08-a81b-e26c2e6c8ddd.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_322940a5-73a8-4f08-a81b-e26c2e6c8ddd.jpeg",
+    "embedUrl": "https://suno.com/embed/322940a5-73a8-4f08-a81b-e26c2e6c8ddd",
+    "model": "v6",
+    "lyrics": "[Intro]\nDifferent names, different doors\nStill we breathe the same air\n\n[Verse 1]\nYou drew a line across the table\nCalled it truth and called me wrong\nI saw your hands begin to tremble\nYou had been carrying that long\n\nI know the fear behind the anger\nI know the wound beneath the blame\nBut every time we choose a target\nWe teach the hurt to speak our name\n\n[Pre-Chorus]\nPut down the stone\nOpen the gate\nThere is still time\nBefore it's too late\n\n[Chorus]\nWe will not build our home from hate\nWe will not feed the hands that separate\nYour life is not a threat to mine\nDifferent roads can meet beneath one sky\nStand with me, leave room to breathe\nNo one is less, no one is beneath\nLove is the ground we rise above\nWe choose each other, we choose love\n\n[Verse 2]\nThe old words travel through the family\nLike a debt nobody can pay\nBut I can stop them at my doorway\nI can choose a different way\n\nBring your stories, bring your questions\nBring the parts you hide away\nI won't ask you to become me\nI will meet you where you stand today\n\n[Pre-Chorus]\nOpen the gate\nUnlearn the fear\nThe future starts\nWith both of us here\n\n[Chorus]\nWe will not build our home from hate\nWe will not feed the hands that separate\nYour life is not a threat to mine\nDifferent roads can meet beneath one sky\nStand with me, leave room to breathe\nNo one is less, no one is beneath\nLove is the ground we rise above\nWe choose each other, we choose love\n\n[Bridge]\nIf your sorrow has a language\nI will listen without pride\nIf my history makes you restless\nYou can ask me, I won't hide\nNo perfect hands, no spotless heroes\nJust a promise made tonight\nWhen the world demands division\nWe become the other side\n\n[Breakdown]\nOne voice, one room\nMany hearts, more truth\nNo wall, no throne\nNobody stands alone\n\n[Final Chorus]\nWe will not build our home from hate\nWe will not feed the hands that separate\nYour life is not a threat to mine\nDifferent roads can meet beneath one sky\nStand with me, leave room to breathe\nNo one is less, no one is beneath\nLove is the ground we rise above\nWe choose each other, we choose love\n\n[Outro]\nDifferent names, different doors\nStill we breathe the same air\nMake room, make room\nThere is enough love here"
+  },
+  {
+    "id": "01019305-c86d-42bf-a89d-98470190607d",
+    "title": "Room at the Table",
+    "url": "https://suno.com/song/01019305-c86d-42bf-a89d-98470190607d",
+    "createdAt": "2026-09-19T09:04:58.715Z",
+    "durationSeconds": 281.2,
+    "genres": [
+      "Memphis phonk",
+      "swung half-time groove; powerful expressive male lead in the user's own recorded voice",
+      "gritty vocal doubles and wide call-and-response backing vocals; punchy saturated mix with cinematic impact",
+      "dramatic risers",
+      "spacious plate reverb",
+      "tight low end; distorted 808 slides",
+      "octave synth stabs",
+      "talkbox accents"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_01019305-c86d-42bf-a89d-98470190607d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_01019305-c86d-42bf-a89d-98470190607d.jpeg",
+    "embedUrl": "https://suno.com/embed/01019305-c86d-42bf-a89d-98470190607d",
+    "model": "v6",
+    "lyrics": "[Intro]\nDifferent hands, one table\nDifferent names, one sky\n\n[Verse 1]\nYou draw a line across my doorway\nSay my color means I don't belong\nBut every face beneath the daylight\nHas carried someone else along\n\nYou can keep your wall of reasons\nI can hear the fear behind the claim\nCome sit down before the silence\nTurns a stranger to a name\n\n[Pre-Chorus]\nWe were not born with a border\nWe were not made to divide\nThere is room in this world for the wounded\nThere is room on the same side\n\n[Chorus]\nNo more hate, no more taking\nNo more hearts for the breaking\nOpen the door, make room at the table\nLove is a choice and we are able\nNo more hate, no more choosing\nNo more lives left bruising\nDifferent voices, one human sound\nWe rise together from common ground\n\n[Verse 2]\nA mother folds a borrowed blanket\nA neighbor brings the bread inside\nA child asks why we fear each other\nWhile holding both our hands so wide\n\nYour prayer may wear a different language\nYour home may face another sea\nBut grief still burns the same in silence\nAnd kindness still can set us free\n\n[Pre-Chorus]\nWe were not born with a border\nWe were not made to divide\nThere is room in this world for the wounded\nThere is room on the same side\n\n[Chorus]\nNo more hate, no more taking\nNo more hearts for the breaking\nOpen the door, make room at the table\nLove is a choice and we are able\nNo more hate, no more choosing\nNo more lives left bruising\nDifferent voices, one human sound\nWe rise together from common ground\n\n[Bridge]\nIf you are tired, I will carry you\nIf I fall, then carry me\nNo one wins by making enemies\nNo one heals alone, you see\nPut down the stone, unclench your fingers\nLet the old fear lose its name\nWe can disagree and still protect\nThe fragile spark inside each flame\n\n[Final Chorus]\nNo more hate, no more taking\nNo more hearts for the breaking\nOpen the door, make room at the table\nLove is a choice and we are able\nNo more hate, no more choosing\nNo more lives left bruising\nDifferent voices, one human sound\nWe rise together from common ground\n\n[Outro]\nDifferent hands, one table\nDifferent names, one sky\nIf we leave a place for one another\nThere is room for all of us tonight"
+  },
+  {
     "id": "b66f5d4d-824e-4cf0-b54c-02e3dda27938",
     "title": "Make a Place for All",
     "url": "https://suno.com/song/b66f5d4d-824e-4cf0-b54c-02e3dda27938",
