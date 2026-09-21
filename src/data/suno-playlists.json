@@ -217,8 +217,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 13,
-    "durationSeconds": 2900.44,
+    "songCount": 19,
+    "durationSeconds": 4329.24,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -232,7 +232,13 @@
       "8da90561-0bd6-4e14-bbe9-8d3c829f4631",
       "67162266-31c8-452e-a1c7-e298e54f7dce",
       "e998f5f1-1e57-499f-9807-78df9c2a8463",
-      "cbe1e194-d216-4371-a03a-c6aa75e9101e"
+      "cbe1e194-d216-4371-a03a-c6aa75e9101e",
+      "db73224d-c32c-4f86-ba3c-86b7cd1eecfc",
+      "5c2b90bf-45e3-49b1-9cf3-e248a0514ae8",
+      "be5d3221-dda8-431c-a715-f154b0ddb2c6",
+      "073770cb-653a-4607-8cf7-ff1fde6a09a7",
+      "2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
+      "952984df-f15b-4f5c-816d-c6525e2d36d9"
     ],
     "tracks": [
       {
@@ -338,6 +344,54 @@
         "createdAt": "2026-09-19T22:49:39.280Z",
         "durationSeconds": 295.16,
         "imageUrl": "https://cdn2.suno.ai/image_cbe1e194-d216-4371-a03a-c6aa75e9101e.jpeg"
+      },
+      {
+        "id": "db73224d-c32c-4f86-ba3c-86b7cd1eecfc",
+        "title": "Something to Love",
+        "url": "https://suno.com/song/db73224d-c32c-4f86-ba3c-86b7cd1eecfc",
+        "createdAt": "2026-09-21T02:06:48.101Z",
+        "durationSeconds": 201.2,
+        "imageUrl": "https://cdn2.suno.ai/image_db73224d-c32c-4f86-ba3c-86b7cd1eecfc.jpeg"
+      },
+      {
+        "id": "5c2b90bf-45e3-49b1-9cf3-e248a0514ae8",
+        "title": "I Love to Fall in Love",
+        "url": "https://suno.com/song/5c2b90bf-45e3-49b1-9cf3-e248a0514ae8",
+        "createdAt": "2026-09-21T03:06:57.927Z",
+        "durationSeconds": 238.4,
+        "imageUrl": "https://cdn2.suno.ai/image_5c2b90bf-45e3-49b1-9cf3-e248a0514ae8.jpeg"
+      },
+      {
+        "id": "be5d3221-dda8-431c-a715-f154b0ddb2c6",
+        "title": "Every Tomorrow There",
+        "url": "https://suno.com/song/be5d3221-dda8-431c-a715-f154b0ddb2c6",
+        "createdAt": "2026-09-21T03:15:20.526Z",
+        "durationSeconds": 252.4,
+        "imageUrl": "https://cdn2.suno.ai/image_be5d3221-dda8-431c-a715-f154b0ddb2c6.jpeg"
+      },
+      {
+        "id": "073770cb-653a-4607-8cf7-ff1fde6a09a7",
+        "title": "Keep a Little Room",
+        "url": "https://suno.com/song/073770cb-653a-4607-8cf7-ff1fde6a09a7",
+        "createdAt": "2026-09-21T04:09:29.318Z",
+        "durationSeconds": 246,
+        "imageUrl": "https://cdn2.suno.ai/image_073770cb-653a-4607-8cf7-ff1fde6a09a7.jpeg"
+      },
+      {
+        "id": "2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
+        "title": "I Don't Know Your Name Yet",
+        "url": "https://suno.com/song/2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
+        "createdAt": "2026-09-21T04:21:50.863Z",
+        "durationSeconds": 221.6,
+        "imageUrl": "https://cdn2.suno.ai/image_2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5.jpeg"
+      },
+      {
+        "id": "952984df-f15b-4f5c-816d-c6525e2d36d9",
+        "title": "I Don't Know Where You Are",
+        "url": "https://suno.com/song/952984df-f15b-4f5c-816d-c6525e2d36d9",
+        "createdAt": "2026-09-21T04:09:50.919Z",
+        "durationSeconds": 269.2,
+        "imageUrl": "https://cdn2.suno.ai/image_952984df-f15b-4f5c-816d-c6525e2d36d9.jpeg"
       }
     ]
   },
@@ -1066,8 +1120,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 21,
-    "durationSeconds": 4454.039999999999,
+    "songCount": 23,
+    "durationSeconds": 4866.639999999999,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -1089,7 +1143,9 @@
       "8ed9a010-b5a9-4def-b495-733d6918ea6a",
       "a5a02c91-b7eb-4d6a-aa9b-7c71e2b0d2df",
       "5a9a66c5-3c17-4539-882a-5ad05b6b2455",
-      "bdaac0a9-a020-4a70-b9b5-57de48d1c08d"
+      "bdaac0a9-a020-4a70-b9b5-57de48d1c08d",
+      "ad41a16d-23a0-45d9-82b3-615fee405066",
+      "2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5"
     ],
     "tracks": [
       {
@@ -1259,6 +1315,22 @@
         "createdAt": "2026-09-20T16:27:40.717Z",
         "durationSeconds": 230.36,
         "imageUrl": "https://cdn2.suno.ai/image_bdaac0a9-a020-4a70-b9b5-57de48d1c08d.jpeg"
+      },
+      {
+        "id": "ad41a16d-23a0-45d9-82b3-615fee405066",
+        "title": "Let Your Weird Out",
+        "url": "https://suno.com/song/ad41a16d-23a0-45d9-82b3-615fee405066",
+        "createdAt": "2026-09-21T01:30:22.518Z",
+        "durationSeconds": 191,
+        "imageUrl": "https://cdn2.suno.ai/image_ad41a16d-23a0-45d9-82b3-615fee405066.jpeg"
+      },
+      {
+        "id": "2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
+        "title": "I Don't Know Your Name Yet",
+        "url": "https://suno.com/song/2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
+        "createdAt": "2026-09-21T04:21:50.863Z",
+        "durationSeconds": 221.6,
+        "imageUrl": "https://cdn2.suno.ai/image_2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5.jpeg"
       }
     ]
   },
