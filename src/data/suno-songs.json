@@ -1,5 +1,819 @@
 [
   {
+    "id": "b4395686-9cc1-4130-ba7d-16cbab4c6aaf",
+    "title": "The Small Thing Is Enough",
+    "url": "https://suno.com/song/b4395686-9cc1-4130-ba7d-16cbab4c6aaf",
+    "createdAt": "2026-09-24T22:33:32.899Z",
+    "durationSeconds": 267.92,
+    "genres": [
+      "iDM Phonk",
+      "art-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b4395686-9cc1-4130-ba7d-16cbab4c6aaf.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b4395686-9cc1-4130-ba7d-16cbab4c6aaf.jpeg",
+    "embedUrl": "https://suno.com/embed/b4395686-9cc1-4130-ba7d-16cbab4c6aaf",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI count the doors I never opened\nBy the paint beneath my hands\nKeep a map inside my pocket\nOf a place I never planned\n\nEvery answer grows a question\nEvery yes leaves something out\nI can name the shape of wanting\nI just can't name what it's about\n\n[Pre-Chorus]\nIf I stop, will I disappear?\nIf I stay, will I become clear?\n\n[Chorus]\nI am more than the measure\nMore than the mark on the wall\nStill I carry every number\nLike a verdict when I fall\n\nTell me, what am I defending?\nWho am I trying to impress?\nI keep building up the ceiling\nThen I blame the room for less\n\n[Verse 2]\nThere’s a receipt inside my jacket\nFor a promise I returned\nI remember all the reasons\nAnd the lesson never learned\n\nFriends can hear it in my laughter\nWhen the room begins to thin\nI say everything is golden\nWhile the doubt keeps getting in\n\n[Pre-Chorus]\nIf I stop, will I disappear?\nIf I stay, will I become clear?\n\n[Chorus]\nI am more than the measure\nMore than the mark on the wall\nStill I carry every number\nLike a verdict when I fall\n\nTell me, what am I defending?\nWho am I trying to impress?\nI keep building up the ceiling\nThen I blame the room for less\n\n[Bridge]\nPut the ledger on the table\nLet the red ink run\nI was never made of outcomes\nI was made of what I’ve done\n\nOne breath, then another\nNo bargain, no disguise\nThere is nothing left to conquer\nWhen I finally meet my eyes\n\n[Final Chorus]\nI am more than the measure\nMore than the mark on the wall\nI can carry all the fractures\nAnd still answer when they call\n\nTell me, what am I defending?\nI can loosen my grip tonight\nLet the unfinished stay unfinished\nLet the small thing be enough this time\n\n[Outro]\nThis time\nThe small thing is enough\nThis time\nI am here"
+  },
+  {
+    "id": "678237b2-5700-4b38-8447-db2486908421",
+    "title": "Never Enough",
+    "url": "https://suno.com/song/678237b2-5700-4b38-8447-db2486908421",
+    "createdAt": "2026-09-24T22:33:26.861Z",
+    "durationSeconds": 210.8,
+    "genres": [
+      "iDM Phonk",
+      "soulful"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_678237b2-5700-4b38-8447-db2486908421.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_678237b2-5700-4b38-8447-db2486908421.jpeg",
+    "embedUrl": "https://suno.com/embed/678237b2-5700-4b38-8447-db2486908421",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI got the keys\nStill I want more\nNew shoes on the floor\nThen I stare at the door\n\nI make the list\nThen I rewrite it\nOne win, one kiss\nAnd I still don't quite like it\n\n[Pre-Chorus]\nI keep chasing the edge\nOf a feeling that fades\nEvery finish line\nTurns into a maze\n\n[Chorus]\nIt's never enough\nNever enough\nI reach for the sun\nIt burns and I run\n\nIt's never enough\nNever enough\nI hold what I want\nThen want it again (again)\n\n[Verse 2]\nI bought the view\nFrom the corner room\nWide-open sky\nStill a crack in the blue\n\nI said \"I'm good\"\nWith my hand on my chest\nBut the hunger stayed\nAnd it didn't take a rest\n\n[Pre-Chorus]\nI keep naming the prize\nLike a spell in the air\nBut the more I get\nThe more I compare\n\n[Chorus]\nIt's never enough\nNever enough\nI reach for the sun\nIt burns and I run\n\nIt's never enough\nNever enough\nI hold what I want\nThen want it again (again)\n\n[Bridge]\nMaybe that's just me\nMaybe that's the game\nA full glass in my hand\nAnd I drink the ache\n\nI can learn to live\nWith the edge and the bruise\nNot every empty place\nIs a thing to lose\n\n[Final Chorus]\nIt's never enough\nNever enough\nI reach for the sun\nIt burns and I run\n\nIt's never enough\nNever enough\nI hold what I want\nThen want it again\nIt's never enough (never enough)\nAnd I still sing it again"
+  },
+  {
+    "id": "1cac0b58-d843-4219-98e6-dcb938b36c95",
+    "title": "Make a Little Room",
+    "url": "https://suno.com/song/1cac0b58-d843-4219-98e6-dcb938b36c95",
+    "createdAt": "2026-09-24T22:26:31.270Z",
+    "durationSeconds": 255.88,
+    "genres": [
+      "iDM Phonk",
+      "art-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1cac0b58-d843-4219-98e6-dcb938b36c95.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1cac0b58-d843-4219-98e6-dcb938b36c95.jpeg",
+    "embedUrl": "https://suno.com/embed/1cac0b58-d843-4219-98e6-dcb938b36c95",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI count the rooms I never entered\nNames I wore and left behind\nEvery answer grows a question\nTucked beneath the finish line\n\nI keep a ledger in my pocket\nDates and debts and borrowed praise\nBut the ink runs through the numbers\nWhen I look at my own face\n\n[Pre-Chorus]\nTell me what remains\nWhen the wanting loses shape\nIf I stop reaching out\nWill I finally feel the weight\n\n[Chorus]\nI am more than what I gather\nMore than every door I move\nThere is breath beneath the pressure\nThere is time I haven't used\n\nI don't need to solve the silence\nI don't need to win the room\nI can meet myself unfinished\nAnd still make a little room\n\n[Verse 2]\nOn the train beside the river\nI watched warehouses turn gold\nSomeone laughed behind a window\nLike a story being told\n\nI had plans for every minute\nThen the signal dropped away\nFor a moment nothing asked me\nTo become a better name\n\n[Pre-Chorus]\nLet the future wait\nWith its mouth full of demands\nI can loosen every promise\nI was gripping in my hands\n\n[Chorus]\nI am more than what I gather\nMore than every door I move\nThere is breath beneath the pressure\nThere is time I haven't used\n\nI don't need to solve the silence\nI don't need to win the room\nI can meet myself unfinished\nAnd still make a little room\n\n[Bridge]\nIf the old ache calls me by number\nI will let it ring twice\nPut the kettle on the burner\nOpen up the blinds\n\nNo grand lesson, no surrender\nJust my feet against the floor\nI was looking past the present\nIt was waiting at the door\n\n[Final Chorus]\nI am more than what I gather\nMore than every door I move\nThere is breath beneath the pressure\nThere is time I haven't used\n\nI don't need to solve the silence\nI don't need to win the room\nI can meet myself unfinished\nAnd still make a little room\n\n[Outro]\nStill becoming, still awake\nNo finish line I have to chase"
+  },
+  {
+    "id": "5efa98c8-8da0-40a6-96cf-260030ed362d",
+    "title": "Beneath the Borrowed Skin",
+    "url": "https://suno.com/song/5efa98c8-8da0-40a6-96cf-260030ed362d",
+    "createdAt": "2026-09-24T22:26:21.798Z",
+    "durationSeconds": 248,
+    "genres": [
+      "iDM Phonk",
+      "progressive rock",
+      "art rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5efa98c8-8da0-40a6-96cf-260030ed362d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5efa98c8-8da0-40a6-96cf-260030ed362d.jpeg",
+    "embedUrl": "https://suno.com/embed/5efa98c8-8da0-40a6-96cf-260030ed362d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI count the rooms I never entered\nNames I carried, names I shed\nEvery answer grows a question\nTurning circles in my head\n\nI keep a notebook by the kettle\nMaps of places I outgrew\nCross out every promised version\nLeave one honest line for you\n\n[Pre-Chorus]\nIf I stop, what will I hear?\nIf I win, what disappears?\n\n[Chorus]\nWho am I when no one needs a reason?\nWho am I beneath the borrowed skin?\nI keep climbing through the changing seasons\nJust to find the door was locked within\nCall my name, call my name\nLet the old disguise fall down\nCall my name, call my name\nI am still becoming now\n\n[Verse 2]\nThere’s a photograph in the hallway\nMe at nine with scuffed-up knees\nHe believed the world was larger\nThan the things that frightened me\n\nNow I trade my days for numbers\nTrade my sleep for being seen\nBut the child inside the frame asks\nIs this all you meant to be?\n\n[Pre-Chorus]\nIf I’m more, why do I hide?\nIf I’m free, what holds the tide?\n\n[Chorus]\nWho am I when no one needs a reason?\nWho am I beneath the borrowed skin?\nI keep climbing through the changing seasons\nJust to find the door was locked within\nCall my name, call my name\nLet the old disguise fall down\nCall my name, call my name\nI am still becoming now\n\n[Bridge]\nLower the room, let the pulse remain\nPut every title down like a chain\nNo grand reveal, no perfect proof\nJust my two feet on an unfinished truth\n\n[Final Chorus]\nWho am I when no one needs a reason?\nWho am I beneath the borrowed skin?\nI stop running from the changing seasons\nTurn the handle, let the daylight in\nCall my name, call my name\nLet the old disguise fall down\nCall my name, call my name\nI am still becoming now\nI am still becoming now\n\n[Outro]\nOne honest line\nOne open door\nI don’t need to be somebody more"
+  },
+  {
+    "id": "4db63658-5a5c-4a81-9948-11bcb3629a7c",
+    "title": "Life Feels Like Home",
+    "url": "https://suno.com/song/4db63658-5a5c-4a81-9948-11bcb3629a7c",
+    "createdAt": "2026-09-24T21:37:28.368Z",
+    "durationSeconds": 282.4,
+    "genres": [
+      "iDM",
+      "Phonk",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4db63658-5a5c-4a81-9948-11bcb3629a7c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4db63658-5a5c-4a81-9948-11bcb3629a7c.jpeg",
+    "embedUrl": "https://suno.com/embed/4db63658-5a5c-4a81-9948-11bcb3629a7c",
+    "model": "v6",
+    "lyrics": "[Intro]\nAh-ah, I was running circles\nAh-ah, now I know the ground\n\n[Verse 1]\nI kept a score on the kitchen wall\nRed marks beside every missed call\nTold myself, “One more and I’m free”\nBut the finish line moved with me\n\nI wore the praise like a borrowed coat\nCounted the rooms where my name was known\nThen found my hands were empty still\nFrom climbing every borrowed hill\n\n[Pre-Chorus]\nI chased a version built to impress\nTill I could barely hear my own yes\nThe door was open, the lock was gone\nI was the one still holding on\n\n[Chorus]\nI’m not a hunger wearing a face\nI’m not a race I have to win today\nI take the wheel, I choose the road\nI make a life that feels like home\n\nCall me back when the doubt gets loud\nI’ll answer clear, I won’t bow down\nI was waiting for permission to begin\nNow I let the whole self in\n\n[Verse 2]\nI left the list by the coffee machine\nKept what was mine, returned the dream\nCalled my brother, said what I meant\nSpent an afternoon without an event\n\nThere’s a small red mark on my right-hand thumb\nFrom fixing the chair that the house came from\nNo headline, no room full of eyes\nJust a quiet proof I’m alive\n\n[Pre-Chorus]\nI don’t need a crown to know my name\nOr turn each scar into a claim\nThe part I hid beneath the plan\nWas the only part that understood who I am\n\n[Chorus]\nI’m not a hunger wearing a face\nI’m not a race I have to win today\nI take the wheel, I choose the road\nI make a life that feels like home\n\nCall me back when the doubt gets loud\nI’ll answer clear, I won’t bow down\nI was waiting for permission to begin\nNow I let the whole self in\n\n[Bridge]\nHalf time, let the old voice speak\n“You’ll disappear if you stop the streak”\nI hear it, then I set it down\nNo throne, no chase, no borrowed crown\n\nI can want more without being less\nI can rest without calling it failure\nEvery breath that I choose to keep\nBuilds a future my hands can reach\n\n[Final Chorus]\nI’m not a hunger wearing a face\nI’m not a race I have to win today\nI take the wheel, I choose the road\nI make a life that feels like home\n\nCall me back when the doubt gets loud\nI’ll answer clear, I won’t bow down\nI was waiting for permission to begin\nNow I let the whole self in\n\n[Outro]\nAh-ah, no more borrowed skin\nAh-ah, let the whole self in\nI take the wheel, I choose the road\nI make a life that feels like home"
+  },
+  {
+    "id": "ccb2c405-714e-40f5-b68a-d5c6aa20922e",
+    "title": "Make Room for What Is True",
+    "url": "https://suno.com/song/ccb2c405-714e-40f5-b68a-d5c6aa20922e",
+    "createdAt": "2026-09-24T21:34:51.181Z",
+    "durationSeconds": 237.56,
+    "genres": [
+      "iDM",
+      "Phonk",
+      "art-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_ccb2c405-714e-40f5-b68a-d5c6aa20922e.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_ccb2c405-714e-40f5-b68a-d5c6aa20922e.jpeg",
+    "embedUrl": "https://suno.com/embed/ccb2c405-714e-40f5-b68a-d5c6aa20922e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wore every answer like a borrowed coat\nKept a score in the margins of every note\nBuilt a room from the things I could prove\nThen forgot what I wanted to do\n\n[Pre-Chorus]\nI measured my worth in a row of closed doors\nCalled it ambition, kept asking for more\nBut the lock was turning under my hand\nAnd the voice in the quiet began to sound like a plan\n\n[Chorus]\nI am not the prize at the end of the race\nI am the one who can choose my pace\nTake the wheel, let the old map tear\nThere is room for my whole life here\nI don't need to become someone new\nI need to make room for what is true\n\n[Verse 2]\nI left my reflection on a market wall\nWatched it grow taller, watched it learn to crawl\nAll those polished promises under glass\nCould not tell me which way to pass\n\n[Pre-Chorus]\nSo I traded the ladder for a wider view\nStopped making a stranger out of what I knew\nThe fear still knocks with its careful hands\nBut I can answer now; I can make my stand\n\n[Chorus]\nI am not the prize at the end of the race\nI am the one who can choose my pace\nTake the wheel, let the old map tear\nThere is room for my whole life here\nI don't need to become someone new\nI need to make room for what is true\n\n[Bridge]\nHalf speed, open hands\nNo throne, no master plan\nI let the unfinished parts remain\nThey are not failures wearing my name\nCall back: Who are you?\nResponse: The one who decides\nCall back: What do you choose?\nResponse: A life from the inside\n\n[Final Chorus]\nI am not the prize at the end of the race\nI am the one who can choose my pace\nTake the wheel, let the old map tear\nThere is room for my whole life here\nI don't need to become someone new\nI need to make room for what is true\n\n[Outro]\nMake room for what is true\nMake room for what is true\nI arrive by becoming\nI arrive by becoming"
+  },
+  {
+    "id": "04eea75a-e908-4aed-8dfe-5378bf3ffc0b",
+    "title": "I Begin",
+    "url": "https://suno.com/song/04eea75a-e908-4aed-8dfe-5378bf3ffc0b",
+    "createdAt": "2026-09-24T20:45:50.778Z",
+    "durationSeconds": 258,
+    "genres": [
+      "art rock",
+      "world-pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_04eea75a-e908-4aed-8dfe-5378bf3ffc0b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_04eea75a-e908-4aed-8dfe-5378bf3ffc0b.jpeg",
+    "embedUrl": "https://suno.com/embed/04eea75a-e908-4aed-8dfe-5378bf3ffc0b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wore five faces to the morning train\nOne for the mirror, one for the name\nOne chased the heat of a stranger's skin\nOne counted duties I couldn't miss\nOne drew a map to a higher room\nWhile I kept shrinking to fit the suit\n\n[Pre-Chorus]\nThey pulled my hands in opposite ways\nI fed each hunger, I paid each debt\nThe louder they spoke, the less I knew\nWhich one was mine, which one was you\n\n[Chorus]\nI am not the war between them\nNot the crown, not the chain\nI can gather every splinter\nAnd still answer to my name\nLet the wanting kneel beside me\nLet the guilty heart release\nAll the parts I kept dividing\nCan come home and make me whole\n\n[Verse 2]\nThere was a photograph under the bed\nA child with a bruise-colored sky overhead\nHe had no empire, no alibi\nJust a small bright pulse he refused to hide\nI nearly laughed at the tender proof\nThen felt my ribs make room\n\n[Pre-Chorus]\nFor the hand that reaches, the hand that gives\nThe hand that builds and the hand that lives\nNo appetite has to rule the house\nNo buried voice has to drown me out\n\n[Chorus]\nI am not the war between them\nNot the crown, not the chain\nI can gather every splinter\nAnd still answer to my name\nLet the wanting kneel beside me\nLet the guilty heart release\nAll the parts I kept dividing\nCan come home and make me whole\n\n[Bridge]\nAmbition, sit down at the table\nLust, tell the truth and stay\nDuty, loosen your collar\nPride, put the knife away\nI will not crown one hunger\nI will not exile the rest\nI am the room they share together\nI am the breath in my chest\n\n[Final Chorus]\nI am not the war between them\nI am wider than the flame\nI can carry every fracture\nWithout worshiping the pain\nLet the wanting move beside me\nLet the old masks fall below\nAll the parts I kept dividing\nHave come home, and now I know\n\n[Outro]\nNo perfect angel, no enemy\nJust every unfinished part of me\nHand in hand beneath one skin\nI lose the war, and I begin"
+  },
+  {
+    "id": "57f9bd70-ee7c-4643-b146-37f257316bfe",
+    "title": "Give Your Love Back Better",
+    "url": "https://suno.com/song/57f9bd70-ee7c-4643-b146-37f257316bfe",
+    "createdAt": "2026-09-24T20:41:14.101Z",
+    "durationSeconds": 247.2,
+    "genres": [
+      "art-pop",
+      "IDM",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_57f9bd70-ee7c-4643-b146-37f257316bfe.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_57f9bd70-ee7c-4643-b146-37f257316bfe.jpeg",
+    "embedUrl": "https://suno.com/embed/57f9bd70-ee7c-4643-b146-37f257316bfe",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou bring me coffee before the morning\nLeave your coat on the kitchen chair\nYou learn the names of the things I’m carrying\nAnd make room for them there\n\nI used to call every locked door destiny\nWear out my shoes on the floor\nNow I can see what was standing beside me\nI don’t have to beg anymore\n\n[Pre-Chorus]\nIf your hands reach out\nI won’t make you prove\nI’ll stop feeding empty rooms\nAnd turn my face to you\n\n[Chorus]\nI’ll give your love back better\nNot measured, not delayed\nI’ll meet you in the middle\nWith both feet on the pavement\n\nI’m done chasing a promise\nThat never learned my name\nWhat you give me, I’ll return it better\nWhat won’t come back, I won’t chase\n\n[Verse 2]\nYou send a message just to say you miss me\nNot because you need a favor\nYou hear the joke beneath my silence\nAnd stay when I lose the flavor\n\nI used to polish every almost\nCall the distance something deep\nNow I leave the chair for someone willing\nTo sit beside me while I sleep\n\n[Pre-Chorus]\nIf your heart opens wide\nI won’t stand outside\nI’ll bring the parts I kept in boxes\nAnd set them down tonight\n\n[Chorus]\nI’ll give your love back better\nNot measured, not delayed\nI’ll meet you in the middle\nWith both feet on the pavement\n\nI’m done chasing a promise\nThat never learned my name\nWhat you give me, I’ll return it better\nWhat won’t come back, I won’t chase\n\n[Bridge]\nJust cello, dry voice, close room:\n\nYou don’t have to disappear\nTo make me want you near\nYou don’t have to turn away\nTo keep me in the frame\n\nI can love what answers\nI can grieve what doesn’t\nLeave the locked gate standing\nStop calling it a lesson\n\n[Final Lift]\nI’ll give your love back better\nEvery day I get the chance\nNo more running after silence\nNo more bargaining for scraps\n\nYou show up, I show up\nYou speak plain, I speak plain\nIf it only moves one direction\nI step off that train\n\nI’ll give your love back better\nLet the whole room rearrange\nWhat you give me, I’ll return it better\nWhat won’t come back, I let change\n\n[Outro]\nI turn toward the open door\nI don’t chase anymore"
+  },
+  {
+    "id": "c26b02d0-02bc-4f9a-8784-9bb9fb2f1aae",
+    "title": "Beautifully Furnished Cage",
+    "url": "https://suno.com/song/c26b02d0-02bc-4f9a-8784-9bb9fb2f1aae",
+    "createdAt": "2026-09-24T19:23:39.315Z",
+    "durationSeconds": 190.6,
+    "genres": [
+      "art-pop",
+      "IDM",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_c26b02d0-02bc-4f9a-8784-9bb9fb2f1aae.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_c26b02d0-02bc-4f9a-8784-9bb9fb2f1aae.jpeg",
+    "embedUrl": "https://suno.com/embed/c26b02d0-02bc-4f9a-8784-9bb9fb2f1aae",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI watched the kettle blink\nThen watched it blink again\nThe toast came up too fast\nSo I made it happen then\n\nI opened every app\nForgot what I was for\nI walked from room to room\nAnd found the same old floor\n\n[Pre-Chorus]\nGive me a problem\nGive me a sign\nGive me a reason\nTo spend some time\n\n[Chorus]\nI am bored, bored, bored\nWith the shape of my day\nI am bored, bored, bored\nAnd it won't go away\nI spin the little wheel\nI refresh the same page\nI am bored, bored, bored\nIn a beautifully furnished cage\n\n[Verse 2]\nThe laundry waits in piles\nThe clock performs its trick\nA minute takes forever\nThen an hour vanishes quick\n\nI text you, \"What is up?\"\nYou answer, \"Not much here\"\nWe trade two empty sentences\nAnd call it atmosphere\n\n[Pre-Chorus]\nGive me a danger\nGive me a dare\nSomething with fingerprints\nSomething with air\n\n[Chorus]\nI am bored, bored, bored\nWith the shape of my day\nI am bored, bored, bored\nAnd it won't go away\nI spin the little wheel\nI refresh the same page\nI am bored, bored, bored\nIn a beautifully furnished cage\n\n[Bridge]\nMaybe I need a mess\nA stain I cannot hide\nA train I barely catch\nA door I leave open wide\n\nMaybe I need your voice\nTo interrupt the room\nSay something unexpected\nAnd make the silence move\n\n[Final Chorus]\nI am bored, bored, bored\nBut I am not asleep\nThere is a match inside me\nBuried underneath\nI am bored, bored, bored\nSo come and change the frame\nKick a hole through this afternoon\nAnd teach it a new name\n\n[Outro]\nBored, bored, bored\nNot forever\nBored, bored, bored\nDo something clever"
+  },
+  {
+    "id": "6a07917a-0ca6-4ef8-b744-7ba570b51287",
+    "title": "Chess Alone",
+    "url": "https://suno.com/song/6a07917a-0ca6-4ef8-b744-7ba570b51287",
+    "createdAt": "2026-09-24T19:14:53.819Z",
+    "durationSeconds": 255,
+    "genres": [
+      "IDM",
+      "prog-rock",
+      "experimental"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_6a07917a-0ca6-4ef8-b744-7ba570b51287.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_6a07917a-0ca6-4ef8-b744-7ba570b51287.jpeg",
+    "embedUrl": "https://suno.com/embed/6a07917a-0ca6-4ef8-b744-7ba570b51287",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nMy inbox opens before the blinds\nA thousand small fires, all marked urgent\nI trade my breakfast for deadline lines\nAnd wear the same shirt on purpose\n\nThe group chat moved without my name\nTheir weekend plans became old news\nI set the board beside the frame\nAnd wait for someone I can’t lose\n\n[Pre-Chorus]\nWhite square, black square, quiet room\nThe clock keeps cutting through\nI know each move before it lands\nStill I don’t know what to do\n\n[Chorus]\nI play chess alone\nTwo colors, one phone\nI check my own king\nThen answer my own call\n\nI work till the office hums\nAnd the last train has gone\nIf friendship needs a little time\nI never seem to have one\n\n[Verse 2]\nA rook goes straight like my career\nA bishop bends around the truth\nThe knight arrives from nowhere near\nThe way old friends once used to do\n\nI leave one chair across the table\nFor a laugh I can’t schedule in\nBut every file marked “final” turns fatal\nAnd the morning starts again\n\n[Pre-Chorus]\nWhite square, black square, coffee stain\nThe clock keeps counting down\nI built a fortress out of tasks\nThen wondered why no one comes around\n\n[Chorus]\nI play chess alone\nTwo colors, one phone\nI check my own king\nThen answer my own call\n\nI work till the office hums\nAnd the last train has gone\nIf friendship needs a little time\nI never seem to have one\n\n[Bridge]\nTonight I push the laptop closed\nThe room looks larger than before\nI move the black queen close to home\nAnd leave the white side wanting more\n\nMaybe a game is not a life\nMaybe a win can wait till noon\nI could text somebody “Are you free?”\nBut the cursor blinks across the room\n\n[Final Chorus]\nI play chess alone\nTwo colors, one phone\nNo crowd, no throne\nJust a board beneath the cold lamp glow\n\nI worked till the office hums\nBut the last train has gone\nIf friendship needs a little time\nI’ll make a little time from now on\n\n[Outro]\nWhite square, black square, morning blue\nOne empty chair, one opening move"
+  },
+  {
+    "id": "199a85d1-11dd-4e36-b702-4d36f01cad59",
+    "title": "I'm Letting It In",
+    "url": "https://suno.com/song/199a85d1-11dd-4e36-b702-4d36f01cad59",
+    "createdAt": "2026-09-24T17:48:38.401Z",
+    "durationSeconds": 254.4,
+    "genres": [
+      "IDM",
+      "Riddim"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_199a85d1-11dd-4e36-b702-4d36f01cad59.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_199a85d1-11dd-4e36-b702-4d36f01cad59.jpeg",
+    "embedUrl": "https://suno.com/embed/199a85d1-11dd-4e36-b702-4d36f01cad59",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI signed my name in rooms that shook\nTurned rough ideas into something they could book\nKept every receipt in a drawer by the bed\nStill hear a jury forming in my head\n\nI crossed the miles they said were too far\nPut my fingerprints on every open door\nThey raised their glasses, called me by my name\nI nodded like approval was a claim\n\n[Pre-Chorus]\nYou said, “We saw what you became”\nYou said, “You earned your place”\nBut praise arrives like borrowed clothes\nAnd slips right off my frame\n\n[Chorus]\nHow many times do you have to tell me\nBefore I let it reach my chest?\nI built the bridge, I crossed the distance\nI did the work, I passed the test\nYou gave me every green light shining\nI still go looking for the red\nHow many times do you have to tell me\nI’m not on trial again?\n\n[Verse 2]\nThere’s a photograph above the kitchen sink\nA younger me who barely dared to think\nHe’d trade his sleep for one approving nod\nNow he has a shelf full of proof and still feels caught\n\nThe names I feared are names I know\nThe rooms I begged for ask me back to show\nAnd when they say, “We always knew you could,”\nI hear the part that says I should\n\n[Pre-Chorus]\nYou point to every finished thing\nAnd every hand I’ve helped\nI count the flaws between the lines\nLike evidence against myself\n\n[Chorus]\nHow many times do you have to tell me\nBefore I let it reach my chest?\nI built the bridge, I crossed the distance\nI did the work, I passed the test\nYou gave me every green light shining\nI still go looking for the red\nHow many times do you have to tell me\nI’m not on trial again?\n\n[Bridge]\nTonight I’ll leave the files unopened\nLet the quiet say what it knows\nNo more rehearsing my defense\nNo more polishing the blows\n\nIf you can see me, I will try\nTo stand where your kindness lands\nNot earn another witness\nJust open both my hands\n\n[Final Chorus]\nYou told me once, you told me plainly\nYou told me every way you could\nI built the bridge, I crossed the distance\nI did the work, I did it good\nYour green lights fill the whole horizon\nThere is no verdict overhead\nYou don’t have to tell me anymore\nI’m letting it in instead\n\n[Outro]\nI’m letting it in\nI’m letting it in\nThe door was never locked\nI’m letting it in"
+  },
+  {
+    "id": "9f742279-cfae-4791-afa3-c59211dec82d",
+    "title": "Let the Record Stand",
+    "url": "https://suno.com/song/9f742279-cfae-4791-afa3-c59211dec82d",
+    "createdAt": "2026-09-24T17:41:18.053Z",
+    "durationSeconds": 309.96,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "melodic prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_9f742279-cfae-4791-afa3-c59211dec82d.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_9f742279-cfae-4791-afa3-c59211dec82d.jpeg",
+    "embedUrl": "https://suno.com/embed/9f742279-cfae-4791-afa3-c59211dec82d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI cleared every hurdle they placed in the lane\nPut my name on the wall, took the heat and the blame\nI brought home the proof in a box tied with red\nStill they study my hands like the work isn't said\n\nI learned every rule, then I bent every frame\nTurned a closed little room into something with flame\nWhen I step through the door, I can feel what they need\nOne more mountain, one more wound, one more deed\n\n[Pre-Chorus]\nI hear it in the pause when the room goes still\nIn the careful little smile that asks for more still\nHow many times must I rise from the floor\nBefore my yes becomes more than a score?\n\n[Chorus]\nI have done enough, let the record stand\nI have built these bridges with my own two hands\nIf you need one more reason, take this heart and see\nI am not a question waiting for your belief\n\nI have done enough, I am here, I remain\nNot a trial to endure, not a debt to explain\nLet the old doubt gather where the old doubts belong\nI was proving my life; now I’m proving them wrong\n\n[Verse 2]\nThere are medals in drawers and receipts in a frame\nA calendar crowded with proof of the strain\nEvery promise I kept left a mark in the grain\nYet the room looks past me for a newer campaign\n\nI wore out my voice making silence behave\nPut a light in the dark, put a tool in the grave\nThey can measure the miles, they can count what I’ve made\nBut they cannot decide what my name is worth paid\n\n[Pre-Chorus]\nI hear it in the breath before they say my name\nLike the next locked door will make the last one plain\nHow many times must I open the gate\nBefore they stop calling arrival a wait?\n\n[Chorus]\nI have done enough, let the record stand\nI have built these bridges with my own two hands\nIf you need one more reason, take this heart and see\nI am not a question waiting for your belief\n\nI have done enough, I am here, I remain\nNot a trial to endure, not a debt to explain\nLet the old doubt gather where the old doubts belong\nI was proving my life; now I’m proving them wrong\n\n[Bridge]\nKeep your ledger, keep your careful inspection\nKeep the raised eyebrow dressed as protection\nI know every failure that carried me through\nI know every hard-won thing I had to undo\n\nNo, I won’t make a shrine of the things I survived\nNo, I won’t beg a room to admit I’m alive\nThere is nothing left here that I owe to their eyes\nI can stand in the open and answer: I’m mine\n\n[Final Chorus]\nI have done enough, let the record stand\nI have built these bridges with my own two hands\nIf you need one more reason, take this heart and see\nI am not a question waiting for your belief\n\nI have done enough, I am here, I remain\nNot a trial to endure, not a debt to explain\nLet the old doubt gather where the old doubts belong\nI was proving my life; now I’m proving them wrong\n\n[Outro]\nLet the record stand\nLet the whole room know\nI was never unfinished\nI was learning to let go"
+  },
+  {
+    "id": "3aa46646-0fbf-47d6-92f2-eb2f7e7d9e6f",
+    "title": "I Have Done Enough",
+    "url": "https://suno.com/song/3aa46646-0fbf-47d6-92f2-eb2f7e7d9e6f",
+    "createdAt": "2026-09-24T17:41:02.092Z",
+    "durationSeconds": 258.68,
+    "genres": [
+      "IDM",
+      "riddim",
+      "melodic progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3aa46646-0fbf-47d6-92f2-eb2f7e7d9e6f.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3aa46646-0fbf-47d6-92f2-eb2f7e7d9e6f.jpeg",
+    "embedUrl": "https://suno.com/embed/3aa46646-0fbf-47d6-92f2-eb2f7e7d9e6f",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI brought home the medals\nStacked them beside the sink\nSigned my name in ledgers\nStill watched the doorway blink\n\nI built the rooms they praised me for\nI learned the rules by heart\nBut every hand I reached toward\nWas waiting for the missing part\n\n[Pre-Chorus]\nHow many doors must open\nBefore they call me in?\nHow many times can I win\nBefore I get to begin?\n\n[Chorus]\nI have done enough\nI have done enough\nCount every mountain\nI carried it up\n\nI have done enough\nSay it to my face\nI won't keep auditioning\nFor a place I already made\n\n[Verse 2]\nThere are names on the invoices\nThere are keys beneath my hand\nA calendar full of proof\nAnd a future I had planned\n\nStill somebody clears their throat\nLike the verdict isn't through\nSo I turn the lights on brighter\nAnd let the whole room look at you\n\n[Pre-Chorus]\nHow many doors must open\nBefore they call me in?\nHow many times can I win\nBefore I get to begin?\n\n[Chorus]\nI have done enough\nI have done enough\nCount every mountain\nI carried it up\n\nI have done enough\nSay it to my face\nI won't keep auditioning\nFor a place I already made\n\n[Bridge]\nLet the record keep its numbers\nLet the doubters keep their files\nI was never just the outcome\nI was every difficult mile\n\nIf you need another witness\nTake the mirror from the wall\nI can stand here uninvited\nAnd still answer when I call\n\n[Final Chorus]\nI have done enough\nI have done enough\nCount every mountain\nI carried it up\n\nI have done enough\nNo more borrowed praise\nI won't keep auditioning\nFor a place I already made\n\n[Outro]\nI am not waiting for permission\nI am not waiting for the room\nI have done enough\nAnd I am coming through"
+  },
+  {
+    "id": "b71c0a22-bf4f-4f3b-ac03-5e36b22786a3",
+    "title": "Give Without Becoming God",
+    "url": "https://suno.com/song/b71c0a22-bf4f-4f3b-ac03-5e36b22786a3",
+    "createdAt": "2026-09-24T15:57:09.680Z",
+    "durationSeconds": 277.08,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b71c0a22-bf4f-4f3b-ac03-5e36b22786a3.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b71c0a22-bf4f-4f3b-ac03-5e36b22786a3.jpeg",
+    "embedUrl": "https://suno.com/embed/b71c0a22-bf4f-4f3b-ac03-5e36b22786a3",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI leave a chair at every table\nCall it care, call it grace\nI learn the shape of every sorrow\nThen wear it on my face\n\nA message waits, I answer quickly\nA promise blooms, I take the blame\nIf every heart can use my hands\nWho am I when no one calls my name?\n\n[Pre-Chorus]\nIs this mercy or a mirror?\nDo I give, or do I need\nEvery room to hold my portrait\nIn the language of the bleed?\n\n[Chorus]\nDo I love you, or love being needed?\nDo I open the door, or need it left ajar?\nIf I carry everybody home\nAm I kind, or just counting how far?\n\nI keep pouring from the same bright cup\nTell myself the spill is proof\nBut if I need your eyes upon me\nIs the offering still true?\n\n[Verse 2]\nI know the birthdays, know the breakups\nKeep spare batteries and keys\nI can turn a quiet kitchen\nInto somewhere you can breathe\n\nThen I wait beside the silence\nFor a thank-you shaped like light\nWhen it doesn't come, I wonder\nWas I helping, or auditioning tonight?\n\n[Pre-Chorus]\nIs this mercy or a mirror?\nDo I give, or do I feed\nEvery fear that says I'm nothing\nUnless someone leans on me?\n\n[Chorus]\nDo I love you, or love being needed?\nDo I open the door, or need it left ajar?\nIf I carry everybody home\nAm I kind, or just counting how far?\n\nI keep pouring from the same bright cup\nTell myself the spill is proof\nBut if I need your eyes upon me\nIs the offering still true?\n\n[Bridge]\nMaybe kindness has a boundary\nMaybe love can leave some room\nMaybe I can let you face the weather\nWithout calling it abandonment too soon\n\nI can give and not be witnessed\nI can stay and not control\nLet your life remain your own life\nLet my hands come back whole\n\n[Final Chorus]\nI can love you without being needed\nI can open the door, then let you choose\nIf I carry only what is mine\nThere is more of me to give, and less to prove\n\nI keep pouring, but the cup is honest\nNo applause, no debt, no claim\nIf your freedom is the answer\nThen my love can lose my name\n\n[Outro]\nNot every open hand is holy\nNot every hunger makes a fraud\nI will learn the difference slowly\nAnd give without becoming God"
+  },
+  {
+    "id": "197ac10c-7c6c-45be-8199-a81181ac4064",
+    "title": "Fingerprints on the Door",
+    "url": "https://suno.com/song/197ac10c-7c6c-45be-8199-a81181ac4064",
+    "createdAt": "2026-09-24T15:56:12.712Z",
+    "durationSeconds": 275.88,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_197ac10c-7c6c-45be-8199-a81181ac4064.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_197ac10c-7c6c-45be-8199-a81181ac4064.jpeg",
+    "embedUrl": "https://suno.com/embed/197ac10c-7c6c-45be-8199-a81181ac4064",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI learned every doorway\nThat opened with a smile\nLeft pieces of my name there\nAnd stayed a little while\n\nI gave away my mornings\nMy patience and my skin\nKept carrying their weather\nLike I was built to bend\n\n[Pre-Chorus]\nNow every hand that reaches\nFeels heavier than gold\nI count the people I've carried\nAnd wonder what I still hold\n\n[Chorus]\nWho could love me now\nI've spent it all on everyone\nWho could love me now\nWhen every promise has my fingerprints on it\nI poured my heart through open doors\nTill there was nothing at the core\nWho could love me now\nWho could love me now\n\n[Verse 2]\nI know the shape of silence\nAfter the thank-you fades\nThe ones who called me shelter\nLeft me outside their gates\n\nI made myself convenient\nA room with no locked door\nThey took the light I offered\nThen asked me for some more\n\n[Pre-Chorus]\nNow kindness feels like evidence\nA record of the crime\nI gave until the giving\nWas the only thing called mine\n\n[Chorus]\nWho could love me now\nI've spent it all on everyone\nWho could love me now\nWhen every promise has my fingerprints on it\nI poured my heart through open doors\nTill there was nothing at the core\nWho could love me now\nWho could love me now\n\n[Bridge]\nMaybe love is not a balance\nMaybe I am not the debt\nMaybe all the hands I opened\nDo not make me hollow yet\n\nIf I leave one thing unoffered\nIf I keep one breath for me\nWill the person in the mirror\nStay long enough to see\n\n[Final Chorus]\nYou could love me now\nNot for the thousand things I've done\nYou could love me now\nWith every broken promise out in the open\nI poured my heart through open doors\nBut there is still a pulse beneath the floor\nYou could love me now\nYou could love me now\n\n[Outro]\nI am not the sum of who I saved\nI am not the room I gave away\nIf you reach me, reach me gently\nI am learning how to stay"
+  },
+  {
+    "id": "3d8e5bdf-a40f-4879-aa69-f31acea655d9",
+    "title": "Keep a Little Love for Me",
+    "url": "https://suno.com/song/3d8e5bdf-a40f-4879-aa69-f31acea655d9",
+    "createdAt": "2026-09-24T15:54:48.082Z",
+    "durationSeconds": 274.92,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3d8e5bdf-a40f-4879-aa69-f31acea655d9.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3d8e5bdf-a40f-4879-aa69-f31acea655d9.jpeg",
+    "embedUrl": "https://suno.com/embed/3d8e5bdf-a40f-4879-aa69-f31acea655d9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI learned every birthday, every favorite song\nHeld their broken hours till the hurt moved on\nI kept spare forgiveness folded in my sleeve\nGave away the parts of me I meant to keep\n\n[Pre-Chorus]\nNow the room goes quiet when somebody stays\nI count all the exits, I rehearse escape\nHow can I be chosen, how can I be known\nWhen I spent my whole heart making theirs a home?\n\n[Chorus]\nI gave too much love away\nTill my hands forgot their shape\nNow you reach for me and I\nFeel like something counterfeit\nI poured myself through every door\nLeft no river at the source\nIf you call me worthy, I\nWon't know what you mean by it\n\n[Verse 2]\nI know who needs a ride, who needs a place to sleep\nWho hides the sharpest grief beneath a joke too deep\nI can make a stranger feel less alone by dawn\nThen come back to my own bed and find myself gone\n\n[Pre-Chorus]\nEvery name is written somewhere underneath my skin\nEvery promise I protected left a vacancy within\nYou say I don't owe you, but I hear the old refrain\nLove is only useful if it asks me for a name\n\n[Chorus]\nI gave too much love away\nTill my hands forgot their shape\nNow you reach for me and I\nFeel like something counterfeit\nI poured myself through every door\nLeft no river at the source\nIf you call me worthy, I\nWon't know what you mean by it\n\n[Bridge]\nMaybe love is not a debt\nMaybe I can keep some breath\nFor the morning, for the bed\nFor the words I never said\nLet the phone ring through the wall\nI don't have to catch them all\nIf I save one piece tonight\nIt can teach the rest to fight\n\n[Instrumental]\n\n[Final Chorus]\nI gave too much love away\nBut my hands can learn their shape\nWhen you reach for me, I might\nLet the door stay open a bit\nI poured myself through every door\nNow I know what roots are for\nIf you call me worthy, I\nMay believe you when you say it\n\n[Outro]\nI am more than what I gave\nMore than every life I saved\nKeep a little love for me\nKeep a little love for me"
+  },
+  {
+    "id": "a23d0e31-d979-4a84-947f-621b5644e19f",
+    "title": "What's Left of Me",
+    "url": "https://suno.com/song/a23d0e31-d979-4a84-947f-621b5644e19f",
+    "createdAt": "2026-09-24T15:54:20.846Z",
+    "durationSeconds": 249.08,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "melodic prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a23d0e31-d979-4a84-947f-621b5644e19f.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a23d0e31-d979-4a84-947f-621b5644e19f.jpeg",
+    "embedUrl": "https://suno.com/embed/a23d0e31-d979-4a84-947f-621b5644e19f",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI learned your birthdays by the weather\nKept spare keys beneath the mat\nI answered every late confession\nLike my own heart wasn't cracked\n\nI wore the coat you left behind\nSent groceries across town\nI gave a little piece of myself\nWhenever you were breaking down\n\n[Pre-Chorus]\nNow every room feels borrowed\nEvery promise sounds rehearsed\nI poured myself into your hands\nAnd somehow I came out worse\n\n[Chorus]\nWho would love what's left of me?\nI gave it out so faithfully\nTo every lonely, burning soul\nTill mine forgot the shape of whole\n\nWho would stay and let me be?\nNot the version built to please\nI spent my love on everyone\nNow I don't know where mine has gone\n\n[Verse 2]\nI know the names of all your ghosts\nThe coffee order, train, and street\nI held the door through every storm\nThen watched you leave on steady feet\n\nYou called me when the night got heavy\nI made the darkness small\nBut when the silence found my number\nThere was no one left to call\n\n[Pre-Chorus]\nI made a home in open hands\nAnd called the giving proof of worth\nBut love is not a leaking roof\nYou stand beneath until you hurt\n\n[Chorus]\nWho would love what's left of me?\nI gave it out so faithfully\nTo every lonely, burning soul\nTill mine forgot the shape of whole\n\nWho would stay and let me be?\nNot the version built to please\nI spent my love on everyone\nNow I don't know where mine has gone\n\n[Bridge]\nMaybe I was never empty\nMaybe I was overrun\nEvery door I held wide open\nLet somebody else come in\n\nI can gather what remains here\nName it gently, piece by piece\nIf I stop auditioning for love\nPerhaps it can come find me\n\n[Final Chorus]\nWho would love what's left of me?\nI am more than history\nAll the hands I tried to save\nDo not decide the life I make\n\nWho would stay and let me be?\nI can learn to keep some peace\nI spent my love on everyone\nNow I am becoming someone\n\n[Outro]\nI am becoming someone\nI am becoming someone\nWith a heart I won't give away\nJust to make another stay"
+  },
+  {
+    "id": "0e9334ab-09f8-4361-8886-61d65ff4a684",
+    "title": "Better Parts",
+    "url": "https://suno.com/song/0e9334ab-09f8-4361-8886-61d65ff4a684",
+    "createdAt": "2026-09-24T15:53:38.774Z",
+    "durationSeconds": 276.76,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_0e9334ab-09f8-4361-8886-61d65ff4a684.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_0e9334ab-09f8-4361-8886-61d65ff4a684.jpeg",
+    "embedUrl": "https://suno.com/embed/0e9334ab-09f8-4361-8886-61d65ff4a684",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a chair for every name\nMade room until the walls gave way\nI learned the shape of every hurt\nThen wore their weather like a shirt\n\nI answered calls beneath the rain\nHeld every promise through the strain\nThey took the warmth I couldn't spare\nAnd left me measuring empty chairs\n\n[Pre-Chorus]\nNow every hand that reaches out\nFeels like a debt I can't work out\nI call it kindness, call it proof\nThen wonder why I have no room\n\n[Chorus]\nI gave away my better parts\nTo too many hands, too many hearts\nNow when you tell me I am loved\nI look for what you want from us\n\nI poured myself through every door\nTill I was less than I was before\nIf love can leave a person bare\nMaybe I'm not worthy anywhere\n\n[Verse 2]\nI know their birthdays, know their scars\nWhich late-night diner, which parked car\nI kept the details, kept the trust\nWhile mine grew thin and turned to dust\n\nA borrowed coat, a midnight ride\nA thousand ways I stepped aside\nThey called me strong, I let it land\nLike strength was something I had planned\n\n[Pre-Chorus]\nNow kindness sounds like coming clean\nA room with nothing in between\nI can't tell giving from goodbye\nOr being needed from being mine\n\n[Chorus]\nI gave away my better parts\nTo too many hands, too many hearts\nNow when you tell me I am loved\nI look for what you want from us\n\nI poured myself through every door\nTill I was less than I was before\nIf love can leave a person bare\nMaybe I'm not worthy anywhere\n\n[Bridge]\nBut you don't have to pay my past\nOr prove your staying will outlast\nThe ones who took and disappeared\nThe years I spent becoming useful here\n\nLeave one small light beside the sink\nGive me the time to stop and think\nIf you can hold me without a claim\nI might relearn my own name\n\n[Breakdown]\nNot a vessel\nNot a remedy\nNot the hands that rescue everybody\nNot a vacancy\nNot a borrowed flame\nI am more than what I gave away\n\n[Final Chorus]\nI gave away my better parts\nTo too many hands, too many hearts\nBut you don't ask me to perform\nYou meet me where the walls are torn\n\nI poured myself through every door\nNow I can choose what love is for\nThe worth I thought I had to earn\nWas waiting underneath the burn\n\n[Outro]\nIf I have less, let less be true\nA little left to give to you\nNot as a debt, not as a plea\nJust something living, left in me"
+  },
+  {
+    "id": "d3acaf3d-f88f-4d90-966d-2a2b46542966",
+    "title": "Unworthy of Love",
+    "url": "https://suno.com/song/d3acaf3d-f88f-4d90-966d-2a2b46542966",
+    "createdAt": "2026-09-24T15:49:52.107Z",
+    "durationSeconds": 316.24,
+    "genres": [
+      "IDM",
+      "Riddim",
+      "progressive rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d3acaf3d-f88f-4d90-966d-2a2b46542966.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d3acaf3d-f88f-4d90-966d-2a2b46542966.jpeg",
+    "embedUrl": "https://suno.com/embed/d3acaf3d-f88f-4d90-966d-2a2b46542966",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI learned your birthdays, your coffee, your scars\nKept spare apologies folded in jars\nI answered every call before it could ring\nMade room at the table, gave away everything\n\nI wore every silence like somebody’s coat\nHeld all your weather inside my throat\nNow I count the names carved under my skin\nAnd wonder what kind of love lets me in\n\n[Pre-Chorus]\nI gave until giving became my disguise\nA generous hand with a locked pair of eyes\nIf you saw what is left when the crowd disappears\nWould you call it a heart, or a handful of years?\n\n[Chorus]\nI feel unworthy of love\nI spent mine like water on everyone\nI poured out the best of me\nNow there’s barely a drop when you reach for me\nI feel unworthy of love\nToo many doors, too many vows undone\nIf you hold me, hold me slow\nI’m learning I’m more than the places I go\n\n[Verse 2]\nI knew how to listen, I knew how to stay\nI made my own hunger wait another day\nYour emergencies slept in the room by my bed\nWhile my little disasters went quietly unfed\n\nI called it devotion, I called it repair\nBut love without limits can vanish in air\nNow kindness feels guilty, and rest feels like theft\nI’m afraid that a heart can be emptied of depth\n\n[Pre-Chorus]\nI gave until giving became my disguise\nA generous hand with a locked pair of eyes\nIf you saw what is left when the crowd disappears\nWould you call it a heart, or a handful of years?\n\n[Chorus]\nI feel unworthy of love\nI spent mine like water on everyone\nI poured out the best of me\nNow there’s barely a drop when you reach for me\nI feel unworthy of love\nToo many doors, too many vows undone\nIf you hold me, hold me slow\nI’m learning I’m more than the places I go\n\n[Bridge]\nDon’t praise the wound for surviving the knife\nDon’t make my exhaustion proof I was right\nI can draw one clean line and still care what you need\nI can leave some light in the house for me\n\nMaybe love isn’t measured by how much I lose\nMaybe a yes can be honest, a no can be true\nI’m not the sum of the hands I have fed\nThere is still a pulse here, still blood in my head\n\n[Final Chorus]\nI feel unworthy of love\nBut I’m done spending myself to become someone’s sun\nI can keep a little warmth for me\nLet it gather slowly, let it teach me to breathe\nI feel unworthy of love\nStill I’m standing where the old fear was\nIf you hold me, hold me slow\nI’m more than the places I go\n\n[Outro]\nI gave too much, but I’m not gone\nA heart can close and still beat on\nI gave too much, but I’m not gone\nI can come back, I can come back"
+  },
+  {
+    "id": "b896119f-11f1-44cd-be4b-2409aa27e30f",
+    "title": "Will You Remember Me",
+    "url": "https://suno.com/song/b896119f-11f1-44cd-be4b-2409aa27e30f",
+    "createdAt": "2026-09-24T13:55:29.716Z",
+    "durationSeconds": 266.4,
+    "genres": [
+      "pop math rock",
+      "chopped-sample collage",
+      "emo"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b896119f-11f1-44cd-be4b-2409aa27e30f.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b896119f-11f1-44cd-be4b-2409aa27e30f.jpeg",
+    "embedUrl": "https://suno.com/embed/b896119f-11f1-44cd-be4b-2409aa27e30f",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI signed my name on the back of a photograph\nTucked it beneath the receipts in your kitchen drawer\nThe years kept moving like traffic past the glass\nAnd I kept asking what any of it mattered for\n\nI learned the shape of a crowded room\nHow to disappear while standing in view\nEvery joke I made became afternoon\nEvery promise faded before it came true\n\n[Pre-Chorus]\nIf I stop calling, will the silence close?\nIf I leave this town, what remains to show?\n\n[Chorus]\nWill you remember me when the details go?\nWhen my face turns faint in the afterglow?\nI don't need a statue, I don't need a name\nJust one small proof I was here when I came\nWill you remember me, remember me?\nOr will I vanish clean?\n\n[Verse 2]\nI found an old receipt with a date from July\nFor a train we missed and a lunch we never ate\nYour handwriting leaned like it wanted to fly\nMine looked small at the bottom, asking you to wait\n\nNow the people I loved have new locks on their doors\nNew routines, new friends, new stories to tell\nI keep rehearsing the sound of before\nLike a match in a room where the oxygen fell\n\n[Pre-Chorus]\nIf the years erase the roads we chose\nDoes a buried word still know who it knows?\n\n[Chorus]\nWill you remember me when the details go?\nWhen my face turns faint in the afterglow?\nI don't need a statue, I don't need a name\nJust one small proof I was here when I came\nWill you remember me, remember me?\nOr will I vanish clean?\n\n[Breakdown]\nSay it once—my name\nSay it twice—don't let it change\nIf the room goes quiet, if the calendar bends\nTell me I was more than a temporary friend\n\n[Bridge]\nMaybe being remembered isn't carved in stone\nMaybe it's the way you turn when you hear my old joke\nMaybe it's a scar in the grain of your home\nA borrowed phrase that survives in your throat\n\n[Instrumental]\n\n[Final Chorus]\nWill you remember me when the details go?\nWhen my face turns faint in the afterglow?\nI don't need a statue, I don't need a name\nJust one small proof I was here when I came\nWill you remember me, remember me?\nHold the line, don't let me leave\nWill you remember me, remember me?\nEven if the world forgets me\n\n[Outro]\nKeep one photograph facedown in a drawer\nKeep one unfinished sentence by the door\nIf you say my name when nobody knows\nI'll be there in the answer, wherever it goes"
+  },
+  {
+    "id": "579d0b77-bd8d-4a9c-990c-251a9ce45f3a",
+    "title": "How Much Do I Need",
+    "url": "https://suno.com/song/579d0b77-bd8d-4a9c-990c-251a9ce45f3a",
+    "createdAt": "2026-09-24T13:46:57.120Z",
+    "durationSeconds": 249.92,
+    "genres": [
+      "Pop-led Math Rock",
+      "emo"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_579d0b77-bd8d-4a9c-990c-251a9ce45f3a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_579d0b77-bd8d-4a9c-990c-251a9ce45f3a.jpeg",
+    "embedUrl": "https://suno.com/embed/579d0b77-bd8d-4a9c-990c-251a9ce45f3a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nHow many names must I carve in stone\nBefore the years leave me alone?\nHow many rooms, how many hands\nBefore I outlive what I planned?\n\nI count the faces in the frame\nEach little victory feeds the flame\nThe calendar tears, the mirrors change\nI keep building against the age\n\n[Pre-Chorus]\nIf I conquer every summit\nIf I make the whole world know\nWill the silence call me lasting\nWhen the last bright banners fold?\n\n[Chorus]\nHow much do I need to become immortal?\nHow far can I run from the closing door?\nIf the whole world carries my name tomorrow\nWill I still be here when I need it more?\nHow much do I need, how much do I need?\nOr is forever just a hunger wearing victory?\n\n[Verse 2]\nI put my fingerprints in books\nI teach the young to chase my looks\nI leave a message in the brick\nA louder monument, a cleaner myth\n\nBut every statue gathers rain\nEvery headline fades beneath the next campaign\nI hear my pulse inside the crowd\nIt sounds so small when they get loud\n\n[Pre-Chorus]\nIf I turn my grief to marble\nIf I make my failure gold\nWill a stranger speak me gently\nWhen the story gets retold?\n\n[Chorus]\nHow much do I need to become immortal?\nHow far can I run from the closing door?\nIf the whole world carries my name tomorrow\nWill I still be here when I need it more?\nHow much do I need, how much do I need?\nOr is forever just a hunger wearing victory?\n\n[Bridge]\nMaybe immortality is one kid keeping your advice\nOne scar that taught somebody else to choose a different life\nMaybe it is not the tower, not the anthem, not the throne\nMaybe I survive in every heart I helped feel less alone\n\n[Breakdown]\nNo more counting\nNo more proof\nNo more bargaining with the truth\nIf I vanish, let the good remain\nNot my face, but what I changed\n\n[Final Chorus]\nHow much did I need to become immortal?\nI spent my life running toward a door\nNow the hands I held are carrying forward\nAnd I don't have to be afraid anymore\nHow much did I need? I needed one thing:\nA life that leaves a little more mercy than it brings\n\n[Outro]\nLet the years erase the name\nLet the people keep the flame\nIf I am gone when morning comes\nLet what I gave keep moving on"
+  },
+  {
+    "id": "d3d9c545-2b12-418e-858a-e81c5d600037",
+    "title": "Choose the Door",
+    "url": "https://suno.com/song/d3d9c545-2b12-418e-858a-e81c5d600037",
+    "createdAt": "2026-09-24T13:38:03.248Z",
+    "durationSeconds": 268.44,
+    "genres": [
+      "Pop",
+      "Math Rock",
+      "post-hardcore"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d3d9c545-2b12-418e-858a-e81c5d600037.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d3d9c545-2b12-418e-858a-e81c5d600037.jpeg",
+    "embedUrl": "https://suno.com/embed/d3d9c545-2b12-418e-858a-e81c5d600037",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI wake beneath a borrowed answer\nFolded neatly by the bed\nEvery door says keep surrendering\nEvery pulse says move ahead\n\nI trace the cracks across the ceiling\nCount the reasons to remain\nHope arrives without permission\nSubmission wears my name\n\n[Pre-Chorus]\nIf I kneel, will the ground forgive me?\nIf I stand, will I disappear?\nThere’s a voice that calls it safety\nThere’s a louder one I hear\n\n[Chorus]\nI am not the hand that pulls me under\nI am not the cage I learned to love\nHope is a match inside the thunder\nSubmission says I’ve had enough\nI bend, I break, I come back furious\nWith both feet shaking on the floor\nIf I have to choose between the silence\nAnd the wound, I’ll choose the door\n\n[Verse 2]\nI wore obedience like a jacket\nHeavy seams against my throat\nEvery promise made me smaller\nEvery failure kept me close\n\nThen a red light crossed the hallway\nThen my heartbeat missed the count\nI could feel the locked-up future\nPushing from the inside out\n\n[Pre-Chorus]\nIf I stay, will the fear grow gentle?\nIf I leave, what will I lose?\nThere’s a hand that holds my shoulder\nThere’s a fist I have to choose\n\n[Chorus]\nI am not the hand that pulls me under\nI am not the cage I learned to love\nHope is a match inside the thunder\nSubmission says I’ve had enough\nI bend, I break, I come back furious\nWith both feet shaking on the floor\nIf I have to choose between the silence\nAnd the wound, I’ll choose the door\n\n[Bridge]\nLet the room collapse around me\nLet the old commands turn dust\nI can fear the open distance\nI can move because I must\n\n[Breakdown]\nNo more waiting for permission\nNo more blessing from the chain\nI can carry every consequence\nI can call it by its name\n\n[Instrumental]\n\n[Final Chorus]\nI am not the hand that pulls me under\nI am not the cage I learned to love\nHope is a match inside the thunder\nSubmission says I’ve had enough\nI bend, I break, I come back furious\nWith both feet shaking on the floor\nIf I have to choose between the silence\nAnd the wound, I’ll choose the door\n\n[Outro]\nThe door is open\nThe fear is mine\nI step through trembling\nAnd call it life"
+  },
+  {
+    "id": "78b87ff0-f3a7-4f1c-ba3c-982a640b9de3",
+    "title": "Man Behind the Glass",
+    "url": "https://suno.com/song/78b87ff0-f3a7-4f1c-ba3c-982a640b9de3",
+    "createdAt": "2026-09-24T13:35:16.695Z",
+    "durationSeconds": 291.2,
+    "genres": [
+      "post-hardcore",
+      "progressive rock",
+      "emo"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_78b87ff0-f3a7-4f1c-ba3c-982a640b9de3.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_78b87ff0-f3a7-4f1c-ba3c-982a640b9de3.jpeg",
+    "embedUrl": "https://suno.com/embed/78b87ff0-f3a7-4f1c-ba3c-982a640b9de3",
+    "model": "v6",
+    "lyrics": "[Intro: clean delay guitar, distant feedback, low synth drone, heartbeat kick]\n\n[whispered vocal, close-mic]\nThere’s a face behind the viewport…\n\n[Verse 1: clean arpeggiated guitar, melodic bass, restrained tom groove]\n\nThere’s a face behind the viewport\nwearing mine but smiling wrong\nIt says, “Let them orbit around you,\nyou were born to be their sun”\n\n[second guitar enters with high dissonant harmonics]\n\nDown the corridor the red lights\npaint the walls like open veins\nEvery voice becomes a signal\ncalling out my name again\n\n[Pre-Chorus: bass becomes syncopated, drums open up, distorted guitar swells]\n\nI hear them breathing\nbehind every door\nDo I want to save them\nor be needed more?\n\n[drums stop]\n\n[half-whisper]\nTell me what I’m doing this for.\n\n[Chorus: full distorted guitars, octave lead melody, huge live drums, layered high vocals]\n\nKill the man behind the glass\nbefore he learns to wear my skin\nHe feeds on every hand I hold\nand calls the hunger “giving”\n\nI want to love without possession\nI want to bleed without applause\nBut there’s a creature in my chest\nthat turns compassion into claws\n\n[Post-Chorus: rapid angular guitar riff, 7/8 bar inserted into 4/4]\n\n[Verse 2: palm-muted guitar, aggressive bass counterline, nervous hi-hat]\n\nWe found bodies in the engine room\nwith halos wired to their heads\nEvery kindness copied backward\nevery prayer returning dead\n\n[instrumentation suddenly drops to bass + vocal]\n\nThe thing inside the circuitry\nspeaks softly through the walls:\n\n[distorted backing vocal]\n“Make them grateful…”\n\n[full band crash]\n\n“Make them need you,\nthen you’ll never feel small”\n\n[Pre-Chorus: rising guitar harmonics, snare rolls, stacked vocal doubles]\n\nI seal the chamber\nI cut the feed\nBut is this mercy\nor another need?\n\n[Chorus: wider harmonies, added counter-melody guitar]\n\nKill the man behind the glass\nbefore he learns to wear my skin\nHe feeds on every hand I hold\nand calls the hunger “giving”\n\nI want to love without possession\nI want to bleed without applause\nBut there’s a creature in my chest\nthat turns compassion into claws\n\n[Instrumental Shift: drums enter double-time, bass runs underneath tapping guitar figure]\n\n[8 bars: technical prog riff alternating 5/4 and 6/8]\n\n[sudden cut to silence]\n\n[Bridge: lone piano, clean guitar volume swells, distant choir]\n\nIf I save the ship\nand carve my name into the hull\nwas anybody rescued\nor did I just become the cult?\n\n[low synth pulse enters]\n\nIf I give my life\nand make them watch me disappear\nis that sacrifice\nor vanity dressed up as fear?\n\n[Build: toms enter slowly, bass climbs chromatically]\n\n[distorted whispers panned left and right]\nThey love you.\nThey need you.\nThey owe you.\n\n[drums accelerate]\n\nThey love you.\nThey need you.\nThey owe you.\n\n[Breakdown: crushing half-time riff, detuned guitars]\n\n[shouted]\nNO!\n\n[guitars drop out]\n\nNo crown.\nNo witness.\nNo debt.\nNo god.\n\n[Final Chorus: soaring lead guitar, full choir harmonies, double-kick under melodic chorus]\n\nBreak the glass and flood the chamber\nlet the vacuum take the crown\nIf love is real, it needs no witness\nno one has to write it down\n\nI’ll keep the monster in the mirror\nI’ll know exactly what it was\nAnd choose the hand that asks for nothing\n\n[band cuts]\n\n[solo vocal]\nover compassion made of claws.\n\n[Outro: clean guitar reprises intro motif, bass plays descending melody, tape-warp synth]\n\n[whispered]\nIf no one knows…\n\n[long pause]\n\n…would I still do it?"
+  },
+  {
+    "id": "2ac1615a-b789-49ea-af49-bad6635ca6a9",
+    "title": "The Good Parts of You",
+    "url": "https://suno.com/song/2ac1615a-b789-49ea-af49-bad6635ca6a9",
+    "createdAt": "2026-09-24T13:30:30.948Z",
+    "durationSeconds": 266.4,
+    "genres": [
+      "progressive post-hardcore"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_2ac1615a-b789-49ea-af49-bad6635ca6a9.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_2ac1615a-b789-49ea-af49-bad6635ca6a9.jpeg",
+    "embedUrl": "https://suno.com/embed/2ac1615a-b789-49ea-af49-bad6635ca6a9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a file of the days I survived\nReceipts in a drawer, old names on the side\nA bus ticket folded from late October\nProof I was there before doubt took over\n\nI read every flaw like a verdict in red\nTurn a tired little thought into something I said\nBut somewhere beneath all the noise in my head\nThere’s a kid who kept going when hope should have fled\n\n[Pre-Chorus]\nWhen the mirror starts building a case\nWhen I measure my worth by the lines on my face\nI’ll reach for the moments I nearly erase\nAnd let them remind me I’m more than this day\n\n[Chorus]\nRemember the good parts of you\nThe hands that held on, the hard things you moved through\nWhen judgment comes sharpened and cold\nKeep every small victory safe in your soul\nRemember the good parts, remember they’re true\nThe world may be ruthless, don’t turn it on you\nIf all you can do is make it to dawn\nThat is a life with the lights still on\n\n[Verse 2]\nThere’s a voice note recorded beside the kitchen sink\nYou laugh at the ending before you can think\nA friend says my name like it still means something\nAnd for one quiet second, the room stops running\n\nI have been cruel to the person I am\nFor every missed chance, every unfinished plan\nBut the scars on my knuckles, the dirt on my hands\nAre not proof I failed—they’re the shape of my stand\n\n[Pre-Chorus]\nWhen the mirror starts building a case\nWhen every mistake gets a permanent place\nI’ll gather the evidence fear threw away\nThe love I gave freely, the times that I stayed\n\n[Chorus]\nRemember the good parts of you\nThe hands that held on, the hard things you moved through\nWhen judgment comes sharpened and cold\nKeep every small victory safe in your soul\nRemember the good parts, remember they’re true\nThe world may be ruthless, don’t turn it on you\nIf all you can do is make it to dawn\nThat is a life with the lights still on\n\n[Bridge]\nI am not only the worst thing I’ve done\nNot every closed door means I came undone\nThere’s a pulse in the wreckage, a warmth in the bruise\nA thousand small reasons I still get to choose\n\n[Breakdown]\nSay it plain\nI was here\nI was kind\nI was scared\nStill I stayed\nStill I tried\nThat is mine\nThat is mine\n\n[Instrumental]\n\n[Final Chorus]\nRemember the good parts of you\nThe hands that held on, the hard things you moved through\nWhen judgment comes sharpened and cold\nKeep every small victory safe in your soul\nRemember the good parts, remember they’re true\nEven your tired heart is carrying you\nIf all you can do is make it to dawn\nThat is a life with the lights still on\n\n[Outro]\nKeep the note in the drawer\nKeep the laugh on the phone\nWhen you can’t see the good in yourself\nBorrow mine till you know"
+  },
+  {
+    "id": "000a221c-8127-447c-ba49-f56e0ab8f7dd",
+    "title": "Let It Take Its Time",
+    "url": "https://suno.com/song/000a221c-8127-447c-ba49-f56e0ab8f7dd",
+    "createdAt": "2026-09-24T12:27:04.936Z",
+    "durationSeconds": 262.36,
+    "genres": [
+      "indie folk-pop",
+      "chamber-pop",
+      "ballad"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_000a221c-8127-447c-ba49-f56e0ab8f7dd.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_000a221c-8127-447c-ba49-f56e0ab8f7dd.jpeg",
+    "embedUrl": "https://suno.com/embed/000a221c-8127-447c-ba49-f56e0ab8f7dd",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI’m leaning by the corner store\nWith one hand wrapped around my coat\nA paper cup goes cold beside me\nThe afternoon is moving slow\n\nNo need to solve the week right now\nNo need to make the minutes pay\nA car can turn up when it turns up\nI get this quiet either way\n\n[Pre-Chorus]\nThe bench is warm from someone else\nA sparrow picks at crumbs below\nI watch the clouds rearrange themselves\nAnd let the waiting be enough\n\n[Chorus]\nLet it take its time, let it take its time\nI’ve got nowhere I have to be tonight\nLet the engine hum somewhere down the line\nFor a little while, this stillness is mine\n\n[Verse 2]\nA woman laughs into her phone\nA dog pulls hard against its lead\nThe traffic folds around the block\nLike water finding where to be\n\nI used to fill the empty space\nWith lists of things I’d failed to do\nBut now I hear the leaves turn over\nAnd feel the day come back in view\n\n[Pre-Chorus]\nThe sign keeps blinking open, closed\nThe light changes twice, then changes slow\nI breathe beneath the ordinary\nAnd let the waiting be enough\n\n[Chorus]\nLet it take its time, let it take its time\nI’ve got nowhere I have to be tonight\nLet the engine hum somewhere down the line\nFor a little while, this stillness is mine\n\n[Bridge]\nIf the ride is late, I’ll stay here\nIf the ride is late, I’ll stay here\nThere’s a blue cup rolling in the gutter\nThere’s a gold thread caught in the weather\nAnd I don’t have to chase it\nI don’t have to name it\nI can meet the world exactly where it is\n\n[Final Chorus]\nLet it take its time, let it take its time\nNow the whole wide evening is opening its eyes\nLet the engine hum somewhere down the line\nI was looking for a way out, found a little peace of mind\n\nLet it take its time, let it take its time\nWhen the headlights turn, I’ll wave and climb inside\nBut until that moment, this stillness is mine\nA small and steady mercy at the edge of the night\n\n[Outro]\nLet it take its time\nI’ll be right here\nLet it take its time\nThe road can wait a little longer"
+  },
+  {
+    "id": "5985bb1e-1426-4607-99dd-2736aae2dc74",
+    "title": "Cover Wings",
+    "url": "https://suno.com/song/5985bb1e-1426-4607-99dd-2736aae2dc74",
+    "createdAt": "2026-09-24T12:00:54.904Z",
+    "durationSeconds": 257.08,
+    "genres": [
+      "math-rock",
+      "lo-fi",
+      "experimental"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_5985bb1e-1426-4607-99dd-2736aae2dc74.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_5985bb1e-1426-4607-99dd-2736aae2dc74.jpeg",
+    "embedUrl": "https://suno.com/embed/5985bb1e-1426-4607-99dd-2736aae2dc74",
+    "model": "v6",
+    "lyrics": "[Verse 1]\n\nWe ran through the static\nWith fire in our lungs\nChasing every signal\nBefore the night was done\n\nThe city fell beneath us\nThe noise became a spark\nWe learned to trust the falling\nBefore we feared the dark\n\n[Pre-Chorus]\n\nNo map, no warning\nNo perfect way through\nJust gravity breaking\nThe moment I found you\n\n[Chrorus]\nIn the sky cover wings\nWe dive align wild\n\n[Verse 2]\n\nThe horizon keeps moving\nLike something we can chase\nEvery turn becoming\nAnother unknown place\n\nWe carry all our failures\nLike feathers in the storm\nNothing ever promised\nThat flying would feel warm\n\n[Pre-Chorus]\n\nNo cage, no ceiling\nNo reason to stay still\nWe bend with the current\nThen rise against our will\n\n[Chrorus]\nIn the sky cover wings\nWe dive align wild\n\n[Bridge]\n\nIf we fall, let us fall forward\nIf we break, let the light come through\nEvery scar becomes a compass\nEvery wrong turn something new\n\n[Build]\n\nHigher\nStranger\nFaster\nFree\n\nNo one gets to tell us\nWhat the shape of flight should be\n\n[Final Chrorus]\nIn the sky cover wings\nWe dive align wild\n\nIn the sky cover wings\nWe dive align wild\n\n[Outro]\n\nCover wings\nDive wild\nLose the ground\nFind the sky"
+  },
+  {
+    "id": "a4e617bb-c534-4ebe-abc1-62f75e87977f",
+    "title": "It’s the Work I return to",
+    "url": "https://suno.com/song/a4e617bb-c534-4ebe-abc1-62f75e87977f",
+    "createdAt": "2026-09-24T11:55:47.570Z",
+    "durationSeconds": 256.8,
+    "genres": [
+      "lo-fi",
+      "math-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a4e617bb-c534-4ebe-abc1-62f75e87977f.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a4e617bb-c534-4ebe-abc1-62f75e87977f.jpeg",
+    "embedUrl": "https://suno.com/embed/a4e617bb-c534-4ebe-abc1-62f75e87977f",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept the medals in a kitchen drawer\nBeside the batteries and takeout menus\nTheir little dates meant less each year\nWhile dust made a home around the edges\n\nI know the rooms where I was praised\nThe exact applause, the practiced grin\nBut every summit had a closing time\nAnd every photograph grew thin\n\n[Pre-Chorus]\nI thought the point was getting there\nI thought the proof would make me whole\nNow I can hear the question underneath:\nWhat do I carry when they let me go?\n\n[Chorus]\nIf the best is behind me\nLet it stay where it belongs\nI am more than the height I reached\nMore than the place I came from\nI can build with smaller pieces\nI can choose what still feels true\nPurpose isn't waiting at the finish\nIt's the work I return to\n\n[Verse 2]\nMy old ambition wears a borrowed coat\nIt doesn't fit the shoulders that I have\nI used to measure mornings by the calls\nNow I make coffee for my neighbor's dad\n\nA younger version of me wants a crown\nHe keeps a tally underneath his tongue\nI tell him, you were brave to want the world\nBut wanting isn't all that makes you young\n\n[Pre-Chorus]\nThe room is quiet after everyone leaves\nNo headline tells me what to do\nSo I put my hands back on the ordinary\nAnd let the ordinary pull me through\n\n[Chorus]\nIf the best is behind me\nLet it stay where it belongs\nI am more than the height I reached\nMore than the place I came from\nI can build with smaller pieces\nI can choose what still feels true\nPurpose isn't waiting at the finish\nIt's the work I return to\n\n[Bridge]\nThere is a kid downstairs learning three chords\nMissing every change but starting again\nI sit beside him, count the bars aloud\nAnd feel a door unlatch inside my chest\n\nMaybe a life is not a mountain\nMaybe it's a table passed around\nA place to bring the strength you gathered\nA reason to keep showing up now\n\n[Final Chorus]\nIf the best is behind me\nThen the road is still my own\nI am more than the height I reached\nI am not a monument\nI can build with smaller pieces\nI can choose what still feels true\nPurpose isn't waiting at the finish\nIt's the work I return to\n\n[Outro]\nPut the medals in the kitchen drawer\nLeave the morning open on the table\nI don't need to be remembered yet\nI only need to be useful while I'm able"
+  },
+  {
+    "id": "2b3fbc28-a3aa-42c0-bde4-a03d85f75e13",
+    "title": "Work in the Ordinary",
+    "url": "https://suno.com/song/2b3fbc28-a3aa-42c0-bde4-a03d85f75e13",
+    "createdAt": "2026-09-24T11:51:13.795Z",
+    "durationSeconds": 258.32,
+    "genres": [
+      "lo-fi",
+      "math-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_2b3fbc28-a3aa-42c0-bde4-a03d85f75e13.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_2b3fbc28-a3aa-42c0-bde4-a03d85f75e13.jpeg",
+    "embedUrl": "https://suno.com/embed/2b3fbc28-a3aa-42c0-bde4-a03d85f75e13",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept the medals in a kitchen drawer\nUnder the takeout menus and spare keys\nSome mornings I could name what they were for\nMost days they felt like evidence against me\n\nThe room got quiet after every win\nThe applause became a coat I couldn't wear\nI watched the younger version of my skin\nStill waiting for somebody to get there\n\n[Pre-Chorus]\nI thought the best part had already happened\nA finished book with nothing left to prove\nBut underneath the dust and old reactions\nA stubborn little reason started moving\n\n[Chorus]\nIf the peak is behind me, let it be\nI am more than the highest thing they saw\nThere is work in the ordinary\nThere is a door I haven't opened yet at all\nI was not built to live inside a headline\nI was not born to guard a fading flame\nIf the best is gone, I'll make a new kind\nWith both hands shaking, I can start again\n\n[Verse 2]\nI found a notebook in the winter coat\nThree crooked pages, coffee on the side\nA half-made plan from someone I don't know\nWho wrote, “Try the thing you keep denying”\n\nSo I walked down to the community hall\nWhere folding chairs were stacked against the wall\nI taught a kid the chords I learned too late\nAnd heard my old mistakes become their call\n\n[Pre-Chorus]\nNo camera flash, no polished little ending\nNo promised proof that this would make me whole\nJust one small life becoming less defended\nJust one more person finding where to go\n\n[Chorus]\nIf the peak is behind me, let it be\nI am more than the highest thing they saw\nThere is work in the ordinary\nThere is a door I haven't opened yet at all\nI was not built to live inside a headline\nI was not born to guard a fading flame\nIf the best is gone, I'll make a new kind\nWith both hands shaking, I can start again\n\n[Bridge]\nI grieved the years I thought I had misplaced\nThe doors that closed, the names I couldn't keep\nThen someone needed me in that small place\nAnd pulled a living answer from the deep\n\nMaybe purpose isn't thunder in the distance\nMaybe it's showing up before you're ready\nMaybe the hand you thought was empty\nIs the hand that keeps somebody steady\n\n[Final Chorus]\nIf the peak is behind me, let it be\nI am more than the highest thing they saw\nThere is work in the ordinary\nThere is a door and I am walking through it now\nI was not built to live inside a headline\nI was not born to guard a fading flame\nIf the best is gone, I'll make a new kind\nWith both hands shaking, I can start again\n\n[Outro]\nThe medals stay inside the kitchen drawer\nThe notebook opens on the table\nI don't need to be who I was before\nTo be here, to be useful, to be able"
+  },
+  {
+    "id": "f71a1eb1-82b8-49c9-ab8b-b4ea72426c73",
+    "title": "Past the Peak",
+    "url": "https://suno.com/song/f71a1eb1-82b8-49c9-ab8b-b4ea72426c73",
+    "createdAt": "2026-09-24T11:51:13.795Z",
+    "durationSeconds": 221.12,
+    "genres": [
+      "lo-fi",
+      "math-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f71a1eb1-82b8-49c9-ab8b-b4ea72426c73.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f71a1eb1-82b8-49c9-ab8b-b4ea72426c73.jpeg",
+    "embedUrl": "https://suno.com/embed/f71a1eb1-82b8-49c9-ab8b-b4ea72426c73",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nTrophies collecting dust on a bedroom shelf\nFramed clippings from a younger version of myself\nUsed to think the summit was the only place to breathe\nNow I'm standing in the valley, learning how to leave\nUnclench my fists from the ghost of what was\nLooking for a spark that isn't just applause\n\n[Pre-Chorus]\nThe noise has faded out, the stage lights all went dark\nI spent so long chasing fire, I forgot the spark\nNow the quiet opens up a simple open door\n\n[Chorus]\nIt wasn't the peak, it was learning to climb\nFinding a purpose outside of the shine\nThe greatest hits are behind in the rearview glass\nBuilding something quiet that is meant to last\nIt's catharsis in the simple light\nFinding a meaning in the quiet night\n\n[Verse 2]\nClean hands working on a smaller wooden frame\nNo stadium shouting out a forgotten name\nJust a quiet garden where the slow seeds grow\nPlanting for a season that I might not know\nNo clock to beat, no mountain left to scale\nJust a quiet wind filling up a steady sail\n\n[Pre-Chorus]\nThe noise has faded out, the stage lights all went dark\nI spent so long chasing fire, I forgot the spark\nNow the quiet opens up a simple open door\n\n[Chorus]\nIt wasn't the peak, it was learning to climb\nFinding a purpose outside of the shine\nThe greatest hits are behind in the rearview glass\nBuilding something quiet that is meant to last\nIt's catharsis in the simple light\nFinding a meaning in the quiet night\n\n[Bridge]\nLet the old gold rust\nLet the old crowns fall into the dust\nI don't need to be the hero of the story anymore\nI just want to walk across an open floor\nAnd feel the weight of living right now\n\n[Outro]\nPast the peak, into the green\nFinding the purpose in between\nThe quiet night\nThe simple light\nPast the peak, I breathe again\nStarting where the old ends end"
+  },
+  {
+    "id": "f683f4ef-b292-4349-9b6e-cca057e4e3a9",
+    "title": "Medals in a Kitchen Drawer",
+    "url": "https://suno.com/song/f683f4ef-b292-4349-9b6e-cca057e4e3a9",
+    "createdAt": "2026-09-24T11:49:19.676Z",
+    "durationSeconds": 242.4,
+    "genres": [
+      "math-rock",
+      "experimental rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f683f4ef-b292-4349-9b6e-cca057e4e3a9.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f683f4ef-b292-4349-9b6e-cca057e4e3a9.jpeg",
+    "embedUrl": "https://suno.com/embed/f683f4ef-b292-4349-9b6e-cca057e4e3a9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe medals sleep in a kitchen drawer\nTheir ribbons curled against the wood\nI used to measure every open door\nBy how far I thought I should\n\nThe photographs have yellowed at the edge\nThe names beneath them fade\nI keep expecting one more summit\nTo explain the choice I made\n\n[Pre-Chorus]\nIf the best part already happened\nWhy am I still here?\nWith a pulse beneath the disappointment\nAnd a road that disappears\n\n[Chorus]\nI am not finished\nI am not the sum\nOf the rooms I conquered\nOr the race I never won\nLet the old applause go quiet\nLet the polished story bend\nI can build a reason slowly\nWith my hands that still extend\n\n[Verse 2]\nThere is a box beneath the bed\nFull of badges, drafts, and dust\nEvery proof I saved for later\nCould not teach me how to trust\n\nSo I walked past the familiar gate\nWhere everyone knew my name\nFound a bench beside the river\nAnd stayed until the water changed\n\n[Pre-Chorus]\nMaybe purpose is not thunder\nMaybe it is small\nA promise kept when no one sees it\nA light left on in someone’s hall\n\n[Chorus]\nI am not finished\nI am not the sum\nOf the rooms I conquered\nOr the race I never won\nLet the old applause go quiet\nLet the polished story bend\nI can build a reason slowly\nWith my hands that still extend\n\n[Bridge]\nI have buried versions of me\nThat once believed they had to shine\nNow I can carry what they started\nWithout mistaking it for mine\n\nThere is work beneath the wreckage\nThere is mercy in the wait\nThe future is not owed a masterpiece\nIt only asks that I participate\n\n[Final Chorus]\nI am not finished\nI am not the sum\nOf the doors behind me\nOr the things I should have done\nLet the old applause go quiet\nLet the polished story bend\nI can build a reason slowly\nWith my hands that still extend\n\nI am not finished\nEven here, even now\nNot a final faded chapter\nNot a ghost beneath the crowd\nIf my greatest days are behind me\nThen I will turn and make amends\nFind a purpose in the making\nWith these hands that still extend\n\n[Outro]\nThe medals sleep in a kitchen drawer\nI leave them where they are\nThere is a road beyond the wanting\nAnd I can start without a map"
+  },
+  {
+    "id": "240bdc84-40bb-434c-a5ba-467a3ea40718",
+    "title": "Window Seat",
+    "url": "https://suno.com/song/240bdc84-40bb-434c-a5ba-467a3ea40718",
+    "createdAt": "2026-09-24T06:02:53.496Z",
+    "durationSeconds": 290,
+    "genres": [
+      "Eurodance",
+      "90s Dance"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_240bdc84-40bb-434c-a5ba-467a3ea40718.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_240bdc84-40bb-434c-a5ba-467a3ea40718.jpeg",
+    "embedUrl": "https://suno.com/embed/240bdc84-40bb-434c-a5ba-467a3ea40718",
+    "model": "v6",
+    "lyrics": "[Intro]\nBoarding starts at sunrise\nOne more hour, then I fly\n\n[Verse 1]\nSuitcase open by the bed\nBlue shirt folded, passport checked\nPhone is charging on the floor\nI keep finding one thing more\n\nThe alarm is set for five\nBut my thoughts refuse to lie\nEvery little engine sound\nFeels like wheels above the ground\n\n[Pre-Chorus]\nClose your eyes, the room turns wide\nRunway dreams are on your side\nCount the minutes, let them go\nMorning knows the way to show\n\n[Chorus]\nSleep tonight, sleep tonight\nMorning’s waiting for the light\nHold me close, don’t let time run wild\nI’ll be gone before the sky turns mild\nSleep tonight, sleep tonight\nCarry me through the cabin lights\nIf I dream, let the whole world start\nWith a window seat and a racing heart\n\n[Verse 2]\nTravel mug beside the door\nKeys are waiting on the drawer\nCurtains breathe across the glass\nMidnight moving much too fast\n\nI can hear the city fade\nEvery plan is neatly made\nStill I’m wide awake and dressed\nWith a paper map against my chest\n\n[Male Spoken Rap]\nPassport, wallet, ticket in my hand\nFive a.m. alarm, got a sunrise plan\nNo more checking, no more pacing the hall\nOne deep breath, let the night fall\nBag by the doorway, shoes lined up straight\nDreaming of the runway, don’t wanna be late\nTurn off the lamp, let the silence begin\nTomorrow’s calling from the other side of the wind\n\n[Pre-Chorus]\nClose your eyes, the room turns wide\nRunway dreams are on your side\nCount the minutes, let them go\nMorning knows the way to show\n\n[Chorus]\nSleep tonight, sleep tonight\nMorning’s waiting for the light\nHold me close, don’t let time run wild\nI’ll be gone before the sky turns mild\nSleep tonight, sleep tonight\nCarry me through the cabin lights\nIf I dream, let the whole world start\nWith a window seat and a racing heart\n\n[Breakdown]\nBreathe in slow\nLet the suitcase wait\nBreathe in slow\nThe door can open late\nNo more clocks\nNo more counting through\nNight, stay soft\nI’m almost there with you\n\n[Final Chorus]\nSleep tonight, sleep tonight\nMorning’s waiting for the light\nHold me close, don’t let time run wild\nI’ll be gone before the sky turns mild\nSleep tonight, sleep tonight\nCarry me through the cabin lights\nIf I dream, let the whole world start\nWith a window seat and a racing heart\n\n[Outro]\nAlarm set, suitcase closed\nEyes shut tight, the runway glows\nSleep tonight\nI’m ready when the morning goes"
+  },
+  {
+    "id": "edebe550-d1c0-452f-ae21-11cf088beea6",
+    "title": "No Sleep, No Sleep",
+    "url": "https://suno.com/song/edebe550-d1c0-452f-ae21-11cf088beea6",
+    "createdAt": "2026-09-24T06:02:53.496Z",
+    "durationSeconds": 194.88,
+    "genres": [
+      "Eurodance",
+      "90s Dance"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_edebe550-d1c0-452f-ae21-11cf088beea6.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_edebe550-d1c0-452f-ae21-11cf088beea6.jpeg",
+    "embedUrl": "https://suno.com/embed/edebe550-d1c0-452f-ae21-11cf088beea6",
+    "model": "v6",
+    "lyrics": "[Intro]\n(Chopped vocal sample: Sleep... sleep... go to sleep!)\nOne, two, three, four, five AM!\nOh no, not again!\n\n[Verse 1 - Male spoken/rap]\nGot the bags packed, sitting by the door\nPassport, boarding pass, triple-checked the drawer\nFlight's at seven, gotta leave here at four\nBut my mind's running laps on the bedroom floor\nStaring at the ceiling, trying to breathe deep\nCounting up the hours that I'll never get to sleep\nAlarm's gonna blast in a couple of ticks\nCome on, brain, just a little quick fix!\n\n[Chorus - Female Lead, soaring vocals]\nOh, why can't I close my eyes tonight?\nJust a few hours till the morning light!\nThe countdown is on, the clock's ticking fast\nWishing this midnight insomnia would pass!\nIn the sky, so high, I will fly away\nBut I'm wide awake, dreading the day!\n\n[Verse 2 - Male spoken/rap]\nThree AM now, temperature is rising\nTossing and turning, no compromise, and\nWill I miss the gate? Will I miss the plane?\nThis pre-travel panic is driving me insane!\nDrink some warm milk? No, it's too late\nJust gotta surrender to my sleepless fate!\n\n[Chorus - Female Lead, soaring vocals]\nOh, why can't I close my eyes tonight?\nJust a few hours till the morning light!\nThe countdown is on, the clock's ticking fast\nWishing this midnight insomnia would pass!\nIn the sky, so high, I will fly away\nBut I'm wide awake, dreading the day!\n\n[Outro]\n(Chopped vocal sample: Sleep... sleep... flight's today!)\nBeep... beep... beep...\nTime to go. No sleep.\nLet's fly."
+  },
+  {
+    "id": "b0b87658-75f1-4da9-bc15-03df2ff7a3ac",
+    "title": "A Little More Love",
+    "url": "https://suno.com/song/b0b87658-75f1-4da9-bc15-03df2ff7a3ac",
+    "createdAt": "2026-09-24T05:51:01.961Z",
+    "durationSeconds": 210,
+    "genres": [
+      "Eurodance",
+      "90s Dance"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b0b87658-75f1-4da9-bc15-03df2ff7a3ac.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b0b87658-75f1-4da9-bc15-03df2ff7a3ac.jpeg",
+    "embedUrl": "https://suno.com/embed/b0b87658-75f1-4da9-bc15-03df2ff7a3ac",
+    "model": "v6",
+    "lyrics": "[Intro: piano stabs, vocal chop]\n\nLove me, love me\nJust a little more\n\n[Verse 1]\n\nEvery city gives me someone\nevery room another spark\nEvery stranger turns familiar\nwhen I get close enough to heart\n\nI collect a thousand stories\nlittle pieces of their light\nThen I leave with all their voices\nstill inside me every night\n\n[Pre-Chorus]\n\nI say I have enough\nthen somebody smiles\nand suddenly my heart\nruns another thousand miles\n\n[Chorus]\n\nI need a little more love\na little more connection\nEvery heart I touch\npulls me another direction\n\nI love you, I love them\nI love the whole world too\nAnd every time I find somebody\nI need somebody new\n\nA little more love\na little more tonight\nI keep filling up my heart\nbut it never feels quite right\n\n[Rap / Spoken Verse]\n\nOne face, two face, three in the crowd\nEvery little connection turning me loud\nI give my heart away, piece by piece\nLooking for the feeling that will give me peace\n\nNorth side, south side, anywhere I go\nSomeone has a story and I need to know\nToo many doors and I open them all\nCatch me when I rise, love me when I fall\n\n[Breakdown: filtered beat]\n\nMaybe I’m greedy\nMaybe I’m free\nMaybe every person\nshows another side of me\n\n[Build]\n\nOne more laugh\nOne more touch\nOne more reason\nto care too much\n\n[Final Chorus]\n\nI need a little more love\na little more connection\nEvery heart I touch\npulls me another direction\n\nI love you, I love them\nI love the whole world too\nAnd every time I find somebody\nI need somebody new\n\nA little more love\na little more tonight\nI keep filling up my heart\nbut it never feels quite right\n\n[Outro: vocal chops]\n\nMore love\nMore love\nAlways room\nfor a little more love"
+  },
+  {
+    "id": "3d9dd6b5-d0c2-45c9-b40f-e73d93756138",
+    "title": "A Hundred Pieces of Me",
+    "url": "https://suno.com/song/3d9dd6b5-d0c2-45c9-b40f-e73d93756138",
+    "createdAt": "2026-09-24T04:07:58.904Z",
+    "durationSeconds": 239.8,
+    "genres": [
+      "art rock",
+      "math-rock",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_3d9dd6b5-d0c2-45c9-b40f-e73d93756138.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_3d9dd6b5-d0c2-45c9-b40f-e73d93756138.jpeg",
+    "embedUrl": "https://suno.com/embed/3d9dd6b5-d0c2-45c9-b40f-e73d93756138",
+    "model": "v6",
+    "lyrics": "[Intro]\nCount them out slowly—one through one hundred\nEach one a promise I carried under my tongue\n\n[Verse 1]\nI split my heart on the kitchen tile\nMade little parcels, labeled them by hand\nGave one to the friend who knew my childhood\nOne to the stranger who said they understood\n\nI kept the smallest piece behind my teeth\nFor the days when everybody left\nBut trust is a door with a borrowed key\nAnd some hands learn exactly where to turn it\n\n[Pre-Chorus]\nI watched the pieces cross the room\nLike red cards in a dealer's grip\nEvery gift became a private wound\nEvery name became a sinking ship\n\n[Chorus]\nA hundred pieces of me\nA hundred doors to break\nYou took the part that knew your name\nAnd ground it into the pavement\nA hundred pieces of me\nI gave them out to live\nNow I am counting what survived\nAnd learning what not to give\n\n[Verse 2]\nOne went to the cousin with the borrowed coat\nOne to the lover who slept beside the wall\nOne to the boss who praised my patience\nThen used my silence as a hallway to walk through\n\nThere was a kid who kept my picture\nUntil his mother threw it out\nThere was a room where I was welcome\nTill someone laughed and locked it down\n\n[Pre-Chorus]\nI called each fracture by its first name\nPressed my thumb against the seam\nSomebody always wants the whole thing\nNobody asks what holding costs me\n\n[Chorus]\nA hundred pieces of me\nA hundred hands to feed\nYou took the part that still believed\nAnd taught it how to bleed\nA hundred pieces of me\nI gave them without a net\nNow I am gathering the living ones\nAnd naming them as mine again\n\n[Bridge]\nDo not mistake the ruins for a sentence\nDo not call the wreckage all I am\nI can build a heart with fewer windows\nI can choose the lock, I can choose the hand\n\nI will not curse the ones who crushed me\nBut I will stop supplying stone\nThere is a difference between being open\nAnd leaving every door unowned\n\n[Breakdown]\nNinety-six, ninety-seven\nThree still warm beneath the dust\nNinety-eight, ninety-nine\nOne says stay, one says trust\nOne hundred—nothing left to scatter\nNothing left to prove or send\nI put the pieces on the table\nAnd begin with what remains\n\n[Final Chorus]\nA hundred pieces of me\nYou do not get them all\nI kept the pulse beneath the damage\nI kept my name beneath the fall\nA hundred pieces of me\nSome vanished, some were changed\nBut every fragment I reclaim\nTurns the wound into a blade\n\n[Outro]\nCount them out slowly\nNot for the ones who broke them\nFor the hands I choose tomorrow\nFor the heart I am still holding"
+  },
+  {
+    "id": "175338f9-c563-46da-94a3-2c434eb5a6f9",
+    "title": "A Hundred Pieces",
+    "url": "https://suno.com/song/175338f9-c563-46da-94a3-2c434eb5a6f9",
+    "createdAt": "2026-09-24T04:07:58.904Z",
+    "durationSeconds": 205,
+    "genres": [
+      "Phonk",
+      "Math Rock",
+      "Art Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_175338f9-c563-46da-94a3-2c434eb5a6f9.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_175338f9-c563-46da-94a3-2c434eb5a6f9.jpeg",
+    "embedUrl": "https://suno.com/embed/175338f9-c563-46da-94a3-2c434eb5a6f9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI took my chest and I opened it wide\nA hundred neat rows sitting inside\nA hundred small fractions of beating and red\n\"Take what you need,\" is the whisper I said\nI handed them out to the crowd on the street\nTo the cold and the passing, the ones I would meet\nAnd ninety-five kept them or put them away\nBut five of them threw them where heavy boots tread.\n\n[Chorus]\nA hundred pieces of a single heart\nScattered like dust when they tear it apart!\nYou crush the fraction that I gave to you\nAnd the whole ninety-nine feel the fracture run through!\nIt's a beautiful mess, it's a terrible trade\nTo bleed for the people who walk on the blade!\nA hundred pieces, and some are just stone\nBut the ones that are broken leave me half-alone.\n\n[Verse 2]\nI feel the sharp sting of a far-away heel\nGrinding a corner of glass that was real\nA sudden cold spasm, a shudder at night\nSomebody's throwing their fragment from flight\nI can't ask for return of the ones that they keep\nSo I lie in the silence and count them to sleep\nThe ninety-five holding, the five in the clay\nMy divided chest beats in a strange, broken way.\n\n[Bridge]\nNo math can repair this\nNo formula heals\nThe arithmetic pain of the way a heart feels\nDivide it by hundred, subtract three or four\nThe remainder is bleeding all over the floor.\n\n[Outro]\nI still have the pieces...\nThe ones they didn't break...\nBut oh, the quiet ache...\nOf the ones they did."
+  },
+  {
+    "id": "496adedd-e9e8-4f4e-a32e-ba47568df2af",
+    "title": "Tell Me I Was Here",
+    "url": "https://suno.com/song/496adedd-e9e8-4f4e-a32e-ba47568df2af",
+    "createdAt": "2026-09-24T03:26:35.892Z",
+    "durationSeconds": 281.6,
+    "genres": [
+      "Phonk",
+      "Math Rock",
+      "Art Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_496adedd-e9e8-4f4e-a32e-ba47568df2af.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_496adedd-e9e8-4f4e-a32e-ba47568df2af.jpeg",
+    "embedUrl": "https://suno.com/embed/496adedd-e9e8-4f4e-a32e-ba47568df2af",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI count the rooms I never stayed in\nNames I carried, names I traded\nEvery photograph keeps fading\nBefore the chemicals can save it\n\nI built a ladder out of hours\nClimbed until my hands were flowers\nAt the top, the view was vacant\nJust a question wearing my face\n\n[Pre-Chorus]\nWhen the last light leaves the window\nWhen the dust gets every name\nWill the shape I made from living\nLook like anything but waste?\n\n[Chorus]\nTell me I was here\nTell me I was more than passing through\nIf the world forgets my footsteps\nLet my hands still reach for you\n\nTell me I was here\nEven if the answer disappears\nI don't need forever waiting\nI just need one honest year\n\n[Verse 2]\nI kept receipts for every sacrifice\nPinned them underneath the kitchen light\nCalled it proof that I was moving\nBut the paper never answered back\n\nMy father’s watch is in the drawer now\nStill it ticks like it knows how\nAll the minutes I abandoned\nAll the doors I never walked through\n\n[Pre-Chorus]\nWhen the last voice leaves the hallway\nWhen the mirror loses shape\nWill the love I gave in fragments\nBe enough to leave a trace?\n\n[Chorus]\nTell me I was here\nTell me I was more than passing through\nIf the world forgets my footsteps\nLet my hands still reach for you\n\nTell me I was here\nEven if the answer disappears\nI don't need forever waiting\nI just need one honest year\n\n[Bridge]\nMaybe meaning isn't marble\nMaybe it is bread passed round\nA coat left on somebody's shoulders\nA chair pulled out, a safe way home\n\nMaybe every small forgiveness\nOutlives monuments and gold\nMaybe I am not a headline\nMaybe I am what I hold\n\n[Breakdown]\nI was here\nI was here\nNot a saint, not a warning\nNot a number in the morning\n\nI was here\nI was here\nWith my mouth full of questions\nWith my hands still reaching\n\n[Final Chorus]\nTell me I was here\nNo, I know I was here because I changed\nEvery life that touched my living\nEvery bruise I helped to name\n\nTell me I was here\nLet the silence take the rest\nI will leave this world unfinished\nWith a pulse inside my chest\n\n[Outro]\nIf the end erases records\nIf the dark outlasts the flame\nI was here beside you breathing\nAnd that was not nothing\nThat was not nothing\nThat was not nothing"
+  },
+  {
+    "id": "dc82a14c-3044-408d-955e-c39cefeeb8e7",
+    "title": "Wings Against the Wall",
+    "url": "https://suno.com/song/dc82a14c-3044-408d-955e-c39cefeeb8e7",
+    "createdAt": "2026-09-24T03:12:40.495Z",
+    "durationSeconds": 251.2,
+    "genres": [
+      "Phonk",
+      "Math Rock",
+      "Art Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_dc82a14c-3044-408d-955e-c39cefeeb8e7.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_dc82a14c-3044-408d-955e-c39cefeeb8e7.jpeg",
+    "embedUrl": "https://suno.com/embed/dc82a14c-3044-408d-955e-c39cefeeb8e7",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI leave my body by the bedroom lamp\nFold up the worry, let it lose its shape\nThe ceiling opens like a paper map\nAnd every road is calling out my name\n\nI walk through rooms I never built awake\nA kitchen full of rain, a hallway made of clay\nThe hands I lost come reaching through the haze\nThey don't ask questions, they just make me stay\n\n[Pre-Chorus]\nIf the dark can hold me\nLet it hold me whole\nI have carried every fracture\nLike a second soul\n\n[Chorus]\nTonight I can become\nA river, a bell, a door undone\nThe wounds that kept me small\nTurn into wings against the wall\nI fall, I fall, I fall asleep\nAnd find the parts I couldn't keep\nWhen morning calls my name\nI'll rise with nothing left to blame\n\n[Verse 2]\nA red moon rolls across a field of glass\nI see my younger face and let it pass\nThe things I feared are wearing borrowed masks\nThey bow once, then dissolve into the grass\n\nA train made out of thunder leaves the station\nI climb aboard with no destination\nEach window shows a different constellation\nEach one says: begin without permission\n\n[Pre-Chorus]\nLet the impossible\nOpen up its hands\nI was never meant to heal here\nWhere I understand\n\n[Chorus]\nTonight I can become\nA river, a bell, a door undone\nThe wounds that kept me small\nTurn into wings against the wall\nI fall, I fall, I fall asleep\nAnd find the parts I couldn't keep\nWhen morning calls my name\nI'll rise with nothing left to blame\n\n[Bridge]\nChoir in the distance, silver in the floor\nI meet the self I buried at the door\nShe says, You don't have to win this night\nI say, I know\nAnd step into the light\n\n[Breakdown]\nNo map\nNo crown\nNo need to make it make sense now\nNo debt\nNo proof\nThe heart can mend in stranger rooms\n\n[Final Chorus]\nTonight I can become\nA river, a bell, a door undone\nThe wounds that kept me small\nTurn into wings against the wall\nI fall, I fall, I fall asleep\nAnd find the parts I couldn't keep\nWhen morning calls my name\nI'll rise with nothing left to blame\n\n[Outro]\nThe room returns, the window turns pale\nMy breath is a boat, my body a sail\nI wake with the impossible under my skin\nNot healed forever—just ready again"
+  },
+  {
+    "id": "7ee3e8d4-ba63-4241-bd5c-ddede917fe5c",
+    "title": "The Room Has a Key",
+    "url": "https://suno.com/song/7ee3e8d4-ba63-4241-bd5c-ddede917fe5c",
+    "createdAt": "2026-09-24T03:03:09.692Z",
+    "durationSeconds": 216.04,
+    "genres": [
+      "Phonk",
+      "math-rock",
+      "art-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_7ee3e8d4-ba63-4241-bd5c-ddede917fe5c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_7ee3e8d4-ba63-4241-bd5c-ddede917fe5c.jpeg",
+    "embedUrl": "https://suno.com/embed/7ee3e8d4-ba63-4241-bd5c-ddede917fe5c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWhen I close the door, the ceiling turns wide\nA red paper moon rolls under the tide\nI meet every version I buried awake\nThey hand me the pieces I thought I should break\n\n[Pre-Chorus]\nNo judge in the hallway\nNo lock on the chest\nThe impossible calls me\nAnd gives me a rest\n\n[Chorus]\nLet me fall through the floor\nLet the lost doors swing\nI can wake with a wound\nThat remembers to sing\nIf the dark is a room\nThen the room has a key\nEvery dream makes a country\nThat carries me\n\n[Verse 2]\nI ride on a staircase that grows as I climb\nPast rooms full of birthdays I left behind\nA child with my eyes draws a map on my sleeve\nSays, take what you need, you don't have to believe\n\n[Pre-Chorus]\nThe river runs backward\nThe old names dissolve\nMy hands stop defending\nWhat sleep can resolve\n\n[Chorus]\nLet me fall through the floor\nLet the lost doors swing\nI can wake with a wound\nThat remembers to sing\nIf the dark is a room\nThen the room has a key\nEvery dream makes a country\nThat carries me\n\n[Bridge]\nI was not broken, only braced\nI was not empty, only faced\nWith every fear I couldn't name\nUntil the night rebuilt my frame\n\n[Breakdown]\nOpen the gate\nUndo the chain\nGive me the storm\nGive me the rain\nI come back changed\nI come back clear\nThe life I was hiding\nIs waiting here\n\n[Final Chorus]\nLet me fall through the floor\nLet the lost doors swing\nI can wake with a wound\nThat remembers to sing\nIf the dark is a room\nThen the room has a key\nEvery dream makes a country\nThat carries me\n\n[Outro]\nWhen morning arrives, I keep what it gave\nA door in my breathing, a heart I can save"
+  },
+  {
+    "id": "fbacaf37-750e-4a67-8d3f-b55c830504d4",
+    "title": "Keep the Window Cracked",
+    "url": "https://suno.com/song/fbacaf37-750e-4a67-8d3f-b55c830504d4",
+    "createdAt": "2026-09-24T02:57:47.992Z",
+    "durationSeconds": 263.56,
+    "genres": [
+      "art rock",
+      "phonk",
+      "math-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_fbacaf37-750e-4a67-8d3f-b55c830504d4.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_fbacaf37-750e-4a67-8d3f-b55c830504d4.jpeg",
+    "embedUrl": "https://suno.com/embed/fbacaf37-750e-4a67-8d3f-b55c830504d4",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI fell asleep with the window cracked\nAnd a paper moon on the bedroom wall\nSomewhere beneath the mattress springs\nA second country heard my call\n\nI walked through fields of silver wheat\nWhere every stalk knew my old name\nA river carried the words I lost\nAnd brought them back without the blame\n\n[Pre-Chorus]\nThere were doors in the clouds\nThere were stairs in the sea\nEvery impossible place\nMade room for me\n\n[Chorus]\nLet the strange world open\nLet it pull me through\nI can set down the burden\nI kept mistaking for truth\nWhen the dark turns generous\nAnd the sleeping heart knows\nI come back with a wider chest\nAnd a road where the hurt used to close\n\n[Verse 2]\nI met a child with my tired eyes\nShe held a match beneath the rain\nShe said, You don't have to earn the dawn\nYou don't have to explain your pain\n\nWe built a house from borrowed doors\nHung blue bells along the stairs\nThe roof was made of breathing birds\nAnd nothing broke when I left my cares\n\n[Pre-Chorus]\nThere were hands in the walls\nThere was warmth in the stone\nEvery impossible place\nTaught me I'm home\n\n[Chorus]\nLet the strange world open\nLet it pull me through\nI can set down the burden\nI kept mistaking for truth\nWhen the dark turns generous\nAnd the sleeping heart knows\nI come back with a wider chest\nAnd a road where the hurt used to close\n\n[Bridge]\nIf I vanish, let me wander\nPast the maps I used to guard\nLet the dream undo the armor\nLet the soft become the hard\n\nI have carried every question\nLike a suitcase full of rain\nNow the sky unzips above me\nAnd I breathe without the chain\n\n[Final Chorus]\nLet the strange world open\nLet it pull me through\nI can set down the burden\nAnd return as something new\nWhen the dark turns generous\nAnd the sleeping heart knows\nI come back with a wider chest\nWith a living fire under the bones\n\n[Outro]\nKeep the window cracked\nKeep the paper moon\nIf I sleep, I’m not disappearing\nI’m making room"
+  },
+  {
+    "id": "98d5767f-eb10-4c08-9c45-802cc424c6d7",
+    "title": "Release the Verdict",
+    "url": "https://suno.com/song/98d5767f-eb10-4c08-9c45-802cc424c6d7",
+    "createdAt": "2026-09-23T22:37:25.785Z",
+    "durationSeconds": 276.36,
+    "genres": [
+      "progressive rock",
+      "art rock",
+      "trap"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_98d5767f-eb10-4c08-9c45-802cc424c6d7.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_98d5767f-eb10-4c08-9c45-802cc424c6d7.jpeg",
+    "embedUrl": "https://suno.com/embed/98d5767f-eb10-4c08-9c45-802cc424c6d7",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI drew a courtroom in my head\nAnd took the witness stand\nI listed every crooked step\nLike proof I couldn't change\n\nI wore the names I gave myself\nLike medals made of tin\nThen found the door was never locked\nAnd mercy let me in\n\n[Pre-Chorus]\nFor the hand that slipped\nFor the word that cut\nFor the road I chose\nWhen I didn't know enough\n\n[Chorus]\nI release the verdict\nI release the blame\nThe angel and the monster\nBoth of them have my name\nI will make mistakes tomorrow\nI will make them today\nAnd I can love this broken creature\nWhile it learns another way\n\n[Verse 2]\nSome mornings I am gentle\nSome nights I turn to stone\nI build a house from promises\nThen leave the lights alone\n\nI have been the storm and shelter\nThe wound and waiting bandage\nA pair of wings with muddy feet\nStill rising from the damage\n\n[Pre-Chorus]\nFor the doors I closed\nFor the trust I bent\nFor the years I spent\nTrying to be innocent\n\n[Chorus]\nI release the verdict\nI release the blame\nThe angel and the monster\nBoth of them have my name\nI will make mistakes tomorrow\nI will make them today\nAnd I can love this broken creature\nWhile it learns another way\n\n[Bridge]\nCome here, you frightened thing\nPut down the stone\nYou don't have to earn\nThe right to come home\n\nThe halo can be crooked\nThe claws can unclench\nA heart can hold the damage\nAnd still become a bridge\n\n[Final Chorus]\nI release the verdict\nI release the blame\nThe angel and the monster\nBoth of them have my name\nI will make mistakes tomorrow\nI will make them today\nAnd I can love this broken creature\nWhile it learns another way\n\n[Outro]\nNo more courtroom in my head\nNo more sentence carved in shame\nThe angel and the monster\nI will answer to my name"
+  },
+  {
+    "id": "fbfdd4a3-1311-4246-a16c-d06f24d9be07",
+    "title": "Scattered Heart",
+    "url": "https://suno.com/song/fbfdd4a3-1311-4246-a16c-d06f24d9be07",
+    "createdAt": "2026-09-23T22:25:47.130Z",
+    "durationSeconds": 246.28,
+    "genres": [
+      "Phonk",
+      "Alternative Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_fbfdd4a3-1311-4246-a16c-d06f24d9be07.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_fbfdd4a3-1311-4246-a16c-d06f24d9be07.jpeg",
+    "embedUrl": "https://suno.com/embed/fbfdd4a3-1311-4246-a16c-d06f24d9be07",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI left a little in Lisbon rain\nA thread in a stranger’s borrowed name\nA piece on a train through northern towns\nA pulse where the harbor lights went down\n\nI gave you the part that knew how to stay\nGave her the nerve to walk away\nGave them a laugh for the long flight home\nNow every map has a piece of my own\n\n[Pre-Chorus]\nI kept saying I’d gather it back\nWhen the roads stopped pulling me off track\nBut the farther I went, the more I knew\nEach open door was a piece cut loose\n\n[Chorus]\nMy heart is scattered everywhere\nIn your coat pocket, her kitchen chair\nIn a voice that calls from a different shore\nIn the hands of the ones I can’t reach anymore\nI gave it away, and I’m still alive\nA thousand small sparks, a thousand drives\nIt won’t all come home, and that’s the truth\nI am made of the places I gave to you\n\n[Verse 2]\nThere’s a scar in a café near Rome\nA blue wristband from a night in Seoul\nA postcard folded beneath my bed\nWith something kind I was too scared to say\n\nI used to call that loss by another name\nCount every goodbye like a personal blame\nNow I see the pieces don’t make me less\nThey prove I was there, I said yes\n\n[Pre-Chorus]\nI kept wanting one room, one name\nOne clean border around the flame\nBut love doesn’t fit in a single frame\nIt leaves through the window and signs its name\n\n[Chorus]\nMy heart is scattered everywhere\nIn your coat pocket, her kitchen chair\nIn a voice that calls from a different shore\nIn the hands of the ones I can’t reach anymore\nI gave it away, and I’m still alive\nA thousand small sparks, a thousand drives\nIt won’t all come home, and that’s the truth\nI am made of the places I gave to you\n\n[Bridge]\nIf you carry a piece, don’t carry the debt\nYou don’t have to promise you won’t forget\nLet it beat where your life has begun\nI was never built to belong to one\n\n[Final Chorus]\nMy heart is scattered everywhere\nIn your coat pocket, her kitchen chair\nIn the morning trains and the salt-thick air\nIn every person who found me there\nI gave it away, and I’m still alive\nNot whole in one place, but wider inside\nIt won’t all come home, and I’m finally free\nEvery piece I gave became part of me\n\n[Outro]\nSomewhere you’re holding what I couldn’t keep\nSomewhere I’m learning the distance can breathe"
+  },
+  {
+    "id": "8c9d0fd6-cc7e-485b-8ae2-5c33077f5f7a",
+    "title": "My Heart Is Everywhere Now",
+    "url": "https://suno.com/song/8c9d0fd6-cc7e-485b-8ae2-5c33077f5f7a",
+    "createdAt": "2026-09-23T22:20:01.565Z",
+    "durationSeconds": 271.6,
+    "genres": [
+      "Phonk",
+      "Alternative Rock",
+      "Lo-fi"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8c9d0fd6-cc7e-485b-8ae2-5c33077f5f7a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8c9d0fd6-cc7e-485b-8ae2-5c33077f5f7a.jpeg",
+    "embedUrl": "https://suno.com/embed/8c9d0fd6-cc7e-485b-8ae2-5c33077f5f7a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI left a piece in Lisbon rain\nA little heat in a stranger's name\nSent one north where the long trains run\nKept one warm for my sister's son\n\nI gave one away in a market crowd\nOne to a friend who said it out loud\nEvery goodbye took a different shape\nEvery new door made another break\n\n[Pre-Chorus]\nI kept trying to gather the scattered parts\nWith both hands pressed against my heart\nBut the map kept growing under my skin\nAnd there was no way to fold it in\n\n[Chorus]\nMy heart is everywhere now\nA room in a hundred towns\nA hand on a shoulder, a light left on\nA name I carry when the person is gone\nMy heart is everywhere now\nIt won't come back in one piece somehow\nI used to call that losing ground\nNow I know love is how it gets around\n\n[Verse 2]\nThere is a window facing the sea\nThat holds a version of what I could be\nA kitchen where somebody saves my seat\nA dusty road with my song underneath\n\nI mailed my courage across the blue\nLeft my patience with someone new\nI thought a heart was a house with a door\nNow mine has hallways I can't count anymore\n\n[Pre-Chorus]\nI kept trying to name what remained\nThe missing, the mercy, the mark, the stain\nBut every fragment learned to beat\nIn places I may never see\n\n[Chorus]\nMy heart is everywhere now\nA room in a hundred towns\nA hand on a shoulder, a light left on\nA name I carry when the person is gone\nMy heart is everywhere now\nIt won't come back in one piece somehow\nI used to call that losing ground\nNow I know love is how it gets around\n\n[Bridge]\nSo if I seem distant, I am not gone\nI am in the bread, I am in the dawn\nIn the borrowed coat, in the old refrain\nIn the quiet kindness after the rain\n\nI cannot return to the shape I knew\nBut I can make a home in the split-through\nLet every country keep what it found\nLet every small piece keep making sound\n\n[Final Chorus]\nMy heart is everywhere now\nA room in a hundred towns\nA hand on a shoulder, a light left on\nA name I carry when the person is gone\nMy heart is everywhere now\nIt won't come back in one piece somehow\nI used to call that losing ground\nNow I know love is how it gets around\n\n[Outro]\nKeep a piece, keep a piece\nWherever you are\nKeep a piece, keep a piece\nThat is where my heart starts"
+  },
+  {
+    "id": "cee73d50-e087-479b-9419-d7b79a51ef37",
+    "title": "Small Pieces, Wide World",
+    "url": "https://suno.com/song/cee73d50-e087-479b-9419-d7b79a51ef37",
+    "createdAt": "2026-09-23T22:07:29.810Z",
+    "durationSeconds": 272.4,
+    "genres": [
+      "Phonk",
+      "Alternative Rock",
+      "Lo-fi"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_cee73d50-e087-479b-9419-d7b79a51ef37.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_cee73d50-e087-479b-9419-d7b79a51ef37.jpeg",
+    "embedUrl": "https://suno.com/embed/cee73d50-e087-479b-9419-d7b79a51ef37",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI left a thread in Manila rain\nA coin in a cab in Madrid\nA promise folded in Lisbon blue\nA name I forgot but the feeling stayed hid\n\nI gave you the part that knew how to wait\nYou took the part that could forgive\nNow every border has one of my hands\nAnd none of them tell me where to live\n\n[Pre-Chorus]\nI keep a room inside my ribs\nWith doors that never close\nEvery goodbye takes one more brick\nFrom the place I used to know\n\n[Chorus]\nI gave my heart in little pieces\nTo strangers I still call my own\nA piece in the heat, a piece in the harbor\nA piece underneath someone else’s home\nI gave my heart in little pieces\nNow it will never beat in one place again\nBut I’m not broken, I’m spread out\nI’m more than the person I was back then\n\n[Verse 2]\nThere’s a blue scarf under Tokyo seats\nA photograph near the Nile\nA joke in a kitchen in Valparaíso\nThat still makes a stranger smile\n\nI learned that love is a postal code\nA borrowed coat, a midnight train\nYou don’t return with the same two hands\nWhen they’ve carried somebody else’s pain\n\n[Pre-Chorus]\nI keep a map inside my chest\nThe roads are worn and bright\nEvery place I couldn’t stay\nStill taught me how to write\n\n[Chorus]\nI gave my heart in little pieces\nTo strangers I still call my own\nA piece in the heat, a piece in the harbor\nA piece underneath someone else’s home\nI gave my heart in little pieces\nNow it will never beat in one place again\nBut I’m not broken, I’m spread out\nI’m more than the person I was back then\n\n[Bridge]\nIf you find me in the voice of a friend\nOr the way a child says my name\nDon’t send me back, don’t gather the fragments\nThey grew into something I couldn’t have made\n\nI used to beg for a single center\nOne safe address, one locked door\nNow I carry a thousand small endings\nAnd I don’t need to be whole anymore\n\n[Final Chorus]\nI gave my heart in little pieces\nTo strangers I still call my own\nA piece in the heat, a piece in the harbor\nA piece underneath someone else’s home\nI gave my heart in little pieces\nIt will never beat in one place again\nI’m not missing, I’m spread out\nEverywhere I loved is where I begin\n\n[Outro]\nSmall pieces, wide world\nStill mine, still moving\nSmall pieces, wide world\nI’m not lost—I’m becoming"
+  },
+  {
+    "id": "8b1a5109-a879-4c3c-8742-884b19f70952",
+    "title": "Scattered Map",
+    "url": "https://suno.com/song/8b1a5109-a879-4c3c-8742-884b19f70952",
+    "createdAt": "2026-09-23T22:01:06.320Z",
+    "durationSeconds": 264.76,
+    "genres": [
+      "Phonk",
+      "Alternative Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8b1a5109-a879-4c3c-8742-884b19f70952.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8b1a5109-a879-4c3c-8742-884b19f70952.jpeg",
+    "embedUrl": "https://suno.com/embed/8b1a5109-a879-4c3c-8742-884b19f70952",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI left a thread in Manila rain\nA little red in a stranger's name\nSent one flame to a kitchen in Rome\nNow every welcome feels like home\n\nI gave my laugh to a late-night train\nMy better words to a windowpane\nA piece of trust at a border line\nA piece of sleep in a borrowed time\n\n[Pre-Chorus]\nI keep counting the rooms I've crossed\nLike every goodbye was a different cost\nIf I gathered the pieces I gave away\nWould they know the shape of me today?\n\n[Chorus]\nMy heart is scattered, and that's alright\nOne part in daylight, one part in night\nI used to think I had to take it back\nNow I wear every fracture like a map\n\nMy heart won't gather in one place again\nIt's in the hands of a hundred friends\nI am not less for the pieces gone\nI am the road they traveled on\n\n[Verse 2]\nThere is a postcard under my bed\nWith a blue stamp and the things unsaid\nA borrowed coat in a northern town\nA song someone hums when the sun goes down\n\nI left my patience beside the sea\nMy old fear in a market alley\nGave my name to a doorway light\nAnd kept one promise for the ride tonight\n\n[Pre-Chorus]\nI keep counting the miles I've crossed\nNot every leaving is a loss\nIf I gathered the pieces I gave away\nWould I still want the person from yesterday?\n\n[Chorus]\nMy heart is scattered, and that's alright\nOne part in daylight, one part in night\nI used to think I had to take it back\nNow I wear every fracture like a map\n\nMy heart won't gather in one place again\nIt's in the hands of a hundred friends\nI am not less for the pieces gone\nI am the road they traveled on\n\n[Bridge]\nLet it stay where the kindness grew\nLet it belong to the ones who knew\nA hand on my shoulder, a door held wide\nA small goodbye I could not divide\n\nI am not empty, I am spread thin\nAcross the places that let me in\nNo single room can hold the whole\nI left my heart, and I found my soul\n\n[Final Chorus]\nMy heart is scattered, and that's alright\nOne part in daylight, one part in night\nI used to think I had to take it back\nNow I wear every fracture like a map\n\nMy heart won't gather in one place again\nIt's in the hands of a hundred friends\nI am not less for the pieces gone\nI am the road they traveled on\n\n[Outro]\nKeep a little piece where you are\nI will carry the rest like a distant scar\nNot broken apart, not running alone\nA world of small rooms has become my home"
+  },
+  {
+    "id": "a2cff3ef-7d41-4d5f-b412-d029fc04fb6b",
+    "title": "Cracks Are Part of Me",
+    "url": "https://suno.com/song/a2cff3ef-7d41-4d5f-b412-d029fc04fb6b",
+    "createdAt": "2026-09-23T19:44:42.362Z",
+    "durationSeconds": 252.4,
+    "genres": [
+      "Phonk",
+      "Alternative Rock",
+      "Lo-fi"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a2cff3ef-7d41-4d5f-b412-d029fc04fb6b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a2cff3ef-7d41-4d5f-b412-d029fc04fb6b.jpeg",
+    "embedUrl": "https://suno.com/embed/a2cff3ef-7d41-4d5f-b412-d029fc04fb6b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI count the flaws beneath my shirt\nKeep score of every little hurt\nI practice smiles in bathroom glass\nThen watch the better version pass\n\nI call it drive, I call it grit\nBut some days I am tired of it\nThe finish line keeps moving on\nAs if my name was something wrong\n\n[Pre-Chorus]\nI keep treating my own heart\nLike a test I have to pass\nEvery bruise becomes a mark\nEvery mirror holds me back\n\n[Chorus]\nI am not a problem to solve\nNot a race I have to win\nI can meet myself where I am\nAnd still become who I am within\nAll these cracks are part of me\nAll this fear can lose its teeth\nI am not less because I bend\nI am myself, and I begin again\n\n[Verse 2]\nI borrow faces from the crowd\nWear their standards like they are proud\nI trade my sleep for one more proof\nThen wonder why I hate the truth\n\nThe voice that says I am behind\nWas built from someone else’s mind\nI let it knock, I let it speak\nBut it does not get to name my week\n\n[Pre-Chorus]\nI keep turning every scar\nInto evidence against my skin\nMaybe growth is not becoming someone else\nMaybe it is letting myself in\n\n[Chorus]\nI am not a problem to solve\nNot a race I have to win\nI can meet myself where I am\nAnd still become who I am within\nAll these cracks are part of me\nAll this fear can lose its teeth\nI am not less because I bend\nI am myself, and I begin again\n\n[Bridge]\nIf I change, let it be from love\nNot the panic of not being enough\nIf I fall, let the floor be kind\nI do not have to leave myself behind\n\n[Final Chorus]\nI am not a problem to solve\nNot a race I have to win\nI can meet myself where I am\nAnd still become who I am within\nAll these cracks are part of me\nAll this fear can lose its teeth\nI am not less because I bend\nI am myself, and I begin again\nI am myself, and I begin again\n\n[Outro]\nI am here\nI am here\nStill becoming\nStill sincere"
+  },
+  {
+    "id": "b298210e-ea6b-411e-b6f4-810daeb22d99",
+    "title": "This Is My Name",
+    "url": "https://suno.com/song/b298210e-ea6b-411e-b6f4-810daeb22d99",
+    "createdAt": "2026-09-23T19:32:07.051Z",
+    "durationSeconds": 261.56,
+    "genres": [
+      "Math Rock",
+      "Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b298210e-ea6b-411e-b6f4-810daeb22d99.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b298210e-ea6b-411e-b6f4-810daeb22d99.jpeg",
+    "embedUrl": "https://suno.com/embed/b298210e-ea6b-411e-b6f4-810daeb22d99",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI know the cracks along the kitchen tile\nThe morning face that takes a little while\nI know the plans I never carried through\nThe small unfinished parts I call my truth\n\nI used to measure every breath I took\nAgainst a life imagined in a book\nBut every borrowed shape fell off my skin\nAnd left the person underneath to begin\n\n[Pre-Chorus]\nI don't have to win the day\nTo deserve the room I'm in\nI can let the old rules fade\nAnd still call this living\n\n[Chorus]\nI am the hands that made mistakes\nThe bent-down nails, the clean-up days\nI am the road I chose and changed\nThe yes, the no, the in-between\n\nI don't need a different name\nTo make this heart a safer place\nI can meet myself halfway\nAnd let this life be mine\n\n[Verse 2]\nThe rent is due, the laundry waits in piles\nA neighbor's radio leaks through the walls\nI miss the mark, then laugh at how it sounds\nWhen I stop turning every loss around\n\nThere are some doors I never learned to close\nSome old replies that still arrive too slow\nBut I can hold the child who needed proof\nAnd say, you made it here; that counts as truth\n\n[Pre-Chorus]\nI don't have to fix the past\nTo stand steady in the present\nWhat I carry, what I lack\nBoth belong inside the sentence\n\n[Chorus]\nI am the hands that made mistakes\nThe bent-down nails, the clean-up days\nI am the road I chose and changed\nThe yes, the no, the in-between\n\nI don't need a different name\nTo make this heart a safer place\nI can meet myself halfway\nAnd let this life be mine\n\n[Bridge]\nLeave the window open wide\nLet the ordinary in\nThe chipped blue mug, the late reply\nThe crooked grin beneath my skin\n\nIf tomorrow asks for more\nI'll give what I can give\nNot a perfect version\nJust a life I get to live\n\n[Final Chorus]\nI am the hands that made mistakes\nThe bent-down nails, the clean-up days\nI am the road I chose and changed\nThe yes, the no, the in-between\n\nI don't need a different name\nTo make this heart a safer place\nI can meet myself halfway\nAnd let this life be mine\n\n[Outro]\nThis is my name in my own voice\nThis is my life, and I choose it\nThis is my name in my own voice\nI choose it, I choose it"
+  },
+  {
+    "id": "1f138b2c-6c78-41cd-bf00-1bafc650a096",
+    "title": "Dressed in Blue",
+    "url": "https://suno.com/song/1f138b2c-6c78-41cd-bf00-1bafc650a096",
+    "createdAt": "2026-09-23T19:26:48.105Z",
+    "durationSeconds": 220.76,
+    "genres": [
+      "math rock",
+      "experimental rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1f138b2c-6c78-41cd-bf00-1bafc650a096.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1f138b2c-6c78-41cd-bf00-1bafc650a096.jpeg",
+    "embedUrl": "https://suno.com/embed/1f138b2c-6c78-41cd-bf00-1bafc650a096",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI know the dents along this coffee cup\nThe little cracks I tried to cover up\nI missed the train, I missed the call\nStill made it home, still stood up tall\n\n[Pre-Chorus]\nI spent years bargaining with the mirror\nMaking every honest shape look clearer\nBut the face I kept trying to improve\nWas the one that carried me through\n\n[Chorus]\nI can be here, I can be whole\nWith a restless heart and a stubborn soul\nLet the day come dressed in blue\nI don't have to become someone new\nI can be here, I can breathe\nMake a little room for what I need\nThis is my road, these are my hands\nI’ll stop apologizing for where I stand\n\n[Verse 2]\nThe rent is due, the sink is full\nA half-read book and a broken rule\nSome days I move, some days I stall\nThere’s no clean answer underneath it all\n\n[Pre-Chorus]\nI used to call the quiet failure\nCount my worth by somebody else’s measure\nNow I leave the window open wide\nLet the unfinished life stay inside\n\n[Chorus]\nI can be here, I can be whole\nWith a restless heart and a stubborn soul\nLet the day come dressed in blue\nI don't have to become someone new\nI can be here, I can breathe\nMake a little room for what I need\nThis is my road, these are my hands\nI’ll stop apologizing for where I stand\n\n[Bridge]\nIf I bend, I’m not erased\nIf I change, I’m not replaced\nEvery scar can keep its name\nEvery detour still belongs to the same\n\n[Final Chorus]\nI can be here, I can be whole\nWith a restless heart and a stubborn soul\nLet the day come dressed in blue\nI don't have to become someone new\nI can be here, I can breathe\nMake a little room for what I need\nThis is my road, these are my hands\nI’ll stop apologizing for where I stand\n\n[Outro]\nNo perfect line, no borrowed plan\nI’m learning how to live inside my hands"
+  },
+  {
+    "id": "d7503518-1674-487e-a03d-8b8e22c22985",
+    "title": "Stay Right Here",
+    "url": "https://suno.com/song/d7503518-1674-487e-a03d-8b8e22c22985",
+    "createdAt": "2026-09-23T19:26:48.105Z",
+    "durationSeconds": 240.8,
+    "genres": [
+      "Math Rock",
+      "Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d7503518-1674-487e-a03d-8b8e22c22985.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d7503518-1674-487e-a03d-8b8e22c22985.jpeg",
+    "embedUrl": "https://suno.com/embed/d7503518-1674-487e-a03d-8b8e22c22985",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI know the dents along the kitchen chair\nThe hour I wake, the clothes I wear\nThe bills stacked up beside the sink\nThe honest pause before I think\n\nI used to measure every breath\nAgainst a life I hadn't met\nNow I can name what brought me here\nAnd let it stand without the fear\n\n[Pre-Chorus]\nI don't need a cleaner story\nI don't need a borrowed face\nEvery crooked little chapter\nStill belongs inside the page\n\n[Chorus]\nThis is my life, and I can hold it\nThe weight, the want, the worn-out days\nThis is my voice, I won't control it\nTo fit the shape somebody made\nI am not late, I am not lesser\nI don't have to disappear\nI can meet myself in the mirror\nAnd stay right here\n\n[Verse 2]\nThe bus runs late, the coffee's cold\nMy hands still shake when nights unfold\nA friend calls twice, I let it ring\nThen call them back and say the thing\n\nThere are some doors I never chose\nSome roads that ended where they rose\nBut I can plant my feet and see\nThe ground is still supporting me\n\n[Pre-Chorus]\nI don't need a perfect ending\nI don't need the world to clap\nWhat I carry, what I answer\nMakes a life from where I'm at\n\n[Chorus]\nThis is my life, and I can hold it\nThe weight, the want, the worn-out days\nThis is my voice, I won't control it\nTo fit the shape somebody made\nI am not late, I am not lesser\nI don't have to disappear\nI can meet myself in the mirror\nAnd stay right here\n\n[Bridge]\nLet the old demands go quiet\nLet the polished mask come loose\nThere is mercy in the ordinary\nThere is truth in what I choose\n\nIf tomorrow asks for changes\nI can change without regret\nI can grow and keep my name here\nI can leave and still be me yet\n\n[Final Chorus]\nThis is my life, and I can hold it\nThe weight, the want, the worn-out days\nThis is my voice, I won't control it\nTo fit the shape somebody made\nI am not late, I am not lesser\nI don't have to disappear\nI can meet myself in the mirror\nAnd stay right here\n\n[Outro]\nNo borrowed face\nNo second life\nI meet myself\nAnd stay right here"
+  },
+  {
+    "id": "0cbb1d1e-1f66-4a92-b80a-864d301e999a",
+    "title": "With the Dents and Years",
+    "url": "https://suno.com/song/0cbb1d1e-1f66-4a92-b80a-864d301e999a",
+    "createdAt": "2026-09-23T19:20:29.583Z",
+    "durationSeconds": 230.8,
+    "genres": [
+      "Math Rock",
+      "Progressive Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_0cbb1d1e-1f66-4a92-b80a-864d301e999a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_0cbb1d1e-1f66-4a92-b80a-864d301e999a.jpeg",
+    "embedUrl": "https://suno.com/embed/0cbb1d1e-1f66-4a92-b80a-864d301e999a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI know the route behind my eyes\nThe worn-out turn, the compromise\nA coffee ring beside the sink\nA hundred ways to overthink\n\nI wear the hours that made me\nThe crooked seams, the history\nNo polished answer in my hands\nJust where I am, and where I stand\n\n[Pre-Chorus]\nI used to measure every breath\nAgainst a life I hadn't left\nNow I can loosen what I hold\nAnd let the ordinary unfold\n\n[Chorus]\nI am not a promise waiting\nNot a version still creating\nI can meet myself right here\nWith the dents and all the years\n\nI don't need to outrun the shape\nOf every choice I couldn't change\nThis is my life, these are my days\nI can love them as they are made\n\n[Verse 2]\nThe rent is due, the paint is thin\nThe same old doubt still wanders in\nMy plans arrive with missing parts\nMy best intentions lose their starts\n\nBut there's a plate I learned to mend\nA call I make, a hand I lend\nThe small things never asked me why\nThey simply stayed until I tried\n\n[Pre-Chorus]\nI used to call the cracks defects\nAnd hide the parts I could protect\nNow every mark can tell the truth\nA map of what I made it through\n\n[Chorus]\nI am not a promise waiting\nNot a version still creating\nI can meet myself right here\nWith the dents and all the years\n\nI don't need to outrun the shape\nOf every choice I couldn't change\nThis is my life, these are my days\nI can love them as they are made\n\n[Bridge]\nLet the unfinished morning in\nLet the quiet count as a win\nI don't have to earn my name\nBy becoming someone else again\n\n[Final Chorus]\nI am not a promise waiting\nNot a version still creating\nI can meet myself right here\nWith the dents and all the years\n\nI don't need to outrun the shape\nOf every choice I couldn't change\nThis is my life, these are my days\nI can love them as they are made\n\n[Outro]\nRight here, with the dents and years\nRight here, with the life I live"
+  },
+  {
     "id": "a97ed086-c136-4b73-9d1e-9540be2cba3d",
     "title": "I'm Afraid, Still Choosing",
     "url": "https://suno.com/song/a97ed086-c136-4b73-9d1e-9540be2cba3d",
