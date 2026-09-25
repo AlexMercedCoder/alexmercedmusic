@@ -5,16 +5,17 @@ const root = new URL('../', import.meta.url);
 const outputUrl = new URL('src/data/suno-songs.json', root);
 const coversOutputUrl = new URL('src/data/suno-covers.json', root);
 const playlistsOutputUrl = new URL('src/data/suno-playlists.json', root);
+const playlistRegistryUrl = new URL('src/data/suno-playlist-registry.json', root);
 const catalogUrl = new URL('src/data/catalog.ts', root);
 const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
 const shouldWrite = process.argv.includes('--write');
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
-const fetchPage = async (url, label) => {
+const fetchPage = async (url, label, { allowNotFound = false } = {}) => {
   for (let attempt = 0; attempt < 6; attempt += 1) {
     const response = await fetch(url, { headers: { 'user-agent': 'AlexMercedMusic catalog sync/1.0 (+https://alexmercedmusic.com)' } });
-    if (response.ok) return response;
+    if (response.ok || (allowNotFound && response.status === 404)) return response;
     if (response.status !== 429 || attempt === 5) throw new Error(`Suno ${label} failed with HTTP ${response.status}.`);
     const retryAfterSeconds = Number(response.headers.get('retry-after'));
     const delay = Number.isFinite(retryAfterSeconds) && retryAfterSeconds > 0
@@ -26,6 +27,15 @@ const fetchPage = async (url, label) => {
 };
 
 const catalogSource = await readFile(catalogUrl, 'utf8');
+let registeredPlaylistIds = [];
+let currentPlaylistRegistry = '';
+try {
+  currentPlaylistRegistry = await readFile(playlistRegistryUrl, 'utf8');
+  registeredPlaylistIds = JSON.parse(currentPlaylistRegistry);
+} catch {}
+if (!Array.isArray(registeredPlaylistIds) || registeredPlaylistIds.some((id) => typeof id !== 'string')) {
+  throw new Error('Suno playlist registry must be an array of playlist ID strings.');
+}
 const reimaginedSection = catalogSource.split('// ---------------------------------------------------------------- reimagined')[1]
   ?.split('// ---------------------------------------------------------------- electronic')[0] ?? '';
 const coverIds = new Set([...reimaginedSection.matchAll(/suno\.com\/song\/([a-f0-9-]{36})/g)].map((match) => match[1]));
@@ -94,29 +104,38 @@ const coverSongs = publicClips
   .filter((clip) => coverIds.has(clip.id))
   .map(toSong)
   .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
-const playlistSummaries = profilePlaylists
-  .filter((playlist) => playlist.is_public && !playlist.is_trashed && !playlist.is_hidden && playlist.name)
-  .map((playlist) => ({
-    id: playlist.id,
-    name: playlist.name.trim(),
-    url: `https://suno.com/playlist/${playlist.id}`,
-    imageUrl: playlist.image_url || undefined,
-    songCount: Number(playlist.song_count ?? playlist.num_total_results ?? 0),
-    durationSeconds: Number(playlist.total_duration ?? 0) || undefined,
-    description: playlist.description?.trim() || undefined,
-  }));
+const profilePlaylistIds = profilePlaylists
+  .map((playlist) => playlist.id)
+  .filter((id) => typeof id === 'string' && id);
+const playlistIds = [...new Set([...profilePlaylistIds, ...registeredPlaylistIds])];
+const serializedPlaylistRegistry = `${JSON.stringify(playlistIds, null, 2)}\n`;
 
 const playlists = [];
-for (const playlist of playlistSummaries) {
+for (const playlistId of playlistIds) {
   const trackIds = [];
   const playlistTracks = [];
   let playlistPage = 1;
-  let playlistTotal = playlist.songCount;
+  let playlistTotal = Infinity;
+  let playlist;
   while (trackIds.length < playlistTotal && playlistPage <= 100) {
-    const url = new URL(`https://studio-api.prod.suno.com/api/playlist/${playlist.id}/`);
+    const url = new URL(`https://studio-api.prod.suno.com/api/playlist/${playlistId}/`);
     url.searchParams.set('page', String(playlistPage));
-    const response = await fetchPage(url, `playlist ${playlist.name} page ${playlistPage}`);
+    const response = await fetchPage(url, `playlist ${playlistId} page ${playlistPage}`, { allowNotFound: playlistPage === 1 });
+    if (response.status === 404) break;
     const data = await response.json();
+    if (playlistPage === 1) {
+      if (data.user_handle !== 'alexmerced') throw new Error(`Unexpected owner for Suno playlist ${playlistId}.`);
+      if (!data.is_public || data.is_trashed || data.is_hidden || !data.name) break;
+      playlist = {
+        id: data.id || playlistId,
+        name: data.name.trim(),
+        url: `https://suno.com/playlist/${data.id || playlistId}`,
+        imageUrl: data.image_url || undefined,
+        songCount: Number(data.num_total_results ?? data.song_count ?? 0),
+        durationSeconds: Number(data.total_duration ?? 0) || undefined,
+        description: data.description?.trim() || undefined,
+      };
+    }
     playlistTotal = Number(data.num_total_results ?? playlistTotal);
     const pageIds = (Array.isArray(data.playlist_clips) ? data.playlist_clips : [])
       .map((item) => item.clip?.id)
@@ -130,6 +149,7 @@ for (const playlist of playlistSummaries) {
     playlistPage += 1;
     await wait(300);
   }
+  if (!playlist) continue;
   const uniqueTrackIds = [...new Set(trackIds)];
   if (uniqueTrackIds.length !== playlistTotal) {
     throw new Error(`Expected ${playlistTotal} tracks in ${playlist.name} but received ${uniqueTrackIds.length}.`);
@@ -173,7 +193,7 @@ for (const song of added) console.log(`+ ${song.title} (${song.id})`);
 for (const song of removed) console.log(`- ${song.title} (${song.id})`);
 for (const song of changed.slice(0, 20)) console.log(`~ ${song.title} (${song.id})`);
 
-if (current === serialized && currentCovers === serializedCovers && currentPlaylists === serializedPlaylists && migratedCatalogSource === catalogSource) process.exit(0);
+if (current === serialized && currentCovers === serializedCovers && currentPlaylists === serializedPlaylists && currentPlaylistRegistry === serializedPlaylistRegistry && migratedCatalogSource === catalogSource) process.exit(0);
 if (!shouldWrite) {
   console.error('Run npm run sync:suno -- --write to accept this reviewed catalog update.');
   process.exit(1);
@@ -181,8 +201,9 @@ if (!shouldWrite) {
 await writeFile(outputUrl, serialized);
 await writeFile(coversOutputUrl, serializedCovers);
 await writeFile(playlistsOutputUrl, serializedPlaylists);
+await writeFile(playlistRegistryUrl, serializedPlaylistRegistry);
 if (migratedCatalogSource !== catalogSource) await writeFile(catalogUrl, migratedCatalogSource);
-if (current !== serialized || currentCovers !== serializedCovers || currentPlaylists !== serializedPlaylists) {
+if (current !== serialized || currentCovers !== serializedCovers || currentPlaylists !== serializedPlaylists || currentPlaylistRegistry !== serializedPlaylistRegistry) {
   const modelSource = await readFile(catalogModelUrl, 'utf8');
   const astroConfigSource = await readFile(astroConfigUrl, 'utf8');
   const today = new Intl.DateTimeFormat('en-CA', { timeZone: 'America/New_York', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
