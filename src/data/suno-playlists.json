@@ -1,11 +1,122 @@
 [
   {
+    "id": "959db630-c0a1-472a-8bf2-250613adcfdf",
+    "name": "Yes, I’m Weird",
+    "url": "https://suno.com/playlist/959db630-c0a1-472a-8bf2-250613adcfdf",
+    "imageUrl": "https://cdn2.suno.ai/image_e0ee7e1f-c677-403a-b334-7c091372936a.jpeg",
+    "songCount": 11,
+    "durationSeconds": 2628.6000000000004,
+    "trackIds": [
+      "e0ee7e1f-c677-403a-b334-7c091372936a",
+      "892fb5de-ec4a-4ad2-b33c-3836cc248f5f",
+      "08d2cad0-a487-4046-aded-3aab95496f4c",
+      "afbcdf9d-7ee0-4f8a-b7ae-97f974e40b10",
+      "e47ec00c-be67-42f2-8872-4ede4287f9c4",
+      "9a980090-9da3-4844-a175-3e89ff2a7f3b",
+      "c2b3c5af-2dba-40c3-8851-049c27b03c0a",
+      "3da8c9d0-47bd-44e0-8391-f756749088fb",
+      "785f7979-4753-46e5-9549-b922aaed6b04",
+      "22003aa8-468a-445e-a17e-1fb3caaf46c5",
+      "933f2b60-7df2-460d-af80-8ac67765a201"
+    ],
+    "tracks": [
+      {
+        "id": "e0ee7e1f-c677-403a-b334-7c091372936a",
+        "title": "Weird Is My Flag",
+        "url": "https://suno.com/song/e0ee7e1f-c677-403a-b334-7c091372936a",
+        "createdAt": "2026-09-26T12:23:08.652Z",
+        "durationSeconds": 236,
+        "imageUrl": "https://cdn2.suno.ai/image_e0ee7e1f-c677-403a-b334-7c091372936a.jpeg"
+      },
+      {
+        "id": "892fb5de-ec4a-4ad2-b33c-3836cc248f5f",
+        "title": "Proud to be Weird",
+        "url": "https://suno.com/song/892fb5de-ec4a-4ad2-b33c-3836cc248f5f",
+        "createdAt": "2026-09-26T12:26:08.457Z",
+        "durationSeconds": 230.8,
+        "imageUrl": "https://cdn2.suno.ai/image_892fb5de-ec4a-4ad2-b33c-3836cc248f5f.jpeg"
+      },
+      {
+        "id": "08d2cad0-a487-4046-aded-3aab95496f4c",
+        "title": "Open Data Road",
+        "url": "https://suno.com/song/08d2cad0-a487-4046-aded-3aab95496f4c",
+        "createdAt": "2026-09-26T12:48:09.307Z",
+        "durationSeconds": 243.96,
+        "imageUrl": "https://cdn2.suno.ai/image_08d2cad0-a487-4046-aded-3aab95496f4c.jpeg"
+      },
+      {
+        "id": "afbcdf9d-7ee0-4f8a-b7ae-97f974e40b10",
+        "title": "From the Margin",
+        "url": "https://suno.com/song/afbcdf9d-7ee0-4f8a-b7ae-97f974e40b10",
+        "createdAt": "2026-09-26T12:37:26.133Z",
+        "durationSeconds": 264,
+        "imageUrl": "https://cdn2.suno.ai/image_afbcdf9d-7ee0-4f8a-b7ae-97f974e40b10.jpeg"
+      },
+      {
+        "id": "e47ec00c-be67-42f2-8872-4ede4287f9c4",
+        "title": "I See the Frame",
+        "url": "https://suno.com/song/e47ec00c-be67-42f2-8872-4ede4287f9c4",
+        "createdAt": "2026-09-26T12:37:26.134Z",
+        "durationSeconds": 212.76,
+        "imageUrl": "https://cdn2.suno.ai/image_e47ec00c-be67-42f2-8872-4ede4287f9c4.jpeg"
+      },
+      {
+        "id": "9a980090-9da3-4844-a175-3e89ff2a7f3b",
+        "title": "Jagged Crown",
+        "url": "https://suno.com/song/9a980090-9da3-4844-a175-3e89ff2a7f3b",
+        "createdAt": "2026-09-26T12:55:25.854Z",
+        "durationSeconds": 204.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a980090-9da3-4844-a175-3e89ff2a7f3b.jpeg"
+      },
+      {
+        "id": "c2b3c5af-2dba-40c3-8851-049c27b03c0a",
+        "title": "Wonderfully Odd",
+        "url": "https://suno.com/song/c2b3c5af-2dba-40c3-8851-049c27b03c0a",
+        "createdAt": "2026-09-26T12:55:25.854Z",
+        "durationSeconds": 230.4,
+        "imageUrl": "https://cdn2.suno.ai/image_c2b3c5af-2dba-40c3-8851-049c27b03c0a.jpeg"
+      },
+      {
+        "id": "3da8c9d0-47bd-44e0-8391-f756749088fb",
+        "title": "Gloriously You",
+        "url": "https://suno.com/song/3da8c9d0-47bd-44e0-8391-f756749088fb",
+        "createdAt": "2026-09-26T13:00:40.840Z",
+        "durationSeconds": 265.56,
+        "imageUrl": "https://cdn2.suno.ai/image_3da8c9d0-47bd-44e0-8391-f756749088fb.jpeg"
+      },
+      {
+        "id": "785f7979-4753-46e5-9549-b922aaed6b04",
+        "title": "A Glorious Mess",
+        "url": "https://suno.com/song/785f7979-4753-46e5-9549-b922aaed6b04",
+        "createdAt": "2026-09-26T13:14:24.085Z",
+        "durationSeconds": 256.8,
+        "imageUrl": "https://cdn2.suno.ai/image_785f7979-4753-46e5-9549-b922aaed6b04.jpeg"
+      },
+      {
+        "id": "22003aa8-468a-445e-a17e-1fb3caaf46c5",
+        "title": "Your Seams Showing Through",
+        "url": "https://suno.com/song/22003aa8-468a-445e-a17e-1fb3caaf46c5",
+        "createdAt": "2026-09-26T13:14:24.085Z",
+        "durationSeconds": 251.6,
+        "imageUrl": "https://cdn2.suno.ai/image_22003aa8-468a-445e-a17e-1fb3caaf46c5.jpeg"
+      },
+      {
+        "id": "933f2b60-7df2-460d-af80-8ac67765a201",
+        "title": "Peculiar Flag",
+        "url": "https://suno.com/song/933f2b60-7df2-460d-af80-8ac67765a201",
+        "createdAt": "2026-09-26T13:43:32.770Z",
+        "durationSeconds": 232.32,
+        "imageUrl": "https://cdn2.suno.ai/image_933f2b60-7df2-460d-af80-8ac67765a201.jpeg"
+      }
+    ]
+  },
+  {
     "id": "4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
     "name": "Forgiveness, Empathy, And Kindness",
     "url": "https://suno.com/playlist/4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
     "imageUrl": "https://cdn2.suno.ai/image_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg",
-    "songCount": 15,
-    "durationSeconds": 3728.08,
+    "songCount": 20,
+    "durationSeconds": 4872.599999999999,
     "trackIds": [
       "9958e43d-c5f4-4067-83e8-519b2a882831",
       "1da6e554-e602-4093-b3e7-9e53eb3240ea",
@@ -21,7 +132,12 @@
       "e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
       "7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
       "06e8e50a-2ff9-466e-bff3-815a4f941edb",
-      "d3cd1ed5-1269-4d50-8bbb-60fa368e9845"
+      "d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+      "ff8e62f4-505b-42a7-a6f5-8fdcf4845ef6",
+      "8e444fdb-5d16-44a0-b833-63ac7e8cd839",
+      "397b3ea5-8de6-4b01-8830-bd71548039c5",
+      "fe905fa2-1cb2-4840-9b89-11fc868640fb",
+      "6634d714-4976-4b9a-bfa3-f3dab6980cce"
     ],
     "tracks": [
       {
@@ -143,6 +259,46 @@
         "createdAt": "2026-09-26T00:35:58.355Z",
         "durationSeconds": 232.56,
         "imageUrl": "https://cdn2.suno.ai/image_d3cd1ed5-1269-4d50-8bbb-60fa368e9845.jpeg"
+      },
+      {
+        "id": "ff8e62f4-505b-42a7-a6f5-8fdcf4845ef6",
+        "title": "A Little More Room",
+        "url": "https://suno.com/song/ff8e62f4-505b-42a7-a6f5-8fdcf4845ef6",
+        "createdAt": "2026-09-26T02:51:06.606Z",
+        "durationSeconds": 251.72,
+        "imageUrl": "https://cdn2.suno.ai/image_ff8e62f4-505b-42a7-a6f5-8fdcf4845ef6.jpeg"
+      },
+      {
+        "id": "8e444fdb-5d16-44a0-b833-63ac7e8cd839",
+        "title": "Make a Little Space",
+        "url": "https://suno.com/song/8e444fdb-5d16-44a0-b833-63ac7e8cd839",
+        "createdAt": "2026-09-26T03:00:46.826Z",
+        "durationSeconds": 207.6,
+        "imageUrl": "https://cdn2.suno.ai/image_8e444fdb-5d16-44a0-b833-63ac7e8cd839.jpeg"
+      },
+      {
+        "id": "397b3ea5-8de6-4b01-8830-bd71548039c5",
+        "title": "Trying to Understand",
+        "url": "https://suno.com/song/397b3ea5-8de6-4b01-8830-bd71548039c5",
+        "createdAt": "2026-09-26T03:35:31.622Z",
+        "durationSeconds": 230.8,
+        "imageUrl": "https://cdn2.suno.ai/image_397b3ea5-8de6-4b01-8830-bd71548039c5.jpeg"
+      },
+      {
+        "id": "fe905fa2-1cb2-4840-9b89-11fc868640fb",
+        "title": "Make a Little Room",
+        "url": "https://suno.com/song/fe905fa2-1cb2-4840-9b89-11fc868640fb",
+        "createdAt": "2026-09-26T03:42:02.057Z",
+        "durationSeconds": 210,
+        "imageUrl": "https://cdn2.suno.ai/image_fe905fa2-1cb2-4840-9b89-11fc868640fb.jpeg"
+      },
+      {
+        "id": "6634d714-4976-4b9a-bfa3-f3dab6980cce",
+        "title": "Make Room at the Table",
+        "url": "https://suno.com/song/6634d714-4976-4b9a-bfa3-f3dab6980cce",
+        "createdAt": "2026-09-26T03:45:16.996Z",
+        "durationSeconds": 244.4,
+        "imageUrl": "https://cdn2.suno.ai/image_6634d714-4976-4b9a-bfa3-f3dab6980cce.jpeg"
       }
     ]
   },
@@ -967,8 +1123,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 22,
-    "durationSeconds": 5102.16,
+    "songCount": 25,
+    "durationSeconds": 5854.12,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -991,7 +1147,10 @@
       "952984df-f15b-4f5c-816d-c6525e2d36d9",
       "57f9bd70-ee7c-4643-b146-37f257316bfe",
       "6c74f13d-dbb9-4188-903a-6aadced7a52c",
-      "86967d2b-1d7a-41f6-9ea0-4dacdc89cd00"
+      "86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+      "17b5d74b-95df-43f7-8f6b-2574793c61bd",
+      "f414999b-c1a9-45c6-88ac-5fb76d0c19ee",
+      "18aed81b-3c95-4d70-b432-8bbf40a41d4e"
     ],
     "tracks": [
       {
@@ -1169,6 +1328,30 @@
         "createdAt": "2026-09-25T18:07:37.200Z",
         "durationSeconds": 265.76,
         "imageUrl": "https://cdn2.suno.ai/image_86967d2b-1d7a-41f6-9ea0-4dacdc89cd00.jpeg"
+      },
+      {
+        "id": "17b5d74b-95df-43f7-8f6b-2574793c61bd",
+        "title": "Your Open Hands",
+        "url": "https://suno.com/song/17b5d74b-95df-43f7-8f6b-2574793c61bd",
+        "createdAt": "2026-09-26T12:11:42.733Z",
+        "durationSeconds": 252,
+        "imageUrl": "https://cdn2.suno.ai/image_17b5d74b-95df-43f7-8f6b-2574793c61bd.jpeg"
+      },
+      {
+        "id": "f414999b-c1a9-45c6-88ac-5fb76d0c19ee",
+        "title": "You Looked at Me Like I",
+        "url": "https://suno.com/song/f414999b-c1a9-45c6-88ac-5fb76d0c19ee",
+        "createdAt": "2026-09-26T12:17:05.507Z",
+        "durationSeconds": 248.8,
+        "imageUrl": "https://cdn2.suno.ai/image_f414999b-c1a9-45c6-88ac-5fb76d0c19ee.jpeg"
+      },
+      {
+        "id": "18aed81b-3c95-4d70-b432-8bbf40a41d4e",
+        "title": "You Looked at Me Like I",
+        "url": "https://suno.com/song/18aed81b-3c95-4d70-b432-8bbf40a41d4e",
+        "createdAt": "2026-09-26T12:17:05.507Z",
+        "durationSeconds": 251.16,
+        "imageUrl": "https://cdn2.suno.ai/image_18aed81b-3c95-4d70-b432-8bbf40a41d4e.jpeg"
       }
     ]
   },
@@ -1897,8 +2080,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 35,
-    "durationSeconds": 7852.840000000001,
+    "songCount": 36,
+    "durationSeconds": 8062.840000000001,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -1934,7 +2117,8 @@
       "0e9334ab-09f8-4361-8886-61d65ff4a684",
       "9f742279-cfae-4791-afa3-c59211dec82d",
       "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
-      "b161b5eb-8f16-4677-b0c1-1098f7cc8a36"
+      "b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+      "59bfdeff-0ba7-434c-853a-74f4bb9af2c5"
     ],
     "tracks": [
       {
@@ -2216,6 +2400,14 @@
         "createdAt": "2026-09-25T17:40:08.042Z",
         "durationSeconds": 230.96,
         "imageUrl": "https://cdn2.suno.ai/image_b161b5eb-8f16-4677-b0c1-1098f7cc8a36.jpeg"
+      },
+      {
+        "id": "59bfdeff-0ba7-434c-853a-74f4bb9af2c5",
+        "title": "I Can't Read You",
+        "url": "https://suno.com/song/59bfdeff-0ba7-434c-853a-74f4bb9af2c5",
+        "createdAt": "2026-09-26T03:27:47.555Z",
+        "durationSeconds": 210,
+        "imageUrl": "https://cdn2.suno.ai/image_59bfdeff-0ba7-434c-853a-74f4bb9af2c5.jpeg"
       }
     ]
   },
