@@ -1,5 +1,299 @@
 [
   {
+    "id": "4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
+    "name": "Forgiveness, Empathy, And Kindness",
+    "url": "https://suno.com/playlist/4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
+    "imageUrl": "https://cdn2.suno.ai/image_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg",
+    "songCount": 15,
+    "durationSeconds": 3728.08,
+    "trackIds": [
+      "9958e43d-c5f4-4067-83e8-519b2a882831",
+      "1da6e554-e602-4093-b3e7-9e53eb3240ea",
+      "be521569-1a72-4ebf-8390-8a679ac9928b",
+      "e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+      "e76acd25-151a-4b7c-8955-1d8c616f67a4",
+      "4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+      "174af9c7-7639-4b92-a0e7-64c2334e530e",
+      "0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+      "38410051-4c1d-4090-a5be-e07a8ccdea57",
+      "37985401-d393-4136-8052-9188970e87e5",
+      "b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+      "e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+      "7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+      "06e8e50a-2ff9-466e-bff3-815a4f941edb",
+      "d3cd1ed5-1269-4d50-8bbb-60fa368e9845"
+    ],
+    "tracks": [
+      {
+        "id": "9958e43d-c5f4-4067-83e8-519b2a882831",
+        "title": "Time Begins When I Let Go",
+        "url": "https://suno.com/song/9958e43d-c5f4-4067-83e8-519b2a882831",
+        "createdAt": "2026-09-25T22:24:53.082Z",
+        "durationSeconds": 230.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg"
+      },
+      {
+        "id": "1da6e554-e602-4093-b3e7-9e53eb3240ea",
+        "title": "Lifting of the Chain",
+        "url": "https://suno.com/song/1da6e554-e602-4093-b3e7-9e53eb3240ea",
+        "createdAt": "2026-09-25T22:11:55.776Z",
+        "durationSeconds": 246,
+        "imageUrl": "https://cdn2.suno.ai/image_1da6e554-e602-4093-b3e7-9e53eb3240ea.jpeg"
+      },
+      {
+        "id": "be521569-1a72-4ebf-8390-8a679ac9928b",
+        "title": "A Little Room Between",
+        "url": "https://suno.com/song/be521569-1a72-4ebf-8390-8a679ac9928b",
+        "createdAt": "2026-09-25T22:11:55.776Z",
+        "durationSeconds": 232.8,
+        "imageUrl": "https://cdn2.suno.ai/image_be521569-1a72-4ebf-8390-8a679ac9928b.jpeg"
+      },
+      {
+        "id": "e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+        "title": "Setting Down the Stone",
+        "url": "https://suno.com/song/e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+        "createdAt": "2026-09-25T22:03:53.624Z",
+        "durationSeconds": 221.2,
+        "imageUrl": "https://cdn2.suno.ai/image_e246567c-c20a-4e78-9ea4-dff83ed91fcf.jpeg"
+      },
+      {
+        "id": "e76acd25-151a-4b7c-8955-1d8c616f67a4",
+        "title": "The Quiet Force",
+        "url": "https://suno.com/song/e76acd25-151a-4b7c-8955-1d8c616f67a4",
+        "createdAt": "2026-09-25T23:57:00.718Z",
+        "durationSeconds": 259.92,
+        "imageUrl": "https://cdn2.suno.ai/image_e76acd25-151a-4b7c-8955-1d8c616f67a4.jpeg"
+      },
+      {
+        "id": "4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+        "title": "A Quiet Revolution",
+        "url": "https://suno.com/song/4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+        "createdAt": "2026-09-25T23:57:00.718Z",
+        "durationSeconds": 294.92,
+        "imageUrl": "https://cdn2.suno.ai/image_4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4.jpeg"
+      },
+      {
+        "id": "174af9c7-7639-4b92-a0e7-64c2334e530e",
+        "title": "One Open Hand",
+        "url": "https://suno.com/song/174af9c7-7639-4b92-a0e7-64c2334e530e",
+        "createdAt": "2026-09-25T23:39:15.877Z",
+        "durationSeconds": 282.52,
+        "imageUrl": "https://cdn2.suno.ai/image_174af9c7-7639-4b92-a0e7-64c2334e530e.jpeg"
+      },
+      {
+        "id": "0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+        "title": "A Little Mercy",
+        "url": "https://suno.com/song/0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+        "createdAt": "2026-09-26T00:06:28.465Z",
+        "durationSeconds": 266.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0cae7e5a-7c6a-4d2a-abc7-44da802f25b1.jpeg"
+      },
+      {
+        "id": "38410051-4c1d-4090-a5be-e07a8ccdea57",
+        "title": "Make Room Where You Stand",
+        "url": "https://suno.com/song/38410051-4c1d-4090-a5be-e07a8ccdea57",
+        "createdAt": "2026-09-26T00:06:32.816Z",
+        "durationSeconds": 267.92,
+        "imageUrl": "https://cdn2.suno.ai/image_38410051-4c1d-4090-a5be-e07a8ccdea57.jpeg"
+      },
+      {
+        "id": "37985401-d393-4136-8052-9188970e87e5",
+        "title": "Making Room Inside the Heart",
+        "url": "https://suno.com/song/37985401-d393-4136-8052-9188970e87e5",
+        "createdAt": "2026-09-26T00:11:27.265Z",
+        "durationSeconds": 249.2,
+        "imageUrl": "https://cdn2.suno.ai/image_37985401-d393-4136-8052-9188970e87e5.jpeg"
+      },
+      {
+        "id": "b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+        "title": "Soft Heart, Strong Spirit",
+        "url": "https://suno.com/song/b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+        "createdAt": "2026-09-26T00:11:27.265Z",
+        "durationSeconds": 212.4,
+        "imageUrl": "https://cdn2.suno.ai/image_b215fd86-93e4-4a2e-8447-9c10b7ee8d0f.jpeg"
+      },
+      {
+        "id": "e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+        "title": "Steady Flame",
+        "url": "https://suno.com/song/e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+        "createdAt": "2026-09-26T00:11:34.269Z",
+        "durationSeconds": 241.96,
+        "imageUrl": "https://cdn2.suno.ai/image_e55e62e6-b2d3-417a-ad4e-666e0345c7b1.jpeg"
+      },
+      {
+        "id": "7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+        "title": "A Little Room",
+        "url": "https://suno.com/song/7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+        "createdAt": "2026-09-26T00:11:34.270Z",
+        "durationSeconds": 231.56,
+        "imageUrl": "https://cdn2.suno.ai/image_7cd50c6b-0404-41f6-975b-7c5d56f23d8a.jpeg"
+      },
+      {
+        "id": "06e8e50a-2ff9-466e-bff3-815a4f941edb",
+        "title": "Kindness Is a Door Held Wide",
+        "url": "https://suno.com/song/06e8e50a-2ff9-466e-bff3-815a4f941edb",
+        "createdAt": "2026-09-26T00:11:38.835Z",
+        "durationSeconds": 257.52,
+        "imageUrl": "https://cdn2.suno.ai/image_06e8e50a-2ff9-466e-bff3-815a4f941edb.jpeg"
+      },
+      {
+        "id": "d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+        "title": "Be Gentle",
+        "url": "https://suno.com/song/d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+        "createdAt": "2026-09-26T00:35:58.355Z",
+        "durationSeconds": 232.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d3cd1ed5-1269-4d50-8bbb-60fa368e9845.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "55d37e76-dce6-4892-82b0-ff77769638e2",
+    "name": "The Power Within",
+    "url": "https://suno.com/playlist/55d37e76-dce6-4892-82b0-ff77769638e2",
+    "imageUrl": "https://cdn2.suno.ai/image_4c9d027c-a708-4107-af33-3f9c599dd612.jpeg",
+    "songCount": 15,
+    "durationSeconds": 3408.6800000000003,
+    "trackIds": [
+      "4c9d027c-a708-4107-af33-3f9c599dd612",
+      "c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+      "2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+      "eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+      "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+      "895a3fc8-62cb-485b-8569-49b167e2ea10",
+      "b0063c95-259f-481d-b8a6-70ac731b3983",
+      "b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+      "ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+      "a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+      "f02b6ada-51a0-4fd9-94bc-6294c226296e",
+      "39ed340a-7475-47d7-acf3-83c962a6153c",
+      "f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+      "4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+      "64251744-85f8-4f00-9a8d-5456bf214234"
+    ],
+    "tracks": [
+      {
+        "id": "4c9d027c-a708-4107-af33-3f9c599dd612",
+        "title": "One Brave Choice",
+        "url": "https://suno.com/song/4c9d027c-a708-4107-af33-3f9c599dd612",
+        "createdAt": "2026-09-25T16:18:51.430Z",
+        "durationSeconds": 212,
+        "imageUrl": "https://cdn2.suno.ai/image_4c9d027c-a708-4107-af33-3f9c599dd612.jpeg"
+      },
+      {
+        "id": "c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+        "title": "Turn the Levers",
+        "url": "https://suno.com/song/c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+        "createdAt": "2026-09-25T16:18:57.781Z",
+        "durationSeconds": 220.76,
+        "imageUrl": "https://cdn2.suno.ai/image_c7497dcf-e1aa-400a-9e86-dae7252d30ff.jpeg"
+      },
+      {
+        "id": "2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+        "title": "Work With the Wind",
+        "url": "https://suno.com/song/2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+        "createdAt": "2026-09-25T16:29:54.123Z",
+        "durationSeconds": 239.96,
+        "imageUrl": "https://cdn2.suno.ai/image_2b430e4c-7d82-41ce-9a92-9426422b4ce6.jpeg"
+      },
+      {
+        "id": "eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+        "title": "Hope in My Hands",
+        "url": "https://suno.com/song/eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+        "createdAt": "2026-09-25T16:47:39.811Z",
+        "durationSeconds": 188.8,
+        "imageUrl": "https://cdn2.suno.ai/image_eb35bd6f-c24f-4e52-b730-43d2a63186f8.jpeg"
+      },
+      {
+        "id": "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+        "title": "Turn What You Can Turn",
+        "url": "https://suno.com/song/d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+        "createdAt": "2026-09-25T16:50:55.613Z",
+        "durationSeconds": 207.16,
+        "imageUrl": "https://cdn2.suno.ai/image_d6a6fe47-f447-44de-81d8-8a6b1a6f47d6.jpeg"
+      },
+      {
+        "id": "895a3fc8-62cb-485b-8569-49b167e2ea10",
+        "title": "One Small Lever",
+        "url": "https://suno.com/song/895a3fc8-62cb-485b-8569-49b167e2ea10",
+        "createdAt": "2026-09-25T16:58:26.470Z",
+        "durationSeconds": 196,
+        "imageUrl": "https://cdn2.suno.ai/image_895a3fc8-62cb-485b-8569-49b167e2ea10.jpeg"
+      },
+      {
+        "id": "b0063c95-259f-481d-b8a6-70ac731b3983",
+        "title": "Turn the Levers",
+        "url": "https://suno.com/song/b0063c95-259f-481d-b8a6-70ac731b3983",
+        "createdAt": "2026-09-25T17:07:33.256Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_b0063c95-259f-481d-b8a6-70ac731b3983.jpeg"
+      },
+      {
+        "id": "b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+        "title": "Board by Board",
+        "url": "https://suno.com/song/b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+        "createdAt": "2026-09-25T17:40:08.042Z",
+        "durationSeconds": 230.96,
+        "imageUrl": "https://cdn2.suno.ai/image_b161b5eb-8f16-4677-b0c1-1098f7cc8a36.jpeg"
+      },
+      {
+        "id": "ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+        "title": "Quiet Lightning",
+        "url": "https://suno.com/song/ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+        "createdAt": "2026-09-25T18:08:56.767Z",
+        "durationSeconds": 255.96,
+        "imageUrl": "https://cdn2.suno.ai/image_ba550ced-3a1f-47b2-a9e5-72b01ed2283a.jpeg"
+      },
+      {
+        "id": "a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+        "title": "Take Your Life Into Your Arms",
+        "url": "https://suno.com/song/a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+        "createdAt": "2026-09-25T18:44:47.648Z",
+        "durationSeconds": 238,
+        "imageUrl": "https://cdn2.suno.ai/image_a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe.jpeg"
+      },
+      {
+        "id": "f02b6ada-51a0-4fd9-94bc-6294c226296e",
+        "title": "Home Beneath My Skin",
+        "url": "https://suno.com/song/f02b6ada-51a0-4fd9-94bc-6294c226296e",
+        "createdAt": "2026-09-25T19:03:45.049Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_f02b6ada-51a0-4fd9-94bc-6294c226296e.jpeg"
+      },
+      {
+        "id": "39ed340a-7475-47d7-acf3-83c962a6153c",
+        "title": "A Little Room",
+        "url": "https://suno.com/song/39ed340a-7475-47d7-acf3-83c962a6153c",
+        "createdAt": "2026-09-25T19:05:11.335Z",
+        "durationSeconds": 252.4,
+        "imageUrl": "https://cdn2.suno.ai/image_39ed340a-7475-47d7-acf3-83c962a6153c.jpeg"
+      },
+      {
+        "id": "f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+        "title": "Learning How to Stay",
+        "url": "https://suno.com/song/f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+        "createdAt": "2026-09-25T19:21:22.639Z",
+        "durationSeconds": 221.96,
+        "imageUrl": "https://cdn2.suno.ai/image_f0490013-69dc-4ef3-9f6f-c62b1bfcf723.jpeg"
+      },
+      {
+        "id": "4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+        "title": "Growing Where I Am",
+        "url": "https://suno.com/song/4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+        "createdAt": "2026-09-25T19:21:16.434Z",
+        "durationSeconds": 236.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4570e51d-dc66-4a6a-9b70-5e0e12ffde79.jpeg"
+      },
+      {
+        "id": "64251744-85f8-4f00-9a8d-5456bf214234",
+        "title": "Someone Worth Becoming",
+        "url": "https://suno.com/song/64251744-85f8-4f00-9a8d-5456bf214234",
+        "createdAt": "2026-09-25T19:05:11.335Z",
+        "durationSeconds": 273.52,
+        "imageUrl": "https://cdn2.suno.ai/image_64251744-85f8-4f00-9a8d-5456bf214234.jpeg"
+      }
+    ]
+  },
+  {
     "id": "ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
     "name": "I’m Secure That I Know My Insecurities",
     "url": "https://suno.com/playlist/ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
@@ -673,8 +967,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 20,
-    "durationSeconds": 4576.44,
+    "songCount": 22,
+    "durationSeconds": 5102.16,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -695,7 +989,9 @@
       "073770cb-653a-4607-8cf7-ff1fde6a09a7",
       "2759fce9-d819-4b6d-9dd5-8a2c1a8be6c5",
       "952984df-f15b-4f5c-816d-c6525e2d36d9",
-      "57f9bd70-ee7c-4643-b146-37f257316bfe"
+      "57f9bd70-ee7c-4643-b146-37f257316bfe",
+      "6c74f13d-dbb9-4188-903a-6aadced7a52c",
+      "86967d2b-1d7a-41f6-9ea0-4dacdc89cd00"
     ],
     "tracks": [
       {
@@ -857,6 +1153,22 @@
         "createdAt": "2026-09-24T20:41:14.101Z",
         "durationSeconds": 247.2,
         "imageUrl": "https://cdn2.suno.ai/image_57f9bd70-ee7c-4643-b146-37f257316bfe.jpeg"
+      },
+      {
+        "id": "6c74f13d-dbb9-4188-903a-6aadced7a52c",
+        "title": "What I Carry For You",
+        "url": "https://suno.com/song/6c74f13d-dbb9-4188-903a-6aadced7a52c",
+        "createdAt": "2026-09-25T17:58:03.847Z",
+        "durationSeconds": 259.96,
+        "imageUrl": "https://cdn2.suno.ai/image_6c74f13d-dbb9-4188-903a-6aadced7a52c.jpeg"
+      },
+      {
+        "id": "86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+        "title": "I Carry You",
+        "url": "https://suno.com/song/86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+        "createdAt": "2026-09-25T18:07:37.200Z",
+        "durationSeconds": 265.76,
+        "imageUrl": "https://cdn2.suno.ai/image_86967d2b-1d7a-41f6-9ea0-4dacdc89cd00.jpeg"
       }
     ]
   },
@@ -1585,8 +1897,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 33,
-    "durationSeconds": 7414.720000000001,
+    "songCount": 35,
+    "durationSeconds": 7852.840000000001,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -1620,7 +1932,9 @@
       "b8f61583-946b-4481-b8eb-17d44678926b",
       "fbacaf37-750e-4a67-8d3f-b55c830504d4",
       "0e9334ab-09f8-4361-8886-61d65ff4a684",
-      "9f742279-cfae-4791-afa3-c59211dec82d"
+      "9f742279-cfae-4791-afa3-c59211dec82d",
+      "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+      "b161b5eb-8f16-4677-b0c1-1098f7cc8a36"
     ],
     "tracks": [
       {
@@ -1886,6 +2200,22 @@
         "createdAt": "2026-09-24T17:41:18.053Z",
         "durationSeconds": 309.96,
         "imageUrl": "https://cdn2.suno.ai/image_9f742279-cfae-4791-afa3-c59211dec82d.jpeg"
+      },
+      {
+        "id": "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+        "title": "Turn What You Can Turn",
+        "url": "https://suno.com/song/d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+        "createdAt": "2026-09-25T16:50:55.613Z",
+        "durationSeconds": 207.16,
+        "imageUrl": "https://cdn2.suno.ai/image_d6a6fe47-f447-44de-81d8-8a6b1a6f47d6.jpeg"
+      },
+      {
+        "id": "b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+        "title": "Board by Board",
+        "url": "https://suno.com/song/b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+        "createdAt": "2026-09-25T17:40:08.042Z",
+        "durationSeconds": 230.96,
+        "imageUrl": "https://cdn2.suno.ai/image_b161b5eb-8f16-4677-b0c1-1098f7cc8a36.jpeg"
       }
     ]
   },

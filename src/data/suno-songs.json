@@ -1,5 +1,586 @@
 [
   {
+    "id": "d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+    "title": "Be Gentle",
+    "url": "https://suno.com/song/d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+    "createdAt": "2026-09-26T00:35:58.355Z",
+    "durationSeconds": 232.56,
+    "genres": [
+      "IDM",
+      "Prog Rock",
+      "Math Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d3cd1ed5-1269-4d50-8bbb-60fa368e9845.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d3cd1ed5-1269-4d50-8bbb-60fa368e9845.jpeg",
+    "embedUrl": "https://suno.com/embed/d3cd1ed5-1269-4d50-8bbb-60fa368e9845",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the chair\nRain running silver from the seams\nI made a place and poured the tea\nNo need to tell me what it means\n\n[Pre-Chorus]\nI could count the words that hurt\nKeep them folded in a drawer\nOr meet you where the silence ends\nAnd ask what we are waiting for\n\n[Chorus]\nBe gentle when the day goes wrong\nMake room for what we cannot see\nA little grace can carry us\nFrom who we were to who we’ll be\nI’ll hear the part you couldn’t say\nYou’ll let my rough edges be\nWe don’t have to win this moment\nWe can choose to set it free\n\n[Verse 2]\nYour hands were shaking by the sink\nThe old blue cup had lost its handle\nYou told the truth without a shield\nI watched the stubborn anger settle\n\n[Pre-Chorus]\nNot every wound will close at once\nNot every sorry makes it right\nBut we can start with honest words\nAnd leave a lamp on through the night\n\n[Chorus]\nBe gentle when the day goes wrong\nMake room for what we cannot see\nA little grace can carry us\nFrom who we were to who we’ll be\nI’ll hear the part you couldn’t say\nYou’ll let my rough edges be\nWe don’t have to win this moment\nWe can choose to set it free\n\n[Bridge]\nForgiving isn’t calling harm a kindness\nIt’s laying down the stone I carried here\nIt’s keeping what the lesson gave me\nAnd making space for something else to grow\n\n[Final Chorus]\nBe gentle when the day goes wrong\nMake room for what we cannot see\nA little grace can carry us\nFrom who we were to who we’ll be\nI’ll hear the part you couldn’t say\nYou’ll let my rough edges be\nWe don’t have to win this moment\nWe can choose to set it free\nWe can choose to set it free"
+  },
+  {
+    "id": "a07587a1-7a8b-4d78-8a02-aa4c063a6131",
+    "title": "Leave a Door Unclosed",
+    "url": "https://suno.com/song/a07587a1-7a8b-4d78-8a02-aa4c063a6131",
+    "createdAt": "2026-09-26T00:33:42.285Z",
+    "durationSeconds": 211.96,
+    "genres": [
+      "IDM",
+      "art-pop",
+      "prog-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a07587a1-7a8b-4d78-8a02-aa4c063a6131.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a07587a1-7a8b-4d78-8a02-aa4c063a6131.jpeg",
+    "embedUrl": "https://suno.com/embed/a07587a1-7a8b-4d78-8a02-aa4c063a6131",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the stairs\nRain ticking softly on the sleeves\nI moved the kettle from the edge\nAnd let the room take time to breathe\n\nYou said the words came out too sharp\nI saw your hands begin to shake\nI poured the tea, sat down with you\nThere was no prize for being right\n\n[Pre-Chorus]\nA small act can loosen a knot\nA little room can change the air\n\n[Chorus]\nBe kind when the day turns difficult\nStay close when the truth is hard to hear\nWe all carry things we cannot show\nForgive, and leave a door unclosed\n\n[Verse 2]\nThe bus ran late; a stranger smiled\nAnd gave their seat to someone tired\nNo grand announcement, no applause\nJust one more hand beneath the load\n\nI kept your note inside a book\nThe ink had blurred along the fold\nI learned that sorry takes its time\nAnd trust returns in things we do\n\n[Pre-Chorus]\nA gentle word can hold its ground\nA patient heart can turn us round\n\n[Chorus]\nBe kind when the day turns difficult\nStay close when the truth is hard to hear\nWe all carry things we cannot show\nForgive, and leave a door unclosed\n\n[Bridge]\nI won't call hurt a thing undone\nOr ask the wound to disappear\nI'll meet you where the mending starts\nWith open hands and honest ears\n\n[Final Chorus]\nBe kind when the day turns difficult\nStay close when the truth is hard to hear\nWe all carry things we cannot show\nForgive, and leave a door unclosed\n\nBe kind, and make a little room\nStay close; let understanding grow\nWe all have more to learn and mend\nForgive, and try again, my friend\n\n[Outro]\nThe kettle cools beside the stairs\nYour coat is dry; you're still here"
+  },
+  {
+    "id": "06e8e50a-2ff9-466e-bff3-815a4f941edb",
+    "title": "Kindness Is a Door Held Wide",
+    "url": "https://suno.com/song/06e8e50a-2ff9-466e-bff3-815a4f941edb",
+    "createdAt": "2026-09-26T00:11:38.835Z",
+    "durationSeconds": 257.52,
+    "genres": [
+      "IDM",
+      "Phonk",
+      "Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_06e8e50a-2ff9-466e-bff3-815a4f941edb.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_06e8e50a-2ff9-466e-bff3-815a4f941edb.jpeg",
+    "embedUrl": "https://suno.com/embed/06e8e50a-2ff9-466e-bff3-815a4f941edb",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat on the back of my chair\nRain on the cuffs, cold hands in your hair\nI had a sharp word already prepared\nThen saw you were tired, and let it stay there\n\nI passed you the mug with the chipped blue rim\nYou told me the truth; I listened through it\nNo perfect answer, no clever defense\nJust room for the hurt to loosen its grip\n\n[Pre-Chorus]\nA softer hand can stop the fall\nA little patience makes room for it all\n\n[Chorus]\nKindness is a door held wide\nEmpathy, the step inside\nForgiveness doesn’t say it’s fine\nIt gives tomorrow a place to start\nI can meet you where you are\nYou can meet me with an open heart\n\n[Verse 2]\nYou missed my call on the night I was scared\nI made up a story and carried it there\nNext morning you came with the truth in your eyes\nI heard what you meant, not just how it arrived\n\nWe set down the blame like a bag on the floor\nThere’s more to us than the worst thing we said\nI won’t erase what the hurt put us through\nI’ll choose what I do with the days still ahead\n\n[Pre-Chorus]\nA softer hand can stop the fall\nA little patience makes room for it all\n\n[Chorus]\nKindness is a door held wide\nEmpathy, the step inside\nForgiveness doesn’t say it’s fine\nIt gives tomorrow a place to start\nI can meet you where you are\nYou can meet me with an open heart\n\n[Bridge]\nNot every wound is mended in a day\nSome need the truth, some need a little space\nBut when you’re ready, I will hear you through\nAnd when I stumble, I’ll make room for you\n\n[Final Chorus]\nKindness is a door held wide\nEmpathy, the step inside\nForgiveness doesn’t say it’s fine\nIt gives tomorrow a place to start\nI can meet you where you are\nYou can meet me with an open heart\n\nKindness is a door held wide\nWe can begin on the other side"
+  },
+  {
+    "id": "7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+    "title": "A Little Room",
+    "url": "https://suno.com/song/7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+    "createdAt": "2026-09-26T00:11:34.270Z",
+    "durationSeconds": 231.56,
+    "genres": [
+      "IDM",
+      "Phonk",
+      "Melodic Glitch Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_7cd50c6b-0404-41f6-975b-7c5d56f23d8a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_7cd50c6b-0404-41f6-975b-7c5d56f23d8a.jpeg",
+    "embedUrl": "https://suno.com/embed/7cd50c6b-0404-41f6-975b-7c5d56f23d8a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou stayed beside me in the clinic hall\nWhile the vending machine ate my last coin\nYou found a joke in the humming lights\nAnd waited till I could speak\n\n[Pre-Chorus]\nYou didn't rush to fix the hurt\nYou let the whole account be heard\nA chair pulled close, a patient hand\nCan make a stranger understand\n\n[Chorus]\nKindness is a door left open\nEmpathy, a place to land\nForgiveness doesn't make it nothing\nIt means I loosen my clenched hand\nWe can name the harm and still choose\nWhat we carry from this day\nA little room for one another\nCan change the way we walk away\n\n[Verse 2]\nI said the thing that cut too deep\nYou took a breath and told me why\nI didn't dress it up as anger\nI let the apology arrive\n\n[Pre-Chorus]\nNo clean erase, no easy claim\nI heard the weight behind your name\nWe took it slowly, spoke it plain\nAnd made a path through what remained\n\n[Chorus]\nKindness is a door left open\nEmpathy, a place to land\nForgiveness doesn't make it nothing\nIt means I loosen my clenched hand\nWe can name the harm and still choose\nWhat we carry from this day\nA little room for one another\nCan change the way we walk away\n\n[Bridge]\nThe soup went cold between us\nThe truth was hard to say\nYou kept your coat there on the chair\nI didn't turn away\n\n[Final Chorus]\nKindness is a door left open\nEmpathy, a place to land\nForgiveness doesn't make it nothing\nIt means I loosen my clenched hand\nWe can name the harm and still choose\nWhat we carry from this day\nA little room for one another\nCan change the way we walk away\n\n[Outro]\nLeave a chair beside the table\nLeave the truth where both can see\nMake a little room for healing\nMake a little room for me"
+  },
+  {
+    "id": "e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+    "title": "Steady Flame",
+    "url": "https://suno.com/song/e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+    "createdAt": "2026-09-26T00:11:34.269Z",
+    "durationSeconds": 241.96,
+    "genres": [
+      "IDM",
+      "Phonk",
+      "Melodic Glitch Prog Rock",
+      "Riddim",
+      "Math Rock",
+      "Arena Rock",
+      "Art Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e55e62e6-b2d3-417a-ad4e-666e0345c7b1.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e55e62e6-b2d3-417a-ad4e-666e0345c7b1.jpeg",
+    "embedUrl": "https://suno.com/embed/e55e62e6-b2d3-417a-ad4e-666e0345c7b1",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWhen the walls begin to rise\nAnd the harsh words fill the space\nI can choose to soften eyes\nFind the grace in every face\nEvery sharp edge can be blunted\nEvery open hand can hold\nWhat a bitter heart has wanted\nMore than glitter, more than gold\n\n[Pre-Chorus]\nWe are bound by fragile threads\nWalking through the heavy light\nListen to what goes unsaid\nTurn the darkness into sight\n\n[Chorus]\nKindness is the steady flame\nEmpathy the bridge we build\nWhen we name each other's pain\nEvery empty room is filled\nAnd forgiveness clears the path\nBreaks the chains of yesterday\nTrading anger, trading wrath\nFor a better way to stay\n\n[Verse 2]\nWhen the wrong has left a mark\nAnd the burden feels too deep\nLet a spark invade the dark\nThere's a promise we can keep\nNot to strike back at the shadows\nNot to answer spite with spite\nWalking through the quiet meadows\nLeading each other to the light\n\n[Bridge]\nIt takes a quiet courage\nTo put down the heavy shield\nTo look beyond the damage\nAnd let the heart be healed\nForgiving isn't losing\nIt's letting go the weight\nIt's consciously choosing\nTo open up the gate\n\n[Chorus]\nKindness is the steady flame\nEmpathy the bridge we build\nWhen we name each other's pain\nEvery empty room is filled\nAnd forgiveness clears the path\nBreaks the chains of yesterday\nTrading anger, trading wrath\nFor a better way to stay\n\n[Outro]\nA gentle word, an open hand\nA light across the open land\nEmpathy, forgiveness, grace\nIn every heart, in every place"
+  },
+  {
+    "id": "37985401-d393-4136-8052-9188970e87e5",
+    "title": "Making Room Inside the Heart",
+    "url": "https://suno.com/song/37985401-d393-4136-8052-9188970e87e5",
+    "createdAt": "2026-09-26T00:11:27.265Z",
+    "durationSeconds": 249.2,
+    "genres": [
+      "IDM",
+      "Phonk",
+      "Math Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_37985401-d393-4136-8052-9188970e87e5.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_37985401-d393-4136-8052-9188970e87e5.jpeg",
+    "embedUrl": "https://suno.com/embed/37985401-d393-4136-8052-9188970e87e5",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the stairs\nRain ticking softly through the seams\nI saw the words you couldn't say\nAnd set the kettle on for tea\n\nI used to keep each careless cut\nLike little stones beneath my tongue\nBut holding on made every room\nA place where neither of us belonged\n\n[Pre-Chorus]\nSo I made room for what you meant\nAnd what my hurt had made of it\nA breath between the blow and blame\nA hand unclenched, a softer name\n\n[Chorus]\nBe kind when the answer comes out wrong\nStay near when the brave face doesn't last\nWe are more than what we did at our worst\nLet the hard word lose its hold at last\nI can hear you, you can hear me\nWe can mend what pride pulled apart\nForgiveness isn't saying it was nothing\nIt's making room inside the heart\n\n[Verse 2]\nYour note was folded twice in four\nBeside the chipped blue coffee cup\nYou wrote, “I should have stayed and listened”\nI wrote back, “I can meet you halfway up”\n\nNo grand promise, no clean slate\nJust showing up and telling truth\nA ride across town, your mother's soup\nA little patience, practiced proof\n\n[Pre-Chorus]\nWe named the fear beneath the fight\nWe let the silence speak its part\nA breath between the blow and blame\nA hand unclenched, a softer name\n\n[Chorus]\nBe kind when the answer comes out wrong\nStay near when the brave face doesn't last\nWe are more than what we did at our worst\nLet the hard word lose its hold at last\nI can hear you, you can hear me\nWe can mend what pride pulled apart\nForgiveness isn't saying it was nothing\nIt's making room inside the heart\n\n[Bridge]\nSome wounds need time and honest space\nSome doors should close to keep us safe\nBut mercy doesn't ask us to pretend\nIt lets the truth be told, then asks what can be mended\n\nAnd when I fail you, say it plain\nI'll listen past the sting of shame\nNo perfect words, no spotless start\nJust care returning, part by part\n\n[Final Chorus]\nBe kind when the answer comes out wrong\nStay near when the brave face doesn't last\nWe are more than what we did at our worst\nLet the hard word lose its hold at last\nI can hear you, you can hear me\nWe can mend what pride pulled apart\nForgiveness isn't saying it was nothing\nIt's making room inside the heart\n\n[Outro]\nThe chipped blue cup is still here\nYour coat is dry beside the stairs\nWe don't erase the days behind us\nWe choose how we meet each other there"
+  },
+  {
+    "id": "b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+    "title": "Soft Heart, Strong Spirit",
+    "url": "https://suno.com/song/b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+    "createdAt": "2026-09-26T00:11:27.265Z",
+    "durationSeconds": 212.4,
+    "genres": [
+      "IDM",
+      "Phonk",
+      "Melodic Glitch Prog Rock",
+      "Riddim",
+      "Math Rock",
+      "Arena Rock",
+      "Art Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b215fd86-93e4-4a2e-8447-9c10b7ee8d0f.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b215fd86-93e4-4a2e-8447-9c10b7ee8d0f.jpeg",
+    "embedUrl": "https://suno.com/embed/b215fd86-93e4-4a2e-8447-9c10b7ee8d0f",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nClenched fists loosen under quiet skies\nWe put down the heavy armor of our pride\nListening close when the anger starts to speak\nFinding where the foundation has grown weak\n\n[Pre-Chorus]\nIt costs nothing to soften up the tone\nTo offer a hand when somebody stands alone\n\n[Chorus]\nKindness is the current beneath the dark tide\nEmpathy opens every room we keep inside\nForgiveness breaks the chain and sets us free\nTurning what was broken into harmony\n\n[Verse 2]\nWalking in the shoes of a stranger on the street\nSeeing every heartbeat in the people that we meet\nHolding back the judgment, letting mercy lead\nPlanting small seeds for a bigger human need\n\n[Bridge]\nLet the past rest, leave the heavy burden down\nThere is peace inside when no one claims the crown\nWe heal ourselves when we choose to heal a friend\nThis is where the ancient circle learns to mend\n\n[Chorus]\nKindness is the current beneath the dark tide\nEmpathy opens every room we keep inside\nForgiveness breaks the chain and sets us free\nTurning what was broken into harmony\n\n[Outro]\nSoft heart, strong spirit\nLet the quiet peace remain\nSoft heart, strong spirit\nBreaking through the rain"
+  },
+  {
+    "id": "38410051-4c1d-4090-a5be-e07a8ccdea57",
+    "title": "Make Room Where You Stand",
+    "url": "https://suno.com/song/38410051-4c1d-4090-a5be-e07a8ccdea57",
+    "createdAt": "2026-09-26T00:06:32.816Z",
+    "durationSeconds": 267.92,
+    "genres": [
+      "Glitch Prog Rock",
+      "Phonk",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_38410051-4c1d-4090-a5be-e07a8ccdea57.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_38410051-4c1d-4090-a5be-e07a8ccdea57.jpeg",
+    "embedUrl": "https://suno.com/embed/38410051-4c1d-4090-a5be-e07a8ccdea57",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou held the door when I was late\nI barely looked up from my day\nThen watched you carry all that weight\nAs if your hurt could wait away\n\nI learned your name beside the sink\nA paper cup, a tired smile\nYou asked me what I really think\nI stayed and listened for a while\n\n[Pre-Chorus]\nOne open hand can interrupt\nThe old reply we almost choose\nA little room, a softer word\nCan give a heart a way through\n\n[Chorus]\nBe kind when you can\nMake room where you stand\nForgive what we can\nAnd reach for each other again\nA small mercy passed hand to hand\nCan travel farther than we planned\nBe kind when you can\nThe world turns gentler where we stand\n\n[Verse 2]\nYou called your brother after years\nNo grand speech, just “Are you home?”\nHe let the silence hold the fear\nThen said, “I thought I was alone”\n\nWe miss the mark, we bruise, we mend\nWe make a mess of what we mean\nBut choosing not to wound again\nCan change the shape of everything\n\n[Pre-Chorus]\nOne open hand can interrupt\nThe old reply we almost choose\nA little room, a softer word\nCan give a heart a way through\n\n[Chorus]\nBe kind when you can\nMake room where you stand\nForgive what we can\nAnd reach for each other again\nA small mercy passed hand to hand\nCan travel farther than we planned\nBe kind when you can\nThe world turns gentler where we stand\n\n[Bridge]\nNot every wrong can disappear\nNot every bond returns the same\nBut we can face what happened here\nWithout reducing you to blame\n\nA meal left warm, a ride back home\nA truth said plainly, held with care\nThe smallest choices, freely shown\nCan make a wider world from here\n\n[Final Chorus]\nBe kind when you can\nMake room where you stand\nForgive what we can\nAnd reach for each other again\nA small mercy passed hand to hand\nCan travel farther than we planned\nBe kind when you can\nThe world turns gentler where we stand\n\n[Outro]\nOne open hand\nOne honest start\nA softer way\nCan change a heart"
+  },
+  {
+    "id": "0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+    "title": "A Little Mercy",
+    "url": "https://suno.com/song/0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+    "createdAt": "2026-09-26T00:06:28.465Z",
+    "durationSeconds": 266.8,
+    "genres": [
+      "Glitch Prog Rock",
+      "IDM",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_0cae7e5a-7c6a-4d2a-abc7-44da802f25b1.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_0cae7e5a-7c6a-4d2a-abc7-44da802f25b1.jpeg",
+    "embedUrl": "https://suno.com/embed/0cae7e5a-7c6a-4d2a-abc7-44da802f25b1",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat\nAcross my chair\nI saw the rain\nStill in your hair\nYou said too much\nI said too little\nWe stood between\nThe truth and brittle\n\n[Pre-Chorus]\nI could keep score\nAnd lock the door\nOr ask what hurt\nBeneath the words\n\n[Chorus]\nA little mercy changes what we see\nA little room for you, a little room for me\nWhen I forgive, the hard ground turns to seed\nOne kinder choice can travel farther than we dream\n\n[Verse 2]\nYou missed the call\nI took it wrong\nI built a wall\nAnd held it long\nThen you came back\nWith tired eyes\nNo grand excuse\nJust honest tries\n\n[Pre-Chorus]\nI let you speak\nI let it land\nI do not have to understand\nTo take your hand\n\n[Chorus]\nA little mercy changes what we see\nA little room for you, a little room for me\nWhen I forgive, the hard ground turns to seed\nOne kinder choice can travel farther than we dream\n\n[Bridge]\nNot every wound disappears\nNot every trust returns\nBut we can choose the next small thing\nAnd let the next heart learn\nA softer answer, passed along\nA seat pulled close, a wrong made right\nThe smallest kindness leaves our hands\nAnd keeps on moving through the night\n\n[Final Chorus]\nA little mercy changes what we see\nA little room for you, a little room for me\nWhen we forgive, the hard ground turns to seed\nOne kinder choice can travel farther than we dream\nA little mercy, a little room\nA better world begins with what we choose"
+  },
+  {
+    "id": "4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+    "title": "A Quiet Revolution",
+    "url": "https://suno.com/song/4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+    "createdAt": "2026-09-25T23:57:00.718Z",
+    "durationSeconds": 294.92,
+    "genres": [
+      "Glitch Prog Rock",
+      "IDM",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4.jpeg",
+    "embedUrl": "https://suno.com/embed/4d1f2c7d-acb2-4962-8a02-7eac48fa7ec4",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWe guard the walls we built out of our fear\nA quiet word is hard to find or hear\nWe count the debts and carry every spark\nOf older fires burning in the dark\nBut holding tight only keeps us in the cold\nA heavy weight that's getting far too old\n\n[Pre-Chorus]\nBut there's a crack where the light is breaking through\nAn open hand is a different kind of view\nBefore the anger takes another turn\nWe have a lesson we can choose to learn\n\n[Chorus]\nChoose to be kind, let the armor fall away\nForgive the words that we didn't mean to say\nWith empathy we find a brand new start\nA quiet revolution of the heart\nIt changes everything, it changes you and me\nThe simplest choice can set the whole world free\n\n[Verse 2]\nWe see the bruise and recognize the pain\nNo longer needing someone else to blame\nA gentle look can quiet down the storm\nWithin the silence, something starts to warm\nWe find our strength in standing side by side\nNo longer driven by a fragile pride\n\n[Bridge]\nIt starts inside, a whisper in the crowd\nA softer wave that rises deep and loud\nNot backing down, but stepping into grace\nTo find ourselves within another's face\n\n[Chorus]\nChoose to be kind, let the armor fall away\nForgive the words that we didn't mean to say\nWith empathy we find a brand new start\nA quiet revolution of the heart\nIt changes everything, it changes you and me\nThe simplest choice can set the whole world free\n\n[Outro]\nJust choose to be kind\nLet the healing start\nA revolution of the heart\n[Instrumental Outro]\n[Fade Out]"
+  },
+  {
+    "id": "e76acd25-151a-4b7c-8955-1d8c616f67a4",
+    "title": "The Quiet Force",
+    "url": "https://suno.com/song/e76acd25-151a-4b7c-8955-1d8c616f67a4",
+    "createdAt": "2026-09-25T23:57:00.718Z",
+    "durationSeconds": 259.92,
+    "genres": [
+      "Glitch Prog Rock",
+      "IDM",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e76acd25-151a-4b7c-8955-1d8c616f67a4.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e76acd25-151a-4b7c-8955-1d8c616f67a4.jpeg",
+    "embedUrl": "https://suno.com/embed/e76acd25-151a-4b7c-8955-1d8c616f67a4",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWe draw our lines on hard-paved ground\nCounting every debt and fault\nHolding tight to what we found\nIn a world that turns to salt\nBut a single hand held open wide\nCan break the cycle, shift the tide\n\n[Pre-Chorus]\nSoft words in a storm of noise\nA quiet choice to put down anger\nListening to distant voices\nTurning every stranger closer\n\n[Chorus]\nKindness is the quiet force\nThat shifts the mountains off our chest\nForgiveness takes a gentler course\nTo give the restless heart a rest\nIf we choose empathy today\nWe light a world a different way\n\n[Verse 2]\nIt takes no strength to shut the door\nOr leave a broken thread untied\nIt takes a spark to balance scores\nBy stepping to the other side\nTo hear the grief behind the shield\nAnd watch the stubborn places yield\n\n[Pre-Chorus]\nSoft words in a storm of noise\nA quiet choice to put down anger\nListening to distant voices\nTurning every stranger closer\n\n[Chorus]\nKindness is the quiet force\nThat shifts the mountains off our chest\nForgiveness takes a gentler course\nTo give the restless heart a rest\nIf we choose empathy today\nWe light a world a different way\n\n[Bridge]\nNot every wound requires a battle\nNot every shadow needs a fight\nWhen the cold walls start to rattle\nA little mercy lets in light\n\n[Outro]\nChoose to hear, choose to mend\nWhere the sharp edges end\nA profound change begins right here\nA profound change begins right here"
+  },
+  {
+    "id": "174af9c7-7639-4b92-a0e7-64c2334e530e",
+    "title": "One Open Hand",
+    "url": "https://suno.com/song/174af9c7-7639-4b92-a0e7-64c2334e530e",
+    "createdAt": "2026-09-25T23:39:15.877Z",
+    "durationSeconds": 282.52,
+    "genres": [
+      "Glitch Prog Rock",
+      "IDM",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_174af9c7-7639-4b92-a0e7-64c2334e530e.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_174af9c7-7639-4b92-a0e7-64c2334e530e.jpeg",
+    "embedUrl": "https://suno.com/embed/174af9c7-7639-4b92-a0e7-64c2334e530e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the sink\nI saw the mud along the seam\nYou said the day had gone too far\nI let you finish, let it be\n\nI had a sharp reply prepared\nA little verdict dressed as truth\nThen saw your hands begin to shake\nAnd set my answer down with you\n\n[Pre-Chorus]\nWe are more than our worst hour\nMore than what we couldn’t say\nGive a little room for sorrow\nAnd a door can swing both ways\n\n[Chorus]\nChoose to be kind when the room turns cold\nGive someone grace when the story’s untold\nOne small mercy can travel so far\nFrom your open hand to a stranger’s heart\nForgive what you can, let the hard walls part\nWe change the world by the way we start\n\n[Verse 2]\nAt the bus stop, rain on the glass\nA tired nurse was counting change\nYou moved your bag, she sat beside you\nNothing grand, but something changed\n\nShe called her brother on the ride\nSaid, “I was wrong; I miss your voice”\nHe let the silence have its say\nThen answered softly, “Come by tonight”\n\n[Pre-Chorus]\nWe are more than our worst hour\nMore than what we couldn’t mend\nMake a little room for listening\nAnd a stranger becomes a friend\n\n[Chorus]\nChoose to be kind when the room turns cold\nGive someone grace when the story’s untold\nOne small mercy can travel so far\nFrom your open hand to a stranger’s heart\nForgive what you can, let the hard walls part\nWe change the world by the way we start\n\n[Bridge]\nNo grand design, no perfect phrase\nJust staying when it’s hard to stay\nA name remembered, blame set down\nA softer voice can turn things round\nIf I make room for what you feel\nYou may find room to help me heal\n\n[Final Chorus]\nChoose to be kind when the room turns cold\nGive someone grace when the story’s untold\nOne small mercy can travel so far\nFrom your open hand to a stranger’s heart\nForgive what you can, let the hard walls part\nWe change the world by the way we start\n\n[Outro]\nOne open hand, one softened heart\nThat’s how the turning starts"
+  },
+  {
+    "id": "9958e43d-c5f4-4067-83e8-519b2a882831",
+    "title": "Time Begins When I Let Go",
+    "url": "https://suno.com/song/9958e43d-c5f4-4067-83e8-519b2a882831",
+    "createdAt": "2026-09-25T22:24:53.082Z",
+    "durationSeconds": 230.8,
+    "genres": [
+      "Phonk",
+      "Glitch Pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg",
+    "embedUrl": "https://suno.com/embed/9958e43d-c5f4-4067-83e8-519b2a882831",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the stairs\nThe sleeve still caught on one loose nail\nI held my anger like a key\nAnd checked the lock each time I passed\n\n[Pre-Chorus]\nI thought that keeping score\nCould keep the hurt from changing shape\nBut every number asked for more\nAnd every morning felt the same\n\n[Chorus]\nForgiveness isn't saying it was right\nOr asking every scar to disappear\nIt's setting down the weight I carried through the night\nAnd making room for what can still grow here\nI can remember, I can draw the line\nAnd let the old wound loosen from my hands\nForgiveness takes its time\nBut time begins when I let go\n\n[Verse 2]\nYour note was folded in a book\nThe one we used to leave between us\nI read it once, then read it slow\nNo perfect words, just what was true\n\n[Pre-Chorus]\nYou can't undo the day\nI won't pretend it didn't count\nBut truth can leave a little space\nFor something other than the doubt\n\n[Chorus]\nForgiveness isn't saying it was right\nOr asking every scar to disappear\nIt's setting down the weight I carried through the night\nAnd making room for what can still grow here\nI can remember, I can draw the line\nAnd let the old wound loosen from my hands\nForgiveness takes its time\nBut time begins when I let go\n\n[Bridge]\nSome doors stay closed, and that's okay\nSome roads turn back, some don't\nI can wish you well from far away\nAnd keep the boundary that I chose\nNo debt erased, no truth denied\nJust one less stone I need to hold\n\n[Final Chorus]\nForgiveness isn't saying it was right\nOr asking every scar to disappear\nIt's setting down the weight I carried through the night\nAnd making room for what can still grow here\nI can remember, I can draw the line\nAnd let the old wound loosen from my hands\nForgiveness takes its time\nBut time begins when I let go\n\n[Outro]\nI let go—not of what happened\nI let go of carrying it alone"
+  },
+  {
+    "id": "1da6e554-e602-4093-b3e7-9e53eb3240ea",
+    "title": "Lifting of the Chain",
+    "url": "https://suno.com/song/1da6e554-e602-4093-b3e7-9e53eb3240ea",
+    "createdAt": "2026-09-25T22:11:55.776Z",
+    "durationSeconds": 246,
+    "genres": [
+      "Phonk",
+      "Glitch Pop",
+      "Breakbeat"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_1da6e554-e602-4093-b3e7-9e53eb3240ea.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_1da6e554-e602-4093-b3e7-9e53eb3240ea.jpeg",
+    "embedUrl": "https://suno.com/embed/1da6e554-e602-4093-b3e7-9e53eb3240ea",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe heavy stone we carry in the dark\nA quiet grievance waiting for a spark\nWe guard the hurt like treasure in a chest\nAnd wonder why our weary hearts won't rest\n\n[Pre-Chorus]\nWe build the walls so high to keep out pain\nAnd walk alone inside a freezing rain\n\n[Chorus]\nForgiveness is the lifting of the chain\nThe breaking of the cyclical disdain\nIt does not say the wound was right or fair\nIt just lets go of what we're holding there\n\n[Verse 2]\nThe ledger closes and the debts are cleared\nWe face the quiet future that we feared\nTo drop the weapon is to risk the fall\nTo answer when a gentler voice should call\n\n[Pre-Chorus]\nWe open hands we clenched into a fist\nAnd step into the morning and the mist\n\n[Chorus]\nForgiveness is the lifting of the chain\nThe breaking of the cyclical disdain\nIt does not say the wound was right or fair\nIt just lets go of what we're holding there\n\n[Bridge]\nIt takes a quiet courage to forgive\nTo make a barren place begin to live\nThe soft release of heavy, binding ties\nBeneath the vast and unindicting skies\n\n[Final Chorus]\nForgiveness is the lifting of the chain\nThe breaking of the cyclical disdain\nIt does not say the wound was right or fair\nIt just lets go of what we're holding there\nAnd breathing deep, we learn to start anew\nWith nothing left to prove or to undo"
+  },
+  {
+    "id": "be521569-1a72-4ebf-8390-8a679ac9928b",
+    "title": "A Little Room Between",
+    "url": "https://suno.com/song/be521569-1a72-4ebf-8390-8a679ac9928b",
+    "createdAt": "2026-09-25T22:11:55.776Z",
+    "durationSeconds": 232.8,
+    "genres": [
+      "Phonk",
+      "Glitch Pop",
+      "Breakbeat"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_be521569-1a72-4ebf-8390-8a679ac9928b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_be521569-1a72-4ebf-8390-8a679ac9928b.jpeg",
+    "embedUrl": "https://suno.com/embed/be521569-1a72-4ebf-8390-8a679ac9928b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYour blue cup stayed beside the sink\nA chipped white moon I couldn’t move\nI let the quiet harden up\nAnd called that distance something true\n\n[Pre-Chorus]\nThen your note came through the door\nTwo plain lines, no grand defense\nI read them once, then once again\nAnd felt the lock give way a little\n\n[Chorus]\nI can forgive you, not erase\nThe words that landed, the time it takes\nI’ll leave a little room between\nThe hurt we had and what we mean\nI can forgive you, step by step\nKeep what I learned, release the debt\nNot every wound becomes a wall\nWe can begin without denying it all\n\n[Verse 2]\nAt breakfast, steam crossed the window glass\nYou asked if I still take my tea plain\nI said yes, and you remembered\nSmall kindness found its way again\n\n[Pre-Chorus]\nNo speech could make the past unwind\nNo promise makes the bruise depart\nBut listening is a hand held out\nAnd honesty can start a heart\n\n[Chorus]\nI can forgive you, not erase\nThe words that landed, the time it takes\nI’ll leave a little room between\nThe hurt we had and what we mean\nI can forgive you, step by step\nKeep what I learned, release the debt\nNot every wound becomes a wall\nWe can begin without denying it all\n\n[Bridge]\nForgiveness isn’t saying it was fine\nOr handing back the trust before it’s earned\nIt’s setting down the stone I carried home\nAnd choosing what tomorrow might return\n\n[Final Chorus]\nI can forgive you, not erase\nWe’ll meet the truth at our own pace\nI’ll leave a little room between\nThe hurt we had and what we mean\nI can forgive you, step by step\nKeep what I learned, release the debt\nNot every wound becomes a wall\nWe can begin, and still remember all\n\n[Outro]\nYour blue cup waits beside the sink\nThis time I let it stay"
+  },
+  {
+    "id": "e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+    "title": "Setting Down the Stone",
+    "url": "https://suno.com/song/e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+    "createdAt": "2026-09-25T22:03:53.624Z",
+    "durationSeconds": 221.2,
+    "genres": [
+      "Phonk",
+      "Glitch Pop",
+      "Breakbeat"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e246567c-c20a-4e78-9ea4-dff83ed91fcf.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e246567c-c20a-4e78-9ea4-dff83ed91fcf.jpeg",
+    "embedUrl": "https://suno.com/embed/e246567c-c20a-4e78-9ea4-dff83ed91fcf",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left your coat beside the stairs\nThe rain came through the kitchen screen\nI kept the sentence in my mouth\nAnd polished it till it turned mean\n\n[Pre-Chorus]\nI know what hurt can make us guard\nA little room behind the heart\nBut I am tired of keeping score\nAnd feeding every old remark\n\n[Chorus]\nForgiveness is not saying it was right\nIt’s setting down the stone I carried home\nI can name the wound and still choose light\nI can leave the locked door on its own\nI won’t pretend the past was kind\nI’ll let it stop deciding what we are\n\n[Verse 2]\nYour note was folded in a book\nThe one we read beside the sink\nNo grand apology can mend\nA trust that takes its time to drink\n\n[Pre-Chorus]\nSo bring the truth without defense\nI’ll bring the space to hear it through\nA small beginning, nothing more\nA careful step from me to you\n\n[Chorus]\nForgiveness is not saying it was right\nIt’s setting down the stone I carried home\nI can name the wound and still choose light\nI can leave the locked door on its own\nI won’t pretend the past was kind\nI’ll let it stop deciding what we are\n\n[Bridge]\nSome days I may remember\nSome days the old words sting\nBut mercy isn’t memory erased\nIt’s choosing what the memory means\n\n[Final Chorus]\nForgiveness is not saying it was right\nIt’s setting down the stone I carried home\nI can name the wound and still choose light\nAnd let a kinder answer find its tone\nI won’t pretend the past was kind\nI’ll let it stop deciding what we are\n\n[Outro]\nThe coat is dry beside the stairs\nThe morning finds us where we are"
+  },
+  {
+    "id": "f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+    "title": "Learning How to Stay",
+    "url": "https://suno.com/song/f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+    "createdAt": "2026-09-25T19:21:22.639Z",
+    "durationSeconds": 221.96,
+    "genres": [
+      "Phonk",
+      "Melodic Glitch Prog Rock",
+      "Post-hardcore"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f0490013-69dc-4ef3-9f6f-c62b1bfcf723.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f0490013-69dc-4ef3-9f6f-c62b1bfcf723.jpeg",
+    "embedUrl": "https://suno.com/embed/f0490013-69dc-4ef3-9f6f-c62b1bfcf723",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a tally on the kitchen wall\nSmall gold stars for getting through it all\nThen one kind morning, sunlight on the sink\nI let the kettle sing before I think\n\n[Pre-Chorus]\nYou don't have to earn a softer day\nYou can set the heavy list away\n\n[Chorus]\nI am learning how to stay\nIn this body, in this day\nEvery breath becomes a place\nI can meet myself with grace\nI am more than what I prove\nI can heal and still move\n\n[Verse 2]\nI called my sister from the grocery line\nSaid, \"I miss the way I used to feel like mine\"\nShe stayed with me while carts rolled slowly by\nNo grand solution, just her asking why\n\n[Pre-Chorus]\nLittle by little, I can make room\nA window opens in a crowded room\n\n[Chorus]\nI am learning how to stay\nIn this body, in this day\nEvery breath becomes a place\nI can meet myself with grace\nI am more than what I prove\nI can heal and still move\n\n[Bridge]\nThe old ache speaks; I let it have a chair\nI hear its story, but I don't live there\nI name the thing I need, and ask it plain\nA hand, some water, time to start again\n\n[Final Chorus]\nI am learning how to stay\nIn this body, in this day\nEvery breath becomes a place\nI can meet myself with grace\nI am more than what I prove\nI can heal and still move\nI am here, and I am whole\nNot a finish line—a growing soul\n\n[Outro]\nOne kind morning, one small start\nI make a little room inside my heart"
+  },
+  {
+    "id": "4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+    "title": "Growing Where I Am",
+    "url": "https://suno.com/song/4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+    "createdAt": "2026-09-25T19:21:16.434Z",
+    "durationSeconds": 236.8,
+    "genres": [
+      "phonk",
+      "glitch prog rock",
+      "math rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4570e51d-dc66-4a6a-9b70-5e0e12ffde79.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4570e51d-dc66-4a6a-9b70-5e0e12ffde79.jpeg",
+    "embedUrl": "https://suno.com/embed/4570e51d-dc66-4a6a-9b70-5e0e12ffde79",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a tally on the kitchen wall\nEvery little win, still I wanted it all\nYou said, “Take a breath, let the day be enough”\nI was busy measuring the shape of my luck\n\n[Pre-Chorus]\nThen the list came loose in the wash of the rain\nInk running down like a map without names\nI let one small truth settle under my skin\nI don't have to earn the right to begin\n\n[Chorus]\nI’m learning how to come back to me\nOne honest breath, one thing I can see\nNo finish line, no perfect disguise\nI meet my own face and stay for a while\nI’m learning how to make room inside\nFor every old hurt I no longer hide\nThe life I was chasing is here in my hands\nI’m growing where I am\n\n[Verse 2]\nYou found my old notebook under the bed\n“Things I’ll forgive” in a list I had read\nI crossed out the names I kept saving for later\nAnd wrote my own first, in the space beneath them\n\n[Pre-Chorus]\nA cup by the window, the kettle goes still\nThe morning arrives without asking my will\nI don't need a sign carved into the sky\nI can choose the next step, and let that be mine\n\n[Chorus]\nI’m learning how to come back to me\nOne honest breath, one thing I can see\nNo finish line, no perfect disguise\nI meet my own face and stay for a while\nI’m learning how to make room inside\nFor every old hurt I no longer hide\nThe life I was chasing is here in my hands\nI’m growing where I am\n\n[Bridge]\nSome days the old ache still knocks at the door\nI hear it, I name it, I don't feed it more\nYou sit beside me; we don't need a cure\nJust time, a warm coat, and a little more room\nI am not a debt that I have to repay\nI can be unfinished and loved anyway\n\n[Final Chorus]\nI’m learning how to come back to me\nOne honest breath, one thing I can see\nNo finish line, no perfect disguise\nI meet my own face and stay for a while\nI’m learning how to make room inside\nFor every old hurt I no longer hide\nThe life I was chasing is here in my hands\nI’m growing where I am\nI’m growing where I am\n[Outro]\nHere in my hands\nI’m growing where I am"
+  },
+  {
+    "id": "64251744-85f8-4f00-9a8d-5456bf214234",
+    "title": "Someone Worth Becoming",
+    "url": "https://suno.com/song/64251744-85f8-4f00-9a8d-5456bf214234",
+    "createdAt": "2026-09-25T19:05:11.335Z",
+    "durationSeconds": 273.52,
+    "genres": [
+      "Phonk",
+      "glitch prog rock",
+      "math-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_64251744-85f8-4f00-9a8d-5456bf214234.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_64251744-85f8-4f00-9a8d-5456bf214234.jpeg",
+    "embedUrl": "https://suno.com/embed/64251744-85f8-4f00-9a8d-5456bf214234",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI left the curtains open wide\nLet morning find the room\nThe dishes from the night before\nCan wait beside the broom\nI wrote my name in pencil first\nThen let the paper stay\nOne honest breath, one steady step\nCan count as change today\n\n[Pre-Chorus]\nI don't have to earn my rest\nI don't have to outrun pain\nI can meet myself right here\nAnd begin again\n\n[Chorus]\nI am learning how to stay\nWhen the old alarms go ringing\nI can give my heart a day\nWithout asking what it's bringing\nLittle by little, I return\nTo the life beneath the striving\nI am not a thing to fix\nI am someone worth becoming\n\n[Verse 2]\nI called my sister on the walk\nPast the bakery at noon\nShe knew the joke I almost made\nAnd left a little room\nI told the truth without a speech\nSaid, “Some days still feel rough”\nShe said, “Then let them be the days\nYou practice being enough”\n\n[Pre-Chorus]\nI don't have to name the prize\nOr compare the miles I've run\nI can make a gentler choice\nBefore the day is done\n\n[Chorus]\nI am learning how to stay\nWhen the old alarms go ringing\nI can give my heart a day\nWithout asking what it's bringing\nLittle by little, I return\nTo the life beneath the striving\nI am not a thing to fix\nI am someone worth becoming\n\n[Bridge]\nAt the sink, I washed one cup\nAnd watched the water clear\nNo grand arrival, no new skin\nJust both my hands right here\nI forgive the years I spent\nMistaking hurt for proof\nThe door was never locked at all\nI had to trust the room\n\n[Final Chorus]\nI am learning how to stay\nEven when the old alarms ring\nI can give my heart a day\nAnd let it choose its own beginning\nLittle by little, I return\nWith both feet inside the living\nI am not a thing to fix\nI am someone worth becoming\nSomeone worth becoming\nI am here, and I am living"
+  },
+  {
+    "id": "39ed340a-7475-47d7-acf3-83c962a6153c",
+    "title": "A Little Room",
+    "url": "https://suno.com/song/39ed340a-7475-47d7-acf3-83c962a6153c",
+    "createdAt": "2026-09-25T19:05:11.335Z",
+    "durationSeconds": 252.4,
+    "genres": [
+      "Phonk",
+      "Riddim",
+      "Melodic Glitch Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_39ed340a-7475-47d7-acf3-83c962a6153c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_39ed340a-7475-47d7-acf3-83c962a6153c.jpeg",
+    "embedUrl": "https://suno.com/embed/39ed340a-7475-47d7-acf3-83c962a6153c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou left the kettle cold again\nYour coat still on the chair\nThe mirror caught your tired eyes\nYou stopped and met them there\nYou put both feet against the tile\nAnd named what hurt today\nNo grand design, no perfect fix\nJust one breath you could stay\n\n[Pre-Chorus]\nYou don't have to earn your rest\nYou don't have to win the day\nLet the small truth in your chest\nBe enough to lead the way\n\n[Chorus]\nStart where you are, with both hands open\nMend what you can, let the rest be spoken\nYou are not the sum of what went wrong\nYou can grow a life that feels like home\nPiece by piece, you find your own direction\nEvery honest choice becomes connection\nWhen you turn and meet yourself with care\nA little room appears, and you are there\n\n[Verse 2]\nYou called your sister from the stairs\nAnd told her what you hide\nShe let the silence have its space\nThen stayed there on your side\nYou wrote one promise on a receipt\nAnd tucked it in your shoe\nDrink some water, take the walk\nCome back and start anew\n\n[Pre-Chorus]\nYou don't have to know the end\nYou don't have to make it neat\nLet the person you can be\nMeet the person on your feet\n\n[Chorus]\nStart where you are, with both hands open\nMend what you can, let the rest be spoken\nYou are not the sum of what went wrong\nYou can grow a life that feels like home\nPiece by piece, you find your own direction\nEvery honest choice becomes connection\nWhen you turn and meet yourself with care\nA little room appears, and you are there\n\n[Bridge]\nThe old hurt has a voice, not the final word\nThe fear can ride beside you, not decide the road\nYou can change your mind, you can draw the line\nYou can take your time and still arrive\n\n[Final Chorus]\nStart where you are, with both hands open\nMend what you can, let the hard truth be spoken\nYou are not the sum of what went wrong\nYou have grown a life that feels like home\nPiece by piece, you choose your own direction\nEvery honest choice becomes connection\nWhen you turn and meet yourself with care\nYou find the room was always there\n\n[Outro]\nThe kettle starts, the morning comes\nYou meet your eyes, and stay"
+  },
+  {
+    "id": "e5534069-1334-4cf9-8b9d-bb9ac51ab140",
+    "title": "Meeting Myself",
+    "url": "https://suno.com/song/e5534069-1334-4cf9-8b9d-bb9ac51ab140",
+    "createdAt": "2026-09-25T19:05:05.432Z",
+    "durationSeconds": 266.4,
+    "genres": [
+      "phonk",
+      "glitch prog rock",
+      "math rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_e5534069-1334-4cf9-8b9d-bb9ac51ab140.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_e5534069-1334-4cf9-8b9d-bb9ac51ab140.jpeg",
+    "embedUrl": "https://suno.com/embed/e5534069-1334-4cf9-8b9d-bb9ac51ab140",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI used to count the things I won\nLike coins lined up beside the sink\nThen morning came, the room stayed still\nAnd asked me what I really think\n\nI left my coat beside the door\nAnd took the long way through the park\nA sparrow worked a crust of bread\nWhile I made peace with being small\n\n[Pre-Chorus]\nI don't have to earn my breath\nI don't have to outrun the day\nI can let the old alarms ring out\nAnd choose a gentler way\n\n[Chorus]\nI am learning how to stay\nWhen the old ache calls my name\nOne kind word, one honest start\nI can build a home inside my heart\nI am more than what I prove\nI can bend and still move\nStep by step, the walls come down\nI meet myself on solid ground\n\n[Verse 2]\nI called my sister from the train\nSaid, \"I don't know what comes next\"\nShe laughed and told me about the rain\nThat soaked her groceries and her steps\n\nI let the silence take its turn\nI let the hard truth leave a mark\nThe little lamp beside my bed\nCan keep a room from feeling dark\n\n[Pre-Chorus]\nI don't have to name the prize\nOr make my healing look like grace\nI can take the day in pieces\nI can give myself some space\n\n[Chorus]\nI am learning how to stay\nWhen the old ache calls my name\nOne kind word, one honest start\nI can build a home inside my heart\nI am more than what I prove\nI can bend and still move\nStep by step, the walls come down\nI meet myself on solid ground\n\n[Bridge]\nTo the child who held her tongue\nYou were never hard to love\nYou deserved a softer answer\nYou deserved a hand to hold\nNow I sit beside that silence\nLet it say what it must say\nI won't leave you at the doorway\nWe can walk out anyway\n\n[Final Chorus]\nI am learning how to stay\nWhen the old ache calls my name\nOne kind word, one honest start\nI can build a home inside my heart\nI am more than what I prove\nI can bend and still move\nStep by step, the walls come down\nI meet myself on solid ground\nI meet myself on solid ground\nAnd I am here, and I am here"
+  },
+  {
+    "id": "f02b6ada-51a0-4fd9-94bc-6294c226296e",
+    "title": "Home Beneath My Skin",
+    "url": "https://suno.com/song/f02b6ada-51a0-4fd9-94bc-6294c226296e",
+    "createdAt": "2026-09-25T19:03:45.049Z",
+    "durationSeconds": 217.2,
+    "genres": [
+      "phonk",
+      "glitch prog rock",
+      "post-hardcore"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_f02b6ada-51a0-4fd9-94bc-6294c226296e.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_f02b6ada-51a0-4fd9-94bc-6294c226296e.jpeg",
+    "embedUrl": "https://suno.com/embed/f02b6ada-51a0-4fd9-94bc-6294c226296e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a map of every place I failed\nFolded it small and carried it like mail\nYou sat beside me on the kitchen floor\nSaid, “You don’t have to earn the morning anymore”\n\n[Pre-Chorus]\nSo I loosened my hands\nLet the old names fall\nThere was room in my chest\nFor a life beyond the wall\n\n[Chorus]\nI’m coming back to me\nPiece by piece, steadily\nI can bend, I can begin\nThere’s a home beneath my skin\nI’m becoming what I need\nRoot by root, a living seed\nI don’t have to disappear\nTo let a better self appear\n\n[Verse 2]\nYou found my notes behind the sugar tin\nAll those little rules I’d written to fit in\nWe crossed them out beside the window light\nAnd let the afternoon arrive without a fight\n\n[Pre-Chorus]\nI can honor the hurt\nWithout giving it the wheel\nI can name what I lost\nAnd still choose what I feel\n\n[Chorus]\nI’m coming back to me\nPiece by piece, steadily\nI can bend, I can begin\nThere’s a home beneath my skin\nI’m becoming what I need\nRoot by root, a living seed\nI don’t have to disappear\nTo let a better self appear\n\n[Bridge]\nNot a finish line, not a flawless face\nJust a softer voice that gives me space\nYou said, “Take your time; you’re allowed to grow”\nAnd I believed it, quiet and slow\n\n[Final Chorus]\nI’m coming back to me\nPiece by piece, steadily\nI can bend, I can begin\nThere’s a home beneath my skin\nI’m becoming what I need\nRoot by root, a living seed\nI don’t have to disappear\nTo let a better self appear\n\n[Outro]\nYou stayed while I learned to stay\nI meet myself here, day by day"
+  },
+  {
+    "id": "a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+    "title": "Take Your Life Into Your Arms",
+    "url": "https://suno.com/song/a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+    "createdAt": "2026-09-25T18:44:47.648Z",
+    "durationSeconds": 238,
+    "genres": [
+      "phonk",
+      "glitch prog rock",
+      "post-hardcore"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe.jpeg",
+    "embedUrl": "https://suno.com/embed/a7083f88-cdc6-48a4-b3de-cd7d0fd0fcbe",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou’ve got both hands on the wheel\nDust on your sleeve, plans in your pocket\nThe road won’t tell you how it feels\nYou pick a turn, you make it matter\n\n[Pre-Chorus]\nNo perfect map, no borrowed name\nA little nerve can start a flame\nYou don’t need permission now\nPut your shoulder to it, make it loud\n\n[Chorus]\nTake your life into your arms\nBuild it up from what you are\nOne good choice, one stubborn start\nMake a masterpiece from the parts\nTake your life into your arms\nLet the hard days shape your heart\nIf the door won’t open wide\nMake a way and step inside\n\n[Verse 2]\nThe first draft’s crooked at the seams\nThe paint runs down, the boards don’t line up\nBut every mark belongs to you\nAnd every small repair is progress\n\n[Pre-Chorus]\nNo perfect map, no borrowed name\nA little nerve can start a flame\nYou don’t need permission now\nPut your shoulder to it, make it loud\n\n[Chorus]\nTake your life into your arms\nBuild it up from what you are\nOne good choice, one stubborn start\nMake a masterpiece from the parts\nTake your life into your arms\nLet the hard days shape your heart\nIf the door won’t open wide\nMake a way and step inside\n\n[Bridge]\nWhen the old doubt calls you back\nName the thing you’ve made so far\nEvery chipped and weathered edge\nIs a proof of who you are\n\n[Final Chorus]\nTake your life into your arms\nBuild it up from what you are\nOne good choice, one stubborn start\nMake a masterpiece from the parts\nTake your life into your arms\nLet the hard days shape your heart\nIf the door won’t open wide\nMake a way and step inside\n\n[Outro]\nMake a way\nStep inside\nYou’ve got both hands on your life"
+  },
+  {
+    "id": "ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+    "title": "Quiet Lightning",
+    "url": "https://suno.com/song/ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+    "createdAt": "2026-09-25T18:08:56.767Z",
+    "durationSeconds": 255.96,
+    "genres": [
+      "Phonk",
+      "Riddim",
+      "Melodic Glitch Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_ba550ced-3a1f-47b2-a9e5-72b01ed2283a.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_ba550ced-3a1f-47b2-a9e5-72b01ed2283a.jpeg",
+    "embedUrl": "https://suno.com/embed/ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nQuiet lightning rolling\nI can feel the tide inside\nSomething distant keeps unfolding\nLike a door I cannot hide\n\nI have carried old conclusions\nLike a coat I never chose\nWorn through seasons of confusion\nStill believing no one knows\n\n[Pre-Chorus]\nBut the morning keeps arriving\nEven after longest nights\nAnd the pieces I was hiding\nLook different in the light\n\n[Chorus]\nMaybe hope is not a thunder\nMaybe hope is something small\nA hand reaching through the darkness\nA voice answering the call\n\nMaybe healing is not knowing\nHow the ending will unfold\nJust believing there is somewhere\nPast the places I grew cold\n\n[Verse 2]\nI have chased a thousand futures\nTill I lost the present tense\nBuilt my walls from expectations\nCalled the distance common sense\n\nBut the years have made me softer\nNot in weakness, not in fear\nI can finally see the beauty\nIn the things that disappear\n\n[Pre-Chorus]\nEvery road I thought had broken\nLeft a path I couldn’t see\nEvery word I left unspoken\nStill became a part of me\n\n[Chorus]\nMaybe hope is not a thunder\nMaybe hope is something small\nA hand reaching through the darkness\nA voice answering the call\n\nMaybe healing is not knowing\nHow the ending will unfold\nJust believing there is somewhere\nPast the places I grew cold\n\n[Bridge]\nI don’t need to be the person\nI imagined long ago\nI can bless the roads behind me\nAnd still choose another road\n\nLet the old fears lose their language\nLet the future stay unknown\nI have spent enough time proving\nI can learn to just be home\n\n[Final Chorus]\nMaybe hope is quiet lightning\nRolling underneath the skin\nNot a promise of perfection\nJust the courage to begin\n\nAnd the tide inside keeps turning\nPulling everything toward light\nI don’t need to know the ending\nI just need to walk tonight\n\n[Outro]\nQuiet lightning rolling\nI can feel the tide inside\nAnd for once I’m not resisting\nWhere the current wants to guide"
+  },
+  {
+    "id": "86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+    "title": "I Carry You",
+    "url": "https://suno.com/song/86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+    "createdAt": "2026-09-25T18:07:37.200Z",
+    "durationSeconds": 265.76,
+    "genres": [
+      "Phonk",
+      "Riddim",
+      "Melodic Glitch Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_86967d2b-1d7a-41f6-9ea0-4dacdc89cd00.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_86967d2b-1d7a-41f6-9ea0-4dacdc89cd00.jpeg",
+    "embedUrl": "https://suno.com/embed/86967d2b-1d7a-41f6-9ea0-4dacdc89cd00",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYour name lights up between the shifts\nI read it leaning by the sink\nThe lunchbox waits beside the keys\nI type “I miss you,” stop, then blink\n\nYou ask if Sunday’s still a plan\nI count the hours I can’t move\nThere’s always one more thing to do\nAnd one more thing I’d rather do with you\n\n[Pre-Chorus]\nI know you’ve learned to wait for me\nI hate that waiting has a cost\nIf I could hand you every hour\nI’d still be short of what we’ve lost\n\n[Chorus]\nI wish you knew, I carry you\nThrough every mile and every task\nI’m not choosing all this distance\nI’m just caught beneath the asks\nWhen I’m late, when plans fall through\nPlease don’t read it as goodbye\nYou are loved in all the minutes\nI can’t give you by and by\n\n[Verse 2]\nYour jacket hangs behind my door\nThe sleeve still holds a trace of rain\nI pass it on the way back out\nAnd tell myself next week again\n\nYou send a picture from the park\nThe crooked bench, the paper kite\nI save it where the small things stay\nAnd look at it before goodnight\n\n[Pre-Chorus]\nI know you’ve learned to wait for me\nI hate that waiting has a cost\nIf I could hand you every hour\nI’d still be short of what we’ve lost\n\n[Chorus]\nI wish you knew, I carry you\nThrough every mile and every task\nI’m not choosing all this distance\nI’m just caught beneath the asks\nWhen I’m late, when plans fall through\nPlease don’t read it as goodbye\nYou are loved in all the minutes\nI can’t give you by and by\n\n[Bridge]\nI’m sorry for the dinners cold\nFor “soon” that turned to next weekend\nFor hearing your small voice go quiet\nWhile I was fixing what came next\nI can’t undo the hours gone\nBut I can tell you plain and true:\nThe life that keeps me running hard\nIs still a life that runs to you\n\n[Final Chorus]\nI wish you knew, I carry you\nThrough every mile and every task\nI’m not choosing all this distance\nI’m just caught beneath the asks\nWhen I’m late, when plans fall through\nPlease don’t read it as goodbye\nYou are loved in all the minutes\nAnd I’ll keep reaching for more time\n\n[Outro]\nYour name lights up between the shifts\nI’ll call when this last thing is through\nAnd if you wonder where my heart is\nIt’s making its way back to you"
+  },
+  {
+    "id": "6c74f13d-dbb9-4188-903a-6aadced7a52c",
+    "title": "What I Carry For You",
+    "url": "https://suno.com/song/6c74f13d-dbb9-4188-903a-6aadced7a52c",
+    "createdAt": "2026-09-25T17:58:03.847Z",
+    "durationSeconds": 259.96,
+    "genres": [
+      "Phonk",
+      "Riddim",
+      "Melodic Glitch Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_6c74f13d-dbb9-4188-903a-6aadced7a52c.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_6c74f13d-dbb9-4188-903a-6aadced7a52c.jpeg",
+    "embedUrl": "https://suno.com/embed/6c74f13d-dbb9-4188-903a-6aadced7a52c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYour message waits beside the sink\nI read it while the kettle sings\nYou ask if I can make it Sunday\nI check the hours, count the things\n\nThe school forms, calls, the borrowed car\nA shift that runs past half-past eight\nI type, “I miss you, I’ll be there”\nThen watch the minutes close the gate\n\n[Pre-Chorus]\nI know you’re tired of hearing soon\nI know a promise doesn’t hold\nBut every time I turn away\nIt’s not because my heart grew cold\n\n[Chorus]\nIf you could see what I carry for you\nYou’d know the distance isn’t where I want to be\nI’m pulled by the lives that depend on me\nBut you’re still the place I’m trying to reach\nI’m sorry my hours keep saying no\nWhen every part of me wants you close\nIf love could count for the time I can’t give\nYou’d know how much of me is yours to keep\n\n[Verse 2]\nYour coat is hanging by the door\nFrom that last night we stayed too late\nWe laughed about the burnt-up pie\nAnd said we’d do it soon again\n\nI keep that picture in my phone\nYour crooked grin, the paper plates\nI pass it on the bus ride home\nAnd feel the miles between our days\n\n[Pre-Chorus]\nI know a heart can’t live on plans\nOr little notes I never send\nI’m trying not to let the urgent\nTake the place of who I love again\n\n[Chorus]\nIf you could see what I carry for you\nYou’d know the distance isn’t where I want to be\nI’m pulled by the lives that depend on me\nBut you’re still the place I’m trying to reach\nI’m sorry my hours keep saying no\nWhen every part of me wants you close\nIf love could count for the time I can’t give\nYou’d know how much of me is yours to keep\n\n[Bridge]\nWhen the last appointment’s written down\nWhen the laundry’s folded, lights are low\nI’ll come sit beside you, no excuse\nNo checking what I still have to do\n\nAnd if I’m late, if plans fall through\nPlease don’t mistake the clock for truth\nI may be far across the town\nBut I have never put you down\n\n[Final Chorus]\nIf you could see what I carry for you\nYou’d know the distance isn’t where I want to be\nI’m pulled by the lives that depend on me\nBut you’re still the place I’m trying to reach\nI’m sorry my hours keep saying no\nWhen every part of me wants you close\nIf love could count for the time I can’t give\nYou’d know how much of me is yours to keep\n\n[Outro]\nYour message waits beside the sink\nI’ll call tonight; I mean it this time"
+  },
+  {
+    "id": "b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+    "title": "Board by Board",
+    "url": "https://suno.com/song/b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+    "createdAt": "2026-09-25T17:40:08.042Z",
+    "durationSeconds": 230.96,
+    "genres": [
+      "phonk",
+      "glitch prog rock",
+      "math rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b161b5eb-8f16-4677-b0c1-1098f7cc8a36.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b161b5eb-8f16-4677-b0c1-1098f7cc8a36.jpeg",
+    "embedUrl": "https://suno.com/embed/b161b5eb-8f16-4677-b0c1-1098f7cc8a36",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nWe poured the footings before the walls\nMeasured twice through the April rain\nYou held the level, I hauled the stone\nAnd we learned what the weight could bear\n\n[Pre-Chorus]\nNo shortcut, no borrowed ground\nJust patient hands and a hard-won line\nNow every mile that opens out\nFeels like ours to find\n\n[Chorus]\nThe road ahead can turn and climb\nWe built enough to meet the rise\nBoard by board, through dust and doubt\nWe laid the ground we’re standing on now\nSo let the distance show its face\nWe’ve got our roots, we’ve got our pace\nThe road ahead is wide and new\nAnd I’m not afraid to walk it with you\n\n[Verse 2]\nThe porch steps hold through winter thaw\nYour pencil marks still frame the door\nWe saved the bent nails in a jar\nFor all the days we made it work\n\n[Pre-Chorus]\nNo promise written in the clouds\nJust steady beams and a kitchen light\nAnd when the next hill blocks the view\nWe’ll take it side by side\n\n[Chorus]\nThe road ahead can turn and climb\nWe built enough to meet the rise\nBoard by board, through dust and doubt\nWe laid the ground we’re standing on now\nSo let the distance show its face\nWe’ve got our roots, we’ve got our pace\nThe road ahead is wide and new\nAnd I’m not afraid to walk it with you\n\n[Bridge]\nIf the map runs out, we’ll mark the bend\nIf the old boards split, we’ll mend again\nEvery scar in the timber knows\nHow much a solid foundation holds\n\n[Final Chorus]\nThe road ahead can turn and climb\nWe built enough to meet the rise\nBoard by board, through dust and doubt\nWe laid the ground we’re standing on now\nSo let the distance show its face\nWe’ve got our roots, we’ve got our pace\nThe road ahead is wide and new\nAnd I’m not afraid to walk it with you\nThe road ahead is wide and new\nWe built the ground; now we’re coming through"
+  },
+  {
+    "id": "b0063c95-259f-481d-b8a6-70ac731b3983",
+    "title": "Turn the Levers",
+    "url": "https://suno.com/song/b0063c95-259f-481d-b8a6-70ac731b3983",
+    "createdAt": "2026-09-25T17:07:33.256Z",
+    "durationSeconds": 217.2,
+    "genres": [
+      "Phonk",
+      "Riddim",
+      "punk rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_b0063c95-259f-481d-b8a6-70ac731b3983.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_b0063c95-259f-481d-b8a6-70ac731b3983.jpeg",
+    "embedUrl": "https://suno.com/embed/b0063c95-259f-481d-b8a6-70ac731b3983",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe weather turned, the train ran late\nThe landlord raised the rent again\nI spent a week cursing the clouds\nLike they could hear me through the pane\n\nThen I found the small brass key\nTo the shed behind the house\nOne hinge, one coat of paint, one choice\nI could make without a crowd\n\n[Pre-Chorus]\nI can't steer the wind\nI can set the sail\nI can't pick the hand I'm dealt\nI can learn the game\n\n[Chorus]\nTurn the levers I can reach\nOne good move, then another\nBuild a life that fits my hands\nBrick by brick, board by board\nWhen the world won't bend for me\nI can still decide my part\nTurn the levers I can reach\nThat's where the hope starts\n\n[Verse 2]\nI called my brother, cleared the table\nWrote the numbers down in ink\nFixed the latch and made a budget\nAsked for help before the brink\n\nNo grand sign, no perfect morning\nJust a list beside the sink\nAnd the nerve to take the next step\nBefore I knew what I would think\n\n[Pre-Chorus]\nI can't stop the rain\nI can mend the roof\nI can't make the past unwind\nI can choose what's next to do\n\n[Chorus]\nTurn the levers I can reach\nOne good move, then another\nBuild a life that fits my hands\nBrick by brick, board by board\nWhen the world won't bend for me\nI can still decide my part\nTurn the levers I can reach\nThat's where the hope starts\n\n[Bridge]\nNot every door will open\nNot every seed takes root\nBut I can keep my word today\nAnd give tomorrow room\nI don't need to own the whole sky\nTo make a little room\n\n[Breakdown]\nMy hands, my call\nMy next step, that's all\nMy hands, my call\nI can build from here\n\n[Final Chorus]\nTurn the levers I can reach\nOne good move, then another\nBuild a life that fits my hands\nBrick by brick, board by board\nWhen the world won't bend for me\nI can still decide my part\nTurn the levers I can reach\nThat's where the hope starts\nTurn the levers I can reach\nThat's where the hope starts"
+  },
+  {
+    "id": "895a3fc8-62cb-485b-8569-49b167e2ea10",
+    "title": "One Small Lever",
+    "url": "https://suno.com/song/895a3fc8-62cb-485b-8569-49b167e2ea10",
+    "createdAt": "2026-09-25T16:58:26.470Z",
+    "durationSeconds": 196,
+    "genres": [
+      "punk rock",
+      "circus-chaos"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_895a3fc8-62cb-485b-8569-49b167e2ea10.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_895a3fc8-62cb-485b-8569-49b167e2ea10.jpeg",
+    "embedUrl": "https://suno.com/embed/895a3fc8-62cb-485b-8569-49b167e2ea10",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe forecast said the river would rise\nI cursed the clouds, I blamed the tide\nThen found the sandbags by the gate\nAnd called my brother before it got late\n\n[Pre-Chorus]\nI can’t steer the weather\nCan’t rewind the rain\nBut there’s a wheel beneath my hand\nAnd I can turn it again\n\n[Chorus]\nI’ve got a hand on the handle\nA foot on the floor\nI can’t move every mountain\nBut I can move this door\nHey! What I can change, I change\nHey! What I can’t, I let roll by\nOne small lever, one clear choice\nAnd I’m building my life\n\n[Verse 2]\nThe old job closed; the rent stayed due\nI spent one week saying, “What can I do?”\nThen fixed the bike, learned the route\nSent three brave letters, got one call back through\n\n[Pre-Chorus]\nI can’t pick the whole deck\nCan’t command the draw\nBut I can play the card I’m holding\nAnd deal myself one more\n\n[Chorus]\nI’ve got a hand on the handle\nA foot on the floor\nI can’t move every mountain\nBut I can move this door\nHey! What I can change, I change\nHey! What I can’t, I let roll by\nOne small lever, one clear choice\nAnd I’m building my life\n\n[Breakdown]\nNot the storm!\nNot the past!\nNot the words that were thrown!\nJust the next right move\nWith the hands I own!\n\n[Bridge]\nYou don’t need a perfect map\nOr a clean and certain start\nJust a pocket full of stubbornness\nAnd a little room to try\nWhen the world won’t answer back\nYou can still decide your part\nTurn the handle, plant the seed\nGive tomorrow somewhere to rise\n\n[Final Chorus]\nI’ve got a hand on the handle\nA foot on the floor\nI can’t move every mountain\nBut I can move this door\nHey! What I can change, I change\nHey! What I can’t, I let roll by\nOne small lever, one clear choice\nAnd I’m building my life\n\n[Outro]\nOne small lever!\nOne clear choice!\nI’m building my life!"
+  },
+  {
+    "id": "d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+    "title": "Turn What You Can Turn",
+    "url": "https://suno.com/song/d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+    "createdAt": "2026-09-25T16:50:55.613Z",
+    "durationSeconds": 207.16,
+    "genres": [
+      "lofi blues",
+      "Memphis style"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_d6a6fe47-f447-44de-81d8-8a6b1a6f47d6.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_d6a6fe47-f447-44de-81d8-8a6b1a6f47d6.jpeg",
+    "embedUrl": "https://suno.com/embed/d6a6fe47-f447-44de-81d8-8a6b1a6f47d6",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe forecast said rain, so I cursed the sky\nMissed the last bus, let the whole day slide\nThen I found my old bike by the laundry room\nTightened one bolt, rolled out by noon\n\n[Pre-Chorus]\nI can't move the mountain\nI can choose my pace\nI can turn the handle\nI can make some space\n\n[Chorus]\nTurn what you can turn\nTake the next small step\nBuild it with your hands\nUse the tools you get\nLet the things you can't change\nRoll on down the road\nTurn what you can turn\nThat's how a good life grows\n\n[Verse 2]\nThe rent went up and the phone went dead\nI quit replaying every word they said\nMade three calls, wrote the numbers down\nFound a second shift on the edge of town\n\n[Pre-Chorus]\nI can't steer the weather\nI can mend the sail\nI can learn the lever\nI can shift the scale\n\n[Chorus]\nTurn what you can turn\nTake the next small step\nBuild it with your hands\nUse the tools you get\nLet the things you can't change\nRoll on down the road\nTurn what you can turn\nThat's how a good life grows\n\n[Bridge]\nOne clear no, one honest yes\nOne drawer sorted, one less mess\nA seed in a tin by the kitchen door\nA little done is a little more\n\n[Final Chorus]\nTurn what you can turn\nTake the next small step\nBuild it with your hands\nUse the tools you get\nLet the things you can't change\nRoll on down the road\nTurn what you can turn\nThat's how a good life grows\n\n[Outro]\nOne bolt tight, one call made\nOne small choice, one brick laid\nTurn what you can turn\nThat's how a good life grows"
+  },
+  {
+    "id": "eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+    "title": "Hope in My Hands",
+    "url": "https://suno.com/song/eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+    "createdAt": "2026-09-25T16:47:39.811Z",
+    "durationSeconds": 188.8,
+    "genres": [
+      "lofi",
+      "indie"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_eb35bd6f-c24f-4e52-b730-43d2a63186f8.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_eb35bd6f-c24f-4e52-b730-43d2a63186f8.jpeg",
+    "embedUrl": "https://suno.com/embed/eb35bd6f-c24f-4e52-b730-43d2a63186f8",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe forecast says rain; I can't move the clouds\nBut I can pull my coat from the back of the house\nThe train runs late; I can choose where I stand\nI can make one small move with the time in my hands\n\n[Pre-Chorus]\nI spent too long naming the walls in my way\nNow I’m looking for hinges, and what I can change\n\n[Chorus]\nI’ve got a hand on the wheel\nA foot on the ground\nI can’t choose every turn\nBut I can choose my way out\nOne little lever, one honest start\nI’m building a life that feels like my heart\nI’ve got a hand on the wheel\nAnd hope in my hands\n\n[Verse 2]\nThe old house needs work; the whole street feels worn\nI can fix one loose step, let the morning come on\nI can’t make you stay, can’t rewrite what you said\nBut I can set the table and make plans for my day\n\n[Pre-Chorus]\nI spent too long cursing the wind and the rain\nNow I’m learning which seeds I can plant all the same\n\n[Chorus]\nI’ve got a hand on the wheel\nA foot on the ground\nI can’t choose every turn\nBut I can choose my way out\nOne little lever, one honest start\nI’m building a life that feels like my heart\nI’ve got a hand on the wheel\nAnd hope in my hands\n\n[Bridge]\nNot every answer comes clean or on cue\nNot every door opens just because I want it to\nStill, I can ask, I can learn, I can try\nI can lay one more brick beneath a wider sky\n\n[Final Chorus]\nI’ve got a hand on the wheel\nA foot on the ground\nI can’t choose every turn\nBut I can choose my way out\nOne little lever, one honest start\nI’m building a life that feels like my heart\nI’ve got a hand on the wheel\nAnd hope in my hands\nHope in my hands\nI’m building a life that feels like my heart"
+  },
+  {
+    "id": "2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+    "title": "Work With the Wind",
+    "url": "https://suno.com/song/2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+    "createdAt": "2026-09-25T16:29:54.123Z",
+    "durationSeconds": 239.96,
+    "genres": [
+      "IDM",
+      "Grime",
+      "Synth Punk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_2b430e4c-7d82-41ce-9a92-9426422b4ce6.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_2b430e4c-7d82-41ce-9a92-9426422b4ce6.jpeg",
+    "embedUrl": "https://suno.com/embed/2b430e4c-7d82-41ce-9a92-9426422b4ce6",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI used to curse the weather\nFor the plans it pulled apart\nI kept a list of strangers\nTo explain my restless heart\nThen I found the small brass handle\nOn the gate beside my feet\nTurned it once, cleared the weeds out\nMade a path I could repeat\n\n[Pre-Chorus]\nI can’t steer the passing traffic\nCan’t rewind a closing door\nBut I can choose the next small action\nAnd what I’m building it for\n\n[Chorus]\nI’ve got a hand on the handle\nI’ve got a say in the way\nI can’t command every river\nBut I can shape where I lay\nOne honest move, then another\nA little more room to begin\nI’m done blaming the weather\nI’m learning to work with the wind\n\n[Verse 2]\nI set the phone down at breakfast\nPut the good knife by the board\nCalled my sister, kept my promise\nFixed the latch that wouldn’t hold\nNot a miracle by morning\nJust a room I helped arrange\nEvery choice that I can reach for\nMakes a little space for change\n\n[Pre-Chorus]\nI can’t steer the passing traffic\nCan’t rewind a closing door\nBut I can choose the next small action\nAnd what I’m building it for\n\n[Chorus]\nI’ve got a hand on the handle\nI’ve got a say in the way\nI can’t command every river\nBut I can shape where I lay\nOne honest move, then another\nA little more room to begin\nI’m done blaming the weather\nI’m learning to work with the wind\n\n[Bridge]\nLet the rain fall where it wants to\nLet the old plans wash away\nThere’s a seed tin in the cupboard\nThere’s a patch of dirt to claim\nI don’t need to own the whole sky\nI just need to tend this ground\nWhen I put my hands to something\nHope is something I have found\n\n[Final Chorus]\nI’ve got a hand on the handle\nI’ve got a say in the way\nI can’t command every river\nBut I can shape where I lay\nOne honest move, then another\nA little more room to begin\nI’m done blaming the weather\nI’m learning to work with the wind\nI’m learning to work with the wind"
+  },
+  {
+    "id": "c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+    "title": "Turn the Levers",
+    "url": "https://suno.com/song/c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+    "createdAt": "2026-09-25T16:18:57.781Z",
+    "durationSeconds": 220.76,
+    "genres": [
+      "IDM",
+      "ambient",
+      "cinematic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_c7497dcf-e1aa-400a-9e86-dae7252d30ff.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_c7497dcf-e1aa-400a-9e86-dae7252d30ff.jpeg",
+    "embedUrl": "https://suno.com/embed/c7497dcf-e1aa-400a-9e86-dae7252d30ff",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe weather took the afternoon\nThe train ran late again\nI spent an hour cursing clouds\nFor things I couldn’t bend\nThen I came home, cleared the table\nFound my notebook underneath\nOne small promise I could keep\nWas waiting there for me\n\n[Pre-Chorus]\nI can’t command the turning tide\nOr make the whole world move\nBut there are handles in my reach\nAnd work that I can choose\n\n[Chorus]\nI’ll turn the levers I can reach\nA little room, a little seed\nOne honest step, then one more step\nAnd build a life that feels like me\nThe wind can change, the road can bend\nI won’t spend all my strength on blame\nI’ll turn the levers I can reach\nAnd make a way, and make a way\n\n[Verse 2]\nI can’t decide who sees my worth\nOr when the doors swing wide\nBut I can learn, I can ask for help\nI can show up on my side\nPut the phone down, call my sister\nPlant the basil by the sink\nSome days hope is just a choice\nMade before you have time to think\n\n[Pre-Chorus]\nI can’t command the turning tide\nOr make the whole world move\nBut there are handles in my reach\nAnd work that I can choose\n\n[Chorus]\nI’ll turn the levers I can reach\nA little room, a little seed\nOne honest step, then one more step\nAnd build a life that feels like me\nThe wind can change, the road can bend\nI won’t spend all my strength on blame\nI’ll turn the levers I can reach\nAnd make a way, and make a way\n\n[Bridge]\nNot every door will open\nNot every plan will stay\nBut I can meet the morning\nWith something mine to shape\nA hand upon the handle\nA breath, a starting line\nThe future isn’t all decided\nThere’s still a part that’s mine\n\n[Final Chorus]\nI’ll turn the levers I can reach\nA little room, a little seed\nOne honest step, then one more step\nAnd build a life that feels like me\nThe wind can change, the road can bend\nI won’t spend all my strength on blame\nI’ll turn the levers I can reach\nAnd make a way, and make a way\n[Outro]\nOne small choice, one more day\nI can make a way"
+  },
+  {
+    "id": "4c9d027c-a708-4107-af33-3f9c599dd612",
+    "title": "One Brave Choice",
+    "url": "https://suno.com/song/4c9d027c-a708-4107-af33-3f9c599dd612",
+    "createdAt": "2026-09-25T16:18:51.430Z",
+    "durationSeconds": 212,
+    "genres": [
+      "IDM",
+      "cinematic ambient"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4c9d027c-a708-4107-af33-3f9c599dd612.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4c9d027c-a708-4107-af33-3f9c599dd612.jpeg",
+    "embedUrl": "https://suno.com/embed/4c9d027c-a708-4107-af33-3f9c599dd612",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe weather changed before I woke\nThe train ran late, the old bridge broke\nI spent the morning naming blame\nAs if the clouds could hear my name\n\n[Pre-Chorus]\nThen I found my hand upon the wheel\nOne small turn, one thing I could feel\n\n[Chorus]\nI can’t move the mountain, but I choose my next step\nI can’t call the sunrise, but I’m not done yet\nThere are levers in my reach, there’s a door I can begin\nI’ll build the life I’m living, one brave choice at a time\n\n[Verse 2]\nI can’t make the past unspend\nCan’t make every road bend\nBut I can clear the table, make a plan\nCall the friend, become the man\n\n[Pre-Chorus]\nNo more waiting on a perfect sky\nI can plant a seed and tend it dry\n\n[Chorus]\nI can’t move the mountain, but I choose my next step\nI can’t call the sunrise, but I’m not done yet\nThere are levers in my reach, there’s a door I can begin\nI’ll build the life I’m living, one brave choice at a time\n\n[Bridge]\nWhat I can’t command, I let pass through\nWhat I can change, I follow through\nA little less blame, a little more try\nA page, a promise, a clear reply\n\n[Final Chorus]\nI can’t move the mountain, but I choose my next step\nI can’t call the sunrise, but I’m not done yet\nThere are levers in my reach, there’s a door I can begin\nI’ll build the life I’m living, one brave choice at a time\nOne brave choice at a time\n\n[Outro]\nOne brave choice\nOne brave choice at a time"
+  },
+  {
     "id": "b4395686-9cc1-4130-ba7d-16cbab4c6aaf",
     "title": "The Small Thing Is Enough",
     "url": "https://suno.com/song/b4395686-9cc1-4130-ba7d-16cbab4c6aaf",
