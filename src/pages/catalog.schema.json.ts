@@ -5,10 +5,13 @@ export const GET: APIRoute = () => new Response(JSON.stringify({
   '$id': 'https://alexmercedmusic.com/catalog.schema.json',
   title: 'Alex Merced Music catalog',
   type: 'object',
-  required: ['schemaVersion', 'updatedAt', 'site', 'counts', 'songs', 'albums', 'suno'],
+  required: ['schemaVersion', 'updatedAt', 'site', 'counts', 'songs', 'videos', 'albums', 'suno'],
   properties: {
     schemaVersion: { type: 'string' }, updatedAt: { type: 'string', format: 'date' }, site: { type: 'string', format: 'uri' },
-    counts: { type: 'object' }, songs: { type: 'array', items: { '$ref': '#/$defs/song' } }, albums: { type: 'array' }, suno: { type: 'object' }, guides: { type: 'object' }, platforms: { type: 'array' },
+    counts: { type: 'object' }, songs: { type: 'array', items: { '$ref': '#/$defs/song' } }, videos: { type: 'array', items: { '$ref': '#/$defs/video' } }, albums: { type: 'array' }, suno: { type: 'object' }, guides: { type: 'object' }, platforms: { type: 'array' },
   },
-  '$defs': { song: { type: 'object', required: ['id', 'slug', 'title', 'era', 'kind', 'pageUrl', 'links'], properties: { id: { type: 'string' }, slug: { type: 'string' }, title: { type: 'string' }, era: { enum: ['acoustic', 'electronic', 'ai'] }, kind: { enum: ['archive', 'electronic', 'reimagined', 'generated'] }, pageUrl: { type: 'string', format: 'uri' }, links: { type: 'array', minItems: 1 } } } },
+  '$defs': {
+    song: { type: 'object', required: ['id', 'slug', 'title', 'era', 'kind', 'pageUrl', 'links', 'videoIds', 'relatedVideoIds'], properties: { id: { type: 'string' }, slug: { type: 'string' }, title: { type: 'string' }, era: { enum: ['acoustic', 'electronic', 'ai'] }, kind: { enum: ['archive', 'electronic', 'reimagined', 'generated'] }, pageUrl: { type: 'string', format: 'uri' }, links: { type: 'array', minItems: 1 }, videoIds: { type: 'array' }, relatedVideoIds: { type: 'array' } } },
+    video: { type: 'object', required: ['id', 'youtubeId', 'title', 'pageUrl', 'watchUrl', 'imageUrl', 'publishedAt', 'songIds', 'relatedSongIds'], properties: { id: { type: 'string' }, youtubeId: { type: 'string' }, title: { type: 'string' }, pageUrl: { type: 'string', format: 'uri' }, watchUrl: { type: 'string', format: 'uri' }, imageUrl: { type: 'string', format: 'uri' }, publishedAt: { type: 'string' }, songIds: { type: 'array' }, relatedSongIds: { type: 'array' } } },
+  },
 }), { headers: { 'content-type': 'application/schema+json; charset=utf-8' } });

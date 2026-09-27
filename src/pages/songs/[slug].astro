@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { CATALOG_UPDATED_AT, SITE, songById, songs, type CatalogSong } from '../../data/catalog-model';
+import { CATALOG_UPDATED_AT, SITE, songById, songs, videoById, type CatalogSong } from '../../data/catalog-model';
 
 export function getStaticPaths() {
   return songs.map((song) => ({ params: { slug: song.slug }, props: { song } }));
@@ -44,6 +44,8 @@ const songIndex = songs.findIndex((candidate) => candidate.id === song.id);
 const previous = songIndex > 0 ? songs[songIndex - 1] : undefined;
 const next = songIndex < songs.length - 1 ? songs[songIndex + 1] : undefined;
 const related = songs.filter((candidate) => candidate.id !== song.id && (candidate.album === song.album && song.album || candidate.kind === song.kind && candidate.genres?.some((genre) => song.genres?.includes(genre)))).slice(0, 4);
+const directVideos = song.videoIds.flatMap((id) => videoById.get(id) ?? []);
+const versionVideos = song.relatedVideoIds.filter((id) => !song.videoIds.includes(id)).flatMap((id) => videoById.get(id) ?? []);
 
 const jsonLd = [
   {
@@ -152,6 +154,23 @@ const jsonLd = [
           <div class="relationship__item" data-era="ai">
             <div><span class="eyebrow">Reimagined version</span><a class="song-link" href={related.pageUrl.replace(SITE, '')}>{related.title}</a></div>
             <div class="source-links">{related.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div>
+          </div>
+        ))}
+      </div>
+    )}
+    {(directVideos.length > 0 || versionVideos.length > 0) && (
+      <div class="shell relationship">
+        <h2>Music videos</h2>
+        {directVideos.map((video) => (
+          <div class="relationship__item">
+            <div><span class="eyebrow">Video for this recording</span><a class="song-link" href={video.pageUrl.replace(SITE, '')}>{video.title}</a></div>
+            <div class="source-links"><a href={video.watchUrl}>Watch on YouTube ↗</a></div>
+          </div>
+        ))}
+        {versionVideos.map((video) => (
+          <div class="relationship__item">
+            <div><span class="eyebrow">Video for another version</span><a class="song-link" href={video.pageUrl.replace(SITE, '')}>{video.title}</a></div>
+            <div class="source-links"><a href={video.watchUrl}>Watch on YouTube ↗</a></div>
           </div>
         ))}
       </div>

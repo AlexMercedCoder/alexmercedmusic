@@ -1,0 +1,62 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE, songById, videos, type CatalogVideo } from '../../data/catalog-model';
+
+export function getStaticPaths() {
+  return videos.map((video) => ({ params: { id: video.youtubeId.toLowerCase() }, props: { video } }));
+}
+
+const { video } = Astro.props as { video: CatalogVideo };
+const directSongs = video.songIds.flatMap((id) => songById.get(id) ?? []);
+const otherVersions = video.relatedSongIds.filter((id) => !video.songIds.includes(id)).flatMap((id) => songById.get(id) ?? []);
+const duration = video.durationSeconds ? `PT${Math.floor(video.durationSeconds / 60)}M${video.durationSeconds % 60}S` : undefined;
+const jsonLd = [{
+  '@type': 'VideoObject',
+  '@id': `${video.pageUrl}#video`,
+  name: video.title,
+  description: `${video.title}, a music video from Alex Merced Music.`,
+  thumbnailUrl: [video.imageUrl],
+  uploadDate: video.publishedAt,
+  contentUrl: video.watchUrl,
+  embedUrl: video.embedUrl,
+  ...(duration ? { duration } : {}),
+  creator: { '@id': `${SITE}/#musicgroup` },
+  ...(directSongs.length ? { about: directSongs.map((song) => ({ '@id': `${song.pageUrl}#recording` })) } : {}),
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Music videos', item: `${SITE}/videos/` },
+    { '@type': 'ListItem', position: 3, name: video.title, item: video.pageUrl },
+  ],
+}];
+---
+
+<Base title={video.title} description={`Watch ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`Video thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Music videos', href: '/videos/' }, { label: video.title }]} />
+  <article class="section detail">
+    <div class="shell detail__grid">
+      <div>
+        <p class="eyebrow">Music video</p>
+        <h1>{video.title}</h1>
+        <p class="lede">Watch the video, then follow its catalog connections to the song record, listening sources and other known versions.</p>
+        <dl class="facts">
+          <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
+          <div><dt>Published</dt><dd><time datetime={video.publishedAt}>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(video.publishedAt))}</time></dd></div>
+          {video.durationSeconds && <div><dt>Runtime</dt><dd>{Math.floor(video.durationSeconds / 60)}:{String(video.durationSeconds % 60).padStart(2, '0')}</dd></div>}
+          <div><dt>Song links</dt><dd>{directSongs.length ? `${directSongs.length} matching record${directSongs.length === 1 ? '' : 's'}` : 'No exact catalog match yet'}</dd></div>
+        </dl>
+        <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href={video.watchUrl}>Watch on YouTube ↗</a><button class="btn" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play here</button></div>
+      </div>
+      <div class="embed embed--poster"><img src={video.imageUrl} width="640" height="360" alt={`Video thumbnail for ${video.title}`} /><button class="btn btn--primary" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play video</button></div>
+    </div>
+
+    {(directSongs.length > 0 || otherVersions.length > 0) && <div class="shell relationship">
+      <h2>Song and version connections</h2>
+      {directSongs.map((song) => <div class="relationship__item" data-era={song.era}><div><span class="eyebrow">Matching song record</span><a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a></div><div class="source-links">{song.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
+      {otherVersions.map((song) => <div class="relationship__item" data-era={song.era}><div><span class="eyebrow">Other known version</span><a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a></div><div class="source-links">{song.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
+    </div>}
+    <div class="shell relationship"><div class="btn-row"><a class="btn" href="/videos/">Browse every video</a><a class="btn" href="/songs/">Explore every song</a></div></div>
+  </article>
+</Base>

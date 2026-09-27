@@ -11,11 +11,13 @@ Catalog updated: ${publicCatalog.updatedAt}
 Catalog schema: ${publicCatalog.schemaVersion}
 Songs: ${publicCatalog.counts.songs}
 Public Suno generations: ${publicCatalog.counts.sunoPublished}
+Public YouTube videos: ${publicCatalog.counts.videos}
 
 ## Primary pages
 
 - [Home](${publicCatalog.site}/)
 - [Explore songs](${publicCatalog.site}/songs/)
+- [Music videos](${publicCatalog.site}/videos/)
 - [Acoustic archive](${publicCatalog.site}/acoustic/)
 - [Electronic catalog](${publicCatalog.site}/electronic/)
 - [Reimagined songs](${publicCatalog.site}/reimagined/)
@@ -29,6 +31,7 @@ Public Suno generations: ${publicCatalog.counts.sunoPublished}
 - [Full versioned catalog](${publicCatalog.site}/catalog.json)
 - [Catalog JSON Schema](${publicCatalog.site}/catalog.schema.json)
 - [Lightweight song index](${publicCatalog.site}/song-index.json)
+- [Lightweight video index](${publicCatalog.site}/video-index.json)
 - [Full text catalog guide](${publicCatalog.site}/llms-full.txt)
 - [RSS feed](${publicCatalog.site}/feed.xml)
 - [JSON Feed](${publicCatalog.site}/feed.json)
@@ -43,7 +46,7 @@ ${recent.map((song) => `- [${song.title}](${song.pageUrl})${song.createdAt ? `, 
 
 ## Browser agent tools
 
-The site registers 17 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for discovery, get_song for an exact record, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, and the Suno prompting tools for focused reference work. Tool results return stable IDs and canonical URLs.
+The site registers 19 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for song discovery, list_videos and get_video for music video connections, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, and the Suno prompting tools for focused reference work. Tool results return stable IDs and canonical URLs.
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
 };

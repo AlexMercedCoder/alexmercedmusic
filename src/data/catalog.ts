@@ -45,7 +45,13 @@ export type Track = {
   lyrics?: string;
 };
 
-export type YouTubeMetadata = { publishedAt: string; title?: string; imageUrl?: string };
+export type YouTubeMetadata = {
+  publishedAt: string;
+  title?: string;
+  imageUrl?: string;
+  durationSeconds?: number;
+  channelPosition?: number;
+};
 export const youtubeMetadata = youtubeMetadataData as Record<string, YouTubeMetadata>;
 export type SunoPlaylist = {
   id: string;

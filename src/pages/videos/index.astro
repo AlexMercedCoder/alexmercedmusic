@@ -1,0 +1,78 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { SITE, songById, videos } from '../../data/catalog-model';
+
+const PAGE_SIZE = 48;
+const initialVideos = videos.slice(0, PAGE_SIZE);
+const connectedCount = videos.filter((video) => video.relatedSongIds.length).length;
+const jsonLd = [{
+  '@type': 'CollectionPage',
+  '@id': `${SITE}/videos/#page`,
+  name: 'Alex Merced music videos',
+  url: `${SITE}/videos/`,
+  about: { '@id': `${SITE}/#musicgroup` },
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: videos.length,
+    itemListElement: initialVideos.map((video, index) => ({ '@type': 'ListItem', position: index + 1, url: video.pageUrl, name: video.title })),
+  },
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Music videos', item: `${SITE}/videos/` },
+  ],
+}];
+---
+
+<Base title="Music videos" description={`Browse all ${videos.length} public videos from the Alex Merced Music YouTube channel and follow their connections to songs and alternate versions.`} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Music videos' }]} />
+  <section class="section section--tight">
+    <div class="shell">
+      <p class="eyebrow">YouTube video catalog</p>
+      <h1>See the songs</h1>
+      <p class="lede">All {videos.length} public uploads from the Alex Merced Music channel, with direct paths to matching song records and other known versions. {connectedCount} videos currently have a catalog connection.</p>
+    </div>
+  </section>
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="video-filters" aria-label="Video filters">
+        <label><span>Search</span><input id="video-query" type="search" placeholder="Video or song title" autocomplete="off" /></label>
+        <label><span>Connection</span><select id="video-connection"><option value="all">All videos</option><option value="linked">Linked to songs</option><option value="unlinked">Not yet linked</option></select></label>
+        <label><span>Sort</span><select id="video-sort"><option value="channel">Newest on channel</option><option value="oldest">Oldest first</option><option value="az">Title A-Z</option></select></label>
+      </div>
+      <div class="video-actions"><p id="video-count" aria-live="polite">Showing {initialVideos.length} of {videos.length} videos</p><button class="btn" id="video-reset" type="button">Reset filters</button></div>
+      <div class="video-grid" id="video-grid" aria-busy="false">
+        {initialVideos.map((video) => {
+          const connectedSongs = video.relatedSongIds.flatMap((id) => songById.get(id) ?? []);
+          return <article class="video-card">
+            <a class="video-card__image" href={video.pageUrl.replace(SITE, '')}><img src={video.imageUrl} width="480" height="270" loading="lazy" alt={`Video thumbnail for ${video.title}`} /></a>
+            <div class="video-card__body">
+              <p class="eyebrow">{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' }).format(new Date(video.publishedAt))}</p>
+              <h2><a href={video.pageUrl.replace(SITE, '')}>{video.title}</a></h2>
+              <p>{connectedSongs.length ? `${connectedSongs.length} connected song record${connectedSongs.length === 1 ? '' : 's'}` : 'No matching song record yet'}</p>
+              <div class="video-card__links"><a href={video.pageUrl.replace(SITE, '')}>Video details</a><a href={video.watchUrl}>Watch on YouTube ↗</a></div>
+            </div>
+          </article>;
+        })}
+      </div>
+      <p id="video-empty" class="empty" hidden>No videos match those filters.</p>
+      <div class="load-more"><button class="btn" type="button" id="video-more">Load more videos</button></div>
+      <noscript><p class="empty">The first {PAGE_SIZE} videos are listed above. The complete machine-readable index is available in <a href="/video-index.json">video-index.json</a>.</p></noscript>
+    </div>
+  </section>
+</Base>
+
+<style>
+  .video-filters{display:grid;grid-template-columns:minmax(14rem,2fr) repeat(2,minmax(10rem,1fr));gap:.8rem}.video-filters label{display:grid;gap:.35rem}.video-filters span{font:600 .68rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--ink-faint)}.video-filters input,.video-filters select{width:100%;min-height:2.7rem;padding:.62rem .7rem;border:1px solid var(--rule);border-radius:var(--radius);background:var(--night-800);color:var(--ink);font:inherit;font-size:.88rem}.video-actions{display:flex;align-items:center;gap:.8rem;margin:1rem 0 1.5rem}.video-actions p{margin:0 auto 0 0;color:var(--ink-faint);font:500 .8rem/1 var(--mono)}.video-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(18rem,1fr));gap:1rem}.video-card{overflow:hidden;background:var(--night-800);border:1px solid var(--rule);border-radius:var(--radius)}.video-card__image{display:block;aspect-ratio:16/9;background:var(--night-700)}.video-card__image img{width:100%;height:100%;object-fit:cover}.video-card__body{display:flex;flex-direction:column;gap:.55rem;padding:1rem}.video-card .eyebrow{margin:0}.video-card h2{font-size:1.05rem;line-height:1.25}.video-card h2 a{text-decoration:none}.video-card h2 a:hover{text-decoration:underline;text-underline-offset:.18em}.video-card p{margin:0;color:var(--ink-soft);font-size:.88rem}.video-card__links{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:.3rem}.video-card__links a{color:var(--electronic);font:650 .72rem/1 var(--mono);text-decoration:none}.video-card__links a:hover{color:var(--ink);text-decoration:underline}.load-more{display:flex;justify-content:center;margin-top:1.5rem}@media(max-width:700px){.video-filters{grid-template-columns:1fr}}
+</style>
+
+<script>
+  type VideoItem={id:string;youtubeId:string;title:string;pageUrl:string;watchUrl:string;imageUrl:string;publishedAt:string;durationSeconds:number;songIds:string[];relatedSongIds:string[]};
+  const PAGE_SIZE=48;const grid=document.getElementById('video-grid')!;const query=document.getElementById('video-query') as HTMLInputElement;const connection=document.getElementById('video-connection') as HTMLSelectElement;const sort=document.getElementById('video-sort') as HTMLSelectElement;const count=document.getElementById('video-count')!;const empty=document.getElementById('video-empty')!;const more=document.getElementById('video-more') as HTMLButtonElement;let all:VideoItem[]=[];let matched:VideoItem[]=[];let visible=PAGE_SIZE;
+  const element=(tag:string,className?:string,text?:string)=>{const node=document.createElement(tag);if(className)node.className=className;if(text)node.textContent=text;return node};
+  const render=()=>{grid.replaceChildren();for(const video of matched.slice(0,visible)){const card=element('article','video-card');const imageLink=element('a','video-card__image') as HTMLAnchorElement;imageLink.href=video.pageUrl;const image=document.createElement('img');image.src=video.imageUrl;image.width=480;image.height=270;image.loading='lazy';image.alt=`Video thumbnail for ${video.title}`;imageLink.append(image);const body=element('div','video-card__body');const date=element('p','eyebrow',new Intl.DateTimeFormat('en-US',{year:'numeric',month:'short',day:'numeric',timeZone:'UTC'}).format(new Date(video.publishedAt)));const heading=document.createElement('h2');const detail=document.createElement('a');detail.href=video.pageUrl;detail.textContent=video.title;heading.append(detail);const note=element('p','',video.relatedSongIds.length?`${video.relatedSongIds.length} connected song record${video.relatedSongIds.length===1?'':'s'}`:'No matching song record yet');const links=element('div','video-card__links');const details=document.createElement('a');details.href=video.pageUrl;details.textContent='Video details';const watch=document.createElement('a');watch.href=video.watchUrl;watch.textContent='Watch on YouTube ↗';links.append(details,watch);body.append(date,heading,note,links);card.append(imageLink,body);grid.append(card)}count.textContent=`Showing ${Math.min(visible,matched.length)} of ${matched.length} matching videos (${all.length} total)`;empty.hidden=matched.length>0;more.hidden=visible>=matched.length;grid.setAttribute('aria-busy','false')};
+  const apply=()=>{visible=PAGE_SIZE;const term=query.value.trim().toLowerCase();matched=all.filter((video)=>(!term||video.title.toLowerCase().includes(term))&&(connection.value==='all'||(connection.value==='linked'&&video.relatedSongIds.length>0)||(connection.value==='unlinked'&&video.relatedSongIds.length===0)));matched.sort((a,b)=>sort.value==='az'?a.title.localeCompare(b.title):sort.value==='oldest'?Date.parse(a.publishedAt)-Date.parse(b.publishedAt):Date.parse(b.publishedAt)-Date.parse(a.publishedAt));const params=new URLSearchParams();if(term)params.set('q',term);if(connection.value!=='all')params.set('connection',connection.value);if(sort.value!=='channel')params.set('sort',sort.value);history.replaceState(null,'',`${location.pathname}${params.size?`?${params}`:''}`);render()};
+  const params=new URLSearchParams(location.search);query.value=params.get('q')??'';for(const [control,key] of [[connection,'connection'],[sort,'sort']] as const){const value=params.get(key);if(value&&[...control.options].some((option)=>option.value===value))control.value=value}grid.setAttribute('aria-busy','true');fetch('/video-index.json').then((response)=>{if(!response.ok)throw new Error(String(response.status));return response.json()}).then((data)=>{all=data.videos;apply()}).catch(()=>{grid.setAttribute('aria-busy','false');count.textContent='The full video index could not load. The first videos remain available.';more.hidden=true});for(const control of [query,connection,sort])control.addEventListener(control===query?'input':'change',apply);more.addEventListener('click',()=>{visible+=PAGE_SIZE;render()});document.getElementById('video-reset')!.addEventListener('click',()=>{query.value='';connection.value='all';sort.value='channel';apply()});
+</script>

@@ -4,13 +4,14 @@ import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
   albums, electronicStats, electronicRuntime, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
-import { SITE, songByPrimaryUrl } from '../data/catalog-model';
+import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
 
 const paired = reimagined;
 const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 const recentSuno = sunoSongs.slice(0, 6);
 const featuredPlaylists = sunoPlaylists.filter((playlist) => playlist.collectionType === 'album');
+const recentVideos = videos.slice(0, 3);
 
 const jsonLd = [
   {
@@ -48,6 +49,7 @@ const jsonLd = [
           </div>
           <div class="btn-row" style="margin-top:1.6rem">
             <a class="btn btn--primary" href="/songs/">Explore every song</a>
+            <a class="btn" href="/videos/">Browse music videos</a>
             <a class="btn" href="/stories/start-here/">Start listening</a>
           </div>
         </div>
@@ -64,8 +66,19 @@ const jsonLd = [
         <div data-era="acoustic"><b>{acousticTracks.length}</b><span>Acoustic recordings</span></div>
         <div data-era="electronic"><b>{electronicStats.total}</b><span>Electronic tracks</span></div>
         <div data-era="ai"><b>{sunoPublishedCount}</b><span>Public Suno generations</span></div>
+        <div data-era="electronic"><b>{videos.length}</b><span>Music videos</span></div>
         <div data-era="all"><b>20</b><span>Years of it</span></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="shell">
+      <div class="section__head"><p class="eyebrow">Watch and connect</p><h2>Music videos with the full story attached</h2><p>Each video page links to the matching song record, its listening sources and other known versions.</p></div>
+      <div class="grid grid--3">
+        {recentVideos.map((video) => <article class="card"><img class="video-thumb" src={video.imageUrl} width="480" height="270" loading="lazy" alt={`Video thumbnail for ${video.title}`} /><h3><a href={video.pageUrl.replace(SITE, '')}>{video.title}</a></h3><p>{video.relatedSongIds.length ? `${video.relatedSongIds.length} connected song record${video.relatedSongIds.length === 1 ? '' : 's'}` : 'Channel video'}</p><div class="source-links"><a href={video.pageUrl.replace(SITE, '')}>Details</a><a href={video.watchUrl}>YouTube ↗</a></div></article>)}
+      </div>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/videos/">Browse all {videos.length} videos</a></div>
     </div>
   </section>
 
@@ -208,3 +221,5 @@ const jsonLd = [
     </div>
   </section>
 </Base>
+
+<style>.video-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);border-radius:var(--radius)}</style>

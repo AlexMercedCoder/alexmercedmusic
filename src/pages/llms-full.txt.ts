@@ -21,7 +21,11 @@ ${publicCatalog.albums.map((album) => `### ${album.title}\n\n- Page: ${album.pag
 
 ## Every song
 
-${publicCatalog.songs.map((song) => `### ${song.title}\n\n- ID: ${song.id}\n- Page: ${song.pageUrl}\n- Era: ${song.era}\n- Kind: ${song.kind}\n- Description: ${song.description}\n- Sources: ${song.links.map((link) => `${link.label}: ${link.url}`).join('; ')}${song.createdAt ? `\n- Published: ${song.createdAt}` : ''}${song.album ? `\n- Album: ${song.album}` : ''}${song.originalPageUrl ? `\n- Original: ${song.originalPageUrl}` : ''}${song.reimaginedPageUrls?.length ? `\n- Reimagined versions: ${song.reimaginedPageUrls.join(', ')}` : ''}`).join('\n\n')}
+${publicCatalog.songs.map((song) => `### ${song.title}\n\n- ID: ${song.id}\n- Page: ${song.pageUrl}\n- Era: ${song.era}\n- Kind: ${song.kind}\n- Description: ${song.description}\n- Sources: ${song.links.map((link) => `${link.label}: ${link.url}`).join('; ')}${song.createdAt ? `\n- Published: ${song.createdAt}` : ''}${song.album ? `\n- Album: ${song.album}` : ''}${song.originalPageUrl ? `\n- Original: ${song.originalPageUrl}` : ''}${song.reimaginedPageUrls?.length ? `\n- Reimagined versions: ${song.reimaginedPageUrls.join(', ')}` : ''}${song.relatedVideoIds.length ? `\n- Related video IDs: ${song.relatedVideoIds.join(', ')}` : ''}`).join('\n\n')}
+
+## Every music video
+
+${publicCatalog.videos.map((video) => `### ${video.title}\n\n- ID: ${video.id}\n- Page: ${video.pageUrl}\n- YouTube: ${video.watchUrl}\n- Published: ${video.publishedAt}\n- Matching song IDs: ${video.songIds.join(', ') || 'None'}\n- Related song IDs: ${video.relatedSongIds.join(', ') || 'None'}`).join('\n\n')}
 
 ## API resources
 
@@ -29,6 +33,7 @@ ${publicCatalog.songs.map((song) => `### ${song.title}\n\n- ID: ${song.id}\n- Pa
 - ${publicCatalog.site}/catalog.json
 - ${publicCatalog.site}/catalog.schema.json
 - ${publicCatalog.site}/song-index.json
+- ${publicCatalog.site}/video-index.json
 - ${publicCatalog.site}/webmcp/
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });

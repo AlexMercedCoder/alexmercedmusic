@@ -9,13 +9,17 @@ const songIds = new Set(catalog.songs.map((song) => song.id));
 const songSlugs = new Set(catalog.songs.map((song) => song.slug));
 const songPages = new Set(catalog.songs.map((song) => song.pageUrl));
 const albumIds = new Set(catalog.albums.map((album) => album.id));
+const videoIds = new Set(catalog.videos.map((video) => video.id));
+const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.7.0');
+assert.equal(catalog.schemaVersion, '1.8.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
 assert.equal(albumIds.size, catalog.albums.length, 'Album IDs must be unique.');
+assert.equal(videoIds.size, catalog.videos.length, 'Video IDs must be unique.');
+assert.equal(youtubeIds.size, catalog.videos.length, 'YouTube IDs must be unique.');
 assert.equal(catalog.counts.songs, catalog.songs.length);
 assert.equal(catalog.counts.albums, catalog.albums.length);
 
@@ -33,6 +37,8 @@ for (const song of catalog.songs) {
     assert.ok(original.reimaginedTrackIds?.includes(song.id), `${song.title} is missing its reverse relationship.`);
   }
   for (const relatedId of song.reimaginedTrackIds ?? []) assert.ok(songIds.has(relatedId));
+  for (const videoId of song.videoIds) assert.ok(videoIds.has(videoId), `${song.title} points to a missing video.`);
+  for (const videoId of song.relatedVideoIds) assert.ok(videoIds.has(videoId), `${song.title} points to a missing related video.`);
 
   const pagePath = new URL(`dist/songs/${song.slug}/index.html`, root);
   assert.ok(existsSync(pagePath), `Missing built page for ${song.title}.`);
@@ -48,6 +54,26 @@ for (const song of catalog.songs) {
   assert.ok(html.includes('MusicRecording'), `${song.title} is missing recording structured data.`);
   assert.ok(existsSync(new URL(`dist/social/songs/${song.slug}.png`, root)), `${song.title} is missing its social image.`);
   for (const link of song.links) assert.ok(html.includes(link.url.replaceAll('&', '&amp;')) || html.includes(link.url), `${song.title} is missing ${link.url}.`);
+}
+
+assert.equal(catalog.counts.videos, catalog.videos.length);
+assert.ok(catalog.videos.length > 150, 'The public YouTube inventory is unexpectedly small.');
+assert.ok(catalog.videos.filter((video) => video.relatedSongIds.length).length >= 140, 'Too few videos are connected to song records.');
+for (const video of catalog.videos) {
+  assert.equal(video.id, `video:youtube:${video.youtubeId}`);
+  assert.equal(video.pageUrl, `${catalog.site}/videos/${video.youtubeId.toLowerCase()}/`);
+  assert.equal(video.watchUrl, `https://www.youtube.com/watch?v=${video.youtubeId}`);
+  assert.ok(video.title && video.imageUrl && video.publishedAt && video.channelPosition > 0, `${video.youtubeId} has incomplete metadata.`);
+  for (const songId of video.songIds) assert.ok(songIds.has(songId), `${video.title} points to a missing song.`);
+  for (const songId of video.relatedSongIds) assert.ok(songIds.has(songId), `${video.title} points to a missing related song.`);
+  const html = read(`dist/videos/${video.youtubeId.toLowerCase()}/index.html`);
+  assert.ok(html.includes('VideoObject') && html.includes('BreadcrumbList'), `${video.title} is missing structured data.`);
+  assert.ok(!/<iframe[^>]+src=/.test(html), `${video.title} loads YouTube before user intent.`);
+  assert.ok(html.includes(video.watchUrl.replaceAll('&', '&amp;')) || html.includes(video.watchUrl), `${video.title} is missing its YouTube source.`);
+  for (const songId of video.relatedSongIds) {
+    const song = catalog.songs.find((candidate) => candidate.id === songId);
+    assert.ok(html.includes(song.pageUrl.replace(catalog.site, '')), `${video.title} is missing its ${song.title} relationship.`);
+  }
 }
 
 for (const album of catalog.albums) {
@@ -72,9 +98,11 @@ assert.equal(sunoPlaylists.length, sourceSunoPlaylists.length);
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
 assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel && playlist.trackIds.length > 0 && playlist.sourceTracks.length === playlist.songCount && playlist.pageUrl));
 assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
-assert.equal(Object.keys(JSON.parse(read('src/data/youtube-metadata.json'))).length, 79);
+const sourceYoutubeMetadata = JSON.parse(read('src/data/youtube-metadata.json'));
+assert.ok(Object.keys(sourceYoutubeMetadata).length >= catalog.videos.length);
+assert.equal(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).length, catalog.videos.length);
 
-for (const path of ['dist/songs/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
+for (const path of ['dist/songs/index.html', 'dist/videos/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/video-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
 }
 const promptingPage = read('dist/suno-prompting-guide/index.html');
@@ -94,6 +122,9 @@ assert.equal((explorer.match(/<article class="song-card/g) ?? []).length, 48, 'T
 const songIndex = JSON.parse(read('dist/song-index.json'));
 assert.equal(songIndex.count, catalog.songs.length);
 for (const pageUrl of songPages) assert.ok(songIndex.songs.some((song) => song.pageUrl === pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the lightweight song index.`);
+const videoIndex = JSON.parse(read('dist/video-index.json'));
+assert.equal(videoIndex.count, catalog.videos.length);
+for (const video of catalog.videos) assert.ok(videoIndex.videos.some((item) => item.id === video.id && item.pageUrl === video.pageUrl.replace(catalog.site, '')), `${video.title} is missing from the lightweight video index.`);
 assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
 const sunoPage = read('dist/suno/index.html');
@@ -108,6 +139,7 @@ for (const playlist of sunoPlaylists) {
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
 for (const album of catalog.albums) assert.ok(sitemap.includes(`<loc>${album.pageUrl}</loc>`));
+for (const video of catalog.videos) assert.ok(sitemap.includes(`<loc>${video.pageUrl}</loc>`), `${video.title} is missing from the sitemap.`);
 assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/suno-prompting-guide/</loc>'));
 
 const webMcpSource = read('src/components/WebMCP.astro');
@@ -144,7 +176,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -167,6 +199,13 @@ assert.equal(generated.items.length, 5);
 const recent = JSON.parse(await getTool('get_recent_songs').execute({ limit: 5 }));
 assert.equal(recent.items.length, 5);
 assert.ok(recent.items.every((song) => song.createdAt));
+const listedVideos = JSON.parse(await getTool('list_videos').execute({ connection: 'linked', limit: 5 }));
+assert.ok(listedVideos.totalResults >= 140 && listedVideos.items.length === 5);
+assert.ok(listedVideos.items.every((video) => video.relatedSongIds.length));
+const exactVideo = JSON.parse(await getTool('get_video').execute({ youtubeId: '6CjtRMTSjTw' }));
+assert.equal(exactVideo.video.youtubeId, '6CjtRMTSjTw');
+assert.ok(exactVideo.songs.some((song) => song.title === 'Solemn Thoughts'));
+assert.ok(exactVideo.otherVersions.some((song) => song.title === 'Eadd9 Improv'));
 const comparison = JSON.parse(await getTool('compare_versions').execute({ id: solemn.id }));
 assert.equal(comparison.original.id, solemn.originalTrackId);
 assert.ok(comparison.reimagined.some((song) => song.id === solemn.id));
@@ -202,4 +241,4 @@ const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));
 
-console.log(`Validated ${catalog.songs.length} song pages, ${catalog.albums.length} album pages, ${catalog.songs.reduce((count, song) => count + song.links.length, 0)} listening links, rich source metadata, feeds, social images, sitemap coverage, structured data, and ${registered.length} WebMCP tools.`);
+console.log(`Validated ${catalog.songs.length} song pages, ${catalog.videos.length} video pages, ${catalog.albums.length} album pages, ${catalog.songs.reduce((count, song) => count + song.links.length, 0)} listening links, rich source metadata, feeds, social images, sitemap coverage, structured data, and ${registered.length} WebMCP tools.`);

@@ -18,8 +18,8 @@ import {
 import { sunoPromptingGuide } from './suno-prompting-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.7.0';
-export const CATALOG_UPDATED_AT = '2026-09-25';
+export const CATALOG_SCHEMA_VERSION = '1.8.0';
+export const CATALOG_UPDATED_AT = '2026-09-27';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -58,6 +58,23 @@ export type CatalogSong = {
   originalPageUrl?: string;
   reimaginedTrackIds?: string[];
   reimaginedPageUrls?: string[];
+  videoIds: string[];
+  relatedVideoIds: string[];
+};
+
+export type CatalogVideo = {
+  id: string;
+  youtubeId: string;
+  title: string;
+  pageUrl: string;
+  watchUrl: string;
+  embedUrl: string;
+  imageUrl: string;
+  publishedAt: string;
+  durationSeconds?: number;
+  channelPosition: number;
+  songIds: string[];
+  relatedSongIds: string[];
 };
 
 export type CatalogAlbum = {
@@ -126,7 +143,7 @@ const linksFor = (
     }));
 };
 
-type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls'> & {
+type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
   key: string;
   originalTitle?: string;
 };
@@ -262,7 +279,7 @@ for (const song of reimaginedWithOriginals) {
   rebuildsByOriginal.set(song.originalTrackId, related);
 }
 
-export const songs: CatalogSong[] = reimaginedWithOriginals.map(({ key: _key, originalTitle: _originalTitle, ...song }) => {
+const baseSongs = reimaginedWithOriginals.map(({ key: _key, originalTitle: _originalTitle, ...song }) => {
   const rebuilds = rebuildsByOriginal.get(song.id) ?? [];
   return {
     ...song,
@@ -272,6 +289,85 @@ export const songs: CatalogSong[] = reimaginedWithOriginals.map(({ key: _key, or
     } : {}),
   };
 });
+
+const normalizeVideoTitle = (value: string) => value
+  .normalize('NFKD')
+  .replace(/[\u0300-\u036f]/g, '')
+  .replace(/^new song\s+/i, '')
+  .replace(/^alex merced\s*[-–:]\s*/i, '')
+  .replace(/\s*[([][^)\]]*(?:cover|music video|theme song|alexmercedmusic\.com)[^)\]]*[)\]]\s*$/i, '')
+  .replace(/\s*[([]\s*(?:official\s+)?(?:ai[- ]generated\s+)?(?:music\s+)?(?:video|song)(?:\s+video)?\s*[)\]]\s*$/i, '')
+  .replace(/\s+music video\s*$/i, '')
+  .replace(/\s*[-–|:]\s*(?:official\s+)?(?:ai[- ]generated\s+)?(?:music\s+)?(?:video|song)(?:\s+video)?\s*$/i, '')
+  .replace(/\b(?:official music video|ai[- ]generated song)\b/gi, '')
+  .replace(/&/g, ' and ')
+  .replace(/[^a-z0-9]+/gi, ' ')
+  .trim()
+  .toLowerCase();
+
+const videoTitleAliases: Record<string, string[]> = {
+  'your open hands': ['open hands'],
+  'the lake remembers iceberg': ['the lake remembers'],
+  'solumn thoughts': ['solemn thoughts'],
+  'try to forget': ['try to forget you'],
+  'birthday': ['birthday song'],
+  'the open lakehouse': ['the iceberg open lakehouse'],
+};
+
+const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
+  .filter((link) => link.source === 'youtube')
+  .flatMap((link) => {
+    const id = youtubeId(link.url);
+    return id ? [[id, song] as const] : [];
+  })));
+const songsByNormalizedTitle = new Map<string, typeof baseSongs>();
+for (const song of baseSongs) {
+  const title = normalizeVideoTitle(song.title);
+  const matches = songsByNormalizedTitle.get(title) ?? [];
+  matches.push(song);
+  songsByNormalizedTitle.set(title, matches);
+}
+const relatedSongIdsFor = (songIds: string[]) => {
+  const ids = new Set(songIds);
+  for (const id of songIds) {
+    const song = baseSongs.find((candidate) => candidate.id === id);
+    if (!song) continue;
+    if (song.originalTrackId) ids.add(song.originalTrackId);
+    for (const relatedId of song.reimaginedTrackIds ?? []) ids.add(relatedId);
+  }
+  return [...ids];
+};
+
+export const videos: CatalogVideo[] = Object.entries(youtubeMetadata)
+  .filter(([, metadata]) => metadata.channelPosition)
+  .map(([id, metadata]) => {
+    const sourceSong = sourceSongByYoutubeId.get(id);
+    const normalizedTitle = normalizeVideoTitle(metadata.title ?? '');
+    const matchTitles = [normalizedTitle, ...(videoTitleAliases[normalizedTitle] ?? [])];
+    const titleMatches = matchTitles.flatMap((title) => songsByNormalizedTitle.get(title) ?? []);
+    const songIds = [...new Set(sourceSong ? [sourceSong.id] : titleMatches.map((song) => song.id))];
+    return {
+      id: `video:youtube:${id}`,
+      youtubeId: id,
+      title: metadata.title ?? id,
+      pageUrl: `${SITE}/videos/${id.toLowerCase()}/`,
+      watchUrl: `https://www.youtube.com/watch?v=${id}`,
+      embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
+      imageUrl: metadata.imageUrl ?? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
+      publishedAt: metadata.publishedAt,
+      durationSeconds: metadata.durationSeconds,
+      channelPosition: metadata.channelPosition!,
+      songIds,
+      relatedSongIds: relatedSongIdsFor(songIds),
+    };
+  })
+  .sort((left, right) => left.channelPosition - right.channelPosition);
+
+export const songs: CatalogSong[] = baseSongs.map((song) => ({
+  ...song,
+  videoIds: videos.filter((video) => video.songIds.includes(song.id)).map((video) => video.id),
+  relatedVideoIds: videos.filter((video) => video.relatedSongIds.includes(song.id)).map((video) => video.id),
+}));
 
 export const catalogAlbums: CatalogAlbum[] = albums.map((album) => ({
   id: `album:${slugify(album.title)}`,
@@ -289,6 +385,8 @@ export const songById = new Map(songs.map((song) => [song.id, song]));
 export const songBySlug = new Map(songs.map((song) => [song.slug, song]));
 export const songByPrimaryUrl = new Map(songs.flatMap((song) => song.links.map((link) => [link.url, song] as const)));
 export const albumById = new Map(catalogAlbums.map((album) => [album.id, album]));
+export const videoById = new Map(videos.map((video) => [video.id, video]));
+export const videoByYoutubeId = new Map(videos.map((video) => [video.youtubeId, video]));
 
 export const catalogSunoPlaylists = sunoPlaylists.map(({ tracks: sourceTracks, ...playlist }) => ({
   ...playlist,
@@ -313,11 +411,13 @@ export const publicCatalog = {
     albums: catalogAlbums.length,
     sunoPublished: sunoPublishedCount,
     sunoPlaylists: sunoPlaylists.length,
+    videos: videos.length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
   suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: catalogSunoPlaylists },
   guides: { sunoPrompting: sunoPromptingGuide },
   songs,
+  videos,
   albums: catalogAlbums,
   platforms,
 };
