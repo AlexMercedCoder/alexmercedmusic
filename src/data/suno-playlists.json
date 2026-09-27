@@ -4,8 +4,8 @@
     "name": "Yes, I’m Weird",
     "url": "https://suno.com/playlist/959db630-c0a1-472a-8bf2-250613adcfdf",
     "imageUrl": "https://cdn2.suno.ai/image_e0ee7e1f-c677-403a-b334-7c091372936a.jpeg",
-    "songCount": 24,
-    "durationSeconds": 5675.960000000001,
+    "songCount": 32,
+    "durationSeconds": 7845.840000000002,
     "trackIds": [
       "e0ee7e1f-c677-403a-b334-7c091372936a",
       "892fb5de-ec4a-4ad2-b33c-3836cc248f5f",
@@ -30,7 +30,15 @@
       "af90a7e3-f85c-438b-86da-b98b5c9d8f01",
       "fe7b6c09-2741-4856-a616-f85944471384",
       "1492af5a-ea5e-4a72-83f1-36e9e355be54",
-      "5eef16c6-f3f1-4828-a623-abaff75cbcbc"
+      "5eef16c6-f3f1-4828-a623-abaff75cbcbc",
+      "87298331-5783-4b6e-9057-6e962f95dd7f",
+      "bcf7f25f-1443-4485-9b60-0b20e5f8a966",
+      "b0df0884-4aca-4dca-bcfb-31daa5caa5b5",
+      "be55db0f-853f-4f29-af21-e9ea09473733",
+      "5f360053-e566-4e51-ab0f-62fcabc7e50f",
+      "6d1513c3-cf4a-480b-9747-3f7fd5ebb075",
+      "64517c16-52a3-499f-af24-6a7b7719e1da",
+      "606fd19e-97d8-4ca1-8022-eb4574e0dc6d"
     ],
     "tracks": [
       {
@@ -224,6 +232,70 @@
         "createdAt": "2026-09-26T22:46:42.629Z",
         "durationSeconds": 236.4,
         "imageUrl": "https://cdn2.suno.ai/image_5eef16c6-f3f1-4828-a623-abaff75cbcbc.jpeg"
+      },
+      {
+        "id": "87298331-5783-4b6e-9057-6e962f95dd7f",
+        "title": "Give Your Impossible a Name",
+        "url": "https://suno.com/song/87298331-5783-4b6e-9057-6e962f95dd7f",
+        "createdAt": "2026-09-27T13:00:43.728Z",
+        "durationSeconds": 252.8,
+        "imageUrl": "https://cdn2.suno.ai/image_87298331-5783-4b6e-9057-6e962f95dd7f.jpeg"
+      },
+      {
+        "id": "bcf7f25f-1443-4485-9b60-0b20e5f8a966",
+        "title": "The Door Inside You",
+        "url": "https://suno.com/song/bcf7f25f-1443-4485-9b60-0b20e5f8a966",
+        "createdAt": "2026-09-27T13:16:26.750Z",
+        "durationSeconds": 258,
+        "imageUrl": "https://cdn2.suno.ai/image_bcf7f25f-1443-4485-9b60-0b20e5f8a966.jpeg"
+      },
+      {
+        "id": "b0df0884-4aca-4dca-bcfb-31daa5caa5b5",
+        "title": "Lay the Better Ground",
+        "url": "https://suno.com/song/b0df0884-4aca-4dca-bcfb-31daa5caa5b5",
+        "createdAt": "2026-09-27T13:38:54.237Z",
+        "durationSeconds": 260.8,
+        "imageUrl": "https://cdn2.suno.ai/image_b0df0884-4aca-4dca-bcfb-31daa5caa5b5.jpeg"
+      },
+      {
+        "id": "be55db0f-853f-4f29-af21-e9ea09473733",
+        "title": "The Painful Gift",
+        "url": "https://suno.com/song/be55db0f-853f-4f29-af21-e9ea09473733",
+        "createdAt": "2026-09-27T14:50:24.272Z",
+        "durationSeconds": 247.6,
+        "imageUrl": "https://cdn2.suno.ai/image_be55db0f-853f-4f29-af21-e9ea09473733.jpeg"
+      },
+      {
+        "id": "5f360053-e566-4e51-ab0f-62fcabc7e50f",
+        "title": "Find the Frame",
+        "url": "https://suno.com/song/5f360053-e566-4e51-ab0f-62fcabc7e50f",
+        "createdAt": "2026-09-27T14:50:24.272Z",
+        "durationSeconds": 264,
+        "imageUrl": "https://cdn2.suno.ai/image_5f360053-e566-4e51-ab0f-62fcabc7e50f.jpeg"
+      },
+      {
+        "id": "6d1513c3-cf4a-480b-9747-3f7fd5ebb075",
+        "title": "Strange Is a Key",
+        "url": "https://suno.com/song/6d1513c3-cf4a-480b-9747-3f7fd5ebb075",
+        "createdAt": "2026-09-27T14:48:17.652Z",
+        "durationSeconds": 257.88,
+        "imageUrl": "https://cdn2.suno.ai/image_6d1513c3-cf4a-480b-9747-3f7fd5ebb075.jpeg"
+      },
+      {
+        "id": "64517c16-52a3-499f-af24-6a7b7719e1da",
+        "title": "I See It Sideways",
+        "url": "https://suno.com/song/64517c16-52a3-499f-af24-6a7b7719e1da",
+        "createdAt": "2026-09-27T14:56:09.580Z",
+        "durationSeconds": 289.6,
+        "imageUrl": "https://cdn2.suno.ai/image_64517c16-52a3-499f-af24-6a7b7719e1da.jpeg"
+      },
+      {
+        "id": "606fd19e-97d8-4ca1-8022-eb4574e0dc6d",
+        "title": "Stand Strange",
+        "url": "https://suno.com/song/606fd19e-97d8-4ca1-8022-eb4574e0dc6d",
+        "createdAt": "2026-09-27T15:04:59.865Z",
+        "durationSeconds": 339.2,
+        "imageUrl": "https://cdn2.suno.ai/image_606fd19e-97d8-4ca1-8022-eb4574e0dc6d.jpeg"
       }
     ]
   },
