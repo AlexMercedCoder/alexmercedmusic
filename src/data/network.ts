@@ -23,6 +23,7 @@ export const networkGroups: NetworkGroup[] = [
     links: [
       { label: 'OpenDataLakehouse.com', url: 'https://opendatalakehouse.com' },
       { label: 'SemanticLakehouse.com', url: 'https://semanticlakehouse.com' },
+      { label: 'OpenLakehouse.AlexMerced.com', url: 'https://openlakehouse.alexmerced.com' },
       { label: 'IcebergLakehouse.com', url: 'https://iceberglakehouse.com' },
       { label: 'AgenticLakehouse.com', url: 'https://agenticlakehouse.com' },
       { label: 'AgenticAnalyticsNow.com', url: 'https://agenticanalyticsnow.com' },
@@ -48,7 +49,10 @@ export const networkGroups: NetworkGroup[] = [
       { label: 'AlexMercedCoder.dev', url: 'https://alexmercedcoder.dev' },
       { label: 'AlexMercedData.com', url: 'https://alexmerceddata.com' },
       { label: 'AlexMercedMedia.com', url: 'https://alexmercedmedia.com' },
+      { label: 'Branding.AlexMerced.com', url: 'https://branding.alexmerced.com' },
       { label: 'AlexMercedMusic.com', url: 'https://alexmercedmusic.com' },
+      { label: 'AlexMercedLibertarian.com', url: 'https://alexmercedlibertarian.com' },
+      { label: 'D6Storyteller.AlexMerced.com', url: 'https://d6storyteller.alexmerced.com' },
       { label: 'Books by Alex Merced', url: 'https://books.alexmerced.com' },
       { label: 'Resources', url: 'https://resources.alexmerced.com' },
     ],
