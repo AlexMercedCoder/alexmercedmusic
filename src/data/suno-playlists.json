@@ -1,11 +1,188 @@
 [
   {
+    "id": "1836d5f8-3071-4705-a554-80361e384d2f",
+    "name": "Less Debate, More Understanding",
+    "url": "https://suno.com/playlist/1836d5f8-3071-4705-a554-80361e384d2f",
+    "imageUrl": "https://cdn2.suno.ai/image_042592c9-9609-4518-b8dc-1727d8198133.jpeg",
+    "songCount": 13,
+    "durationSeconds": 3478.32,
+    "trackIds": [
+      "042592c9-9609-4518-b8dc-1727d8198133",
+      "5838b473-c6d8-4585-beb1-92a8c6f2d7c6",
+      "2d6eacf1-85b4-4e7c-bcd7-a38e237d15ae",
+      "aa0413cd-7e88-465b-9160-0a9cd37322a3",
+      "d0bd49b2-ca39-4e54-82a5-c1af66d03210",
+      "43780c31-3642-4910-8ebb-75490dbf3d93",
+      "5f8c552c-1a40-4c0e-b54b-b1a2974abfd2",
+      "763b234f-90ed-454c-947b-a5608d364646",
+      "3d91d0bd-f5d1-4181-849b-7a9ba49ddba1",
+      "7e8ede16-f6fb-4563-828c-99e4c8c11a6c",
+      "1d61ffc2-4c96-4ea7-bbc8-4680a475a7af",
+      "e0a9af05-091f-41cb-8618-4042143fd762",
+      "7a4f3903-5446-483f-98a8-13ba0634b9ae"
+    ],
+    "tracks": [
+      {
+        "id": "042592c9-9609-4518-b8dc-1727d8198133",
+        "title": "Leave a Little Room Inside",
+        "url": "https://suno.com/song/042592c9-9609-4518-b8dc-1727d8198133",
+        "createdAt": "2026-09-30T15:01:59.700Z",
+        "durationSeconds": 270.68,
+        "imageUrl": "https://cdn2.suno.ai/image_042592c9-9609-4518-b8dc-1727d8198133.jpeg"
+      },
+      {
+        "id": "5838b473-c6d8-4585-beb1-92a8c6f2d7c6",
+        "title": "Bend by the Mill",
+        "url": "https://suno.com/song/5838b473-c6d8-4585-beb1-92a8c6f2d7c6",
+        "createdAt": "2026-09-30T15:05:20.047Z",
+        "durationSeconds": 276.4,
+        "imageUrl": "https://cdn2.suno.ai/image_5838b473-c6d8-4585-beb1-92a8c6f2d7c6.jpeg"
+      },
+      {
+        "id": "2d6eacf1-85b4-4e7c-bcd7-a38e237d15ae",
+        "title": "Where You Stand",
+        "url": "https://suno.com/song/2d6eacf1-85b4-4e7c-bcd7-a38e237d15ae",
+        "createdAt": "2026-09-30T15:09:57.217Z",
+        "durationSeconds": 266.92,
+        "imageUrl": "https://cdn2.suno.ai/image_2d6eacf1-85b4-4e7c-bcd7-a38e237d15ae.jpeg"
+      },
+      {
+        "id": "aa0413cd-7e88-465b-9160-0a9cd37322a3",
+        "title": "Bend by the Mill",
+        "url": "https://suno.com/song/aa0413cd-7e88-465b-9160-0a9cd37322a3",
+        "createdAt": "2026-09-30T15:05:20.047Z",
+        "durationSeconds": 291.6,
+        "imageUrl": "https://cdn2.suno.ai/image_aa0413cd-7e88-465b-9160-0a9cd37322a3.jpeg"
+      },
+      {
+        "id": "d0bd49b2-ca39-4e54-82a5-c1af66d03210",
+        "title": "Before I Judge",
+        "url": "https://suno.com/song/d0bd49b2-ca39-4e54-82a5-c1af66d03210",
+        "createdAt": "2026-09-30T15:14:02.065Z",
+        "durationSeconds": 191.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d0bd49b2-ca39-4e54-82a5-c1af66d03210.jpeg"
+      },
+      {
+        "id": "43780c31-3642-4910-8ebb-75490dbf3d93",
+        "title": "Where It Hurts",
+        "url": "https://suno.com/song/43780c31-3642-4910-8ebb-75490dbf3d93",
+        "createdAt": "2026-09-30T15:24:27.245Z",
+        "durationSeconds": 239.16,
+        "imageUrl": "https://cdn2.suno.ai/image_43780c31-3642-4910-8ebb-75490dbf3d93.jpeg"
+      },
+      {
+        "id": "5f8c552c-1a40-4c0e-b54b-b1a2974abfd2",
+        "title": "Build a Bridge of Empathy",
+        "url": "https://suno.com/song/5f8c552c-1a40-4c0e-b54b-b1a2974abfd2",
+        "createdAt": "2026-09-30T15:28:26.105Z",
+        "durationSeconds": 338.8,
+        "imageUrl": "https://cdn2.suno.ai/image_5f8c552c-1a40-4c0e-b54b-b1a2974abfd2.jpeg"
+      },
+      {
+        "id": "763b234f-90ed-454c-947b-a5608d364646",
+        "title": "Widen The Lens",
+        "url": "https://suno.com/song/763b234f-90ed-454c-947b-a5608d364646",
+        "createdAt": "2026-09-30T15:28:26.105Z",
+        "durationSeconds": 352.8,
+        "imageUrl": "https://cdn2.suno.ai/image_763b234f-90ed-454c-947b-a5608d364646.jpeg"
+      },
+      {
+        "id": "3d91d0bd-f5d1-4181-849b-7a9ba49ddba1",
+        "title": "A Little More Room",
+        "url": "https://suno.com/song/3d91d0bd-f5d1-4181-849b-7a9ba49ddba1",
+        "createdAt": "2026-09-30T15:34:24.974Z",
+        "durationSeconds": 274,
+        "imageUrl": "https://cdn2.suno.ai/image_3d91d0bd-f5d1-4181-849b-7a9ba49ddba1.jpeg"
+      },
+      {
+        "id": "7e8ede16-f6fb-4563-828c-99e4c8c11a6c",
+        "title": "Every Single Story Deserves to Be Told",
+        "url": "https://suno.com/song/7e8ede16-f6fb-4563-828c-99e4c8c11a6c",
+        "createdAt": "2026-09-30T15:35:04.690Z",
+        "durationSeconds": 221.96,
+        "imageUrl": "https://cdn2.suno.ai/image_7e8ede16-f6fb-4563-828c-99e4c8c11a6c.jpeg"
+      },
+      {
+        "id": "1d61ffc2-4c96-4ea7-bbc8-4680a475a7af",
+        "title": "I’ll Try to Understand You",
+        "url": "https://suno.com/song/1d61ffc2-4c96-4ea7-bbc8-4680a475a7af",
+        "createdAt": "2026-09-30T15:35:04.690Z",
+        "durationSeconds": 250,
+        "imageUrl": "https://cdn2.suno.ai/image_1d61ffc2-4c96-4ea7-bbc8-4680a475a7af.jpeg"
+      },
+      {
+        "id": "e0a9af05-091f-41cb-8618-4042143fd762",
+        "title": "We Get Stronger",
+        "url": "https://suno.com/song/e0a9af05-091f-41cb-8618-4042143fd762",
+        "createdAt": "2026-09-30T15:44:06.571Z",
+        "durationSeconds": 259.6,
+        "imageUrl": "https://cdn2.suno.ai/image_e0a9af05-091f-41cb-8618-4042143fd762.jpeg"
+      },
+      {
+        "id": "7a4f3903-5446-483f-98a8-13ba0634b9ae",
+        "title": "A Heavier Grace",
+        "url": "https://suno.com/song/7a4f3903-5446-483f-98a8-13ba0634b9ae",
+        "createdAt": "2026-09-30T15:44:06.571Z",
+        "durationSeconds": 244.8,
+        "imageUrl": "https://cdn2.suno.ai/image_7a4f3903-5446-483f-98a8-13ba0634b9ae.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "74ea9c4e-2e0b-47d6-bcf4-ef8f9a47d091",
+    "name": "Halloween Time",
+    "url": "https://suno.com/playlist/74ea9c4e-2e0b-47d6-bcf4-ef8f9a47d091",
+    "imageUrl": "https://cdn2.suno.ai/image_6b50824c-454f-47f9-9268-78aeadf292cf.jpeg",
+    "songCount": 4,
+    "durationSeconds": 936.64,
+    "trackIds": [
+      "6b50824c-454f-47f9-9268-78aeadf292cf",
+      "bbb2fc97-6f09-4bea-8467-3995b9fddbc9",
+      "4e4bd076-73cd-496e-a510-eeaec0946fe1",
+      "1b7ab091-1c90-4089-b6f8-8bd5f26ba89d"
+    ],
+    "tracks": [
+      {
+        "id": "6b50824c-454f-47f9-9268-78aeadf292cf",
+        "title": "Our Favorite Kind of Autumn",
+        "url": "https://suno.com/song/6b50824c-454f-47f9-9268-78aeadf292cf",
+        "createdAt": "2026-09-30T03:08:17.910Z",
+        "durationSeconds": 230,
+        "imageUrl": "https://cdn2.suno.ai/image_6b50824c-454f-47f9-9268-78aeadf292cf.jpeg"
+      },
+      {
+        "id": "bbb2fc97-6f09-4bea-8467-3995b9fddbc9",
+        "title": "Halloween Again",
+        "url": "https://suno.com/song/bbb2fc97-6f09-4bea-8467-3995b9fddbc9",
+        "createdAt": "2026-09-30T03:18:02.703Z",
+        "durationSeconds": 232.36,
+        "imageUrl": "https://cdn2.suno.ai/image_bbb2fc97-6f09-4bea-8467-3995b9fddbc9.jpeg"
+      },
+      {
+        "id": "4e4bd076-73cd-496e-a510-eeaec0946fe1",
+        "title": "Paper Moons and Candy Stars",
+        "url": "https://suno.com/song/4e4bd076-73cd-496e-a510-eeaec0946fe1",
+        "createdAt": "2026-09-30T03:08:10.499Z",
+        "durationSeconds": 242.36,
+        "imageUrl": "https://cdn2.suno.ai/image_4e4bd076-73cd-496e-a510-eeaec0946fe1.jpeg"
+      },
+      {
+        "id": "1b7ab091-1c90-4089-b6f8-8bd5f26ba89d",
+        "title": "Little Monsters Trick-or-Treat",
+        "url": "https://suno.com/song/1b7ab091-1c90-4089-b6f8-8bd5f26ba89d",
+        "createdAt": "2026-09-30T03:20:44.296Z",
+        "durationSeconds": 231.92,
+        "imageUrl": "https://cdn2.suno.ai/image_1b7ab091-1c90-4089-b6f8-8bd5f26ba89d.jpeg"
+      }
+    ]
+  },
+  {
     "id": "4e4e209a-2f05-4a31-beea-86cb2c488668",
     "name": "A Division Of Hearts",
     "url": "https://suno.com/playlist/4e4e209a-2f05-4a31-beea-86cb2c488668",
     "imageUrl": "https://cdn2.suno.ai/image_454b3ed8-b715-4cd7-b45f-846feb959815.jpeg",
-    "songCount": 16,
-    "durationSeconds": 4606.08,
+    "songCount": 17,
+    "durationSeconds": 4872.88,
     "trackIds": [
       "454b3ed8-b715-4cd7-b45f-846feb959815",
       "7c8331fc-9fe6-4c50-b0f6-4d8628f5cb80",
@@ -22,7 +199,8 @@
       "40078e5f-1e42-470e-affe-76497bc9563c",
       "e18f9d40-5dac-4b31-bf98-e8eca432d122",
       "7289d117-f241-4b4f-a68c-a9e7d98f31cc",
-      "bf2cb7df-9158-4c34-864b-76de46f504f2"
+      "bf2cb7df-9158-4c34-864b-76de46f504f2",
+      "7053ae41-6b17-4aa8-bb71-e4c7200ed685"
     ],
     "tracks": [
       {
@@ -152,6 +330,14 @@
         "createdAt": "2026-09-30T00:53:45.436Z",
         "durationSeconds": 274.96,
         "imageUrl": "https://cdn2.suno.ai/image_bf2cb7df-9158-4c34-864b-76de46f504f2.jpeg"
+      },
+      {
+        "id": "7053ae41-6b17-4aa8-bb71-e4c7200ed685",
+        "title": "Two Roads Through One Heart",
+        "url": "https://suno.com/song/7053ae41-6b17-4aa8-bb71-e4c7200ed685",
+        "createdAt": "2026-09-30T14:50:35.035Z",
+        "durationSeconds": 266.8,
+        "imageUrl": "https://cdn2.suno.ai/image_7053ae41-6b17-4aa8-bb71-e4c7200ed685.jpeg"
       }
     ]
   },
@@ -2815,8 +3001,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 39,
-    "durationSeconds": 8933.640000000001,
+    "songCount": 44,
+    "durationSeconds": 10157.28,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -2856,7 +3042,12 @@
       "59bfdeff-0ba7-434c-853a-74f4bb9af2c5",
       "7c8331fc-9fe6-4c50-b0f6-4d8628f5cb80",
       "e12d7884-ecca-4568-a29a-09f5a3ebf870",
-      "a8a67583-563f-47d6-9f1e-282d687eedce"
+      "a8a67583-563f-47d6-9f1e-282d687eedce",
+      "7a4f3903-5446-483f-98a8-13ba0634b9ae",
+      "7445a879-e233-4ce3-bde8-408c7a4fcd5b",
+      "5bee99d1-7f94-4b01-94f4-546d7f9c1f62",
+      "51502995-a4f2-4909-b406-01993f66aa00",
+      "fe7b6c09-2741-4856-a616-f85944471384"
     ],
     "tracks": [
       {
@@ -3170,6 +3361,46 @@
         "createdAt": "2026-09-29T20:49:30.274Z",
         "durationSeconds": 304.4,
         "imageUrl": "https://cdn2.suno.ai/image_a8a67583-563f-47d6-9f1e-282d687eedce.jpeg"
+      },
+      {
+        "id": "7a4f3903-5446-483f-98a8-13ba0634b9ae",
+        "title": "A Heavier Grace",
+        "url": "https://suno.com/song/7a4f3903-5446-483f-98a8-13ba0634b9ae",
+        "createdAt": "2026-09-30T15:44:06.571Z",
+        "durationSeconds": 244.8,
+        "imageUrl": "https://cdn2.suno.ai/image_7a4f3903-5446-483f-98a8-13ba0634b9ae.jpeg"
+      },
+      {
+        "id": "7445a879-e233-4ce3-bde8-408c7a4fcd5b",
+        "title": "Kindness Takes Root",
+        "url": "https://suno.com/song/7445a879-e233-4ce3-bde8-408c7a4fcd5b",
+        "createdAt": "2026-09-28T17:35:10.972Z",
+        "durationSeconds": 268.76,
+        "imageUrl": "https://cdn2.suno.ai/image_7445a879-e233-4ce3-bde8-408c7a4fcd5b.jpeg"
+      },
+      {
+        "id": "5bee99d1-7f94-4b01-94f4-546d7f9c1f62",
+        "title": "Museum of Unfinished Doors",
+        "url": "https://suno.com/song/5bee99d1-7f94-4b01-94f4-546d7f9c1f62",
+        "createdAt": "2026-09-27T19:01:33.648Z",
+        "durationSeconds": 236,
+        "imageUrl": "https://cdn2.suno.ai/image_5bee99d1-7f94-4b01-94f4-546d7f9c1f62.jpeg"
+      },
+      {
+        "id": "51502995-a4f2-4909-b406-01993f66aa00",
+        "title": "Just Ahead of My Time",
+        "url": "https://suno.com/song/51502995-a4f2-4909-b406-01993f66aa00",
+        "createdAt": "2026-09-26T21:45:23.866Z",
+        "durationSeconds": 216.76,
+        "imageUrl": "https://cdn2.suno.ai/image_51502995-a4f2-4909-b406-01993f66aa00.jpeg"
+      },
+      {
+        "id": "fe7b6c09-2741-4856-a616-f85944471384",
+        "title": "Tomorrow, Wearing Yesterday",
+        "url": "https://suno.com/song/fe7b6c09-2741-4856-a616-f85944471384",
+        "createdAt": "2026-09-26T22:48:02.777Z",
+        "durationSeconds": 257.32,
+        "imageUrl": "https://cdn2.suno.ai/image_fe7b6c09-2741-4856-a616-f85944471384.jpeg"
       }
     ]
   },
