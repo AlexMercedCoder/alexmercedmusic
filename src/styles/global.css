@@ -292,6 +292,13 @@ p:last-child { margin-bottom: 0; }
 .stats b { display: block; font: 750 1.5rem/1 var(--display); letter-spacing: -0.03em; font-variant-numeric: tabular-nums; color: var(--era, var(--ink)); }
 .stats span { font: 500 0.74rem/1.4 var(--mono); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
 
+/* ---------------------------------------------------------------- network CTA strip */
+
+.network-cta { border-top: 1px solid var(--rule-soft); padding: 2.25rem 0; margin-top: 2rem; }
+.network-cta__inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1rem 2rem; }
+.network-cta__heading { margin: 0; font-size: clamp(1.2rem, 2.2vw, 1.5rem); }
+.network-cta + .site-footer { margin-top: 0; }
+
 /* ---------------------------------------------------------------- footer */
 
 .site-footer { border-top: 1px solid var(--rule-soft); background: var(--night-800); padding: 3rem 0 2.5rem; margin-top: 2rem; }
