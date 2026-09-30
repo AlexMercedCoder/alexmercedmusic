@@ -1,13 +1,14 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { SITE, songById, videos, type CatalogVideo } from '../../data/catalog-model';
+import { SITE, songById, videos, videoCanonicalSong, type CatalogVideo } from '../../data/catalog-model';
 
 export function getStaticPaths() {
   return videos.map((video) => ({ params: { id: video.youtubeId.toLowerCase() }, props: { video } }));
 }
 
 const { video } = Astro.props as { video: CatalogVideo };
+const canonicalSong = videoCanonicalSong(video);
 const directSongs = video.songIds.flatMap((id) => songById.get(id) ?? []);
 const otherVersions = video.relatedSongIds.filter((id) => !video.songIds.includes(id)).flatMap((id) => songById.get(id) ?? []);
 const duration = video.durationSeconds ? `PT${Math.floor(video.durationSeconds / 60)}M${video.durationSeconds % 60}S` : undefined;
@@ -33,7 +34,7 @@ const jsonLd = [{
 }];
 ---
 
-<Base title={video.title} description={`Watch ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`Video thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)}>
+<Base title={video.title} description={`Watch ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`Video thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)} canonicalUrl={canonicalSong?.pageUrl} noindex={!canonicalSong}>
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Music videos', href: '/videos/' }, { label: video.title }]} />
   <article class="section detail">
     <div class="shell detail__grid">

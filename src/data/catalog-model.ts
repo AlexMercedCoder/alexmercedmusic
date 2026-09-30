@@ -421,3 +421,33 @@ export const publicCatalog = {
   albums: catalogAlbums,
   platforms,
 };
+
+/**
+ * Search handling for video pages (P4.9). A video page is a thin view of a song
+ * record, so it canonicalizes to the song page when the match is unambiguous:
+ * the song lists this exact YouTube video as a source, or the title matches
+ * exactly one song. Videos with no song, or with several equally good matches,
+ * stay on the site as noindex pages and leave the sitemap.
+ */
+export const videoCanonicalSong = (video: CatalogVideo): CatalogSong | undefined => {
+  const direct = video.songIds.flatMap((id) => songById.get(id) ?? []);
+  const source = direct.find((song) => song.links.some((link) => link.url.includes(`v=${video.youtubeId}`)));
+  if (source) return source;
+  return direct.length === 1 ? direct[0] : undefined;
+};
+
+/**
+ * How much a song page offers beyond a listing row, used for sitemap priority.
+ * Counts only fields that carry real content: lyrics, an on-page player, a video,
+ * artwork, album context, style tags, and links to other versions.
+ */
+export const songRichness = (song: CatalogSong): number => [
+  Boolean(song.lyrics && song.lyrics.trim().length > 80),
+  Boolean(song.embedUrl || song.links.some((link) => link.source === 'youtube' || link.source.startsWith('soundcloud'))),
+  song.videoIds.length > 0,
+  Boolean(song.imageUrl || song.imageLargeUrl),
+  Boolean(song.album),
+  Boolean(song.genres?.length),
+  Boolean(song.originalTrackId || song.reimaginedTrackIds?.length),
+  song.links.length > 1,
+].filter(Boolean).length;

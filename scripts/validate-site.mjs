@@ -139,7 +139,14 @@ for (const playlist of sunoPlaylists) {
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
 for (const album of catalog.albums) assert.ok(sitemap.includes(`<loc>${album.pageUrl}</loc>`));
-for (const video of catalog.videos) assert.ok(sitemap.includes(`<loc>${video.pageUrl}</loc>`), `${video.title} is missing from the sitemap.`);
+// P4.9: video pages canonicalize to their song page or are noindexed, so they stay out of the sitemap.
+for (const video of catalog.videos) {
+  assert.ok(!sitemap.includes(`<loc>${video.pageUrl}</loc>`), `${video.title} should not be in the sitemap.`);
+  const html = read(`dist/videos/${video.youtubeId.toLowerCase()}/index.html`);
+  const canonical = html.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
+  const noindex = /<meta name="robots" content="noindex, follow">/.test(html);
+  assert.ok(noindex || (canonical && songPages.has(canonical)), `${video.title} must canonicalize to a song page or be noindex.`);
+}
 assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/suno-prompting-guide/</loc>'));
 
 const webMcpSource = read('src/components/WebMCP.astro');
