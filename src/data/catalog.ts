@@ -518,6 +518,12 @@ export type Platform = {
 
 export const platforms: Platform[] = [
   {
+    label: 'Spotify, Alex Merced',
+    url: 'https://open.spotify.com/artist/7saFKAusZMQg0PnHcO8zm6',
+    era: 'all',
+    note: 'The official Alex Merced artist profile for current releases on Spotify.',
+  },
+  {
     label: 'YouTube, Alex Merced Music',
     url: 'https://www.youtube.com/@AlexMercedMusic',
     era: 'all',
