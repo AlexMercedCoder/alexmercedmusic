@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { platforms, sunoPlaylists } from '../data/catalog';
+import { distributedReleases, platforms, sunoPlaylists } from '../data/catalog';
 
 const label: Record<string, string> = {
   acoustic: 'Acoustic',
@@ -8,12 +8,22 @@ const label: Record<string, string> = {
   ai: 'Rebuilt with Suno',
   all: 'Everything',
 };
+
+const jsonLd = distributedReleases.map((release) => ({
+  '@type': 'MusicAlbum',
+  name: release.title,
+  datePublished: release.released,
+  numTracks: release.trackCount,
+  byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+  sameAs: release.links.map((link) => link.url),
+}));
 ---
 
 <Base
   title="Where to listen"
   description="Every place Alex Merced's music is hosted, including Spotify, YouTube, SoundCloud, ReverbNation, Suno and Instagram."
   keywords={['Alex Merced music links', 'Spotify', 'SoundCloud', 'ReverbNation', 'Suno', 'YouTube']}
+  jsonLd={jsonLd}
 >
   <section class="section">
     <div class="shell">
@@ -24,6 +34,28 @@ const label: Record<string, string> = {
         none of it has been consolidated. This is the whole map, with the counts each
         platform reports.
       </p>
+    </div>
+  </section>
+
+  <section class="section section--tight">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Current distributed releases</p>
+        <h2>Exact links across streaming stores</h2>
+        <p>These links were checked against the release title, track list and UPC where available. Some delivery destinations do not publish a stable artist or album page.</p>
+      </div>
+      <div class="grid grid--3">
+        {distributedReleases.map((release) => (
+          <article class="card">
+            <p class="eyebrow">{release.released} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'}</p>
+            <h3>{release.title}</h3>
+            {release.upc && <p class="pair__style">UPC {release.upc}</p>}
+            <div class="source-links">
+              {release.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}
+            </div>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 

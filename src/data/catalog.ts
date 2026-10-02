@@ -516,6 +516,58 @@ export type Platform = {
   stat?: string;
 };
 
+export type DistributedRelease = {
+  title: string;
+  released: string;
+  trackCount: number;
+  upc?: string;
+  links: { label: string; url: string }[];
+};
+
+/** Exact release pages verified against titles, track lists and distributor UPCs. */
+export const distributedReleases: DistributedRelease[] = [
+  {
+    title: 'Tell My Heart (Actual Original Acoustic Version)',
+    released: '2026-10-02',
+    trackCount: 1,
+    links: [
+      { label: 'Spotify', url: 'https://open.spotify.com/album/7kdOTWCYo9EZnlik3QDD57' },
+      { label: 'YouTube Music', url: 'https://music.youtube.com/watch?v=pDmSZKG4itU' },
+      { label: 'TIDAL', url: 'https://listen.tidal.com/track/566583985' },
+    ],
+  },
+  {
+    title: 'The Raw Acoustic Recordings (Original Version)',
+    released: '2026-09-30',
+    trackCount: 7,
+    upc: '700573076852',
+    links: [
+      { label: 'Spotify', url: 'https://open.spotify.com/album/0oJ6FJpxIxAnloqVmXlx9w' },
+      { label: 'YouTube Music', url: 'https://music.youtube.com/playlist?list=OLAK5uy_nWx8xLMXSNa5mrlYptx-TzYH5y8YvGyJ8' },
+      { label: 'Amazon Music', url: 'https://music.amazon.com/albums/B0HLN2Z1PD' },
+      { label: 'TIDAL', url: 'https://listen.tidal.com/album/565928928' },
+      { label: 'Deezer', url: 'https://www.deezer.com/album/1110461172' },
+      { label: 'iHeart', url: 'https://www.iheart.com/artist/alex-merced-31814384/albums/the-raw-acoustic-recordings-436670233' },
+      { label: 'Boomplay', url: 'https://www.boomplay.com/albums/141517583' },
+    ],
+  },
+  {
+    title: 'Songs for your Consideration',
+    released: '2026-09-30',
+    trackCount: 20,
+    upc: '700573079013',
+    links: [
+      { label: 'Spotify', url: 'https://open.spotify.com/album/4YuwQtNCMflHJ15RQxWPo8' },
+      { label: 'YouTube Music', url: 'https://music.youtube.com/playlist?list=OLAK5uy_mWY0snZ7kb7L6lM8jvs15IeNysJU7lPNM' },
+      { label: 'Amazon Music', url: 'https://music.amazon.com/albums/B0HLMK67FF' },
+      { label: 'TIDAL', url: 'https://listen.tidal.com/album/565929310' },
+      { label: 'Deezer', url: 'https://www.deezer.com/album/1110461642' },
+      { label: 'iHeart', url: 'https://www.iheart.com/artist/alex-merced-31814384/albums/songs-for-your-consideration-436670315' },
+      { label: 'Boomplay', url: 'https://www.boomplay.com/albums/141517646' },
+    ],
+  },
+];
+
 export const platforms: Platform[] = [
   {
     label: 'Spotify, Alex Merced',

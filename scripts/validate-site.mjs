@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.8.0');
+assert.equal(catalog.schemaVersion, '1.9.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -22,6 +22,11 @@ assert.equal(videoIds.size, catalog.videos.length, 'Video IDs must be unique.');
 assert.equal(youtubeIds.size, catalog.videos.length, 'YouTube IDs must be unique.');
 assert.equal(catalog.counts.songs, catalog.songs.length);
 assert.equal(catalog.counts.albums, catalog.albums.length);
+assert.equal(catalog.distributedReleases.length, 3);
+assert.ok(catalog.distributedReleases.every((release) => release.title && release.released && release.trackCount > 0 && release.links.length > 0));
+for (const release of catalog.distributedReleases) {
+  for (const link of release.links) assert.equal(new URL(link.url).protocol, 'https:', `${release.title} has a non-HTTPS store link.`);
+}
 
 for (const song of catalog.songs) {
   assert.equal(song.pageUrl, `${catalog.site}/songs/${song.slug}/`);

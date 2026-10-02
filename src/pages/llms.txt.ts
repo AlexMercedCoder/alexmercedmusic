@@ -25,6 +25,10 @@ Public YouTube videos: ${publicCatalog.counts.videos}
 - [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
 - [WebMCP guide](${publicCatalog.site}/webmcp/)
 
+## Distributed releases
+
+${publicCatalog.distributedReleases.map((release) => `- ${release.title}, ${release.released}: ${release.links.map((link) => `[${link.label}](${link.url})`).join(', ')}`).join('\n')}
+
 ## Machine-readable resources
 
 - [Catalog summary](${publicCatalog.site}/catalog-summary.json)

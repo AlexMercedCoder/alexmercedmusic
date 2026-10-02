@@ -1,6 +1,7 @@
 import {
   acousticTracks,
   albums,
+  distributedReleases,
   electronicRuntime,
   electronicStats,
   electronicTracks,
@@ -18,7 +19,7 @@ import {
 import { sunoPromptingGuide } from './suno-prompting-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.8.0';
+export const CATALOG_SCHEMA_VERSION = '1.9.0';
 export const CATALOG_UPDATED_AT = '2026-10-02';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -419,6 +420,7 @@ export const publicCatalog = {
   songs,
   videos,
   albums: catalogAlbums,
+  distributedReleases,
   platforms,
 };
 

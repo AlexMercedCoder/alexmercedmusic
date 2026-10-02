@@ -444,12 +444,12 @@
       },
       {
         name: 'where_to_listen',
-        description: 'List verified music platforms for one era or the entire catalog. Use this when a user wants a profile, playlist, or service rather than a specific song.',
+        description: 'List verified music platforms and exact distributed release links. Use this when a user wants a profile, album, playlist, or service rather than a specific song.',
         inputSchema: { type: 'object', properties: { era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'], default: 'all' } }, additionalProperties: false },
         execute: async (input, signal) => {
           const catalog = await getCatalog(signal);
           const era = textValue(input, 'era') || 'all';
-          return { era, platforms: catalog.platforms.filter((platform) => era === 'all' || platform.era === era || platform.era === 'all') };
+          return { era, platforms: catalog.platforms.filter((platform) => era === 'all' || platform.era === era || platform.era === 'all'), distributedReleases: catalog.distributedReleases };
         },
       },
       {

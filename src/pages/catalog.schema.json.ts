@@ -8,7 +8,7 @@ export const GET: APIRoute = () => new Response(JSON.stringify({
   required: ['schemaVersion', 'updatedAt', 'site', 'counts', 'songs', 'videos', 'albums', 'suno'],
   properties: {
     schemaVersion: { type: 'string' }, updatedAt: { type: 'string', format: 'date' }, site: { type: 'string', format: 'uri' },
-    counts: { type: 'object' }, songs: { type: 'array', items: { '$ref': '#/$defs/song' } }, videos: { type: 'array', items: { '$ref': '#/$defs/video' } }, albums: { type: 'array' }, suno: { type: 'object' }, guides: { type: 'object' }, platforms: { type: 'array' },
+    counts: { type: 'object' }, songs: { type: 'array', items: { '$ref': '#/$defs/song' } }, videos: { type: 'array', items: { '$ref': '#/$defs/video' } }, albums: { type: 'array' }, distributedReleases: { type: 'array' }, suno: { type: 'object' }, guides: { type: 'object' }, platforms: { type: 'array' },
   },
   '$defs': {
     song: { type: 'object', required: ['id', 'slug', 'title', 'era', 'kind', 'pageUrl', 'links', 'videoIds', 'relatedVideoIds'], properties: { id: { type: 'string' }, slug: { type: 'string' }, title: { type: 'string' }, era: { enum: ['acoustic', 'electronic', 'ai'] }, kind: { enum: ['archive', 'electronic', 'reimagined', 'generated'] }, pageUrl: { type: 'string', format: 'uri' }, links: { type: 'array', minItems: 1 }, videoIds: { type: 'array' }, relatedVideoIds: { type: 'array' } } },
