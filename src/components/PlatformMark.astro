@@ -1,0 +1,41 @@
+---
+interface Props {
+  platform: string;
+}
+
+const { platform } = Astro.props;
+const key = platform.toLowerCase().replaceAll(' ', '');
+---
+
+<span class:list={['platform-mark', `platform-mark--${key}`]} aria-hidden="true">
+  {key === 'spotify' && (
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0m5.52 17.34c-.24.36-.66.48-1.02.24-2.82-1.74-6.36-2.1-10.56-1.14-.42.12-.78-.18-.9-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.48.66.3 1.02m1.44-3.3c-.3.42-.84.6-1.26.3-3.24-1.98-8.16-2.58-11.94-1.38-.48.12-1.02-.12-1.14-.6s.12-1.02.6-1.14c4.38-1.32 9.78-.66 13.5 1.62.36.18.54.78.24 1.2m.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.72 1.62.54.3.72 1.02.42 1.56-.3.42-1.02.6-1.56.3" /></svg>
+  )}
+  {key === 'youtubemusic' && (
+    <svg viewBox="0 0 24 24"><path d="M12 0C5.38 0 0 5.38 0 12s5.38 12 12 12 12-5.38 12-12S18.62 0 12 0m0 19.1A7.1 7.1 0 1 1 12 4.9a7.1 7.1 0 0 1 0 14.2m0-13.33A6.23 6.23 0 1 0 12 18.23 6.23 6.23 0 0 0 12 5.77M9.68 15.54V8.46L15.82 12z" /></svg>
+  )}
+  {key === 'amazonmusic' && (
+    <svg viewBox="0 0 24 24"><path d="M6.2 8.2v7.2M6.2 10.6c1.6-1.7 3.4-.8 3.4 1.1v3.7m0-4.8c1.6-1.7 3.4-.8 3.4 1.1v3.7m2.3-7.2v7.2M4.5 18c4.2 2.5 10.2 2.5 14.5-.3m-2.1-.7c1-.4 2.2-.5 2.6 0 .3.5 0 1.5-.6 2.3" /></svg>
+  )}
+  {key === 'tidal' && (
+    <svg viewBox="0 0 24 24"><path d="M12.01 3.99 8.01 8 4 3.99 0 8l4 4 4.01-4 4 4-4 4 4 4.01 4.01-4.01-4.01-4 4.01-4zm4.03 4.01 3.98-3.98L24 8l-3.98 3.98z" /></svg>
+  )}
+  {key === 'deezer' && (
+    <svg viewBox="0 0 24 24"><rect x="1" y="14" width="3" height="7"/><rect x="5.7" y="11" width="3" height="10"/><rect x="10.5" y="7" width="3" height="14"/><rect x="15.2" y="3" width="3" height="18"/><rect x="20" y="9" width="3" height="12"/></svg>
+  )}
+  {key === 'iheart' && (
+    <svg viewBox="0 0 24 24"><path d="M12 21 3.7 13.2A6 6 0 0 1 12 4.6a6 6 0 0 1 8.3 8.6z"/><circle cx="12" cy="11" r="2.1"/><path d="M8.8 7.4a5 5 0 0 0 0 7.2m6.4-7.2a5 5 0 0 1 0 7.2" /></svg>
+  )}
+  {key === 'boomplay' && (
+    <svg viewBox="0 0 24 24"><path d="M7 3h6.7a4 4 0 0 1 0 8H7m0 0h7.3a5 5 0 0 1 0 10H7z"/><path d="m10 14 5 2.5-5 2.5z" /></svg>
+  )}
+</span>
+
+<style>
+  .platform-mark{display:grid;place-items:center;width:2.1rem;height:2.1rem;color:currentColor}
+  svg{width:100%;height:100%;overflow:visible}
+  path,rect,circle{fill:currentColor}
+  .platform-mark--amazonmusic path,.platform-mark--iheart path:last-child,.platform-mark--boomplay path:first-child{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .platform-mark--iheart circle{fill:var(--paper)}
+  .platform-mark--spotify{color:#1ed760}.platform-mark--youtubemusic{color:#ff0033}.platform-mark--amazonmusic{color:#25d1da}.platform-mark--tidal{color:var(--ink)}.platform-mark--deezer{color:#a238ff}.platform-mark--iheart{color:#c6002b}.platform-mark--boomplay{color:#2764ff}
+</style>

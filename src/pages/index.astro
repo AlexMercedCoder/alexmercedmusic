@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
+import PlatformMark from '../components/PlatformMark.astro';
 import {
   acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, electronicStats, electronicRuntime, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
+  albums, distributedReleases, electronicStats, electronicRuntime, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
 
@@ -12,6 +13,11 @@ const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.rep
 const recentSuno = sunoSongs.slice(0, 6);
 const featuredPlaylists = sunoPlaylists.filter((playlist) => playlist.collectionType === 'album');
 const recentVideos = videos.slice(0, 3);
+const distributedAlbum = distributedReleases.find((release) => release.title === 'Songs for your Consideration');
+const homepagePlatforms = (distributedAlbum?.links ?? []).map((link) => ({
+  ...link,
+  url: link.label === 'Spotify' ? 'https://open.spotify.com/artist/7saFKAusZMQg0PnHcO8zm6' : link.url,
+}));
 
 const jsonLd = [
   {
@@ -52,6 +58,17 @@ const jsonLd = [
             <a class="btn" href="/videos/">Browse music videos</a>
             <a class="btn" href="/stories/start-here/">Start listening</a>
           </div>
+          <nav class="streaming-links" aria-label="Listen on streaming platforms">
+            <p>Listen on</p>
+            <div>
+              {homepagePlatforms.map((platform) => (
+                <a href={platform.url} aria-label={`Listen to Alex Merced on ${platform.label}`} title={platform.label}>
+                  <PlatformMark platform={platform.label} />
+                  <span>{platform.label}</span>
+                </a>
+              ))}
+            </div>
+          </nav>
         </div>
         <img
           class="hero__portrait"
@@ -222,4 +239,13 @@ const jsonLd = [
   </section>
 </Base>
 
-<style>.video-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);border-radius:var(--radius)}</style>
+<style>
+  .video-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);border-radius:var(--radius)}
+  .streaming-links{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
+  .streaming-links>p{margin:0 0 .65rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+  .streaming-links>div{display:flex;flex-wrap:wrap;gap:.55rem}
+  .streaming-links a{display:flex;align-items:center;gap:.45rem;min-height:3rem;padding:.42rem .7rem;border:1px solid var(--rule);border-radius:999px;background:var(--paper);text-decoration:none;transition:border-color .15s ease,transform .15s ease}
+  .streaming-links a:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .streaming-links a span{font-size:.78rem;color:var(--ink)}
+  @media(max-width:620px){.streaming-links a{width:3rem;padding:.42rem;justify-content:center}.streaming-links a span{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}}
+</style>
