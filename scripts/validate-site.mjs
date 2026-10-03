@@ -153,6 +153,10 @@ for (const video of catalog.videos) {
   assert.ok(noindex || (canonical && songPages.has(canonical)), `${video.title} must canonicalize to a song page or be noindex.`);
 }
 assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/suno-prompting-guide/</loc>'));
+const aiPerspectiveUrl = 'https://amdatalakehouse.substack.com/p/when-hard-becomes-easy-ai-art-and';
+for (const path of ['dist/suno/index.html', 'dist/stories/index.html', 'dist/stories/revisiting-songs-with-suno/index.html', 'dist/about/index.html', 'dist/llms.txt', 'dist/llms-full.txt']) {
+  assert.ok(read(path).includes(aiPerspectiveUrl), `${path} is missing Alex's AI and music perspective article.`);
+}
 
 const webMcpSource = read('src/components/WebMCP.astro');
 const script = webMcpSource.match(/<script is:inline>([\s\S]*)<\/script>/)?.[1];
@@ -188,7 +192,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -252,5 +256,8 @@ assert.equal(composedPromptWithLists.exclude, 'EDM drops, trap hi-hats');
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));
+const perspective = JSON.parse(await getTool('get_ai_music_perspective').execute({}));
+assert.equal(perspective.url, aiPerspectiveUrl);
+assert.equal(perspective.author, 'Alex Merced');
 
 console.log(`Validated ${catalog.songs.length} song pages, ${catalog.videos.length} video pages, ${catalog.albums.length} album pages, ${catalog.songs.reduce((count, song) => count + song.links.length, 0)} listening links, rich source metadata, feeds, social images, sitemap coverage, structured data, and ${registered.length} WebMCP tools.`);

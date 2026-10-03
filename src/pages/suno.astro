@@ -3,6 +3,7 @@ import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
 import { sunoPlaylists, sunoPublishedCount, sunoSongs } from '../data/catalog';
 import { SITE } from '../data/catalog-model';
+import { aiMusicPerspective } from '../data/editorial';
 
 const runtime = (seconds?: number) => {
   if (!seconds) return undefined;
@@ -45,6 +46,13 @@ const jsonLd = [{
       byArtist: { '@id': `${SITE}/#musicgroup` },
     })),
   },
+  subjectOf: {
+    '@type': 'Article',
+    headline: aiMusicPerspective.title,
+    url: aiMusicPerspective.url,
+    datePublished: aiMusicPerspective.publishedAt,
+    author: { '@id': 'https://alexmerced.com/#alexmerced' },
+  },
 }, {
   '@type': 'BreadcrumbList',
   itemListElement: [
@@ -65,7 +73,19 @@ const jsonLd = [{
         <a class="btn btn--primary" href="https://suno.com/@alexmerced">Open the Suno profile ↗</a>
         <a class="btn" href="/songs/?kind=generated">Explore all {sunoSongs.length} generated songs</a>
         <a class="btn" href="/suno-prompting-guide/">Read the prompting guide</a>
+        <a class="btn" href={aiMusicPerspective.url}>Read Alex’s view on AI and art ↗</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <article class="card card--era" data-era="ai">
+        <p class="eyebrow">Alex’s perspective</p>
+        <h2><a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a></h2>
+        <p>{aiMusicPerspective.description}</p>
+        <p><a href={aiMusicPerspective.url}>Read the article on Data, Lakehouse and AI ↗</a></p>
+      </article>
     </div>
   </section>
 

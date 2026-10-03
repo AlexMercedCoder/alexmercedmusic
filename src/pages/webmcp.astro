@@ -21,6 +21,7 @@ const tools = [
   ['list_reimaginings', 'Every original/reimagined pair.'],
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
+  ['get_ai_music_perspective', 'Alex’s first-person article about AI-assisted creativity, artistic skill, access and the effect on working artists.'],
   ['navigate_catalog', 'Canonical human and machine-readable site destinations.'],
 ];
 ---
@@ -31,7 +32,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers nineteen read-only browser tools. Agents can find recordings and videos, follow media connections, inspect ordered Suno playlists, poll for newer publications, search prompting guidance, assemble a Style prompt, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers twenty read-only browser tools. Agents can find recordings and videos, follow media connections, inspect ordered Suno playlists, poll for newer publications, search prompting guidance, read Alex’s stated perspective on AI and music, compare versions and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}

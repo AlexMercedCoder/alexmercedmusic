@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { aiMusicPerspective } from '../../data/editorial';
 const stories = [
   ['/stories/start-here/', 'Start here: ten songs across twenty years', 'A guided route through the acoustic, electronic and AI-assisted eras.'],
   ['/stories/originals-and-reimaginings/', 'Originals and reimaginings', 'Why the old recordings remain beside the rebuilt arrangements.'],
@@ -8,6 +9,7 @@ const stories = [
   ['/stories/revisiting-songs-with-suno/', 'Revisiting older songs with Suno', 'How and why the archive songs were given new arrangements.'],
   ['/suno-prompting-guide/', 'Suno Prompting Field Guide', 'A practical handbook for genre, instrumentation, vocals, structure, production and iteration.'],
   ['/stories/from-guitar-to-fl-studio/', 'From guitar to FL Studio', 'The tools changed, but the melodic thread continued.'],
+  [aiMusicPerspective.url, aiMusicPerspective.title, aiMusicPerspective.description],
 ];
 ---
 <Base title="Stories from the catalog" description="Guided listening and first-hand context for twenty years of Alex Merced music.">
