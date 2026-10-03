@@ -20,7 +20,7 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '1.9.0';
-export const CATALOG_UPDATED_AT = '2026-10-02';
+export const CATALOG_UPDATED_AT = '2026-10-03';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -166,6 +166,15 @@ const youtubeDetails = (url?: string) => {
 const youtubeDetailsFromLinks = (links?: TrackLink[]) => youtubeDetails(links?.find((link) => link.source === 'youtube')?.url);
 const sunoCoverByUrl = new Map(sunoCovers.map((track) => [track.url, track]));
 const formatDate = (value?: string) => value ? new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(value)) : undefined;
+const sunoDescription = (track: (typeof sunoSongs)[number]) => {
+  const genre = track.genres?.[0] ? ` blending ${track.genres[0]}` : '';
+  const published = track.createdAt ? `, published ${formatDate(track.createdAt)}` : '';
+  const suffix = '. Hear it and view its verified details.';
+  const detailed = `${track.title} is a Suno song by Alex Merced${genre}${published}${suffix}`;
+  return detailed.length <= 160
+    ? detailed
+    : `${track.title} is a Suno song by Alex Merced${genre}${suffix}`;
+};
 
 const seeds: SongSeed[] = [
   ...acousticTracks.map((track) => {
@@ -231,7 +240,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'ai' as const,
     kind: 'generated' as const,
-    description: `${track.title} is a Suno song by Alex Merced${track.genres?.length ? ` blending ${track.genres.slice(0, 2).join(' and ')}` : ''}${track.createdAt ? `, published ${formatDate(track.createdAt)}` : ''}. Hear it and view its verified details.`,
+    description: sunoDescription(track),
     links: linksFor(track.links, track.url, 'generation'),
     length: track.length,
     posted: track.posted,

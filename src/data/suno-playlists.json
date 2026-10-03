@@ -1,5 +1,326 @@
 [
   {
+    "id": "9009ebf9-e7ea-48cc-af92-55afc4cda6de",
+    "name": "Songs Of Positivity",
+    "url": "https://suno.com/playlist/9009ebf9-e7ea-48cc-af92-55afc4cda6de",
+    "imageUrl": "https://cdn2.suno.ai/image_394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c.jpeg",
+    "songCount": 15,
+    "durationSeconds": 3458.68,
+    "trackIds": [
+      "394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c",
+      "f0d22aeb-8475-4125-acbe-a42bae1cbb10",
+      "bfa6c748-5677-48f5-af40-b2294b98c63a",
+      "5db7c992-eab9-440e-aca9-f112dae375ae",
+      "b7b67b35-5fd4-4969-ab19-9cf43c382e43",
+      "6f8b2c9f-c79b-4c15-aaeb-c2f4041d4921",
+      "09c794b2-1cdf-4b66-a4ef-6ccafef5b1bb",
+      "d23238c0-2853-41b7-975e-3b764943fa67",
+      "364a4606-d51b-4d3e-a26b-a1e731dc982d",
+      "d0c07adf-a21a-4eec-bb4b-e91b9033fc38",
+      "6e6f6f6e-2cd0-4990-a7af-81adc132dd9a",
+      "7ba4f764-2e33-4a6b-9049-bfc25d5e55f3",
+      "cc0b5a21-fa35-4637-bb80-b8cce2562fcb",
+      "f97e4643-bf33-43b4-88aa-26d1c1be0921",
+      "895799d4-6773-4a44-83ec-ba1acf6fa99b"
+    ],
+    "tracks": [
+      {
+        "id": "394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c",
+        "title": "Hold the Light",
+        "url": "https://suno.com/song/394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c",
+        "createdAt": "2026-10-03T01:34:04.728Z",
+        "durationSeconds": 218,
+        "imageUrl": "https://cdn2.suno.ai/image_394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c.jpeg"
+      },
+      {
+        "id": "f0d22aeb-8475-4125-acbe-a42bae1cbb10",
+        "title": "When the Answers Disappear",
+        "url": "https://suno.com/song/f0d22aeb-8475-4125-acbe-a42bae1cbb10",
+        "createdAt": "2026-10-03T01:34:04.727Z",
+        "durationSeconds": 216.16,
+        "imageUrl": "https://cdn2.suno.ai/image_f0d22aeb-8475-4125-acbe-a42bae1cbb10.jpeg"
+      },
+      {
+        "id": "bfa6c748-5677-48f5-af40-b2294b98c63a",
+        "title": "The Next Small Step",
+        "url": "https://suno.com/song/bfa6c748-5677-48f5-af40-b2294b98c63a",
+        "createdAt": "2026-10-03T01:40:35.856Z",
+        "durationSeconds": 236,
+        "imageUrl": "https://cdn2.suno.ai/image_bfa6c748-5677-48f5-af40-b2294b98c63a.jpeg"
+      },
+      {
+        "id": "5db7c992-eab9-440e-aca9-f112dae375ae",
+        "title": "Spark in the Grey",
+        "url": "https://suno.com/song/5db7c992-eab9-440e-aca9-f112dae375ae",
+        "createdAt": "2026-10-03T01:52:50.791Z",
+        "durationSeconds": 252.36,
+        "imageUrl": "https://cdn2.suno.ai/image_5db7c992-eab9-440e-aca9-f112dae375ae.jpeg"
+      },
+      {
+        "id": "b7b67b35-5fd4-4969-ab19-9cf43c382e43",
+        "title": "The Day Is Still Begun",
+        "url": "https://suno.com/song/b7b67b35-5fd4-4969-ab19-9cf43c382e43",
+        "createdAt": "2026-10-03T01:52:50.791Z",
+        "durationSeconds": 220.8,
+        "imageUrl": "https://cdn2.suno.ai/image_b7b67b35-5fd4-4969-ab19-9cf43c382e43.jpeg"
+      },
+      {
+        "id": "6f8b2c9f-c79b-4c15-aaeb-c2f4041d4921",
+        "title": "Hold to the Next Small Thing",
+        "url": "https://suno.com/song/6f8b2c9f-c79b-4c15-aaeb-c2f4041d4921",
+        "createdAt": "2026-10-03T01:53:33.395Z",
+        "durationSeconds": 254,
+        "imageUrl": "https://cdn2.suno.ai/image_6f8b2c9f-c79b-4c15-aaeb-c2f4041d4921.jpeg"
+      },
+      {
+        "id": "09c794b2-1cdf-4b66-a4ef-6ccafef5b1bb",
+        "title": "Keep a Place for the Morning",
+        "url": "https://suno.com/song/09c794b2-1cdf-4b66-a4ef-6ccafef5b1bb",
+        "createdAt": "2026-10-03T02:34:45.348Z",
+        "durationSeconds": 269.2,
+        "imageUrl": "https://cdn2.suno.ai/image_09c794b2-1cdf-4b66-a4ef-6ccafef5b1bb.jpeg"
+      },
+      {
+        "id": "d23238c0-2853-41b7-975e-3b764943fa67",
+        "title": "One Small Yes",
+        "url": "https://suno.com/song/d23238c0-2853-41b7-975e-3b764943fa67",
+        "createdAt": "2026-10-03T03:23:35.811Z",
+        "durationSeconds": 289.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d23238c0-2853-41b7-975e-3b764943fa67.jpeg"
+      },
+      {
+        "id": "364a4606-d51b-4d3e-a26b-a1e731dc982d",
+        "title": "A Little Light Beneath the",
+        "url": "https://suno.com/song/364a4606-d51b-4d3e-a26b-a1e731dc982d",
+        "createdAt": "2026-10-03T03:40:21.983Z",
+        "durationSeconds": 183.6,
+        "imageUrl": "https://cdn2.suno.ai/image_364a4606-d51b-4d3e-a26b-a1e731dc982d.jpeg"
+      },
+      {
+        "id": "d0c07adf-a21a-4eec-bb4b-e91b9033fc38",
+        "title": "One More Step",
+        "url": "https://suno.com/song/d0c07adf-a21a-4eec-bb4b-e91b9033fc38",
+        "createdAt": "2026-10-03T13:23:20.260Z",
+        "durationSeconds": 241.36,
+        "imageUrl": "https://cdn2.suno.ai/image_d0c07adf-a21a-4eec-bb4b-e91b9033fc38.jpeg"
+      },
+      {
+        "id": "6e6f6f6e-2cd0-4990-a7af-81adc132dd9a",
+        "title": "When the Road Runs Out of",
+        "url": "https://suno.com/song/6e6f6f6e-2cd0-4990-a7af-81adc132dd9a",
+        "createdAt": "2026-10-03T13:30:03.640Z",
+        "durationSeconds": 212.56,
+        "imageUrl": "https://cdn2.suno.ai/image_6e6f6f6e-2cd0-4990-a7af-81adc132dd9a.jpeg"
+      },
+      {
+        "id": "7ba4f764-2e33-4a6b-9049-bfc25d5e55f3",
+        "title": "One Small Window",
+        "url": "https://suno.com/song/7ba4f764-2e33-4a6b-9049-bfc25d5e55f3",
+        "createdAt": "2026-10-03T13:56:42.224Z",
+        "durationSeconds": 238.32,
+        "imageUrl": "https://cdn2.suno.ai/image_7ba4f764-2e33-4a6b-9049-bfc25d5e55f3.jpeg"
+      },
+      {
+        "id": "cc0b5a21-fa35-4637-bb80-b8cce2562fcb",
+        "title": "One Small Door",
+        "url": "https://suno.com/song/cc0b5a21-fa35-4637-bb80-b8cce2562fcb",
+        "createdAt": "2026-10-03T13:55:59.883Z",
+        "durationSeconds": 198,
+        "imageUrl": "https://cdn2.suno.ai/image_cc0b5a21-fa35-4637-bb80-b8cce2562fcb.jpeg"
+      },
+      {
+        "id": "f97e4643-bf33-43b4-88aa-26d1c1be0921",
+        "title": "One More Step",
+        "url": "https://suno.com/song/f97e4643-bf33-43b4-88aa-26d1c1be0921",
+        "createdAt": "2026-10-03T13:30:08.447Z",
+        "durationSeconds": 221.16,
+        "imageUrl": "https://cdn2.suno.ai/image_f97e4643-bf33-43b4-88aa-26d1c1be0921.jpeg"
+      },
+      {
+        "id": "895799d4-6773-4a44-83ec-ba1acf6fa99b",
+        "title": "Make a Little Room",
+        "url": "https://suno.com/song/895799d4-6773-4a44-83ec-ba1acf6fa99b",
+        "createdAt": "2026-10-03T14:05:17.413Z",
+        "durationSeconds": 207.56,
+        "imageUrl": "https://cdn2.suno.ai/image_895799d4-6773-4a44-83ec-ba1acf6fa99b.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "4a96888f-25c7-4b26-b4e0-88c6e35185f5",
+    "name": "The Robot Apocalypse",
+    "url": "https://suno.com/playlist/4a96888f-25c7-4b26-b4e0-88c6e35185f5",
+    "imageUrl": "https://cdn2.suno.ai/image_c54a8e26-9679-467b-9668-a660dfb63dbb.jpeg",
+    "songCount": 18,
+    "durationSeconds": 3745.28,
+    "trackIds": [
+      "c54a8e26-9679-467b-9668-a660dfb63dbb",
+      "8f26d1d7-bea0-4c87-bb28-98bec282ff48",
+      "1564bba8-aac8-407e-ac8d-b41403258533",
+      "a6f07ad1-5a26-4e65-a0f8-925f54b08f4b",
+      "eb3a6d26-84b7-4758-a723-3325260a0394",
+      "46fa7584-3290-4174-838d-8520e3d7d589",
+      "42d40502-a3ee-4bc8-a74e-c3117ddc745e",
+      "76c3cd4f-8284-40db-a518-e95a5df9e90b",
+      "703dc5f3-5579-4557-9bdd-c8965d0c8d17",
+      "d852cccc-4e20-4fba-9293-fbbd082cbdd1",
+      "5a760fdc-21cb-49c3-914b-8e4edfc80522",
+      "eea760ce-d34e-4b5c-9f89-4aeefd4724fc",
+      "bb8ca091-bfcd-43c0-b425-5460047a04a1",
+      "39cd4c52-6264-4e87-a3b7-b202fcc14cab",
+      "ffaa567e-c242-46ef-8a7f-9f2109307457",
+      "7fb037fa-50d0-4656-9bf6-42e9286ec335",
+      "4621f7f3-fa8a-44d2-a8f2-ac515c1b5140",
+      "b7b67b35-5fd4-4969-ab19-9cf43c382e43"
+    ],
+    "tracks": [
+      {
+        "id": "c54a8e26-9679-467b-9668-a660dfb63dbb",
+        "title": "Here at All",
+        "url": "https://suno.com/song/c54a8e26-9679-467b-9668-a660dfb63dbb",
+        "createdAt": "2026-10-02T17:45:26.756Z",
+        "durationSeconds": 244,
+        "imageUrl": "https://cdn2.suno.ai/image_c54a8e26-9679-467b-9668-a660dfb63dbb.jpeg"
+      },
+      {
+        "id": "8f26d1d7-bea0-4c87-bb28-98bec282ff48",
+        "title": "One Warm Window Lit",
+        "url": "https://suno.com/song/8f26d1d7-bea0-4c87-bb28-98bec282ff48",
+        "createdAt": "2026-10-02T17:45:26.756Z",
+        "durationSeconds": 226.8,
+        "imageUrl": "https://cdn2.suno.ai/image_8f26d1d7-bea0-4c87-bb28-98bec282ff48.jpeg"
+      },
+      {
+        "id": "1564bba8-aac8-407e-ac8d-b41403258533",
+        "title": "Small Mark on a Turning Page",
+        "url": "https://suno.com/song/1564bba8-aac8-407e-ac8d-b41403258533",
+        "createdAt": "2026-10-02T18:22:19.918Z",
+        "durationSeconds": 195.96,
+        "imageUrl": "https://cdn2.suno.ai/image_1564bba8-aac8-407e-ac8d-b41403258533.jpeg"
+      },
+      {
+        "id": "a6f07ad1-5a26-4e65-a0f8-925f54b08f4b",
+        "title": "Making Little Signals",
+        "url": "https://suno.com/song/a6f07ad1-5a26-4e65-a0f8-925f54b08f4b",
+        "createdAt": "2026-10-02T18:23:56.117Z",
+        "durationSeconds": 274.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a6f07ad1-5a26-4e65-a0f8-925f54b08f4b.jpeg"
+      },
+      {
+        "id": "eb3a6d26-84b7-4758-a723-3325260a0394",
+        "title": "Tomorrow Just Updated",
+        "url": "https://suno.com/song/eb3a6d26-84b7-4758-a723-3325260a0394",
+        "createdAt": "2026-10-02T18:37:02.604Z",
+        "durationSeconds": 177.16,
+        "imageUrl": "https://cdn2.suno.ai/image_eb3a6d26-84b7-4758-a723-3325260a0394.jpeg"
+      },
+      {
+        "id": "46fa7584-3290-4174-838d-8520e3d7d589",
+        "title": "Beautiful Machine",
+        "url": "https://suno.com/song/46fa7584-3290-4174-838d-8520e3d7d589",
+        "createdAt": "2026-10-02T18:36:18.815Z",
+        "durationSeconds": 212.4,
+        "imageUrl": "https://cdn2.suno.ai/image_46fa7584-3290-4174-838d-8520e3d7d589.jpeg"
+      },
+      {
+        "id": "42d40502-a3ee-4bc8-a74e-c3117ddc745e",
+        "title": "Keep a Human in the Loop",
+        "url": "https://suno.com/song/42d40502-a3ee-4bc8-a74e-c3117ddc745e",
+        "createdAt": "2026-10-02T18:38:24.914Z",
+        "durationSeconds": 131.92,
+        "imageUrl": "https://cdn2.suno.ai/image_42d40502-a3ee-4bc8-a74e-c3117ddc745e.jpeg"
+      },
+      {
+        "id": "76c3cd4f-8284-40db-a518-e95a5df9e90b",
+        "title": "I Want to See What Happens",
+        "url": "https://suno.com/song/76c3cd4f-8284-40db-a518-e95a5df9e90b",
+        "createdAt": "2026-10-02T18:38:58.249Z",
+        "durationSeconds": 188,
+        "imageUrl": "https://cdn2.suno.ai/image_76c3cd4f-8284-40db-a518-e95a5df9e90b.jpeg"
+      },
+      {
+        "id": "703dc5f3-5579-4557-9bdd-c8965d0c8d17",
+        "title": "Leave Something Strange",
+        "url": "https://suno.com/song/703dc5f3-5579-4557-9bdd-c8965d0c8d17",
+        "createdAt": "2026-10-02T21:54:54.209Z",
+        "durationSeconds": 207.72,
+        "imageUrl": "https://cdn2.suno.ai/image_703dc5f3-5579-4557-9bdd-c8965d0c8d17.jpeg"
+      },
+      {
+        "id": "d852cccc-4e20-4fba-9293-fbbd082cbdd1",
+        "title": "Signal in the Flood",
+        "url": "https://suno.com/song/d852cccc-4e20-4fba-9293-fbbd082cbdd1",
+        "createdAt": "2026-10-02T21:54:09.025Z",
+        "durationSeconds": 286.8,
+        "imageUrl": "https://cdn2.suno.ai/image_d852cccc-4e20-4fba-9293-fbbd082cbdd1.jpeg"
+      },
+      {
+        "id": "5a760fdc-21cb-49c3-914b-8e4edfc80522",
+        "title": "The Last Thing Only We Could",
+        "url": "https://suno.com/song/5a760fdc-21cb-49c3-914b-8e4edfc80522",
+        "createdAt": "2026-10-02T21:53:47.252Z",
+        "durationSeconds": 206.76,
+        "imageUrl": "https://cdn2.suno.ai/image_5a760fdc-21cb-49c3-914b-8e4edfc80522.jpeg"
+      },
+      {
+        "id": "eea760ce-d34e-4b5c-9f89-4aeefd4724fc",
+        "title": "Faster Than My Fear",
+        "url": "https://suno.com/song/eea760ce-d34e-4b5c-9f89-4aeefd4724fc",
+        "createdAt": "2026-10-02T21:53:21.278Z",
+        "durationSeconds": 203.6,
+        "imageUrl": "https://cdn2.suno.ai/image_eea760ce-d34e-4b5c-9f89-4aeefd4724fc.jpeg"
+      },
+      {
+        "id": "bb8ca091-bfcd-43c0-b425-5460047a04a1",
+        "title": "Museum of Human Things",
+        "url": "https://suno.com/song/bb8ca091-bfcd-43c0-b425-5460047a04a1",
+        "createdAt": "2026-10-02T22:18:07.915Z",
+        "durationSeconds": 204.4,
+        "imageUrl": "https://cdn2.suno.ai/image_bb8ca091-bfcd-43c0-b425-5460047a04a1.jpeg"
+      },
+      {
+        "id": "39cd4c52-6264-4e87-a3b7-b202fcc14cab",
+        "title": "I Asked the Future a Question",
+        "url": "https://suno.com/song/39cd4c52-6264-4e87-a3b7-b202fcc14cab",
+        "createdAt": "2026-10-02T22:17:31.880Z",
+        "durationSeconds": 191.08,
+        "imageUrl": "https://cdn2.suno.ai/image_39cd4c52-6264-4e87-a3b7-b202fcc14cab.jpeg"
+      },
+      {
+        "id": "ffaa567e-c242-46ef-8a7f-9f2109307457",
+        "title": "Disposable Gods",
+        "url": "https://suno.com/song/ffaa567e-c242-46ef-8a7f-9f2109307457",
+        "createdAt": "2026-10-02T22:17:05.808Z",
+        "durationSeconds": 180.72,
+        "imageUrl": "https://cdn2.suno.ai/image_ffaa567e-c242-46ef-8a7f-9f2109307457.jpeg"
+      },
+      {
+        "id": "7fb037fa-50d0-4656-9bf6-42e9286ec335",
+        "title": "What a Time to Be Alive",
+        "url": "https://suno.com/song/7fb037fa-50d0-4656-9bf6-42e9286ec335",
+        "createdAt": "2026-10-02T22:16:07.165Z",
+        "durationSeconds": 210.76,
+        "imageUrl": "https://cdn2.suno.ai/image_7fb037fa-50d0-4656-9bf6-42e9286ec335.jpeg"
+      },
+      {
+        "id": "4621f7f3-fa8a-44d2-a8f2-ac515c1b5140",
+        "title": "Don't Finish Me",
+        "url": "https://suno.com/song/4621f7f3-fa8a-44d2-a8f2-ac515c1b5140",
+        "createdAt": "2026-10-02T22:15:40.710Z",
+        "durationSeconds": 181.6,
+        "imageUrl": "https://cdn2.suno.ai/image_4621f7f3-fa8a-44d2-a8f2-ac515c1b5140.jpeg"
+      },
+      {
+        "id": "b7b67b35-5fd4-4969-ab19-9cf43c382e43",
+        "title": "The Day Is Still Begun",
+        "url": "https://suno.com/song/b7b67b35-5fd4-4969-ab19-9cf43c382e43",
+        "createdAt": "2026-10-03T01:52:50.791Z",
+        "durationSeconds": 220.8,
+        "imageUrl": "https://cdn2.suno.ai/image_b7b67b35-5fd4-4969-ab19-9cf43c382e43.jpeg"
+      }
+    ]
+  },
+  {
     "id": "cffc8100-37a2-4f5f-8cd2-dde12b62c8c6",
     "name": "Everyone Is Worth It",
     "url": "https://suno.com/playlist/cffc8100-37a2-4f5f-8cd2-dde12b62c8c6",
@@ -61,8 +382,8 @@
     "name": "Scarred Heart Chronicles",
     "url": "https://suno.com/playlist/ced1a662-deb4-4262-b25e-c275b8397da0",
     "imageUrl": "https://cdn2.suno.ai/image_3d5a5d75-4c6c-4dac-968f-9d88e1f6bda4.jpeg",
-    "songCount": 9,
-    "durationSeconds": 2082.72,
+    "songCount": 10,
+    "durationSeconds": 2336.68,
     "trackIds": [
       "3d5a5d75-4c6c-4dac-968f-9d88e1f6bda4",
       "d7b54192-ff7c-48e7-9d38-a169488b2e26",
@@ -72,7 +393,8 @@
       "08781d07-e393-4b58-a966-3ebb5b79fc59",
       "e289ba72-9ac7-4312-87d2-3e9410eaf1ec",
       "02299ea5-f6f1-4696-b0c6-5fd7bededa50",
-      "413f57f8-f36a-413d-81c3-a5077d1072db"
+      "413f57f8-f36a-413d-81c3-a5077d1072db",
+      "2090b462-a031-45f0-ad79-2c64af4d60bd"
     ],
     "tracks": [
       {
@@ -146,6 +468,14 @@
         "createdAt": "2026-10-01T19:47:10.276Z",
         "durationSeconds": 211.2,
         "imageUrl": "https://cdn2.suno.ai/image_413f57f8-f36a-413d-81c3-a5077d1072db.jpeg"
+      },
+      {
+        "id": "2090b462-a031-45f0-ad79-2c64af4d60bd",
+        "title": "Bend and Not Break",
+        "url": "https://suno.com/song/2090b462-a031-45f0-ad79-2c64af4d60bd",
+        "createdAt": "2026-10-02T17:35:49.113Z",
+        "durationSeconds": 253.96,
+        "imageUrl": "https://cdn2.suno.ai/image_2090b462-a031-45f0-ad79-2c64af4d60bd.jpeg"
       }
     ]
   },
@@ -3388,8 +3718,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 45,
-    "durationSeconds": 10378.880000000001,
+    "songCount": 51,
+    "durationSeconds": 11729.560000000001,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -3435,7 +3765,13 @@
       "5bee99d1-7f94-4b01-94f4-546d7f9c1f62",
       "51502995-a4f2-4909-b406-01993f66aa00",
       "fe7b6c09-2741-4856-a616-f85944471384",
-      "7dd56120-cea7-41ae-b9af-945bd08897f0"
+      "7dd56120-cea7-41ae-b9af-945bd08897f0",
+      "2d710aa1-4edc-457a-a2c8-7b617413f730",
+      "25bdfaa8-0eb3-45a8-8cbe-d97559843f47",
+      "71ddbb99-a4de-49f9-af7d-e4684c6c65af",
+      "6affb469-9df9-40b8-a5fd-09b6689adc5b",
+      "2090b462-a031-45f0-ad79-2c64af4d60bd",
+      "76c3cd4f-8284-40db-a518-e95a5df9e90b"
     ],
     "tracks": [
       {
@@ -3797,6 +4133,54 @@
         "createdAt": "2026-09-30T20:25:59.335Z",
         "durationSeconds": 221.6,
         "imageUrl": "https://cdn2.suno.ai/image_7dd56120-cea7-41ae-b9af-945bd08897f0.jpeg"
+      },
+      {
+        "id": "2d710aa1-4edc-457a-a2c8-7b617413f730",
+        "title": "Ship Five In Paris",
+        "url": "https://suno.com/song/2d710aa1-4edc-457a-a2c8-7b617413f730",
+        "createdAt": "2026-09-16T16:56:36.860Z",
+        "durationSeconds": 237.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2d710aa1-4edc-457a-a2c8-7b617413f730.jpeg"
+      },
+      {
+        "id": "25bdfaa8-0eb3-45a8-8cbe-d97559843f47",
+        "title": "Couloir Bleu",
+        "url": "https://suno.com/song/25bdfaa8-0eb3-45a8-8cbe-d97559843f47",
+        "createdAt": "2026-09-15T05:37:32.526Z",
+        "durationSeconds": 248.76,
+        "imageUrl": "https://cdn2.suno.ai/image_25bdfaa8-0eb3-45a8-8cbe-d97559843f47.jpeg"
+      },
+      {
+        "id": "71ddbb99-a4de-49f9-af7d-e4684c6c65af",
+        "title": "Rue de Charonne",
+        "url": "https://suno.com/song/71ddbb99-a4de-49f9-af7d-e4684c6c65af",
+        "createdAt": "2026-09-15T05:33:46.075Z",
+        "durationSeconds": 236.76,
+        "imageUrl": "https://cdn2.suno.ai/image_71ddbb99-a4de-49f9-af7d-e4684c6c65af.jpeg"
+      },
+      {
+        "id": "6affb469-9df9-40b8-a5fd-09b6689adc5b",
+        "title": "Porte de Versailles",
+        "url": "https://suno.com/song/6affb469-9df9-40b8-a5fd-09b6689adc5b",
+        "createdAt": "2026-09-14T12:19:09.029Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_6affb469-9df9-40b8-a5fd-09b6689adc5b.jpeg"
+      },
+      {
+        "id": "2090b462-a031-45f0-ad79-2c64af4d60bd",
+        "title": "Bend and Not Break",
+        "url": "https://suno.com/song/2090b462-a031-45f0-ad79-2c64af4d60bd",
+        "createdAt": "2026-10-02T17:35:49.113Z",
+        "durationSeconds": 253.96,
+        "imageUrl": "https://cdn2.suno.ai/image_2090b462-a031-45f0-ad79-2c64af4d60bd.jpeg"
+      },
+      {
+        "id": "76c3cd4f-8284-40db-a518-e95a5df9e90b",
+        "title": "I Want to See What Happens",
+        "url": "https://suno.com/song/76c3cd4f-8284-40db-a518-e95a5df9e90b",
+        "createdAt": "2026-10-02T18:38:58.249Z",
+        "durationSeconds": 188,
+        "imageUrl": "https://cdn2.suno.ai/image_76c3cd4f-8284-40db-a518-e95a5df9e90b.jpeg"
       }
     ]
   },
@@ -7807,8 +8191,8 @@
     "name": "AI Alex Voice Covers",
     "url": "https://suno.com/playlist/272034e9-28cb-4b1e-8ca6-7da96e2704e3",
     "imageUrl": "https://cdn2.suno.ai/image_372a2bdc-0860-4ba7-877a-673219208e79.jpeg",
-    "songCount": 28,
-    "durationSeconds": 6061.04,
+    "songCount": 29,
+    "durationSeconds": 6284.32,
     "trackIds": [
       "372a2bdc-0860-4ba7-877a-673219208e79",
       "e03a89dd-318c-402a-816d-06c6a11ecf3d",
@@ -7837,7 +8221,8 @@
       "4258d3bc-ea01-4f40-95e0-97a5879be8e3",
       "670f8e7b-971a-42fe-a349-61bcb483aa58",
       "12eff855-eb7d-4d3a-986c-6e1a152119ea",
-      "bcee00ff-089a-4b77-a81e-c5971b991891"
+      "bcee00ff-089a-4b77-a81e-c5971b991891",
+      "a943e584-d0a0-4aec-9cad-5f4e0bf6c056"
     ],
     "tracks": [
       {
@@ -8063,6 +8448,14 @@
         "createdAt": "2026-09-02T19:17:57.255Z",
         "durationSeconds": 393.32,
         "imageUrl": "https://cdn2.suno.ai/image_bcee00ff-089a-4b77-a81e-c5971b991891.jpeg"
+      },
+      {
+        "id": "a943e584-d0a0-4aec-9cad-5f4e0bf6c056",
+        "title": "The One Who Can’t Be Loved (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/a943e584-d0a0-4aec-9cad-5f4e0bf6c056",
+        "createdAt": "2026-10-02T19:54:54.579Z",
+        "durationSeconds": 223.28,
+        "imageUrl": "https://cdn2.suno.ai/image_a943e584-d0a0-4aec-9cad-5f4e0bf6c056.jpeg"
       }
     ]
   }
