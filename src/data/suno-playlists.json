@@ -1,11 +1,86 @@
 [
   {
+    "id": "19714479-ec6e-4ab7-9cd9-5ebb028c8e35",
+    "name": "Una Luz Mas",
+    "url": "https://suno.com/playlist/19714479-ec6e-4ab7-9cd9-5ebb028c8e35",
+    "imageUrl": "https://cdn2.suno.ai/image_2faa6f18-35f2-4ec7-bb2e-962d21fd4450.jpeg",
+    "songCount": 7,
+    "durationSeconds": 1823.08,
+    "trackIds": [
+      "2faa6f18-35f2-4ec7-bb2e-962d21fd4450",
+      "1ca4eedc-c7b3-4286-be89-076ed9fab2df",
+      "31587c0c-f4b9-4de6-a110-90d6aeef147c",
+      "4237ea05-f864-4c5a-8d5f-5fa78f6f8df6",
+      "87dcdb2d-2eec-4752-a475-f0e9666fdcab",
+      "da03b8a8-ddc6-42a0-88d0-206358fdaef9",
+      "f436b69c-b375-475c-90f4-a79de4ac8cfe"
+    ],
+    "tracks": [
+      {
+        "id": "2faa6f18-35f2-4ec7-bb2e-962d21fd4450",
+        "title": "Sé una luz más",
+        "url": "https://suno.com/song/2faa6f18-35f2-4ec7-bb2e-962d21fd4450",
+        "createdAt": "2026-10-03T16:15:03.607Z",
+        "durationSeconds": 228.76,
+        "imageUrl": "https://cdn2.suno.ai/image_2faa6f18-35f2-4ec7-bb2e-962d21fd4450.jpeg"
+      },
+      {
+        "id": "1ca4eedc-c7b3-4286-be89-076ed9fab2df",
+        "title": "Abrir las Ventanas al Sol",
+        "url": "https://suno.com/song/1ca4eedc-c7b3-4286-be89-076ed9fab2df",
+        "createdAt": "2026-10-03T16:19:33.005Z",
+        "durationSeconds": 253.2,
+        "imageUrl": "https://cdn2.suno.ai/image_1ca4eedc-c7b3-4286-be89-076ed9fab2df.jpeg"
+      },
+      {
+        "id": "31587c0c-f4b9-4de6-a110-90d6aeef147c",
+        "title": "Aprender a Escogerme",
+        "url": "https://suno.com/song/31587c0c-f4b9-4de6-a110-90d6aeef147c",
+        "createdAt": "2026-10-03T16:23:42.596Z",
+        "durationSeconds": 243.56,
+        "imageUrl": "https://cdn2.suno.ai/image_31587c0c-f4b9-4de6-a110-90d6aeef147c.jpeg"
+      },
+      {
+        "id": "4237ea05-f864-4c5a-8d5f-5fa78f6f8df6",
+        "title": "Dos Voces en un corazón",
+        "url": "https://suno.com/song/4237ea05-f864-4c5a-8d5f-5fa78f6f8df6",
+        "createdAt": "2026-10-03T16:26:41.095Z",
+        "durationSeconds": 249.2,
+        "imageUrl": "https://cdn2.suno.ai/image_4237ea05-f864-4c5a-8d5f-5fa78f6f8df6.jpeg"
+      },
+      {
+        "id": "87dcdb2d-2eec-4752-a475-f0e9666fdcab",
+        "title": "Corazón sin fronteras",
+        "url": "https://suno.com/song/87dcdb2d-2eec-4752-a475-f0e9666fdcab",
+        "createdAt": "2026-10-03T19:50:58.107Z",
+        "durationSeconds": 318.36,
+        "imageUrl": "https://cdn2.suno.ai/image_87dcdb2d-2eec-4752-a475-f0e9666fdcab.jpeg"
+      },
+      {
+        "id": "da03b8a8-ddc6-42a0-88d0-206358fdaef9",
+        "title": "Vivo entre aeropuertos",
+        "url": "https://suno.com/song/da03b8a8-ddc6-42a0-88d0-206358fdaef9",
+        "createdAt": "2026-10-03T19:58:28.301Z",
+        "durationSeconds": 263.6,
+        "imageUrl": "https://cdn2.suno.ai/image_da03b8a8-ddc6-42a0-88d0-206358fdaef9.jpeg"
+      },
+      {
+        "id": "f436b69c-b375-475c-90f4-a79de4ac8cfe",
+        "title": "Quiéreme sin traducirme",
+        "url": "https://suno.com/song/f436b69c-b375-475c-90f4-a79de4ac8cfe",
+        "createdAt": "2026-10-03T21:33:02.319Z",
+        "durationSeconds": 266.4,
+        "imageUrl": "https://cdn2.suno.ai/image_f436b69c-b375-475c-90f4-a79de4ac8cfe.jpeg"
+      }
+    ]
+  },
+  {
     "id": "9009ebf9-e7ea-48cc-af92-55afc4cda6de",
     "name": "Songs Of Positivity",
     "url": "https://suno.com/playlist/9009ebf9-e7ea-48cc-af92-55afc4cda6de",
     "imageUrl": "https://cdn2.suno.ai/image_394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c.jpeg",
-    "songCount": 15,
-    "durationSeconds": 3458.68,
+    "songCount": 17,
+    "durationSeconds": 3862.2799999999997,
     "trackIds": [
       "394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c",
       "f0d22aeb-8475-4125-acbe-a42bae1cbb10",
@@ -21,7 +96,9 @@
       "7ba4f764-2e33-4a6b-9049-bfc25d5e55f3",
       "cc0b5a21-fa35-4637-bb80-b8cce2562fcb",
       "f97e4643-bf33-43b4-88aa-26d1c1be0921",
-      "895799d4-6773-4a44-83ec-ba1acf6fa99b"
+      "895799d4-6773-4a44-83ec-ba1acf6fa99b",
+      "5e61ac53-8bd7-4ec2-ba91-4d54715ea551",
+      "f8f6996c-6abe-4988-bdca-8e005dadcd37"
     ],
     "tracks": [
       {
@@ -143,6 +220,22 @@
         "createdAt": "2026-10-03T14:05:17.413Z",
         "durationSeconds": 207.56,
         "imageUrl": "https://cdn2.suno.ai/image_895799d4-6773-4a44-83ec-ba1acf6fa99b.jpeg"
+      },
+      {
+        "id": "5e61ac53-8bd7-4ec2-ba91-4d54715ea551",
+        "title": "A Little Kindness Travels On",
+        "url": "https://suno.com/song/5e61ac53-8bd7-4ec2-ba91-4d54715ea551",
+        "createdAt": "2026-10-03T16:03:40.384Z",
+        "durationSeconds": 203.6,
+        "imageUrl": "https://cdn2.suno.ai/image_5e61ac53-8bd7-4ec2-ba91-4d54715ea551.jpeg"
+      },
+      {
+        "id": "f8f6996c-6abe-4988-bdca-8e005dadcd37",
+        "title": "Kindness Returns",
+        "url": "https://suno.com/song/f8f6996c-6abe-4988-bdca-8e005dadcd37",
+        "createdAt": "2026-10-03T16:03:40.384Z",
+        "durationSeconds": 200,
+        "imageUrl": "https://cdn2.suno.ai/image_f8f6996c-6abe-4988-bdca-8e005dadcd37.jpeg"
       }
     ]
   },
@@ -1903,8 +1996,8 @@
     "name": "I’m Secure That I Know My Insecurities",
     "url": "https://suno.com/playlist/ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
     "imageUrl": "https://cdn2.suno.ai/image_d3d9c545-2b12-418e-858a-e81c5d600037.jpeg",
-    "songCount": 36,
-    "durationSeconds": 9130.2,
+    "songCount": 46,
+    "durationSeconds": 11208.160000000002,
     "trackIds": [
       "d3d9c545-2b12-418e-858a-e81c5d600037",
       "78b87ff0-f3a7-4f1c-ba3c-982a640b9de3",
@@ -1941,7 +2034,17 @@
       "2780b742-8ea6-4aa1-a235-5c0ae1a81126",
       "fce205d4-6563-44a1-a2ff-f5b8567f52de",
       "e0e95d3f-1fa9-4173-815d-09f22bf9a96b",
-      "0ac9340a-1f71-4687-9e9b-73c0035b3e54"
+      "0ac9340a-1f71-4687-9e9b-73c0035b3e54",
+      "f636931f-4321-45be-8d68-1cbb2cb2427a",
+      "8342ed3e-0330-42b5-9191-3025d5b8c1de",
+      "e51ff99b-ba0a-4c79-b1fb-d879a1375c3c",
+      "5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+      "4f174d0c-f6d2-4f40-828a-939f2d55464e",
+      "9e821e02-1e37-4076-885b-461dfdad62e6",
+      "2e89b94a-ef69-4a3b-8de8-3a1f06cc9f12",
+      "43132a43-4b7a-4fd6-8055-311623bfea7a",
+      "ecce8701-9478-44a7-8842-016ee6449b6c",
+      "63347a5f-09d0-4a57-a781-965536f7bca6"
     ],
     "tracks": [
       {
@@ -2231,6 +2334,86 @@
         "createdAt": "2026-10-01T00:52:09.445Z",
         "durationSeconds": 218.24,
         "imageUrl": "https://cdn2.suno.ai/image_0ac9340a-1f71-4687-9e9b-73c0035b3e54.jpeg"
+      },
+      {
+        "id": "f636931f-4321-45be-8d68-1cbb2cb2427a",
+        "title": "Crowded Room",
+        "url": "https://suno.com/song/f636931f-4321-45be-8d68-1cbb2cb2427a",
+        "createdAt": "2026-10-04T00:32:11.117Z",
+        "durationSeconds": 247.96,
+        "imageUrl": "https://cdn2.suno.ai/image_f636931f-4321-45be-8d68-1cbb2cb2427a.jpeg"
+      },
+      {
+        "id": "8342ed3e-0330-42b5-9191-3025d5b8c1de",
+        "title": "Crowded Room Behind My Eyes",
+        "url": "https://suno.com/song/8342ed3e-0330-42b5-9191-3025d5b8c1de",
+        "createdAt": "2026-10-04T01:10:22.525Z",
+        "durationSeconds": 224.8,
+        "imageUrl": "https://cdn2.suno.ai/image_8342ed3e-0330-42b5-9191-3025d5b8c1de.jpeg"
+      },
+      {
+        "id": "e51ff99b-ba0a-4c79-b1fb-d879a1375c3c",
+        "title": "Mind Upside Down",
+        "url": "https://suno.com/song/e51ff99b-ba0a-4c79-b1fb-d879a1375c3c",
+        "createdAt": "2026-10-04T01:10:22.525Z",
+        "durationSeconds": 219.52,
+        "imageUrl": "https://cdn2.suno.ai/image_e51ff99b-ba0a-4c79-b1fb-d879a1375c3c.jpeg"
+      },
+      {
+        "id": "5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+        "title": "Storm Behind My Confidence",
+        "url": "https://suno.com/song/5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+        "createdAt": "2026-10-04T03:47:28.171Z",
+        "durationSeconds": 254.76,
+        "imageUrl": "https://cdn2.suno.ai/image_5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6.jpeg"
+      },
+      {
+        "id": "4f174d0c-f6d2-4f40-828a-939f2d55464e",
+        "title": "Enough Never Enough",
+        "url": "https://suno.com/song/4f174d0c-f6d2-4f40-828a-939f2d55464e",
+        "createdAt": "2026-10-04T03:59:55.687Z",
+        "durationSeconds": 185.6,
+        "imageUrl": "https://cdn2.suno.ai/image_4f174d0c-f6d2-4f40-828a-939f2d55464e.jpeg"
+      },
+      {
+        "id": "9e821e02-1e37-4076-885b-461dfdad62e6",
+        "title": "The Version I Perform",
+        "url": "https://suno.com/song/9e821e02-1e37-4076-885b-461dfdad62e6",
+        "createdAt": "2026-10-04T04:00:16.985Z",
+        "durationSeconds": 150,
+        "imageUrl": "https://cdn2.suno.ai/image_9e821e02-1e37-4076-885b-461dfdad62e6.jpeg"
+      },
+      {
+        "id": "2e89b94a-ef69-4a3b-8de8-3a1f06cc9f12",
+        "title": "Roots and Runways",
+        "url": "https://suno.com/song/2e89b94a-ef69-4a3b-8de8-3a1f06cc9f12",
+        "createdAt": "2026-10-04T04:00:36.752Z",
+        "durationSeconds": 157.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2e89b94a-ef69-4a3b-8de8-3a1f06cc9f12.jpeg"
+      },
+      {
+        "id": "43132a43-4b7a-4fd6-8055-311623bfea7a",
+        "title": "Static Between Answers",
+        "url": "https://suno.com/song/43132a43-4b7a-4fd6-8055-311623bfea7a",
+        "createdAt": "2026-10-04T04:01:23.884Z",
+        "durationSeconds": 166.36,
+        "imageUrl": "https://cdn2.suno.ai/image_43132a43-4b7a-4fd6-8055-311623bfea7a.jpeg"
+      },
+      {
+        "id": "ecce8701-9478-44a7-8842-016ee6449b6c",
+        "title": "what a whole heart can keep",
+        "url": "https://suno.com/song/ecce8701-9478-44a7-8842-016ee6449b6c",
+        "createdAt": "2026-10-04T13:47:59.406Z",
+        "durationSeconds": 233.12,
+        "imageUrl": "https://cdn2.suno.ai/image_ecce8701-9478-44a7-8842-016ee6449b6c.jpeg"
+      },
+      {
+        "id": "63347a5f-09d0-4a57-a781-965536f7bca6",
+        "title": "Keeper and the Runaway",
+        "url": "https://suno.com/song/63347a5f-09d0-4a57-a781-965536f7bca6",
+        "createdAt": "2026-10-04T13:55:57.943Z",
+        "durationSeconds": 238.64,
+        "imageUrl": "https://cdn2.suno.ai/image_63347a5f-09d0-4a57-a781-965536f7bca6.jpeg"
       }
     ]
   },
@@ -3718,8 +3901,8 @@
     "name": "Alex Favs",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
-    "songCount": 51,
-    "durationSeconds": 11729.560000000001,
+    "songCount": 54,
+    "durationSeconds": 12367.440000000002,
     "trackIds": [
       "72fbd426-5575-49e8-9e10-d8636e42c1c7",
       "a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
@@ -3771,7 +3954,10 @@
       "71ddbb99-a4de-49f9-af7d-e4684c6c65af",
       "6affb469-9df9-40b8-a5fd-09b6689adc5b",
       "2090b462-a031-45f0-ad79-2c64af4d60bd",
-      "76c3cd4f-8284-40db-a518-e95a5df9e90b"
+      "76c3cd4f-8284-40db-a518-e95a5df9e90b",
+      "5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+      "9e821e02-1e37-4076-885b-461dfdad62e6",
+      "ecce8701-9478-44a7-8842-016ee6449b6c"
     ],
     "tracks": [
       {
@@ -4181,6 +4367,30 @@
         "createdAt": "2026-10-02T18:38:58.249Z",
         "durationSeconds": 188,
         "imageUrl": "https://cdn2.suno.ai/image_76c3cd4f-8284-40db-a518-e95a5df9e90b.jpeg"
+      },
+      {
+        "id": "5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+        "title": "Storm Behind My Confidence",
+        "url": "https://suno.com/song/5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6",
+        "createdAt": "2026-10-04T03:47:28.171Z",
+        "durationSeconds": 254.76,
+        "imageUrl": "https://cdn2.suno.ai/image_5cd12d1f-c0c7-48cf-b5af-44dfd778c0a6.jpeg"
+      },
+      {
+        "id": "9e821e02-1e37-4076-885b-461dfdad62e6",
+        "title": "The Version I Perform",
+        "url": "https://suno.com/song/9e821e02-1e37-4076-885b-461dfdad62e6",
+        "createdAt": "2026-10-04T04:00:16.985Z",
+        "durationSeconds": 150,
+        "imageUrl": "https://cdn2.suno.ai/image_9e821e02-1e37-4076-885b-461dfdad62e6.jpeg"
+      },
+      {
+        "id": "ecce8701-9478-44a7-8842-016ee6449b6c",
+        "title": "what a whole heart can keep",
+        "url": "https://suno.com/song/ecce8701-9478-44a7-8842-016ee6449b6c",
+        "createdAt": "2026-10-04T13:47:59.406Z",
+        "durationSeconds": 233.12,
+        "imageUrl": "https://cdn2.suno.ai/image_ecce8701-9478-44a7-8842-016ee6449b6c.jpeg"
       }
     ]
   },
