@@ -1,5 +1,284 @@
 [
   {
+    "id": "e18b2a7b-58db-4d7e-804f-1f91f22e8958",
+    "name": "Reflections",
+    "url": "https://suno.com/playlist/e18b2a7b-58db-4d7e-804f-1f91f22e8958",
+    "imageUrl": "https://cdn2.suno.ai/image_d95048f7-628f-4c0e-a7c7-06d4bf5e853d.jpeg",
+    "songCount": 8,
+    "durationSeconds": 1356.08,
+    "trackIds": [
+      "d95048f7-628f-4c0e-a7c7-06d4bf5e853d",
+      "9394404c-5c70-4f24-939b-1e0dc495998d",
+      "dba136be-f0ef-4f76-8aa6-f80e4dabaa3d",
+      "44e01b98-172f-45e6-898b-89ba1125d9c8",
+      "d9cb36b5-5693-4211-acc0-54668be45bb5",
+      "9a473fd6-101e-4bd4-84e5-1fbcfdaead74",
+      "f603e145-dfc1-465f-9986-a59f2817cfd7",
+      "50be34d0-39d5-48b1-9f88-1774c42f6118"
+    ],
+    "tracks": [
+      {
+        "id": "d95048f7-628f-4c0e-a7c7-06d4bf5e853d",
+        "title": "Every Yes Murders Two",
+        "url": "https://suno.com/song/d95048f7-628f-4c0e-a7c7-06d4bf5e853d",
+        "createdAt": "2026-10-05T20:24:53.949Z",
+        "durationSeconds": 180.52,
+        "imageUrl": "https://cdn2.suno.ai/image_d95048f7-628f-4c0e-a7c7-06d4bf5e853d.jpeg"
+      },
+      {
+        "id": "9394404c-5c70-4f24-939b-1e0dc495998d",
+        "title": "When the Departures Stop",
+        "url": "https://suno.com/song/9394404c-5c70-4f24-939b-1e0dc495998d",
+        "createdAt": "2026-10-05T20:27:07.462Z",
+        "durationSeconds": 166.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9394404c-5c70-4f24-939b-1e0dc495998d.jpeg"
+      },
+      {
+        "id": "dba136be-f0ef-4f76-8aa6-f80e4dabaa3d",
+        "title": "Books I'll Never Write",
+        "url": "https://suno.com/song/dba136be-f0ef-4f76-8aa6-f80e4dabaa3d",
+        "createdAt": "2026-10-05T20:27:43.169Z",
+        "durationSeconds": 157.36,
+        "imageUrl": "https://cdn2.suno.ai/image_dba136be-f0ef-4f76-8aa6-f80e4dabaa3d.jpeg"
+      },
+      {
+        "id": "44e01b98-172f-45e6-898b-89ba1125d9c8",
+        "title": "Ghosts of Choices",
+        "url": "https://suno.com/song/44e01b98-172f-45e6-898b-89ba1125d9c8",
+        "createdAt": "2026-10-05T20:28:12.586Z",
+        "durationSeconds": 181.2,
+        "imageUrl": "https://cdn2.suno.ai/image_44e01b98-172f-45e6-898b-89ba1125d9c8.jpeg"
+      },
+      {
+        "id": "d9cb36b5-5693-4211-acc0-54668be45bb5",
+        "title": "One More Morning",
+        "url": "https://suno.com/song/d9cb36b5-5693-4211-acc0-54668be45bb5",
+        "createdAt": "2026-10-05T20:29:07.951Z",
+        "durationSeconds": 151.96,
+        "imageUrl": "https://cdn2.suno.ai/image_d9cb36b5-5693-4211-acc0-54668be45bb5.jpeg"
+      },
+      {
+        "id": "9a473fd6-101e-4bd4-84e5-1fbcfdaead74",
+        "title": "Cities I Flew Over",
+        "url": "https://suno.com/song/9a473fd6-101e-4bd4-84e5-1fbcfdaead74",
+        "createdAt": "2026-10-05T20:57:54.795Z",
+        "durationSeconds": 189.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9a473fd6-101e-4bd4-84e5-1fbcfdaead74.jpeg"
+      },
+      {
+        "id": "f603e145-dfc1-465f-9986-a59f2817cfd7",
+        "title": "The Footnotes",
+        "url": "https://suno.com/song/f603e145-dfc1-465f-9986-a59f2817cfd7",
+        "createdAt": "2026-10-05T20:59:29.622Z",
+        "durationSeconds": 172,
+        "imageUrl": "https://cdn2.suno.ai/image_f603e145-dfc1-465f-9986-a59f2817cfd7.jpeg"
+      },
+      {
+        "id": "50be34d0-39d5-48b1-9f88-1774c42f6118",
+        "title": "Leave a Few Tabs Open",
+        "url": "https://suno.com/song/50be34d0-39d5-48b1-9f88-1774c42f6118",
+        "createdAt": "2026-10-05T21:00:54.506Z",
+        "durationSeconds": 156.64,
+        "imageUrl": "https://cdn2.suno.ai/image_50be34d0-39d5-48b1-9f88-1774c42f6118.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "f85cecd2-1c79-44fb-bfc7-9ee7d963947b",
+    "name": "Lofi Thoughts",
+    "url": "https://suno.com/playlist/f85cecd2-1c79-44fb-bfc7-9ee7d963947b",
+    "imageUrl": "https://cdn2.suno.ai/image_a2ffe012-c762-4907-899b-c2222e4a439a.jpeg",
+    "songCount": 9,
+    "durationSeconds": 1544.6,
+    "trackIds": [
+      "a2ffe012-c762-4907-899b-c2222e4a439a",
+      "df16f32b-67b6-4cbd-9d84-0b9574d87f47",
+      "caa5ccb4-09b4-4860-ab54-9b6a38b66380",
+      "0ff46115-4bfa-4862-ac6c-1c23af146b29",
+      "1e5c6646-ef23-4208-b719-9e73573d1195",
+      "5e153c91-1457-4fb4-8d19-b3fe96e14904",
+      "8e72e88f-e590-43ae-9801-fc2a1f0755d8",
+      "efefd1ff-f55d-447e-82f1-4b55ee8bc262",
+      "23d8d1e9-e8ab-4359-a9ca-4ef20234afd7"
+    ],
+    "tracks": [
+      {
+        "id": "a2ffe012-c762-4907-899b-c2222e4a439a",
+        "title": "Monday Taking Its Time",
+        "url": "https://suno.com/song/a2ffe012-c762-4907-899b-c2222e4a439a",
+        "createdAt": "2026-10-05T15:12:19.268Z",
+        "durationSeconds": 156.4,
+        "imageUrl": "https://cdn2.suno.ai/image_a2ffe012-c762-4907-899b-c2222e4a439a.jpeg"
+      },
+      {
+        "id": "df16f32b-67b6-4cbd-9d84-0b9574d87f47",
+        "title": "Room for the Bruise",
+        "url": "https://suno.com/song/df16f32b-67b6-4cbd-9d84-0b9574d87f47",
+        "createdAt": "2026-10-05T15:28:23.752Z",
+        "durationSeconds": 167.68,
+        "imageUrl": "https://cdn2.suno.ai/image_df16f32b-67b6-4cbd-9d84-0b9574d87f47.jpeg"
+      },
+      {
+        "id": "caa5ccb4-09b4-4860-ab54-9b6a38b66380",
+        "title": "Leave the Lamp On",
+        "url": "https://suno.com/song/caa5ccb4-09b4-4860-ab54-9b6a38b66380",
+        "createdAt": "2026-10-05T15:45:40.001Z",
+        "durationSeconds": 191.6,
+        "imageUrl": "https://cdn2.suno.ai/image_caa5ccb4-09b4-4860-ab54-9b6a38b66380.jpeg"
+      },
+      {
+        "id": "0ff46115-4bfa-4862-ac6c-1c23af146b29",
+        "title": "A Life I Never-Lived Life",
+        "url": "https://suno.com/song/0ff46115-4bfa-4862-ac6c-1c23af146b29",
+        "createdAt": "2026-10-05T15:58:04.795Z",
+        "durationSeconds": 186.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0ff46115-4bfa-4862-ac6c-1c23af146b29.jpeg"
+      },
+      {
+        "id": "1e5c6646-ef23-4208-b719-9e73573d1195",
+        "title": "Gilded Mirror",
+        "url": "https://suno.com/song/1e5c6646-ef23-4208-b719-9e73573d1195",
+        "createdAt": "2026-10-05T15:58:04.795Z",
+        "durationSeconds": 154.36,
+        "imageUrl": "https://cdn2.suno.ai/image_1e5c6646-ef23-4208-b719-9e73573d1195.jpeg"
+      },
+      {
+        "id": "5e153c91-1457-4fb4-8d19-b3fe96e14904",
+        "title": "Someone I Can Live With",
+        "url": "https://suno.com/song/5e153c91-1457-4fb4-8d19-b3fe96e14904",
+        "createdAt": "2026-10-05T16:04:12.349Z",
+        "durationSeconds": 226.6,
+        "imageUrl": "https://cdn2.suno.ai/image_5e153c91-1457-4fb4-8d19-b3fe96e14904.jpeg"
+      },
+      {
+        "id": "8e72e88f-e590-43ae-9801-fc2a1f0755d8",
+        "title": "Edge of the Map",
+        "url": "https://suno.com/song/8e72e88f-e590-43ae-9801-fc2a1f0755d8",
+        "createdAt": "2026-10-05T16:07:34.576Z",
+        "durationSeconds": 123.6,
+        "imageUrl": "https://cdn2.suno.ai/image_8e72e88f-e590-43ae-9801-fc2a1f0755d8.jpeg"
+      },
+      {
+        "id": "efefd1ff-f55d-447e-82f1-4b55ee8bc262",
+        "title": "Leave a Window in Your Mind",
+        "url": "https://suno.com/song/efefd1ff-f55d-447e-82f1-4b55ee8bc262",
+        "createdAt": "2026-10-05T16:15:14.307Z",
+        "durationSeconds": 201.6,
+        "imageUrl": "https://cdn2.suno.ai/image_efefd1ff-f55d-447e-82f1-4b55ee8bc262.jpeg"
+      },
+      {
+        "id": "23d8d1e9-e8ab-4359-a9ca-4ef20234afd7",
+        "title": "Edge of the Frame",
+        "url": "https://suno.com/song/23d8d1e9-e8ab-4359-a9ca-4ef20234afd7",
+        "createdAt": "2026-10-05T16:26:22.136Z",
+        "durationSeconds": 135.96,
+        "imageUrl": "https://cdn2.suno.ai/image_23d8d1e9-e8ab-4359-a9ca-4ef20234afd7.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "c1876594-1124-4a70-8fe4-70b976e5623b",
+    "name": "Happiness Or Goodness",
+    "url": "https://suno.com/playlist/c1876594-1124-4a70-8fe4-70b976e5623b",
+    "imageUrl": "https://cdn2.suno.ai/image_77603042-f164-4c33-8a46-29bcb2a36f3d.jpeg",
+    "songCount": 10,
+    "durationSeconds": 2177,
+    "trackIds": [
+      "77603042-f164-4c33-8a46-29bcb2a36f3d",
+      "64b13d23-b154-4056-8df1-3c7b1b0f0fbe",
+      "bf37370b-99dd-4de3-8e13-a31fd6ec5895",
+      "0b78c62a-fcd6-4f7a-a2fc-e10284689f23",
+      "2fd1edb8-c973-426c-8eda-addbe3a79d02",
+      "33e4d98e-e1d3-4842-ba1f-277e979f3208",
+      "03f47719-4595-4090-a34b-48c0ac1d3926",
+      "54adde5b-afe8-4094-a103-338c934c691f",
+      "7b5bf044-3d4b-4637-a5d6-5b019deda5d3",
+      "b5e37d6c-da0f-454a-b134-c193831633dc"
+    ],
+    "tracks": [
+      {
+        "id": "77603042-f164-4c33-8a46-29bcb2a36f3d",
+        "title": "The Ledger Tells",
+        "url": "https://suno.com/song/77603042-f164-4c33-8a46-29bcb2a36f3d",
+        "createdAt": "2026-10-04T19:02:06.471Z",
+        "durationSeconds": 246.36,
+        "imageUrl": "https://cdn2.suno.ai/image_77603042-f164-4c33-8a46-29bcb2a36f3d.jpeg"
+      },
+      {
+        "id": "64b13d23-b154-4056-8df1-3c7b1b0f0fbe",
+        "title": "Happy or Good",
+        "url": "https://suno.com/song/64b13d23-b154-4056-8df1-3c7b1b0f0fbe",
+        "createdAt": "2026-10-04T19:00:09.025Z",
+        "durationSeconds": 184,
+        "imageUrl": "https://cdn2.suno.ai/image_64b13d23-b154-4056-8df1-3c7b1b0f0fbe.jpeg"
+      },
+      {
+        "id": "bf37370b-99dd-4de3-8e13-a31fd6ec5895",
+        "title": "A Coat by the Door",
+        "url": "https://suno.com/song/bf37370b-99dd-4de3-8e13-a31fd6ec5895",
+        "createdAt": "2026-10-04T19:00:09.025Z",
+        "durationSeconds": 187.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bf37370b-99dd-4de3-8e13-a31fd6ec5895.jpeg"
+      },
+      {
+        "id": "0b78c62a-fcd6-4f7a-a2fc-e10284689f23",
+        "title": "Let Joy and Mercy Share the",
+        "url": "https://suno.com/song/0b78c62a-fcd6-4f7a-a2fc-e10284689f23",
+        "createdAt": "2026-10-05T00:02:29.448Z",
+        "durationSeconds": 221.48,
+        "imageUrl": "https://cdn2.suno.ai/image_0b78c62a-fcd6-4f7a-a2fc-e10284689f23.jpeg"
+      },
+      {
+        "id": "2fd1edb8-c973-426c-8eda-addbe3a79d02",
+        "title": "Where Kindness Ends",
+        "url": "https://suno.com/song/2fd1edb8-c973-426c-8eda-addbe3a79d02",
+        "createdAt": "2026-10-05T00:08:59.518Z",
+        "durationSeconds": 243.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2fd1edb8-c973-426c-8eda-addbe3a79d02.jpeg"
+      },
+      {
+        "id": "33e4d98e-e1d3-4842-ba1f-277e979f3208",
+        "title": "Keep My Heart",
+        "url": "https://suno.com/song/33e4d98e-e1d3-4842-ba1f-277e979f3208",
+        "createdAt": "2026-10-05T00:07:09.535Z",
+        "durationSeconds": 260,
+        "imageUrl": "https://cdn2.suno.ai/image_33e4d98e-e1d3-4842-ba1f-277e979f3208.jpeg"
+      },
+      {
+        "id": "03f47719-4595-4090-a34b-48c0ac1d3926",
+        "title": "Choosing Myself",
+        "url": "https://suno.com/song/03f47719-4595-4090-a34b-48c0ac1d3926",
+        "createdAt": "2026-10-05T02:01:11.465Z",
+        "durationSeconds": 181.4,
+        "imageUrl": "https://cdn2.suno.ai/image_03f47719-4595-4090-a34b-48c0ac1d3926.jpeg"
+      },
+      {
+        "id": "54adde5b-afe8-4094-a103-338c934c691f",
+        "title": "Lose Myself",
+        "url": "https://suno.com/song/54adde5b-afe8-4094-a103-338c934c691f",
+        "createdAt": "2026-10-05T02:00:48.014Z",
+        "durationSeconds": 203.56,
+        "imageUrl": "https://cdn2.suno.ai/image_54adde5b-afe8-4094-a103-338c934c691f.jpeg"
+      },
+      {
+        "id": "7b5bf044-3d4b-4637-a5d6-5b019deda5d3",
+        "title": "If I Choose the Sun",
+        "url": "https://suno.com/song/7b5bf044-3d4b-4637-a5d6-5b019deda5d3",
+        "createdAt": "2026-10-05T01:59:48.484Z",
+        "durationSeconds": 226.76,
+        "imageUrl": "https://cdn2.suno.ai/image_7b5bf044-3d4b-4637-a5d6-5b019deda5d3.jpeg"
+      },
+      {
+        "id": "b5e37d6c-da0f-454a-b134-c193831633dc",
+        "title": "A Life That Feels Good",
+        "url": "https://suno.com/song/b5e37d6c-da0f-454a-b134-c193831633dc",
+        "createdAt": "2026-10-05T01:59:21.952Z",
+        "durationSeconds": 222.28,
+        "imageUrl": "https://cdn2.suno.ai/image_b5e37d6c-da0f-454a-b134-c193831633dc.jpeg"
+      }
+    ]
+  },
+  {
     "id": "00d6595f-649c-45cd-ac38-b8d9e0f3b5f6",
     "name": "Unsustainably Fragmented",
     "url": "https://suno.com/playlist/00d6595f-649c-45cd-ac38-b8d9e0f3b5f6",
