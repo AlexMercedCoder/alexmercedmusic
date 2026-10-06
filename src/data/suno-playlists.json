@@ -1,5 +1,107 @@
 [
   {
+    "id": "116cf766-b0ee-46a1-844e-e95b2e44e7e2",
+    "name": "Tangled",
+    "url": "https://suno.com/playlist/116cf766-b0ee-46a1-844e-e95b2e44e7e2",
+    "imageUrl": "https://cdn2.suno.ai/image_237e77fd-48f0-4555-ae36-897f8143e15f.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1803.5600000000002,
+    "trackIds": [
+      "237e77fd-48f0-4555-ae36-897f8143e15f",
+      "e5db4708-e8ac-486c-9876-1cfaf508d298",
+      "d920fe75-e44e-4a12-bcf7-193c10826808",
+      "a3ee8dfc-a4e2-4889-acf1-0793f127e09e",
+      "3b3c7c4e-150e-47c1-af88-edfca961b93f",
+      "3ba9dc77-51bc-4394-8af1-d9c9eb2c534c",
+      "fe5a6997-be49-4fb4-accf-e929e9e03adb",
+      "ee6167d5-8c04-480c-b069-2025d739ff92",
+      "6ab469ad-9dc0-47bf-986d-2385617082f9",
+      "8f6f47f6-3e01-4737-8f2d-72a850f6c3ea"
+    ],
+    "tracks": [
+      {
+        "id": "237e77fd-48f0-4555-ae36-897f8143e15f",
+        "title": "Love You Anyway",
+        "url": "https://suno.com/song/237e77fd-48f0-4555-ae36-897f8143e15f",
+        "createdAt": "2026-10-06T00:06:00.221Z",
+        "durationSeconds": 175.56,
+        "imageUrl": "https://cdn2.suno.ai/image_237e77fd-48f0-4555-ae36-897f8143e15f.jpeg"
+      },
+      {
+        "id": "e5db4708-e8ac-486c-9876-1cfaf508d298",
+        "title": "Every Knot",
+        "url": "https://suno.com/song/e5db4708-e8ac-486c-9876-1cfaf508d298",
+        "createdAt": "2026-10-06T00:07:16.567Z",
+        "durationSeconds": 186.36,
+        "imageUrl": "https://cdn2.suno.ai/image_e5db4708-e8ac-486c-9876-1cfaf508d298.jpeg"
+      },
+      {
+        "id": "d920fe75-e44e-4a12-bcf7-193c10826808",
+        "title": "No Clean Geometry",
+        "url": "https://suno.com/song/d920fe75-e44e-4a12-bcf7-193c10826808",
+        "createdAt": "2026-10-06T00:08:36.109Z",
+        "durationSeconds": 171.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d920fe75-e44e-4a12-bcf7-193c10826808.jpeg"
+      },
+      {
+        "id": "a3ee8dfc-a4e2-4889-acf1-0793f127e09e",
+        "title": "Keep the Door Open",
+        "url": "https://suno.com/song/a3ee8dfc-a4e2-4889-acf1-0793f127e09e",
+        "createdAt": "2026-10-06T00:19:41.284Z",
+        "durationSeconds": 201.16,
+        "imageUrl": "https://cdn2.suno.ai/image_a3ee8dfc-a4e2-4889-acf1-0793f127e09e.jpeg"
+      },
+      {
+        "id": "3b3c7c4e-150e-47c1-af88-edfca961b93f",
+        "title": "Everybody I Have Carried",
+        "url": "https://suno.com/song/3b3c7c4e-150e-47c1-af88-edfca961b93f",
+        "createdAt": "2026-10-06T00:19:06.860Z",
+        "durationSeconds": 186.8,
+        "imageUrl": "https://cdn2.suno.ai/image_3b3c7c4e-150e-47c1-af88-edfca961b93f.jpeg"
+      },
+      {
+        "id": "3ba9dc77-51bc-4394-8af1-d9c9eb2c534c",
+        "title": "Hold the Contradiction",
+        "url": "https://suno.com/song/3ba9dc77-51bc-4394-8af1-d9c9eb2c534c",
+        "createdAt": "2026-10-06T00:18:29.520Z",
+        "durationSeconds": 182.68,
+        "imageUrl": "https://cdn2.suno.ai/image_3ba9dc77-51bc-4394-8af1-d9c9eb2c534c.jpeg"
+      },
+      {
+        "id": "fe5a6997-be49-4fb4-accf-e929e9e03adb",
+        "title": "Collision Course",
+        "url": "https://suno.com/song/fe5a6997-be49-4fb4-accf-e929e9e03adb",
+        "createdAt": "2026-10-06T00:17:15.626Z",
+        "durationSeconds": 172.8,
+        "imageUrl": "https://cdn2.suno.ai/image_fe5a6997-be49-4fb4-accf-e929e9e03adb.jpeg"
+      },
+      {
+        "id": "ee6167d5-8c04-480c-b069-2025d739ff92",
+        "title": "Impossible Arithmetic",
+        "url": "https://suno.com/song/ee6167d5-8c04-480c-b069-2025d739ff92",
+        "createdAt": "2026-10-06T00:17:55.434Z",
+        "durationSeconds": 156.32,
+        "imageUrl": "https://cdn2.suno.ai/image_ee6167d5-8c04-480c-b069-2025d739ff92.jpeg"
+      },
+      {
+        "id": "6ab469ad-9dc0-47bf-986d-2385617082f9",
+        "title": "Knots Are Not Chains",
+        "url": "https://suno.com/song/6ab469ad-9dc0-47bf-986d-2385617082f9",
+        "createdAt": "2026-10-06T00:11:43.309Z",
+        "durationSeconds": 167.92,
+        "imageUrl": "https://cdn2.suno.ai/image_6ab469ad-9dc0-47bf-986d-2385617082f9.jpeg"
+      },
+      {
+        "id": "8f6f47f6-3e01-4737-8f2d-72a850f6c3ea",
+        "title": "Crooked House",
+        "url": "https://suno.com/song/8f6f47f6-3e01-4737-8f2d-72a850f6c3ea",
+        "createdAt": "2026-10-06T00:10:52.249Z",
+        "durationSeconds": 202.4,
+        "imageUrl": "https://cdn2.suno.ai/image_8f6f47f6-3e01-4737-8f2d-72a850f6c3ea.jpeg"
+      }
+    ]
+  },
+  {
     "id": "e18b2a7b-58db-4d7e-804f-1f91f22e8958",
     "name": "Reflections",
     "url": "https://suno.com/playlist/e18b2a7b-58db-4d7e-804f-1f91f22e8958",
@@ -1899,7 +2001,6 @@
         "title": "A Door in the Wall",
         "url": "https://suno.com/song/1a2a8253-415b-4674-ab02-c4d16d217bc4",
         "createdAt": "2026-09-26T22:09:50.619Z",
-        "durationSeconds": 204.76,
         "imageUrl": "https://cdn2.suno.ai/image_1a2a8253-415b-4674-ab02-c4d16d217bc4.jpeg"
       },
       {
@@ -2440,8 +2541,8 @@
     "name": "I’m Secure That I Know My Insecurities",
     "url": "https://suno.com/playlist/ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
     "imageUrl": "https://cdn2.suno.ai/image_d3d9c545-2b12-418e-858a-e81c5d600037.jpeg",
-    "songCount": 48,
-    "durationSeconds": 11693.320000000002,
+    "songCount": 49,
+    "durationSeconds": 11924.880000000001,
     "trackIds": [
       "d3d9c545-2b12-418e-858a-e81c5d600037",
       "78b87ff0-f3a7-4f1c-ba3c-982a640b9de3",
@@ -2490,7 +2591,8 @@
       "ecce8701-9478-44a7-8842-016ee6449b6c",
       "63347a5f-09d0-4a57-a781-965536f7bca6",
       "850f3ee6-b88b-4f1b-bc7a-b6b0981e6d7c",
-      "04555f78-684a-429d-afc1-5469f9c48cd8"
+      "04555f78-684a-429d-afc1-5469f9c48cd8",
+      "815baa76-dbac-4918-87c9-26026b4b95dd"
     ],
     "tracks": [
       {
@@ -2876,6 +2978,13 @@
         "createdAt": "2026-10-04T13:54:15.320Z",
         "durationSeconds": 237.2,
         "imageUrl": "https://cdn2.suno.ai/image_04555f78-684a-429d-afc1-5469f9c48cd8.jpeg"
+      },
+      {
+        "id": "815baa76-dbac-4918-87c9-26026b4b95dd",
+        "title": "For This One Minute",
+        "url": "https://suno.com/song/815baa76-dbac-4918-87c9-26026b4b95dd",
+        "createdAt": "2026-10-06T05:15:47.181Z",
+        "imageUrl": "https://cdn2.suno.ai/image_815baa76-dbac-4918-87c9-26026b4b95dd.jpeg"
       }
     ]
   },
@@ -2942,7 +3051,6 @@
         "title": "The Constant Shift",
         "url": "https://suno.com/song/feb4f43d-8816-473f-add5-c7955d1278a1",
         "createdAt": "2026-09-23T01:43:33.073Z",
-        "durationSeconds": 247.16,
         "imageUrl": "https://cdn2.suno.ai/image_feb4f43d-8816-473f-add5-c7955d1278a1.jpeg"
       },
       {
@@ -3388,8 +3496,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 27,
-    "durationSeconds": 6397.720000000001,
+    "songCount": 28,
+    "durationSeconds": 6603.720000000001,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -3417,7 +3525,8 @@
       "f414999b-c1a9-45c6-88ac-5fb76d0c19ee",
       "18aed81b-3c95-4d70-b432-8bbf40a41d4e",
       "7779a5b3-f0ef-4464-8a9e-9739d5175b10",
-      "8011cfbe-d9dd-4b70-92af-76b6386f9728"
+      "8011cfbe-d9dd-4b70-92af-76b6386f9728",
+      "34099812-993d-485c-9b8e-4257daa9021c"
     ],
     "tracks": [
       {
@@ -3635,6 +3744,14 @@
         "createdAt": "2026-09-29T01:31:13.856Z",
         "durationSeconds": 301.6,
         "imageUrl": "https://cdn2.suno.ai/image_8011cfbe-d9dd-4b70-92af-76b6386f9728.jpeg"
+      },
+      {
+        "id": "34099812-993d-485c-9b8e-4257daa9021c",
+        "title": "Love Me Close, Love Me Far",
+        "url": "https://suno.com/song/34099812-993d-485c-9b8e-4257daa9021c",
+        "createdAt": "2026-10-06T05:42:19.418Z",
+        "durationSeconds": 206,
+        "imageUrl": "https://cdn2.suno.ai/image_34099812-993d-485c-9b8e-4257daa9021c.jpeg"
       }
     ]
   },
@@ -3797,7 +3914,6 @@
         "title": "On the Paris Lane",
         "url": "https://suno.com/song/65f7a361-95de-4229-ae8f-fa9190f91532",
         "createdAt": "2026-09-15T14:14:54.044Z",
-        "durationSeconds": 232.8,
         "imageUrl": "https://cdn2.suno.ai/image_65f7a361-95de-4229-ae8f-fa9190f91532.jpeg"
       },
       {
@@ -4435,7 +4551,6 @@
         "title": "Ambition Habit",
         "url": "https://suno.com/song/a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
         "createdAt": "2026-08-31T17:14:49.935Z",
-        "durationSeconds": 238.28,
         "imageUrl": "https://cdn2.suno.ai/image_a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0.jpeg"
       },
       {
@@ -5417,7 +5532,6 @@
         "title": "Ambition Habit",
         "url": "https://suno.com/song/a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
         "createdAt": "2026-08-31T17:14:49.935Z",
-        "durationSeconds": 238.28,
         "imageUrl": "https://cdn2.suno.ai/image_a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0.jpeg"
       },
       {
@@ -5881,7 +5995,6 @@
         "title": "To Find My Mind",
         "url": "https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea",
         "createdAt": "2026-08-31T21:34:03.529Z",
-        "durationSeconds": 267.48,
         "imageUrl": "https://cdn2.suno.ai/image_f0c0078d-d9d2-4fc0-bd92-18662b652bea.jpeg"
       },
       {
@@ -5934,7 +6047,6 @@
         "title": "THE ICEBERG OPEN LAKEHOUSE",
         "url": "https://suno.com/song/a6cc9cd2-41d0-447e-b412-dfc258a8e9e7",
         "createdAt": "2026-09-03T01:44:53.785Z",
-        "durationSeconds": 469.76,
         "imageUrl": "https://cdn2.suno.ai/image_a6cc9cd2-41d0-447e-b412-dfc258a8e9e7.jpeg"
       },
       {
@@ -6133,7 +6245,6 @@
         "title": "Paper Over Fear",
         "url": "https://suno.com/song/2d47c2ea-0cc7-4772-b7b5-3c248f2cca5f",
         "createdAt": "2026-09-12T20:27:16.537Z",
-        "durationSeconds": 257.2,
         "imageUrl": "https://cdn2.suno.ai/image_2d47c2ea-0cc7-4772-b7b5-3c248f2cca5f.jpeg"
       },
       {
@@ -7518,7 +7629,6 @@
         "title": "Happy to Be Here",
         "url": "https://suno.com/song/9b8e5560-c822-47b8-a9d3-44f6c77a2ad5",
         "createdAt": "2026-09-23T12:07:57.571Z",
-        "durationSeconds": 256.8,
         "imageUrl": "https://cdn2.suno.ai/image_9b8e5560-c822-47b8-a9d3-44f6c77a2ad5.jpeg"
       },
       {
@@ -7600,8 +7710,8 @@
     "name": "Deep Songs",
     "url": "https://suno.com/playlist/09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "imageUrl": "https://cdn2.suno.ai/image_dd6aef5f-c95c-49d2-8984-80868c3a84d2.jpeg",
-    "songCount": 139,
-    "durationSeconds": 33019.600000000006,
+    "songCount": 140,
+    "durationSeconds": 33262.36000000001,
     "trackIds": [
       "dd6aef5f-c95c-49d2-8984-80868c3a84d2",
       "32d5ef7d-1429-4645-b802-5586c40ee732",
@@ -7741,7 +7851,8 @@
       "4935f1e2-a697-4f66-8532-f8e306c75934",
       "c080b08f-d25d-468a-89fa-ef29e6964ea5",
       "a46052ff-db62-4444-86d5-13d58ceffdf5",
-      "204cc035-a481-4d21-9963-a8f8e45888d0"
+      "204cc035-a481-4d21-9963-a8f8e45888d0",
+      "6ba33723-9e1a-4f0c-9ede-704550666c3f"
     ],
     "tracks": [
       {
@@ -8309,7 +8420,6 @@
         "title": "PLEASE DON’T COUNT THE HOURS",
         "url": "https://suno.com/song/6445fb95-601d-488a-b5c4-2d7990b544b5",
         "createdAt": "2026-09-07T22:44:13.549Z",
-        "durationSeconds": 139.24,
         "imageUrl": "https://cdn2.suno.ai/image_6445fb95-601d-488a-b5c4-2d7990b544b5.jpeg"
       },
       {
@@ -8317,7 +8427,6 @@
         "title": "A THOUSAND GOODBYES EVERY DAY",
         "url": "https://suno.com/song/3a5962f5-a274-4a93-81eb-cbf8d8976657",
         "createdAt": "2026-09-07T22:53:14.059Z",
-        "durationSeconds": 148.76,
         "imageUrl": "https://cdn2.suno.ai/image_3a5962f5-a274-4a93-81eb-cbf8d8976657.jpeg"
       },
       {
@@ -8855,6 +8964,14 @@
         "createdAt": "2026-09-23T17:13:54.215Z",
         "durationSeconds": 258.12,
         "imageUrl": "https://cdn2.suno.ai/image_204cc035-a481-4d21-9963-a8f8e45888d0.jpeg"
+      },
+      {
+        "id": "6ba33723-9e1a-4f0c-9ede-704550666c3f",
+        "title": "Tangled In Between",
+        "url": "https://suno.com/song/6ba33723-9e1a-4f0c-9ede-704550666c3f",
+        "createdAt": "2026-10-05T23:56:26.522Z",
+        "durationSeconds": 242.76,
+        "imageUrl": "https://cdn2.suno.ai/image_6ba33723-9e1a-4f0c-9ede-704550666c3f.jpeg"
       }
     ]
   },
@@ -8998,7 +9115,6 @@
         "title": "To Find My Mind",
         "url": "https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea",
         "createdAt": "2026-08-31T21:34:03.529Z",
-        "durationSeconds": 267.48,
         "imageUrl": "https://cdn2.suno.ai/image_f0c0078d-d9d2-4fc0-bd92-18662b652bea.jpeg"
       },
       {

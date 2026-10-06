@@ -164,21 +164,29 @@ if (songs.length + coverIds.size !== total) {
   throw new Error(`Expected ${total - coverIds.size} non-cover songs but found ${songs.length}; review the cover classification.`);
 }
 
-const serialized = `${JSON.stringify(songs, null, 2)}\n`;
-const serializedCovers = `${JSON.stringify(coverSongs, null, 2)}\n`;
-const serializedPlaylists = `${JSON.stringify(playlists, null, 2)}\n`;
 let current = '';
 let currentCovers = '';
 let currentPlaylists = '';
 try { current = await readFile(outputUrl, 'utf8'); } catch {}
 try { currentCovers = await readFile(coversOutputUrl, 'utf8'); } catch {}
 try { currentPlaylists = await readFile(playlistsOutputUrl, 'utf8'); } catch {}
+// The public profile occasionally omits duration for older completed clips.
+// Keep a previously published value instead of erasing known metadata.
+const previous = current ? JSON.parse(current) : [];
+const previousById = new Map(previous.map((song) => [song.id, song]));
+for (const song of songs) {
+  if (!song.durationSeconds && previousById.get(song.id)?.durationSeconds) {
+    song.durationSeconds = previousById.get(song.id).durationSeconds;
+  }
+}
+const serialized = `${JSON.stringify(songs, null, 2)}\n`;
+const serializedCovers = `${JSON.stringify(coverSongs, null, 2)}\n`;
+const serializedPlaylists = `${JSON.stringify(playlists, null, 2)}\n`;
 const catalogReplacement = 'export const sunoSongs: Track[] = sunoSongsData as Track[];\n\n';
 const migratedCatalogSource = catalogSource.includes('export const sunoSongs: Track[] = [')
   ? catalogSource.replace(/export const sunoSongs: Track\[\] = \[[\s\S]*?(?=export const sunoStyle)/, catalogReplacement)
   : catalogSource;
 
-const previous = current ? JSON.parse(current) : [];
 const previousIds = new Set(previous.map((song) => song.id));
 const added = songs.filter((song) => !previousIds.has(song.id));
 const removed = previous.filter((song) => !ids.has(song.id));

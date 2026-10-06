@@ -21,6 +21,14 @@ const faqs = [
     question: 'What is the best way to improve a weak generation?',
     answer: 'Identify the failing prompt layer, change one or two clauses, generate multiple candidates and compare the same criteria each time.',
   },
+  {
+    question: 'How do I direct drums in Suno lyrics?',
+    answer: 'Put the overall groove and drum sound in Style. Use documented section markers in Lyrics, and test a short bracketed drum cue only for a local change. Bracketed percussion directions are suggestions, not exact sequencing commands.',
+  },
+  {
+    question: 'What makes a subgenre prompt more specific?',
+    answer: 'Name the subgenre, its rhythmic fingerprint, a signature instrument or timbre, the vocal role and one section contrast. For example, tech house with a dry four-on-the-floor kick, mono bass, syncopated conga details and a one-bar break.',
+  },
 ];
 
 const jsonLd = [
@@ -31,7 +39,7 @@ const jsonLd = [
     description: guide.description,
     url: guide.pageUrl,
     datePublished: '2026-09-13',
-    dateModified: '2026-09-13',
+    dateModified: '2026-10-06',
     author: { '@id': 'https://alexmerced.com/#alexmerced' },
     publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
     about: ['Suno', 'music prompting', 'song arrangement', 'music production'],
@@ -61,7 +69,7 @@ const jsonLd = [
   keywords={['Suno prompting guide', 'Suno prompts', 'Suno style prompt', 'music prompting', 'Suno v6']}
   jsonLd={jsonLd}
   ogType="article"
-  dateModified="2026-09-13"
+  dateModified="2026-10-06"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno Prompting Field Guide' }]} />
 
@@ -87,9 +95,11 @@ const jsonLd = [
       <a href="#mental-model">Mental model</a>
       <a href="#prompt-architecture">Prompt architecture</a>
       <a href="#genre-atlas">Genres</a>
+      <a href="#percussion">Drums and percussion</a>
       <a href="#sound-design">Sound design</a>
       <a href="#arrangement">Arrangement</a>
       <a href="#lyrics">Lyrics</a>
+      <a href="#lyric-notation">Lyric notation</a>
       <a href="#hybrids">Hybrids</a>
       <a href="#controls">Controls</a>
       <a href="#troubleshooting">Troubleshooting</a>
@@ -170,6 +180,50 @@ const jsonLd = [
             </dl>
           </article>
         ))}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">From label to sound</p>
+        <h2>Build a subgenre prompt in five moves</h2>
+        <p>A style label is a starting point. Add the audible details that distinguish its branches. Afrobeat and Afrobeats, for example, are different traditions; describe the intended groove rather than treating the terms as interchangeable.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.genreMethod.map((step) => <article><h3>{step.name}</h3><p><strong>Try:</strong> {step.example}</p><p>{step.reason}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="percussion" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Percussion control</p>
+        <h2>Write the groove as relationships</h2>
+        <p>Give the Style field a rhythmic fingerprint: tempo and feel, kick and snare placement, subdivisions, percussion color, bass relationship, section changes and drum sound. “Punchy drums” leaves far more to chance than “dry kick on every quarter note, clap on two and four, offbeat open hat, short bass notes between kicks.” Suno recommends naming beat instruments directly in concise prompts.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Dimension</th><th>What to describe</th><th>Copyable phrase</th></tr></thead>
+          <tbody>{guide.percussionDimensions.map(([name, meaning, phrase]) => <tr><th scope="row">{name}</th><td>{meaning}</td><td>{phrase}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Genre fingerprints</p>
+        <h2>Choose a pattern, then customize it</h2>
+        <p>These are descriptive starting points, not fixed rules for each tradition or promises of note-accurate output. Preserve the chosen style’s core pulse before changing the drum kit, bass role or arrangement.</p>
+      </div>
+      <div class="atlas-grid">
+        {guide.percussionRecipes.map(([genre, direction]) => <article class="reference-card"><h3>{genre}</h3><p>{direction}</p></article>)}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Style field example</p>
+        <h2>Describe the whole rhythmic arc</h2>
+      </div>
+      <div class="prompt-card"><p>{guide.percussionStyleExample}</p></div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">When the groove misses</p>
+        <h2>Repair one drum relationship at a time</h2>
+      </div>
+      <div class="trouble-list">
+        {guide.percussionTroubleshooting.map(([symptom, revision]) => <article><h3>{symptom}</h3><p>{revision}</p></article>)}
       </div>
     </div>
   </section>
@@ -255,6 +309,29 @@ const jsonLd = [
         </ul>
       </div>
       <pre class="lyric-example"><code>{guide.lyricExample}</code></pre>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="lyric-notation" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Lyrics versus Style</p>
+        <h2>Place global rhythm in Style and local changes in Lyrics</h2>
+        <p>Suno documents basic structure labels such as <code>[Verse]</code>, <code>[Chorus]</code> and <code>[Bridge]</code>. The longer bracketed drum cues below are practical experiments, not a published syntax with guaranteed execution. Keep them short, listen for the intended change, and move unreliable cues into Style or the Song Editor.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Notation</th><th>Status</th><th>How to use it</th></tr></thead>
+          <tbody>{guide.notationGuide.map(([notation, status, use]) => <tr><th scope="row"><code>{notation}</code></th><td>{status}</td><td>{use}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="guide-split subsection-head">
+        <div>
+          <h3>A full lyric-sheet experiment</h3>
+          <p>Pair this with the Style example in the percussion section. The plain lyric lines remain singable; bracketed cues signal the intended local drum changes. If the model sings a cue, simplify the header and put that instruction in Style.</p>
+        </div>
+        <pre class="lyric-example"><code>{guide.percussionLyricExample}</code></pre>
+      </div>
     </div>
   </section>
 
@@ -390,6 +467,26 @@ const jsonLd = [
   <section class="section section--tight" data-era="ai">
     <div class="shell">
       <div class="section__head">
+        <p class="eyebrow">Sources and limits</p>
+        <h2>What Suno documents</h2>
+        <p>These Suno sources support the product controls, basic section markers and beat-prompting advice in this guide. The detailed genre and percussion phrases are musical descriptions to test by ear; Suno does not publish a deterministic command language for note-by-note drum placement.</p>
+      </div>
+      <ul class="source-list">
+        <li><a href="https://suno.com/hub/how-to-make-a-song">Suno: How to Make a Song</a>: Custom lyrics, Style direction and basic section markers.</li>
+        <li><a href="https://suno.com/hub/step-by-step-guide-how-to-make-beats-with-suno">Suno: How to Make Beats</a>: concise beat prompts naming tempo, genre, rhythm and instruments.</li>
+        <li><a href="https://suno.com/music-library/genres">Suno Music Library: Genres</a>: examples of genre and subgenre language in published tracks.</li>
+        <li><a href="https://help.suno.com/en/articles/2415873">Suno Help: Can I Use My Own Lyrics?</a>: Custom mode lyric field.</li>
+        <li><a href="https://help.suno.com/en/articles/3161921">Suno Help: Exclude</a>: excluding unwanted elements.</li>
+        <li><a href="https://help.suno.com/en/articles/6141377">Suno Help: Creative Sliders</a>: Weirdness, Style Influence and Audio Influence.</li>
+        <li><a href="https://help.suno.com/en/articles/6141505">Suno Help: Song Editor</a>: replacing and extending sections after generation.</li>
+        <li><a href="https://help.suno.com/en/articles/13924481">Suno Help: v6 FAQ</a>: Variety, Max Mode and model behavior.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
         <p class="eyebrow">Common questions</p>
         <h2>Short answers</h2>
       </div>
@@ -467,6 +564,8 @@ const jsonLd = [
   .faq-list { display:grid; gap:.75rem; max-width:52rem; }
   .template-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-top:2rem; }
   .scorecard { margin-top:3rem; }
+  .source-list { color:var(--ink-soft); display:grid; gap:.7rem; padding-left:1.3rem; max-width:62rem; }
+  .source-list a { color:var(--ai); }
   @media (max-width:800px) {
     .guide-nav { top:113px; }
     .guide-split, .field-grid, .recipe-grid, .density-grid, .atlas-grid, .reference-columns, .vocab-grid, .pattern-strip, .hybrid-grid, .exclude-grid, .model-grid, .template-grid { grid-template-columns:1fr; }

@@ -1,9 +1,9 @@
 export const sunoPromptingGuide = {
   title: 'Suno Prompting Field Guide',
-  edition: 'September 2026',
+  edition: 'October 2026',
   scope: 'Suno v6 family and current creation tools',
   pageUrl: 'https://alexmercedmusic.com/suno-prompting-guide/',
-  description: 'A practical guide to writing Suno prompts with clear musical direction for genre, rhythm, instruments, vocals, arrangement and production.',
+  description: 'A detailed Suno guide to genre and subgenre choices, drum and percussion direction, lyric-section notation, vocals, arrangement and production.',
   evidenceNote: 'Suno documents product controls and a general musical glossary. Descriptive musical terms shape probability rather than guarantee a result.',
   formula: 'GENRE + ERA + TEMPO/GROOVE + INSTRUMENTS + VOCAL + ARRANGEMENT + PRODUCTION + ENDING',
   example: 'Avant-prog and art pop, 104 BPM with alternating 7/8 and 4/4, angular clean guitar, elastic distorted bass, dry acoustic drums, theatrical baritone shifting into whispered harmonies, sparse verses and an explosive final refrain, close-mic vocals, crisp transients, spectral reverb, hard stop.',
@@ -33,6 +33,12 @@ export const sunoPromptingGuide = {
         ['Shoegaze', 'dense guitar haze, buried vocals and wide ambience'],
         ['Post-punk', 'angular guitar, prominent bass and controlled tension'],
         ['Progressive metal', 'complex meter, long arrangements and precise heaviness'],
+        ['Post-rock', 'patient instrumental builds, repeating guitar figures and wide crescendos'],
+        ['Post-hardcore', 'angular riffs, dynamic shifts and urgent vocals'],
+        ['Doom metal', 'slow heavy riffs, sustained low tones and spacious drum hits'],
+        ['Blackgaze', 'tremolo-picked intensity under shoegaze ambience'],
+        ['Pop punk', 'fast straight drums, bright power chords and singalong hooks'],
+        ['Garage rock', 'raw ensemble sound, compact riffs and little polish'],
       ],
     },
     {
@@ -46,6 +52,12 @@ export const sunoPromptingGuide = {
         ['Neo-soul', 'behind-the-beat pocket, rich chords and intimate vocals'],
         ['Gospel', 'choir, call and response and rising emotional intensity'],
         ['Acoustic singer-songwriter', 'lyric focus, fingerstyle guitar and an intimate room'],
+        ['Disco', 'four-on-the-floor kick, offbeat hats, octave bass and bright strings'],
+        ['Nu-disco', 'disco bass and rhythm guitar with modern synth polish'],
+        ['Contemporary R&B', 'elastic drums, intimate lead vocals and spacious chords'],
+        ['Alternative R&B', 'R&B vocals with sparse, atmospheric or experimental production'],
+        ['New jack swing', 'syncopated machine drums, bright keyboard stabs and R&B singing'],
+        ['City pop', 'polished pop-funk arrangement, electric piano, clean guitar and smooth bass'],
       ],
     },
     {
@@ -59,6 +71,16 @@ export const sunoPromptingGuide = {
         ['Drum and bass', 'fast breakbeats, sub-bass and kinetic momentum'],
         ['Future garage', 'ghostly vocal chops, swung percussion and rain-soaked ambience'],
         ['Industrial', 'metallic noise, loops and confrontational texture'],
+        ['Deep house', 'warm four-on-the-floor pulse, rounded bass and soulful chords'],
+        ['Tech house', 'dry kick, compact bass, syncopated percussion and sparse hooks'],
+        ['Progressive house', 'long builds, evolving layers and spacious melodic release'],
+        ['Detroit techno', 'machine pulse, syncopated synth bass and futuristic restraint'],
+        ['Minimal techno', 'repetition with tiny timbral and rhythmic changes'],
+        ['UK garage', 'swung two-step kicks, clipped vocal samples and sub-bass'],
+        ['Jungle', 'chopped fast breaks, rolling sub-bass and dub-informed space'],
+        ['Liquid drum and bass', 'fast breakbeats with smooth pads and melodic bass'],
+        ['Dubstep', 'half-time drums, sub-bass and sound-design-focused drops'],
+        ['Synthwave', 'retro analog synths, programmed drums and cinematic 1980s color'],
       ],
     },
     {
@@ -72,8 +94,57 @@ export const sunoPromptingGuide = {
         ['Reggae', 'offbeat guitar, deep bass and spacious drums'],
         ['Dub', 'echo, spring reverb, bass emphasis and studio-as-instrument'],
         ['Folk', 'acoustic storytelling, simple arrangements and communal melody'],
+        ['Trap', '808 sub-bass, half-time snare and changing hi-hat subdivisions'],
+        ['Drill', 'sliding 808 bass, sparse minor motifs and off-grid kick accents'],
+        ['Jazz rap', 'rap phrasing over jazz harmony, live-sounding drums or samples'],
+        ['Bebop', 'fast swing, walking bass, ride cymbal and agile melodic lines'],
+        ['Modal jazz', 'sustained modal harmony, spacious solos and ensemble interplay'],
+        ['Afrobeats', 'contemporary West African pop rhythms, syncopated drums and melodic hooks'],
+        ['Amapiano', 'South African house-rooted groove, piano chords, shakers and log-drum bass'],
+        ['Highlife', 'bright interlocking guitars, horn lines and buoyant dance rhythms'],
+        ['Salsa', 'clave, tumbao bass, piano montuno, brass and call-and-response'],
+        ['Cumbia', 'rolling dance pulse, guiro or shaker and repeating bass figures'],
+        ['Dancehall', 'syncopated riddim, bass weight and rhythmic vocal delivery'],
+        ['Bluegrass', 'acoustic string-band drive, banjo rolls, mandolin chop and close harmony'],
       ],
     },
+  ],
+  genreMethod: [
+    { name: 'Name the branch', example: '“House” → “deep house” or “tech house”', reason: 'A subgenre narrows the likely groove and arrangement.' },
+    { name: 'Name the rhythmic fingerprint', example: '“tech house, dry quarter-note kick, offbeat open hat, syncopated conga ghosts”', reason: 'Drum relationships make the branch audible.' },
+    { name: 'Name one signature instrument', example: '“Amapiano, rounded log-drum bass and airy piano chords”', reason: 'A concrete timbre prevents an overly generic result.' },
+    { name: 'Name the vocal or instrumental role', example: '“jazz rap, conversational verse, wordless sung hook”', reason: 'Delivery is often a major part of genre identity.' },
+    { name: 'Name a section contrast', example: '“half-time verse; full four-on-the-floor chorus”', reason: 'The genre can develop without turning into a list of unrelated tags.' },
+  ],
+  percussionDimensions: [
+    ['Pulse and meter', 'BPM plus 4/4, 6/8 or 7/8; half-time or double-time feel', '102 BPM in 4/4, half-time backbeat'],
+    ['Kick placement', 'quarter-note drive, sparse offbeats, syncopation or beat-one weight', 'dry kick on every quarter note; remove it for the bridge'],
+    ['Snare and clap', 'backbeat position, layered clap, rimshot, brush or ghost notes', 'tight snare on beats two and four with quiet ghost notes'],
+    ['Hats and cymbals', 'closed eighths, open offbeats, 16th rolls, ride or crash', 'short closed hats with occasional triplet rolls'],
+    ['Percussion color', 'shaker, tambourine, conga, bongo, clave, guiro, woodblock or metal', 'shaker sixteenths and low conga answers between snares'],
+    ['Subdivision and swing', 'straight eighths, swung sixteenths, triplets, dotted rhythms', 'slightly swung sixteenths, straight kick pulse'],
+    ['Microtiming and touch', 'ahead or behind the beat; loose human or quantized; soft or hard', 'snare a little behind the beat, gentle brush attacks'],
+    ['Fills and transitions', 'tom pickup, snare roll, cymbal choke, one-bar break or silence', 'two-beat tom fill before the final chorus, then one beat of silence'],
+    ['Density over time', 'sparse verse, added hats in pre-chorus, full chorus or drumless bridge', 'verse uses kick and rim only; chorus adds open hats and claps'],
+    ['Drum sound and room', 'dry, gated, roomy, saturated, band-limited or wide', 'close dry kick and snare; roomy overheads only on fills'],
+    ['Bass relationship', 'bass doubles kick, answers it, or holds notes across the pulse', 'short bass notes answer the kick in offbeat gaps'],
+  ],
+  percussionRecipes: [
+    ['Boom bap', '88 BPM; dusty break loop; weighty kick; snare on two and four; lightly swung hats; short vinyl-room ambience'],
+    ['Trap', '140 BPM counted in half-time; sustained 808; snare on beat three; tight hats with short 16th and triplet rolls'],
+    ['Drill', '142 BPM; sliding 808; irregular kick accents; crisp half-time snare; skittering hats; tense empty space'],
+    ['Deep house', '122 BPM; warm quarter-note kick; clap on two and four; offbeat open hat; restrained shaker; bass between kicks'],
+    ['Tech house', '126 BPM; dry four-on-the-floor kick; short mono bass; syncopated conga and rim details; one-bar drum drop'],
+    ['UK garage', '132 BPM; two-step kick pattern; swung hats; clipped snare; sub-bass answering the vocal chop'],
+    ['Jungle', '165 BPM; chopped break with busy snare ghosts; heavy sub; ride accents; dubby delay on occasional hits'],
+    ['Liquid drum and bass', '174 BPM; rolling break; clean snare on two and four in half-time feel; warm sub; light shakers'],
+    ['Afrobeat', 'long interlocking guitar and percussion cycles; live kick and snare; conga, bell and shaker patterns; evolving horn responses'],
+    ['Afrobeats', '106 BPM; syncopated kick and snare; buoyant shaker and hand percussion; melodic bass with space for the vocal'],
+    ['Amapiano', '112 BPM; soft house kick, shakers and warm piano; syncopated log-drum bass becomes the hook'],
+    ['Salsa', 'two-three son-clave feel; conga tumbao; timbales fills; piano montuno and bass tumbao; brass answers'],
+    ['Bossa nova', 'soft syncopated nylon guitar; brushed or rim-click backbeat; quiet shaker; no arena-style drum fills'],
+    ['Post-rock', 'patient floor-tom pulse; cymbal swells; sparse kick at first; full live-kit crescendo near the end'],
+    ['Industrial', 'mechanical kick and snare; metallic found hits; distorted loop; abrupt machine stops'],
   ],
   instrumentFamilies: [
     {
@@ -184,6 +255,8 @@ export const sunoPromptingGuide = {
     { name: 'Weirdness', purpose: 'Moves from conventional choices toward unusual timbres, transitions and forms.', method: 'Start near normal. Raise it after the song identity is stable.' },
     { name: 'Style Influence', purpose: 'Changes how closely the result follows the Style field.', method: 'Raise it when the genre or ensemble keeps drifting.' },
     { name: 'Audio Influence', purpose: 'Changes how closely a generation follows uploaded audio.', method: 'Raise it when the melody, voice or groove must remain recognizable.' },
+    { name: 'Variety', purpose: 'Introduces variation by adjusting the style prompt in v6.', method: 'Set it to 0 while testing exact style tags; increase it when you want fresh interpretations.' },
+    { name: 'Max Mode', purpose: 'Spends more credits on demanding v6 generations.', method: 'Try it for longer songs, style transfer or keeping a complex arrangement consistent.' },
     { name: 'Cover', purpose: 'Changes style while trying to retain the melody of a song you created.', method: 'Use it for a substantial rearrangement of owned material.' },
     { name: 'Inspire', purpose: 'Draws mood, tempo and instrumentation from a playlist.', method: 'Use a small, coherent group of songs for stronger project identity.' },
     { name: 'Extend', purpose: 'Continues from a chosen point with new lyrics or style.', method: 'Use it to repair an ending or develop a promising section.' },
@@ -197,6 +270,50 @@ export const sunoPromptingGuide = {
     'Use parentheses for likely backing responses, but expect some variation.',
     'Spell unusual names phonetically when pronunciation matters.',
     'Keep prose production notes out of the lyric body because they may be sung.',
+    'Use simple section labels first: [Intro], [Verse 1], [Pre-Chorus], [Chorus], [Bridge], [Outro]. Suno documents these as structure cues.',
+    'Put brief local arrangement cues in a section header only when needed; bracketed percussion cues are useful experiments, not guaranteed commands.',
+    'If a drum cue is sung aloud, move it to Style or use the editor to replace that section.',
+  ],
+  notationGuide: [
+    ['[Verse 1] / [Chorus] / [Bridge]', 'Documented section markers', 'Give the lyric a clear form; repeat chorus words when you need them repeated.'],
+    ['[Verse 2: kick and rim only]', 'Experimental local arrangement cue', 'Describes a thinner verse. If ignored, move the drum contrast into Style.'],
+    ['[Pre-Chorus: add closed hats]', 'Experimental build cue', 'Names one audible change rather than an entire production paragraph.'],
+    ['[Instrumental Break: drums and bass]', 'Experimental instrumental cue', 'Leave no singable prose under it; verify that the break actually appears.'],
+    ['[Final Chorus: full kit, open hats]', 'Experimental return cue', 'Pair with repeated chorus lyrics and a Style instruction for the larger arc.'],
+    ['(call-and-response ad-lib)', 'Possible backing-vocal hint', 'Parentheses may become backing words or be interpreted differently. Listen and revise.'],
+    ['boom / tss / ka in a lyric line', 'Singable onomatopoeia', 'Use only when you want a voice to say it; describe drum timbre in Style instead.'],
+  ],
+  percussionLyricExample: `[Intro: instrumental, filtered kick and shaker]
+
+[Verse 1: kick and rim only]
+The streetlights draw a silver line
+I count the turns and take my time
+
+[Pre-Chorus: add closed hats, two-beat tom fill]
+One small spark becomes a sound
+The whole room lifts above the ground
+
+[Chorus: full kit, open hats and claps]
+We find the rhythm, we find the way
+Bring every color into day
+
+[Bridge: drums drop out]
+Hold the silence, let it breathe
+
+[Final Chorus: drums return, wider cymbals]
+We find the rhythm, we find the way
+Bring every color into day
+
+[Outro: kick stops, shaker fades]`,
+  percussionStyleExample: '106 BPM contemporary Afrobeats, syncopated dry kick and rimshot, buoyant shaker sixteenths, soft conga answers, melodic bass leaving room for the lead vocal. Verse keeps kick and rim sparse; pre-chorus adds closed hats and a short tom pickup; chorus opens into handclaps and brighter cymbals; drumless bridge; final chorus returns with the full groove.',
+  percussionTroubleshooting: [
+    ['Drums sound generic', 'Choose one subgenre, name kick/snare placement and one identifying percussion layer.'],
+    ['Kick and bass blur together', 'Ask for a short kick and bass notes that answer between kicks; reduce sub layers.'],
+    ['Hats dominate', 'Specify sparse closed hats or shaker instead; put fast trap hat rolls in Exclude.'],
+    ['Fill never arrives', 'Put the fill in Style and a short local section cue; if it still misses, edit or replace that section.'],
+    ['The cue gets sung', 'Remove descriptive prose from Lyrics; keep only simple headers and move percussion direction to Style.'],
+    ['Rhythm feels too rigid', 'Ask for slightly behind-the-beat snare or humanized hand percussion; avoid competing precision demands.'],
+    ['Genre rhythm is wrong', 'State the subgenre plus its audible drum fingerprint instead of adding unrelated genre names.'],
   ],
   lyricExample: `[Intro - instrumental, distant radio voice]
 
@@ -263,6 +380,7 @@ Seven steps forward, four passing by
     { symptom: 'The chorus has no lift', revision: 'Request a thinner verse, rising pre-chorus and full-band chorus.' },
     { symptom: 'The mix is muddy', revision: 'Use fewer foreground parts and request clear separation with open low mids.' },
     { symptom: 'The lyrics are rushed', revision: 'Shorten lines, add breaks, reduce tempo or split each thought.' },
+    { symptom: 'The drum groove is vague', revision: 'Describe kick and snare placement, hat subdivision, one percussion color and how bass relates to the kick.' },
     { symptom: 'An instruction gets sung', revision: 'Move global direction to Style and keep only concise cues in brackets.' },
     { symptom: 'The ending is abrupt', revision: 'Request a short coda, fade or hard stop. Use Extend if the song needs more room.' },
     { symptom: 'The result is predictable', revision: 'Raise Weirdness or test the experimental model after the core identity works.' },
