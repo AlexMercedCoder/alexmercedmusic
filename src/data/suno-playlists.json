@@ -3614,8 +3614,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 30,
-    "durationSeconds": 7107.680000000001,
+    "songCount": 31,
+    "durationSeconds": 7364.800000000001,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -3646,7 +3646,8 @@
       "8011cfbe-d9dd-4b70-92af-76b6386f9728",
       "34099812-993d-485c-9b8e-4257daa9021c",
       "f369c5b2-de11-4035-8a49-c5b95c42f46d",
-      "bce6a0ca-6c41-454a-8f17-1e43102f0f11"
+      "bce6a0ca-6c41-454a-8f17-1e43102f0f11",
+      "c0016cea-8f77-43e6-a66c-1a61c094abc6"
     ],
     "tracks": [
       {
@@ -3888,6 +3889,14 @@
         "createdAt": "2026-10-07T01:23:22.657Z",
         "durationSeconds": 255.96,
         "imageUrl": "https://cdn2.suno.ai/image_bce6a0ca-6c41-454a-8f17-1e43102f0f11.jpeg"
+      },
+      {
+        "id": "c0016cea-8f77-43e6-a66c-1a61c094abc6",
+        "title": "I Can't Be Everywhere",
+        "url": "https://suno.com/song/c0016cea-8f77-43e6-a66c-1a61c094abc6",
+        "createdAt": "2026-10-07T01:23:39.088Z",
+        "durationSeconds": 257.12,
+        "imageUrl": "https://cdn2.suno.ai/image_c0016cea-8f77-43e6-a66c-1a61c094abc6.jpeg"
       }
     ]
   },
