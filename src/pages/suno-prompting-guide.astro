@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import SunoPromptWorkbench from '../components/SunoPromptWorkbench.astro';
 import { sunoPromptingGuide as guide } from '../data/suno-prompting-guide';
 import { SITE } from '../data/catalog-model';
 
@@ -36,6 +37,14 @@ const faqs = [
   {
     question: 'What makes a subgenre prompt more specific?',
     answer: 'Name the subgenre, its rhythmic fingerprint, a signature instrument or timbre, the vocal role and one section contrast. For example, tech house with a dry four-on-the-floor kick, mono bass, syncopated conga details and a one-bar break.',
+  },
+  {
+    question: 'When should I stop rewriting the prompt and edit the song instead?',
+    answer: 'Edit when the song identity works and the failure is local. Use Replace Section for one passage, Extend for form or ending problems, stems for balance and processing, and MIDI or uploaded audio when notes or timing must be exact.',
+  },
+  {
+    question: 'How can several Suno songs sound like one album?',
+    answer: 'Create a style bible covering harmonic palette, recurring motif, instrument family, vocal identity and production rules. Give each track a different narrative role while preserving a few shared decisions.',
   },
 ];
 
@@ -89,6 +98,7 @@ const jsonLd = [
       <div class="guide-meta">
         <span>{guide.edition}</span>
         <span>{guide.scope}</span>
+        <span>Research verified October 7, 2026</span>
       </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="#prompt-architecture">Build a prompt</a>
@@ -101,19 +111,23 @@ const jsonLd = [
   <nav class="guide-nav" aria-label="Guide sections">
     <div class="shell">
       <a href="#mental-model">Mental model</a>
+      <a href="#workbench">Workbench</a>
       <a href="#prompt-architecture">Prompt architecture</a>
       <a href="#genre-atlas">Genres</a>
       <a href="#harmony">Keys and chords</a>
       <a href="#meter">Time signatures</a>
       <a href="#percussion">Drums and percussion</a>
       <a href="#sound-design">Sound design</a>
+      <a href="#melody-vocals">Melody and vocals</a>
       <a href="#arrangement">Arrangement</a>
       <a href="#lyrics">Lyrics</a>
       <a href="#lyric-notation">Lyric notation</a>
       <a href="#hybrids">Hybrids</a>
       <a href="#controls">Controls</a>
+      <a href="#workflow">Workflow</a>
       <a href="#troubleshooting">Troubleshooting</a>
       <a href="#recipes">Recipes</a>
+      <a href="#project-bible">Project planning</a>
       <a href="#checklist">Checklist</a>
     </div>
   </nav>
@@ -139,6 +153,12 @@ const jsonLd = [
         <strong>Use concrete language.</strong>
         <span>Replace “epic” with “rising strings, massed drums, choir and a final key change.” Replace “innovative” with the musical event you want to hear.</span>
       </aside>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="workbench" data-era="ai">
+    <div class="shell">
+      <SunoPromptWorkbench />
     </div>
   </section>
 
@@ -347,6 +367,29 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="melody-vocals" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Melody and vocal writing</p>
+        <h2>Write for range, breath and intelligibility</h2>
+        <p>A useful vocal prompt separates the melody’s shape from the singer’s identity. Describe contour, comfortable register, phrase length, syllable density and where the performance expands. Treat pronunciation as a local problem that can be tested and replaced.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Dimension</th><th>Working method</th></tr></thead>
+          <tbody>{guide.melodyAndVocalWriting.map(([dimension, method]) => <tr><th scope="row">{dimension}</th><td>{method}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Copyable vocal patterns</p>
+        <h2>Describe what changes between sections</h2>
+      </div>
+      <div class="atlas-grid">
+        {guide.vocalPromptPatterns.map(([name, pattern]) => <article class="reference-card"><h3>{name}</h3><p>{pattern}</p></article>)}
+      </div>
+    </div>
+  </section>
+
   <section class="section section--tight" id="arrangement" data-era="ai">
     <div class="shell">
       <div class="section__head">
@@ -376,6 +419,19 @@ const jsonLd = [
       </div>
       <div class="pattern-strip">
         {guide.arrangementPatterns.map(([name, method]) => <article><h3>{name}</h3><p>{method}</p></article>)}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Arrangement blueprints</p>
+        <h2>Plan section length and energy before adding detail</h2>
+        <p>Bar counts are flexible planning units, not mandatory commands. Use them to make section proportions and contrast explicit, then adjust by ear.</p>
+      </div>
+      <div class="recipe-grid blueprint-grid">
+        {guide.arrangementBlueprints.map((blueprint) => (
+          <details>
+            <summary>{blueprint.name}</summary>
+            <div class="detail-body"><p><strong>Map:</strong> {blueprint.map}</p><p><strong>Energy:</strong> {blueprint.energy}</p><p><strong>Prompt:</strong> {blueprint.prompt}</p></div>
+          </details>
+        ))}
       </div>
       <div class="section__head subsection-head">
         <p class="eyebrow">Production and mix</p>
@@ -483,6 +539,40 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="workflow" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Prompt, edit or produce?</p>
+        <h2>Use the smallest tool that matches the problem</h2>
+        <p>A new prompt is useful when the whole musical idea is open. Local faults are usually better handled with a section edit, extension, stem, uploaded reference or MIDI correction.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Method</th><th>Use it when</th><th>Working approach</th></tr></thead>
+          <tbody>{guide.workflowDecisions.map(([method, when, approach]) => <tr><th scope="row">{method}</th><td>{when}</td><td>{approach}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Control boundary</p>
+        <h2>Know which instructions are exact and which require listening</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Control level</th><th>Examples</th><th>Expectation</th></tr></thead>
+          <tbody>{guide.controlBoundaries.map(([level, examples, expectation]) => <tr><th scope="row">{level}</th><td>{examples}</td><td>{expectation}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Studio production</p>
+        <h2>Move from generated mix to editable project</h2>
+        <p>Studio 2.0 adds MIDI, detailed stem separation, effects and automation. Check timing and pitch before polishing because production cannot repair the wrong musical decision.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.studioProductionWorkflow.map(([step, action]) => <article><h3>{step}</h3><p>{action}</p></article>)}
+      </div>
+    </div>
+  </section>
+
   <section class="section section--tight" id="troubleshooting" data-era="ai">
     <div class="shell">
       <div class="section__head">
@@ -493,6 +583,25 @@ const jsonLd = [
       <div class="trouble-list">
         {guide.troubleshooting.map((item) => (
           <article><h3>{item.symptom}</h3><p>{item.revision}</p></article>
+        ))}
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Generation diagnosis</p>
+        <h2>Connect the audible result to one next experiment</h2>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Result</th><th>Likely cause</th><th>Next experiment</th></tr></thead>
+          <tbody>{guide.generationDiagnosis.map(([result, cause, next]) => <tr><th scope="row">{result}</th><td>{cause}</td><td>{next}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Before and after</p>
+        <h2>Replace vague intention with audible behavior</h2>
+      </div>
+      <div class="lab-grid">
+        {guide.promptLaboratory.map(([dimension, weak, improved, why]) => (
+          <article class="reference-card"><h3>{dimension}</h3><p><strong>Weak:</strong> {weak}</p><p><strong>Improved:</strong> {improved}</p><p>{why}</p></article>
         ))}
       </div>
     </div>
@@ -521,6 +630,23 @@ const jsonLd = [
       <div class="vocab-grid">
         {guide.vocabulary.map((item) => <article><h3>{item.family}</h3><p>{item.terms}</p></article>)}
       </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="project-bible" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Project-level prompting</p>
+        <h2>Build a style bible for an EP or concept album</h2>
+        <p>Consistency comes from repeating a few deliberate rules, not pasting one identical prompt into every song. Define the project’s harmonic, rhythmic, vocal and production boundaries, then give each track a separate narrative role.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.projectStyleBible.map(([area, direction]) => <article><h3>{area}</h3><p>{direction}</p></article>)}
+      </div>
+      <aside class="principle">
+        <strong>Keep a continuity log.</strong>
+        <span>For every accepted track, record the prompt, model, settings, key, BPM, meter, voice description, recurring motif and production choices. Use the log to decide what the next song should preserve or contrast.</span>
+      </aside>
     </div>
   </section>
 
@@ -571,6 +697,9 @@ const jsonLd = [
         <li><a href="https://help.suno.com/en/articles/9010177">Suno Help: Music Glossary</a>: keys, chord progressions, meter, groove, syncopation, cadence and other musical terms.</li>
         <li><a href="https://help.suno.com/en/articles/10625089">Suno Help: Studio 1.2</a>: time-signature grid behavior and its separation from clip generation.</li>
         <li><a href="https://help.suno.com/en/articles/13670593">Suno Help: MIDI in Studio</a>: piano roll, Key and Scale assistance, chord modes and the arpeggiator.</li>
+        <li><a href="https://help.suno.com/en/articles/13670529">Suno Help: Studio 2.0</a>: MIDI, effects, automation, advanced stems and chat-assisted production.</li>
+        <li><a href="https://help.suno.com/en/articles/13925185">Suno Help: Stem Separation</a>: instrument and vocal separation modes for production work.</li>
+        <li><a href="https://help.suno.com/en/articles/13925249">Suno Help: Exporting from Studio</a>: full mix, selected range, multitrack, WAV and MIDI export workflows.</li>
         <li><a href="https://help.suno.com/en/articles/2477633">Suno Help: Upload Audio</a>: extending from audio you own, including a four-bar drum loop.</li>
         <li><a href="https://help.suno.com/en/articles/13924481">Suno Help: v6 FAQ</a>: Variety, Max Mode and model behavior.</li>
         <li><a href="https://online.berklee.edu/takenote/harmonic-progressions-for-songwriters/">Berklee Online: Harmonic Progressions for Songwriters</a>: chord function, harmonic rhythm, borrowed chords and voice leading.</li>
@@ -649,11 +778,15 @@ const jsonLd = [
   .trouble-list article { display:grid; grid-template-columns:minmax(13rem, .45fr) 1fr; gap:1.5rem; padding:1rem 0; border-bottom:1px solid var(--rule); }
   .trouble-list h3 { font-size:1rem; }
   .trouble-list p { color:var(--ink-soft); margin:0; }
-  .recipe-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; }
+  .recipe-grid, .lab-grid { display:grid; grid-template-columns:repeat(2, minmax(0, 1fr)); gap:1rem; }
   .recipe-grid details, .faq-list details { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }
   .recipe-grid summary, .faq-list summary { cursor:pointer; padding:1rem 1.1rem; color:var(--ink); font-weight:700; }
   .recipe-grid details[open] summary, .faq-list details[open] summary { color:var(--ai); border-bottom:1px solid var(--rule); }
   .recipe-grid p, .faq-list p { color:var(--ink-soft); padding:1rem 1.1rem; margin:0; }
+  .detail-body p { padding:.45rem 1.1rem; }
+  .detail-body p:first-child { padding-top:1rem; }
+  .detail-body p:last-child { padding-bottom:1rem; }
+  .lab-grid .reference-card p { color:var(--ink-soft); }
   .evidence-card { padding:1.4rem; border-top:3px solid var(--ai); }
   .evidence-card h3 { font-size:1.35rem; margin-bottom:1rem; }
   .evidence-card p { color:var(--ink-soft); }
@@ -664,8 +797,13 @@ const jsonLd = [
   .source-list a { color:var(--ai); }
   @media (max-width:800px) {
     .guide-nav { top:113px; }
-    .guide-split, .field-grid, .recipe-grid, .density-grid, .atlas-grid, .reference-columns, .vocab-grid, .pattern-strip, .hybrid-grid, .exclude-grid, .model-grid, .template-grid { grid-template-columns:1fr; }
+    .guide-split, .field-grid, .recipe-grid, .lab-grid, .density-grid, .atlas-grid, .reference-columns, .vocab-grid, .pattern-strip, .hybrid-grid, .exclude-grid, .model-grid, .template-grid { grid-template-columns:1fr; }
     .principle, .trouble-list article { grid-template-columns:1fr; }
   }
   @media (max-width:560px) { .guide-nav { top:145px; } }
+  @media print {
+    .guide-nav, .btn-row, [data-suno-workbench] button { display:none !important; }
+    .section { break-inside:avoid; }
+    details > * { display:block !important; }
+  }
 </style>

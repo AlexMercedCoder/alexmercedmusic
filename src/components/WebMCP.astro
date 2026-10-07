@@ -92,18 +92,18 @@
       fundamentals: { formula: guide.formula, example: guide.example, layers: guide.layers, fieldGuidance: guide.fieldGuidance, promptDensity: guide.promptDensity, templates: guide.templates },
       genres: guide.genreFamilies,
       instruments: guide.instrumentFamilies,
-      vocals: guide.vocalDimensions,
+      vocals: { dimensions: guide.vocalDimensions, writing: guide.melodyAndVocalWriting, promptPatterns: guide.vocalPromptPatterns },
       rhythm: { rhythmTerms: guide.rhythmTerms, meters: guide.meters, meterGuidance: guide.meterGuidance, oddMeterPercussion: guide.oddMeterPercussion, studioMeterNote: guide.studioMeterNote, percussionDimensions: guide.percussionDimensions, percussionRecipes: guide.percussionRecipes },
       harmony: { keyGuidance: guide.keyGuidance, chordProgressions: guide.chordProgressions, harmonicLevers: guide.harmonicLevers, harmonyTerms: guide.harmonyTerms, melodicTerms: guide.melodicTerms, troubleshooting: guide.harmonyTroubleshooting },
-      arrangement: guide.arrangementPatterns,
-      production: guide.productionFamilies,
+      arrangement: { patterns: guide.arrangementPatterns, blueprints: guide.arrangementBlueprints },
+      production: { sound: guide.productionFamilies, studioWorkflow: guide.studioProductionWorkflow },
       lyrics: { principles: guide.lyricPrinciples, example: guide.lyricExample },
       hybrids: { artistTranslation: guide.artistTranslation, hybridPatterns: guide.hybridPatterns, excludeSets: guide.excludeSets },
       controls: { models: guide.models, controls: guide.controls },
-      troubleshooting: guide.troubleshooting,
+      troubleshooting: { general: guide.troubleshooting, diagnosis: guide.generationDiagnosis, promptLaboratory: guide.promptLaboratory },
       recipes: guide.recipes,
       vocabulary: guide.vocabulary,
-      workflow: { testProtocol: guide.testProtocol, checklist: guide.checklist, evaluation: guide.evaluation },
+      workflow: { decisions: guide.workflowDecisions, controlBoundaries: guide.controlBoundaries, projectStyleBible: guide.projectStyleBible, testProtocol: guide.testProtocol, checklist: guide.checklist, evaluation: guide.evaluation },
     });
     const searchPromptingValues = (value, query, path = [], results = []) => {
       if (typeof value === 'string') {
@@ -393,7 +393,9 @@
           properties: {
             genre: { type: 'string', minLength: 1 },
             era: { type: 'string' },
+            keyHarmony: { type: 'string', description: 'Key, chord progression, harmonic rhythm or modal direction.' },
             tempoGroove: { type: 'string' },
+            meterGrouping: { type: 'string', description: 'Time signature, subdivision and accent grouping.' },
             instruments: { oneOf: [{ type: 'string' }, { type: 'array', items: { type: 'string' }, minItems: 1 }], description: 'Three to five defining instruments with roles when possible, as text or a list.' },
             vocal: { type: 'string' },
             arrangement: { type: 'string' },
@@ -406,7 +408,7 @@
         },
         execute: async (input, signal) => {
           const catalog = await getCatalog(signal);
-          const fields = ['genre', 'era', 'tempoGroove', 'instruments', 'vocal', 'arrangement', 'production', 'ending'];
+          const fields = ['genre', 'era', 'keyHarmony', 'tempoGroove', 'meterGrouping', 'instruments', 'vocal', 'arrangement', 'production', 'ending'];
           const clauses = fields.map((key) => promptValue(input, key)).filter(Boolean);
           return {
             stylePrompt: clauses.join(', '),
@@ -415,6 +417,110 @@
             guideUrl: catalog.guides.sunoPrompting.pageUrl,
             note: clauses.length < 4 ? 'Add more musical dimensions if you need a more focused result.' : 'Generate multiple candidates and change one dimension at a time.',
           };
+        },
+      },
+      {
+        name: 'transpose_chord_progression',
+        description: 'Transpose a common functional chord progression into a selected tonic and return exact chord names plus a copyable Suno harmony clause.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            key: { type: 'string', enum: ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'] },
+            progression: { type: 'string', enum: ['I-V-vi-IV', 'vi-IV-I-V', 'I-IV-V-I', 'ii7-V7-Imaj7', 'i-VI-III-VII', 'i-iv-V-i', 'I-flat VII-IV', 'i-IV Dorian vamp'] },
+            harmonicRhythm: { type: 'string', default: 'one chord per bar' },
+          },
+          required: ['key', 'progression'],
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const notes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const patterns = {
+            'I-V-vi-IV': [[0, ''], [7, ''], [9, 'm'], [5, '']],
+            'vi-IV-I-V': [[9, 'm'], [5, ''], [0, ''], [7, '']],
+            'I-IV-V-I': [[0, ''], [5, ''], [7, ''], [0, '']],
+            'ii7-V7-Imaj7': [[2, 'm7'], [7, '7'], [0, 'maj7']],
+            'i-VI-III-VII': [[0, 'm'], [8, ''], [3, ''], [10, '']],
+            'i-iv-V-i': [[0, 'm'], [5, 'm'], [7, ''], [0, 'm']],
+            'I-flat VII-IV': [[0, ''], [10, ''], [5, '']],
+            'i-IV Dorian vamp': [[0, 'm'], [5, '']],
+          };
+          const key = textValue(input, 'key');
+          const progression = textValue(input, 'progression');
+          const root = notes.indexOf(key);
+          const chords = patterns[progression].map(([offset, quality]) => `${notes[(root + offset) % 12]}${quality}`);
+          const harmonicRhythm = textValue(input, 'harmonicRhythm') || 'one chord per bar';
+          return { key, progression, chords, harmonicRhythm, promptClause: `${key} tonal center, ${progression}, chords ${chords.join('-')}, ${harmonicRhythm}`, guideUrl: catalog.guides.sunoPrompting.pageUrl, note: 'Verify the generated key and chord movement by ear or with an instrument.' };
+        },
+      },
+      {
+        name: 'design_meter_prompt',
+        description: 'Turn a time signature and additive beat grouping into a clear Suno rhythm clause with an accent map.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            meter: { type: 'string', enum: ['2/4', '3/4', '4/4', '5/4', '5/8', '6/8', '7/4', '7/8', '9/8', '10/8', '11/8', '12/8'] },
+            grouping: { type: 'string', minLength: 1, description: 'Additive grouping such as 2+2+3.' },
+            bpm: { type: 'integer', minimum: 30, maximum: 300 },
+            anchor: { type: 'string', default: 'kick and bass' },
+            section: { type: 'string', default: 'verse' },
+          },
+          required: ['meter', 'grouping'],
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const meter = textValue(input, 'meter');
+          const grouping = textValue(input, 'grouping');
+          const groups = grouping.split('+').map(Number);
+          const numerator = Number(meter.split('/')[0]);
+          if (groups.some((value) => !Number.isInteger(value) || value < 1) || groups.reduce((sum, value) => sum + value, 0) !== numerator) return { error: `Grouping must contain positive numbers that add to ${numerator}.` };
+          const starts = []; let position = 1;
+          groups.forEach((size) => { starts.push(position); position += size; });
+          const bpm = input?.bpm ? `${numberValue(input, 'bpm', 100, 30, 300)} BPM, ` : '';
+          const anchor = textValue(input, 'anchor') || 'kick and bass';
+          const section = textValue(input, 'section') || 'verse';
+          return { meter, grouping, accentPositions: starts, promptClause: `${bpm}${meter} grouped ${grouping} in the ${section}, ${anchor} accent each group start, steady subdivision across the full bar`, guideUrl: catalog.guides.sunoPrompting.pageUrl, note: catalog.guides.sunoPrompting.studioMeterNote };
+        },
+      },
+      {
+        name: 'diagnose_suno_result',
+        description: 'Map a common audible problem in a Suno result to a likely cause and one focused next experiment.',
+        inputSchema: { type: 'object', properties: { symptom: { type: 'string', enum: ['chorus does not lift', 'requested key drifts', 'odd meter sounds like 4/4', 'lyrics feel rushed', 'arrangement is crowded', 'drums sound generic', 'ending feels abrupt', 'word is mispronounced'] } }, required: ['symptom'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const symptom = textValue(input, 'symptom').toLowerCase();
+          const match = catalog.guides.sunoPrompting.generationDiagnosis.find(([result]) => result.toLowerCase() === symptom);
+          return match ? { symptom: match[0], likelyCause: match[1], nextExperiment: match[2], guideUrl: catalog.guides.sunoPrompting.pageUrl } : { error: 'No diagnosis matched.' };
+        },
+      },
+      {
+        name: 'build_arrangement_blueprint',
+        description: 'Return a section map, energy plan and copyable prompt for a selected song form.',
+        inputSchema: { type: 'object', properties: { form: { type: 'string', enum: ['Focused pop song', 'Progressive mixed-meter song', 'Story-driven folk song', 'Dance build and drop', 'Through-composed art song', 'Concept-album opener', 'Concept-album finale'] } }, required: ['form'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const form = textValue(input, 'form');
+          const blueprint = catalog.guides.sunoPrompting.arrangementBlueprints.find((item) => item.name === form);
+          return blueprint ? { blueprint, guideUrl: catalog.guides.sunoPrompting.pageUrl, note: 'Treat bar counts as planning units and adjust the proportions by ear.' } : { error: 'No arrangement blueprint matched.' };
+        },
+      },
+      {
+        name: 'create_album_style_bible',
+        description: 'Assemble a concise consistency brief for a Suno EP or concept album from the user’s musical rules.',
+        inputSchema: {
+          type: 'object',
+          properties: {
+            identity: { type: 'string', minLength: 1 }, harmonicPalette: { type: 'string' }, motif: { type: 'string' }, instruments: { type: 'string' }, vocal: { type: 'string' }, production: { type: 'string' }, trackRoles: { type: 'string' },
+          },
+          required: ['identity'],
+          additionalProperties: false,
+        },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const labels = [['identity', 'Core identity'], ['harmonicPalette', 'Harmonic palette'], ['motif', 'Recurring motif'], ['instruments', 'Instrument family'], ['vocal', 'Vocal identity'], ['production', 'Production rules'], ['trackRoles', 'Track roles']];
+          const bible = labels.map(([key, label]) => ({ area: label, direction: textValue(input, key) })).filter((item) => item.direction);
+          return { styleBible: bible, continuityLogFields: ['prompt', 'model', 'settings', 'key', 'BPM', 'meter', 'voice', 'motif', 'production notes'], guideUrl: catalog.guides.sunoPrompting.pageUrl };
         },
       },
       {

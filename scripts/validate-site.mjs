@@ -115,12 +115,20 @@ const promptingPage = read('dist/suno-prompting-guide/index.html');
 assert.ok(promptingPage.includes('TechArticle') && promptingPage.includes('FAQPage'), 'The prompting guide is missing structured data.');
 assert.ok(!promptingPage.includes('.pdf'), 'The prompting guide must not publish or link to the source PDF.');
 assert.ok(!existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The source PDF must not be included in the built site.');
-for (const section of ['Genre atlas', 'Keys and chord progressions', 'Time signatures and beat grouping', 'Odd-meter drum maps', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
+for (const section of ['Interactive workbench', 'Genre atlas', 'Keys and chord progressions', 'Time signatures and beat grouping', 'Odd-meter drum maps', 'Melody and vocal writing', 'Arrangement blueprints', 'Prompt, edit or produce?', 'Control boundary', 'Studio production', 'Generation diagnosis', 'Before and after', 'Project-level prompting', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
   assert.ok(promptingPage.includes(section), `The prompting guide is missing the ${section} section.`);
 }
 assert.ok(promptingPage.includes('not sent to the generative model'), 'The prompting guide must explain the Studio time-signature limitation.');
 assert.ok(promptingPage.includes('i-VI-III-VII') && promptingPage.includes('7/8 grouped 2+2+3'), 'The prompting guide is missing practical harmony or meter examples.');
-for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts']) {
+assert.equal((promptingPage.match(/<button[^>]+data-tab=/g) ?? []).length, 4, 'The prompting workbench must render four interactive tabs.');
+for (const marker of ['data-suno-workbench', 'data-output="style"', 'data-output="chords"', 'data-meter-grid', 'data-diagnosis-output']) {
+  assert.ok(promptingPage.includes(marker), `The prompting workbench is missing ${marker}.`);
+}
+const workbenchSource = read('src/components/SunoPromptWorkbench.astro');
+const workbenchScript = workbenchSource.match(/<script is:inline>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(workbenchScript, 'The prompting workbench client script is missing.');
+assert.doesNotThrow(() => new Function(workbenchScript), 'The prompting workbench client script contains invalid JavaScript.');
+for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts', 'src/components/SunoPromptWorkbench.astro']) {
   const source = read(path);
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);
   assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
@@ -195,7 +203,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -246,7 +254,7 @@ const promptingSections = JSON.parse(await getTool('get_suno_prompting_section')
 assert.ok(promptingSections.sections.includes('vocals') && promptingSections.sections.includes('troubleshooting'));
 const vocals = JSON.parse(await getTool('get_suno_prompting_section').execute({ section: 'vocals' }));
 assert.equal(vocals.section, 'vocals');
-assert.equal(vocals.content.length, catalog.guides.sunoPrompting.vocalDimensions.length);
+assert.equal(vocals.content.dimensions.length, catalog.guides.sunoPrompting.vocalDimensions.length);
 const promptingSearch = JSON.parse(await getTool('search_suno_prompting_guide').execute({ query: 'close-mic', limit: 5 }));
 assert.ok(promptingSearch.totalResults > 0);
 assert.ok(promptingSearch.items.every((item) => item.value.toLowerCase().includes('close-mic')));
@@ -256,6 +264,19 @@ assert.equal(composedPrompt.exclude, 'arena drums');
 const composedPromptWithLists = JSON.parse(await getTool('compose_suno_prompt').execute({ genre: 'indie folk', instruments: ['fingerpicked acoustic guitar', 'upright bass'], production: ['warm tape saturation'], exclude: ['EDM drops', 'trap hi-hats'] }));
 assert.equal(composedPromptWithLists.stylePrompt, 'indie folk, fingerpicked acoustic guitar, upright bass, warm tape saturation');
 assert.equal(composedPromptWithLists.exclude, 'EDM drops, trap hi-hats');
+const transposed = JSON.parse(await getTool('transpose_chord_progression').execute({ key: 'D', progression: 'I-V-vi-IV' }));
+assert.deepEqual(transposed.chords, ['D', 'A', 'Bm', 'G']);
+const meterPrompt = JSON.parse(await getTool('design_meter_prompt').execute({ meter: '7/8', grouping: '2+2+3', bpm: 112 }));
+assert.deepEqual(meterPrompt.accentPositions, [1, 3, 5]);
+assert.ok(meterPrompt.promptClause.includes('7/8 grouped 2+2+3'));
+const invalidMeter = JSON.parse(await getTool('design_meter_prompt').execute({ meter: '7/8', grouping: '3+3' }));
+assert.ok(invalidMeter.error);
+const diagnosis = JSON.parse(await getTool('diagnose_suno_result').execute({ symptom: 'odd meter sounds like 4/4' }));
+assert.ok(diagnosis.nextExperiment.includes('grouping'));
+const blueprint = JSON.parse(await getTool('build_arrangement_blueprint').execute({ form: 'Concept-album finale' }));
+assert.equal(blueprint.blueprint.name, 'Concept-album finale');
+const styleBible = JSON.parse(await getTool('create_album_style_bible').execute({ identity: 'theatrical art rock', harmonicPalette: 'D minor and F major', motif: 'rising three-note figure' }));
+assert.equal(styleBible.styleBible.length, 3);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));

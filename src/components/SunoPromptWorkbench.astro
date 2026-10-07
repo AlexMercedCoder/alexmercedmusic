@@ -1,0 +1,231 @@
+---
+const genres = ['art pop', 'alternative rock', 'indie folk', 'progressive metal', 'neo-soul', 'synth-pop', 'trip-hop', 'deep house', 'Afrobeats', 'cinematic post-rock'];
+const keys = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+const progressions = [
+  ['pop', 'I-V-vi-IV'],
+  ['reflective', 'vi-IV-I-V'],
+  ['functional', 'I-IV-V-I'],
+  ['jazz', 'ii7-V7-Imaj7'],
+  ['minor', 'i-VI-III-VII'],
+  ['minor-cadence', 'i-iv-V-i'],
+  ['mixolydian', 'I-flat VII-IV'],
+  ['dorian', 'i-IV Dorian vamp'],
+];
+const meters = [
+  ['4/4', '4', '1+1+1+1'],
+  ['5/4', '5', '3+2'],
+  ['5/8', '5', '2+3'],
+  ['6/8', '6', '3+3'],
+  ['7/8', '7', '2+2+3'],
+  ['9/8', '9', '2+2+2+3'],
+  ['10/8', '10', '3+3+2+2'],
+  ['11/8', '11', '3+3+3+2'],
+  ['12/8', '12', '3+3+3+3'],
+];
+---
+
+<div class="workbench" data-suno-workbench>
+  <div class="workbench__head">
+    <div>
+      <p class="eyebrow">Interactive workbench</p>
+      <h2>Plan the music, then copy the prompt</h2>
+      <p>Build a Style prompt from independent musical choices. Nothing is sent to Suno or stored.</p>
+    </div>
+    <p class="workbench__status" data-status aria-live="polite">Ready</p>
+  </div>
+
+  <div class="workbench__tabs" role="tablist" aria-label="Prompting tools">
+    <button type="button" class="is-active" data-tab="builder" role="tab" aria-selected="true">Prompt builder</button>
+    <button type="button" data-tab="chords" role="tab" aria-selected="false">Chord transposer</button>
+    <button type="button" data-tab="meter" role="tab" aria-selected="false">Meter visualizer</button>
+    <button type="button" data-tab="diagnose" role="tab" aria-selected="false">Diagnose a result</button>
+  </div>
+
+  <section class="workbench__panel is-active" data-panel="builder" role="tabpanel">
+    <div class="control-grid">
+      <label>Primary genre<select data-field="genre">{genres.map((genre) => <option>{genre}</option>)}</select></label>
+      <label>Key<select data-field="key"><option value="">Let the model choose</option>{keys.map((key) => <option>{key} major</option>)}{keys.map((key) => <option>{key} minor</option>)}</select></label>
+      <label>Chord movement<select data-field="progression"><option value="">No fixed progression</option>{progressions.map(([, label]) => <option>{label}</option>)}</select></label>
+      <label>Harmonic rhythm<select data-field="harmonic"><option value="">Unspecified</option><option>one chord every two bars</option><option>one chord per bar</option><option>two chords per bar</option><option>held pedal under changing chords</option></select></label>
+      <label>Tempo<input data-field="tempo" value="104 BPM" /></label>
+      <label>Meter<select data-field="meter">{meters.map(([meter]) => <option>{meter}</option>)}</select></label>
+      <label>Grouping<input data-field="grouping" value="steady quarter-note pulse" /></label>
+      <label>Vocal<input data-field="vocal" value="expressive midrange baritone with clear diction" /></label>
+      <label class="span-2">Instruments and roles<input data-field="instruments" value="angular clean guitar, melodic bass, dry acoustic drums" /></label>
+      <label class="span-2">Arrangement<input data-field="arrangement" value="restrained verse, rising pre-chorus, full-band chorus" /></label>
+      <label class="span-2">Production<input data-field="production" value="close vocal, crisp transients, clear low mids, moderate stereo width" /></label>
+      <label>Ending<input data-field="ending" value="decisive hard stop" /></label>
+      <label>Exclude<input data-field="exclude" value="arena drums, trap hi-hat rolls" /></label>
+    </div>
+    <div class="output-grid">
+      <div class="output-card">
+        <div class="output-card__head"><strong>Style</strong><button type="button" data-copy="style">Copy</button></div>
+        <p data-output="style"></p>
+      </div>
+      <div class="output-card">
+        <div class="output-card__head"><strong>Exclude</strong><button type="button" data-copy="exclude">Copy</button></div>
+        <p data-output="exclude"></p>
+      </div>
+    </div>
+    <ul class="workbench__warnings" data-warnings aria-live="polite"></ul>
+  </section>
+
+  <section class="workbench__panel" data-panel="chords" role="tabpanel" hidden>
+    <div class="control-grid compact-controls">
+      <label>Key<select data-chord-key>{keys.map((key) => <option>{key}</option>)}</select></label>
+      <label>Progression<select data-chord-progression>{progressions.map(([value, label]) => <option value={value}>{label}</option>)}</select></label>
+    </div>
+    <div class="output-card">
+      <div class="output-card__head"><strong>Transposed chords</strong><button type="button" data-copy="chords">Copy</button></div>
+      <p class="chord-output" data-output="chords"></p>
+      <p class="muted" data-output="chord-prompt"></p>
+    </div>
+  </section>
+
+  <section class="workbench__panel" data-panel="meter" role="tabpanel" hidden>
+    <div class="control-grid compact-controls">
+      <label>Meter<select data-meter-select>{meters.map(([meter, count, grouping]) => <option value={`${meter}|${count}|${grouping}`}>{meter}</option>)}</select></label>
+      <label>Grouping<input data-meter-grouping value="1+1+1+1" /></label>
+    </div>
+    <div class="meter-grid" data-meter-grid aria-label="Beat accent visualization"></div>
+    <div class="output-card">
+      <div class="output-card__head"><strong>Copyable rhythm direction</strong><button type="button" data-copy="meter">Copy</button></div>
+      <p data-output="meter"></p>
+    </div>
+  </section>
+
+  <section class="workbench__panel" data-panel="diagnose" role="tabpanel" hidden>
+    <label>What went wrong?
+      <select data-diagnosis>
+        <option value="chorus">The chorus does not lift</option>
+        <option value="key">The requested key drifts</option>
+        <option value="meter">The odd meter sounds like 4/4</option>
+        <option value="lyrics">The lyrics feel rushed</option>
+        <option value="crowded">The arrangement is crowded</option>
+        <option value="drums">The drums sound generic</option>
+        <option value="ending">The ending feels abrupt</option>
+        <option value="pronunciation">A word is mispronounced</option>
+      </select>
+    </label>
+    <div class="diagnosis" data-diagnosis-output></div>
+  </section>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-suno-workbench]');
+    if (!root) return;
+    const status = root.querySelector('[data-status]');
+    const notes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+    const chordMaps = {
+      pop: [[0, ''], [7, ''], [9, 'm'], [5, '']],
+      reflective: [[9, 'm'], [5, ''], [0, ''], [7, '']],
+      functional: [[0, ''], [5, ''], [7, ''], [0, '']],
+      jazz: [[2, 'm7'], [7, '7'], [0, 'maj7']],
+      minor: [[0, 'm'], [8, ''], [3, ''], [10, '']],
+      'minor-cadence': [[0, 'm'], [5, 'm'], [7, ''], [0, 'm']],
+      mixolydian: [[0, ''], [10, ''], [5, '']],
+      dorian: [[0, 'm'], [5, '']],
+    };
+    const diagnosis = {
+      chorus: ['Insufficient contrast', 'Thin the verse, raise the chorus register, widen the harmony and add one new percussion or backing-vocal layer.'],
+      key: ['Text is not exact pitch control', 'Keep the key in Style, verify it with an instrument, then transpose the clip or use MIDI Key and Scale assistance when exact pitch matters.'],
+      meter: ['The grouping is not audible', 'Name the subdivision, accent map and rhythmic anchor. Try “7/8 grouped 2+2+3, kick and bass accent each group start.”'],
+      lyrics: ['Too many syllables for the available time', 'Shorten lines, reduce tempo, add rests or spread one thought across two lines.'],
+      crowded: ['Too many simultaneous foreground roles', 'Keep three defining parts, assign other instruments to specific sections and separate their registers.'],
+      drums: ['The rhythmic fingerprint is vague', 'Name kick and snare placement, subdivision, touch, one percussion color and how the bass relates to the kick.'],
+      ending: ['The form lacks a planned exit', 'Request a two-bar coda, final held tonic, fade, or hard stop. Use Extend if the current song needs more time.'],
+      pronunciation: ['The lyric spelling does not guide the voice', 'Try a phonetic spelling, shorten the surrounding line and replace only that section if the rest of the song works.'],
+    };
+
+    const field = (name) => root.querySelector(`[data-field="${name}"]`)?.value.trim() || '';
+    const setText = (name, value) => { const node = root.querySelector(`[data-output="${name}"]`); if (node) node.textContent = value; };
+    const updateBuilder = () => {
+      const harmony = [field('key'), field('progression'), field('harmonic')].filter(Boolean).join(', ');
+      const rhythm = [field('tempo'), field('meter'), field('grouping')].filter(Boolean).join(', ');
+      const style = [field('genre'), harmony, rhythm, field('instruments'), field('vocal'), field('arrangement'), field('production'), field('ending')].filter(Boolean).join(', ');
+      setText('style', style);
+      setText('exclude', field('exclude') || 'None');
+      const warnings = [];
+      if (/^(5|7|9|10|11)\//.test(field('meter')) && !/[+]|group/i.test(field('grouping'))) warnings.push('Add an explicit beat grouping for the selected asymmetric meter.');
+      if (style.length > 650) warnings.push('This prompt is dense. Remove lower-priority adjectives before adding more clauses.');
+      if (/intimate|close/i.test(field('production')) && /arena|monumental/i.test(field('production'))) warnings.push('The production asks for both intimate and arena-scale space. Assign those traits to separate sections.');
+      const list = root.querySelector('[data-warnings]');
+      list.innerHTML = warnings.length ? warnings.map((warning) => `<li>${warning}</li>`).join('') : '<li>No obvious conflicts found. Generate several candidates and change one variable per test.</li>';
+    };
+    const updateChords = () => {
+      const key = root.querySelector('[data-chord-key]').value;
+      const pattern = root.querySelector('[data-chord-progression]').value;
+      const rootIndex = notes.indexOf(key);
+      const chords = chordMaps[pattern].map(([offset, quality]) => `${notes[(rootIndex + offset) % 12]}${quality}`);
+      setText('chords', chords.join(' · '));
+      setText('chord-prompt', `${key} tonal center, ${root.querySelector('[data-chord-progression] option:checked').textContent}, chords ${chords.join('-')}, one chord per bar.`);
+    };
+    const updateMeter = () => {
+      const [meter, count, defaultGrouping] = root.querySelector('[data-meter-select]').value.split('|');
+      const groupingInput = root.querySelector('[data-meter-grouping]');
+      const grouping = groupingInput.value.trim() || defaultGrouping;
+      const starts = new Set();
+      let position = 1;
+      grouping.split('+').map(Number).filter(Number.isFinite).forEach((size) => { starts.add(position); position += size; });
+      const grid = root.querySelector('[data-meter-grid]');
+      grid.innerHTML = Array.from({ length: Number(count) }, (_, index) => `<span class="${starts.has(index + 1) ? 'is-accent' : ''}"><b>${index + 1}</b><small>${starts.has(index + 1) ? 'accent' : 'pulse'}</small></span>`).join('');
+      setText('meter', `${meter} grouped ${grouping}, accent the first note of each group, keep a steady subdivision and let kick or bass mark the group starts.`);
+    };
+    const updateDiagnosis = () => {
+      const [cause, revision] = diagnosis[root.querySelector('[data-diagnosis]').value];
+      root.querySelector('[data-diagnosis-output]').innerHTML = `<h3>Likely cause: ${cause}</h3><p>${revision}</p>`;
+    };
+    root.querySelectorAll('[data-tab]').forEach((button) => button.addEventListener('click', () => {
+      root.querySelectorAll('[data-tab]').forEach((item) => { item.classList.toggle('is-active', item === button); item.setAttribute('aria-selected', String(item === button)); });
+      root.querySelectorAll('[data-panel]').forEach((panel) => { const active = panel.dataset.panel === button.dataset.tab; panel.classList.toggle('is-active', active); panel.hidden = !active; });
+    }));
+    root.querySelectorAll('[data-field]').forEach((input) => input.addEventListener('input', updateBuilder));
+    root.querySelectorAll('[data-chord-key], [data-chord-progression]').forEach((input) => input.addEventListener('input', updateChords));
+    root.querySelector('[data-meter-select]').addEventListener('input', (event) => { root.querySelector('[data-meter-grouping]').value = event.target.value.split('|')[2]; updateMeter(); });
+    root.querySelector('[data-meter-grouping]').addEventListener('input', updateMeter);
+    root.querySelector('[data-diagnosis]').addEventListener('input', updateDiagnosis);
+    root.querySelectorAll('[data-copy]').forEach((button) => button.addEventListener('click', async () => {
+      const name = button.dataset.copy;
+      const value = name === 'exclude' ? field('exclude') : root.querySelector(`[data-output="${name}"]`)?.textContent || '';
+      await navigator.clipboard.writeText(value);
+      status.textContent = `${button.previousElementSibling?.textContent || 'Text'} copied`;
+    }));
+    updateBuilder(); updateChords(); updateMeter(); updateDiagnosis();
+  })();
+</script>
+
+<style>
+  .workbench { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); overflow:hidden; }
+  .workbench__head { display:flex; align-items:start; justify-content:space-between; gap:2rem; padding:1.5rem; }
+  .workbench__head h2 { margin-bottom:.6rem; }
+  .workbench__head p:last-child { color:var(--ink-soft); margin:0; }
+  .workbench__status { font:650 .72rem/1 var(--mono); color:var(--ai) !important; white-space:nowrap; }
+  .workbench__tabs { display:flex; gap:0; overflow:auto; border-block:1px solid var(--rule); }
+  .workbench__tabs button { appearance:none; border:0; border-right:1px solid var(--rule); background:var(--night-700); color:var(--ink-soft); padding:.85rem 1rem; font:650 .74rem/1 var(--mono); white-space:nowrap; cursor:pointer; }
+  .workbench__tabs button.is-active { background:color-mix(in srgb, var(--ai) 15%, var(--night-800)); color:var(--ai); }
+  .workbench__panel { padding:1.5rem; }
+  .control-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:1rem; }
+  .compact-controls { grid-template-columns:repeat(2, minmax(0, 18rem)); margin-bottom:1.2rem; }
+  label { display:grid; gap:.45rem; color:var(--ink-faint); font:650 .7rem/1.2 var(--mono); }
+  input, select { width:100%; border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.72rem .75rem; font:500 .86rem/1.25 var(--sans); }
+  .span-2 { grid-column:span 2; }
+  .output-grid { display:grid; grid-template-columns:2fr 1fr; gap:1rem; margin-top:1.2rem; }
+  .output-card { padding:1.1rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }
+  .output-card__head { display:flex; justify-content:space-between; gap:1rem; align-items:center; color:var(--ai); }
+  .output-card button { border:1px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-soft); padding:.35rem .7rem; cursor:pointer; }
+  .output-card p { color:var(--ink-soft); margin:.8rem 0 0; }
+  .chord-output { color:var(--ink) !important; font:700 1.3rem/1.5 var(--mono); }
+  .muted { font-size:.84rem; }
+  .workbench__warnings { color:var(--ink-soft); margin:1rem 0 0; padding-left:1.25rem; }
+  .meter-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(4rem, 1fr)); gap:.5rem; margin:1.2rem 0; }
+  .meter-grid span { display:grid; place-items:center; gap:.25rem; min-height:5rem; border:1px solid var(--rule); background:var(--night-900); }
+  .meter-grid span.is-accent { border-color:var(--ai); background:color-mix(in srgb, var(--ai) 13%, var(--night-900)); }
+  .meter-grid b { color:var(--ink); }
+  .meter-grid small { color:var(--ink-faint); font:500 .62rem/1 var(--mono); }
+  .diagnosis { margin-top:1rem; padding:1.2rem; border-left:3px solid var(--ai); background:var(--night-900); }
+  .diagnosis h3 { margin-bottom:.6rem; color:var(--ai); }
+  .diagnosis p { color:var(--ink-soft); margin:0; }
+  @media (max-width:900px) { .control-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } }
+  @media (max-width:600px) { .workbench__head { display:block; } .workbench__status { margin-top:1rem !important; } .control-grid, .output-grid { grid-template-columns:1fr; } .span-2 { grid-column:auto; } }
+</style>

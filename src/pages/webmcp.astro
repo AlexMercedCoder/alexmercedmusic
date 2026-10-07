@@ -18,6 +18,11 @@ const tools = [
   ['get_suno_prompting_section', 'One focused guide section, such as harmony, rhythm, vocals, production, recipes or troubleshooting.'],
   ['search_suno_prompting_guide', 'Search the guide for a key, chord progression, meter, percussion idea, musical problem, genre or instrument.'],
   ['compose_suno_prompt', 'Assemble a focused Style prompt from separate musical choices without sending data to Suno.'],
+  ['transpose_chord_progression', 'Transpose a functional progression and return exact chords plus a prompt clause.'],
+  ['design_meter_prompt', 'Convert a meter and additive grouping into an accent map and rhythm clause.'],
+  ['diagnose_suno_result', 'Connect a common audible problem to one focused next experiment.'],
+  ['build_arrangement_blueprint', 'Return a section map, energy plan and prompt for a selected song form.'],
+  ['create_album_style_bible', 'Build a consistency brief for an EP or concept album.'],
   ['list_reimaginings', 'Every original/reimagined pair.'],
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
@@ -32,7 +37,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers twenty read-only browser tools. Agents can find recordings and videos, follow media connections, inspect ordered Suno playlists, poll for newer publications, search prompting guidance, read Alex’s stated perspective on AI and music, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers twenty-five read-only browser tools. Agents can find recordings and videos, follow media connections, inspect ordered Suno playlists, poll for newer publications, build and diagnose music prompts, transpose progressions, design meters, plan projects, compare versions and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}
@@ -48,6 +53,7 @@ const tools = [
         <li>Call <code>search_suno_prompting_guide</code> with a term such as <code>{`{"query":"close-mic"}`}</code>.</li>
         <li>Call <code>get_suno_prompting_section</code> for the relevant reference section.</li>
         <li>Pass the selected traits to <code>compose_suno_prompt</code> to receive a clean Style prompt and optional Exclude field.</li>
+        <li>Use <code>transpose_chord_progression</code>, <code>design_meter_prompt</code> or <code>diagnose_suno_result</code> when the question needs a focused musical calculation.</li>
       </ol>
       <h2>Video workflow</h2>
       <ol>
