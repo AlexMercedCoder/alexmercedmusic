@@ -6,7 +6,7 @@ export const GET: APIRoute = () => {
   const recent = publicCatalog.songs.filter((song) => song.createdAt).slice().sort((a, b) => Date.parse(b.createdAt!) - Date.parse(a.createdAt!)).slice(0, 12);
   const body = `# Alex Merced Music
 
-> A public index of Alex Merced's acoustic archive, electronic productions, Suno songs, reimagined recordings and Suno prompting reference.
+> A public index of Alex Merced's acoustic archive, electronic productions, Suno songs, reimagined recordings, practical music theory and Suno prompting references.
 
 Catalog updated: ${publicCatalog.updatedAt}
 Catalog schema: ${publicCatalog.schemaVersion}
@@ -24,6 +24,7 @@ Public YouTube videos: ${publicCatalog.counts.videos}
 - [Reimagined songs](${publicCatalog.site}/reimagined/)
 - [Suno playlists](${publicCatalog.site}/suno/)
 - [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
+- [Music Theory for Songwriters and Producers](${publicCatalog.site}/music-theory/)
 - [${aiMusicPerspective.title}](${aiMusicPerspective.url})
 - [WebMCP guide](${publicCatalog.site}/webmcp/)
 
@@ -52,7 +53,7 @@ ${recent.map((song) => `- [${song.title}](${song.pageUrl})${song.createdAt ? `, 
 
 ## Browser agent tools
 
-The site registers 20 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for song discovery, list_videos and get_video for music video connections, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, get_ai_music_perspective for Alex's first-person view on AI and music, and the Suno prompting tools for focused reference work. Tool results return stable IDs and canonical URLs.
+The site registers 31 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for song discovery, list_videos and get_video for music video connections, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, the Suno prompting tools for creation guidance, and the music theory tools for scales, chords, progressions and harmonic palettes. Tool results return stable IDs and canonical URLs.
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
 };

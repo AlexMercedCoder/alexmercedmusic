@@ -5,7 +5,7 @@ export const GET: APIRoute = () => new Response(JSON.stringify({
   '$id': 'https://alexmercedmusic.com/catalog.schema.json',
   title: 'Alex Merced Music catalog',
   type: 'object',
-  required: ['schemaVersion', 'updatedAt', 'site', 'counts', 'songs', 'videos', 'albums', 'suno'],
+  required: ['schemaVersion', 'updatedAt', 'site', 'counts', 'songs', 'videos', 'albums', 'suno', 'guides'],
   properties: {
     schemaVersion: { type: 'string' }, updatedAt: { type: 'string', format: 'date' }, site: { type: 'string', format: 'uri' },
     counts: { type: 'object' }, songs: { type: 'array', items: { '$ref': '#/$defs/song' } }, videos: { type: 'array', items: { '$ref': '#/$defs/video' } }, albums: { type: 'array' }, distributedReleases: { type: 'array' }, suno: { type: 'object' }, guides: { type: 'object' }, platforms: { type: 'array' },

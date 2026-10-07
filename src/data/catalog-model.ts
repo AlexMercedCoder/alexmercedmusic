@@ -17,9 +17,10 @@ import {
   type TrackLink,
 } from './catalog';
 import { sunoPromptingGuide } from './suno-prompting-guide';
+import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.9.0';
+export const CATALOG_SCHEMA_VERSION = '1.10.0';
 export const CATALOG_UPDATED_AT = '2026-10-07';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -425,7 +426,7 @@ export const publicCatalog = {
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
   suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: catalogSunoPlaylists },
-  guides: { sunoPrompting: sunoPromptingGuide },
+  guides: { sunoPrompting: sunoPromptingGuide, musicTheory: musicTheoryGuide },
   songs,
   videos,
   albums: catalogAlbums,

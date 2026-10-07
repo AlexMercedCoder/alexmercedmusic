@@ -1,0 +1,134 @@
+---
+import { musicTheoryGuide as theory } from '../data/music-theory-guide';
+const roots = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+const chordTypes = theory.chordConstruction.filter(([, formula]) => !formula.includes('/') && !formula.includes('chord/bass'));
+const progressionOptions = theory.progressionLibrary.slice(0, 18);
+---
+
+<div class="theory-tool" data-theory-workbench>
+  <div class="tool-head">
+    <div><p class="eyebrow">Interactive theory lab</p><h2>Turn formulas into notes and chords</h2><p>Calculations use practical flat spellings for readability. Choose enharmonic spellings that fit the key when writing notation.</p></div>
+    <span data-theory-status aria-live="polite">Ready</span>
+  </div>
+  <div class="tool-tabs" role="tablist" aria-label="Music theory tools">
+    <button type="button" class="is-active" data-theory-tab="scale" aria-selected="true">Scale explorer</button>
+    <button type="button" data-theory-tab="chord" aria-selected="false">Chord builder</button>
+    <button type="button" data-theory-tab="progression" aria-selected="false">Progression translator</button>
+    <button type="button" data-theory-tab="palette" aria-selected="false">Vibe palette</button>
+    <button type="button" data-theory-tab="circle" aria-selected="false">Circle of fifths</button>
+  </div>
+
+  <section class="tool-panel is-active" data-theory-panel="scale">
+    <div class="controls">
+      <label>Root<select data-scale-root>{roots.map((root) => <option>{root}</option>)}</select></label>
+      <label>Scale<select data-scale-name>{theory.scaleFamilies.map((scale) => <option>{scale.name}</option>)}</select></label>
+    </div>
+    <div class="result"><div class="result-head"><strong data-scale-title></strong><button type="button" data-copy-theory="scale">Copy notes</button></div><p class="notes" data-scale-notes></p><dl><div><dt>Formula</dt><dd data-scale-formula></dd></div><div><dt>Common tendency</dt><dd data-scale-tendency></dd></div><div><dt>Songwriting use</dt><dd data-scale-use></dd></div></dl></div>
+  </section>
+
+  <section class="tool-panel" data-theory-panel="chord" hidden>
+    <div class="controls">
+      <label>Root<select data-chord-root>{roots.map((root) => <option>{root}</option>)}</select></label>
+      <label>Chord type<select data-chord-type>{chordTypes.map(([name]) => <option>{name}</option>)}</select></label>
+    </div>
+    <div class="result"><div class="result-head"><strong data-chord-title></strong><button type="button" data-copy-theory="chord">Copy notes</button></div><p class="notes" data-chord-notes></p><p data-chord-formula></p></div>
+  </section>
+
+  <section class="tool-panel" data-theory-panel="progression" hidden>
+    <div class="controls">
+      <label>Key<select data-progression-key>{roots.map((root) => <option>{root} major</option>)}{roots.map((root) => <option>{root} minor</option>)}</select></label>
+      <label>Progression<select data-progression-name>{progressionOptions.map(([name, roman]) => <option value={roman}>{name}: {roman}</option>)}</select></label>
+    </div>
+    <div class="result"><div class="result-head"><strong data-progression-title></strong><button type="button" data-copy-theory="progression">Copy chords</button></div><p class="notes" data-progression-chords></p><p data-progression-note></p></div>
+  </section>
+
+  <section class="tool-panel" data-theory-panel="palette" hidden>
+    <label>Starting direction<select data-palette-name>{theory.vibePalettes.map(([name]) => <option>{name}</option>)}</select></label>
+    <div class="result"><div class="result-head"><strong data-palette-title></strong><button type="button" data-copy-theory="palette">Copy palette</button></div><dl><div><dt>Scales</dt><dd data-palette-scales></dd></div><div><dt>Progressions</dt><dd data-palette-progressions></dd></div><div><dt>Arrangement levers</dt><dd data-palette-arrangement></dd></div></dl><p class="caution">This is a starting palette, not an emotional rule. Change tempo, rhythm, voicing, register and timbre to reshape the result.</p></div>
+  </section>
+
+  <section class="tool-panel" data-theory-panel="circle" hidden>
+    <p class="circle-intro">Move clockwise to add one sharp and move counterclockwise to add one flat. Adjacent keys share six of seven notes, which makes them useful modulation destinations.</p>
+    <div class="circle" aria-label="Circle of fifths">
+      {['C', 'G', 'D', 'A', 'E', 'B', 'F-sharp', 'D-flat', 'A-flat', 'E-flat', 'B-flat', 'F'].map((key, index) => <span style={`--i:${index}`}><b>{key}</b><small>{['Am', 'Em', 'Bm', 'F-sharp m', 'C-sharp m', 'G-sharp m', 'E-flat m', 'B-flat m', 'Fm', 'Cm', 'Gm', 'Dm'][index]}</small></span>)}
+    </div>
+  </section>
+</div>
+
+<script is:inline define:vars={{ scales: theory.scaleFamilies, chords: chordTypes, palettes: theory.vibePalettes }}>
+  (() => {
+    const root = document.querySelector('[data-theory-workbench]');
+    if (!root) return;
+    const flatNames = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'G-flat', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+    const sharpNames = ['C', 'C-sharp', 'D', 'D-sharp', 'E', 'F', 'F-sharp', 'G', 'G-sharp', 'A', 'A-sharp', 'B'];
+    const rootNames = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+    const intervalMap = { '1': 0, '2': 2, '3': 4, '4': 5, '5': 7, '6': 9, '7': 11, '9': 2, '11': 5, '13': 9, 'flat 2': 1, 'flat 3': 3, 'flat 5': 6, 'flat 6': 8, 'flat 7': 10, 'sharp 2': 3, 'sharp 4': 6, 'sharp 5': 8, 'double-flat 7': 9 };
+    const progressionMaps = {
+      'I-IV-V-I': [[0, ''], [5, ''], [7, ''], [0, '']], 'I-V-vi-IV': [[0, ''], [7, ''], [9, 'm'], [5, '']], 'vi-IV-I-V': [[9, 'm'], [5, ''], [0, ''], [7, '']], 'I-vi-IV-V': [[0, ''], [9, 'm'], [5, ''], [7, '']],
+      'I-V over 7-vi-IV': [[0, ''], [11, 'bass'], [9, 'm'], [5, '']], 'I-flat VII-IV-I': [[0, ''], [10, ''], [5, ''], [0, '']], 'i-IV': [[0, 'm'], [5, '']], 'i-flat II': [[0, 'm'], [1, '']], 'I-II': [[0, ''], [2, '']],
+      'i-VI-III-VII': [[0, 'm'], [8, ''], [3, ''], [10, '']], 'i-VII-VI-V': [[0, 'm'], [10, ''], [8, ''], [7, '']], 'i-v-VI-iv': [[0, 'm'], [7, 'm'], [8, ''], [5, 'm']],
+      'ii7-V7-Imaj7': [[2, 'm7'], [7, '7'], [0, 'maj7']], 'ii half-diminished 7-V7-i': [[2, 'm7 flat 5'], [7, '7'], [0, 'm']], 'III7-VI7-II7-V7': [[4, '7'], [9, '7'], [2, '7'], [7, '7']],
+      'I-IV-iv-I': [[0, ''], [5, ''], [5, 'm'], [0, '']], 'I-flat VI-flat III-I': [[0, ''], [8, ''], [3, ''], [0, '']],
+    };
+    const set = (selector, value) => { const node = root.querySelector(selector); if (node) node.textContent = value; };
+    const note = (rootName, offset) => {
+      const names = ['D', 'E', 'F-sharp', 'G', 'A', 'B'].includes(rootName) ? sharpNames : flatNames;
+      return names[(rootNames.indexOf(rootName) + offset + 12) % 12];
+    };
+    const formulaOffsets = (formula) => formula.match(/double-flat 7|flat \d+|sharp \d+|\d+/g)?.map((degree) => intervalMap[degree]).filter((value) => value !== undefined) || [];
+    const updateScale = () => {
+      const rootName = root.querySelector('[data-scale-root]').value;
+      const scale = scales.find((item) => item.name === root.querySelector('[data-scale-name]').value);
+      const result = scale.steps.map((offset) => note(rootName, offset));
+      set('[data-scale-title]', `${rootName} ${scale.name}`); set('[data-scale-notes]', result.join(' · ')); set('[data-scale-formula]', scale.formula); set('[data-scale-tendency]', scale.tendency); set('[data-scale-use]', scale.use);
+    };
+    const updateChord = () => {
+      const rootName = root.querySelector('[data-chord-root]').value;
+      const chord = chords.find((item) => item[0] === root.querySelector('[data-chord-type]').value);
+      const result = formulaOffsets(chord[1]).map((offset) => note(rootName, offset));
+      set('[data-chord-title]', `${rootName} ${chord[0]}`); set('[data-chord-notes]', result.join(' · ')); set('[data-chord-formula]', `Formula: ${chord[1]}. ${chord[2]}.`);
+    };
+    const updateProgression = () => {
+      const key = root.querySelector('[data-progression-key]').value;
+      const [rootName, mode] = key.split(/ (?=major|minor)/);
+      const roman = root.querySelector('[data-progression-name]').value;
+      const map = progressionMaps[roman];
+      const result = map ? map.map(([offset, quality]) => quality === 'bass' ? `${rootName}/${note(rootName, offset)}` : `${note(rootName, offset)}${quality}`) : [roman];
+      set('[data-progression-title]', `${key}: ${roman}`); set('[data-progression-chords]', result.join(' · ')); set('[data-progression-note]', `${mode === 'minor' ? 'Treat the selected root as minor tonic and verify any raised leading tone.' : 'Use inversions to connect these chords with smaller bass and inner-voice motion.'}`);
+    };
+    const updatePalette = () => {
+      const palette = palettes.find((item) => item[0] === root.querySelector('[data-palette-name]').value);
+      set('[data-palette-title]', palette[0]); set('[data-palette-scales]', palette[1]); set('[data-palette-progressions]', palette[2]); set('[data-palette-arrangement]', palette[3]);
+    };
+    root.querySelectorAll('[data-theory-tab]').forEach((button) => button.addEventListener('click', () => {
+      root.querySelectorAll('[data-theory-tab]').forEach((item) => { item.classList.toggle('is-active', item === button); item.setAttribute('aria-selected', String(item === button)); });
+      root.querySelectorAll('[data-theory-panel]').forEach((panel) => { const active = panel.dataset.theoryPanel === button.dataset.theoryTab; panel.hidden = !active; panel.classList.toggle('is-active', active); });
+    }));
+    root.querySelectorAll('[data-scale-root], [data-scale-name]').forEach((input) => input.addEventListener('input', updateScale));
+    root.querySelectorAll('[data-chord-root], [data-chord-type]').forEach((input) => input.addEventListener('input', updateChord));
+    root.querySelectorAll('[data-progression-key], [data-progression-name]').forEach((input) => input.addEventListener('input', updateProgression));
+    root.querySelector('[data-palette-name]').addEventListener('input', updatePalette);
+    root.querySelectorAll('[data-copy-theory]').forEach((button) => button.addEventListener('click', async () => {
+      const type = button.dataset.copyTheory;
+      const selectors = { scale: '[data-scale-notes]', chord: '[data-chord-notes]', progression: '[data-progression-chords]', palette: '[data-palette-title]' };
+      const value = root.querySelector(selectors[type])?.textContent || '';
+      await navigator.clipboard.writeText(value); set('[data-theory-status]', 'Copied');
+    }));
+    updateScale(); updateChord(); updateProgression(); updatePalette();
+  })();
+</script>
+
+<style>
+  .theory-tool { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); overflow:hidden; }
+  .tool-head { display:flex; justify-content:space-between; gap:2rem; padding:1.5rem; }
+  .tool-head h2 { margin-bottom:.6rem; }.tool-head p:last-child { color:var(--ink-soft); margin:0; }.tool-head > span { color:var(--ai); font:650 .72rem/1 var(--mono); }
+  .tool-tabs { display:flex; overflow:auto; border-block:1px solid var(--rule); }
+  .tool-tabs button { border:0; border-right:1px solid var(--rule); padding:.85rem 1rem; background:var(--night-700); color:var(--ink-soft); font:650 .74rem/1 var(--mono); white-space:nowrap; cursor:pointer; }
+  .tool-tabs button.is-active { color:var(--ai); background:color-mix(in srgb, var(--ai) 15%, var(--night-800)); }
+  .tool-panel { padding:1.5rem; }.controls { display:grid; grid-template-columns:repeat(2, minmax(0, 18rem)); gap:1rem; margin-bottom:1rem; }
+  label { display:grid; gap:.45rem; color:var(--ink-faint); font:650 .7rem/1.2 var(--mono); } select { width:100%; border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.72rem; }
+  .result { padding:1.2rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }.result-head { display:flex; justify-content:space-between; gap:1rem; color:var(--ai); }.result button { border:1px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-soft); padding:.35rem .7rem; cursor:pointer; }
+  .notes { color:var(--ink) !important; font:700 clamp(1rem, 3vw, 1.35rem)/1.5 var(--mono); }.result p { color:var(--ink-soft); }.result dl { margin:1rem 0 0; }.result dl div { display:grid; grid-template-columns:10rem 1fr; gap:1rem; padding:.65rem 0; border-top:1px solid var(--rule-soft); }.result dt { color:var(--ink); font-weight:700; }.result dd { color:var(--ink-soft); margin:0; }.caution { border-left:3px solid var(--ai); padding-left:1rem; }
+  .circle-intro { max-width:50rem; color:var(--ink-soft); }.circle { position:relative; width:min(34rem, 90vw); aspect-ratio:1; margin:2rem auto; border:1px solid var(--rule); border-radius:50%; background:radial-gradient(circle, var(--night-900) 0 30%, transparent 31%); }.circle span { --angle:calc(var(--i) * 30deg); position:absolute; left:50%; top:50%; width:4.4rem; text-align:center; transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-13rem) rotate(calc(-1 * var(--angle))); }.circle b { display:block; color:var(--ai); }.circle small { color:var(--ink-faint); font:500 .68rem/1 var(--mono); }
+  @media(max-width:650px){.tool-head{display:block}.tool-head>span{display:block;margin-top:1rem}.controls{grid-template-columns:1fr}.result dl div{grid-template-columns:1fr;gap:.3rem}.circle span{transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-9.5rem) rotate(calc(-1 * var(--angle)));}.circle{width:22rem;max-width:90vw}}
+</style>

@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.9.0');
+assert.equal(catalog.schemaVersion, '1.10.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -108,7 +108,7 @@ const sourceYoutubeMetadata = JSON.parse(read('src/data/youtube-metadata.json'))
 assert.ok(Object.keys(sourceYoutubeMetadata).length >= catalog.videos.length);
 assert.equal(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).length, catalog.videos.length);
 
-for (const path of ['dist/songs/index.html', 'dist/videos/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/video-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
+for (const path of ['dist/songs/index.html', 'dist/videos/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/music-theory/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/video-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
 }
 const promptingPage = read('dist/suno-prompting-guide/index.html');
@@ -129,6 +129,22 @@ const workbenchScript = workbenchSource.match(/<script is:inline>([\s\S]*?)<\/sc
 assert.ok(workbenchScript, 'The prompting workbench client script is missing.');
 assert.doesNotThrow(() => new Function(workbenchScript), 'The prompting workbench client script contains invalid JavaScript.');
 for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts', 'src/components/SunoPromptWorkbench.astro']) {
+  const source = read(path);
+  assert.ok(!source.includes('—'), `${path} contains an em dash.`);
+  assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
+}
+const theoryPage = read('dist/music-theory/index.html');
+assert.ok(theoryPage.includes('TechArticle') && theoryPage.includes('FAQPage'), 'The music theory guide is missing structured data.');
+for (const section of ['Interactive theory lab', 'Scale atlas', 'Diatonic modes', 'Chord construction', 'Roman numerals and function', 'Progression library', 'Beyond diatonic harmony', 'Scale and progression tendencies', 'Melody and chord-scale connection', 'From theory to sound']) {
+  assert.ok(theoryPage.includes(section), `The music theory guide is missing the ${section} section.`);
+}
+assert.equal((theoryPage.match(/<button[^>]+data-theory-tab=/g) ?? []).length, 5, 'The theory workbench must render five interactive tabs.');
+for (const marker of ['data-theory-workbench', 'data-scale-notes', 'data-chord-notes', 'data-progression-chords', 'data-palette-title', 'Circle of fifths']) assert.ok(theoryPage.includes(marker), `The theory workbench is missing ${marker}.`);
+const theoryWorkbenchSource = read('src/components/MusicTheoryWorkbench.astro');
+const theoryWorkbenchScript = theoryWorkbenchSource.match(/<script is:inline[^>]*>([\s\S]*?)<\/script>/)?.[1];
+assert.ok(theoryWorkbenchScript, 'The theory workbench client script is missing.');
+assert.doesNotThrow(() => new Function(theoryWorkbenchScript), 'The theory workbench client script contains invalid JavaScript.');
+for (const path of ['src/pages/music-theory/index.astro', 'src/data/music-theory-guide.ts', 'src/components/MusicTheoryWorkbench.astro']) {
   const source = read(path);
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);
   assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
@@ -203,7 +219,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'get_music_theory_guide', 'get_music_theory_section', 'build_scale', 'build_chord', 'translate_roman_progression', 'suggest_theory_palette', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -277,6 +293,19 @@ const blueprint = JSON.parse(await getTool('build_arrangement_blueprint').execut
 assert.equal(blueprint.blueprint.name, 'Concept-album finale');
 const styleBible = JSON.parse(await getTool('create_album_style_bible').execute({ identity: 'theatrical art rock', harmonicPalette: 'D minor and F major', motif: 'rising three-note figure' }));
 assert.equal(styleBible.styleBible.length, 3);
+const theoryGuide = JSON.parse(await getTool('get_music_theory_guide').execute({}));
+assert.equal(theoryGuide.guide.pageUrl, `${catalog.site}/music-theory/`);
+assert.ok(theoryGuide.guide.scaleFamilies.length >= 18);
+const theorySections = JSON.parse(await getTool('get_music_theory_section').execute({}));
+assert.ok(theorySections.sections.includes('scales') && theorySections.sections.includes('progressions'));
+const dMajor = JSON.parse(await getTool('build_scale').execute({ root: 'D', scale: 'Major' }));
+assert.deepEqual(dMajor.notes, ['D', 'E', 'F-sharp', 'G', 'A', 'B', 'C-sharp']);
+const cMinor7 = JSON.parse(await getTool('build_chord').execute({ root: 'C', chord: 'Minor 7' }));
+assert.deepEqual(cMinor7.notes, ['C', 'E-flat', 'G', 'B-flat']);
+const romanProgression = JSON.parse(await getTool('translate_roman_progression').execute({ root: 'D', progression: 'I-V-vi-IV' }));
+assert.deepEqual(romanProgression.chords, ['D', 'A', 'Bm', 'G']);
+const theoryPalette = JSON.parse(await getTool('suggest_theory_palette').execute({ vibe: 'dreamlike' }));
+assert.ok(theoryPalette.matches.length > 0);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));

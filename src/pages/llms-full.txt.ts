@@ -19,6 +19,12 @@ ${Object.entries(publicCatalog.counts).map(([name, count]) => `- ${name}: ${coun
 - Published: ${aiMusicPerspective.publishedAt}
 - Summary: ${aiMusicPerspective.description}
 
+## Learning guides
+
+- Music Theory for Songwriters and Producers: ${publicCatalog.site}/music-theory/
+- Suno Prompting Field Guide: ${publicCatalog.site}/suno-prompting-guide/
+- Structured guide data: ${publicCatalog.site}/catalog.json under the guides property
+
 ## Distributed releases
 
 ${publicCatalog.distributedReleases.map((release) => `### ${release.title}\n\n- Released: ${release.released}\n- Tracks: ${release.trackCount}${release.upc ? `\n- UPC: ${release.upc}` : ''}\n- Stores: ${release.links.map((link) => `${link.label}: ${link.url}`).join('; ')}`).join('\n\n')}
@@ -46,6 +52,8 @@ ${publicCatalog.videos.map((video) => `### ${video.title}\n\n- ID: ${video.id}\n
 - ${publicCatalog.site}/catalog.schema.json
 - ${publicCatalog.site}/song-index.json
 - ${publicCatalog.site}/video-index.json
+- ${publicCatalog.site}/music-theory/
+- ${publicCatalog.site}/suno-prompting-guide/
 - ${publicCatalog.site}/webmcp/
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });

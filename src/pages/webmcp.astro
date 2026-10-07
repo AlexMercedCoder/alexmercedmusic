@@ -23,6 +23,12 @@ const tools = [
   ['diagnose_suno_result', 'Connect a common audible problem to one focused next experiment.'],
   ['build_arrangement_blueprint', 'Return a section map, energy plan and prompt for a selected song form.'],
   ['create_album_style_bible', 'Build a consistency brief for an EP or concept album.'],
+  ['get_music_theory_guide', 'Complete standalone music theory reference for songwriting and production.'],
+  ['get_music_theory_section', 'Focused theory sections for scales, modes, chords, harmony, progressions, melody and workflows.'],
+  ['build_scale', 'Calculate a scale in any chromatic root with formula and songwriting use.'],
+  ['build_chord', 'Calculate chord tones from a root and chord quality.'],
+  ['translate_roman_progression', 'Translate supported Roman numerals into chord symbols in a selected tonic.'],
+  ['suggest_theory_palette', 'Find scales, progressions and arrangement ideas associated with a musical tendency.'],
   ['list_reimaginings', 'Every original/reimagined pair.'],
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
@@ -37,7 +43,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers twenty-five read-only browser tools. Agents can find recordings and videos, follow media connections, inspect ordered Suno playlists, poll for newer publications, build and diagnose music prompts, transpose progressions, design meters, plan projects, compare versions and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers thirty-one read-only browser tools. Agents can find recordings and videos, inspect Suno playlists, build and diagnose prompts, calculate scales and chords, translate Roman-numeral progressions, plan projects and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}
@@ -47,6 +53,12 @@ const tools = [
         <li>Call <code>search_songs</code> with <code>{`{"query":"Solemn Thoughts"}`}</code>.</li>
         <li>Use the returned stable ID with <code>compare_versions</code>.</li>
         <li>Open the returned canonical AlexMercedMusic.com page or a verified listening source.</li>
+      </ol>
+      <h2>Music theory workflow</h2>
+      <ol>
+        <li>Call <code>get_music_theory_section</code> for the relevant concept or use <code>get_music_theory_guide</code> for the complete reference.</li>
+        <li>Use <code>build_scale</code>, <code>build_chord</code> or <code>translate_roman_progression</code> for exact pitch calculations.</li>
+        <li>Use <code>suggest_theory_palette</code> for several scale, progression and arrangement starting points, then verify the result by ear.</li>
       </ol>
       <h2>Prompting workflow</h2>
       <ol>

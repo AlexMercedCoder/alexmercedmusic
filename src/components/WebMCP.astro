@@ -105,6 +105,20 @@
       vocabulary: guide.vocabulary,
       workflow: { decisions: guide.workflowDecisions, controlBoundaries: guide.controlBoundaries, projectStyleBible: guide.projectStyleBible, testProtocol: guide.testProtocol, checklist: guide.checklist, evaluation: guide.evaluation },
     });
+    const theorySections = (guide) => ({
+      fundamentals: guide.pitchBasics,
+      intervals: guide.intervals,
+      scales: guide.scaleFamilies,
+      modes: guide.modes,
+      chords: guide.chordConstruction,
+      harmony: { diatonic: guide.diatonicHarmony, functions: guide.harmonicFunctions },
+      progressions: guide.progressionLibrary,
+      chromaticism: guide.colorTechniques,
+      vibes: guide.vibePalettes,
+      melody: guide.melodyPractice,
+      workflows: guide.instrumentWorkflows,
+      study: guide.studySequence,
+    });
     const searchPromptingValues = (value, query, path = [], results = []) => {
       if (typeof value === 'string') {
         if (value.toLowerCase().includes(query)) results.push({ path: path.join('.'), value });
@@ -123,7 +137,7 @@
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
           return { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, counts: catalog.counts, electronic: catalog.electronic, suno: catalog.suno, mainPages: {
-            explore: `${catalog.site}/songs/`, videos: `${catalog.site}/videos/`, acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, sunoPromptingGuide: `${catalog.site}/suno-prompting-guide/`, stories: `${catalog.site}/stories/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`, webMcp: `${catalog.site}/webmcp/`,
+            explore: `${catalog.site}/songs/`, videos: `${catalog.site}/videos/`, acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, sunoPromptingGuide: `${catalog.site}/suno-prompting-guide/`, musicTheoryGuide: `${catalog.site}/music-theory/`, stories: `${catalog.site}/stories/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`, webMcp: `${catalog.site}/webmcp/`,
           } };
         },
       },
@@ -434,7 +448,9 @@
         },
         execute: async (input, signal) => {
           const catalog = await getCatalog(signal);
-          const notes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const roots = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const flatNotes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'G-flat', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const sharpNotes = ['C', 'C-sharp', 'D', 'D-sharp', 'E', 'F', 'F-sharp', 'G', 'G-sharp', 'A', 'A-sharp', 'B'];
           const patterns = {
             'I-V-vi-IV': [[0, ''], [7, ''], [9, 'm'], [5, '']],
             'vi-IV-I-V': [[9, 'm'], [5, ''], [0, ''], [7, '']],
@@ -447,7 +463,8 @@
           };
           const key = textValue(input, 'key');
           const progression = textValue(input, 'progression');
-          const root = notes.indexOf(key);
+          const notes = ['D', 'E', 'F-sharp', 'G', 'A', 'B'].includes(key) ? sharpNotes : flatNotes;
+          const root = roots.indexOf(key);
           const chords = patterns[progression].map(([offset, quality]) => `${notes[(root + offset) % 12]}${quality}`);
           const harmonicRhythm = textValue(input, 'harmonicRhythm') || 'one chord per bar';
           return { key, progression, chords, harmonicRhythm, promptClause: `${key} tonal center, ${progression}, chords ${chords.join('-')}, ${harmonicRhythm}`, guideUrl: catalog.guides.sunoPrompting.pageUrl, note: 'Verify the generated key and chord movement by ear or with an instrument.' };
@@ -524,6 +541,93 @@
         },
       },
       {
+        name: 'get_music_theory_guide',
+        description: 'Get the complete standalone music theory guide for songwriting, instruments, arranging and DAW production.',
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async (_input, signal) => {
+          const catalog = await getCatalog(signal);
+          return { updatedAt: catalog.updatedAt, guide: catalog.guides.musicTheory };
+        },
+      },
+      {
+        name: 'get_music_theory_section',
+        description: 'Get one focused music theory section covering fundamentals, scales, modes, chords, harmony, progressions, chromaticism, vibes, melody or practical workflows.',
+        inputSchema: { type: 'object', properties: { section: { type: 'string', enum: ['fundamentals', 'intervals', 'scales', 'modes', 'chords', 'harmony', 'progressions', 'chromaticism', 'vibes', 'melody', 'workflows', 'study'] } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const sections = theorySections(catalog.guides.musicTheory);
+          const section = textValue(input, 'section');
+          if (!section) return { pageUrl: catalog.guides.musicTheory.pageUrl, sections: Object.keys(sections) };
+          return { pageUrl: catalog.guides.musicTheory.pageUrl, section, content: sections[section] };
+        },
+      },
+      {
+        name: 'build_scale',
+        description: 'Return the notes, interval formula, harmonic context and songwriting use for a scale in any chromatic root.',
+        inputSchema: { type: 'object', properties: { root: { type: 'string', enum: ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'] }, scale: { type: 'string', minLength: 1 } }, required: ['root', 'scale'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const roots = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const flatNotes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'G-flat', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const sharpNotes = ['C', 'C-sharp', 'D', 'D-sharp', 'E', 'F', 'F-sharp', 'G', 'G-sharp', 'A', 'A-sharp', 'B'];
+          const root = textValue(input, 'root');
+          const scaleName = textValue(input, 'scale');
+          const scale = catalog.guides.musicTheory.scaleFamilies.find((item) => item.name.toLowerCase() === scaleName.toLowerCase());
+          if (!scale) return { error: 'No scale matched.', availableScales: catalog.guides.musicTheory.scaleFamilies.map((item) => item.name) };
+          const rootIndex = roots.indexOf(root);
+          const notes = ['D', 'E', 'F-sharp', 'G', 'A', 'B'].includes(root) ? sharpNotes : flatNotes;
+          return { root, scale: scale.name, notes: scale.steps.map((offset) => notes[(rootIndex + offset) % 12]), formula: scale.formula, tendency: scale.tendency, harmony: scale.harmony, songwritingUse: scale.use, guideUrl: catalog.guides.musicTheory.pageUrl, spellingNote: 'Pitch-class names favor common sharps or flats. Use exact enharmonic spellings that match each written scale degree when preparing notation.' };
+        },
+      },
+      {
+        name: 'build_chord',
+        description: 'Build a common chord quality from a root and return its notes, interval formula and practical character.',
+        inputSchema: { type: 'object', properties: { root: { type: 'string', enum: ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'] }, chord: { type: 'string', minLength: 1 } }, required: ['root', 'chord'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const roots = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const flatNotes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'G-flat', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const sharpNotes = ['C', 'C-sharp', 'D', 'D-sharp', 'E', 'F', 'F-sharp', 'G', 'G-sharp', 'A', 'A-sharp', 'B'];
+          const offsets = { '1': 0, '2': 2, '3': 4, '4': 5, '5': 7, '6': 9, '7': 11, '9': 2, '11': 5, '13': 9, 'flat 2': 1, 'flat 3': 3, 'flat 5': 6, 'flat 6': 8, 'flat 7': 10, 'sharp 4': 6, 'sharp 5': 8, 'double-flat 7': 9 };
+          const root = textValue(input, 'root');
+          const chordName = textValue(input, 'chord');
+          const chord = catalog.guides.musicTheory.chordConstruction.find((item) => item[0].toLowerCase() === chordName.toLowerCase());
+          if (!chord || chord[1].includes('/')) return { error: 'No calculable chord matched.', availableChords: catalog.guides.musicTheory.chordConstruction.map((item) => item[0]) };
+          const degrees = chord[1].match(/double-flat 7|flat \d+|sharp \d+|\d+/g) ?? [];
+          const rootIndex = roots.indexOf(root);
+          const notes = ['D', 'E', 'F-sharp', 'G', 'A', 'B'].includes(root) ? sharpNotes : flatNotes;
+          return { root, chord: chord[0], notes: degrees.map((degree) => notes[(rootIndex + offsets[degree]) % 12]), formula: chord[1], character: chord[2], guideUrl: catalog.guides.musicTheory.pageUrl };
+        },
+      },
+      {
+        name: 'translate_roman_progression',
+        description: 'Translate a supported Roman-numeral progression into chord symbols in a selected tonic.',
+        inputSchema: { type: 'object', properties: { root: { type: 'string', enum: ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'] }, progression: { type: 'string', enum: ['I-IV-V-I', 'I-V-vi-IV', 'vi-IV-I-V', 'I-vi-IV-V', 'I-flat VII-IV-I', 'i-IV', 'i-flat II', 'I-II', 'i-VI-III-VII', 'i-VII-VI-V', 'i-v-VI-iv', 'ii7-V7-Imaj7', 'ii half-diminished 7-V7-i', 'I-IV-iv-I'] } }, required: ['root', 'progression'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const roots = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'F-sharp', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const flatNotes = ['C', 'D-flat', 'D', 'E-flat', 'E', 'F', 'G-flat', 'G', 'A-flat', 'A', 'B-flat', 'B'];
+          const sharpNotes = ['C', 'C-sharp', 'D', 'D-sharp', 'E', 'F', 'F-sharp', 'G', 'G-sharp', 'A', 'A-sharp', 'B'];
+          const maps = {
+            'I-IV-V-I': [[0, ''], [5, ''], [7, ''], [0, '']], 'I-V-vi-IV': [[0, ''], [7, ''], [9, 'm'], [5, '']], 'vi-IV-I-V': [[9, 'm'], [5, ''], [0, ''], [7, '']], 'I-vi-IV-V': [[0, ''], [9, 'm'], [5, ''], [7, '']], 'I-flat VII-IV-I': [[0, ''], [10, ''], [5, ''], [0, '']], 'i-IV': [[0, 'm'], [5, '']], 'i-flat II': [[0, 'm'], [1, '']], 'I-II': [[0, ''], [2, '']], 'i-VI-III-VII': [[0, 'm'], [8, ''], [3, ''], [10, '']], 'i-VII-VI-V': [[0, 'm'], [10, ''], [8, ''], [7, '']], 'i-v-VI-iv': [[0, 'm'], [7, 'm'], [8, ''], [5, 'm']], 'ii7-V7-Imaj7': [[2, 'm7'], [7, '7'], [0, 'maj7']], 'ii half-diminished 7-V7-i': [[2, 'm7 flat 5'], [7, '7'], [0, 'm']], 'I-IV-iv-I': [[0, ''], [5, ''], [5, 'm'], [0, '']],
+          };
+          const root = textValue(input, 'root'); const progression = textValue(input, 'progression'); const rootIndex = roots.indexOf(root);
+          const notes = ['D', 'E', 'F-sharp', 'G', 'A', 'B'].includes(root) ? sharpNotes : flatNotes;
+          return { root, progression, chords: maps[progression].map(([offset, quality]) => `${notes[(rootIndex + offset) % 12]}${quality}`), guideUrl: catalog.guides.musicTheory.pageUrl, note: 'Use inversions, register and harmonic rhythm to shape the progression beyond its chord roots.' };
+        },
+      },
+      {
+        name: 'suggest_theory_palette',
+        description: 'Return scale, progression and arrangement starting points associated with a requested musical tendency or vibe.',
+        inputSchema: { type: 'object', properties: { vibe: { type: 'string', minLength: 1 } }, required: ['vibe'], additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const query = textValue(input, 'vibe').toLowerCase();
+          const matches = catalog.guides.musicTheory.vibePalettes.filter((item) => item.join(' ').toLowerCase().includes(query));
+          return { query, matches: matches.map(([name, scales, progressions, arrangement]) => ({ name, scales, progressions, arrangement })), guideUrl: catalog.guides.musicTheory.pageUrl, note: catalog.guides.musicTheory.evidenceNote };
+        },
+      },
+      {
         name: 'list_reimaginings',
         description: 'List every Suno rebuild paired with its exact acoustic source recording and canonical pages. Use this when comparing original and new versions.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
@@ -582,6 +686,7 @@
             { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
             { label: 'Suno playlists', url: `${catalog.site}/suno/` },
             { label: 'Suno Prompting Field Guide', url: `${catalog.site}/suno-prompting-guide/` },
+            { label: 'Music Theory for Songwriters and Producers', url: `${catalog.site}/music-theory/` },
             { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },
             { label: 'Explore every song', url: `${catalog.site}/songs/` }, { label: 'Music videos', url: `${catalog.site}/videos/` }, { label: 'Listening stories', url: `${catalog.site}/stories/` },
             { label: 'WebMCP guide', url: `${catalog.site}/webmcp/` }, { label: 'Machine-readable catalog', url: `${catalog.site}/catalog.json` },
