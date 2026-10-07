@@ -40,6 +40,19 @@ const progressionOptions = theory.progressionLibrary.slice(0, 18);
       <label>Progression<select data-progression-name>{progressionOptions.map(([name, roman]) => <option value={roman}>{name}: {roman}</option>)}</select></label>
     </div>
     <div class="result"><div class="result-head"><strong data-progression-title></strong><button type="button" data-copy-theory="progression">Copy chords</button></div><p class="notes" data-progression-chords></p><p data-progression-note></p></div>
+    <div class="audio-lab" data-progression-audio>
+      <div class="audio-lab__head"><div><strong>Progression player and downloads</strong><p>Preview synthesized chords, save a WAV for listening, or export MIDI for a DAW. Rendering stays in this browser.</p></div><span data-audio-status aria-live="polite">Ready</span></div>
+      <div class="audio-controls">
+        <label>Sound<select data-audio-instrument><option value="keys">Electric keys</option><option value="synth">Analog synth</option><option value="organ">Organ</option><option value="pad">Slow pad</option><option value="pluck">Plucked strings</option></select></label>
+        <label>Tempo<input data-audio-tempo type="number" min="40" max="220" step="1" value="100" inputmode="numeric" /><span>BPM</span></label>
+        <label>Beats per chord<select data-audio-beats><option value="1">1 beat</option><option value="2">2 beats</option><option value="4" selected>4 beats</option><option value="8">8 beats</option></select></label>
+        <label>Register<select data-audio-register><option value="-12">Low</option><option value="0" selected>Middle</option><option value="12">High</option></select></label>
+        <label>Voicing<select data-audio-voicing><option value="voice-led">Smooth voice leading</option><option value="root">Root position</option><option value="first">First inversion</option><option value="second">Second inversion</option></select></label>
+        <label>Repeats<select data-audio-repeats><option value="1">Once</option><option value="2" selected>Twice</option><option value="4">Four times</option></select></label>
+      </div>
+      <div class="audio-actions"><button type="button" class="audio-primary" data-audio-action="play">Play progression</button><button type="button" data-audio-action="stop" disabled>Stop</button><button type="button" data-audio-action="wav">Download WAV</button><button type="button" data-audio-action="midi">Download MIDI</button></div>
+      <p class="audio-note">WAV contains the selected synthesized sound. MIDI contains editable notes, tempo and timing. Results may sound different after a DAW assigns its own instrument.</p>
+    </div>
   </section>
 
   <section class="tool-panel" data-theory-panel="palette" hidden>
@@ -65,7 +78,7 @@ const progressionOptions = theory.progressionLibrary.slice(0, 18);
     const intervalMap = { '1': 0, '2': 2, '3': 4, '4': 5, '5': 7, '6': 9, '7': 11, '9': 2, '11': 5, '13': 9, 'flat 2': 1, 'flat 3': 3, 'flat 5': 6, 'flat 6': 8, 'flat 7': 10, 'sharp 2': 3, 'sharp 4': 6, 'sharp 5': 8, 'double-flat 7': 9 };
     const progressionMaps = {
       'I-IV-V-I': [[0, ''], [5, ''], [7, ''], [0, '']], 'I-V-vi-IV': [[0, ''], [7, ''], [9, 'm'], [5, '']], 'vi-IV-I-V': [[9, 'm'], [5, ''], [0, ''], [7, '']], 'I-vi-IV-V': [[0, ''], [9, 'm'], [5, ''], [7, '']],
-      'I-V over 7-vi-IV': [[0, ''], [11, 'bass'], [9, 'm'], [5, '']], 'I-flat VII-IV-I': [[0, ''], [10, ''], [5, ''], [0, '']], 'i-IV': [[0, 'm'], [5, '']], 'i-flat II': [[0, 'm'], [1, '']], 'I-II': [[0, ''], [2, '']],
+      'I-V over 7-vi-IV': [[0, ''], [7, 'slash', 11], [9, 'm'], [5, '']], 'I-flat VII-IV-I': [[0, ''], [10, ''], [5, ''], [0, '']], 'i-IV': [[0, 'm'], [5, '']], 'i-flat II': [[0, 'm'], [1, '']], 'I-II': [[0, ''], [2, '']],
       'i-VI-III-VII': [[0, 'm'], [8, ''], [3, ''], [10, '']], 'i-VII-VI-V': [[0, 'm'], [10, ''], [8, ''], [7, '']], 'i-v-VI-iv': [[0, 'm'], [7, 'm'], [8, ''], [5, 'm']],
       'ii7-V7-Imaj7': [[2, 'm7'], [7, '7'], [0, 'maj7']], 'ii half-diminished 7-V7-i': [[2, 'm7 flat 5'], [7, '7'], [0, 'm']], 'III7-VI7-II7-V7': [[4, '7'], [9, '7'], [2, '7'], [7, '7']],
       'I-IV-iv-I': [[0, ''], [5, ''], [5, 'm'], [0, '']], 'I-flat VI-flat III-I': [[0, ''], [8, ''], [3, ''], [0, '']],
@@ -93,7 +106,7 @@ const progressionOptions = theory.progressionLibrary.slice(0, 18);
       const [rootName, mode] = key.split(/ (?=major|minor)/);
       const roman = root.querySelector('[data-progression-name]').value;
       const map = progressionMaps[roman];
-      const result = map ? map.map(([offset, quality]) => quality === 'bass' ? `${rootName}/${note(rootName, offset)}` : `${note(rootName, offset)}${quality}`) : [roman];
+      const result = map ? map.map(([offset, quality, bassOffset]) => quality === 'slash' ? `${note(rootName, offset)}/${note(rootName, bassOffset)}` : `${note(rootName, offset)}${quality}`) : [roman];
       set('[data-progression-title]', `${key}: ${roman}`); set('[data-progression-chords]', result.join(' · ')); set('[data-progression-note]', `${mode === 'minor' ? 'Treat the selected root as minor tonic and verify any raised leading tone.' : 'Use inversions to connect these chords with smaller bass and inner-voice motion.'}`);
     };
     const updatePalette = () => {
@@ -108,6 +121,84 @@ const progressionOptions = theory.progressionLibrary.slice(0, 18);
     root.querySelectorAll('[data-chord-root], [data-chord-type]').forEach((input) => input.addEventListener('input', updateChord));
     root.querySelectorAll('[data-progression-key], [data-progression-name]').forEach((input) => input.addEventListener('input', updateProgression));
     root.querySelector('[data-palette-name]').addEventListener('input', updatePalette);
+    let playbackContext;
+    let playbackSource;
+    const audioModule = () => import('/scripts/theory-audio.js');
+    const numberInput = (selector, fallback, minimum, maximum) => {
+      const value = Number(root.querySelector(selector)?.value);
+      return Number.isFinite(value) ? Math.max(minimum, Math.min(maximum, value)) : fallback;
+    };
+    const audioSettings = async () => {
+      const key = root.querySelector('[data-progression-key]').value;
+      const [rootName] = key.split(/ (?=major|minor)/);
+      const progression = root.querySelector('[data-progression-name]').value;
+      const specs = progressionMaps[progression];
+      if (!specs) throw new Error('Audio export is not available for this progression.');
+      const tonicMidi = 60 + rootNames.indexOf(rootName) + numberInput('[data-audio-register]', 0, -12, 12);
+      const instrument = root.querySelector('[data-audio-instrument]').value;
+      const bpm = numberInput('[data-audio-tempo]', 100, 40, 220);
+      const beatsPerChord = numberInput('[data-audio-beats]', 4, 1, 8);
+      const repeats = numberInput('[data-audio-repeats]', 2, 1, 4);
+      const voicing = root.querySelector('[data-audio-voicing]').value;
+      const tools = await audioModule();
+      const plan = tools.makeProgressionPlan({ tonicMidi, specs, voicing });
+      return { tools, plan, bpm, beatsPerChord, repeats, instrument, key, progression };
+    };
+    const audioStatus = (message) => set('[data-audio-status]', message);
+    const fileName = (settings, extension) => `${settings.key}-${settings.progression}-${settings.bpm}bpm`.toLowerCase().replaceAll(' ', '-').replaceAll('/', '-').replace(/[^a-z0-9-]+/g, '') + `.${extension}`;
+    const download = (bytes, type, name) => {
+      const url = URL.createObjectURL(new Blob([bytes], { type }));
+      const link = document.createElement('a');
+      link.href = url; link.download = name; document.body.append(link); link.click(); link.remove();
+      setTimeout(() => URL.revokeObjectURL(url), 1000);
+    };
+    const stopPlayback = async () => {
+      if (playbackSource) { try { playbackSource.stop(); } catch {} playbackSource = undefined; }
+      if (playbackContext) { await playbackContext.close(); playbackContext = undefined; }
+      root.querySelector('[data-audio-action="stop"]').disabled = true;
+      audioStatus('Stopped');
+    };
+    root.querySelectorAll('[data-audio-action]').forEach((button) => button.addEventListener('click', async () => {
+      const action = button.dataset.audioAction;
+      if (action === 'stop') { await stopPlayback(); return; }
+      let resumePlayback;
+      try {
+        button.disabled = true;
+        if (action === 'play') {
+          if (playbackSource) { try { playbackSource.stop(); } catch {} playbackSource = undefined; }
+          if (playbackContext) void playbackContext.close();
+          const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+          if (!AudioContextClass) throw new Error('Audio playback is not supported in this browser.');
+          playbackContext = new AudioContextClass();
+          resumePlayback = playbackContext.resume();
+        }
+        const settings = await audioSettings();
+        if (action === 'midi') {
+          const bytes = settings.tools.encodeMidi(settings);
+          download(bytes, 'audio/midi', fileName(settings, 'mid'));
+          audioStatus('MIDI downloaded');
+          return;
+        }
+        audioStatus('Rendering audio');
+        if (resumePlayback) await resumePlayback;
+        const buffer = await settings.tools.renderProgression(settings);
+        if (action === 'wav') {
+          download(settings.tools.encodeWav(buffer), 'audio/wav', fileName(settings, 'wav'));
+          audioStatus('WAV downloaded');
+        } else {
+          playbackSource = playbackContext.createBufferSource();
+          playbackSource.buffer = buffer;
+          playbackSource.connect(playbackContext.destination);
+          playbackSource.addEventListener('ended', () => { const finishedContext = playbackContext; playbackSource = undefined; playbackContext = undefined; if (finishedContext) void finishedContext.close(); root.querySelector('[data-audio-action="stop"]').disabled = true; audioStatus('Playback finished'); });
+          playbackSource.start();
+          root.querySelector('[data-audio-action="stop"]').disabled = false;
+          audioStatus('Playing');
+        }
+      } catch (error) {
+        if (action === 'play' && playbackContext) { await playbackContext.close(); playbackContext = undefined; }
+        audioStatus(error instanceof Error ? error.message : 'Audio export failed');
+      } finally { if (action !== 'stop') button.disabled = false; }
+    }));
     root.querySelectorAll('[data-copy-theory]').forEach((button) => button.addEventListener('click', async () => {
       const type = button.dataset.copyTheory;
       const selectors = { scale: '[data-scale-notes]', chord: '[data-chord-notes]', progression: '[data-progression-chords]', palette: '[data-palette-title]' };
@@ -126,9 +217,10 @@ const progressionOptions = theory.progressionLibrary.slice(0, 18);
   .tool-tabs button { border:0; border-right:1px solid var(--rule); padding:.85rem 1rem; background:var(--night-700); color:var(--ink-soft); font:650 .74rem/1 var(--mono); white-space:nowrap; cursor:pointer; }
   .tool-tabs button.is-active { color:var(--ai); background:color-mix(in srgb, var(--ai) 15%, var(--night-800)); }
   .tool-panel { padding:1.5rem; }.controls { display:grid; grid-template-columns:repeat(2, minmax(0, 18rem)); gap:1rem; margin-bottom:1rem; }
-  label { display:grid; gap:.45rem; color:var(--ink-faint); font:650 .7rem/1.2 var(--mono); } select { width:100%; border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.72rem; }
+  label { display:grid; gap:.45rem; color:var(--ink-faint); font:650 .7rem/1.2 var(--mono); } select,input { width:100%; border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.72rem; } label>span{color:var(--ink-faint);font-size:.65rem}
   .result { padding:1.2rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }.result-head { display:flex; justify-content:space-between; gap:1rem; color:var(--ai); }.result button { border:1px solid var(--rule); border-radius:999px; background:transparent; color:var(--ink-soft); padding:.35rem .7rem; cursor:pointer; }
   .notes { color:var(--ink) !important; font:700 clamp(1rem, 3vw, 1.35rem)/1.5 var(--mono); }.result p { color:var(--ink-soft); }.result dl { margin:1rem 0 0; }.result dl div { display:grid; grid-template-columns:10rem 1fr; gap:1rem; padding:.65rem 0; border-top:1px solid var(--rule-soft); }.result dt { color:var(--ink); font-weight:700; }.result dd { color:var(--ink-soft); margin:0; }.caution { border-left:3px solid var(--ai); padding-left:1rem; }
   .circle-intro { max-width:50rem; color:var(--ink-soft); }.circle { position:relative; width:min(34rem, 90vw); aspect-ratio:1; margin:2rem auto; border:1px solid var(--rule); border-radius:50%; background:radial-gradient(circle, var(--night-900) 0 30%, transparent 31%); }.circle span { --angle:calc(var(--i) * 30deg); position:absolute; left:50%; top:50%; width:4.4rem; text-align:center; transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-13rem) rotate(calc(-1 * var(--angle))); }.circle b { display:block; color:var(--ai); }.circle small { color:var(--ink-faint); font:500 .68rem/1 var(--mono); }
-  @media(max-width:650px){.tool-head{display:block}.tool-head>span{display:block;margin-top:1rem}.controls{grid-template-columns:1fr}.result dl div{grid-template-columns:1fr;gap:.3rem}.circle span{transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-9.5rem) rotate(calc(-1 * var(--angle)));}.circle{width:22rem;max-width:90vw}}
+  .audio-lab{margin-top:1rem;padding:1.2rem;border:1px solid var(--rule);border-radius:var(--radius);background:color-mix(in srgb,var(--electronic) 7%,var(--night-900))}.audio-lab__head{display:flex;justify-content:space-between;gap:1rem}.audio-lab__head strong{color:var(--ink)}.audio-lab__head p,.audio-note{color:var(--ink-soft);margin:.4rem 0 0}.audio-lab__head span{color:var(--electronic);font:650 .7rem/1.2 var(--mono);text-align:right}.audio-controls{display:grid;grid-template-columns:repeat(3,minmax(9rem,1fr));gap:.8rem;margin-top:1.2rem}.audio-actions{display:flex;flex-wrap:wrap;gap:.65rem;margin-top:1rem}.audio-actions button{border:1px solid var(--rule);border-radius:999px;background:var(--night-800);color:var(--ink);padding:.65rem .9rem;cursor:pointer}.audio-actions button:hover:not(:disabled){border-color:var(--electronic);color:var(--electronic)}.audio-actions button.audio-primary{background:var(--electronic);border-color:var(--electronic);color:var(--night-900);font-weight:750}.audio-actions button:disabled{opacity:.45;cursor:not-allowed}.audio-note{font-size:.82rem}
+  @media(max-width:650px){.tool-head,.audio-lab__head{display:block}.tool-head>span,.audio-lab__head>span{display:block;margin-top:1rem;text-align:left}.controls,.audio-controls{grid-template-columns:1fr}.result dl div{grid-template-columns:1fr;gap:.3rem}.circle span{transform:translate(-50%,-50%) rotate(var(--angle)) translateY(-9.5rem) rotate(calc(-1 * var(--angle)));}.circle{width:22rem;max-width:90vw}}
 </style>

@@ -139,7 +139,7 @@ for (const section of ['Interactive theory lab', 'Scale atlas', 'Diatonic modes'
   assert.ok(theoryPage.includes(section), `The music theory guide is missing the ${section} section.`);
 }
 assert.equal((theoryPage.match(/<button[^>]+data-theory-tab=/g) ?? []).length, 5, 'The theory workbench must render five interactive tabs.');
-for (const marker of ['data-theory-workbench', 'data-scale-notes', 'data-chord-notes', 'data-progression-chords', 'data-palette-title', 'Circle of fifths']) assert.ok(theoryPage.includes(marker), `The theory workbench is missing ${marker}.`);
+for (const marker of ['data-theory-workbench', 'data-scale-notes', 'data-chord-notes', 'data-progression-chords', 'data-palette-title', 'Circle of fifths', 'Progression player and downloads', 'data-audio-action="wav"', 'data-audio-action="midi"']) assert.ok(theoryPage.includes(marker), `The theory workbench is missing ${marker}.`);
 const theoryWorkbenchSource = read('src/components/MusicTheoryWorkbench.astro');
 const theoryWorkbenchScript = theoryWorkbenchSource.match(/<script is:inline[^>]*>([\s\S]*?)<\/script>/)?.[1];
 assert.ok(theoryWorkbenchScript, 'The theory workbench client script is missing.');
@@ -149,6 +149,18 @@ for (const path of ['src/pages/music-theory/index.astro', 'src/data/music-theory
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);
   assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
 }
+const theoryAudio = await import(new URL('../public/scripts/theory-audio.js', import.meta.url));
+assert.ok(existsSync(new URL('dist/scripts/theory-audio.js', root)), 'The browser audio module is missing from the built site.');
+const audioPlan = theoryAudio.makeProgressionPlan({ tonicMidi: 62, specs: [[0, ''], [7, ''], [9, 'm'], [5, '']], voicing: 'voice-led' });
+assert.equal(audioPlan.length, 4);
+assert.ok(audioPlan.every((chord) => chord.length === 3 && chord.every((note) => Number.isInteger(note) && note >= 0 && note <= 127)));
+const wavFixture = theoryAudio.encodeWavFromChannels([new Float32Array(4410), new Float32Array(4410)], 44100);
+assert.equal(new TextDecoder().decode(wavFixture.slice(0, 4)), 'RIFF');
+assert.equal(new TextDecoder().decode(wavFixture.slice(8, 12)), 'WAVE');
+assert.equal(wavFixture.length, 44 + (4410 * 2 * 2));
+const midiFixture = theoryAudio.encodeMidi({ plan: audioPlan, bpm: 100, beatsPerChord: 4, repeats: 2, instrument: 'keys' });
+assert.equal(new TextDecoder().decode(midiFixture.slice(0, 4)), 'MThd');
+assert.equal(new TextDecoder().decode(midiFixture.slice(14, 18)), 'MTrk');
 const explorer = read('dist/songs/index.html');
 assert.equal((explorer.match(/<article class="song-card/g) ?? []).length, 48, 'The initial song explorer payload must stay paginated.');
 const songIndex = JSON.parse(read('dist/song-index.json'));
