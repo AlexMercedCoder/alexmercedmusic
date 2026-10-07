@@ -1,5 +1,120 @@
 [
   {
+    "id": "f8a7dd42-94d7-4a51-b699-a1e16f76ed1f",
+    "name": "Halums Adventure",
+    "url": "https://suno.com/playlist/f8a7dd42-94d7-4a51-b699-a1e16f76ed1f",
+    "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg",
+    "songCount": 5,
+    "durationSeconds": 1153.44,
+    "description": "Halum’s Adventures is a five-song fantasy concept EP following a wanderer named Halum as he crosses mountains, luminous cities, impossible kingdoms, and halls of unopened doors in search of meaning. Along the way, his journey becomes less about conquest and more about understanding what it means to keep going when the road is hard, to love more people than one life can comfortably hold, to accept how quickly time disappears, and to make peace with the countless lives hidden behind the choices we never make. By the end, Halum discovers that a life does not need to be complete to be worthwhile. It only needs to be lived fully, loved deeply, and carried forward with enough courage to keep choosing the next road.",
+    "trackIds": [
+      "b122c145-4d7c-42de-b33a-836edeb11479",
+      "17634798-9345-430b-98d5-889c3267f4c5",
+      "3ea98eaa-acc6-4da0-bb19-9419e882e541",
+      "0a002947-083f-464e-9b68-547c2cde4db7",
+      "cda1f1c4-2e2e-409a-8247-6ff55f64ae88"
+    ],
+    "tracks": [
+      {
+        "id": "b122c145-4d7c-42de-b33a-836edeb11479",
+        "title": "The Mountains that Refused Him",
+        "url": "https://suno.com/song/b122c145-4d7c-42de-b33a-836edeb11479",
+        "createdAt": "2026-10-06T18:41:22.240Z",
+        "durationSeconds": 219.92,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "17634798-9345-430b-98d5-889c3267f4c5",
+        "title": "The Hundred Lantern Hearts",
+        "url": "https://suno.com/song/17634798-9345-430b-98d5-889c3267f4c5",
+        "createdAt": "2026-10-06T18:44:37.536Z",
+        "durationSeconds": 233,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "3ea98eaa-acc6-4da0-bb19-9419e882e541",
+        "title": "The Kingdom of One Knight",
+        "url": "https://suno.com/song/3ea98eaa-acc6-4da0-bb19-9419e882e541",
+        "createdAt": "2026-10-06T21:55:52.307Z",
+        "durationSeconds": 206.56,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "0a002947-083f-464e-9b68-547c2cde4db7",
+        "title": "The Hall of Unopened Doors",
+        "url": "https://suno.com/song/0a002947-083f-464e-9b68-547c2cde4db7",
+        "createdAt": "2026-10-06T21:56:33.172Z",
+        "durationSeconds": 229.96,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "cda1f1c4-2e2e-409a-8247-6ff55f64ae88",
+        "title": "Halum and the Morning Star",
+        "url": "https://suno.com/song/cda1f1c4-2e2e-409a-8247-6ff55f64ae88",
+        "createdAt": "2026-10-06T21:57:37.478Z",
+        "durationSeconds": 264,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "d5ed8fb7-d661-49d8-897a-e4d113a52bdb",
+    "name": "Halum’s Journey",
+    "url": "https://suno.com/playlist/d5ed8fb7-d661-49d8-897a-e4d113a52bdb",
+    "imageUrl": "https://cdn2.suno.ai/image_b122c145-4d7c-42de-b33a-836edeb11479.jpeg",
+    "songCount": 5,
+    "durationSeconds": 1153.44,
+    "trackIds": [
+      "b122c145-4d7c-42de-b33a-836edeb11479",
+      "17634798-9345-430b-98d5-889c3267f4c5",
+      "3ea98eaa-acc6-4da0-bb19-9419e882e541",
+      "0a002947-083f-464e-9b68-547c2cde4db7",
+      "cda1f1c4-2e2e-409a-8247-6ff55f64ae88"
+    ],
+    "tracks": [
+      {
+        "id": "b122c145-4d7c-42de-b33a-836edeb11479",
+        "title": "The Mountains that Refused Him",
+        "url": "https://suno.com/song/b122c145-4d7c-42de-b33a-836edeb11479",
+        "createdAt": "2026-10-06T18:41:22.240Z",
+        "durationSeconds": 219.92,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "17634798-9345-430b-98d5-889c3267f4c5",
+        "title": "The Hundred Lantern Hearts",
+        "url": "https://suno.com/song/17634798-9345-430b-98d5-889c3267f4c5",
+        "createdAt": "2026-10-06T18:44:37.536Z",
+        "durationSeconds": 233,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "3ea98eaa-acc6-4da0-bb19-9419e882e541",
+        "title": "The Kingdom of One Knight",
+        "url": "https://suno.com/song/3ea98eaa-acc6-4da0-bb19-9419e882e541",
+        "createdAt": "2026-10-06T21:55:52.307Z",
+        "durationSeconds": 206.56,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "0a002947-083f-464e-9b68-547c2cde4db7",
+        "title": "The Hall of Unopened Doors",
+        "url": "https://suno.com/song/0a002947-083f-464e-9b68-547c2cde4db7",
+        "createdAt": "2026-10-06T21:56:33.172Z",
+        "durationSeconds": 229.96,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      },
+      {
+        "id": "cda1f1c4-2e2e-409a-8247-6ff55f64ae88",
+        "title": "Halum and the Morning Star",
+        "url": "https://suno.com/song/cda1f1c4-2e2e-409a-8247-6ff55f64ae88",
+        "createdAt": "2026-10-06T21:57:37.478Z",
+        "durationSeconds": 264,
+        "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg"
+      }
+    ]
+  },
+  {
     "id": "116cf766-b0ee-46a1-844e-e95b2e44e7e2",
     "name": "Tangled",
     "url": "https://suno.com/playlist/116cf766-b0ee-46a1-844e-e95b2e44e7e2",
@@ -2001,6 +2116,7 @@
         "title": "A Door in the Wall",
         "url": "https://suno.com/song/1a2a8253-415b-4674-ab02-c4d16d217bc4",
         "createdAt": "2026-09-26T22:09:50.619Z",
+        "durationSeconds": 204.76,
         "imageUrl": "https://cdn2.suno.ai/image_1a2a8253-415b-4674-ab02-c4d16d217bc4.jpeg"
       },
       {
@@ -2984,6 +3100,7 @@
         "title": "For This One Minute",
         "url": "https://suno.com/song/815baa76-dbac-4918-87c9-26026b4b95dd",
         "createdAt": "2026-10-06T05:15:47.181Z",
+        "durationSeconds": 231.56,
         "imageUrl": "https://cdn2.suno.ai/image_815baa76-dbac-4918-87c9-26026b4b95dd.jpeg"
       }
     ]
@@ -3051,6 +3168,7 @@
         "title": "The Constant Shift",
         "url": "https://suno.com/song/feb4f43d-8816-473f-add5-c7955d1278a1",
         "createdAt": "2026-09-23T01:43:33.073Z",
+        "durationSeconds": 247.16,
         "imageUrl": "https://cdn2.suno.ai/image_feb4f43d-8816-473f-add5-c7955d1278a1.jpeg"
       },
       {
@@ -3496,8 +3614,8 @@
     "name": "Cliche love songs, Why Not",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 28,
-    "durationSeconds": 6603.720000000001,
+    "songCount": 30,
+    "durationSeconds": 7107.680000000001,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -3526,7 +3644,9 @@
       "18aed81b-3c95-4d70-b432-8bbf40a41d4e",
       "7779a5b3-f0ef-4464-8a9e-9739d5175b10",
       "8011cfbe-d9dd-4b70-92af-76b6386f9728",
-      "34099812-993d-485c-9b8e-4257daa9021c"
+      "34099812-993d-485c-9b8e-4257daa9021c",
+      "f369c5b2-de11-4035-8a49-c5b95c42f46d",
+      "bce6a0ca-6c41-454a-8f17-1e43102f0f11"
     ],
     "tracks": [
       {
@@ -3752,6 +3872,22 @@
         "createdAt": "2026-10-06T05:42:19.418Z",
         "durationSeconds": 206,
         "imageUrl": "https://cdn2.suno.ai/image_34099812-993d-485c-9b8e-4257daa9021c.jpeg"
+      },
+      {
+        "id": "f369c5b2-de11-4035-8a49-c5b95c42f46d",
+        "title": "One of Me",
+        "url": "https://suno.com/song/f369c5b2-de11-4035-8a49-c5b95c42f46d",
+        "createdAt": "2026-10-07T01:19:33.166Z",
+        "durationSeconds": 248,
+        "imageUrl": "https://cdn2.suno.ai/image_f369c5b2-de11-4035-8a49-c5b95c42f46d.jpeg"
+      },
+      {
+        "id": "bce6a0ca-6c41-454a-8f17-1e43102f0f11",
+        "title": "One Heart, Here Tonight",
+        "url": "https://suno.com/song/bce6a0ca-6c41-454a-8f17-1e43102f0f11",
+        "createdAt": "2026-10-07T01:23:22.657Z",
+        "durationSeconds": 255.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bce6a0ca-6c41-454a-8f17-1e43102f0f11.jpeg"
       }
     ]
   },
@@ -3914,6 +4050,7 @@
         "title": "On the Paris Lane",
         "url": "https://suno.com/song/65f7a361-95de-4229-ae8f-fa9190f91532",
         "createdAt": "2026-09-15T14:14:54.044Z",
+        "durationSeconds": 232.8,
         "imageUrl": "https://cdn2.suno.ai/image_65f7a361-95de-4229-ae8f-fa9190f91532.jpeg"
       },
       {
@@ -4551,6 +4688,7 @@
         "title": "Ambition Habit",
         "url": "https://suno.com/song/a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
         "createdAt": "2026-08-31T17:14:49.935Z",
+        "durationSeconds": 238.28,
         "imageUrl": "https://cdn2.suno.ai/image_a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0.jpeg"
       },
       {
@@ -5532,6 +5670,7 @@
         "title": "Ambition Habit",
         "url": "https://suno.com/song/a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0",
         "createdAt": "2026-08-31T17:14:49.935Z",
+        "durationSeconds": 238.28,
         "imageUrl": "https://cdn2.suno.ai/image_a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0.jpeg"
       },
       {
@@ -5995,6 +6134,7 @@
         "title": "To Find My Mind",
         "url": "https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea",
         "createdAt": "2026-08-31T21:34:03.529Z",
+        "durationSeconds": 267.48,
         "imageUrl": "https://cdn2.suno.ai/image_f0c0078d-d9d2-4fc0-bd92-18662b652bea.jpeg"
       },
       {
@@ -6047,6 +6187,7 @@
         "title": "THE ICEBERG OPEN LAKEHOUSE",
         "url": "https://suno.com/song/a6cc9cd2-41d0-447e-b412-dfc258a8e9e7",
         "createdAt": "2026-09-03T01:44:53.785Z",
+        "durationSeconds": 469.76,
         "imageUrl": "https://cdn2.suno.ai/image_a6cc9cd2-41d0-447e-b412-dfc258a8e9e7.jpeg"
       },
       {
@@ -6245,6 +6386,7 @@
         "title": "Paper Over Fear",
         "url": "https://suno.com/song/2d47c2ea-0cc7-4772-b7b5-3c248f2cca5f",
         "createdAt": "2026-09-12T20:27:16.537Z",
+        "durationSeconds": 257.2,
         "imageUrl": "https://cdn2.suno.ai/image_2d47c2ea-0cc7-4772-b7b5-3c248f2cca5f.jpeg"
       },
       {
@@ -7629,6 +7771,7 @@
         "title": "Happy to Be Here",
         "url": "https://suno.com/song/9b8e5560-c822-47b8-a9d3-44f6c77a2ad5",
         "createdAt": "2026-09-23T12:07:57.571Z",
+        "durationSeconds": 256.8,
         "imageUrl": "https://cdn2.suno.ai/image_9b8e5560-c822-47b8-a9d3-44f6c77a2ad5.jpeg"
       },
       {
@@ -8420,6 +8563,7 @@
         "title": "PLEASE DON’T COUNT THE HOURS",
         "url": "https://suno.com/song/6445fb95-601d-488a-b5c4-2d7990b544b5",
         "createdAt": "2026-09-07T22:44:13.549Z",
+        "durationSeconds": 139.24,
         "imageUrl": "https://cdn2.suno.ai/image_6445fb95-601d-488a-b5c4-2d7990b544b5.jpeg"
       },
       {
@@ -8427,6 +8571,7 @@
         "title": "A THOUSAND GOODBYES EVERY DAY",
         "url": "https://suno.com/song/3a5962f5-a274-4a93-81eb-cbf8d8976657",
         "createdAt": "2026-09-07T22:53:14.059Z",
+        "durationSeconds": 148.76,
         "imageUrl": "https://cdn2.suno.ai/image_3a5962f5-a274-4a93-81eb-cbf8d8976657.jpeg"
       },
       {
@@ -9115,6 +9260,7 @@
         "title": "To Find My Mind",
         "url": "https://suno.com/song/f0c0078d-d9d2-4fc0-bd92-18662b652bea",
         "createdAt": "2026-08-31T21:34:03.529Z",
+        "durationSeconds": 267.48,
         "imageUrl": "https://cdn2.suno.ai/image_f0c0078d-d9d2-4fc0-bd92-18662b652bea.jpeg"
       },
       {

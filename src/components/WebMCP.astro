@@ -93,8 +93,8 @@
       genres: guide.genreFamilies,
       instruments: guide.instrumentFamilies,
       vocals: guide.vocalDimensions,
-      rhythm: { rhythmTerms: guide.rhythmTerms, meters: guide.meters },
-      harmony: { harmonyTerms: guide.harmonyTerms, melodicTerms: guide.melodicTerms },
+      rhythm: { rhythmTerms: guide.rhythmTerms, meters: guide.meters, meterGuidance: guide.meterGuidance, oddMeterPercussion: guide.oddMeterPercussion, studioMeterNote: guide.studioMeterNote, percussionDimensions: guide.percussionDimensions, percussionRecipes: guide.percussionRecipes },
+      harmony: { keyGuidance: guide.keyGuidance, chordProgressions: guide.chordProgressions, harmonicLevers: guide.harmonicLevers, harmonyTerms: guide.harmonyTerms, melodicTerms: guide.melodicTerms, troubleshooting: guide.harmonyTroubleshooting },
       arrangement: guide.arrangementPatterns,
       production: guide.productionFamilies,
       lyrics: { principles: guide.lyricPrinciples, example: guide.lyricExample },
@@ -340,7 +340,7 @@
       },
       {
         name: 'get_suno_prompting_guide',
-        description: 'Get the structured Suno prompting guide with prompt architecture, genre and sound palettes, vocals, rhythm, harmony, production, hybrid design, controls, troubleshooting, recipes and evaluation guidance.',
+        description: 'Get the structured Suno prompting guide with prompt architecture, keys, chord progressions, time signatures, percussion, genre and sound palettes, vocals, production, controls, troubleshooting, recipes and evaluation guidance.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
@@ -367,11 +367,11 @@
       },
       {
         name: 'search_suno_prompting_guide',
-        description: 'Search every Suno prompting reference, including genres, instruments, vocals, rhythm, harmony, production, controls, recipes and troubleshooting. Returns matching passages with their section paths.',
+        description: 'Search every Suno prompting reference, including keys, chord progressions, time signatures, percussion, genres, instruments, vocals, production, controls, recipes and troubleshooting. Returns matching passages with their section paths.',
         inputSchema: {
           type: 'object',
           properties: {
-            query: { type: 'string', minLength: 1, description: 'A musical term, problem, genre, instrument, vocal trait or production idea.' },
+            query: { type: 'string', minLength: 1, description: 'A key, chord progression, meter, percussion idea, musical problem, genre, instrument, vocal trait or production idea.' },
             limit: { type: 'integer', minimum: 1, maximum: 50, default: 20 },
           },
           required: ['query'],

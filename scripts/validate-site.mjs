@@ -115,9 +115,11 @@ const promptingPage = read('dist/suno-prompting-guide/index.html');
 assert.ok(promptingPage.includes('TechArticle') && promptingPage.includes('FAQPage'), 'The prompting guide is missing structured data.');
 assert.ok(!promptingPage.includes('.pdf'), 'The prompting guide must not publish or link to the source PDF.');
 assert.ok(!existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The source PDF must not be included in the built site.');
-for (const section of ['Genre atlas', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
+for (const section of ['Genre atlas', 'Keys and chord progressions', 'Time signatures and beat grouping', 'Odd-meter drum maps', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
   assert.ok(promptingPage.includes(section), `The prompting guide is missing the ${section} section.`);
 }
+assert.ok(promptingPage.includes('not sent to the generative model'), 'The prompting guide must explain the Studio time-signature limitation.');
+assert.ok(promptingPage.includes('i-VI-III-VII') && promptingPage.includes('7/8 grouped 2+2+3'), 'The prompting guide is missing practical harmony or meter examples.');
 for (const path of ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts']) {
   const source = read(path);
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);

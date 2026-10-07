@@ -26,6 +26,14 @@ const faqs = [
     answer: 'Put the overall groove and drum sound in Style. Use documented section markers in Lyrics, and test a short bracketed drum cue only for a local change. Bracketed percussion directions are suggestions, not exact sequencing commands.',
   },
   {
+    question: 'How should I specify a key and chord progression?',
+    answer: 'Name the key, Roman-numeral progression, chord qualities and harmonic rhythm. Add exact chord names when pitch matters, then verify the result by ear because prompt details remain probabilistic.',
+  },
+  {
+    question: 'How should I prompt an odd time signature?',
+    answer: 'Name the meter, beat grouping, accent pattern and section. For example: 7/8 grouped 2+2+3, with kick accents at each group start in the verse, resolving to 4/4 in the chorus.',
+  },
+  {
     question: 'What makes a subgenre prompt more specific?',
     answer: 'Name the subgenre, its rhythmic fingerprint, a signature instrument or timbre, the vocal role and one section contrast. For example, tech house with a dry four-on-the-floor kick, mono bass, syncopated conga details and a one-bar break.',
   },
@@ -39,10 +47,10 @@ const jsonLd = [
     description: guide.description,
     url: guide.pageUrl,
     datePublished: '2026-09-13',
-    dateModified: '2026-10-06',
+    dateModified: '2026-10-07',
     author: { '@id': 'https://alexmerced.com/#alexmerced' },
     publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
-    about: ['Suno', 'music prompting', 'song arrangement', 'music production'],
+    about: ['Suno', 'music prompting', 'keys', 'chord progressions', 'time signatures', 'percussion', 'song arrangement', 'music production'],
     proficiencyLevel: 'Beginner to advanced',
   },
   {
@@ -66,10 +74,10 @@ const jsonLd = [
 <Base
   title="Suno Prompting Field Guide"
   description={guide.description}
-  keywords={['Suno prompting guide', 'Suno prompts', 'Suno style prompt', 'music prompting', 'Suno v6']}
+  keywords={['Suno prompting guide', 'Suno prompts', 'Suno chord progression prompts', 'Suno time signatures', 'Suno percussion prompts', 'music prompting', 'Suno v6']}
   jsonLd={jsonLd}
   ogType="article"
-  dateModified="2026-10-06"
+  dateModified="2026-10-07"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno Prompting Field Guide' }]} />
 
@@ -95,6 +103,8 @@ const jsonLd = [
       <a href="#mental-model">Mental model</a>
       <a href="#prompt-architecture">Prompt architecture</a>
       <a href="#genre-atlas">Genres</a>
+      <a href="#harmony">Keys and chords</a>
+      <a href="#meter">Time signatures</a>
       <a href="#percussion">Drums and percussion</a>
       <a href="#sound-design">Sound design</a>
       <a href="#arrangement">Arrangement</a>
@@ -192,12 +202,89 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="harmony" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Keys and chord progressions</p>
+        <h2>Describe tonal home, movement and timing</h2>
+        <p>A key names the tonal center. A progression describes how chords move around it. Roman numerals preserve the same harmonic function in any key, while exact chord names identify the pitches you want. Add harmonic rhythm so Suno also knows how quickly the chords should change.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Concept</th><th>Practical direction</th></tr></thead>
+          <tbody>{guide.keyGuidance.map(([name, direction]) => <tr><th scope="row">{name}</th><td>{direction}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Progression library</p>
+        <h2>State function, pitches and musical effect</h2>
+        <p>These progressions are starting points. The same chords can feel different when the tonic, rhythm, voicing, melody or bass line changes.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Roman numerals</th><th>Example</th><th>Likely effect</th></tr></thead>
+          <tbody>{guide.chordProgressions.map(([numerals, example, effect]) => <tr><th scope="row">{numerals}</th><td>{example}</td><td>{effect}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Harmonic control</p>
+        <h2>Choose the lever that solves the problem</h2>
+      </div>
+      <div class="vocab-grid">
+        {guide.harmonicLevers.map(([name, use]) => <article><h3>{name}</h3><p>{use}</p></article>)}
+      </div>
+      <aside class="principle">
+        <strong>Copyable example</strong>
+        <span>D minor, i-VI-III-VII progression, one chord per bar, close piano voicings over a held D pedal, minor iv before the final chorus, then an authentic cadence into the last tonic.</span>
+      </aside>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">When harmony misses</p>
+        <h2>Make one harmonic instruction more explicit</h2>
+      </div>
+      <div class="trouble-list">
+        {guide.harmonyTroubleshooting.map(([symptom, revision]) => <article><h3>{symptom}</h3><p>{revision}</p></article>)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="meter" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Time signatures and beat grouping</p>
+        <h2>Tell the listener where each cycle leans</h2>
+        <p>The fraction alone is often incomplete direction. Add the grouping, accents, subdivision, tempo and instrument that carries the pattern. “7/8 grouped 2+2+3 with bass and kick accents at each group start” gives a clearer rhythmic target than “odd meter.”</p>
+      </div>
+      <div class="reference-columns">
+        <article class="reference-card">
+          <h3>Meter palette</h3>
+          <dl>{guide.meters.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+        <article class="reference-card">
+          <h3>Writing method</h3>
+          <dl>{guide.meterGuidance.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+        </article>
+      </div>
+      <div class="section__head subsection-head">
+        <p class="eyebrow">Odd-meter drum maps</p>
+        <h2>Assign accents to audible instruments</h2>
+      </div>
+      <div class="atlas-grid">
+        {guide.oddMeterPercussion.map(([meter, pattern]) => <article class="reference-card"><h3>{meter}</h3><p>{pattern}</p></article>)}
+      </div>
+      <aside class="evidence-card subsection-head">
+        <p class="eyebrow">Studio limitation</p>
+        <h3>The grid and the generation model are separate.</h3>
+        <p>{guide.studioMeterNote}</p>
+      </aside>
+    </div>
+  </section>
+
   <section class="section section--tight" id="percussion" data-era="ai">
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Percussion control</p>
         <h2>Write the groove as relationships</h2>
-        <p>Give the Style field a rhythmic fingerprint: tempo and feel, kick and snare placement, subdivisions, percussion color, bass relationship, section changes and drum sound. “Punchy drums” leaves far more to chance than “dry kick on every quarter note, clap on two and four, offbeat open hat, short bass notes between kicks.” Suno recommends naming beat instruments directly in concise prompts.</p>
+        <p>Give the Style field a rhythmic fingerprint: tempo, meter and grouping, kick and snare placement, subdivisions, accent map, touch, percussion color, bass relationship, section changes and drum sound. “Punchy drums” leaves far more to chance than “dry kick on every quarter note, clap on two and four, offbeat open hat, short bass notes between kicks.” Suno recommends naming beat instruments directly in concise prompts.</p>
       </div>
       <div class="table-wrap">
         <table>
@@ -274,11 +361,13 @@ const jsonLd = [
         </article>
         <article class="reference-card">
           <h3>Meter</h3>
-          <dl>{guide.meters.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+          <p>The dedicated time-signature section covers simple, compound, additive and alternating meters with accent maps.</p>
+          <p><a href="#meter">Explore time signatures and beat grouping</a></p>
         </article>
         <article class="reference-card">
           <h3>Harmony</h3>
           <dl>{guide.harmonyTerms.map(([term, effect]) => <><dt>{term}</dt><dd>{effect}</dd></>)}</dl>
+          <p><a href="#harmony">Explore keys and chord progressions</a></p>
         </article>
         <article class="reference-card">
           <h3>Melody</h3>
@@ -469,7 +558,7 @@ const jsonLd = [
       <div class="section__head">
         <p class="eyebrow">Sources and limits</p>
         <h2>What Suno documents</h2>
-        <p>These Suno sources support the product controls, basic section markers and beat-prompting advice in this guide. The detailed genre and percussion phrases are musical descriptions to test by ear; Suno does not publish a deterministic command language for note-by-note drum placement.</p>
+        <p>These sources support the product controls, musical terminology and working methods in this guide. The detailed key, chord, meter and percussion phrases are descriptions to test by ear. Suno does not publish a deterministic command language for exact notes or drum placement.</p>
       </div>
       <ul class="source-list">
         <li><a href="https://suno.com/hub/how-to-make-a-song">Suno: How to Make a Song</a>: Custom lyrics, Style direction and basic section markers.</li>
@@ -479,7 +568,14 @@ const jsonLd = [
         <li><a href="https://help.suno.com/en/articles/3161921">Suno Help: Exclude</a>: excluding unwanted elements.</li>
         <li><a href="https://help.suno.com/en/articles/6141377">Suno Help: Creative Sliders</a>: Weirdness, Style Influence and Audio Influence.</li>
         <li><a href="https://help.suno.com/en/articles/6141505">Suno Help: Song Editor</a>: replacing and extending sections after generation.</li>
+        <li><a href="https://help.suno.com/en/articles/9010177">Suno Help: Music Glossary</a>: keys, chord progressions, meter, groove, syncopation, cadence and other musical terms.</li>
+        <li><a href="https://help.suno.com/en/articles/10625089">Suno Help: Studio 1.2</a>: time-signature grid behavior and its separation from clip generation.</li>
+        <li><a href="https://help.suno.com/en/articles/13670593">Suno Help: MIDI in Studio</a>: piano roll, Key and Scale assistance, chord modes and the arpeggiator.</li>
+        <li><a href="https://help.suno.com/en/articles/2477633">Suno Help: Upload Audio</a>: extending from audio you own, including a four-bar drum loop.</li>
         <li><a href="https://help.suno.com/en/articles/13924481">Suno Help: v6 FAQ</a>: Variety, Max Mode and model behavior.</li>
+        <li><a href="https://online.berklee.edu/takenote/harmonic-progressions-for-songwriters/">Berklee Online: Harmonic Progressions for Songwriters</a>: chord function, harmonic rhythm, borrowed chords and voice leading.</li>
+        <li><a href="https://online.berklee.edu/courses/time-and-rhythm-1">Berklee Online: Time and Rhythm 1</a>: simple and compound meter, beat grouping, syncopation and polyrhythm.</li>
+        <li><a href="https://learningmusic.ableton.com/chords/play-with-chords.html">Ableton Learning Music: Play with Chords</a>: interactive key, mode and chord relationships.</li>
       </ul>
     </div>
   </section>
