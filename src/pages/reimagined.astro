@@ -1,21 +1,23 @@
 ---
 import Base from '../layouts/Base.astro';
-import { acousticTracks, reimagined, reimaginedAlbum, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
+import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
+import { acousticTracks, reimagined, reimaginedAlbums, reimaginedPlaylist, sunoSongs, sunoStyle } from '../data/catalog';
 import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 
 const originals = new Map(acousticTracks.map((track) => [track.title, track]));
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 
-const jsonLd = [
-  {
-    '@type': 'MusicPlaylist',
-    '@id': 'https://alexmercedmusic.com/reimagined/#playlist',
-    name: reimaginedAlbum.title,
-    url: reimaginedAlbum.url,
-    numTracks: reimagined.length,
-    description: reimaginedAlbum.description,
+const jsonLd = reimaginedAlbums.map((album, albumIndex) => {
+  const albumTracks = albumIndex === 0 ? reimagined.slice(0, 10) : reimagined.slice(10);
+  return {
+    '@type': 'MusicAlbum',
+    '@id': `${album.url}#album`,
+    name: album.title,
+    url: album.url,
+    numTracks: albumTracks.length * 3,
+    description: album.description,
     byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
-    track: reimagined.map((t, i) => ({
+    track: albumTracks.map((t, i) => ({
       '@type': 'MusicRecording',
       '@id': `${songByPrimaryUrl.get(t.url!)?.pageUrl}#recording`,
       position: i + 1,
@@ -24,13 +26,13 @@ const jsonLd = [
       sameAs: t.links?.map((link) => link.url),
       byArtist: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
     })),
-  },
-];
+  };
+});
 ---
 
 <Base
   title="Reimagined with Suno"
-  description="Ten acoustic songs by Alex Merced, each paired with its original recording and two AI reimaginations from the canonical Suno album."
+  description="Eighteen acoustic songs by Alex Merced, each paired with its original recording and two AI reimaginings across two canonical Suno albums."
   keywords={['Suno', 'AI music', 'AI covers', 'Alex Merced', 'disco house', 'salsa cover']}
   jsonLd={jsonLd}
 >
@@ -40,18 +42,21 @@ const jsonLd = [
       <h1>The songs, handed to a model</h1>
       <p class="lede">
         A song written for one voice and one guitar carries arrangements it never got
-        to have. This collection pairs ten archive recordings with two AI reimaginations
+        to have. These two collections pair eighteen archive recordings with two AI reimaginings
         of each song.
       </p>
       <p class="lede" style="margin-top:1rem">
-        <a href={reimaginedAlbum.url}>{reimaginedAlbum.title}</a> is the canonical collection.
-        Its original recordings and both new versions are linked below. The earlier
+        <a href={reimaginedAlbums[0].url}>{reimaginedAlbums[0].title}</a> and
+        <a href={reimaginedAlbums[1].url}> {reimaginedAlbums[1].title}</a> are the canonical collections.
+        Their original recordings and both new versions are linked below. The earlier
         seven-video YouTube series and earlier Suno generations remain available as supporting versions.
       </p>
-      <div class="btn-row" style="margin-top:1.8rem">
-        <a class="btn btn--primary" href={reimaginedAlbum.url}>Play the canonical album ↗</a>
+      <div style="margin-top:1.8rem">
+        <AcousticReimaginingAlbums includeComparison={false} />
+        <div class="btn-row" style="margin-top:.8rem">
         <a class="btn" href={reimaginedPlaylist.url}>Watch the earlier video series</a>
         <a class="btn" href="/acoustic">Read the originals</a>
+        </div>
       </div>
     </div>
   </section>

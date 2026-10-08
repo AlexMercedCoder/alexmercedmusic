@@ -214,6 +214,14 @@ const canonicalAcousticAlbumOriginals: Record<string, string> = {
   'Alex Merced - Tell my heart': '1c23ef0f-1145-4d34-b77c-b1132171df94',
   'Alex Merced - Pain': 'ce637846-1210-4cc4-bd34-0e6e2946cb4e',
   'Alex Merced - Heart to Give You': 'b5d409ed-6660-4b9b-ab10-b17cf60cdfb8',
+  "I've Only Seen Your Eyes": 'fb52bcbf-a480-4ff2-9291-ed2df90346bb',
+  'To Say These Words': '1a162102-12c8-4ccd-8ee2-a6c730be1783',
+  'Sadistic Affirmation': 'a8b7fff0-b89d-4a76-ad19-a76f0cdf34cf',
+  'But your Still Sleeping': '236f3d00-23f6-4edd-b072-e4aa1f99f2c8',
+  'The Most Beautiful Sin': '1fb628da-a92d-4b9a-b644-084c836cd26e',
+  'Your Smile': '0425dd0e-a112-4f35-bcf6-70dfde29b535',
+  'Your Fairy Tale': '45488dd7-6362-4394-ac4d-88a73e05fe78',
+  'Theorist Lament': 'd8ded01f-9628-4236-a48b-d5e34b7598cb',
 };
 
 export const youtubeArchiveTracks: Track[] = youtubeArchiveSourceTracks.map((track) => {
@@ -235,7 +243,7 @@ export const channelAcousticTracks: Track[] = [
 ];
 
 /** Singer-songwriter recordings on the loose-tracks SoundCloud account. */
-export const soundcloudAcousticTracks: Track[] = [
+const soundcloudAcousticSourceTracks: Track[] = [
   { title: "I've Only Seen Your Eyes", url: 'https://soundcloud.com/alex-merced/ive-only-seen-your-eyes' },
   { title: 'To Say These Words', url: 'https://soundcloud.com/alex-merced/to-say-these-words' },
   { title: 'Sadistic Affirmation', url: 'https://soundcloud.com/alex-merced/sadistic-affirmation' },
@@ -245,6 +253,17 @@ export const soundcloudAcousticTracks: Track[] = [
   { title: 'Your Fairy Tale', url: 'https://soundcloud.com/alex-merced/your-fairy-tale' },
   { title: 'Theorist Lament', url: 'https://soundcloud.com/alex-merced/theorist-lament' },
 ];
+
+export const soundcloudAcousticTracks: Track[] = soundcloudAcousticSourceTracks.map((track) => {
+  const sunoId = canonicalAcousticAlbumOriginals[track.title];
+  return sunoId ? {
+    ...track,
+    links: [
+      { source: 'soundcloud', url: track.url!, label: 'SoundCloud original' },
+      { source: 'suno', url: `https://suno.com/song/${sunoId}`, label: 'Suno album original' },
+    ],
+  } : track;
+});
 
 export const acousticTracks: Track[] = [
   ...youtubeArchiveTracks,
@@ -257,7 +276,7 @@ export const acousticTracks: Track[] = [
 /**
  * The Suno covers, each paired with the acoustic recording it reworks.
  *
- * The canonical Suno album has ten source recordings and two AI voice covers
+ * The two canonical Suno albums pair source recordings with two AI voice covers
  * of each. Earlier Suno generations and YouTube videos remain linked as
  * supporting versions where they are available.
  */
@@ -274,12 +293,24 @@ export const reimaginedPlaylist = {
   description: 'AI Covers of Songs Alex wrote',
 };
 
-export const reimaginedAlbum = {
-  title: 'Acoustic Originals and AI Reimagination',
-  url: 'https://suno.com/album/51dc8194-9cc8-4d07-8923-ebdaf9bed812',
-  shareUrl: 'https://suno.com/s/DC7l2a3FhMM89kyE',
-  description: 'Ten original acoustic recordings from Alex Merced’s singer-songwriter archive, each followed by two AI reimaginations.',
-};
+export const reimaginedAlbums = [
+  {
+    title: 'Acoustic Originals and AI Reimagination',
+    volume: 'Volume 1',
+    url: 'https://suno.com/album/51dc8194-9cc8-4d07-8923-ebdaf9bed812',
+    shareUrl: 'https://suno.com/s/DC7l2a3FhMM89kyE',
+    description: 'Ten original acoustic recordings from Alex Merced’s singer-songwriter archive, each followed by two AI reimaginings.',
+  },
+  {
+    title: 'Acoustic Originals And Reimaginations Vol.2',
+    volume: 'Volume 2',
+    url: 'https://suno.com/album/8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4',
+    shareUrl: 'https://suno.com/s/uL8WD1tCPpG6Tst8',
+    description: 'Eight more original acoustic recordings, each followed by two AI reimaginings.',
+  },
+] as const;
+
+export const reimaginedAlbum = reimaginedAlbums[0];
 
 export const reimagined: Reimagining[] = [
   {
@@ -402,6 +433,70 @@ export const reimagined: Reimagining[] = [
     links: [
       { source: 'suno', url: 'https://suno.com/song/f9e7c094-5ce0-4b64-bd8e-2827f73035bc', label: 'Suno album · version 1' },
       { source: 'suno', url: 'https://suno.com/song/dbbf916b-7366-4db0-b940-9982bcef93c8', label: 'Suno album · version 2' },
+    ],
+  },
+  {
+    title: "I've Only Seen Your Eyes", style: 'AI voice cover', original: "I've Only Seen Your Eyes",
+    url: 'https://suno.com/song/1109875a-5a0f-406a-a87f-12fe391aaa6b',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/1109875a-5a0f-406a-a87f-12fe391aaa6b', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/a2f73943-420c-409a-aa8f-59f2c585ef4b', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: 'To Say These Words', style: 'AI voice cover', original: 'To Say These Words',
+    url: 'https://suno.com/song/4a5d4791-920b-46b6-9b90-65e95c233f7d',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/4a5d4791-920b-46b6-9b90-65e95c233f7d', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/443f7730-203d-4135-b48b-e266fa724703', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: 'Sadistic Affirmation', style: 'AI voice cover', original: 'Sadistic Affirmation',
+    url: 'https://suno.com/song/c2bdc8a1-472e-4f41-ba6a-7e151e31fa2c',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/c2bdc8a1-472e-4f41-ba6a-7e151e31fa2c', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/8c5711d7-c288-4486-9836-e97f7a9e1caf', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: "But You're Still Sleeping", style: 'AI voice cover', original: 'But your Still Sleeping',
+    url: 'https://suno.com/song/1fd34236-3e16-419b-85a5-25fba9cc5738',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/1fd34236-3e16-419b-85a5-25fba9cc5738', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/b750ac29-a759-4df8-b03e-6265c19b5642', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: 'The Most Beautiful Sin', style: 'AI voice cover', original: 'The Most Beautiful Sin',
+    url: 'https://suno.com/song/6a3b9a2b-c0e9-4c3a-8f43-66fd65a375ce',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/6a3b9a2b-c0e9-4c3a-8f43-66fd65a375ce', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/985fc206-3764-40a3-846d-1cc680c151fa', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: 'Your Fairy Tale', style: 'AI voice cover', original: 'Your Fairy Tale',
+    url: 'https://suno.com/song/54537158-00d1-4220-8264-a18a7a768cef',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/54537158-00d1-4220-8264-a18a7a768cef', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/116829ad-8a77-4820-a3f0-f3b2bed5d583', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: 'Your Smile', style: 'AI voice cover', original: 'Your Smile',
+    url: 'https://suno.com/song/5d2263c5-8b89-4261-93ff-4a60e2819eae',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/5d2263c5-8b89-4261-93ff-4a60e2819eae', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/6bb97a2f-75cc-437d-895e-38e38d2f604f', label: 'Suno album 2 · version 2' },
+    ],
+  },
+  {
+    title: "Theorist's Lament", style: 'AI voice cover', original: 'Theorist Lament',
+    url: 'https://suno.com/song/bbe2a699-67f9-4b69-b45b-b915f8492d71',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/bbe2a699-67f9-4b69-b45b-b915f8492d71', label: 'Suno album 2 · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/e45203b1-b09b-405f-aa86-064c98c5cce7', label: 'Suno album 2 · version 2' },
     ],
   },
 ];
@@ -571,7 +666,8 @@ export const sunoCoverGenerationCount = reimagined.reduce(
   (total, song) => total + (song.links?.filter((link) => link.source === 'suno').length ?? 0),
   0,
 );
-export const sunoPublishedCount = sunoSongs.length + sunoCoverGenerationCount;
+export const sunoCanonicalOriginalCount = Object.keys(canonicalAcousticAlbumOriginals).length;
+export const sunoPublishedCount = sunoSongs.length + sunoCoverGenerationCount + sunoCanonicalOriginalCount;
 
 // ---------------------------------------------------------------- where
 
@@ -661,7 +757,7 @@ export const platforms: Platform[] = [
     label: 'AI Covers of Alex Merced Songs',
     url: 'https://www.youtube.com/playlist?list=PLl161oA2QyHt1dJRZe81vAF-QHQjmBwjg',
     era: 'ai',
-    note: 'Seven earlier YouTube rebuilds, each opening with a clip of the source recording. The canonical Suno album holds ten originals and two new reimaginations of each.',
+    note: 'Seven earlier YouTube rebuilds, each opening with a clip of the source recording. Two canonical Suno albums hold eighteen originals and two new reimaginings of each.',
     stat: '7 videos',
   },
   {

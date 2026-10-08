@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
-import { acousticTracks, albums, electronicStats, reimagined, reimaginedAlbum, sunoSongs } from '../data/catalog';
+import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
+import { acousticTracks, albums, electronicStats, reimagined, sunoSongs } from '../data/catalog';
 import { SITE } from '../data/catalog-model';
 import { aiMusicPerspective } from '../data/editorial';
 
@@ -46,7 +47,8 @@ const jsonLd = [{
 
       <h2>Reimagining earlier songs</h2>
       <p>More recently, Alex used Suno to rebuild {reimagined.length} songs from the archive in arrangements ranging from disco house to salsa and rock. This site keeps each rebuilt recording connected to the original performance so the change can be heard in context. Another {sunoSongs.length} published songs document the newer generated work.</p>
-      <p><a href={reimaginedAlbum.url}>Play the canonical album of originals and reimaginations</a>, <a href="/reimagined">compare every version</a>, or read <a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a> for Alex’s perspective on AI, art and creative work.</p>
+      <AcousticReimaginingAlbums />
+      <p>Read <a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a> for Alex’s perspective on AI, art and creative work.</p>
 
       <h2>A catalog, not a streaming host</h2>
       <p>The recordings remain on the services where they were published. AlexMercedMusic.com is the index: it identifies the recordings, connects related versions and provides direct links to every verified source.</p>

@@ -1,6 +1,7 @@
 ---
 import Base from '../layouts/Base.astro';
 import Breadcrumbs from '../components/Breadcrumbs.astro';
+import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
 import { sunoAlbums, sunoCollections, sunoPlaylists, sunoPublishedCount, sunoSongs } from '../data/catalog';
 import { SITE } from '../data/catalog-model';
 import { aiMusicPerspective } from '../data/editorial';
@@ -75,8 +76,10 @@ const jsonLd = [{
       <p class="eyebrow">Public Suno collections</p>
       <h1>Choose a thread through the songs</h1>
       <p class="lede">Alex’s {sunoPublishedCount} public Suno generations are organized into {sunoAlbums.length} official albums and {sunoPlaylists.length} playlists by project, subject and mood. These links and counts come directly from the public Suno profile.</p>
+      <p>Start with the two albums that place Alex’s original acoustic recordings directly beside their AI reimaginings.</p>
+      <div style="margin-top:1.6rem"><AcousticReimaginingAlbums /></div>
       <div class="btn-row" style="margin-top:1.6rem">
-        <a class="btn btn--primary" href="https://suno.com/@alexmerced">Open the Suno profile ↗</a>
+        <a class="btn" href="https://suno.com/@alexmerced">Open the Suno profile ↗</a>
         <a class="btn" href="/songs/?kind=generated">Explore all {sunoSongs.length} generated songs</a>
         <a class="btn" href="/suno-prompting-guide/">Read the prompting guide</a>
         <a class="btn" href={aiMusicPerspective.url}>Read Alex’s view on AI and art ↗</a>

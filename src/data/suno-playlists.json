@@ -1,5 +1,235 @@
 [
   {
+    "id": "8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4",
+    "name": "Acoustic Originals And Reimaginations Vol.2",
+    "resourceType": "album",
+    "url": "https://suno.com/album/8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4",
+    "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg",
+    "songCount": 24,
+    "durationSeconds": 3392.7363333333333,
+    "description": "A second installment of my original acoustic songs and their AI reimaginings.",
+    "trackIds": [
+      "fb52bcbf-a480-4ff2-9291-ed2df90346bb",
+      "1109875a-5a0f-406a-a87f-12fe391aaa6b",
+      "a2f73943-420c-409a-aa8f-59f2c585ef4b",
+      "1a162102-12c8-4ccd-8ee2-a6c730be1783",
+      "4a5d4791-920b-46b6-9b90-65e95c233f7d",
+      "443f7730-203d-4135-b48b-e266fa724703",
+      "a8b7fff0-b89d-4a76-ad19-a76f0cdf34cf",
+      "c2bdc8a1-472e-4f41-ba6a-7e151e31fa2c",
+      "8c5711d7-c288-4486-9836-e97f7a9e1caf",
+      "236f3d00-23f6-4edd-b072-e4aa1f99f2c8",
+      "1fd34236-3e16-419b-85a5-25fba9cc5738",
+      "b750ac29-a759-4df8-b03e-6265c19b5642",
+      "1fb628da-a92d-4b9a-b644-084c836cd26e",
+      "6a3b9a2b-c0e9-4c3a-8f43-66fd65a375ce",
+      "985fc206-3764-40a3-846d-1cc680c151fa",
+      "45488dd7-6362-4394-ac4d-88a73e05fe78",
+      "54537158-00d1-4220-8264-a18a7a768cef",
+      "116829ad-8a77-4820-a3f0-f3b2bed5d583",
+      "0425dd0e-a112-4f35-bcf6-70dfde29b535",
+      "5d2263c5-8b89-4261-93ff-4a60e2819eae",
+      "6bb97a2f-75cc-437d-895e-38e38d2f604f",
+      "d8ded01f-9628-4236-a48b-d5e34b7598cb",
+      "bbe2a699-67f9-4b69-b45b-b915f8492d71",
+      "e45203b1-b09b-405f-aa86-064c98c5cce7"
+    ],
+    "tracks": [
+      {
+        "id": "fb52bcbf-a480-4ff2-9291-ed2df90346bb",
+        "title": "Alex Merced - I’ve Only Seen Your Eyes",
+        "url": "https://suno.com/song/fb52bcbf-a480-4ff2-9291-ed2df90346bb",
+        "createdAt": "2026-10-08T16:58:29.964Z",
+        "durationSeconds": 184.9991875,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "1109875a-5a0f-406a-a87f-12fe391aaa6b",
+        "title": "Only Seen Your Eyes Once Here (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/1109875a-5a0f-406a-a87f-12fe391aaa6b",
+        "createdAt": "2026-10-08T16:59:54.702Z",
+        "durationSeconds": 171.2,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "a2f73943-420c-409a-aa8f-59f2c585ef4b",
+        "title": "Only Seen Your Eyes Once Here (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/a2f73943-420c-409a-aa8f-59f2c585ef4b",
+        "createdAt": "2026-10-08T16:59:54.702Z",
+        "durationSeconds": 172.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "1a162102-12c8-4ccd-8ee2-a6c730be1783",
+        "title": "Alex Merced - To Say These Words",
+        "url": "https://suno.com/song/1a162102-12c8-4ccd-8ee2-a6c730be1783",
+        "createdAt": "2026-10-08T17:07:04.487Z",
+        "durationSeconds": 139.4155,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "4a5d4791-920b-46b6-9b90-65e95c233f7d",
+        "title": "Alex Merced - To Say These Words (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/4a5d4791-920b-46b6-9b90-65e95c233f7d",
+        "createdAt": "2026-10-08T17:10:27.100Z",
+        "durationSeconds": 124.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "443f7730-203d-4135-b48b-e266fa724703",
+        "title": "Alex Merced - To Say These Words (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/443f7730-203d-4135-b48b-e266fa724703",
+        "createdAt": "2026-10-08T17:10:27.100Z",
+        "durationSeconds": 117.88,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "a8b7fff0-b89d-4a76-ad19-a76f0cdf34cf",
+        "title": "Alex Merced - Sadistic Affirmation",
+        "url": "https://suno.com/song/a8b7fff0-b89d-4a76-ad19-a76f0cdf34cf",
+        "createdAt": "2026-10-08T17:14:06.901Z",
+        "durationSeconds": 121.626125,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "c2bdc8a1-472e-4f41-ba6a-7e151e31fa2c",
+        "title": "Sadistic Affirmation (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/c2bdc8a1-472e-4f41-ba6a-7e151e31fa2c",
+        "createdAt": "2026-10-08T17:14:53.834Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "8c5711d7-c288-4486-9836-e97f7a9e1caf",
+        "title": "Sadistic Affirmation (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/8c5711d7-c288-4486-9836-e97f7a9e1caf",
+        "createdAt": "2026-10-08T17:14:53.834Z",
+        "durationSeconds": 116.44,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "236f3d00-23f6-4edd-b072-e4aa1f99f2c8",
+        "title": "Alex Merced - But Youre Still Sleeping",
+        "url": "https://suno.com/song/236f3d00-23f6-4edd-b072-e4aa1f99f2c8",
+        "createdAt": "2026-10-08T17:20:12.431Z",
+        "durationSeconds": 159.3991875,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "1fd34236-3e16-419b-85a5-25fba9cc5738",
+        "title": "But You’re Still Sleeping (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/1fd34236-3e16-419b-85a5-25fba9cc5738",
+        "createdAt": "2026-10-08T17:23:36.853Z",
+        "durationSeconds": 157.2,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "b750ac29-a759-4df8-b03e-6265c19b5642",
+        "title": "But You’re Still Sleeping (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/b750ac29-a759-4df8-b03e-6265c19b5642",
+        "createdAt": "2026-10-08T17:23:36.853Z",
+        "durationSeconds": 150.76,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "1fb628da-a92d-4b9a-b644-084c836cd26e",
+        "title": "Alex Merced - The Most Beautiful Sin",
+        "url": "https://suno.com/song/1fb628da-a92d-4b9a-b644-084c836cd26e",
+        "createdAt": "2026-10-08T17:28:07.464Z",
+        "durationSeconds": 159.66041666666666,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "6a3b9a2b-c0e9-4c3a-8f43-66fd65a375ce",
+        "title": "The Most Beautiful Sin (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/6a3b9a2b-c0e9-4c3a-8f43-66fd65a375ce",
+        "createdAt": "2026-10-08T17:31:14.836Z",
+        "durationSeconds": 158,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "985fc206-3764-40a3-846d-1cc680c151fa",
+        "title": "The Most Beautiful Sin (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/985fc206-3764-40a3-846d-1cc680c151fa",
+        "createdAt": "2026-10-08T17:31:14.836Z",
+        "durationSeconds": 156.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "45488dd7-6362-4394-ac4d-88a73e05fe78",
+        "title": "Alex Merced - Your Fairy Tale",
+        "url": "https://suno.com/song/45488dd7-6362-4394-ac4d-88a73e05fe78",
+        "createdAt": "2026-10-08T17:38:40.933Z",
+        "durationSeconds": 134.60897916666667,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "54537158-00d1-4220-8264-a18a7a768cef",
+        "title": "Your Fairy Tale (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/54537158-00d1-4220-8264-a18a7a768cef",
+        "createdAt": "2026-10-08T17:41:11.568Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "116829ad-8a77-4820-a3f0-f3b2bed5d583",
+        "title": "Your Fairy Tale (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/116829ad-8a77-4820-a3f0-f3b2bed5d583",
+        "createdAt": "2026-10-08T17:41:11.568Z",
+        "durationSeconds": 116.4,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "0425dd0e-a112-4f35-bcf6-70dfde29b535",
+        "title": "Alex Merced - Your Smile",
+        "url": "https://suno.com/song/0425dd0e-a112-4f35-bcf6-70dfde29b535",
+        "createdAt": "2026-10-08T17:47:27.976Z",
+        "durationSeconds": 124.94366666666667,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "5d2263c5-8b89-4261-93ff-4a60e2819eae",
+        "title": "Your Smile (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/5d2263c5-8b89-4261-93ff-4a60e2819eae",
+        "createdAt": "2026-10-08T17:49:05.540Z",
+        "durationSeconds": 148.4,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "6bb97a2f-75cc-437d-895e-38e38d2f604f",
+        "title": "Your Smile (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/6bb97a2f-75cc-437d-895e-38e38d2f604f",
+        "createdAt": "2026-10-08T17:49:05.540Z",
+        "durationSeconds": 147.2,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "d8ded01f-9628-4236-a48b-d5e34b7598cb",
+        "title": "Alex Merced - Theorists Lament",
+        "url": "https://suno.com/song/d8ded01f-9628-4236-a48b-d5e34b7598cb",
+        "createdAt": "2026-10-08T17:54:29.179Z",
+        "durationSeconds": 140.64327083333333,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "bbe2a699-67f9-4b69-b45b-b915f8492d71",
+        "title": "Theorist’s Lament (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/bbe2a699-67f9-4b69-b45b-b915f8492d71",
+        "createdAt": "2026-10-08T17:58:34.932Z",
+        "durationSeconds": 122.4,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      },
+      {
+        "id": "e45203b1-b09b-405f-aa86-064c98c5cce7",
+        "title": "Theorist’s Lament (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/e45203b1-b09b-405f-aa86-064c98c5cce7",
+        "createdAt": "2026-10-08T17:58:34.932Z",
+        "durationSeconds": 125.56,
+        "imageUrl": "https://cdn2.suno.ai/image_1e0a54b1-e1aa-446d-9a1b-afe1aa117b67.jpeg"
+      }
+    ]
+  },
+  {
     "id": "f399d74c-54af-4758-beb1-417411dcf932",
     "name": "A Fun Journey In My Mind",
     "resourceType": "album",

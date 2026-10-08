@@ -1,11 +1,11 @@
 ---
 import Base from '../layouts/Base.astro';
+import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
 import {
   acousticTracks,
   acousticPlaylist,
   channelAcousticTracks,
   reimagined,
-  reimaginedAlbum,
   soundcloudAcousticTracks,
   youtubeArchiveTracks,
 } from '../data/catalog';
@@ -63,10 +63,9 @@ const jsonLd = [
         but YouTube hides ${acousticPlaylist.unavailableEntries} unavailable videos.
         Titles are preserved as the hosts present them.`}
       </p>
-      <div class="btn-row" style="margin-top:1.8rem">
-        <a class="btn btn--primary" href={acousticPlaylist.url}>Play the whole thing</a>
-        <a class="btn" href={reimaginedAlbum.url}>Hear {reimagined.length} originals and their new versions ↗</a>
-        <a class="btn" href="/reimagined">Compare every version</a>
+      <div style="margin-top:1.8rem">
+        <AcousticReimaginingAlbums />
+        <div class="btn-row" style="margin-top:.8rem"><a class="btn" href={acousticPlaylist.url}>Play the YouTube archive</a></div>
       </div>
       </div>
       <img
@@ -130,7 +129,17 @@ const jsonLd = [
         {soundcloudAcousticTracks.map((t, i) => (
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
-            <span><a class="song-link" href={detailUrl(t.url)}>{t.title}</a></span>
+            <span>
+              <a class="song-link" href={detailUrl(t.url)}>{t.title}</a>
+              {rebuiltByOriginal.has(t.title) && (
+                <span class="source-links source-links--inline">
+                  {t.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>)}
+                  {rebuiltByOriginal.get(t.title)?.links?.map((link) => (
+                    <a href={link.url}>Rebuilt · {link.label ?? 'Suno'} ↗</a>
+                  ))}
+                </span>
+              )}
+            </span>
             <span class="len"><a class="platform-link" href={t.url}>SoundCloud ↗</a></span>
           </li>
         ))}

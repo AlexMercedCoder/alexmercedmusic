@@ -22,6 +22,8 @@ Public YouTube videos: ${publicCatalog.counts.videos}
 - [Acoustic archive](${publicCatalog.site}/acoustic/)
 - [Electronic catalog](${publicCatalog.site}/electronic/)
 - [Reimagined songs](${publicCatalog.site}/reimagined/)
+- [Acoustic Originals and AI Reimagination, Volume 1](${publicCatalog.suno.featuredAcousticReimaginingAlbums[0].url})
+- [Acoustic Originals and Reimaginations, Volume 2](${publicCatalog.suno.featuredAcousticReimaginingAlbums[1].url})
 - [Suno albums and playlists](${publicCatalog.site}/suno/)
 - [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
 - [Music Theory for Songwriters and Producers](${publicCatalog.site}/music-theory/)

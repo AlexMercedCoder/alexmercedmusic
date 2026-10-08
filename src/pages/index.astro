@@ -1,8 +1,9 @@
 ---
 import Base from '../layouts/Base.astro';
 import PlatformMark from '../components/PlatformMark.astro';
+import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
 import {
-  acousticTracks, acousticPlaylist, reimagined, reimaginedAlbum, reimaginedPlaylist,
+  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
   albums, distributedReleases, electronicStats, electronicRuntime, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
@@ -53,10 +54,13 @@ const jsonLd = [
             <span data-era="electronic"><i></i>Electronic</span>
             <span data-era="ai"><i></i>Rebuilt with Suno</span>
           </div>
-          <div class="btn-row" style="margin-top:1.6rem">
-            <a class="btn btn--primary" href="/songs/">Explore every song</a>
-            <a class="btn" href="/videos/">Browse music videos</a>
-            <a class="btn" href="/stories/start-here/">Start listening</a>
+          <div style="margin-top:1.6rem">
+            <AcousticReimaginingAlbums includeComparison={false} />
+            <div class="btn-row" style="margin-top:.8rem">
+              <a class="btn" href="/reimagined/">Compare every version</a>
+              <a class="btn" href="/songs/">Explore every song</a>
+              <a class="btn" href="/videos/">Browse music videos</a>
+            </div>
           </div>
           <nav class="streaming-links" aria-label="Listen on streaming platforms">
             <p>Listen on</p>
@@ -127,8 +131,8 @@ const jsonLd = [
         <p class="eyebrow">The loop closed</p>
         <h2>Songs written on a guitar, handed to a model</h2>
         <p class="lede">
-          Ten songs from the acoustic archive now have two AI reimaginations each.
-          The canonical Suno album keeps every source recording beside its new versions,
+          Eighteen songs from the acoustic archive now have two AI reimaginings each.
+          Two canonical Suno albums keep every source recording beside its new versions,
           while the earlier videos and generations remain available for comparison.
         </p>
       </div>
@@ -166,11 +170,8 @@ const jsonLd = [
         ))}
       </div>
 
-      <div class="btn-row" style="margin-top:1.6rem">
-        <a class="btn btn--primary" href={reimaginedAlbum.url}>Play the canonical album ↗</a>
-        <a class="btn" href="/reimagined">Compare all {reimagined.length}</a>
-        <a class="btn" href={reimaginedPlaylist.url}>Watch the earlier video series</a>
-      </div>
+      <div style="margin-top:1.6rem"><AcousticReimaginingAlbums /></div>
+      <div class="btn-row" style="margin-top:.8rem"><a class="btn" href={reimaginedPlaylist.url}>Watch the earlier video series</a></div>
     </div>
   </section>
 
@@ -232,7 +233,7 @@ const jsonLd = [
 
   <section class="section" data-era="ai">
     <div class="shell">
-      <div class="section__head"><p class="eyebrow">Album-length projects</p><h2>Focused Suno albums</h2><p>Five sequences explore economics, war and inner conflict as connected projects rather than loose singles.</p></div>
+      <div class="section__head"><p class="eyebrow">Album-length projects</p><h2>Focused Suno albums</h2><p>{featuredPlaylists.length} sequences explore connected ideas and moods rather than presenting a loose list of singles.</p></div>
       <div class="grid grid--3">
         {featuredPlaylists.map((playlist) => <article class="card card--era" data-era="ai"><h3><a href={playlist.pageUrl}>{playlist.name}</a></h3><p>{playlist.description}</p><p>{playlist.songCount} songs</p></article>)}
       </div>

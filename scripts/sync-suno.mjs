@@ -10,7 +10,10 @@ const catalogUrl = new URL('src/data/catalog.ts', root);
 const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
-const canonicalAcousticAlbumId = '51dc8194-9cc8-4d07-8923-ebdaf9bed812';
+const canonicalAcousticAlbumIds = new Set([
+  '51dc8194-9cc8-4d07-8923-ebdaf9bed812',
+  '8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4',
+]);
 const shouldWrite = process.argv.includes('--write');
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 const fetchPage = async (url, label, { allowNotFound = false } = {}) => {
@@ -160,14 +163,14 @@ for (const playlistId of playlistIds) {
   playlists.push({ ...playlist, songCount: playlistTotal, trackIds: uniqueTrackIds, tracks: uniqueTracks });
 }
 
-const canonicalAcousticAlbum = playlists.find((collection) => collection.id === canonicalAcousticAlbumId);
-if (!canonicalAcousticAlbum || canonicalAcousticAlbum.resourceType !== 'album') {
-  throw new Error('The canonical acoustic originals album is missing or is no longer published as a Suno album.');
+const canonicalAcousticAlbums = playlists.filter((collection) => canonicalAcousticAlbumIds.has(collection.id));
+if (canonicalAcousticAlbums.length !== canonicalAcousticAlbumIds.size || canonicalAcousticAlbums.some((album) => album.resourceType !== 'album')) {
+  throw new Error('One or more canonical acoustic originals albums are missing or are no longer published as Suno albums.');
 }
-const canonicalOriginalIds = new Set(canonicalAcousticAlbum.tracks
-  .filter((track) => /\boriginal\b/i.test(track.title))
-  .map((track) => track.id));
-const canonicalReimaginingIds = new Set(canonicalAcousticAlbum.trackIds.filter((id) => !canonicalOriginalIds.has(id)));
+const canonicalOriginalIds = new Set(canonicalAcousticAlbums.flatMap((album) => album.tracks
+  .filter((track, index) => /\boriginal\b/i.test(track.title) || (album.id === '8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4' && index % 3 === 0))
+  .map((track) => track.id)));
+const canonicalReimaginingIds = new Set(canonicalAcousticAlbums.flatMap((album) => album.trackIds.filter((id) => !canonicalOriginalIds.has(id))));
 for (const id of canonicalReimaginingIds) coverIds.add(id);
 
 const songs = publicClips

@@ -7,6 +7,7 @@ import {
   electronicTracks,
   platforms,
   reimagined,
+  reimaginedAlbums,
   sunoCovers,
   sunoAlbums,
   sunoPublishedCount,
@@ -21,7 +22,7 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.11.0';
+export const CATALOG_SCHEMA_VERSION = '1.12.0';
 export const CATALOG_UPDATED_AT = '2026-10-08';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -438,7 +439,13 @@ export const publicCatalog = {
     videos: videos.length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
-  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, albums: catalogSunoAlbums, playlists: catalogSunoPlaylists },
+  suno: {
+    style: sunoStyle,
+    publishedCount: sunoPublishedCount,
+    featuredAcousticReimaginingAlbums: reimaginedAlbums,
+    albums: catalogSunoAlbums,
+    playlists: catalogSunoPlaylists,
+  },
   guides: { sunoPrompting: sunoPromptingGuide, musicTheory: musicTheoryGuide },
   songs,
   videos,
