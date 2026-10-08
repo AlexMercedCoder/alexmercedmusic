@@ -22,7 +22,7 @@ import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '1.11.0';
-export const CATALOG_UPDATED_AT = '2026-10-07';
+export const CATALOG_UPDATED_AT = '2026-10-08';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 

@@ -105,10 +105,15 @@ assert.equal(sunoPlaylists.length + sunoAlbums.length, sourceSunoPlaylists.lengt
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
 assert.equal(catalog.counts.sunoAlbums, sunoAlbums.length);
 assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel && playlist.trackIds.length > 0 && playlist.sourceTracks.length === playlist.songCount && playlist.pageUrl));
-assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
-assert.equal(sunoAlbums.length, 3);
-assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl));
-for (const album of sunoAlbums) assert.ok(existsSync(new URL(`dist/suno/albums/${album.slug}/index.html`, root)), `Missing Suno album page for ${album.name}.`);
+assert.equal(sunoAlbums.length, sourceSunoPlaylists.filter((collection) => collection.resourceType === 'album').length);
+assert.ok(sunoAlbums.length >= 19, 'The official Suno album catalog unexpectedly lost albums.');
+assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl && album.imageUrl), 'Every official Suno album must retain its album art and complete track metadata.');
+for (const album of sunoAlbums) {
+  const path = `dist/suno/albums/${album.slug}/index.html`;
+  assert.ok(existsSync(new URL(path, root)), `Missing Suno album page for ${album.name}.`);
+  const html = read(path);
+  assert.ok(html.includes(album.imageUrl) && html.includes(`Artwork for ${album.name}`), `${album.name} is missing its album art.`);
+}
 const sourceYoutubeMetadata = JSON.parse(read('src/data/youtube-metadata.json'));
 assert.ok(Object.keys(sourceYoutubeMetadata).length >= catalog.videos.length);
 assert.equal(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).length, catalog.videos.length);
@@ -178,7 +183,10 @@ assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
 const sunoPage = read('dist/suno/index.html');
 for (const playlist of sunoPlaylists) assert.ok(sunoPage.includes(playlist.url), `${playlist.name} is missing from the Suno page.`);
-for (const album of sunoAlbums) assert.ok(sunoPage.includes(album.url), `${album.name} is missing from the Suno page.`);
+for (const album of sunoAlbums) {
+  assert.ok(sunoPage.includes(album.url), `${album.name} is missing from the Suno page.`);
+  assert.ok(sunoPage.includes(album.imageUrl) && sunoPage.includes(`Artwork for ${album.name}`), `${album.name} is missing artwork from the Suno album listing.`);
+}
 for (const playlist of sunoPlaylists) {
   const path = `dist/suno/playlists/${playlist.slug}/index.html`;
   assert.ok(existsSync(new URL(path, root)), `${playlist.name} is missing its local page.`);

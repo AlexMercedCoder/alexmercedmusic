@@ -132,7 +132,7 @@ for (const playlistId of playlistIds) {
         name: data.name.trim(),
         resourceType: profileCollectionById.get(playlistId)?.feed_id?.startsWith('album:') || previousCollectionById.get(playlistId)?.resourceType === 'album' ? 'album' : 'playlist',
         url: `https://suno.com/${profileCollectionById.get(playlistId)?.feed_id?.startsWith('album:') || previousCollectionById.get(playlistId)?.resourceType === 'album' ? 'album' : 'playlist'}/${data.id || playlistId}`,
-        imageUrl: data.image_url || undefined,
+        imageUrl: data.image_url || previousCollectionById.get(playlistId)?.imageUrl || undefined,
         songCount: Number(data.num_total_results ?? data.song_count ?? 0),
         durationSeconds: Number(data.total_duration ?? 0) || undefined,
         description: data.description?.trim() || undefined,
