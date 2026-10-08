@@ -22,7 +22,7 @@ Public YouTube videos: ${publicCatalog.counts.videos}
 - [Acoustic archive](${publicCatalog.site}/acoustic/)
 - [Electronic catalog](${publicCatalog.site}/electronic/)
 - [Reimagined songs](${publicCatalog.site}/reimagined/)
-- [Suno playlists](${publicCatalog.site}/suno/)
+- [Suno albums and playlists](${publicCatalog.site}/suno/)
 - [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
 - [Music Theory for Songwriters and Producers](${publicCatalog.site}/music-theory/)
 - [${aiMusicPerspective.title}](${aiMusicPerspective.url})
@@ -43,6 +43,10 @@ ${publicCatalog.distributedReleases.map((release) => `- ${release.title}, ${rele
 - [RSS feed](${publicCatalog.site}/feed.xml)
 - [JSON Feed](${publicCatalog.site}/feed.json)
 
+## Official Suno albums
+
+${publicCatalog.suno.albums.map((album) => `- [${album.name}](${album.pageUrl}): ${album.songCount} songs. ${album.description}`).join('\n')}
+
 ## Suno playlists
 
 ${publicCatalog.suno.playlists.map((playlist) => `- [${playlist.name}](${playlist.pageUrl}): ${playlist.songCount} songs. ${playlist.description}`).join('\n')}
@@ -53,7 +57,7 @@ ${recent.map((song) => `- [${song.title}](${song.pageUrl})${song.createdAt ? `, 
 
 ## Browser agent tools
 
-The site registers 31 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for song discovery, list_videos and get_video for music video connections, get_suno_playlist for an ordered collection, get_catalog_updates_since for polling, the Suno prompting tools for creation guidance, and the music theory tools for scales, chords, progressions and harmonic palettes. Tool results return stable IDs and canonical URLs.
+The site registers 33 read-only WebMCP tools. Use music_overview for orientation, search_songs or list_songs for song discovery, list_videos and get_video for music video connections, get_suno_album or get_suno_playlist for ordered collections, get_catalog_updates_since for polling, the Suno prompting tools for creation guidance, and the music theory tools for scales, chords, progressions and harmonic palettes. Tool results return stable IDs and canonical URLs.
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });
 };

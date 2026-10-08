@@ -8,6 +8,7 @@ import {
   platforms,
   reimagined,
   sunoCovers,
+  sunoAlbums,
   sunoPublishedCount,
   sunoSongs,
   sunoPlaylists,
@@ -20,7 +21,7 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.10.0';
+export const CATALOG_SCHEMA_VERSION = '1.11.0';
 export const CATALOG_UPDATED_AT = '2026-10-07';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -213,7 +214,8 @@ const seeds: SongSeed[] = [
     creationMethod: 'Produced by Alex Merced in FL Studio.',
   }); }),
   ...reimagined.map((track) => {
-    const latestSunoLink = [...(track.links ?? [])].reverse().find((link) => link.source === 'suno');
+    const latestSunoLink = [...(track.links ?? [])].reverse().find((link) => link.label?.startsWith('Suno album'))
+      ?? [...(track.links ?? [])].reverse().find((link) => link.source === 'suno');
     const source = latestSunoLink ? sunoCoverByUrl.get(latestSunoLink.url) : undefined;
     return ({
     key: track.url ?? track.title,
@@ -409,6 +411,16 @@ export const catalogSunoPlaylists = sunoPlaylists.map(({ tracks: sourceTracks, .
   }),
 }));
 
+export const catalogSunoAlbums = sunoAlbums.map(({ tracks: sourceTracks, ...album }) => ({
+  ...album,
+  pageUrl: `${SITE}${album.pageUrl}`,
+  sourceTracks,
+  trackIds: album.trackIds.flatMap((clipId) => {
+    const song = songByPrimaryUrl.get(`https://suno.com/song/${clipId}`);
+    return song ? [song.id] : [];
+  }),
+}));
+
 export const publicCatalog = {
   schemaVersion: CATALOG_SCHEMA_VERSION,
   updatedAt: CATALOG_UPDATED_AT,
@@ -422,10 +434,11 @@ export const publicCatalog = {
     albums: catalogAlbums.length,
     sunoPublished: sunoPublishedCount,
     sunoPlaylists: sunoPlaylists.length,
+    sunoAlbums: sunoAlbums.length,
     videos: videos.length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
-  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, playlists: catalogSunoPlaylists },
+  suno: { style: sunoStyle, publishedCount: sunoPublishedCount, albums: catalogSunoAlbums, playlists: catalogSunoPlaylists },
   guides: { sunoPrompting: sunoPromptingGuide, musicTheory: musicTheoryGuide },
   songs,
   videos,

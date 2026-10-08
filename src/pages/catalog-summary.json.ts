@@ -16,5 +16,6 @@ export const GET: APIRoute = () => new Response(JSON.stringify({
   },
   recentSongs: publicCatalog.songs.filter((song) => song.createdAt).slice().sort((a, b) => Date.parse(b.createdAt!) - Date.parse(a.createdAt!)).slice(0, 20).map((song) => ({ id: song.id, title: song.title, pageUrl: song.pageUrl, createdAt: song.createdAt, kind: song.kind })),
   recentVideos: publicCatalog.videos.slice(0, 20).map((video) => ({ id: video.id, title: video.title, pageUrl: video.pageUrl, publishedAt: video.publishedAt, songIds: video.songIds, relatedSongIds: video.relatedSongIds })),
+  sunoAlbums: publicCatalog.suno.albums.map(({ trackIds: _trackIds, sourceTracks: _sourceTracks, ...album }) => album),
   sunoPlaylists: publicCatalog.suno.playlists.map(({ trackIds: _trackIds, sourceTracks: _sourceTracks, ...playlist }) => playlist),
 }), { headers: { 'content-type': 'application/json; charset=utf-8' } });

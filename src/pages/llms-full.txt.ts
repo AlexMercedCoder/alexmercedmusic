@@ -29,6 +29,10 @@ ${Object.entries(publicCatalog.counts).map(([name, count]) => `- ${name}: ${coun
 
 ${publicCatalog.distributedReleases.map((release) => `### ${release.title}\n\n- Released: ${release.released}\n- Tracks: ${release.trackCount}${release.upc ? `\n- UPC: ${release.upc}` : ''}\n- Stores: ${release.links.map((link) => `${link.label}: ${link.url}`).join('; ')}`).join('\n\n')}
 
+## Official Suno albums
+
+${publicCatalog.suno.albums.map((album) => `### ${album.name}\n\n${album.description}\n\n- Local page: ${album.pageUrl}\n- Suno source: ${album.url}\n- Songs: ${album.songCount}\n- Stable track IDs: ${album.trackIds.join(', ')}`).join('\n\n')}
+
 ## Suno playlists
 
 ${publicCatalog.suno.playlists.map((playlist) => `### ${playlist.name}\n\n${playlist.description}\n\n- Local page: ${playlist.pageUrl}\n- Suno source: ${playlist.url}\n- Songs: ${playlist.songCount}\n- Stable track IDs: ${playlist.trackIds.join(', ')}`).join('\n\n')}

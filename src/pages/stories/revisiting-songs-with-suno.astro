@@ -1,15 +1,15 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { reimagined, sunoSongs } from '../../data/catalog';
+import { reimagined, reimaginedAlbum, sunoSongs } from '../../data/catalog';
 import { aiMusicPerspective } from '../../data/editorial';
 ---
 <Base title="Revisiting older songs with Suno" description="How Alex Merced uses Suno to arrange older compositions and create newer music without hiding the process.">
   <Breadcrumbs items={[{label:'Home',href:'/'},{label:'Stories',href:'/stories/'},{label:'Revisiting songs with Suno'}]} />
   <article class="section prose"><div class="shell prose__body" style="margin-top:0"><p class="eyebrow">Process and disclosure</p><h1>Why revisit an old song with a model?</h1><p class="lede">The useful question is not whether a generated arrangement sounds new. It is whether it reveals something that was already latent in the writing.</p>
-  <h2>The source stays visible</h2><p>For each of the {reimagined.length} archive rebuilds, this catalog identifies the original performance and every verified Suno or YouTube version. That makes the creative intervention inspectable rather than presenting the result without history.</p>
+  <h2>The source stays visible</h2><p>For each of the {reimagined.length} archive rebuilds, this catalog identifies the original performance and every verified Suno or YouTube version. <a href={reimaginedAlbum.url}>{reimaginedAlbum.title}</a> is the canonical source for the ten originals and two new reimaginations of each.</p>
   <h2>Creative direction and generated performance</h2><p>Alex supplies the song, text and creative direction; Suno generates the musical arrangement and performance. Each newer song page identifies that method and publishes the model label, source date, style tags, artwork and lyrics when Suno exposes them.</p>
   <h2>The work has moved beyond covers</h2><p>The current Suno catalog includes {sunoSongs.length} songs that are not part of the archive-cover series. They range across personal, playful, political and professional subjects, so the catalog treats “generated” as a production method rather than a genre.</p>
   <h2>Alex’s view on AI and art</h2><p>Alex examines what these tools open up, what they may erode and why creative access and economic disruption have to be considered together in <a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a>.</p>
-  <div class="btn-row"><a class="btn" href="/reimagined/">Hear the Suno catalog</a><a class="btn" href={aiMusicPerspective.url}>Read the article ↗</a></div></div></article>
+  <div class="btn-row"><a class="btn btn--primary" href={reimaginedAlbum.url}>Play the canonical album ↗</a><a class="btn" href="/reimagined/">Compare the versions</a><a class="btn" href={aiMusicPerspective.url}>Read the article ↗</a></div></div></article>
 </Base>

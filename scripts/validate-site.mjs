@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.10.0');
+assert.equal(catalog.schemaVersion, '1.11.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -97,13 +97,18 @@ assert.equal(generatedSongs.length, sourceSunoSongs.length);
 assert.ok(generatedSongs.every((song) => song.createdAt && song.imageUrl && song.embedUrl), 'Every generated Suno song must retain its available public metadata.');
 assert.ok(generatedSongs.filter((song) => song.durationSeconds).length >= Math.floor(generatedSongs.length * 0.99), 'The Suno duration metadata recovery rate is unexpectedly low.');
 assert.ok(generatedSongs.filter((song) => song.genres?.length).length >= Math.floor(generatedSongs.length * 0.95), 'The Suno style metadata recovery rate is unexpectedly low.');
-assert.equal(JSON.parse(read('src/data/suno-covers.json')).length, 12);
+assert.equal(JSON.parse(read('src/data/suno-covers.json')).length, 32);
 const sourceSunoPlaylists = JSON.parse(read('src/data/suno-playlists.json'));
 const sunoPlaylists = catalog.suno.playlists;
-assert.equal(sunoPlaylists.length, sourceSunoPlaylists.length);
+const sunoAlbums = catalog.suno.albums;
+assert.equal(sunoPlaylists.length + sunoAlbums.length, sourceSunoPlaylists.length);
 assert.equal(catalog.counts.sunoPlaylists, sunoPlaylists.length);
+assert.equal(catalog.counts.sunoAlbums, sunoAlbums.length);
 assert.ok(sunoPlaylists.every((playlist) => playlist.url === `https://suno.com/playlist/${playlist.id}` && playlist.songCount > 0 && playlist.description && playlist.collectionType && playlist.collectionLabel && playlist.trackIds.length > 0 && playlist.sourceTracks.length === playlist.songCount && playlist.pageUrl));
 assert.equal(sunoPlaylists.filter((playlist) => playlist.collectionType === 'album').length, 5);
+assert.equal(sunoAlbums.length, 3);
+assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl));
+for (const album of sunoAlbums) assert.ok(existsSync(new URL(`dist/suno/albums/${album.slug}/index.html`, root)), `Missing Suno album page for ${album.name}.`);
 const sourceYoutubeMetadata = JSON.parse(read('src/data/youtube-metadata.json'));
 assert.ok(Object.keys(sourceYoutubeMetadata).length >= catalog.videos.length);
 assert.equal(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).length, catalog.videos.length);
@@ -173,6 +178,7 @@ assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
 const sunoPage = read('dist/suno/index.html');
 for (const playlist of sunoPlaylists) assert.ok(sunoPage.includes(playlist.url), `${playlist.name} is missing from the Suno page.`);
+for (const album of sunoAlbums) assert.ok(sunoPage.includes(album.url), `${album.name} is missing from the Suno page.`);
 for (const playlist of sunoPlaylists) {
   const path = `dist/suno/playlists/${playlist.slug}/index.html`;
   assert.ok(existsSync(new URL(path, root)), `${playlist.name} is missing its local page.`);
@@ -183,6 +189,7 @@ for (const playlist of sunoPlaylists) {
 const sitemap = read('dist/sitemap-0.xml');
 for (const pageUrl of songPages) assert.ok(sitemap.includes(`<loc>${pageUrl}</loc>`), `${pageUrl} is missing from the sitemap.`);
 for (const album of catalog.albums) assert.ok(sitemap.includes(`<loc>${album.pageUrl}</loc>`));
+for (const album of sunoAlbums) assert.ok(sitemap.includes(`<loc>${album.pageUrl}</loc>`));
 // P4.9: video pages canonicalize to their song page or are noindexed, so they stay out of the sitemap.
 for (const video of catalog.videos) {
   assert.ok(!sitemap.includes(`<loc>${video.pageUrl}</loc>`), `${video.title} should not be in the sitemap.`);
@@ -231,7 +238,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'get_music_theory_guide', 'get_music_theory_section', 'build_scale', 'build_chord', 'translate_roman_progression', 'suggest_theory_palette', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_playlists', 'get_suno_playlist', 'list_suno_albums', 'get_suno_album', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'get_music_theory_guide', 'get_music_theory_section', 'build_scale', 'build_chord', 'translate_roman_progression', 'suggest_theory_palette', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -271,6 +278,13 @@ assert.deepEqual(playlistResult.playlists.map((item) => item.id), sunoPlaylists.
 const playlist = JSON.parse(await getTool('get_suno_playlist').execute({ id: sunoPlaylists[0].id }));
 assert.equal(playlist.playlist.id, sunoPlaylists[0].id);
 assert.equal(playlist.tracks.length, sunoPlaylists[0].sourceTracks.length);
+const albumResult = JSON.parse(await getTool('list_suno_albums').execute({}));
+assert.equal(albumResult.count, sunoAlbums.length);
+const canonicalSunoAlbum = sunoAlbums.find((album) => album.id === '51dc8194-9cc8-4d07-8923-ebdaf9bed812');
+assert.ok(canonicalSunoAlbum && canonicalSunoAlbum.songCount === 30);
+const sunoAlbum = JSON.parse(await getTool('get_suno_album').execute({ id: canonicalSunoAlbum.id }));
+assert.equal(sunoAlbum.tracks.length, 30);
+assert.ok(sunoAlbum.tracks.every((track) => track.catalogSong));
 const updates = JSON.parse(await getTool('get_catalog_updates_since').execute({ since: '2026-01-01', kind: 'generated', limit: 5 }));
 assert.ok(updates.totalResults > 0 && updates.items.length === 5);
 const promptingResult = JSON.parse(await getTool('get_suno_prompting_guide').execute({}));

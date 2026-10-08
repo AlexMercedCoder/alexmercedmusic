@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import { distributedReleases, platforms, sunoPlaylists } from '../data/catalog';
+import { distributedReleases, platforms, sunoAlbums, sunoPlaylists } from '../data/catalog';
 
 const label: Record<string, string> = {
   acoustic: 'Acoustic',
@@ -63,13 +63,13 @@ const jsonLd = distributedReleases.map((release) => ({
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">Curated on Suno</p>
-        <h2>{sunoPlaylists.length} public playlists</h2>
-        <p>Browse the generated catalog by project, subject and mood.</p>
+        <h2>{sunoAlbums.length} albums and {sunoPlaylists.length} public playlists</h2>
+        <p>Browse official Suno albums and curated collections by project, subject and mood.</p>
       </div>
       <div class="source-links">
-        {sunoPlaylists.map((playlist) => <a href={playlist.url}>{playlist.name} · {playlist.songCount} songs ↗</a>)}
+        {[...sunoAlbums, ...sunoPlaylists].map((playlist) => <a href={playlist.url}>{playlist.name} · {playlist.songCount} songs ↗</a>)}
       </div>
-      <div class="btn-row" style="margin-top:1.4rem"><a class="btn" href="/suno/">Playlist artwork and runtimes</a></div>
+      <div class="btn-row" style="margin-top:1.4rem"><a class="btn" href="/suno/">Album and playlist artwork and runtimes</a></div>
     </div>
   </section>
 

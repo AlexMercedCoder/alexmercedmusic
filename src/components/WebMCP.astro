@@ -339,6 +339,32 @@
         },
       },
       {
+        name: 'list_suno_albums',
+        description: 'List every official Alex Merced Suno album with its canonical page, Suno URL, artwork, track count and runtime.',
+        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
+        execute: async (_input, signal) => {
+          const catalog = await getCatalog(signal);
+          return { updatedAt: catalog.updatedAt, count: catalog.suno.albums.length, albums: catalog.suno.albums.map(({ trackIds, sourceTracks, ...album }) => album) };
+        },
+      },
+      {
+        name: 'get_suno_album',
+        description: 'Get one official Suno album and its ordered tracks, including links to connected originals and reimaginations. Accept an album ID, slug or exact name.',
+        inputSchema: { type: 'object', properties: { id: { type: 'string', minLength: 1 }, slug: { type: 'string', minLength: 1 }, name: { type: 'string', minLength: 1 } }, additionalProperties: false },
+        execute: async (input, signal) => {
+          const catalog = await getCatalog(signal);
+          const id = textValue(input, 'id');
+          const slug = textValue(input, 'slug').toLowerCase();
+          const name = textValue(input, 'name').toLowerCase();
+          if (!id && !slug && !name) return { error: 'Provide id, slug, or name.' };
+          const album = catalog.suno.albums.find((item) => item.id === id || item.slug === slug || item.name.toLowerCase() === name);
+          if (!album) return { error: 'No Suno album matched.' };
+          const bySunoUrl = new Map(catalog.songs.flatMap((song) => song.links.filter((link) => link.source === 'suno').map((link) => [link.url, song])));
+          const { sourceTracks, ...albumSummary } = album;
+          return { updatedAt: catalog.updatedAt, album: albumSummary, tracks: sourceTracks.map((source) => { const song = bySunoUrl.get(source.url); return song ? { source, catalogSong: songSummary(song) } : { source, catalogSong: null }; }) };
+        },
+      },
+      {
         name: 'get_catalog_updates_since',
         description: 'Poll for songs published since an ISO date. Returns dated catalog records in newest-first order and the current catalog update date.',
         inputSchema: { type: 'object', properties: { since: { type: 'string', minLength: 4, description: 'ISO date or timestamp.' }, kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'], default: 'all' }, limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 }, offset: { type: 'integer', minimum: 0, default: 0 } }, required: ['since'], additionalProperties: false },
@@ -684,7 +710,7 @@
           const main = [
             { label: 'Home', url: `${catalog.site}/` }, { label: 'Acoustic archive', url: `${catalog.site}/acoustic/` },
             { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
-            { label: 'Suno playlists', url: `${catalog.site}/suno/` },
+            { label: 'Suno albums and playlists', url: `${catalog.site}/suno/` },
             { label: 'Suno Prompting Field Guide', url: `${catalog.site}/suno-prompting-guide/` },
             { label: 'Music Theory for Songwriters and Producers', url: `${catalog.site}/music-theory/` },
             { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },

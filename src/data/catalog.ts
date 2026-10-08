@@ -61,6 +61,7 @@ export type SunoPlaylist = {
   songCount: number;
   durationSeconds?: number;
   description: string;
+  resourceType: 'album' | 'playlist';
   collectionType: 'album' | 'theme' | 'covers';
   collectionLabel: string;
   trackIds: string[];
@@ -128,17 +129,21 @@ const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | '
   },
 };
 
-export const sunoPlaylists: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel' | 'slug' | 'pageUrl'>[])
+export const sunoCollections: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'collectionType' | 'collectionLabel' | 'slug' | 'pageUrl'>[])
   .map((playlist) => ({
     ...playlist,
     slug: playlistSlug(playlist.name),
-    pageUrl: `/suno/playlists/${playlistSlug(playlist.name)}/`,
+    pageUrl: `/suno/${playlist.resourceType === 'album' ? 'albums' : 'playlists'}/${playlistSlug(playlist.name)}/`,
     ...(sunoPlaylistEditorial[playlist.id] ?? {
-      description: 'A public Suno playlist by Alex Merced.',
-      collectionType: 'theme' as const,
-      collectionLabel: 'Suno collection',
+      description: playlist.description || `A public Suno ${playlist.resourceType} by Alex Merced.`,
+      collectionType: playlist.resourceType === 'album' ? 'album' as const : 'theme' as const,
+      collectionLabel: playlist.resourceType === 'album' ? 'Official Suno album' : 'Suno collection',
     }),
   }));
+
+export const sunoAlbums = sunoCollections.filter((collection) => collection.resourceType === 'album');
+export const sunoPlaylists = sunoCollections.filter((collection) => collection.resourceType === 'playlist');
+export const canonicalReimaginingAlbum = sunoAlbums.find((album) => album.id === '51dc8194-9cc8-4d07-8923-ebdaf9bed812');
 
 // ---------------------------------------------------------------- acoustic
 
@@ -156,7 +161,7 @@ export const acousticPlaylist = {
   unavailableEntries: 5,
 };
 
-export const youtubeArchiveTracks: Track[] = [
+const youtubeArchiveSourceTracks: Track[] = [
   { title: 'Eadd9 Improv', length: '4:05', posted: '18 years ago', url: 'https://www.youtube.com/watch?v=LzAFKiI72QA' },
   { title: 'Alex Merced - A Beautiful Dying Radio', length: '3:13', posted: '19 years ago', url: 'https://www.youtube.com/watch?v=ZLdugTA_p1s' },
   { title: 'Alex Merced - Tell my heart', length: '2:10', posted: '17 years ago', url: 'https://www.youtube.com/watch?v=D3TLm0TKvdc' },
@@ -198,6 +203,30 @@ export const youtubeArchiveTracks: Track[] = [
   { title: 'Alex Merced    Gimme Jingles', length: '2:48', posted: '12 years ago', url: 'https://www.youtube.com/watch?v=GzSzVm1R4rM' },
 ];
 
+const canonicalAcousticAlbumOriginals: Record<string, string> = {
+  'Eadd9 Improv': 'cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1',
+  'Alex Merced - Scar and Stitches': 'b5f168a1-c523-4ea7-b724-bdcf1f8404e9',
+  'Alex Merced - Through The Darkness': '2df45aea-f839-4e1e-b889-f9149b7a8ecc',
+  'These Days Video': '4f9c2a6a-e3e1-481d-91fa-92fbca1feba9',
+  "Alex Merced - The One Who Can't Be Loved": 'a8cb4c4c-855e-4b85-a946-7e75e4b1a043',
+  'NEW SONG Alex Merced - Try to Forget You': '02fd5744-8c42-47b3-8930-9ed4b92abf8d',
+  'Alex Merced - My Heart Stopped': '256f1402-721e-44c7-aef8-d1a0f4d22867',
+  'Alex Merced - Tell my heart': '1c23ef0f-1145-4d34-b77c-b1132171df94',
+  'Alex Merced - Pain': 'ce637846-1210-4cc4-bd34-0e6e2946cb4e',
+  'Alex Merced - Heart to Give You': 'b5d409ed-6660-4b9b-ab10-b17cf60cdfb8',
+};
+
+export const youtubeArchiveTracks: Track[] = youtubeArchiveSourceTracks.map((track) => {
+  const sunoId = canonicalAcousticAlbumOriginals[track.title];
+  return sunoId ? {
+    ...track,
+    links: [
+      { source: 'youtube', url: track.url!, label: 'YouTube archive' },
+      { source: 'suno', url: `https://suno.com/song/${sunoId}`, label: 'Suno album original' },
+    ],
+  } : track;
+});
+
 /** Acoustic performances on the music channel that are not in the archive playlist. */
 export const channelAcousticTracks: Track[] = [
   { title: 'Name Session 1/26/19 #2', length: '3:36', url: 'https://www.youtube.com/watch?v=WJXsD24qfBE' },
@@ -228,9 +257,9 @@ export const acousticTracks: Track[] = [
 /**
  * The Suno covers, each paired with the acoustic recording it reworks.
  *
- * The YouTube series has seven videos. Suno now exposes those source generations
- * directly and also carries an eighth published archive cover, Tell My Heart.
- * Seven of the eight have an accessible original in the playlist above.
+ * The canonical Suno album has ten source recordings and two AI voice covers
+ * of each. Earlier Suno generations and YouTube videos remain linked as
+ * supporting versions where they are available.
  */
 export type Reimagining = Track & {
   /** The style the cover was generated in. */
@@ -245,6 +274,13 @@ export const reimaginedPlaylist = {
   description: 'AI Covers of Songs Alex wrote',
 };
 
+export const reimaginedAlbum = {
+  title: 'Acoustic Originals and AI Reimagination',
+  url: 'https://suno.com/album/51dc8194-9cc8-4d07-8923-ebdaf9bed812',
+  shareUrl: 'https://suno.com/s/DC7l2a3FhMM89kyE',
+  description: 'Ten original acoustic recordings from Alex Merced’s singer-songwriter archive, each followed by two AI reimaginations.',
+};
+
 export const reimagined: Reimagining[] = [
   {
     title: 'My Heart Stopped',
@@ -253,8 +289,10 @@ export const reimagined: Reimagining[] = [
     original: 'Alex Merced - My Heart Stopped',
     url: 'https://www.youtube.com/watch?v=ZaMnb_fxSmk',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=ZaMnb_fxSmk' },
-      { source: 'suno', url: 'https://suno.com/song/f65c17a7-a139-4889-b4ab-51732a23d37e' },
+      { source: 'suno', url: 'https://suno.com/song/e9f5de63-c8d6-423e-a249-e7a4d98df861', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/83453c2d-ed03-4bfb-8dd2-87b5f190f19d', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=ZaMnb_fxSmk', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/f65c17a7-a139-4889-b4ab-51732a23d37e', label: 'Earlier Suno version' },
     ],
   },
   {
@@ -264,9 +302,11 @@ export const reimagined: Reimagining[] = [
     original: 'Alex Merced - Through The Darkness',
     url: 'https://www.youtube.com/watch?v=2f-GLdPuI4k',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=2f-GLdPuI4k' },
-      { source: 'suno', url: 'https://suno.com/song/efee051a-123d-4959-9224-a825050305a2', label: 'Suno · earlier' },
-      { source: 'suno', url: 'https://suno.com/song/80504323-9333-4c5c-aa42-c69cdd2acbdd', label: 'Suno · latest' },
+      { source: 'suno', url: 'https://suno.com/song/be4adbbf-acf2-4c21-baee-db53df398473', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/8c7cf3c4-0ce2-49ac-9185-76a2cc63915e', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=2f-GLdPuI4k', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/efee051a-123d-4959-9224-a825050305a2', label: 'Earlier Suno version 1' },
+      { source: 'suno', url: 'https://suno.com/song/80504323-9333-4c5c-aa42-c69cdd2acbdd', label: 'Earlier Suno version 2' },
     ],
   },
   {
@@ -276,8 +316,10 @@ export const reimagined: Reimagining[] = [
     original: 'These Days Video',
     url: 'https://www.youtube.com/watch?v=JtR6OQqjVlk',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=JtR6OQqjVlk' },
-      { source: 'suno', url: 'https://suno.com/song/a13448b6-3e13-4aca-85ae-84edb93414c5' },
+      { source: 'suno', url: 'https://suno.com/song/0cf9295c-0b99-438c-b818-7000bb4b3c73', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/ca6122d5-bb3a-414a-abac-9c49afe041c5', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=JtR6OQqjVlk', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/a13448b6-3e13-4aca-85ae-84edb93414c5', label: 'Earlier Suno version' },
     ],
   },
   {
@@ -287,8 +329,10 @@ export const reimagined: Reimagining[] = [
     original: 'Alex Merced - Scar and Stitches',
     url: 'https://www.youtube.com/watch?v=l4cCpDKgb_8',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=l4cCpDKgb_8' },
-      { source: 'suno', url: 'https://suno.com/song/df928ef1-1732-41dd-b008-a945eb8c3de0' },
+      { source: 'suno', url: 'https://suno.com/song/de0f0342-8eb2-47b1-bc40-c5f7daca36db', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/33c68abf-d4e7-4015-a801-7d685bc85e6b', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=l4cCpDKgb_8', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/df928ef1-1732-41dd-b008-a945eb8c3de0', label: 'Earlier Suno version' },
     ],
   },
   {
@@ -298,9 +342,11 @@ export const reimagined: Reimagining[] = [
     original: 'Eadd9 Improv',
     url: 'https://www.youtube.com/watch?v=utHZCYF6FwM',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=utHZCYF6FwM' },
-      { source: 'suno', url: 'https://suno.com/song/66a52b97-a1df-41ca-9fc7-978f31ffdd05', label: 'Suno · earlier' },
-      { source: 'suno', url: 'https://suno.com/song/1213e903-cde2-4068-b31e-02f1db506876', label: 'Suno · latest' },
+      { source: 'suno', url: 'https://suno.com/song/14c0ea46-b6dd-4c6d-8266-c53a7b921434', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/a3d39a25-a00d-4469-8961-c077f0729e54', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=utHZCYF6FwM', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/66a52b97-a1df-41ca-9fc7-978f31ffdd05', label: 'Earlier Suno version 1' },
+      { source: 'suno', url: 'https://suno.com/song/1213e903-cde2-4068-b31e-02f1db506876', label: 'Earlier Suno version 2' },
     ],
   },
   {
@@ -310,9 +356,11 @@ export const reimagined: Reimagining[] = [
     original: "Alex Merced - The One Who Can't Be Loved",
     url: 'https://www.youtube.com/watch?v=MusdQT-AKLU',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=MusdQT-AKLU' },
-      { source: 'suno', url: 'https://suno.com/song/ca20d84d-4323-4dbc-b666-862148903723', label: 'Suno · earlier' },
-      { source: 'suno', url: 'https://suno.com/song/728e8b4b-2d5d-4107-b713-cadb1956e272', label: 'Suno · latest' },
+      { source: 'suno', url: 'https://suno.com/song/3a5cd5ae-4850-4499-8744-31a13e044f92', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/72d25928-f623-416c-90d8-d884b64cf490', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=MusdQT-AKLU', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/ca20d84d-4323-4dbc-b666-862148903723', label: 'Earlier Suno version 1' },
+      { source: 'suno', url: 'https://suno.com/song/728e8b4b-2d5d-4107-b713-cadb1956e272', label: 'Earlier Suno version 2' },
     ],
   },
   {
@@ -322,9 +370,11 @@ export const reimagined: Reimagining[] = [
     original: 'NEW SONG Alex Merced - Try to Forget You',
     url: 'https://www.youtube.com/watch?v=n_BbyWoAvFc',
     links: [
-      { source: 'youtube', url: 'https://www.youtube.com/watch?v=n_BbyWoAvFc' },
-      { source: 'suno', url: 'https://suno.com/song/bf001c90-0d07-4d82-9eb4-6eeb711a13fd', label: 'Suno · earlier' },
-      { source: 'suno', url: 'https://suno.com/song/60e7d648-c733-4114-9125-ba373f8a87c8', label: 'Suno · latest' },
+      { source: 'suno', url: 'https://suno.com/song/deec15ec-7027-40cb-bf8a-6099228926c9', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/068b09e0-96a4-4a82-bf3d-103579de2c9e', label: 'Suno album · version 2' },
+      { source: 'youtube', url: 'https://www.youtube.com/watch?v=n_BbyWoAvFc', label: 'YouTube video' },
+      { source: 'suno', url: 'https://suno.com/song/bf001c90-0d07-4d82-9eb4-6eeb711a13fd', label: 'Earlier Suno version 1' },
+      { source: 'suno', url: 'https://suno.com/song/60e7d648-c733-4114-9125-ba373f8a87c8', label: 'Earlier Suno version 2' },
     ],
   },
   {
@@ -333,7 +383,25 @@ export const reimagined: Reimagining[] = [
     original: 'Alex Merced - Tell my heart',
     url: 'https://suno.com/song/372a2bdc-0860-4ba7-877a-673219208e79',
     links: [
-      { source: 'suno', url: 'https://suno.com/song/372a2bdc-0860-4ba7-877a-673219208e79' },
+      { source: 'suno', url: 'https://suno.com/song/409912b2-70d9-4a1f-bec3-520932801850', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a', label: 'Suno album · version 2' },
+      { source: 'suno', url: 'https://suno.com/song/372a2bdc-0860-4ba7-877a-673219208e79', label: 'Earlier Suno version' },
+    ],
+  },
+  {
+    title: 'Pain', style: 'AI voice cover', original: 'Alex Merced - Pain',
+    url: 'https://suno.com/song/3442afe7-2b46-45eb-b654-80749980cf01',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/3442afe7-2b46-45eb-b654-80749980cf01', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/6c2f7a35-2096-4883-9ac5-43463d00d15a', label: 'Suno album · version 2' },
+    ],
+  },
+  {
+    title: 'Heart to Give You', style: 'AI voice cover', original: 'Alex Merced - Heart to Give You',
+    url: 'https://suno.com/song/f9e7c094-5ce0-4b64-bd8e-2827f73035bc',
+    links: [
+      { source: 'suno', url: 'https://suno.com/song/f9e7c094-5ce0-4b64-bd8e-2827f73035bc', label: 'Suno album · version 1' },
+      { source: 'suno', url: 'https://suno.com/song/dbbf916b-7366-4db0-b940-9982bcef93c8', label: 'Suno album · version 2' },
     ],
   },
 ];
@@ -593,7 +661,7 @@ export const platforms: Platform[] = [
     label: 'AI Covers of Alex Merced Songs',
     url: 'https://www.youtube.com/playlist?list=PLl161oA2QyHt1dJRZe81vAF-QHQjmBwjg',
     era: 'ai',
-    note: 'Seven YouTube videos rebuilt with Suno, each opening with a clip of the recording it came from. Suno also publishes an eighth archive cover.',
+    note: 'Seven earlier YouTube rebuilds, each opening with a clip of the source recording. The canonical Suno album holds ten originals and two new reimaginations of each.',
     stat: '7 videos',
   },
   {

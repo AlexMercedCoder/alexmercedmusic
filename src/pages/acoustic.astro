@@ -5,6 +5,7 @@ import {
   acousticPlaylist,
   channelAcousticTracks,
   reimagined,
+  reimaginedAlbum,
   soundcloudAcousticTracks,
   youtubeArchiveTracks,
 } from '../data/catalog';
@@ -64,7 +65,8 @@ const jsonLd = [
       </p>
       <div class="btn-row" style="margin-top:1.8rem">
         <a class="btn btn--primary" href={acousticPlaylist.url}>Play the whole thing</a>
-        <a class="btn" href="/reimagined">Hear eight songs rebuilt</a>
+        <a class="btn" href={reimaginedAlbum.url}>Hear {reimagined.length} originals and their new versions ↗</a>
+        <a class="btn" href="/reimagined">Compare every version</a>
       </div>
       </div>
       <img
@@ -94,7 +96,7 @@ const jsonLd = [
               {detailUrl(t.url) ? <a class="song-link" href={detailUrl(t.url)}>{t.title}</a> : t.title}
               {rebuiltByOriginal.has(t.title) && (
                 <span class="source-links source-links--inline">
-                  <a href={t.url}>Original ↗</a>
+                  {t.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>) ?? <a href={t.url}>Original ↗</a>}
                   {rebuiltByOriginal.get(t.title)?.links?.map((link) => (
                     <a href={link.url}>Rebuilt · {link.label ?? (link.source === 'youtube' ? 'YouTube' : 'Suno')} ↗</a>
                   ))}

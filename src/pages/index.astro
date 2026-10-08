@@ -2,16 +2,16 @@
 import Base from '../layouts/Base.astro';
 import PlatformMark from '../components/PlatformMark.astro';
 import {
-  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, distributedReleases, electronicStats, electronicRuntime, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
+  acousticTracks, acousticPlaylist, reimagined, reimaginedAlbum, reimaginedPlaylist,
+  albums, distributedReleases, electronicStats, electronicRuntime, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
 
 const paired = reimagined;
-const acousticUrls = new Map(acousticTracks.map((track) => [track.title, track.url]));
+const acousticByTitle = new Map(acousticTracks.map((track) => [track.title, track]));
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 const recentSuno = sunoSongs.slice(0, 6);
-const featuredPlaylists = sunoPlaylists.filter((playlist) => playlist.collectionType === 'album');
+const featuredPlaylists = [...sunoAlbums, ...sunoPlaylists.filter((playlist) => playlist.collectionType === 'album')];
 const recentVideos = videos.slice(0, 3);
 const distributedAlbum = distributedReleases.find((release) => release.title === 'Songs for your Consideration');
 const homepagePlatforms = (distributedAlbum?.links ?? []).map((link) => ({
@@ -127,10 +127,9 @@ const jsonLd = [
         <p class="eyebrow">The loop closed</p>
         <h2>Songs written on a guitar, handed to a model</h2>
         <p class="lede">
-          Eight songs from the archive have been rebuilt with Suno in styles they were
-          never written for: disco house, salsa, rock. Each video opens with a clip of
-          the original recording, so you hear where it started before you hear where it
-          went. All eight have an accessible original in the archive.
+          Ten songs from the acoustic archive now have two AI reimaginations each.
+          The canonical Suno album keeps every source recording beside its new versions,
+          while the earlier videos and generations remain available for comparison.
         </p>
       </div>
 
@@ -140,13 +139,13 @@ const jsonLd = [
             <div class="pair__side pair__then">
               <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
               <div class="pair__title">
-                {song.original && acousticUrls.get(song.original)
-                  ? <a class="song-link" href={detailUrl(acousticUrls.get(song.original))}>{song.original}</a>
+                {song.original && acousticByTitle.get(song.original)
+                  ? <a class="song-link" href={detailUrl(acousticByTitle.get(song.original)?.url)}>{song.original}</a>
                   : song.original ?? 'An earlier song of his'}
               </div>
-              {song.original && acousticUrls.get(song.original) ? (
+              {song.original && acousticByTitle.get(song.original) ? (
                 <div class="source-links">
-                  <a href={acousticUrls.get(song.original)}>Original ↗</a>
+                  {acousticByTitle.get(song.original)?.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>) ?? <a href={acousticByTitle.get(song.original)?.url}>Original ↗</a>}
                 </div>
               ) : (
                 <div class="pair__style">Original recording unavailable</div>
@@ -168,8 +167,9 @@ const jsonLd = [
       </div>
 
       <div class="btn-row" style="margin-top:1.6rem">
-        <a class="btn btn--primary" href="/reimagined">All eight, and what changed</a>
-        <a class="btn" href={reimaginedPlaylist.url}>Watch the playlist</a>
+        <a class="btn btn--primary" href={reimaginedAlbum.url}>Play the canonical album ↗</a>
+        <a class="btn" href="/reimagined">Compare all {reimagined.length}</a>
+        <a class="btn" href={reimaginedPlaylist.url}>Watch the earlier video series</a>
       </div>
     </div>
   </section>
@@ -226,7 +226,7 @@ const jsonLd = [
           </article>
         ))}
       </div>
-      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/songs/?kind=generated">All generated songs</a><a class="btn" href="/suno/">Browse Suno playlists</a></div>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/songs/?kind=generated">All generated songs</a><a class="btn" href="/suno/">Browse Suno albums and playlists</a></div>
     </div>
   </section>
 

@@ -1,8 +1,761 @@
 [
   {
+    "id": "51dc8194-9cc8-4d07-8923-ebdaf9bed812",
+    "name": "Acoustic Originals and AI Reimagination",
+    "resourceType": "album",
+    "url": "https://suno.com/album/51dc8194-9cc8-4d07-8923-ebdaf9bed812",
+    "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg",
+    "songCount": 30,
+    "durationSeconds": 5495.541833475057,
+    "description": "This album contains 10 original acoustic recordings from my younger singer/songwriter days and 2 AI reimaginations of each one.",
+    "trackIds": [
+      "cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+      "14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+      "a3d39a25-a00d-4469-8961-c077f0729e54",
+      "b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+      "de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+      "33c68abf-d4e7-4015-a801-7d685bc85e6b",
+      "2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+      "be4adbbf-acf2-4c21-baee-db53df398473",
+      "8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+      "4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+      "0cf9295c-0b99-438c-b818-7000bb4b3c73",
+      "ca6122d5-bb3a-414a-abac-9c49afe041c5",
+      "a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+      "3a5cd5ae-4850-4499-8744-31a13e044f92",
+      "72d25928-f623-416c-90d8-d884b64cf490",
+      "02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+      "deec15ec-7027-40cb-bf8a-6099228926c9",
+      "068b09e0-96a4-4a82-bf3d-103579de2c9e",
+      "256f1402-721e-44c7-aef8-d1a0f4d22867",
+      "e9f5de63-c8d6-423e-a249-e7a4d98df861",
+      "83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+      "1c23ef0f-1145-4d34-b77c-b1132171df94",
+      "409912b2-70d9-4a1f-bec3-520932801850",
+      "2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+      "ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+      "3442afe7-2b46-45eb-b654-80749980cf01",
+      "6c2f7a35-2096-4883-9ac5-43463d00d15a",
+      "b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+      "f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+      "dbbf916b-7366-4db0-b940-9982bcef93c8"
+    ],
+    "tracks": [
+      {
+        "id": "cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+        "title": "Solumn Thoughts Original",
+        "url": "https://suno.com/song/cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+        "createdAt": "2026-01-10T23:45:00.218Z",
+        "durationSeconds": 244.1580045351474,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+        "title": "Solumn Thoughts (Alex AI Voice Cover II)",
+        "url": "https://suno.com/song/14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+        "createdAt": "2026-10-08T00:42:01.306Z",
+        "durationSeconds": 234.36,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "a3d39a25-a00d-4469-8961-c077f0729e54",
+        "title": "Solumn Thoughts (Alex AI Voice Cover II)",
+        "url": "https://suno.com/song/a3d39a25-a00d-4469-8961-c077f0729e54",
+        "createdAt": "2026-10-08T00:42:01.306Z",
+        "durationSeconds": 226,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+        "title": "Scars and stitches Original",
+        "url": "https://suno.com/song/b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+        "createdAt": "2026-01-11T02:02:38.680Z",
+        "durationSeconds": 258.4212244897959,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+        "title": "Scars and Stitches (Alex Voice AI Cover)",
+        "url": "https://suno.com/song/de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+        "createdAt": "2026-10-08T00:50:39.167Z",
+        "durationSeconds": 196,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "33c68abf-d4e7-4015-a801-7d685bc85e6b",
+        "title": "Scars and Stitches (Alex Voice AI Cover)",
+        "url": "https://suno.com/song/33c68abf-d4e7-4015-a801-7d685bc85e6b",
+        "createdAt": "2026-10-08T00:50:39.167Z",
+        "durationSeconds": 204,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+        "title": "Through the Darkness Original",
+        "url": "https://suno.com/song/2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+        "createdAt": "2026-01-12T02:36:02.886Z",
+        "durationSeconds": 201.3170068027211,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "be4adbbf-acf2-4c21-baee-db53df398473",
+        "title": "Through the Darkness (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/be4adbbf-acf2-4c21-baee-db53df398473",
+        "createdAt": "2026-10-08T00:58:08.062Z",
+        "durationSeconds": 184.8,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+        "title": "Through the Darkness (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+        "createdAt": "2026-10-08T00:58:08.062Z",
+        "durationSeconds": 171.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+        "title": "These days original",
+        "url": "https://suno.com/song/4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+        "createdAt": "2026-01-11T03:41:47.624Z",
+        "durationSeconds": 115.4530612244898,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "0cf9295c-0b99-438c-b818-7000bb4b3c73",
+        "title": "These days (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/0cf9295c-0b99-438c-b818-7000bb4b3c73",
+        "createdAt": "2026-10-08T01:05:23.963Z",
+        "durationSeconds": 144.4,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "ca6122d5-bb3a-414a-abac-9c49afe041c5",
+        "title": "These days (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/ca6122d5-bb3a-414a-abac-9c49afe041c5",
+        "createdAt": "2026-10-08T01:05:23.963Z",
+        "durationSeconds": 121.12,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+        "title": "The One Who Can’t Be Loved (Original)",
+        "url": "https://suno.com/song/a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+        "createdAt": "2026-01-10T23:29:35.335Z",
+        "durationSeconds": 242.06857142857143,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "3a5cd5ae-4850-4499-8744-31a13e044f92",
+        "title": "The One Who Can’t Be Loved (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/3a5cd5ae-4850-4499-8744-31a13e044f92",
+        "createdAt": "2026-10-08T01:14:12.870Z",
+        "durationSeconds": 207.2,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "72d25928-f623-416c-90d8-d884b64cf490",
+        "title": "The One Who Can’t Be Loved (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/72d25928-f623-416c-90d8-d884b64cf490",
+        "createdAt": "2026-10-08T01:14:12.870Z",
+        "durationSeconds": 211.16,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+        "title": "Try to Forget You (original)",
+        "url": "https://suno.com/song/02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+        "createdAt": "2026-01-10T21:23:45.243Z",
+        "durationSeconds": 206.90775510204082,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "deec15ec-7027-40cb-bf8a-6099228926c9",
+        "title": "Try to Forget You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/deec15ec-7027-40cb-bf8a-6099228926c9",
+        "createdAt": "2026-10-08T01:23:54.699Z",
+        "durationSeconds": 182.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "068b09e0-96a4-4a82-bf3d-103579de2c9e",
+        "title": "Try to Forget You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/068b09e0-96a4-4a82-bf3d-103579de2c9e",
+        "createdAt": "2026-10-08T01:23:54.699Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "256f1402-721e-44c7-aef8-d1a0f4d22867",
+        "title": "My Heart Stopped Original",
+        "url": "https://suno.com/song/256f1402-721e-44c7-aef8-d1a0f4d22867",
+        "createdAt": "2026-01-12T12:51:34.646Z",
+        "durationSeconds": 187.31501133786847,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "e9f5de63-c8d6-423e-a249-e7a4d98df861",
+        "title": "My Heart Stopped (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/e9f5de63-c8d6-423e-a249-e7a4d98df861",
+        "createdAt": "2026-10-08T01:30:24.824Z",
+        "durationSeconds": 187.52,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+        "title": "My Heart Stopped (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+        "createdAt": "2026-10-08T01:30:24.824Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "1c23ef0f-1145-4d34-b77c-b1132171df94",
+        "title": "Tell My Heart Original",
+        "url": "https://suno.com/song/1c23ef0f-1145-4d34-b77c-b1132171df94",
+        "createdAt": "2026-01-14T04:13:52.423Z",
+        "durationSeconds": 129.1934693877551,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "409912b2-70d9-4a1f-bec3-520932801850",
+        "title": "Tell My Heart (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/409912b2-70d9-4a1f-bec3-520932801850",
+        "createdAt": "2026-10-08T01:37:51.337Z",
+        "durationSeconds": 124,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+        "title": "Tell My Heart (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+        "createdAt": "2026-10-08T01:37:51.337Z",
+        "durationSeconds": 117.52,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+        "title": "Pain Original",
+        "url": "https://suno.com/song/ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+        "createdAt": "2026-10-08T01:56:43.478Z",
+        "durationSeconds": 183.9468125,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "3442afe7-2b46-45eb-b654-80749980cf01",
+        "title": "Pain (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/3442afe7-2b46-45eb-b654-80749980cf01",
+        "createdAt": "2026-10-08T02:05:21.254Z",
+        "durationSeconds": 183.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "6c2f7a35-2096-4883-9ac5-43463d00d15a",
+        "title": "Pain (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/6c2f7a35-2096-4883-9ac5-43463d00d15a",
+        "createdAt": "2026-10-08T02:05:21.254Z",
+        "durationSeconds": 176.32,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+        "title": "Heart to Give You Original",
+        "url": "https://suno.com/song/b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+        "createdAt": "2026-10-08T02:08:54.783Z",
+        "durationSeconds": 160.24091666666666,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+        "title": "Heart to Give You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+        "createdAt": "2026-10-08T02:12:27.526Z",
+        "durationSeconds": 157.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "dbbf916b-7366-4db0-b940-9982bcef93c8",
+        "title": "Heart to Give You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/dbbf916b-7366-4db0-b940-9982bcef93c8",
+        "createdAt": "2026-10-08T02:12:27.526Z",
+        "durationSeconds": 139.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "e82d4de3-9214-4fb2-8ee5-da9d920055b0",
+    "name": "Stress and Calm",
+    "resourceType": "album",
+    "url": "https://suno.com/album/e82d4de3-9214-4fb2-8ee5-da9d920055b0",
+    "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg",
+    "songCount": 19,
+    "durationSeconds": 4115.8,
+    "description": "An album of songs that cover many of the stresses and anxieties of life and overcoming them more powerful on the other side.",
+    "trackIds": [
+      "6951910a-ff16-4bc3-8f9c-36f444e179e3",
+      "cc7b2276-9bfd-4c9b-9d7a-aac9ca24d111",
+      "aa0f753d-6520-417e-840d-8ee43cd9d317",
+      "54d4a8c3-95c5-41a3-b1e0-d244d6ed36dd",
+      "e40ba808-20c2-4044-8277-5d3b02a17594",
+      "6c0734a5-f0f2-4bec-aaae-cdd70bd8d49e",
+      "7438745a-6d40-4f66-b393-9b9a852ca3b8",
+      "2612110e-1ca9-4a84-b94d-ea31299d7d55",
+      "db6394ec-6d44-4283-804b-3ef536ec9ae5",
+      "abe8c412-0696-42b3-bd89-ebce2fcbf873",
+      "98d23f76-7ccc-418e-9e5b-dbb249ab9098",
+      "3d294eb0-ae38-4c46-a72a-a9f6c1bea137",
+      "4e8f6dd8-6d88-41a5-b677-af249cd5e70f",
+      "30915d1c-a5e4-4f40-96b7-7b74d9d3f464",
+      "8a9d134c-ed26-439f-9eda-ca7c3142972a",
+      "1939f1a9-efc6-408f-b16e-58e343b3b616",
+      "ae07ae43-c573-4dd4-b137-f02edc9a8cd8",
+      "ef6b1aa1-f9ab-4eae-a422-a1ede26ece1d",
+      "cffe2a76-5566-49be-9825-affb672627d8"
+    ],
+    "tracks": [
+      {
+        "id": "6951910a-ff16-4bc3-8f9c-36f444e179e3",
+        "title": "Put It Out",
+        "url": "https://suno.com/song/6951910a-ff16-4bc3-8f9c-36f444e179e3",
+        "createdAt": "2026-10-07T16:57:49.750Z",
+        "durationSeconds": 240.36,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "cc7b2276-9bfd-4c9b-9d7a-aac9ca24d111",
+        "title": "Nervous Start",
+        "url": "https://suno.com/song/cc7b2276-9bfd-4c9b-9d7a-aac9ca24d111",
+        "createdAt": "2026-10-07T17:06:31.541Z",
+        "durationSeconds": 247.08,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "aa0f753d-6520-417e-840d-8ee43cd9d317",
+        "title": "Worth the Quiet",
+        "url": "https://suno.com/song/aa0f753d-6520-417e-840d-8ee43cd9d317",
+        "createdAt": "2026-10-07T17:11:10.477Z",
+        "durationSeconds": 207.32,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "54d4a8c3-95c5-41a3-b1e0-d244d6ed36dd",
+        "title": "Take a Breath",
+        "url": "https://suno.com/song/54d4a8c3-95c5-41a3-b1e0-d244d6ed36dd",
+        "createdAt": "2026-10-07T17:20:38.013Z",
+        "durationSeconds": 214.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "e40ba808-20c2-4044-8277-5d3b02a17594",
+        "title": "If It Matters to One",
+        "url": "https://suno.com/song/e40ba808-20c2-4044-8277-5d3b02a17594",
+        "createdAt": "2026-10-07T17:29:14.747Z",
+        "durationSeconds": 220.96,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "6c0734a5-f0f2-4bec-aaae-cdd70bd8d49e",
+        "title": "I Can Bear",
+        "url": "https://suno.com/song/6c0734a5-f0f2-4bec-aaae-cdd70bd8d49e",
+        "createdAt": "2026-10-07T17:33:19.957Z",
+        "durationSeconds": 255,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "7438745a-6d40-4f66-b393-9b9a852ca3b8",
+        "title": "What My Two Hands Hold",
+        "url": "https://suno.com/song/7438745a-6d40-4f66-b393-9b9a852ca3b8",
+        "createdAt": "2026-10-07T17:41:28.953Z",
+        "durationSeconds": 250.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "2612110e-1ca9-4a84-b94d-ea31299d7d55",
+        "title": "Metric Modulation",
+        "url": "https://suno.com/song/2612110e-1ca9-4a84-b94d-ea31299d7d55",
+        "createdAt": "2026-10-07T18:09:57.224Z",
+        "durationSeconds": 197.56,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "db6394ec-6d44-4283-804b-3ef536ec9ae5",
+        "title": "One Hour to Breathe Breathe",
+        "url": "https://suno.com/song/db6394ec-6d44-4283-804b-3ef536ec9ae5",
+        "createdAt": "2026-10-07T18:09:57.224Z",
+        "durationSeconds": 229.96,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "abe8c412-0696-42b3-bd89-ebce2fcbf873",
+        "title": "The Cursor Blinks",
+        "url": "https://suno.com/song/abe8c412-0696-42b3-bd89-ebce2fcbf873",
+        "createdAt": "2026-10-07T18:13:21.314Z",
+        "durationSeconds": 186.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "98d23f76-7ccc-418e-9e5b-dbb249ab9098",
+        "title": "The Clock Knows",
+        "url": "https://suno.com/song/98d23f76-7ccc-418e-9e5b-dbb249ab9098",
+        "createdAt": "2026-10-07T18:13:21.314Z",
+        "durationSeconds": 216.4,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "3d294eb0-ae38-4c46-a72a-a9f6c1bea137",
+        "title": "Laying Down the Weight",
+        "url": "https://suno.com/song/3d294eb0-ae38-4c46-a72a-a9f6c1bea137",
+        "createdAt": "2026-10-07T18:23:11.552Z",
+        "durationSeconds": 245.6,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "4e8f6dd8-6d88-41a5-b677-af249cd5e70f",
+        "title": "Save a Quiet Light",
+        "url": "https://suno.com/song/4e8f6dd8-6d88-41a5-b677-af249cd5e70f",
+        "createdAt": "2026-10-07T19:16:20.026Z",
+        "durationSeconds": 273.76,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "30915d1c-a5e4-4f40-96b7-7b74d9d3f464",
+        "title": "Leave Some Waiting Here",
+        "url": "https://suno.com/song/30915d1c-a5e4-4f40-96b7-7b74d9d3f464",
+        "createdAt": "2026-10-07T19:16:20.026Z",
+        "durationSeconds": 243.6,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "8a9d134c-ed26-439f-9eda-ca7c3142972a",
+        "title": "Take Your Own Hand",
+        "url": "https://suno.com/song/8a9d134c-ed26-439f-9eda-ca7c3142972a",
+        "createdAt": "2026-10-07T20:25:49.927Z",
+        "durationSeconds": 242.4,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "1939f1a9-efc6-408f-b16e-58e343b3b616",
+        "title": "The Hand Is Mine",
+        "url": "https://suno.com/song/1939f1a9-efc6-408f-b16e-58e343b3b616",
+        "createdAt": "2026-10-07T21:36:46.005Z",
+        "durationSeconds": 223.2,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "ae07ae43-c573-4dd4-b137-f02edc9a8cd8",
+        "title": "Take the Reigns",
+        "url": "https://suno.com/song/ae07ae43-c573-4dd4-b137-f02edc9a8cd8",
+        "createdAt": "2026-10-07T23:16:55.813Z",
+        "durationSeconds": 209.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "ef6b1aa1-f9ab-4eae-a422-a1ede26ece1d",
+        "title": "Let the Rain Fall Where It",
+        "url": "https://suno.com/song/ef6b1aa1-f9ab-4eae-a422-a1ede26ece1d",
+        "createdAt": "2026-10-07T23:16:55.813Z",
+        "durationSeconds": 223.2,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      },
+      {
+        "id": "cffe2a76-5566-49be-9825-affb672627d8",
+        "title": "The Story After All",
+        "url": "https://suno.com/song/cffe2a76-5566-49be-9825-affb672627d8",
+        "createdAt": "2026-10-08T00:29:11.980Z",
+        "durationSeconds": 227.56,
+        "imageUrl": "https://cdn2.suno.ai/image_0ca0988f-3eb4-4da7-b9f9-9b07bb918c8d.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "54156473-4580-4b3d-8ad5-fdc0b51ca27e",
+    "name": "Originals And Remakes",
+    "resourceType": "playlist",
+    "url": "https://suno.com/playlist/54156473-4580-4b3d-8ad5-fdc0b51ca27e",
+    "imageUrl": "https://cdn2.suno.ai/image_cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1.jpeg",
+    "songCount": 30,
+    "durationSeconds": 5495.5418334750575,
+    "trackIds": [
+      "cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+      "14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+      "a3d39a25-a00d-4469-8961-c077f0729e54",
+      "b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+      "de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+      "33c68abf-d4e7-4015-a801-7d685bc85e6b",
+      "2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+      "be4adbbf-acf2-4c21-baee-db53df398473",
+      "8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+      "4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+      "0cf9295c-0b99-438c-b818-7000bb4b3c73",
+      "ca6122d5-bb3a-414a-abac-9c49afe041c5",
+      "a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+      "3a5cd5ae-4850-4499-8744-31a13e044f92",
+      "72d25928-f623-416c-90d8-d884b64cf490",
+      "02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+      "deec15ec-7027-40cb-bf8a-6099228926c9",
+      "068b09e0-96a4-4a82-bf3d-103579de2c9e",
+      "256f1402-721e-44c7-aef8-d1a0f4d22867",
+      "e9f5de63-c8d6-423e-a249-e7a4d98df861",
+      "83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+      "1c23ef0f-1145-4d34-b77c-b1132171df94",
+      "409912b2-70d9-4a1f-bec3-520932801850",
+      "2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+      "ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+      "3442afe7-2b46-45eb-b654-80749980cf01",
+      "6c2f7a35-2096-4883-9ac5-43463d00d15a",
+      "b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+      "f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+      "dbbf916b-7366-4db0-b940-9982bcef93c8"
+    ],
+    "tracks": [
+      {
+        "id": "cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+        "title": "Solumn Thoughts Original",
+        "url": "https://suno.com/song/cdc00372-b6d7-4b0e-8fda-7ee8b2ac9ed1",
+        "createdAt": "2026-01-10T23:45:00.218Z",
+        "durationSeconds": 244.1580045351474,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+        "title": "Solumn Thoughts (Alex AI Voice Cover II)",
+        "url": "https://suno.com/song/14c0ea46-b6dd-4c6d-8266-c53a7b921434",
+        "createdAt": "2026-10-08T00:42:01.306Z",
+        "durationSeconds": 234.36,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "a3d39a25-a00d-4469-8961-c077f0729e54",
+        "title": "Solumn Thoughts (Alex AI Voice Cover II)",
+        "url": "https://suno.com/song/a3d39a25-a00d-4469-8961-c077f0729e54",
+        "createdAt": "2026-10-08T00:42:01.306Z",
+        "durationSeconds": 226,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+        "title": "Scars and stitches Original",
+        "url": "https://suno.com/song/b5f168a1-c523-4ea7-b724-bdcf1f8404e9",
+        "createdAt": "2026-01-11T02:02:38.680Z",
+        "durationSeconds": 258.4212244897959,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+        "title": "Scars and Stitches (Alex Voice AI Cover)",
+        "url": "https://suno.com/song/de0f0342-8eb2-47b1-bc40-c5f7daca36db",
+        "createdAt": "2026-10-08T00:50:39.167Z",
+        "durationSeconds": 196,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "33c68abf-d4e7-4015-a801-7d685bc85e6b",
+        "title": "Scars and Stitches (Alex Voice AI Cover)",
+        "url": "https://suno.com/song/33c68abf-d4e7-4015-a801-7d685bc85e6b",
+        "createdAt": "2026-10-08T00:50:39.167Z",
+        "durationSeconds": 204,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+        "title": "Through the Darkness Original",
+        "url": "https://suno.com/song/2df45aea-f839-4e1e-b889-f9149b7a8ecc",
+        "createdAt": "2026-01-12T02:36:02.886Z",
+        "durationSeconds": 201.3170068027211,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "be4adbbf-acf2-4c21-baee-db53df398473",
+        "title": "Through the Darkness (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/be4adbbf-acf2-4c21-baee-db53df398473",
+        "createdAt": "2026-10-08T00:58:08.062Z",
+        "durationSeconds": 184.8,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+        "title": "Through the Darkness (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/8c7cf3c4-0ce2-49ac-9185-76a2cc63915e",
+        "createdAt": "2026-10-08T00:58:08.062Z",
+        "durationSeconds": 171.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+        "title": "These days original",
+        "url": "https://suno.com/song/4f9c2a6a-e3e1-481d-91fa-92fbca1feba9",
+        "createdAt": "2026-01-11T03:41:47.624Z",
+        "durationSeconds": 115.4530612244898,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "0cf9295c-0b99-438c-b818-7000bb4b3c73",
+        "title": "These days (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/0cf9295c-0b99-438c-b818-7000bb4b3c73",
+        "createdAt": "2026-10-08T01:05:23.963Z",
+        "durationSeconds": 144.4,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "ca6122d5-bb3a-414a-abac-9c49afe041c5",
+        "title": "These days (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/ca6122d5-bb3a-414a-abac-9c49afe041c5",
+        "createdAt": "2026-10-08T01:05:23.963Z",
+        "durationSeconds": 121.12,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+        "title": "The One Who Can’t Be Loved (Original)",
+        "url": "https://suno.com/song/a8cb4c4c-855e-4b85-a946-7e75e4b1a043",
+        "createdAt": "2026-01-10T23:29:35.335Z",
+        "durationSeconds": 242.06857142857143,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "3a5cd5ae-4850-4499-8744-31a13e044f92",
+        "title": "The One Who Can’t Be Loved (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/3a5cd5ae-4850-4499-8744-31a13e044f92",
+        "createdAt": "2026-10-08T01:14:12.870Z",
+        "durationSeconds": 207.2,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "72d25928-f623-416c-90d8-d884b64cf490",
+        "title": "The One Who Can’t Be Loved (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/72d25928-f623-416c-90d8-d884b64cf490",
+        "createdAt": "2026-10-08T01:14:12.870Z",
+        "durationSeconds": 211.16,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+        "title": "Try to Forget You (original)",
+        "url": "https://suno.com/song/02fd5744-8c42-47b3-8930-9ed4b92abf8d",
+        "createdAt": "2026-01-10T21:23:45.243Z",
+        "durationSeconds": 206.90775510204082,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "deec15ec-7027-40cb-bf8a-6099228926c9",
+        "title": "Try to Forget You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/deec15ec-7027-40cb-bf8a-6099228926c9",
+        "createdAt": "2026-10-08T01:23:54.699Z",
+        "durationSeconds": 182.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "068b09e0-96a4-4a82-bf3d-103579de2c9e",
+        "title": "Try to Forget You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/068b09e0-96a4-4a82-bf3d-103579de2c9e",
+        "createdAt": "2026-10-08T01:23:54.699Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "256f1402-721e-44c7-aef8-d1a0f4d22867",
+        "title": "My Heart Stopped Original",
+        "url": "https://suno.com/song/256f1402-721e-44c7-aef8-d1a0f4d22867",
+        "createdAt": "2026-01-12T12:51:34.646Z",
+        "durationSeconds": 187.31501133786847,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "e9f5de63-c8d6-423e-a249-e7a4d98df861",
+        "title": "My Heart Stopped (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/e9f5de63-c8d6-423e-a249-e7a4d98df861",
+        "createdAt": "2026-10-08T01:30:24.824Z",
+        "durationSeconds": 187.52,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+        "title": "My Heart Stopped (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/83453c2d-ed03-4bfb-8dd2-87b5f190f19d",
+        "createdAt": "2026-10-08T01:30:24.824Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "1c23ef0f-1145-4d34-b77c-b1132171df94",
+        "title": "Tell My Heart Original",
+        "url": "https://suno.com/song/1c23ef0f-1145-4d34-b77c-b1132171df94",
+        "createdAt": "2026-01-14T04:13:52.423Z",
+        "durationSeconds": 129.1934693877551,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "409912b2-70d9-4a1f-bec3-520932801850",
+        "title": "Tell My Heart (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/409912b2-70d9-4a1f-bec3-520932801850",
+        "createdAt": "2026-10-08T01:37:51.337Z",
+        "durationSeconds": 124,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+        "title": "Tell My Heart (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/2d5aa11b-cbe2-4f30-a6c2-3edc25261b0a",
+        "createdAt": "2026-10-08T01:37:51.337Z",
+        "durationSeconds": 117.52,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+        "title": "Pain Original",
+        "url": "https://suno.com/song/ce637846-1210-4cc4-bd34-0e6e2946cb4e",
+        "createdAt": "2026-10-08T01:56:43.478Z",
+        "durationSeconds": 183.9468125,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "3442afe7-2b46-45eb-b654-80749980cf01",
+        "title": "Pain (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/3442afe7-2b46-45eb-b654-80749980cf01",
+        "createdAt": "2026-10-08T02:05:21.254Z",
+        "durationSeconds": 183.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "6c2f7a35-2096-4883-9ac5-43463d00d15a",
+        "title": "Pain (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/6c2f7a35-2096-4883-9ac5-43463d00d15a",
+        "createdAt": "2026-10-08T02:05:21.254Z",
+        "durationSeconds": 176.32,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+        "title": "Heart to Give You Original",
+        "url": "https://suno.com/song/b5d409ed-6660-4b9b-ab10-b17cf60cdfb8",
+        "createdAt": "2026-10-08T02:08:54.783Z",
+        "durationSeconds": 160.24091666666666,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+        "title": "Heart to Give You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/f9e7c094-5ce0-4b64-bd8e-2827f73035bc",
+        "createdAt": "2026-10-08T02:12:27.526Z",
+        "durationSeconds": 157.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      },
+      {
+        "id": "dbbf916b-7366-4db0-b940-9982bcef93c8",
+        "title": "Heart to Give You (Alex AI Voice Cover)",
+        "url": "https://suno.com/song/dbbf916b-7366-4db0-b940-9982bcef93c8",
+        "createdAt": "2026-10-08T02:12:27.526Z",
+        "durationSeconds": 139.56,
+        "imageUrl": "https://cdn2.suno.ai/image_d243be91-3b44-4775-9567-c8df10534231.jpeg"
+      }
+    ]
+  },
+  {
     "id": "f8a7dd42-94d7-4a51-b699-a1e16f76ed1f",
     "name": "Halums Adventure",
-    "url": "https://suno.com/playlist/f8a7dd42-94d7-4a51-b699-a1e16f76ed1f",
+    "resourceType": "album",
+    "url": "https://suno.com/album/f8a7dd42-94d7-4a51-b699-a1e16f76ed1f",
     "imageUrl": "https://cdn2.suno.ai/image_fb6eee46-68d1-4d35-8370-cc50e5008224.jpeg",
     "songCount": 5,
     "durationSeconds": 1153.44,
@@ -60,6 +813,7 @@
   {
     "id": "d5ed8fb7-d661-49d8-897a-e4d113a52bdb",
     "name": "Halum’s Journey",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/d5ed8fb7-d661-49d8-897a-e4d113a52bdb",
     "imageUrl": "https://cdn2.suno.ai/image_b122c145-4d7c-42de-b33a-836edeb11479.jpeg",
     "songCount": 5,
@@ -117,6 +871,7 @@
   {
     "id": "116cf766-b0ee-46a1-844e-e95b2e44e7e2",
     "name": "Tangled",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/116cf766-b0ee-46a1-844e-e95b2e44e7e2",
     "imageUrl": "https://cdn2.suno.ai/image_237e77fd-48f0-4555-ae36-897f8143e15f.jpeg",
     "songCount": 10,
@@ -219,6 +974,7 @@
   {
     "id": "e18b2a7b-58db-4d7e-804f-1f91f22e8958",
     "name": "Reflections",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/e18b2a7b-58db-4d7e-804f-1f91f22e8958",
     "imageUrl": "https://cdn2.suno.ai/image_d95048f7-628f-4c0e-a7c7-06d4bf5e853d.jpeg",
     "songCount": 8,
@@ -303,6 +1059,7 @@
   {
     "id": "f85cecd2-1c79-44fb-bfc7-9ee7d963947b",
     "name": "Lofi Thoughts",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/f85cecd2-1c79-44fb-bfc7-9ee7d963947b",
     "imageUrl": "https://cdn2.suno.ai/image_a2ffe012-c762-4907-899b-c2222e4a439a.jpeg",
     "songCount": 9,
@@ -396,6 +1153,7 @@
   {
     "id": "c1876594-1124-4a70-8fe4-70b976e5623b",
     "name": "Happiness Or Goodness",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/c1876594-1124-4a70-8fe4-70b976e5623b",
     "imageUrl": "https://cdn2.suno.ai/image_77603042-f164-4c33-8a46-29bcb2a36f3d.jpeg",
     "songCount": 10,
@@ -498,6 +1256,7 @@
   {
     "id": "00d6595f-649c-45cd-ac38-b8d9e0f3b5f6",
     "name": "Unsustainably Fragmented",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/00d6595f-649c-45cd-ac38-b8d9e0f3b5f6",
     "imageUrl": "https://cdn2.suno.ai/image_662fbfd8-3466-41f7-b382-6b8b4d056726.jpeg",
     "songCount": 17,
@@ -663,6 +1422,7 @@
   {
     "id": "19714479-ec6e-4ab7-9cd9-5ebb028c8e35",
     "name": "Una Luz Mas",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/19714479-ec6e-4ab7-9cd9-5ebb028c8e35",
     "imageUrl": "https://cdn2.suno.ai/image_2faa6f18-35f2-4ec7-bb2e-962d21fd4450.jpeg",
     "songCount": 7,
@@ -738,6 +1498,7 @@
   {
     "id": "9009ebf9-e7ea-48cc-af92-55afc4cda6de",
     "name": "Songs Of Positivity",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/9009ebf9-e7ea-48cc-af92-55afc4cda6de",
     "imageUrl": "https://cdn2.suno.ai/image_394ba6ab-f51d-4bdb-8e1b-d0c33ecd046c.jpeg",
     "songCount": 17,
@@ -903,6 +1664,7 @@
   {
     "id": "4a96888f-25c7-4b26-b4e0-88c6e35185f5",
     "name": "The Robot Apocalypse",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/4a96888f-25c7-4b26-b4e0-88c6e35185f5",
     "imageUrl": "https://cdn2.suno.ai/image_c54a8e26-9679-467b-9668-a660dfb63dbb.jpeg",
     "songCount": 18,
@@ -1077,6 +1839,7 @@
   {
     "id": "cffc8100-37a2-4f5f-8cd2-dde12b62c8c6",
     "name": "Everyone Is Worth It",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/cffc8100-37a2-4f5f-8cd2-dde12b62c8c6",
     "imageUrl": "https://cdn2.suno.ai/image_8789ebe2-6e78-4299-849c-f9292a98afde.jpeg",
     "songCount": 5,
@@ -1134,6 +1897,7 @@
   {
     "id": "ced1a662-deb4-4262-b25e-c275b8397da0",
     "name": "Scarred Heart Chronicles",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/ced1a662-deb4-4262-b25e-c275b8397da0",
     "imageUrl": "https://cdn2.suno.ai/image_3d5a5d75-4c6c-4dac-968f-9d88e1f6bda4.jpeg",
     "songCount": 10,
@@ -1236,6 +2000,7 @@
   {
     "id": "bdbd56cc-124d-466d-a6d4-a6065baf2470",
     "name": "What If Grindcore was Catchy?",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/bdbd56cc-124d-466d-a6d4-a6065baf2470",
     "imageUrl": "https://cdn2.suno.ai/image_a329fdf9-b33d-4a0a-a776-be8a4c47afab.jpeg",
     "songCount": 9,
@@ -1329,6 +2094,7 @@
   {
     "id": "1836d5f8-3071-4705-a554-80361e384d2f",
     "name": "Less Debate, More Understanding",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/1836d5f8-3071-4705-a554-80361e384d2f",
     "imageUrl": "https://cdn2.suno.ai/image_042592c9-9609-4518-b8dc-1727d8198133.jpeg",
     "songCount": 13,
@@ -1458,6 +2224,7 @@
   {
     "id": "74ea9c4e-2e0b-47d6-bcf4-ef8f9a47d091",
     "name": "Halloween Time",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/74ea9c4e-2e0b-47d6-bcf4-ef8f9a47d091",
     "imageUrl": "https://cdn2.suno.ai/image_6b50824c-454f-47f9-9268-78aeadf292cf.jpeg",
     "songCount": 4,
@@ -1506,6 +2273,7 @@
   {
     "id": "4e4e209a-2f05-4a31-beea-86cb2c488668",
     "name": "A Division Of Hearts",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/4e4e209a-2f05-4a31-beea-86cb2c488668",
     "imageUrl": "https://cdn2.suno.ai/image_454b3ed8-b715-4cd7-b45f-846feb959815.jpeg",
     "songCount": 23,
@@ -1725,6 +2493,7 @@
   {
     "id": "b2e4f7ce-0c6c-437c-b5c9-656da3da19ec",
     "name": "A Kinder World",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/b2e4f7ce-0c6c-437c-b5c9-656da3da19ec",
     "imageUrl": "https://cdn2.suno.ai/image_eec0bf3a-80ad-4e7e-a805-0060e2f32979.jpeg",
     "songCount": 20,
@@ -1917,6 +2686,7 @@
   {
     "id": "959db630-c0a1-472a-8bf2-250613adcfdf",
     "name": "Yes, I’m Weird",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/959db630-c0a1-472a-8bf2-250613adcfdf",
     "imageUrl": "https://cdn2.suno.ai/image_e0ee7e1f-c677-403a-b334-7c091372936a.jpeg",
     "songCount": 43,
@@ -2316,6 +3086,7 @@
   {
     "id": "4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
     "name": "Forgiveness, Empathy, And Kindness",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/4ef9b4e5-eb8e-491d-820c-6b0d69c3f410",
     "imageUrl": "https://cdn2.suno.ai/image_9958e43d-c5f4-4067-83e8-519b2a882831.jpeg",
     "songCount": 20,
@@ -2508,6 +3279,7 @@
   {
     "id": "55d37e76-dce6-4892-82b0-ff77769638e2",
     "name": "The Power Within",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/55d37e76-dce6-4892-82b0-ff77769638e2",
     "imageUrl": "https://cdn2.suno.ai/image_4c9d027c-a708-4107-af33-3f9c599dd612.jpeg",
     "songCount": 15,
@@ -2655,6 +3427,7 @@
   {
     "id": "ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
     "name": "I’m Secure That I Know My Insecurities",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/ad634227-81e2-4ffb-a1a9-c1616f92b1b8",
     "imageUrl": "https://cdn2.suno.ai/image_d3d9c545-2b12-418e-858a-e81c5d600037.jpeg",
     "songCount": 49,
@@ -3108,6 +3881,7 @@
   {
     "id": "888a265d-0eec-4816-8a9c-93d79302acf8",
     "name": "Soy Disruptor",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/888a265d-0eec-4816-8a9c-93d79302acf8",
     "imageUrl": "https://cdn2.suno.ai/image_caac5fe2-d942-4a27-a1b9-bea598df869c.jpeg",
     "songCount": 8,
@@ -3192,6 +3966,7 @@
   {
     "id": "32fc28fe-a780-4e4e-8973-6ef8ad1253eb",
     "name": "Sad Songs Of Catharsis",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/32fc28fe-a780-4e4e-8973-6ef8ad1253eb",
     "imageUrl": "https://cdn2.suno.ai/image_15edcfcf-1e36-4e88-a18c-bbc44f1bbf70.jpeg",
     "songCount": 19,
@@ -3375,6 +4150,7 @@
   {
     "id": "cb9e2235-35bb-413a-a6b3-65483ff8e330",
     "name": "Of Course I’m Fabulous",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/cb9e2235-35bb-413a-a6b3-65483ff8e330",
     "imageUrl": "https://cdn2.suno.ai/image_db6511d2-13dc-457e-9d8e-73a24c58b4d6.jpeg",
     "songCount": 25,
@@ -3612,10 +4388,11 @@
   {
     "id": "19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "name": "Cliche love songs, Why Not",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/19b3ff3e-6c1c-482a-adc4-167c14b400c3",
     "imageUrl": "https://cdn2.suno.ai/image_1e15fd40-f2ab-404d-80d4-1742258e0250.jpeg",
-    "songCount": 30,
-    "durationSeconds": 7107.680000000001,
+    "songCount": 31,
+    "durationSeconds": 7364.800000000001,
     "trackIds": [
       "1e15fd40-f2ab-404d-80d4-1742258e0250",
       "06f4f7ea-6f93-459b-ab88-b28cc0664ac7",
@@ -3646,7 +4423,8 @@
       "8011cfbe-d9dd-4b70-92af-76b6386f9728",
       "34099812-993d-485c-9b8e-4257daa9021c",
       "f369c5b2-de11-4035-8a49-c5b95c42f46d",
-      "bce6a0ca-6c41-454a-8f17-1e43102f0f11"
+      "bce6a0ca-6c41-454a-8f17-1e43102f0f11",
+      "c0016cea-8f77-43e6-a66c-1a61c094abc6"
     ],
     "tracks": [
       {
@@ -3888,12 +4666,21 @@
         "createdAt": "2026-10-07T01:23:22.657Z",
         "durationSeconds": 255.96,
         "imageUrl": "https://cdn2.suno.ai/image_bce6a0ca-6c41-454a-8f17-1e43102f0f11.jpeg"
+      },
+      {
+        "id": "c0016cea-8f77-43e6-a66c-1a61c094abc6",
+        "title": "I Can't Be Everywhere",
+        "url": "https://suno.com/song/c0016cea-8f77-43e6-a66c-1a61c094abc6",
+        "createdAt": "2026-10-07T01:23:39.088Z",
+        "durationSeconds": 257.12,
+        "imageUrl": "https://cdn2.suno.ai/image_c0016cea-8f77-43e6-a66c-1a61c094abc6.jpeg"
       }
     ]
   },
   {
     "id": "fcd1a9e2-61d1-45d7-9b49-dd6df1f77c3d",
     "name": "Songs For Love Over Hate",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/fcd1a9e2-61d1-45d7-9b49-dd6df1f77c3d",
     "imageUrl": "https://cdn2.suno.ai/image_b66f5d4d-824e-4cf0-b54c-02e3dda27938.jpeg",
     "songCount": 9,
@@ -3987,6 +4774,7 @@
   {
     "id": "5099427c-4a7a-4574-a4d6-fd3329938874",
     "name": "Paris September 2026",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/5099427c-4a7a-4574-a4d6-fd3329938874",
     "imageUrl": "https://cdn2.suno.ai/image_56450e14-bf6e-4739-8d96-eddf8f21e6bf.jpeg",
     "songCount": 11,
@@ -4098,6 +4886,7 @@
   {
     "id": "4936a598-de26-4a15-9c9d-36df88300908",
     "name": "Your Are good Enough",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/4936a598-de26-4a15-9c9d-36df88300908",
     "imageUrl": "https://cdn2.suno.ai/image_8f47b7d3-3f43-40be-aa2c-3eedab44f4a6.jpeg",
     "songCount": 56,
@@ -4614,6 +5403,7 @@
   {
     "id": "cc219882-fa66-427b-9afe-9fa57fca37fc",
     "name": "Alex Favs",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/cc219882-fa66-427b-9afe-9fa57fca37fc",
     "imageUrl": "https://cdn2.suno.ai/image_72fbd426-5575-49e8-9e10-d8636e42c1c7.jpeg",
     "songCount": 54,
@@ -5112,6 +5902,7 @@
   {
     "id": "abf459c8-27e4-4382-a9a5-77769146b46b",
     "name": "Nostalgia and Food",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/abf459c8-27e4-4382-a9a5-77769146b46b",
     "imageUrl": "https://cdn2.suno.ai/image_7de82330-e71c-4675-9504-6371a7f3e59b.jpeg",
     "songCount": 32,
@@ -5412,6 +6203,7 @@
   {
     "id": "53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
     "name": "Economics In one Playlist",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/53e6aac6-e3b0-4a8c-9f85-427bd47ff4e4",
     "imageUrl": "https://cdn2.suno.ai/image_9f44fed5-03c8-4b99-8dd2-691fe41fdbf1.jpeg",
     "songCount": 13,
@@ -5541,6 +6333,7 @@
   {
     "id": "7e4bd076-c713-4a0d-a1bf-b794491be738",
     "name": "The Cost Of War In Peace, Life and Treasure",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/7e4bd076-c713-4a0d-a1bf-b794491be738",
     "imageUrl": "https://cdn2.suno.ai/image_59cc391c-bfee-460f-bb13-eb1bcf68e831.jpeg",
     "songCount": 10,
@@ -5643,6 +6436,7 @@
   {
     "id": "e8453402-b6d4-4064-b599-508a6c2e1edb",
     "name": "A Fun Journey In My Mind",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/e8453402-b6d4-4064-b599-508a6c2e1edb",
     "imageUrl": "https://cdn2.suno.ai/image_a8b20c9a-e2ce-44ac-86d6-d8a5a0fc5ed0.jpeg",
     "songCount": 15,
@@ -5790,6 +6584,7 @@
   {
     "id": "73370017-9f5c-4f67-85e6-95e60b13cdba",
     "name": "The Battle Best Fought Inside",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/73370017-9f5c-4f67-85e6-95e60b13cdba",
     "imageUrl": "https://cdn2.suno.ai/image_ef493016-fffb-4e33-b19e-bf8996860081.jpeg",
     "songCount": 11,
@@ -5901,6 +6696,7 @@
   {
     "id": "a146d06a-7f10-4069-87fd-cb7c092c0657",
     "name": "The Damned Man Of Masks",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/a146d06a-7f10-4069-87fd-cb7c092c0657",
     "imageUrl": "https://cdn2.suno.ai/image_efc67056-34ce-4481-a53f-2fd834c3745c.jpeg",
     "songCount": 12,
@@ -6021,6 +6817,7 @@
   {
     "id": "a69850f0-d17e-477e-bcef-37d3705efcfb",
     "name": "Covers Of My Old Acoustic Songs",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/a69850f0-d17e-477e-bcef-37d3705efcfb",
     "imageUrl": "https://cdn2.suno.ai/image_1213e903-cde2-4068-b31e-02f1db506876.jpeg",
     "songCount": 13,
@@ -6150,6 +6947,7 @@
   {
     "id": "cb4ce716-4820-4a79-a1b0-e26285ada284",
     "name": "Professional topics",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/cb4ce716-4820-4a79-a1b0-e26285ada284",
     "imageUrl": "https://cdn2.suno.ai/image_cc33cc88-498f-47e2-9a9c-82c30cb487ea.jpeg",
     "songCount": 9,
@@ -6243,6 +7041,7 @@
   {
     "id": "addc06e6-4dfd-47ef-a675-cf5c16f1c350",
     "name": "Political",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/addc06e6-4dfd-47ef-a675-cf5c16f1c350",
     "imageUrl": "https://cdn2.suno.ai/image_a6d5215e-ff24-4d5f-ba39-17ca575a95cd.jpeg",
     "songCount": 19,
@@ -6426,6 +7225,7 @@
   {
     "id": "16797847-dedf-46f4-8a58-1628cc3c64b4",
     "name": "Fun Songs",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/16797847-dedf-46f4-8a58-1628cc3c64b4",
     "imageUrl": "https://cdn2.suno.ai/image_c3b1c91d-4f2d-40e7-ab43-44c5b62acac9.jpeg",
     "songCount": 157,
@@ -7851,6 +8651,7 @@
   {
     "id": "09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "name": "Deep Songs",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/09aa165b-1ca1-4f80-9903-1046c0e2a649",
     "imageUrl": "https://cdn2.suno.ai/image_dd6aef5f-c95c-49d2-8984-80868c3a84d2.jpeg",
     "songCount": 140,
@@ -9123,6 +9924,7 @@
   {
     "id": "272034e9-28cb-4b1e-8ca6-7da96e2704e3",
     "name": "AI Alex Voice Covers",
+    "resourceType": "playlist",
     "url": "https://suno.com/playlist/272034e9-28cb-4b1e-8ca6-7da96e2704e3",
     "imageUrl": "https://cdn2.suno.ai/image_372a2bdc-0860-4ba7-877a-673219208e79.jpeg",
     "songCount": 29,

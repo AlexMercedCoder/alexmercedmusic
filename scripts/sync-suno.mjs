@@ -10,6 +10,7 @@ const catalogUrl = new URL('src/data/catalog.ts', root);
 const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
+const canonicalAcousticAlbumId = '51dc8194-9cc8-4d07-8923-ebdaf9bed812';
 const shouldWrite = process.argv.includes('--write');
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
 const fetchPage = async (url, label, { allowNotFound = false } = {}) => {
@@ -29,9 +30,15 @@ const fetchPage = async (url, label, { allowNotFound = false } = {}) => {
 const catalogSource = await readFile(catalogUrl, 'utf8');
 let registeredPlaylistIds = [];
 let currentPlaylistRegistry = '';
+let currentPlaylists = '';
+let previousCollections = [];
 try {
   currentPlaylistRegistry = await readFile(playlistRegistryUrl, 'utf8');
   registeredPlaylistIds = JSON.parse(currentPlaylistRegistry);
+} catch {}
+try {
+  currentPlaylists = await readFile(playlistsOutputUrl, 'utf8');
+  previousCollections = JSON.parse(currentPlaylists);
 } catch {}
 if (!Array.isArray(registeredPlaylistIds) || registeredPlaylistIds.some((id) => typeof id !== 'string')) {
   throw new Error('Suno playlist registry must be an array of playlist ID strings.');
@@ -96,14 +103,8 @@ const toPlaylistTrack = (clip) => ({
 });
 
 const publicClips = allClips.filter((clip) => clip.is_public && !clip.is_trashed && clip.title);
-const songs = publicClips
-  .filter((clip) => !coverIds.has(clip.id))
-  .map(toSong)
-  .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
-const coverSongs = publicClips
-  .filter((clip) => coverIds.has(clip.id))
-  .map(toSong)
-  .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+const profileCollectionById = new Map(profilePlaylists.map((playlist) => [playlist.id, playlist]));
+const previousCollectionById = new Map(previousCollections.map((collection) => [collection.id, collection]));
 const profilePlaylistIds = profilePlaylists
   .map((playlist) => playlist.id)
   .filter((id) => typeof id === 'string' && id);
@@ -129,7 +130,8 @@ for (const playlistId of playlistIds) {
       playlist = {
         id: data.id || playlistId,
         name: data.name.trim(),
-        url: `https://suno.com/playlist/${data.id || playlistId}`,
+        resourceType: profileCollectionById.get(playlistId)?.feed_id?.startsWith('album:') || previousCollectionById.get(playlistId)?.resourceType === 'album' ? 'album' : 'playlist',
+        url: `https://suno.com/${profileCollectionById.get(playlistId)?.feed_id?.startsWith('album:') || previousCollectionById.get(playlistId)?.resourceType === 'album' ? 'album' : 'playlist'}/${data.id || playlistId}`,
         imageUrl: data.image_url || undefined,
         songCount: Number(data.num_total_results ?? data.song_count ?? 0),
         durationSeconds: Number(data.total_duration ?? 0) || undefined,
@@ -158,18 +160,35 @@ for (const playlistId of playlistIds) {
   playlists.push({ ...playlist, songCount: playlistTotal, trackIds: uniqueTrackIds, tracks: uniqueTracks });
 }
 
+const canonicalAcousticAlbum = playlists.find((collection) => collection.id === canonicalAcousticAlbumId);
+if (!canonicalAcousticAlbum || canonicalAcousticAlbum.resourceType !== 'album') {
+  throw new Error('The canonical acoustic originals album is missing or is no longer published as a Suno album.');
+}
+const canonicalOriginalIds = new Set(canonicalAcousticAlbum.tracks
+  .filter((track) => /\boriginal\b/i.test(track.title))
+  .map((track) => track.id));
+const canonicalReimaginingIds = new Set(canonicalAcousticAlbum.trackIds.filter((id) => !canonicalOriginalIds.has(id)));
+for (const id of canonicalReimaginingIds) coverIds.add(id);
+
+const songs = publicClips
+  .filter((clip) => !coverIds.has(clip.id) && !canonicalOriginalIds.has(clip.id))
+  .map(toSong)
+  .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+const coverSongs = publicClips
+  .filter((clip) => coverIds.has(clip.id))
+  .map(toSong)
+  .sort((left, right) => Date.parse(right.createdAt) - Date.parse(left.createdAt));
+
 const ids = new Set(songs.map((song) => song.id));
 if (ids.size !== songs.length) throw new Error('Suno returned duplicate public song IDs.');
-if (songs.length + coverIds.size !== total) {
-  throw new Error(`Expected ${total - coverIds.size} non-cover songs but found ${songs.length}; review the cover classification.`);
+if (songs.length + coverIds.size + canonicalOriginalIds.size !== total) {
+  throw new Error(`Expected all ${total} public songs to be classified, but found ${songs.length} catalog songs, ${coverIds.size} cover generations and ${canonicalOriginalIds.size} canonical acoustic originals.`);
 }
 
 let current = '';
 let currentCovers = '';
-let currentPlaylists = '';
 try { current = await readFile(outputUrl, 'utf8'); } catch {}
 try { currentCovers = await readFile(coversOutputUrl, 'utf8'); } catch {}
-try { currentPlaylists = await readFile(playlistsOutputUrl, 'utf8'); } catch {}
 // The public profile occasionally omits duration for older completed clips.
 // Keep a previously published value instead of erasing known metadata.
 const previous = current ? JSON.parse(current) : [];
@@ -195,7 +214,7 @@ const changed = songs.filter((song) => {
   return old && JSON.stringify(old) !== JSON.stringify(song);
 });
 
-console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} cover generations; ${playlists.length} public playlists.`);
+console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} cover generations; ${canonicalOriginalIds.size} canonical acoustic originals; ${playlists.filter((item) => item.resourceType === 'album').length} albums; ${playlists.filter((item) => item.resourceType === 'playlist').length} playlists.`);
 console.log(`Diff: ${added.length} added, ${removed.length} removed, ${changed.length} metadata changes.`);
 for (const song of added) console.log(`+ ${song.title} (${song.id})`);
 for (const song of removed) console.log(`- ${song.title} (${song.id})`);

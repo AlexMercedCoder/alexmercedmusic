@@ -1,0 +1,61 @@
+---
+import Base from '../../../layouts/Base.astro';
+import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import { SITE, catalogSunoAlbums, songByPrimaryUrl, type CatalogSong } from '../../../data/catalog-model';
+
+export function getStaticPaths() {
+  return catalogSunoAlbums.map((album) => ({
+    params: { slug: album.slug },
+    props: { album, tracks: album.sourceTracks.map((source) => ({ source, song: songByPrimaryUrl.get(source.url) })) },
+  }));
+}
+
+const { album, tracks } = Astro.props as {
+  album: (typeof catalogSunoAlbums)[number];
+  tracks: Array<{ source: (typeof catalogSunoAlbums)[number]['sourceTracks'][number]; song?: CatalogSong }>;
+};
+const minutes = album.durationSeconds ? Math.round(album.durationSeconds / 60) : undefined;
+const pageTitle = album.name.length > 35 ? `${album.name.slice(0, 34).trim()}…` : album.name;
+const jsonLd = [{
+  '@type': 'MusicAlbum', '@id': `${album.pageUrl}#album`, name: album.name, url: album.pageUrl,
+  sameAs: album.url, description: album.description, image: album.imageUrl, numTracks: album.songCount,
+  byArtist: { '@id': `${SITE}/#musicgroup` },
+  track: tracks.map(({ source, song }, index) => song ? { '@id': `${song.pageUrl}#recording`, position: index + 1 } : { '@type': 'MusicRecording', name: source.title, url: source.url, position: index + 1 }),
+}, {
+  '@type': 'BreadcrumbList', itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Suno albums and playlists', item: `${SITE}/suno/` },
+    { '@type': 'ListItem', position: 3, name: album.name, item: album.pageUrl },
+  ],
+}];
+---
+
+<Base title={pageTitle} description={`${album.description} Browse ${album.songCount} songs in album order and open each recording directly.`} jsonLd={jsonLd} ogType="music.album" ogImage={album.imageUrl} imageAlt={`Artwork for ${album.name}`}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno albums and playlists', href: '/suno/' }, { label: album.name }]} />
+  <article class="section detail" data-era="ai">
+    <div class="shell detail__grid">
+      <div>
+        <p class="eyebrow">Official Suno album</p>
+        <h1>{album.name}</h1>
+        <p class="lede">{album.description}</p>
+        <dl class="facts">
+          <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
+          <div><dt>Tracks</dt><dd>{album.songCount}</dd></div>
+          {minutes && <div><dt>Runtime</dt><dd>{Math.floor(minutes / 60) ? `${Math.floor(minutes / 60)} hr ${minutes % 60} min` : `${minutes} min`}</dd></div>}
+          <div><dt>Source</dt><dd>Public Suno album</dd></div>
+        </dl>
+        <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href={album.url}>Listen on Suno ↗</a><a class="btn" href="/suno/">All Suno collections</a></div>
+      </div>
+      {album.imageUrl && <img class="artwork" src={album.imageUrl} width="600" height="600" alt={`Artwork for ${album.name}`} />}
+    </div>
+    <div class="shell album-tracks">
+      <h2>Track list</h2>
+      <p>{album.trackIds.length} tracks connect to local catalog pages. Every track also links directly to its Suno recording.</p>
+      <ol class="tracks">
+        {tracks.map(({ source, song }, index) => <li><span class="num">{String(index + 1).padStart(2, '0')}</span><span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span><span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a></span></li>)}
+      </ol>
+    </div>
+  </article>
+</Base>
+
+<style>.album-tracks{margin-top:4rem}.album-tracks h2{margin-bottom:.7rem}.album-tracks>p{color:var(--ink-soft)}</style>
