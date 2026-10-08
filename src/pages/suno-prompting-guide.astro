@@ -27,6 +27,10 @@ const faqs = [
     answer: 'Put the overall groove and drum sound in Style. Use documented section markers in Lyrics, and test a short bracketed drum cue only for a local change. Bracketed percussion directions are suggestions, not exact sequencing commands.',
   },
   {
+    question: 'What do parentheses do in Suno lyrics?',
+    answer: 'Suno does not document parentheses as exact command syntax. In practice, short singable text in parentheses can suggest an echo, backing response, ad-lib, wordless hook or rhythmic vocal cell. Spell and group the syllables visibly, then verify the result by ear.',
+  },
+  {
     question: 'How should I specify a key and chord progression?',
     answer: 'Name the key, Roman-numeral progression, chord qualities and harmonic rhythm. Add exact chord names when pitch matters, then verify the result by ear because prompt details remain probabilistic.',
   },
@@ -59,7 +63,7 @@ const jsonLd = [
     dateModified: '2026-10-07',
     author: { '@id': 'https://alexmerced.com/#alexmerced' },
     publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
-    about: ['Suno', 'music prompting', 'keys', 'chord progressions', 'time signatures', 'percussion', 'song arrangement', 'music production'],
+    about: ['Suno', 'music prompting', 'keys', 'chord progressions', 'time signatures', 'parentheses in lyrics', 'vocal rhythm', 'percussion', 'song arrangement', 'music production'],
     proficiencyLevel: 'Beginner to advanced',
   },
   {
@@ -83,7 +87,7 @@ const jsonLd = [
 <Base
   title="Suno Prompting Field Guide"
   description={guide.description}
-  keywords={['Suno prompting guide', 'Suno prompts', 'Suno chord progression prompts', 'Suno time signatures', 'Suno percussion prompts', 'music prompting', 'Suno v6']}
+  keywords={['Suno prompting guide', 'Suno prompts', 'Suno parentheses lyrics', 'Suno rhythmic lyrics', 'Suno chord progression prompts', 'Suno time signatures', 'Suno percussion prompts', 'music prompting', 'Suno v6']}
   jsonLd={jsonLd}
   ogType="article"
   dateModified="2026-10-07"
@@ -122,6 +126,7 @@ const jsonLd = [
       <a href="#melody-vocals">Melody and vocals</a>
       <a href="#arrangement">Arrangement</a>
       <a href="#lyrics">Lyrics</a>
+      <a href="#parenthetical-rhythm">Parentheses</a>
       <a href="#lyric-notation">Lyric notation</a>
       <a href="#hybrids">Hybrids</a>
       <a href="#controls">Controls</a>
@@ -458,6 +463,60 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="parenthetical-rhythm" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Parentheses in lyrics</p>
+        <h2>Write a vocal rhythm the model can sing</h2>
+        <p>{guide.parentheticalRhythm.status}</p>
+        <p>Use a three-layer approach: Style carries the global meter and groove, brackets mark sections or local performance changes, and parentheses hold possible vocal material. Parentheses are not a substitute for exact drum programming or MIDI.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Role</th><th>Purpose</th><th>Lyric example</th></tr></thead>
+          <tbody>{guide.parentheticalRhythm.roles.map(([role, purpose, example]) => <tr><th scope="row">{role}</th><td>{purpose}</td><td><code class="multiline-code">{example}</code></td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <h2>Show the grouping in the spelling</h2>
+        <p>These marks suggest how syllables relate to each other. They do not force exact note values, rests or accents.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Device</th><th>Use</th><th>Example</th></tr></thead>
+          <tbody>{guide.parentheticalRhythm.spellingRules.map(([device, use, example]) => <tr><th scope="row">{device}</th><td>{use}</td><td><code>{example}</code></td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="section__head subsection-head">
+        <h2>Rhythmic cells to test</h2>
+        <p>Pair each lyric cell with matching meter and grouping language in Style. Generate several candidates and keep the version whose audible phrasing matches the idea.</p>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Pattern</th><th>Parenthetical cell</th><th>What it suggests</th></tr></thead>
+          <tbody>{guide.parentheticalRhythm.meterPatterns.map(([pattern, cell, note]) => <tr><th scope="row">{pattern}</th><td><code>{cell}</code></td><td>{note}</td></tr>)}</tbody>
+        </table>
+      </div>
+      <div class="guide-split subsection-head">
+        <div>
+          <h3>A complete lyric-sheet experiment</h3>
+          <p>Keep the parenthetical parts short enough to fit between lead phrases. If the lead voice takes over the response, add a backing-vocal role to Style and reduce the number of syllables.</p>
+          <h3>Controlled workflow</h3>
+          <ol class="check-list numbered">
+            {guide.parentheticalRhythm.workflow.map((step) => <li>{step}</li>)}
+          </ol>
+        </div>
+        <pre class="lyric-example"><code>{guide.parentheticalRhythm.example}</code></pre>
+      </div>
+      <div class="section__head subsection-head">
+        <h2>When the pattern drifts</h2>
+      </div>
+      <div class="trouble-list">
+        {guide.parentheticalRhythm.troubleshooting.map(([problem, fix]) => <article><h3>{problem}</h3><p>{fix}</p></article>)}
+      </div>
+    </div>
+  </section>
+
   <section class="section section--tight" id="lyric-notation" data-era="ai">
     <div class="shell">
       <div class="section__head">
@@ -696,6 +755,8 @@ const jsonLd = [
         <li><a href="https://help.suno.com/en/articles/6141377">Suno Help: Creative Sliders</a>: Weirdness, Style Influence and Audio Influence.</li>
         <li><a href="https://help.suno.com/en/articles/6141505">Suno Help: Song Editor</a>: replacing and extending sections after generation.</li>
         <li><a href="https://help.suno.com/en/articles/9010177">Suno Help: Music Glossary</a>: keys, chord progressions, meter, groove, syncopation, cadence and other musical terms.</li>
+        <li><a href="https://suno.com/song/7f04ba09-4093-4b75-b29b-45f128166404">Published Suno song example: If I Rule the World</a>: practical use of parenthetical echoes, responses and rhythmic syllables. This is evidence of creator practice, not product syntax documentation.</li>
+        <li><a href="https://suno.com/song/d5bc2bd6-5cc6-4f02-98ee-a2b673ef1123">Published Suno song example: Bad</a>: practical use of a stuttered parenthetical vocal hook. This is evidence of creator practice, not product syntax documentation.</li>
         <li><a href="https://help.suno.com/en/articles/10625089">Suno Help: Studio 1.2</a>: time-signature grid behavior and its separation from clip generation.</li>
         <li><a href="https://help.suno.com/en/articles/13670593">Suno Help: MIDI in Studio</a>: piano roll, Key and Scale assistance, chord modes and the arpeggiator.</li>
         <li><a href="https://help.suno.com/en/articles/13670529">Suno Help: Studio 2.0</a>: MIDI, effects, automation, advanced stems and chat-assisted production.</li>
@@ -775,6 +836,7 @@ const jsonLd = [
   tbody th { color:var(--ai); font-size:.92rem; }
   tbody td { color:var(--ink-soft); font-size:.92rem; }
   tbody tr:last-child > * { border-bottom:0; }
+  .multiline-code { white-space:pre-wrap; }
   .trouble-list { border-top:1px solid var(--rule); }
   .trouble-list article { display:grid; grid-template-columns:minmax(13rem, .45fr) 1fr; gap:1.5rem; padding:1rem 0; border-bottom:1px solid var(--rule); }
   .trouble-list h3 { font-size:1rem; }

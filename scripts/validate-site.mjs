@@ -300,6 +300,12 @@ assert.equal(vocals.content.dimensions.length, catalog.guides.sunoPrompting.voca
 const promptingSearch = JSON.parse(await getTool('search_suno_prompting_guide').execute({ query: 'close-mic', limit: 5 }));
 assert.ok(promptingSearch.totalResults > 0);
 assert.ok(promptingSearch.items.every((item) => item.value.toLowerCase().includes('close-mic')));
+const parenthesesSearch = JSON.parse(await getTool('search_suno_prompting_guide').execute({ query: 'parentheses', limit: 10 }));
+assert.ok(parenthesesSearch.totalResults > 0);
+assert.ok(parenthesesSearch.items.some((item) => item.path.includes('lyrics.parentheticalRhythm')));
+assert.ok(promptingPage.includes('id="parenthetical-rhythm"'));
+assert.ok(promptingPage.includes('Write a vocal rhythm the model can sing'));
+assert.ok(promptingPage.includes('(TA-ta-ta, TA-ta-ta, TA-ta)'));
 const composedPrompt = JSON.parse(await getTool('compose_suno_prompt').execute({ genre: 'art rock', tempoGroove: '104 BPM in 7/8', instruments: 'angular clean guitar and elastic bass', vocal: 'theatrical baritone', ending: 'hard stop', exclude: 'arena drums' }));
 assert.equal(composedPrompt.stylePrompt, 'art rock, 104 BPM in 7/8, angular clean guitar and elastic bass, theatrical baritone, hard stop');
 assert.equal(composedPrompt.exclude, 'arena drums');

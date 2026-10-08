@@ -3,7 +3,7 @@ export const sunoPromptingGuide = {
   edition: 'October 2026',
   scope: 'Suno v6 family and current creation tools',
   pageUrl: 'https://alexmercedmusic.com/suno-prompting-guide/',
-  description: 'An interactive Suno guide to prompts, genres, keys, chord progressions, time signatures, vocals, arrangement, diagnosis and production workflows.',
+  description: 'An interactive Suno guide to prompts, genres, keys, chord progressions, time signatures, parenthetical lyric rhythms, vocals, arrangement, diagnosis and production workflows.',
   evidenceNote: 'Suno documents product controls and a general musical glossary. Descriptive musical terms shape probability rather than guarantee a result.',
   formula: 'GENRE + ERA + KEY/HARMONY + TEMPO/METER/GROOVE + INSTRUMENTS + VOCAL + ARRANGEMENT + PRODUCTION + ENDING',
   example: 'Avant-prog and art pop, 104 BPM with alternating 7/8 and 4/4, angular clean guitar, elastic distorted bass, dry acoustic drums, theatrical baritone shifting into whispered harmonies, sparse verses and an explosive final refrain, close-mic vocals, crisp transients, spectral reverb, hard stop.',
@@ -428,6 +428,59 @@ export const sunoPromptingGuide = {
     'Put brief local arrangement cues in a section header only when needed; bracketed percussion cues are useful experiments, not guaranteed commands.',
     'If a drum cue is sung aloud, move it to Style or use the editor to replace that section.',
   ],
+  parentheticalRhythm: {
+    status: 'Suno does not document parentheses as exact command syntax. In published Suno songs, creators often use short parenthetical text as a practical hint for echoes, backing responses, ad-libs, wordless hooks and stuttered vocal cells. Treat the result as probabilistic and verify it by ear.',
+    roles: [
+      ['Echo', 'Repeat a few important words after the lead line.', 'I keep moving through the rain\n(keep moving, keep moving)'],
+      ['Ad-lib', 'Add one short interjection in a gap around the lead.', 'I will not turn around\n(hey!)'],
+      ['Wordless hook', 'Write a compact, repeatable vowel or syllable pattern.', '(oh-oh, oh-oh-oh)'],
+      ['Rhythmic ostinato', 'Repeat the same vocal cell to establish a recognizable pulse.', '(TA-ta-ta, TA-ta-ta, TA-ta)'],
+      ['Stutter pickup', 'Use a repeated opening syllable to push into the next lyric.', '(go-go-go) I will not wait'],
+    ],
+    spellingRules: [
+      ['Hyphens', 'Bind syllables into a quick cell.', '(da-da-da)'],
+      ['Spaces and commas', 'Separate larger pulse groups so the intended grouping is visible.', '(HEY-ah, HEY-ah, HEY-ah-ah)'],
+      ['Repetition', 'Repeat the same cell in the same position to suggest an ostinato or recurring response.', '(keep moving, keep moving)'],
+      ['Capitalization', 'Use capitals sparingly to suggest stress. Capital letters do not guarantee an accent.', '(HEY-ah, HEY-ah)'],
+      ['Held vowels', 'Lengthen the written vowel when a sustained vocal sound is wanted.', '(ohhh)'],
+    ],
+    meterPatterns: [
+      ['4/4 grouped 3+3+2', '(TA-ta-ta, TA-ta-ta, TA-ta)', 'Suggests eight vocal subdivisions grouped into three, three and two. State 4/4 and the 3+3+2 grouping in Style too.'],
+      ['6/8 grouped 3+3', '(DA-da-da, DA-da-da)', 'Suggests two compound beats, each divided into three syllables.'],
+      ['7/8 grouped 2+2+3', '(HEY-ah, HEY-ah, HEY-ah-ah)', 'Makes the two, two and three grouping visible. Put 7/8 grouped 2+2+3 in Style for the whole groove.'],
+      ['Straight four-pulse chant', '(HEY, HEY, HEY, HEY)', 'Suggests four equal vocal attacks, but not an exact beat placement.'],
+      ['Triplet pickup', '(da-da-da) I will not wait', 'Suggests three quick syllables leading into the main phrase.'],
+    ],
+    example: `[Verse: dry lead vocal, small backing group answers in the gaps]
+I keep moving through the rain
+(keep moving, keep moving)
+Every footstep says my name
+(oh-oh, oh-oh-oh)
+
+[Pre-Chorus: 7/8 grouped 2+2+3]
+I can feel the pattern turn
+(HEY-ah, HEY-ah, HEY-ah-ah)
+
+[Chorus: full band, wider backing vocals]
+(go-go-go) I will not wait
+Open every locked gate
+(HEY! HEY!)`,
+    workflow: [
+      'Put the global tempo, meter, grouping and groove in Style.',
+      'Use brackets for the section name and a brief local performance cue.',
+      'Put only singable words or syllables inside parentheses.',
+      'Make the rhythmic grouping visible with hyphens, spaces, commas and repetition.',
+      'Test one parenthetical pattern at a time while keeping the lyrics, Style and controls otherwise fixed.',
+      'Judge the audio, not the notation. Shorten, respell or move the idea into editing tools when the result drifts.',
+    ],
+    troubleshooting: [
+      ['The lead sings the response', 'Ask for a small backing group or call-and-response vocals in Style, then shorten the parenthetical phrase.'],
+      ['The response overlaps the next line', 'Remove syllables, add a blank line or leave a clearer gap in the lead lyric.'],
+      ['The grouping sounds wrong', 'Respell the cell into visible groups and restate the meter and grouping in Style.'],
+      ['The cue is ignored', 'Repeat the pattern consistently, regenerate a controlled variation or edit the section after generation.'],
+      ['The syllables sound like unwanted percussion', 'Use vocalized drum syllables only when vocal percussion is intentional. Describe instrumental drums in Style.'],
+    ],
+  },
   notationGuide: [
     ['[Verse 1] / [Chorus] / [Bridge]', 'Documented section markers', 'Give the lyric a clear form; repeat chorus words when you need them repeated.'],
     ['[Verse 2: kick and rim only]', 'Experimental local arrangement cue', 'Describes a thinner verse. If ignored, move the drum contrast into Style.'],
