@@ -136,7 +136,7 @@
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
-          return { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, counts: catalog.counts, electronic: catalog.electronic, suno: catalog.suno, primaryListening: { acousticOriginalsAndReimaginings: catalog.suno.featuredAcousticReimaginingAlbums }, mainPages: {
+          return { schemaVersion: catalog.schemaVersion, updatedAt: catalog.updatedAt, counts: catalog.counts, electronic: catalog.electronic, suno: catalog.suno, primaryListening: { originalsAndReimaginings: catalog.suno.featuredReimaginingAlbums }, mainPages: {
             explore: `${catalog.site}/songs/`, videos: `${catalog.site}/videos/`, acoustic: `${catalog.site}/acoustic/`, electronic: `${catalog.site}/electronic/`, reimagined: `${catalog.site}/reimagined/`, sunoPromptingGuide: `${catalog.site}/suno-prompting-guide/`, musicTheoryGuide: `${catalog.site}/music-theory/`, stories: `${catalog.site}/stories/`, listen: `${catalog.site}/listen/`, about: `${catalog.site}/about/`, webMcp: `${catalog.site}/webmcp/`,
           } };
         },
@@ -655,12 +655,12 @@
       },
       {
         name: 'list_reimaginings',
-        description: 'List every Suno rebuild paired with its exact acoustic source recording and canonical pages. The response also identifies the two primary albums that sequence each original beside its reimaginings.',
+        description: 'List every Suno rebuild paired with its exact acoustic or electronic source recording and canonical pages. The response also identifies the three featured albums that sequence each original beside its reimaginings.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
           const songsById = new Map(catalog.songs.map((song) => [song.id, song]));
-          return { updatedAt: catalog.updatedAt, primaryAlbums: catalog.suno.featuredAcousticReimaginingAlbums, pairs: catalog.songs.filter((song) => song.kind === 'reimagined').map((rebuilt) => ({ rebuilt: songSummary(rebuilt), original: rebuilt.originalTrackId ? songSummary(songsById.get(rebuilt.originalTrackId)) : null })) };
+          return { updatedAt: catalog.updatedAt, primaryAlbums: catalog.suno.featuredReimaginingAlbums, pairs: catalog.songs.filter((song) => song.kind === 'reimagined').map((rebuilt) => ({ rebuilt: songSummary(rebuilt), original: rebuilt.originalTrackId ? songSummary(songsById.get(rebuilt.originalTrackId)) : null })) };
         },
       },
       {

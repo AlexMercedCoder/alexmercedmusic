@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
+import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
 import {
   acousticTracks,
   acousticPlaylist,
@@ -64,7 +64,7 @@ const jsonLd = [
         Titles are preserved as the hosts present them.`}
       </p>
       <div style="margin-top:1.8rem">
-        <AcousticReimaginingAlbums />
+        <FeaturedReimaginingAlbums />
         <div class="btn-row" style="margin-top:.8rem"><a class="btn" href={acousticPlaylist.url}>Play the YouTube archive</a></div>
       </div>
       </div>

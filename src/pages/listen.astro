@@ -1,6 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
-import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
+import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
 import { distributedReleases, platforms, sunoAlbums, sunoPlaylists } from '../data/catalog';
 
 const label: Record<string, string> = {
@@ -65,9 +65,9 @@ const jsonLd = distributedReleases.map((release) => ({
       <div class="section__head">
         <p class="eyebrow">Start here</p>
         <h2>Hear the originals beside their reimaginings</h2>
-        <p>These two albums are the primary listening path for Alex’s earlier acoustic songs and their new arrangements.</p>
+        <p>These three albums are the primary listening path for Alex’s acoustic and electronic originals and their new arrangements.</p>
       </div>
-      <AcousticReimaginingAlbums />
+      <FeaturedReimaginingAlbums />
     </div>
   </section>
 

@@ -1,15 +1,16 @@
 ---
 import Base from '../layouts/Base.astro';
 import PlatformMark from '../components/PlatformMark.astro';
-import AcousticReimaginingAlbums from '../components/AcousticReimaginingAlbums.astro';
+import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
 import {
-  acousticTracks, acousticPlaylist, reimagined, reimaginedPlaylist,
-  albums, distributedReleases, electronicStats, electronicRuntime, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
+  acousticTracks, acousticPlaylist, allReimagined, reimaginedPlaylist,
+  albums, distributedReleases, electronicStats, electronicRuntime, electronicTracks, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
 
-const paired = reimagined;
-const acousticByTitle = new Map(acousticTracks.map((track) => [track.title, track]));
+const paired = allReimagined;
+const originals = new Map([...acousticTracks, ...electronicTracks].map((track) => [`${'sources' in track ? 'electronic' : 'acoustic'}:${track.title}`, track]));
+const originalFor = (song: (typeof allReimagined)[number]) => originals.get(`${song.originalEra ?? 'acoustic'}:${song.original}`);
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 const recentSuno = sunoSongs.slice(0, 6);
 const featuredPlaylists = [...sunoAlbums, ...sunoPlaylists.filter((playlist) => playlist.collectionType === 'album')];
@@ -34,7 +35,7 @@ const jsonLd = [
 
 <Base
   title="Alex Merced Music"
-  description={`Two decades of music by Alex Merced: ${acousticTracks.length} accessible archive recordings, ${electronicStats.total} produced tracks across four source collections, and ${reimagined.length} songs rebuilt with Suno.`}
+  description={`Two decades of music by Alex Merced: ${acousticTracks.length} accessible archive recordings, ${electronicStats.total} produced tracks, and ${allReimagined.length} songs rebuilt with Suno.`}
   keywords={['Alex Merced', 'Alex Merced music', 'singer songwriter', 'acoustic', 'glitch hop', 'FL Studio', 'Suno', 'AI covers']}
   jsonLd={jsonLd}
 >
@@ -55,7 +56,7 @@ const jsonLd = [
             <span data-era="ai"><i></i>Rebuilt with Suno</span>
           </div>
           <div style="margin-top:1.6rem">
-            <AcousticReimaginingAlbums includeComparison={false} />
+            <a class="btn btn--primary" href="#originals-and-reimaginings">Hear the originals beside the reimaginings</a>
             <div class="btn-row" style="margin-top:.8rem">
               <a class="btn" href="/reimagined/">Compare every version</a>
               <a class="btn" href="/songs/">Explore every song</a>
@@ -125,31 +126,33 @@ const jsonLd = [
     </div>
   </section>
 
-  <section class="section">
+  <section class="section" id="originals-and-reimaginings">
     <div class="shell">
       <div class="section__head">
         <p class="eyebrow">The loop closed</p>
-        <h2>Songs written on a guitar, handed to a model</h2>
+        <h2>Original recordings beside their Suno reimaginings</h2>
         <p class="lede">
-          Eighteen songs from the acoustic archive now have two AI reimaginings each.
-          Two canonical Suno albums keep every source recording beside its new versions,
-          while the earlier videos and generations remain available for comparison.
+          Three featured Suno albums keep each source recording beside two new versions:
+          two volumes from the acoustic archive and a new collection of eleven electronic
+          productions made in FL Studio.
         </p>
       </div>
 
-      <div class="grid" style="gap:0.8rem">
+      <FeaturedReimaginingAlbums />
+
+      <div class="grid" style="gap:0.8rem; margin-top:2rem">
         {paired.map((song) => (
           <div class="pair">
             <div class="pair__side pair__then">
               <small>{song.original ? 'The recording' : 'Original not in the archive'}</small>
               <div class="pair__title">
-                {song.original && acousticByTitle.get(song.original)
-                  ? <a class="song-link" href={detailUrl(acousticByTitle.get(song.original)?.url)}>{song.original}</a>
+                {song.original && originalFor(song)
+                  ? <a class="song-link" href={detailUrl(originalFor(song)?.url)}>{song.original}</a>
                   : song.original ?? 'An earlier song of his'}
               </div>
-              {song.original && acousticByTitle.get(song.original) ? (
+              {song.original && originalFor(song) ? (
                 <div class="source-links">
-                  {acousticByTitle.get(song.original)?.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>) ?? <a href={acousticByTitle.get(song.original)?.url}>Original ↗</a>}
+                  {originalFor(song)?.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>) ?? <a href={originalFor(song)?.url}>Original ↗</a>}
                 </div>
               ) : (
                 <div class="pair__style">Original recording unavailable</div>
@@ -170,7 +173,6 @@ const jsonLd = [
         ))}
       </div>
 
-      <div style="margin-top:1.6rem"><AcousticReimaginingAlbums /></div>
       <div class="btn-row" style="margin-top:.8rem"><a class="btn" href={reimaginedPlaylist.url}>Watch the earlier video series</a></div>
     </div>
   </section>

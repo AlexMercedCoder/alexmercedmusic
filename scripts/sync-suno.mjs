@@ -10,9 +10,10 @@ const catalogUrl = new URL('src/data/catalog.ts', root);
 const catalogModelUrl = new URL('src/data/catalog-model.ts', root);
 const astroConfigUrl = new URL('astro.config.mjs', root);
 const endpoint = 'https://studio-api.prod.suno.com/api/profiles/alexmerced';
-const canonicalAcousticAlbumIds = new Set([
+const featuredReimaginingAlbumIds = new Set([
   '51dc8194-9cc8-4d07-8923-ebdaf9bed812',
   '8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4',
+  '4f3cf988-b2a8-4e04-b0f7-27fc6e99eb0c',
 ]);
 const shouldWrite = process.argv.includes('--write');
 const wait = (milliseconds) => new Promise((resolve) => setTimeout(resolve, milliseconds));
@@ -163,14 +164,14 @@ for (const playlistId of playlistIds) {
   playlists.push({ ...playlist, songCount: playlistTotal, trackIds: uniqueTrackIds, tracks: uniqueTracks });
 }
 
-const canonicalAcousticAlbums = playlists.filter((collection) => canonicalAcousticAlbumIds.has(collection.id));
-if (canonicalAcousticAlbums.length !== canonicalAcousticAlbumIds.size || canonicalAcousticAlbums.some((album) => album.resourceType !== 'album')) {
-  throw new Error('One or more canonical acoustic originals albums are missing or are no longer published as Suno albums.');
+const featuredReimaginingAlbums = playlists.filter((collection) => featuredReimaginingAlbumIds.has(collection.id));
+if (featuredReimaginingAlbums.length !== featuredReimaginingAlbumIds.size || featuredReimaginingAlbums.some((album) => album.resourceType !== 'album')) {
+  throw new Error('One or more featured originals-and-reimaginings albums are missing or are no longer published as Suno albums.');
 }
-const canonicalOriginalIds = new Set(canonicalAcousticAlbums.flatMap((album) => album.tracks
-  .filter((track, index) => /\boriginal\b/i.test(track.title) || (album.id === '8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4' && index % 3 === 0))
+const canonicalOriginalIds = new Set(featuredReimaginingAlbums.flatMap((album) => album.tracks
+  .filter((_track, index) => index % 3 === 0)
   .map((track) => track.id)));
-const canonicalReimaginingIds = new Set(canonicalAcousticAlbums.flatMap((album) => album.trackIds.filter((id) => !canonicalOriginalIds.has(id))));
+const canonicalReimaginingIds = new Set(featuredReimaginingAlbums.flatMap((album) => album.trackIds.filter((id) => !canonicalOriginalIds.has(id))));
 for (const id of canonicalReimaginingIds) coverIds.add(id);
 
 const songs = publicClips
@@ -185,7 +186,7 @@ const coverSongs = publicClips
 const ids = new Set(songs.map((song) => song.id));
 if (ids.size !== songs.length) throw new Error('Suno returned duplicate public song IDs.');
 if (songs.length + coverIds.size + canonicalOriginalIds.size !== total) {
-  throw new Error(`Expected all ${total} public songs to be classified, but found ${songs.length} catalog songs, ${coverIds.size} cover generations and ${canonicalOriginalIds.size} canonical acoustic originals.`);
+  throw new Error(`Expected all ${total} public songs to be classified, but found ${songs.length} catalog songs, ${coverIds.size} reimagining generations and ${canonicalOriginalIds.size} featured source recordings.`);
 }
 
 let current = '';
@@ -217,7 +218,7 @@ const changed = songs.filter((song) => {
   return old && JSON.stringify(old) !== JSON.stringify(song);
 });
 
-console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} cover generations; ${canonicalOriginalIds.size} canonical acoustic originals; ${playlists.filter((item) => item.resourceType === 'album').length} albums; ${playlists.filter((item) => item.resourceType === 'playlist').length} playlists.`);
+console.log(`Suno: ${total} public songs; ${songs.length} catalog songs; ${coverIds.size} reimagining generations; ${canonicalOriginalIds.size} featured source recordings; ${playlists.filter((item) => item.resourceType === 'album').length} albums; ${playlists.filter((item) => item.resourceType === 'playlist').length} playlists.`);
 console.log(`Diff: ${added.length} added, ${removed.length} removed, ${changed.length} metadata changes.`);
 for (const song of added) console.log(`+ ${song.title} (${song.id})`);
 for (const song of removed) console.log(`- ${song.title} (${song.id})`);

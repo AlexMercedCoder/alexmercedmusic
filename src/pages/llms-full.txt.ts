@@ -33,7 +33,7 @@ ${publicCatalog.distributedReleases.map((release) => `### ${release.title}\n\n- 
 
 The primary listening path for Alex's original acoustic recordings and their AI reimaginings:
 
-${publicCatalog.suno.featuredAcousticReimaginingAlbums.map((album) => `- ${album.volume}: ${album.title}: ${album.url}`).join('\n')}
+${publicCatalog.suno.featuredReimaginingAlbums.map((album) => `- ${album.volume}: ${album.title}: ${album.url}`).join('\n')}
 
 ${publicCatalog.suno.albums.map((album) => `### ${album.name}\n\n${album.description}\n\n- Local page: ${album.pageUrl}\n- Suno source: ${album.url}\n- Songs: ${album.songCount}\n- Stable track IDs: ${album.trackIds.join(', ')}`).join('\n\n')}
 

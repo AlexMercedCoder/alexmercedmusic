@@ -1,0 +1,30 @@
+---
+import { featuredReimaginingAlbums } from '../data/catalog';
+
+interface Props {
+  includeComparison?: boolean;
+}
+
+const { includeComparison = true } = Astro.props;
+---
+
+<div class="featured-albums">
+  <div class="grid grid--3 featured-albums__grid">
+    {featuredReimaginingAlbums.map((album) => (
+      <article class="card card--era featured-album" data-era="ai">
+        <a href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
+          {album.imageUrl && <img class="release-art" src={album.imageUrl} width="640" height="640" loading="lazy" alt={`Cover of ${album.title}`} />}
+        </a>
+        <p class="eyebrow">{album.volume}</p>
+        <h3><a href={album.url}>{album.title}</a></h3>
+        <p>{album.description}</p>
+        <div class="source-links">
+          <a href={album.url}>Listen on Suno ↗</a>
+          {album.pageUrl && <a href={album.pageUrl}>View track list</a>}
+        </div>
+      </article>
+    ))}
+  </div>
+  {includeComparison && <div class="btn-row featured-albums__compare"><a class="btn" href="/reimagined/">Compare every original and reimagining</a></div>}
+</div>
+

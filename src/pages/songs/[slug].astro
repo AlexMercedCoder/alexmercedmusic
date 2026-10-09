@@ -1,6 +1,6 @@
 ---
 import Base from '../../layouts/Base.astro';
-import AcousticReimaginingAlbums from '../../components/AcousticReimaginingAlbums.astro';
+import FeaturedReimaginingAlbums from '../../components/FeaturedReimaginingAlbums.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { CATALOG_UPDATED_AT, SITE, songById, songs, videoById, type CatalogSong } from '../../data/catalog-model';
 
@@ -145,8 +145,8 @@ const jsonLd = [
     {(original || reimaginings.length > 0) && (
       <div class="shell relationship">
         <h2>Original and reimagined versions</h2>
-        <p>Hear the full original-and-reimagined sequence in the two canonical Suno albums.</p>
-        <AcousticReimaginingAlbums includeComparison={false} />
+        <p>Hear the full original-and-reimagined sequences in the three featured Suno albums.</p>
+        <FeaturedReimaginingAlbums includeComparison={false} />
         {original && (
           <div class="relationship__item" data-era="acoustic">
             <div><span class="eyebrow">Original recording</span><a class="song-link" href={original.pageUrl.replace(SITE, '')}>{original.title}</a></div>

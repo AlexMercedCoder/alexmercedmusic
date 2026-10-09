@@ -1,5 +1,6 @@
 ---
 import Base from '../layouts/Base.astro';
+import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
 import {
   albums,
   electronicTracks,
@@ -51,6 +52,7 @@ const label: Record<string, string> = {
   soundcloud: 'SoundCloud',
   'soundcloud-albums': 'Album',
   youtube: 'YouTube',
+  suno: 'Suno album original',
 };
 ---
 
@@ -84,6 +86,17 @@ const label: Record<string, string> = {
         <div data-era="electronic"><b>{albums.length}</b><span>Albums</span></div>
         <div data-era="electronic"><b>{electronicStats.onYouTube}</b><span>Also on YouTube</span></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--tight" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Originals and reimaginings</p>
+        <h2>Eleven FL Studio tracks, revisited with Suno</h2>
+        <p>The electronic collection places each original production directly before two new arrangements. The two acoustic volumes use the same side-by-side format.</p>
+      </div>
+      <FeaturedReimaginingAlbums />
     </div>
   </section>
 
@@ -148,6 +161,7 @@ const label: Record<string, string> = {
           <button type="button" class="chip" data-src="soundcloud">SoundCloud</button>
           <button type="button" class="chip" data-src="soundcloud-albums">On an album</button>
           <button type="button" class="chip" data-src="youtube">YouTube</button>
+          <button type="button" class="chip" data-src="suno">Suno</button>
         </div>
         <p class="filter__count" id="count" aria-live="polite">{electronicStats.total} tracks</p>
       </div>

@@ -127,6 +127,10 @@ const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | '
     description: 'Cover songs arranged around an AI-generated version of Alex’s voice.',
     collectionType: 'covers', collectionLabel: 'AI voice cover series',
   },
+  '4f3cf988-b2a8-4e04-b0f7-27fc6e99eb0c': {
+    description: 'Eleven original electronic productions made by Alex Merced in FL Studio, each followed by two Suno reimaginings.',
+    collectionType: 'covers', collectionLabel: 'Electronic originals and reimaginings',
+  },
 };
 
 export const sunoCollections: SunoPlaylist[] = (sunoPlaylistsData as Omit<SunoPlaylist, 'collectionType' | 'collectionLabel' | 'slug' | 'pageUrl'>[])
@@ -224,8 +228,12 @@ const canonicalAcousticAlbumOriginals: Record<string, string> = {
   'Theorist Lament': 'd8ded01f-9628-4236-a48b-d5e34b7598cb',
 };
 
+const featuredArchiveAlbumOriginals: Record<string, string> = {
+  'Alex Merced - A Beautiful Dying Radio': 'ec3705d9-0f06-4ba2-8009-d1e593ff4a56',
+};
+
 export const youtubeArchiveTracks: Track[] = youtubeArchiveSourceTracks.map((track) => {
-  const sunoId = canonicalAcousticAlbumOriginals[track.title];
+  const sunoId = canonicalAcousticAlbumOriginals[track.title] ?? featuredArchiveAlbumOriginals[track.title];
   return sunoId ? {
     ...track,
     links: [
@@ -276,7 +284,7 @@ export const acousticTracks: Track[] = [
 /**
  * The Suno covers, each paired with the acoustic recording it reworks.
  *
- * The two canonical Suno albums pair source recordings with two AI voice covers
+ * The featured Suno albums pair source recordings with two new arrangements
  * of each. Earlier Suno generations and YouTube videos remain linked as
  * supporting versions where they are available.
  */
@@ -285,6 +293,8 @@ export type Reimagining = Track & {
   style: string;
   /** The acoustic recording it reworks, if that recording is still up. */
   original?: string;
+  /** Which catalog era contains the source when titles overlap. */
+  originalEra?: Era;
 };
 
 export const reimaginedPlaylist = {
@@ -309,6 +319,20 @@ export const reimaginedAlbums = [
     description: 'Eight more original acoustic recordings, each followed by two AI reimaginings.',
   },
 ] as const;
+
+export const electronicReimaginingAlbum = {
+  title: 'Electronic Originals And Reimaginations',
+  volume: 'Electronic originals',
+  url: 'https://suno.com/album/4f3cf988-b2a8-4e04-b0f7-27fc6e99eb0c',
+  shareUrl: 'https://suno.com/s/DOe9T1qVrD5GuR6c',
+  description: 'Eleven original electronic productions made in FL Studio, each followed by two Suno reimaginings.',
+} as const;
+
+export const featuredReimaginingAlbums = [...reimaginedAlbums, electronicReimaginingAlbum].map((album) => ({
+  ...album,
+  imageUrl: sunoAlbums.find((candidate) => candidate.url === album.url)?.imageUrl,
+  pageUrl: sunoAlbums.find((candidate) => candidate.url === album.url)?.pageUrl,
+}));
 
 export const reimaginedAlbum = reimaginedAlbums[0];
 
@@ -501,6 +525,32 @@ export const reimagined: Reimagining[] = [
   },
 ];
 
+export const electronicReimagined: Reimagining[] = [
+  ['Sounds of Success', 'Sounds of Success', 'Prog rock', 'electronic', '015ee314-95fc-4707-b744-a8f62da38878', 'f2e93bc1-e6c1-4732-b300-33d86087b771'],
+  ['Spilling Guts', 'Spilling Guts', 'Prog rock and IDM', 'electronic', 'fd37bd65-d84f-4c16-8162-ef2a1f66d47c', '8b3003e6-0b74-4676-b7ae-8fd432886690'],
+  ['Power Ballad of Power and Frustration', 'Power Ballad Of Love And Frustration', 'Prog rock and IDM', 'electronic', '2d88142b-5111-4990-808d-d20c56ffea10', '4ea3c3e1-cad0-4c47-9803-a5538316eb60'],
+  ['A Beautiful Dying Radio', 'Alex Merced - A Beautiful Dying Radio', 'IDM and prog rock', 'acoustic', 'b6282ba9-31b6-4f9c-b754-c30029f3fb4b', '99febc88-3acd-4319-bf64-c2fb3b05b185'],
+  ['Warm Night Warm Piano', 'Warm Night Warm Piano', 'IDM and prog rock', 'electronic', '43cc3561-f368-4519-9068-1d4c16b0d8ab', 'c2333bdb-b8c3-49f0-a7d2-c980087a1f02'],
+  ['The Best of Me', 'The Best Of Me', 'IDM and prog rock', 'electronic', '644e8403-0a00-4e4d-bd27-9f57f5a4f8fb', '07a5b30a-c9a8-48f8-a744-c13011f751c0'],
+  ['Sweet Melody of Love', 'Sweet Melody of Love', 'IDM and prog rock', 'electronic', 'efc5d442-0aac-4f66-86a4-9d9808f572ae', 'cfdd40a1-12bb-4856-971b-8964beb8bdec'],
+  ['Video Game Lullaby', 'Video Game Lullaby', 'IDM and prog rock', 'electronic', 'e2f57365-f03e-4548-a310-14cac5375197', 'cb89e318-6743-47c4-af41-37d601570142'],
+  ['Figure it Out Again', 'Figure it Out Again', 'IDM and prog rock', 'electronic', '6a4c47b9-8850-4882-8bfd-67b513641a73', 'aaa096c3-3019-4ec7-bdee-2fd7dabbfe7a'],
+  ["The Games I've Played", "The Games I've Played", 'IDM and prog rock', 'electronic', 'bd241ff6-dbc9-461d-8efd-c5df3c7e8a23', 'b4a42754-a670-479f-a333-99f21aa92a59'],
+  ['Your Heart Give To', 'You Heart Give To', 'IDM and prog rock', 'electronic', '915ba909-c535-45ea-836e-315e2725752d', 'a8c54445-e618-481a-8ed0-24242ce62a7b'],
+].map(([title, original, style, originalEra, versionOne, versionTwo]) => ({
+  title,
+  original,
+  originalEra: originalEra as Era,
+  style,
+  url: `https://suno.com/song/${versionOne}`,
+  links: [
+    { source: 'suno', url: `https://suno.com/song/${versionOne}`, label: 'Electronic album · version 1' },
+    { source: 'suno', url: `https://suno.com/song/${versionTwo}`, label: 'Electronic album · version 2' },
+  ],
+}));
+
+export const allReimagined: Reimagining[] = [...reimagined, ...electronicReimagined];
+
 // ---------------------------------------------------------------- electronic
 
 export type Album = {
@@ -564,6 +614,19 @@ const additionalLinks: Record<string, TrackLink[]> = {
   [normaliseTitle('You Heart Give To')]: [{ source: 'soundcloud', url: 'https://soundcloud.com/alex-merced/you-heart-give-to' }],
 };
 
+const canonicalElectronicAlbumOriginals: Record<string, string> = {
+  [normaliseTitle('Sounds of Success')]: '4b862000-d1b2-4920-8452-a4a8280f4cfc',
+  [normaliseTitle('Spilling Guts')]: '4d2a7d46-2201-4388-9dfc-4c4e336c67b6',
+  [normaliseTitle('Power Ballad Of Love And Frustration')]: 'aeba627b-3f20-4123-bff4-e75e23aabbeb',
+  [normaliseTitle('Warm Night Warm Piano')]: '3ab82692-ffdd-43d6-b9e2-465a4cece424',
+  [normaliseTitle('The Best Of Me')]: 'b671ffc8-7d08-4097-99b1-a0ea92c6fe05',
+  [normaliseTitle('Sweet Melody of Love')]: 'c9f710d4-7bf2-40fb-8095-e6e195e97e58',
+  [normaliseTitle('Video Game Lullaby')]: '605fa215-2965-4321-bb93-f7f4c200634b',
+  [normaliseTitle('Figure it Out Again')]: '6b55ddbe-e572-4678-8d94-b021967ac224',
+  [normaliseTitle("The Games I've Played")]: '593144f0-0ad0-44b5-837b-0032c74ad4e7',
+  [normaliseTitle('You Heart Give To')]: 'd342cdd6-37f3-4dcd-9214-cb495ee1d952',
+};
+
 /** Produced-song videos currently published on the Alex Merced Music channel. */
 const youtubeProduced: ElectronicTrack[] = [
   { title: 'Funk, Melody and Glitch', seconds: 197, sources: ['youtube'], url: 'https://www.youtube.com/watch?v=wLeDxj6SN6o' },
@@ -589,8 +652,13 @@ const baseElectronicTracks = (electronicTracksData as ElectronicTrack[]).map((tr
     : track.sources.includes('soundcloud-albums') && track.url.includes('/alexmerced/')
       ? 'soundcloud-albums'
       : 'soundcloud';
-  const links = [{ source: primarySource, url: track.url }, ...(additionalLinks[normaliseTitle(track.title)] ?? [])];
-  return { ...track, links };
+  const sunoId = canonicalElectronicAlbumOriginals[normaliseTitle(track.title)];
+  const links = [
+    { source: primarySource, url: track.url },
+    ...(additionalLinks[normaliseTitle(track.title)] ?? []),
+    ...(sunoId ? [{ source: 'suno' as const, url: `https://suno.com/song/${sunoId}`, label: 'Suno album original' }] : []),
+  ];
+  return { ...track, sources: sunoId ? [...new Set([...track.sources, 'suno' as const])] : track.sources, links };
 });
 
 for (const youtubeTrack of youtubeProduced) {
@@ -662,11 +730,13 @@ export const sunoCovers: Track[] = sunoCoversData as Track[];
 export const sunoStyle = 'glitch hop, indie prog, AI-voice covers and experimental generated songs';
 
 /** Published Suno generations, including alternate generations of rebuilt songs. */
-export const sunoCoverGenerationCount = reimagined.reduce(
+export const sunoCoverGenerationCount = allReimagined.reduce(
   (total, song) => total + (song.links?.filter((link) => link.source === 'suno').length ?? 0),
   0,
 );
-export const sunoCanonicalOriginalCount = Object.keys(canonicalAcousticAlbumOriginals).length;
+export const sunoCanonicalOriginalCount = Object.keys(canonicalAcousticAlbumOriginals).length
+  + Object.keys(featuredArchiveAlbumOriginals).length
+  + Object.keys(canonicalElectronicAlbumOriginals).length;
 export const sunoPublishedCount = sunoSongs.length + sunoCoverGenerationCount + sunoCanonicalOriginalCount;
 
 // ---------------------------------------------------------------- where
@@ -757,7 +827,7 @@ export const platforms: Platform[] = [
     label: 'AI Covers of Alex Merced Songs',
     url: 'https://www.youtube.com/playlist?list=PLl161oA2QyHt1dJRZe81vAF-QHQjmBwjg',
     era: 'ai',
-    note: 'Seven earlier YouTube rebuilds, each opening with a clip of the source recording. Two canonical Suno albums hold eighteen originals and two new reimaginings of each.',
+    note: 'Three featured Suno albums hold 29 acoustic and electronic originals beside two new reimaginings of each. Seven earlier YouTube rebuilds remain available.',
     stat: '7 videos',
   },
   {
@@ -785,7 +855,7 @@ export const platforms: Platform[] = [
     label: 'Suno',
     url: 'https://suno.com/@alexmerced',
     era: 'ai',
-    note: `The current generated catalog: ${sunoSongs.length} newer songs and ${sunoCoverGenerationCount} published generations of ${reimagined.length} archive covers.`,
+    note: `The current generated catalog: ${sunoSongs.length} newer songs and ${sunoCoverGenerationCount} published generations of ${allReimagined.length} acoustic and electronic reimaginings.`,
     stat: `${sunoPublishedCount} songs`,
   },
   {

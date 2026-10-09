@@ -1,13 +1,13 @@
 import {
   acousticTracks,
+  allReimagined,
   albums,
   distributedReleases,
   electronicRuntime,
   electronicStats,
   electronicTracks,
   platforms,
-  reimagined,
-  reimaginedAlbums,
+  featuredReimaginingAlbums,
   sunoCovers,
   sunoAlbums,
   sunoPublishedCount,
@@ -22,8 +22,8 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.12.0';
-export const CATALOG_UPDATED_AT = '2026-10-08';
+export const CATALOG_SCHEMA_VERSION = '1.13.0';
+export const CATALOG_UPDATED_AT = '2026-10-09';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -150,6 +150,7 @@ const linksFor = (
 type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
   key: string;
   originalTitle?: string;
+  originalEra?: Era;
 };
 
 type DerivedSeed = SongSeed & {
@@ -214,7 +215,7 @@ const seeds: SongSeed[] = [
     imageUrl: source?.imageUrl,
     creationMethod: 'Produced by Alex Merced in FL Studio.',
   }); }),
-  ...reimagined.map((track) => {
+  ...allReimagined.map((track) => {
     const latestSunoLink = [...(track.links ?? [])].reverse().find((link) => link.label?.startsWith('Suno album'))
       ?? [...(track.links ?? [])].reverse().find((link) => link.source === 'suno');
     const source = latestSunoLink ? sunoCoverByUrl.get(latestSunoLink.url) : undefined;
@@ -228,6 +229,7 @@ const seeds: SongSeed[] = [
     length: track.length,
     style: track.style,
     originalTitle: track.original,
+    originalEra: track.originalEra ?? 'acoustic',
     createdAt: source?.createdAt,
     catalogedAt: CATALOG_UPDATED_AT,
     durationSeconds: source?.durationSeconds,
@@ -271,13 +273,13 @@ const provisional: DerivedSeed[] = seeds.map((seed) => {
   return { ...seed, id, slug, pageUrl: `${SITE}/songs/${slug}/` };
 });
 
-const acousticByTitle = new Map(provisional
-  .filter((song) => song.kind === 'archive')
-  .map((song) => [song.title, song]));
+const originalsByEraAndTitle = new Map(provisional
+  .filter((song) => song.kind === 'archive' || song.kind === 'electronic')
+  .map((song) => [`${song.era}:${song.title}`, song]));
 
 const reimaginedWithOriginals: DerivedSeed[] = provisional.map((song) => {
   if (song.kind !== 'reimagined' || !song.originalTitle) return song;
-  const original = acousticByTitle.get(song.originalTitle);
+  const original = originalsByEraAndTitle.get(`${song.originalEra ?? 'acoustic'}:${song.originalTitle}`);
   return {
     ...song,
     originalTrackId: original?.id,
@@ -293,7 +295,7 @@ for (const song of reimaginedWithOriginals) {
   rebuildsByOriginal.set(song.originalTrackId, related);
 }
 
-const baseSongs = reimaginedWithOriginals.map(({ key: _key, originalTitle: _originalTitle, ...song }) => {
+const baseSongs = reimaginedWithOriginals.map(({ key: _key, originalTitle: _originalTitle, originalEra: _originalEra, ...song }) => {
   const rebuilds = rebuildsByOriginal.get(song.id) ?? [];
   return {
     ...song,
@@ -442,7 +444,7 @@ export const publicCatalog = {
   suno: {
     style: sunoStyle,
     publishedCount: sunoPublishedCount,
-    featuredAcousticReimaginingAlbums: reimaginedAlbums,
+    featuredReimaginingAlbums,
     albums: catalogSunoAlbums,
     playlists: catalogSunoPlaylists,
   },
