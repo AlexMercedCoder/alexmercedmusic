@@ -188,6 +188,16 @@ const featuredAlbumUrls = [
   'https://suno.com/album/8ed01f70-e1ff-4cd8-aeb8-44f0f8e99fd4',
   'https://suno.com/album/4f3cf988-b2a8-4e04-b0f7-27fc6e99eb0c',
 ];
+const homepage = read('dist/index.html');
+const heroStart = homepage.indexOf('<section class="section hero"');
+const heroEnd = homepage.indexOf('</section>', heroStart);
+const heroHtml = homepage.slice(heroStart, heroEnd);
+assert.ok(heroHtml.includes('class="hero-albums"'), 'The homepage hero is missing the featured album-cover grid.');
+assert.ok(heroHtml.indexOf('class="hero-albums"') < heroHtml.indexOf('<h1'), 'The featured album covers must appear before the homepage headline.');
+for (const album of catalog.suno.featuredReimaginingAlbums) {
+  assert.ok(heroHtml.includes(album.url), `The homepage hero is missing ${album.title}.`);
+  assert.ok(heroHtml.includes(album.imageUrl), `The homepage hero is missing the cover for ${album.title}.`);
+}
 for (const path of ['dist/index.html', 'dist/acoustic/index.html', 'dist/electronic/index.html', 'dist/reimagined/index.html', 'dist/suno/index.html', 'dist/listen/index.html', 'dist/about/index.html', 'dist/stories/originals-and-reimaginings/index.html', 'dist/stories/revisiting-songs-with-suno/index.html', 'dist/llms.txt', 'dist/llms-full.txt']) {
   const html = read(path);
   for (const url of featuredAlbumUrls) assert.ok(html.includes(url), `${path} is missing featured reimagining album ${url}.`);

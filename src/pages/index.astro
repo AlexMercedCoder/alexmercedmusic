@@ -3,7 +3,7 @@ import Base from '../layouts/Base.astro';
 import PlatformMark from '../components/PlatformMark.astro';
 import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
 import {
-  acousticTracks, acousticPlaylist, allReimagined, reimaginedPlaylist,
+  acousticTracks, acousticPlaylist, allReimagined, featuredReimaginingAlbums, reimaginedPlaylist,
   albums, distributedReleases, electronicStats, electronicRuntime, electronicTracks, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
@@ -41,47 +41,50 @@ const jsonLd = [
 >
   <section class="section hero">
     <div class="shell">
-      <div class="hero__grid">
-        <div>
-          <p class="eyebrow">Songs, recordings and productions</p>
-          <h1>The same songs,<br />twenty years apart.</h1>
-          <p class="lede">
-            Alex Merced has been writing and recording since the mid-2000s: a guitar and a
-            camera first, then years of electronic production, and lately a set of those
-            early songs rebuilt with an AI model. This is where all three live.
-          </p>
-          <div class="era-key">
-            <span data-era="acoustic"><i></i>Acoustic</span>
-            <span data-era="electronic"><i></i>Electronic</span>
-            <span data-era="ai"><i></i>Rebuilt with Suno</span>
-          </div>
-          <div style="margin-top:1.6rem">
-            <a class="btn btn--primary" href="#originals-and-reimaginings">Hear the originals beside the reimaginings</a>
-            <div class="btn-row" style="margin-top:.8rem">
-              <a class="btn" href="/reimagined/">Compare every version</a>
-              <a class="btn" href="/songs/">Explore every song</a>
-              <a class="btn" href="/videos/">Browse music videos</a>
-            </div>
-          </div>
-          <nav class="streaming-links" aria-label="Listen on streaming platforms">
-            <p>Listen on</p>
-            <div>
-              {homepagePlatforms.map((platform) => (
-                <a href={platform.url} aria-label={`Listen to Alex Merced on ${platform.label}`} title={platform.label}>
-                  <PlatformMark platform={platform.label} />
-                  <span>{platform.label}</span>
-                </a>
-              ))}
-            </div>
-          </nav>
+      <div class="hero-album-lead">
+        <p class="eyebrow">Originals and reimaginings</p>
+        <div class="hero-albums" aria-label="Featured originals and reimaginings albums">
+          {featuredReimaginingAlbums.map((album) => (
+            <a class="hero-album" href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
+              {album.imageUrl && <img src={album.imageUrl} width="640" height="640" loading="eager" decoding="async" alt={`Cover of ${album.title}`} />}
+              <span><small>{album.volume}</small>{album.title}</span>
+            </a>
+          ))}
         </div>
-        <img
-          class="hero__portrait"
-          src="/images/portrait-hero.webp"
-          width="900" height="900"
-          alt="Alex Merced"
-          fetchpriority="high"
-        />
+        <p class="hero-album-lead__hint">Choose an album to hear each original recording beside two Suno reimaginings.</p>
+      </div>
+
+      <div class="hero__copy">
+        <p class="eyebrow">Songs, recordings and productions</p>
+        <h1>The same songs,<br />twenty years apart.</h1>
+        <p class="lede">
+          Alex Merced has been writing and recording since the mid-2000s: a guitar and a
+          camera first, then years of electronic production, and lately a set of those
+          early songs rebuilt with an AI model. This is where all three live.
+        </p>
+        <div class="era-key">
+          <span data-era="acoustic"><i></i>Acoustic</span>
+          <span data-era="electronic"><i></i>Electronic</span>
+          <span data-era="ai"><i></i>Rebuilt with Suno</span>
+        </div>
+        <div style="margin-top:1.6rem">
+          <a class="btn btn--primary" href="/reimagined/">Compare every original and reimagining</a>
+          <div class="btn-row" style="margin-top:.8rem">
+            <a class="btn" href="/songs/">Explore every song</a>
+            <a class="btn" href="/videos/">Browse music videos</a>
+          </div>
+        </div>
+        <nav class="streaming-links" aria-label="Listen on streaming platforms">
+          <p>Listen on</p>
+          <div>
+            {homepagePlatforms.map((platform) => (
+              <a href={platform.url} aria-label={`Listen to Alex Merced on ${platform.label}`} title={platform.label}>
+                <PlatformMark platform={platform.label} />
+                <span>{platform.label}</span>
+              </a>
+            ))}
+          </div>
+        </nav>
       </div>
 
       <div class="stats" style="margin-top:2.5rem">
