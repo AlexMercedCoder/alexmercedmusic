@@ -1,0 +1,25 @@
+---
+import { SITE, songById, type CatalogVideo } from '../data/catalog-model';
+
+const { video } = Astro.props as { video: CatalogVideo };
+const connectedSongs = video.relatedSongIds.flatMap((id) => songById.get(id) ?? []);
+const isShort = video.videoType === 'short';
+const published = new Intl.DateTimeFormat('en-US', {
+  year: 'numeric',
+  month: 'short',
+  day: 'numeric',
+  timeZone: 'UTC',
+}).format(new Date(video.publishedAt));
+---
+
+<article class:list={['video-card', isShort && 'video-card--short']}>
+  <a class="video-card__image" href={video.pageUrl.replace(SITE, '')}>
+    <img src={video.imageUrl} width={isShort ? 480 : 640} height={isShort ? 854 : 360} loading="lazy" alt={`${isShort ? 'Short' : 'Video'} thumbnail for ${video.title}`} />
+  </a>
+  <div class="video-card__body">
+    <p class="eyebrow">{isShort ? 'Short' : 'Video'} · {published}</p>
+    <h3><a href={video.pageUrl.replace(SITE, '')}>{video.title}</a></h3>
+    <p>{connectedSongs.length ? `${connectedSongs.length} connected song record${connectedSongs.length === 1 ? '' : 's'}` : 'No matching song record yet'}</p>
+    <div class="video-card__links"><a href={video.pageUrl.replace(SITE, '')}>Details</a><a href={video.watchUrl}>Watch on YouTube ↗</a></div>
+  </div>
+</article>

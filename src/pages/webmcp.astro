@@ -8,7 +8,7 @@ const tools = [
   ['search_songs', 'Full-text discovery with era, kind, album and source filters.'],
   ['list_songs', 'Paginated catalog browsing without a search term.'],
   ['get_recent_songs', 'The most recently published dated recordings.'],
-  ['list_videos', 'Every public channel video, searchable and filterable by song connection.'],
+  ['list_videos', 'Every public YouTube Short and video, searchable and filterable by type or song connection.'],
   ['get_video', 'One video with matching song records and other known versions.'],
   ['compare_versions', 'An original recording and every known reimagined version.'],
   ['list_suno_playlists', 'Every public Suno playlist with its direct URL, artwork, song count and runtime.'],
@@ -71,7 +71,7 @@ const tools = [
       </ol>
       <h2>Video workflow</h2>
       <ol>
-        <li>Call <code>list_videos</code> with a title fragment or use the linked filter.</li>
+        <li>Call <code>list_videos</code> with a title fragment, <code>videoType</code> set to <code>short</code> or <code>video</code>, or use the linked filter.</li>
         <li>Pass the returned YouTube ID to <code>get_video</code>.</li>
         <li>Use the matching songs and other versions to move across every known piece of media for that work.</li>
       </ol>

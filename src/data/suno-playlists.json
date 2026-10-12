@@ -1,5 +1,199 @@
 [
   {
+    "id": "6e723134-871d-4f69-830f-b0baca2c35a2",
+    "name": "My Screamo Album, cause I’m A Millennial",
+    "resourceType": "album",
+    "url": "https://suno.com/album/6e723134-871d-4f69-830f-b0baca2c35a2",
+    "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg",
+    "songCount": 20,
+    "durationSeconds": 4265.28,
+    "description": "This album is made of 20 Screamo songs each telling a story of love through a different body horror metaphor.",
+    "trackIds": [
+      "791de977-aec2-4cd5-8ad9-b4922f6f9e94",
+      "67542d29-1b8e-4445-b47c-018d5f82f20b",
+      "d16a010d-d852-4853-85d5-0a2f76de0e50",
+      "04dbceda-8c07-4e77-a08f-8404aba40a31",
+      "1b1f3fa2-be34-4c1a-a8c0-ac631c1987e2",
+      "2996ab40-66e6-4bd7-b175-1c011c7fb315",
+      "8db17257-deb5-4441-825e-8a11cdccec7b",
+      "78679985-aaf7-41c6-a136-ab51d99ff6e8",
+      "ee6c2e33-f01c-4457-919e-5171fa044a58",
+      "ac93acec-9c88-4aa3-87e6-2a36b01bd565",
+      "9112027b-acc1-40c0-9e1c-2e3d2ad47cc4",
+      "bf0f4ab6-1ad0-4e8d-a476-7fbcd90126b5",
+      "e42e6fac-2162-4b7b-9068-77d0213cde02",
+      "67dc884f-c458-4220-b778-539d6e34d2c3",
+      "e728092b-9d77-4fef-ac86-366170ad2f94",
+      "1e8c2068-0284-4673-a23d-be93bc041bee",
+      "0b1988fe-3dd7-4481-9e3a-fc80a445e9b2",
+      "9feb0ae1-9f1c-4a87-869f-04a5ec3a017a",
+      "d79235d3-dbd0-40a2-979c-e74c24f7ebde",
+      "5f3d5bdd-55ed-433b-b8a7-ca2a36cc9942"
+    ],
+    "tracks": [
+      {
+        "id": "791de977-aec2-4cd5-8ad9-b4922f6f9e94",
+        "title": "Let the Stitches Show",
+        "url": "https://suno.com/song/791de977-aec2-4cd5-8ad9-b4922f6f9e94",
+        "createdAt": "2026-10-11T23:38:14.668Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "67542d29-1b8e-4445-b47c-018d5f82f20b",
+        "title": "Second Skin Growing Wrong",
+        "url": "https://suno.com/song/67542d29-1b8e-4445-b47c-018d5f82f20b",
+        "createdAt": "2026-10-11T23:40:22.969Z",
+        "durationSeconds": 196.36,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "d16a010d-d852-4853-85d5-0a2f76de0e50",
+        "title": "Beautiful Ache",
+        "url": "https://suno.com/song/d16a010d-d852-4853-85d5-0a2f76de0e50",
+        "createdAt": "2026-10-11T23:45:35.125Z",
+        "durationSeconds": 186.04,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "04dbceda-8c07-4e77-a08f-8404aba40a31",
+        "title": "Fungus on My Heart",
+        "url": "https://suno.com/song/04dbceda-8c07-4e77-a08f-8404aba40a31",
+        "createdAt": "2026-10-11T23:46:36.304Z",
+        "durationSeconds": 198,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "1b1f3fa2-be34-4c1a-a8c0-ac631c1987e2",
+        "title": "Engine Hate Bruise",
+        "url": "https://suno.com/song/1b1f3fa2-be34-4c1a-a8c0-ac631c1987e2",
+        "createdAt": "2026-10-11T23:48:39.748Z",
+        "durationSeconds": 165.12,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "2996ab40-66e6-4bd7-b175-1c011c7fb315",
+        "title": "Butterfly Beneath My Skin",
+        "url": "https://suno.com/song/2996ab40-66e6-4bd7-b175-1c011c7fb315",
+        "createdAt": "2026-10-11T23:53:31.988Z",
+        "durationSeconds": 220.36,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "8db17257-deb5-4441-825e-8a11cdccec7b",
+        "title": "A Thousand Eyes",
+        "url": "https://suno.com/song/8db17257-deb5-4441-825e-8a11cdccec7b",
+        "createdAt": "2026-10-11T23:54:45.019Z",
+        "durationSeconds": 251.76,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "78679985-aaf7-41c6-a136-ab51d99ff6e8",
+        "title": "Mirror Tumor",
+        "url": "https://suno.com/song/78679985-aaf7-41c6-a136-ab51d99ff6e8",
+        "createdAt": "2026-10-11T23:58:04.192Z",
+        "durationSeconds": 214.4,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "ee6c2e33-f01c-4457-919e-5171fa044a58",
+        "title": "Mirror Image",
+        "url": "https://suno.com/song/ee6c2e33-f01c-4457-919e-5171fa044a58",
+        "createdAt": "2026-10-11T23:58:04.191Z",
+        "durationSeconds": 186.08,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "ac93acec-9c88-4aa3-87e6-2a36b01bd565",
+        "title": "Choir Beneath My Skin",
+        "url": "https://suno.com/song/ac93acec-9c88-4aa3-87e6-2a36b01bd565",
+        "createdAt": "2026-10-12T00:05:36.354Z",
+        "durationSeconds": 215.56,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "9112027b-acc1-40c0-9e1c-2e3d2ad47cc4",
+        "title": "Grafted In",
+        "url": "https://suno.com/song/9112027b-acc1-40c0-9e1c-2e3d2ad47cc4",
+        "createdAt": "2026-10-12T00:08:38.270Z",
+        "durationSeconds": 186.4,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "bf0f4ab6-1ad0-4e8d-a476-7fbcd90126b5",
+        "title": "One Scar, Two Histories",
+        "url": "https://suno.com/song/bf0f4ab6-1ad0-4e8d-a476-7fbcd90126b5",
+        "createdAt": "2026-10-12T00:09:01.529Z",
+        "durationSeconds": 221.96,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "e42e6fac-2162-4b7b-9068-77d0213cde02",
+        "title": "The Cord Still Wound",
+        "url": "https://suno.com/song/e42e6fac-2162-4b7b-9068-77d0213cde02",
+        "createdAt": "2026-10-12T00:09:17.119Z",
+        "durationSeconds": 231.4,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "67dc884f-c458-4220-b778-539d6e34d2c3",
+        "title": "One River Under the Skin",
+        "url": "https://suno.com/song/67dc884f-c458-4220-b778-539d6e34d2c3",
+        "createdAt": "2026-10-12T00:09:36.129Z",
+        "durationSeconds": 252,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "e728092b-9d77-4fef-ac86-366170ad2f94",
+        "title": "Same Blood, Same Bruise",
+        "url": "https://suno.com/song/e728092b-9d77-4fef-ac86-366170ad2f94",
+        "createdAt": "2026-10-12T00:09:36.129Z",
+        "durationSeconds": 221.6,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "1e8c2068-0284-4673-a23d-be93bc041bee",
+        "title": "Love Me in Pieces",
+        "url": "https://suno.com/song/1e8c2068-0284-4673-a23d-be93bc041bee",
+        "createdAt": "2026-10-12T00:10:04.233Z",
+        "durationSeconds": 206.28,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "0b1988fe-3dd7-4481-9e3a-fc80a445e9b2",
+        "title": "The Hunger Wears My Face",
+        "url": "https://suno.com/song/0b1988fe-3dd7-4481-9e3a-fc80a445e9b2",
+        "createdAt": "2026-10-12T00:10:25.175Z",
+        "durationSeconds": 209.2,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "9feb0ae1-9f1c-4a87-869f-04a5ec3a017a",
+        "title": "Voice in the Blood",
+        "url": "https://suno.com/song/9feb0ae1-9f1c-4a87-869f-04a5ec3a017a",
+        "createdAt": "2026-10-12T00:10:55.746Z",
+        "durationSeconds": 216.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "d79235d3-dbd0-40a2-979c-e74c24f7ebde",
+        "title": "Come Apart With Me",
+        "url": "https://suno.com/song/d79235d3-dbd0-40a2-979c-e74c24f7ebde",
+        "createdAt": "2026-10-12T00:11:14.977Z",
+        "durationSeconds": 222,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      },
+      {
+        "id": "5f3d5bdd-55ed-433b-b8a7-ca2a36cc9942",
+        "title": "Every Love Grows Roots",
+        "url": "https://suno.com/song/5f3d5bdd-55ed-433b-b8a7-ca2a36cc9942",
+        "createdAt": "2026-10-12T01:12:06.682Z",
+        "durationSeconds": 277.96,
+        "imageUrl": "https://cdn2.suno.ai/image_0d7cb624-29ab-4fbb-92df-d58011cd3bf6.jpeg"
+      }
+    ]
+  },
+  {
     "id": "c07511d9-8b1d-445b-ac94-414737eaa799",
     "name": "Am I Good?",
     "resourceType": "album",

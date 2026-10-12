@@ -51,6 +51,7 @@ export type YouTubeMetadata = {
   imageUrl?: string;
   durationSeconds?: number;
   channelPosition?: number;
+  videoType?: 'short' | 'video';
 };
 export const youtubeMetadata = youtubeMetadataData as Record<string, YouTubeMetadata>;
 export type SunoPlaylist = {

@@ -22,8 +22,8 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.13.0';
-export const CATALOG_UPDATED_AT = '2026-10-11';
+export const CATALOG_SCHEMA_VERSION = '1.14.0';
+export const CATALOG_UPDATED_AT = '2026-10-12';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -77,6 +77,7 @@ export type CatalogVideo = {
   publishedAt: string;
   durationSeconds?: number;
   channelPosition: number;
+  videoType: 'short' | 'video';
   songIds: string[];
   relatedSongIds: string[];
 };
@@ -362,17 +363,19 @@ export const videos: CatalogVideo[] = Object.entries(youtubeMetadata)
     const matchTitles = [normalizedTitle, ...(videoTitleAliases[normalizedTitle] ?? [])];
     const titleMatches = matchTitles.flatMap((title) => songsByNormalizedTitle.get(title) ?? []);
     const songIds = [...new Set(sourceSong ? [sourceSong.id] : titleMatches.map((song) => song.id))];
+    const videoType = metadata.videoType ?? (metadata.durationSeconds && metadata.durationSeconds <= 60 ? 'short' : 'video');
     return {
       id: `video:youtube:${id}`,
       youtubeId: id,
       title: metadata.title ?? id,
       pageUrl: `${SITE}/videos/${id.toLowerCase()}/`,
-      watchUrl: `https://www.youtube.com/watch?v=${id}`,
+      watchUrl: videoType === 'short' ? `https://www.youtube.com/shorts/${id}` : `https://www.youtube.com/watch?v=${id}`,
       embedUrl: `https://www.youtube-nocookie.com/embed/${id}`,
       imageUrl: metadata.imageUrl ?? `https://i.ytimg.com/vi/${id}/hqdefault.jpg`,
       publishedAt: metadata.publishedAt,
       durationSeconds: metadata.durationSeconds,
       channelPosition: metadata.channelPosition!,
+      videoType,
       songIds,
       relatedSongIds: relatedSongIdsFor(songIds),
     };
@@ -439,6 +442,8 @@ export const publicCatalog = {
     sunoPlaylists: sunoPlaylists.length,
     sunoAlbums: sunoAlbums.length,
     videos: videos.length,
+    shorts: videos.filter((video) => video.videoType === 'short').length,
+    longFormVideos: videos.filter((video) => video.videoType === 'video').length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
   suno: {

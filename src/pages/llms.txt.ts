@@ -12,13 +12,15 @@ Catalog updated: ${publicCatalog.updatedAt}
 Catalog schema: ${publicCatalog.schemaVersion}
 Songs: ${publicCatalog.counts.songs}
 Public Suno generations: ${publicCatalog.counts.sunoPublished}
-Public YouTube videos: ${publicCatalog.counts.videos}
+Public YouTube uploads: ${publicCatalog.counts.videos}
+YouTube Shorts: ${publicCatalog.counts.shorts}
+Full YouTube videos: ${publicCatalog.counts.longFormVideos}
 
 ## Primary pages
 
 - [Home](${publicCatalog.site}/)
 - [Explore songs](${publicCatalog.site}/songs/)
-- [Music videos](${publicCatalog.site}/videos/)
+- [Videos and Shorts](${publicCatalog.site}/videos/)
 - [Acoustic archive](${publicCatalog.site}/acoustic/)
 - [Electronic catalog](${publicCatalog.site}/electronic/)
 - [Reimagined songs](${publicCatalog.site}/reimagined/)

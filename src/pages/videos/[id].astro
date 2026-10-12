@@ -11,12 +11,13 @@ const { video } = Astro.props as { video: CatalogVideo };
 const canonicalSong = videoCanonicalSong(video);
 const directSongs = video.songIds.flatMap((id) => songById.get(id) ?? []);
 const otherVersions = video.relatedSongIds.filter((id) => !video.songIds.includes(id)).flatMap((id) => songById.get(id) ?? []);
+const isShort = video.videoType === 'short';
 const duration = video.durationSeconds ? `PT${Math.floor(video.durationSeconds / 60)}M${video.durationSeconds % 60}S` : undefined;
 const jsonLd = [{
   '@type': 'VideoObject',
   '@id': `${video.pageUrl}#video`,
   name: video.title,
-  description: `${video.title}, a music video from Alex Merced Music.`,
+  description: `${video.title}, a YouTube ${isShort ? 'Short' : 'music video'} from Alex Merced Music.`,
   thumbnailUrl: [video.imageUrl],
   uploadDate: video.publishedAt,
   contentUrl: video.watchUrl,
@@ -28,18 +29,18 @@ const jsonLd = [{
   '@type': 'BreadcrumbList',
   itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-    { '@type': 'ListItem', position: 2, name: 'Music videos', item: `${SITE}/videos/` },
+    { '@type': 'ListItem', position: 2, name: 'Videos and Shorts', item: `${SITE}/videos/` },
     { '@type': 'ListItem', position: 3, name: video.title, item: video.pageUrl },
   ],
 }];
 ---
 
-<Base title={video.title} description={`Watch ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`Video thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)} canonicalUrl={canonicalSong?.pageUrl} noindex={!canonicalSong}>
-  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Music videos', href: '/videos/' }, { label: video.title }]} />
+<Base title={video.title} description={`Watch the YouTube ${isShort ? 'Short' : 'video'} ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`${isShort ? 'Short' : 'Video'} thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)} canonicalUrl={canonicalSong?.pageUrl} noindex={!canonicalSong}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Videos and Shorts', href: '/videos/' }, { label: video.title }]} />
   <article class="section detail">
     <div class="shell detail__grid">
       <div>
-        <p class="eyebrow">Music video</p>
+        <p class="eyebrow">YouTube {isShort ? 'Short' : 'video'}</p>
         <h1>{video.title}</h1>
         <p class="lede">Watch the video, then follow its catalog connections to the song record, listening sources and other known versions.</p>
         <dl class="facts">
@@ -50,7 +51,7 @@ const jsonLd = [{
         </dl>
         <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href={video.watchUrl}>Watch on YouTube ↗</a><button class="btn" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play here</button></div>
       </div>
-      <div class="embed embed--poster"><img src={video.imageUrl} width="640" height="360" alt={`Video thumbnail for ${video.title}`} /><button class="btn btn--primary" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play video</button></div>
+      <div class:list={['embed', 'embed--poster', isShort && 'embed--short']}><img src={video.imageUrl} width={isShort ? 480 : 640} height={isShort ? 854 : 360} alt={`${isShort ? 'Short' : 'Video'} thumbnail for ${video.title}`} /><button class="btn btn--primary" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play {isShort ? 'Short' : 'video'}</button></div>
     </div>
 
     {(directSongs.length > 0 || otherVersions.length > 0) && <div class="shell relationship">
@@ -61,3 +62,7 @@ const jsonLd = [{
     <div class="shell relationship"><div class="btn-row"><a class="btn" href="/videos/">Browse every video</a><a class="btn" href="/songs/">Explore every song</a></div></div>
   </article>
 </Base>
+
+<style>
+  .embed--short{max-width:28rem;justify-self:center}.embed--short img{aspect-ratio:9/16;object-fit:cover}
+</style>

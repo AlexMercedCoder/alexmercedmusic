@@ -85,6 +85,7 @@
       imageUrl: video.imageUrl,
       publishedAt: video.publishedAt,
       durationSeconds: video.durationSeconds ?? null,
+      videoType: video.videoType,
       songIds: video.songIds,
       relatedSongIds: video.relatedSongIds,
     });
@@ -251,12 +252,13 @@
       },
       {
         name: 'list_videos',
-        description: 'List and search every public video on the Alex Merced Music YouTube channel. Results include canonical video pages and matching or related song IDs.',
+        description: 'List and search every public Short and full video on the Alex Merced Music YouTube channel. Shorts are returned first by default, and results include canonical pages plus matching or related song IDs.',
         inputSchema: {
           type: 'object',
           properties: {
             query: { type: 'string', minLength: 1 },
             connection: { type: 'string', enum: ['all', 'linked', 'unlinked'], default: 'all' },
+            videoType: { type: 'string', enum: ['all', 'short', 'video'], default: 'all' },
             limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 },
             offset: { type: 'integer', minimum: 0, default: 0 },
           },
@@ -266,10 +268,12 @@
           const catalog = await getCatalog(signal);
           const query = textValue(input, 'query').toLowerCase();
           const connection = textValue(input, 'connection') || 'all';
+          const videoType = textValue(input, 'videoType') || 'all';
           const matches = catalog.videos.filter((video) =>
             (!query || video.title.toLowerCase().includes(query))
+            && (videoType === 'all' || video.videoType === videoType)
             && (connection === 'all' || (connection === 'linked' && video.relatedSongIds.length) || (connection === 'unlinked' && !video.relatedSongIds.length)));
-          return { query: query || null, connection, ...page(matches.map(videoSummary), input) };
+          return { query: query || null, connection, videoType, ...page(matches.map(videoSummary), input) };
         },
       },
       {

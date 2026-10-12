@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '1.13.0');
+assert.equal(catalog.schemaVersion, '1.14.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -62,12 +62,16 @@ for (const song of catalog.songs) {
 }
 
 assert.equal(catalog.counts.videos, catalog.videos.length);
+assert.equal(catalog.counts.shorts, catalog.videos.filter((video) => video.videoType === 'short').length);
+assert.equal(catalog.counts.longFormVideos, catalog.videos.filter((video) => video.videoType === 'video').length);
+assert.ok(catalog.counts.shorts > 0, 'The public YouTube Shorts inventory is unexpectedly empty.');
 assert.ok(catalog.videos.length > 150, 'The public YouTube inventory is unexpectedly small.');
 assert.ok(catalog.videos.filter((video) => video.relatedSongIds.length).length >= 140, 'Too few videos are connected to song records.');
 for (const video of catalog.videos) {
   assert.equal(video.id, `video:youtube:${video.youtubeId}`);
   assert.equal(video.pageUrl, `${catalog.site}/videos/${video.youtubeId.toLowerCase()}/`);
-  assert.equal(video.watchUrl, `https://www.youtube.com/watch?v=${video.youtubeId}`);
+  assert.ok(['short', 'video'].includes(video.videoType), `${video.youtubeId} has an invalid video type.`);
+  assert.equal(video.watchUrl, video.videoType === 'short' ? `https://www.youtube.com/shorts/${video.youtubeId}` : `https://www.youtube.com/watch?v=${video.youtubeId}`);
   assert.ok(video.title && video.imageUrl && video.publishedAt && video.channelPosition > 0, `${video.youtubeId} has incomplete metadata.`);
   for (const songId of video.songIds) assert.ok(songIds.has(songId), `${video.title} points to a missing song.`);
   for (const songId of video.relatedSongIds) assert.ok(songIds.has(songId), `${video.title} points to a missing related song.`);
@@ -118,6 +122,7 @@ for (const album of sunoAlbums) {
 const sourceYoutubeMetadata = JSON.parse(read('src/data/youtube-metadata.json'));
 assert.ok(Object.keys(sourceYoutubeMetadata).length >= catalog.videos.length);
 assert.equal(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).length, catalog.videos.length);
+assert.ok(Object.values(sourceYoutubeMetadata).filter((video) => video.channelPosition).every((video) => ['short', 'video'].includes(video.videoType)), 'Every public YouTube upload must retain its tab classification.');
 
 for (const path of ['dist/songs/index.html', 'dist/videos/index.html', 'dist/suno/index.html', 'dist/suno-prompting-guide/index.html', 'dist/music-theory/index.html', 'dist/stories/index.html', 'dist/webmcp/index.html', 'dist/feed.xml', 'dist/feed.json', 'dist/song-index.json', 'dist/video-index.json', 'dist/catalog-summary.json', 'dist/catalog.schema.json', 'dist/llms-full.txt']) {
   assert.ok(existsSync(new URL(path, root)), `Missing built discovery surface: ${path}`);
@@ -179,7 +184,11 @@ assert.equal(songIndex.count, catalog.songs.length);
 for (const pageUrl of songPages) assert.ok(songIndex.songs.some((song) => song.pageUrl === pageUrl.replace(catalog.site, '')), `${pageUrl} is missing from the lightweight song index.`);
 const videoIndex = JSON.parse(read('dist/video-index.json'));
 assert.equal(videoIndex.count, catalog.videos.length);
-for (const video of catalog.videos) assert.ok(videoIndex.videos.some((item) => item.id === video.id && item.pageUrl === video.pageUrl.replace(catalog.site, '')), `${video.title} is missing from the lightweight video index.`);
+assert.equal(videoIndex.shortsCount, catalog.counts.shorts);
+assert.equal(videoIndex.videosCount, catalog.counts.longFormVideos);
+for (const video of catalog.videos) assert.ok(videoIndex.videos.some((item) => item.id === video.id && item.pageUrl === video.pageUrl.replace(catalog.site, '') && item.videoType === video.videoType), `${video.title} is missing from the lightweight video index.`);
+const videosPage = read('dist/videos/index.html');
+assert.ok(videosPage.indexOf('id="shorts-section"') < videosPage.indexOf('id="videos-section"'), 'The Videos page must list Shorts before full videos.');
 assert.match(read('dist/feed.xml'), /<rss version="2\.0"/);
 assert.equal(JSON.parse(read('dist/feed.json')).version, 'https://jsonfeed.org/version/1.1');
 const sunoPage = read('dist/suno/index.html');
@@ -293,6 +302,9 @@ assert.ok(recent.items.every((song) => song.createdAt));
 const listedVideos = JSON.parse(await getTool('list_videos').execute({ connection: 'linked', limit: 5 }));
 assert.ok(listedVideos.totalResults >= 140 && listedVideos.items.length === 5);
 assert.ok(listedVideos.items.every((video) => video.relatedSongIds.length));
+const listedShorts = JSON.parse(await getTool('list_videos').execute({ videoType: 'short', limit: 100 }));
+assert.equal(listedShorts.totalResults, catalog.counts.shorts);
+assert.ok(listedShorts.items.every((video) => video.videoType === 'short'));
 const exactVideo = JSON.parse(await getTool('get_video').execute({ youtubeId: '6CjtRMTSjTw' }));
 assert.equal(exactVideo.video.youtubeId, '6CjtRMTSjTw');
 assert.ok(exactVideo.songs.some((song) => song.title === 'Solemn Thoughts'));

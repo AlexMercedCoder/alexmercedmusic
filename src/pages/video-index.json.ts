@@ -5,6 +5,8 @@ export const prerender = true;
 export function GET() {
   return new Response(JSON.stringify({
     count: videos.length,
+    shortsCount: videos.filter((video) => video.videoType === 'short').length,
+    videosCount: videos.filter((video) => video.videoType === 'video').length,
     videos: videos.map((video) => ({
       id: video.id,
       youtubeId: video.youtubeId,
@@ -14,6 +16,7 @@ export function GET() {
       imageUrl: video.imageUrl,
       publishedAt: video.publishedAt,
       durationSeconds: video.durationSeconds ?? 0,
+      videoType: video.videoType,
       songIds: video.songIds,
       relatedSongIds: video.relatedSongIds,
     })),
