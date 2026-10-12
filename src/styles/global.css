@@ -349,7 +349,7 @@ p:last-child { margin-bottom: 0; }
   filter: saturate(0.92) contrast(1.03);
 }
 .release-art { width:100%; aspect-ratio:1; object-fit:cover; border-radius:var(--radius); }
-.hero-album-lead { margin-bottom: clamp(2.5rem, 6vw, 5rem); }
+.hero-album-lead { margin:clamp(1.5rem,3vw,2.25rem) 0; }
 .hero-albums { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:clamp(.65rem,2vw,1.5rem); }
 .hero-album { position:relative; display:block; overflow:hidden; border:1px solid var(--rule); border-radius:var(--radius); color:var(--ink); text-decoration:none; background:var(--night-700); transition:transform .18s ease,border-color .18s ease; }
 .hero-album:hover { transform:translateY(-4px); border-color:var(--ai); }

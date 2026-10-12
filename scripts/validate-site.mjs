@@ -193,7 +193,8 @@ const heroStart = homepage.indexOf('<section class="section hero"');
 const heroEnd = homepage.indexOf('</section>', heroStart);
 const heroHtml = homepage.slice(heroStart, heroEnd);
 assert.ok(heroHtml.includes('class="hero-albums"'), 'The homepage hero is missing the featured album-cover grid.');
-assert.ok(heroHtml.indexOf('class="hero-albums"') < heroHtml.indexOf('<h1'), 'The featured album covers must appear before the homepage headline.');
+assert.ok(heroHtml.indexOf('class="hero-albums"') > heroHtml.indexOf('<h1'), 'The featured album covers must appear after the homepage headline.');
+assert.ok(heroHtml.indexOf('class="hero-albums"') < heroHtml.indexOf('href="/reimagined/"'), 'The featured album covers must appear before the homepage CTA buttons.');
 for (const album of catalog.suno.featuredReimaginingAlbums) {
   assert.ok(heroHtml.includes(album.url), `The homepage hero is missing ${album.title}.`);
   assert.ok(heroHtml.includes(album.imageUrl), `The homepage hero is missing the cover for ${album.title}.`);

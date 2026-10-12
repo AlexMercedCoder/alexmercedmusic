@@ -41,22 +41,21 @@ const jsonLd = [
 >
   <section class="section hero">
     <div class="shell">
-      <div class="hero-album-lead">
-        <p class="eyebrow">Originals and reimaginings</p>
-        <div class="hero-albums" aria-label="Featured originals and reimaginings albums">
-          {featuredReimaginingAlbums.map((album) => (
-            <a class="hero-album" href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
-              {album.imageUrl && <img src={album.imageUrl} width="640" height="640" loading="eager" decoding="async" alt={`Cover of ${album.title}`} />}
-              <span><small>{album.volume}</small>{album.title}</span>
-            </a>
-          ))}
-        </div>
-        <p class="hero-album-lead__hint">Choose an album to hear each original recording beside two Suno reimaginings.</p>
-      </div>
-
       <div class="hero__copy">
         <p class="eyebrow">Songs, recordings and productions</p>
         <h1>The same songs,<br />twenty years apart.</h1>
+        <div class="hero-album-lead">
+          <p class="eyebrow">Originals and reimaginings</p>
+          <div class="hero-albums" aria-label="Featured originals and reimaginings albums">
+            {featuredReimaginingAlbums.map((album) => (
+              <a class="hero-album" href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
+                {album.imageUrl && <img src={album.imageUrl} width="640" height="640" loading="eager" decoding="async" alt={`Cover of ${album.title}`} />}
+                <span><small>{album.volume}</small>{album.title}</span>
+              </a>
+            ))}
+          </div>
+          <p class="hero-album-lead__hint">Choose an album to hear each original recording beside two Suno reimaginings.</p>
+        </div>
         <p class="lede">
           Alex Merced has been writing and recording since the mid-2000s: a guitar and a
           camera first, then years of electronic production, and lately a set of those
