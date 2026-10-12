@@ -1,5 +1,311 @@
 [
   {
+    "id": "c07511d9-8b1d-445b-ac94-414737eaa799",
+    "name": "Am I Good?",
+    "resourceType": "album",
+    "url": "https://suno.com/album/c07511d9-8b1d-445b-ac94-414737eaa799",
+    "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg",
+    "songCount": 11,
+    "description": "Songs about exploring the bad and good side of ourselves",
+    "trackIds": [
+      "46624744-843a-4c22-80bc-6d6ad50de6d6",
+      "9618af8c-6371-4c28-be2f-413b6383b2c7",
+      "95c33f52-9266-4a82-a460-97e662740eaf",
+      "2a71b7b9-8224-4f9a-b933-49658c6eb79f",
+      "03a8109d-7a5c-48dc-b49a-7c157d6fd61a",
+      "320ff459-c2c5-468d-8f45-0ac6ab800d12",
+      "dc646533-a5f9-462b-bbcd-9fd81136ea1b",
+      "4865211e-51cf-49ab-9e03-af455551ca7c",
+      "44726825-d965-41b6-bd83-5e634030d1fe",
+      "69f9e083-7e69-4749-9878-2b76d47b7c47",
+      "8dd55825-b78f-4296-849f-3ab30b805378"
+    ],
+    "tracks": [
+      {
+        "id": "46624744-843a-4c22-80bc-6d6ad50de6d6",
+        "title": "Honest Light",
+        "url": "https://suno.com/song/46624744-843a-4c22-80bc-6d6ad50de6d6",
+        "createdAt": "2026-10-11T17:02:32.584Z",
+        "durationSeconds": 212,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "9618af8c-6371-4c28-be2f-413b6383b2c7",
+        "title": "House of Cards",
+        "url": "https://suno.com/song/9618af8c-6371-4c28-be2f-413b6383b2c7",
+        "createdAt": "2026-10-11T20:35:06.892Z",
+        "durationSeconds": 212.76,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "95c33f52-9266-4a82-a460-97e662740eaf",
+        "title": "House of Cards in the Dark",
+        "url": "https://suno.com/song/95c33f52-9266-4a82-a460-97e662740eaf",
+        "createdAt": "2026-10-11T17:45:14.120Z",
+        "durationSeconds": 220.76,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "2a71b7b9-8224-4f9a-b933-49658c6eb79f",
+        "title": "Good Person Inside",
+        "url": "https://suno.com/song/2a71b7b9-8224-4f9a-b933-49658c6eb79f",
+        "createdAt": "2026-10-11T23:01:26.716Z",
+        "durationSeconds": 181.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "03a8109d-7a5c-48dc-b49a-7c157d6fd61a",
+        "title": "The Whole of Me",
+        "url": "https://suno.com/song/03a8109d-7a5c-48dc-b49a-7c157d6fd61a",
+        "createdAt": "2026-10-11T23:01:26.716Z",
+        "durationSeconds": 195.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "320ff459-c2c5-468d-8f45-0ac6ab800d12",
+        "title": "Can You Call Yourself Good",
+        "url": "https://suno.com/song/320ff459-c2c5-468d-8f45-0ac6ab800d12",
+        "createdAt": "2026-10-11T23:01:48.217Z",
+        "durationSeconds": 206.4,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "dc646533-a5f9-462b-bbcd-9fd81136ea1b",
+        "title": "The Page Stays Open",
+        "url": "https://suno.com/song/dc646533-a5f9-462b-bbcd-9fd81136ea1b",
+        "createdAt": "2026-10-11T23:02:13.900Z",
+        "durationSeconds": 243.6,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "4865211e-51cf-49ab-9e03-af455551ca7c",
+        "title": "Scales Tipping Back",
+        "url": "https://suno.com/song/4865211e-51cf-49ab-9e03-af455551ca7c",
+        "createdAt": "2026-10-11T23:17:00.868Z",
+        "durationSeconds": 157.36,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "44726825-d965-41b6-bd83-5e634030d1fe",
+        "title": "The Good, The Bad",
+        "url": "https://suno.com/song/44726825-d965-41b6-bd83-5e634030d1fe",
+        "createdAt": "2026-10-11T23:17:00.868Z",
+        "durationSeconds": 135.88,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "69f9e083-7e69-4749-9878-2b76d47b7c47",
+        "title": "Tomorrow’s Still a Door",
+        "url": "https://suno.com/song/69f9e083-7e69-4749-9878-2b76d47b7c47",
+        "createdAt": "2026-10-11T23:21:31.498Z",
+        "durationSeconds": 195.84,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      },
+      {
+        "id": "8dd55825-b78f-4296-849f-3ab30b805378",
+        "title": "Good With The Bad",
+        "url": "https://suno.com/song/8dd55825-b78f-4296-849f-3ab30b805378",
+        "createdAt": "2026-10-11T23:25:32.113Z",
+        "durationSeconds": 134.96,
+        "imageUrl": "https://cdn2.suno.ai/image_d70bf3e1-5be1-4e8b-a504-c374500d7449.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "131adfb2-7cd0-4ad2-a989-c01cd1b62921",
+    "name": "Never Enough Love",
+    "resourceType": "album",
+    "url": "https://suno.com/album/131adfb2-7cd0-4ad2-a989-c01cd1b62921",
+    "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg",
+    "songCount": 20,
+    "durationSeconds": 4681.76,
+    "description": "Songs about love from many different perspectives.",
+    "trackIds": [
+      "15e55303-e99b-4bd1-88bf-9ec00fddde9a",
+      "5d56be6a-bde9-46da-9dee-680e4c0f5bdf",
+      "9599ad18-bd47-4d8b-ab58-f4aef3433297",
+      "63b11be2-abb3-45e9-a235-b44a31fdad77",
+      "a6677f52-93ff-4534-b0b8-2a568c1b4862",
+      "4e6f7e3f-c09b-4341-9b4e-590345ac9383",
+      "c4a1158e-6498-48b8-81c3-8e7e4582a199",
+      "8371f2e8-efce-42b2-ba46-e9d9eb3429fb",
+      "d2e9a099-8140-4856-af0c-86794726b28f",
+      "a422fa0a-9865-4f1d-bb05-5b8cb6ae9b08",
+      "d66663fb-0208-486f-91ff-a88a613e914f",
+      "70333260-eb0c-480f-84e8-361b3f2c812f",
+      "b45b16f1-cea4-4156-82cb-5964706df176",
+      "8e76d2f5-6507-40e2-88be-610f9831874d",
+      "e70cc1de-28ea-4ed9-bb05-4fb8771dbe19",
+      "949f5830-c278-4b34-b12e-63188a6d0b1e",
+      "77af2a4a-95bf-47aa-b71f-115206d71dac",
+      "43650e82-5058-47df-bc34-a294be575ed5",
+      "a4a8bbfe-4c63-45ca-8c33-2e6e963d1ba2",
+      "982247c6-fade-4688-998b-609c83366972"
+    ],
+    "tracks": [
+      {
+        "id": "15e55303-e99b-4bd1-88bf-9ec00fddde9a",
+        "title": "You Already Belong",
+        "url": "https://suno.com/song/15e55303-e99b-4bd1-88bf-9ec00fddde9a",
+        "createdAt": "2026-10-11T03:31:43.649Z",
+        "durationSeconds": 256.36,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "5d56be6a-bde9-46da-9dee-680e4c0f5bdf",
+        "title": "The Room You Can Come Through",
+        "url": "https://suno.com/song/5d56be6a-bde9-46da-9dee-680e4c0f5bdf",
+        "createdAt": "2026-10-11T13:24:20.477Z",
+        "durationSeconds": 250.76,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "9599ad18-bd47-4d8b-ab58-f4aef3433297",
+        "title": "You Are Loved",
+        "url": "https://suno.com/song/9599ad18-bd47-4d8b-ab58-f4aef3433297",
+        "createdAt": "2026-10-11T13:32:19.800Z",
+        "durationSeconds": 241.36,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "63b11be2-abb3-45e9-a235-b44a31fdad77",
+        "title": "I'll Hold the Door",
+        "url": "https://suno.com/song/63b11be2-abb3-45e9-a235-b44a31fdad77",
+        "createdAt": "2026-10-11T13:35:40.074Z",
+        "durationSeconds": 272.48,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "a6677f52-93ff-4534-b0b8-2a568c1b4862",
+        "title": "Love Can Mend the World",
+        "url": "https://suno.com/song/a6677f52-93ff-4534-b0b8-2a568c1b4862",
+        "createdAt": "2026-10-11T13:45:28.658Z",
+        "durationSeconds": 258.16,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "4e6f7e3f-c09b-4341-9b4e-590345ac9383",
+        "title": "A Thousand Sparks",
+        "url": "https://suno.com/song/4e6f7e3f-c09b-4341-9b4e-590345ac9383",
+        "createdAt": "2026-10-11T13:55:41.915Z",
+        "durationSeconds": 244,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "c4a1158e-6498-48b8-81c3-8e7e4582a199",
+        "title": "Room for Us All",
+        "url": "https://suno.com/song/c4a1158e-6498-48b8-81c3-8e7e4582a199",
+        "createdAt": "2026-10-11T14:01:37.609Z",
+        "durationSeconds": 233.16,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "8371f2e8-efce-42b2-ba46-e9d9eb3429fb",
+        "title": "Infinite Space",
+        "url": "https://suno.com/song/8371f2e8-efce-42b2-ba46-e9d9eb3429fb",
+        "createdAt": "2026-10-11T14:01:37.609Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "d2e9a099-8140-4856-af0c-86794726b28f",
+        "title": "You Were Mine For A While",
+        "url": "https://suno.com/song/d2e9a099-8140-4856-af0c-86794726b28f",
+        "createdAt": "2026-10-11T14:10:21.307Z",
+        "durationSeconds": 224,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "a422fa0a-9865-4f1d-bb05-5b8cb6ae9b08",
+        "title": "I Can Love You From Here",
+        "url": "https://suno.com/song/a422fa0a-9865-4f1d-bb05-5b8cb6ae9b08",
+        "createdAt": "2026-10-11T14:11:16.839Z",
+        "durationSeconds": 201.04,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "d66663fb-0208-486f-91ff-a88a613e914f",
+        "title": "Home in Time",
+        "url": "https://suno.com/song/d66663fb-0208-486f-91ff-a88a613e914f",
+        "createdAt": "2026-10-11T14:24:29.146Z",
+        "durationSeconds": 206.24,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "70333260-eb0c-480f-84e8-361b3f2c812f",
+        "title": "A Little Time",
+        "url": "https://suno.com/song/70333260-eb0c-480f-84e8-361b3f2c812f",
+        "createdAt": "2026-10-11T14:36:30.163Z",
+        "durationSeconds": 243.56,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "b45b16f1-cea4-4156-82cb-5964706df176",
+        "title": "Every Love Is Its Own Wild",
+        "url": "https://suno.com/song/b45b16f1-cea4-4156-82cb-5964706df176",
+        "createdAt": "2026-10-11T14:44:56.277Z",
+        "durationSeconds": 221.52,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "8e76d2f5-6507-40e2-88be-610f9831874d",
+        "title": "Every Love Is Its Own Country",
+        "url": "https://suno.com/song/8e76d2f5-6507-40e2-88be-610f9831874d",
+        "createdAt": "2026-10-11T14:51:21.244Z",
+        "durationSeconds": 225.96,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "e70cc1de-28ea-4ed9-bb05-4fb8771dbe19",
+        "title": "Every Love Is Its Own Kind",
+        "url": "https://suno.com/song/e70cc1de-28ea-4ed9-bb05-4fb8771dbe19",
+        "createdAt": "2026-10-11T15:03:59.110Z",
+        "durationSeconds": 234.36,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "949f5830-c278-4b34-b12e-63188a6d0b1e",
+        "title": "Every Love Is Its Own Kind",
+        "url": "https://suno.com/song/949f5830-c278-4b34-b12e-63188a6d0b1e",
+        "createdAt": "2026-10-11T15:08:51.717Z",
+        "durationSeconds": 216.76,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "77af2a4a-95bf-47aa-b71f-115206d71dac",
+        "title": "More than one kind of May",
+        "url": "https://suno.com/song/77af2a4a-95bf-47aa-b71f-115206d71dac",
+        "createdAt": "2026-10-11T15:17:16.583Z",
+        "durationSeconds": 276.08,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "43650e82-5058-47df-bc34-a294be575ed5",
+        "title": "Every Kind of Love",
+        "url": "https://suno.com/song/43650e82-5058-47df-bc34-a294be575ed5",
+        "createdAt": "2026-10-11T15:24:42.696Z",
+        "durationSeconds": 234.8,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "a4a8bbfe-4c63-45ca-8c33-2e6e963d1ba2",
+        "title": "Every Love Is Its Own Wild",
+        "url": "https://suno.com/song/a4a8bbfe-4c63-45ca-8c33-2e6e963d1ba2",
+        "createdAt": "2026-10-11T15:34:00.488Z",
+        "durationSeconds": 217.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      },
+      {
+        "id": "982247c6-fade-4688-998b-609c83366972",
+        "title": "Every Love Is Its Own Wild",
+        "url": "https://suno.com/song/982247c6-fade-4688-998b-609c83366972",
+        "createdAt": "2026-10-11T15:35:28.362Z",
+        "durationSeconds": 206.76,
+        "imageUrl": "https://cdn2.suno.ai/image_2e3612d4-a92c-44f8-9479-b16f80d96ed7.jpeg"
+      }
+    ]
+  },
+  {
     "id": "15ba3913-9d04-4c0f-9a0f-d8c63e937541",
     "name": "Songs For Your Entertainment Vol. 3",
     "resourceType": "album",
