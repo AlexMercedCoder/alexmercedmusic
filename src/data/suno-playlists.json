@@ -1,5 +1,483 @@
 [
   {
+    "id": "38cd31a0-191c-4165-8aed-095906f9f6f2",
+    "name": "Metaphor What It's Worth",
+    "resourceType": "album",
+    "url": "https://suno.com/album/38cd31a0-191c-4165-8aed-095906f9f6f2",
+    "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1932.2,
+    "description": "A few more songs of metaphors about the directions that life pull you in. The closing song is quite a banger.",
+    "trackIds": [
+      "4e316e42-da7f-4360-bd74-e51f7e481db2",
+      "269393fa-ec5d-4c44-8176-9a469bb5ccd8",
+      "0372ebef-8eb4-4c02-af60-6fc9e7f1f42b",
+      "5e40766c-4652-4390-af92-02870870d2a4",
+      "d366a405-86e5-4772-9dd8-d8ee7bc7f0e4",
+      "501eda5b-ecb3-4e89-89e5-79254170be81",
+      "032e95e9-cf19-461a-b35f-d4faa3c3d3ac",
+      "0877ea7d-eb66-47b3-b00b-d6307e47e6d8",
+      "516f7a54-a461-40f4-a6d5-93c39e2cffd1",
+      "8234c41a-2168-4be8-8310-fbe9ead96b2b"
+    ],
+    "tracks": [
+      {
+        "id": "4e316e42-da7f-4360-bd74-e51f7e481db2",
+        "title": "A Thousand Hearts",
+        "url": "https://suno.com/song/4e316e42-da7f-4360-bd74-e51f7e481db2",
+        "createdAt": "2026-10-13T03:19:12.497Z",
+        "durationSeconds": 206.8,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "269393fa-ec5d-4c44-8176-9a469bb5ccd8",
+        "title": "Walls Too Wide",
+        "url": "https://suno.com/song/269393fa-ec5d-4c44-8176-9a469bb5ccd8",
+        "createdAt": "2026-10-13T01:36:37.227Z",
+        "durationSeconds": 210,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "0372ebef-8eb4-4c02-af60-6fc9e7f1f42b",
+        "title": "Green",
+        "url": "https://suno.com/song/0372ebef-8eb4-4c02-af60-6fc9e7f1f42b",
+        "createdAt": "2026-10-13T01:12:39.031Z",
+        "durationSeconds": 231.16,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "5e40766c-4652-4390-af92-02870870d2a4",
+        "title": "Pick One Note",
+        "url": "https://suno.com/song/5e40766c-4652-4390-af92-02870870d2a4",
+        "createdAt": "2026-10-13T12:28:27.336Z",
+        "durationSeconds": 195,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "d366a405-86e5-4772-9dd8-d8ee7bc7f0e4",
+        "title": "Pick One, Pick Two",
+        "url": "https://suno.com/song/d366a405-86e5-4772-9dd8-d8ee7bc7f0e4",
+        "createdAt": "2026-10-13T16:52:12.727Z",
+        "durationSeconds": 210,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "501eda5b-ecb3-4e89-89e5-79254170be81",
+        "title": "Hunger Wears a Paper Hat",
+        "url": "https://suno.com/song/501eda5b-ecb3-4e89-89e5-79254170be81",
+        "createdAt": "2026-10-13T16:54:05.613Z",
+        "durationSeconds": 151.2,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "032e95e9-cf19-461a-b35f-d4faa3c3d3ac",
+        "title": "Ninety-Nine Crowns",
+        "url": "https://suno.com/song/032e95e9-cf19-461a-b35f-d4faa3c3d3ac",
+        "createdAt": "2026-10-13T16:53:46.128Z",
+        "durationSeconds": 169.2,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "0877ea7d-eb66-47b3-b00b-d6307e47e6d8",
+        "title": "The Bookmark Dare",
+        "url": "https://suno.com/song/0877ea7d-eb66-47b3-b00b-d6307e47e6d8",
+        "createdAt": "2026-10-13T16:54:24.062Z",
+        "durationSeconds": 184.8,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "516f7a54-a461-40f4-a6d5-93c39e2cffd1",
+        "title": "Spend Me Here",
+        "url": "https://suno.com/song/516f7a54-a461-40f4-a6d5-93c39e2cffd1",
+        "createdAt": "2026-10-13T17:46:43.667Z",
+        "durationSeconds": 192.08,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      },
+      {
+        "id": "8234c41a-2168-4be8-8310-fbe9ead96b2b",
+        "title": "I Chose, Therefore I Lived",
+        "url": "https://suno.com/song/8234c41a-2168-4be8-8310-fbe9ead96b2b",
+        "createdAt": "2026-10-13T17:59:48.601Z",
+        "durationSeconds": 181.96,
+        "imageUrl": "https://cdn2.suno.ai/image_79d36fe7-ae53-4142-b939-145ef32c1663.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "72a6ab1c-6d96-486e-a7b3-7e8cf641b336",
+    "name": "Metaphor Than Meets the Eye",
+    "resourceType": "album",
+    "url": "https://suno.com/album/72a6ab1c-6d96-486e-a7b3-7e8cf641b336",
+    "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg",
+    "songCount": 40,
+    "durationSeconds": 7996.4,
+    "description": "Another album of songs made up with many unique metaphors on being at a crossroads in life. Some real ear worms in this one.",
+    "trackIds": [
+      "6dffd2f1-a534-44c3-8516-1dafd5253a52",
+      "c791041a-d031-4642-a8dd-6af92363e24e",
+      "ca66b7dd-ae7c-4d07-98c6-a6be500bd192",
+      "217c9f02-69f0-480c-8391-eb1fcf5f1a8f",
+      "e28fed51-61fb-4ef8-9fb6-4c7e62fc30ff",
+      "5fd261a7-10f6-425c-86d4-1db5752565e7",
+      "851434a6-64ec-4c3a-a9db-4df7a81c96c9",
+      "4babbb42-2d58-4800-a0e4-37dcaae29ad2",
+      "a6bf85ce-da4f-4378-aca4-0655ffce6eef",
+      "d9711917-47bf-44c4-bc0e-0839d4f9a15d",
+      "53845220-6059-442e-bbd9-d486b79b54cb",
+      "74ed15d5-c765-41f5-81ef-4ff7eaa4afff",
+      "520c23bf-7e37-4aef-8308-1d68f7480152",
+      "19d02276-8e4d-4411-8e48-d0a942bd99f0",
+      "89028d58-6674-4e93-9a6e-1f4c67efa06f",
+      "72751287-ae2d-494e-abbb-11586567d887",
+      "e9cefe9f-0829-4aed-bbad-0322056c5659",
+      "35b069f5-5ee5-4fc4-a34c-fc61de01c780",
+      "591cc23d-45df-43f4-9a75-5192d931de38",
+      "57485d7e-a396-40bd-a6c3-bba53855f21c",
+      "1d76a974-f34d-4bcc-9f6c-8b7b8f27402c",
+      "f8d40ee7-166c-45a6-ab0a-ca75672b8a69",
+      "439c0167-a303-46d7-8eb5-d10e3b95168e",
+      "228e8d2a-5ed6-4a7f-b536-88c8a58f0fd7",
+      "dfd6e11f-1289-45a4-aa25-20341bbfed01",
+      "454995d5-6fad-4044-967d-ee8279114e09",
+      "d94dcb48-4457-40be-b7ed-9b4d4d394b29",
+      "0681b1ca-5a68-49e6-a48e-94b2049412c8",
+      "102775aa-69db-4859-8fcf-b5729cb9fb9f",
+      "707612e2-0aa9-43bb-8766-8786296bd4c4",
+      "7f83749c-79f0-49ff-886b-8c14377fc88d",
+      "9abb95ed-59a3-44da-a23c-4920980a1022",
+      "a329721f-9e72-4010-90da-220673b8c1bd",
+      "717adaa4-9174-46ba-a500-cd087876e860",
+      "2f8da4ea-6805-4fc3-8fcc-91648e2acdf2",
+      "af8993c8-7592-4c56-ada5-c981fae193a9",
+      "32fed52e-7214-4a7f-bc46-7792903e80cd",
+      "f5dfd7dd-dda6-4fb6-a315-145f62f3530f",
+      "39a26d0f-b287-4d3f-95ca-4b12354bf157",
+      "fa21c7d2-8252-479c-8c00-0e9106d3fe9c"
+    ],
+    "tracks": [
+      {
+        "id": "6dffd2f1-a534-44c3-8516-1dafd5253a52",
+        "title": "Room Enough for Both",
+        "url": "https://suno.com/song/6dffd2f1-a534-44c3-8516-1dafd5253a52",
+        "createdAt": "2026-10-13T00:34:04.924Z",
+        "durationSeconds": 216.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "c791041a-d031-4642-a8dd-6af92363e24e",
+        "title": "Make a Little Room",
+        "url": "https://suno.com/song/c791041a-d031-4642-a8dd-6af92363e24e",
+        "createdAt": "2026-10-13T00:34:04.924Z",
+        "durationSeconds": 222.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "ca66b7dd-ae7c-4d07-98c6-a6be500bd192",
+        "title": "Feets Turned to Stone",
+        "url": "https://suno.com/song/ca66b7dd-ae7c-4d07-98c6-a6be500bd192",
+        "createdAt": "2026-10-13T01:11:35.844Z",
+        "durationSeconds": 216.36,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "217c9f02-69f0-480c-8391-eb1fcf5f1a8f",
+        "title": "Gold Road, Stone Feet",
+        "url": "https://suno.com/song/217c9f02-69f0-480c-8391-eb1fcf5f1a8f",
+        "createdAt": "2026-10-13T01:12:26.224Z",
+        "durationSeconds": 230.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "e28fed51-61fb-4ef8-9fb6-4c7e62fc30ff",
+        "title": "All Green",
+        "url": "https://suno.com/song/e28fed51-61fb-4ef8-9fb6-4c7e62fc30ff",
+        "createdAt": "2026-10-13T01:12:39.031Z",
+        "durationSeconds": 271.52,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "5fd261a7-10f6-425c-86d4-1db5752565e7",
+        "title": "Almost, Almost There",
+        "url": "https://suno.com/song/5fd261a7-10f6-425c-86d4-1db5752565e7",
+        "createdAt": "2026-10-13T01:23:04.838Z",
+        "durationSeconds": 226.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "851434a6-64ec-4c3a-a9db-4df7a81c96c9",
+        "title": "Every Way Is North",
+        "url": "https://suno.com/song/851434a6-64ec-4c3a-a9db-4df7a81c96c9",
+        "createdAt": "2026-10-13T01:31:21.952Z",
+        "durationSeconds": 216.24,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "4babbb42-2d58-4800-a0e4-37dcaae29ad2",
+        "title": "Too Many Rooms",
+        "url": "https://suno.com/song/4babbb42-2d58-4800-a0e4-37dcaae29ad2",
+        "createdAt": "2026-10-13T01:36:37.227Z",
+        "durationSeconds": 203.56,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "a6bf85ce-da4f-4378-aca4-0655ffce6eef",
+        "title": "Wedding of a Thousand Futures",
+        "url": "https://suno.com/song/a6bf85ce-da4f-4378-aca4-0655ffce6eef",
+        "createdAt": "2026-10-13T03:19:12.497Z",
+        "durationSeconds": 248,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "d9711917-47bf-44c4-bc0e-0839d4f9a15d",
+        "title": "You Kept Them All",
+        "url": "https://suno.com/song/d9711917-47bf-44c4-bc0e-0839d4f9a15d",
+        "createdAt": "2026-10-13T03:19:31.419Z",
+        "durationSeconds": 242.76,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "53845220-6059-442e-bbd9-d486b79b54cb",
+        "title": "Take My Hand",
+        "url": "https://suno.com/song/53845220-6059-442e-bbd9-d486b79b54cb",
+        "createdAt": "2026-10-13T03:22:57.345Z",
+        "durationSeconds": 247.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "74ed15d5-c765-41f5-81ef-4ff7eaa4afff",
+        "title": "All the Lights Are On",
+        "url": "https://suno.com/song/74ed15d5-c765-41f5-81ef-4ff7eaa4afff",
+        "createdAt": "2026-10-13T03:23:50.831Z",
+        "durationSeconds": 191.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "520c23bf-7e37-4aef-8308-1d68f7480152",
+        "title": "Who Would I Be",
+        "url": "https://suno.com/song/520c23bf-7e37-4aef-8308-1d68f7480152",
+        "createdAt": "2026-10-13T03:34:04.999Z",
+        "durationSeconds": 196.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "19d02276-8e4d-4411-8e48-d0a942bd99f0",
+        "title": "Forty Plates",
+        "url": "https://suno.com/song/19d02276-8e4d-4411-8e48-d0a942bd99f0",
+        "createdAt": "2026-10-13T03:38:06.065Z",
+        "durationSeconds": 212.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "89028d58-6674-4e93-9a6e-1f4c67efa06f",
+        "title": "Keep One Door Open",
+        "url": "https://suno.com/song/89028d58-6674-4e93-9a6e-1f4c67efa06f",
+        "createdAt": "2026-10-13T03:40:48.973Z",
+        "durationSeconds": 208.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "72751287-ae2d-494e-abbb-11586567d887",
+        "title": "Leave a Heartbeat",
+        "url": "https://suno.com/song/72751287-ae2d-494e-abbb-11586567d887",
+        "createdAt": "2026-10-13T11:41:27.381Z",
+        "durationSeconds": 190,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "e9cefe9f-0829-4aed-bbad-0322056c5659",
+        "title": "Forty Choruses",
+        "url": "https://suno.com/song/e9cefe9f-0829-4aed-bbad-0322056c5659",
+        "createdAt": "2026-10-13T11:47:16.727Z",
+        "durationSeconds": 134.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "35b069f5-5ee5-4fc4-a34c-fc61de01c780",
+        "title": "Pick One",
+        "url": "https://suno.com/song/35b069f5-5ee5-4fc4-a34c-fc61de01c780",
+        "createdAt": "2026-10-13T11:50:31.069Z",
+        "durationSeconds": 180.76,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "591cc23d-45df-43f4-9a75-5192d931de38",
+        "title": "Pick One Note",
+        "url": "https://suno.com/song/591cc23d-45df-43f4-9a75-5192d931de38",
+        "createdAt": "2026-10-13T11:51:26.714Z",
+        "durationSeconds": 176.36,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "57485d7e-a396-40bd-a6c3-bba53855f21c",
+        "title": "One More Bar",
+        "url": "https://suno.com/song/57485d7e-a396-40bd-a6c3-bba53855f21c",
+        "createdAt": "2026-10-13T11:56:29.283Z",
+        "durationSeconds": 141.56,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "1d76a974-f34d-4bcc-9f6c-8b7b8f27402c",
+        "title": "One Frame Remains",
+        "url": "https://suno.com/song/1d76a974-f34d-4bcc-9f6c-8b7b8f27402c",
+        "createdAt": "2026-10-13T11:57:19.545Z",
+        "durationSeconds": 141.56,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "f8d40ee7-166c-45a6-ab0a-ca75672b8a69",
+        "title": "Stay On",
+        "url": "https://suno.com/song/f8d40ee7-166c-45a6-ab0a-ca75672b8a69",
+        "createdAt": "2026-10-13T12:29:44.356Z",
+        "durationSeconds": 205.96,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "439c0167-a303-46d7-8eb5-d10e3b95168e",
+        "title": "Paint One",
+        "url": "https://suno.com/song/439c0167-a303-46d7-8eb5-d10e3b95168e",
+        "createdAt": "2026-10-13T13:17:34.809Z",
+        "durationSeconds": 207.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "228e8d2a-5ed6-4a7f-b536-88c8a58f0fd7",
+        "title": "Thousand Strings",
+        "url": "https://suno.com/song/228e8d2a-5ed6-4a7f-b536-88c8a58f0fd7",
+        "createdAt": "2026-10-13T13:24:31.546Z",
+        "durationSeconds": 196.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "dfd6e11f-1289-45a4-aa25-20341bbfed01",
+        "title": "Begin Again",
+        "url": "https://suno.com/song/dfd6e11f-1289-45a4-aa25-20341bbfed01",
+        "createdAt": "2026-10-13T13:27:18.409Z",
+        "durationSeconds": 204,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "454995d5-6fad-4044-967d-ee8279114e09",
+        "title": "Pick One, Pick One",
+        "url": "https://suno.com/song/454995d5-6fad-4044-967d-ee8279114e09",
+        "createdAt": "2026-10-13T13:29:22.462Z",
+        "durationSeconds": 195.72,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "d94dcb48-4457-40be-b7ed-9b4d4d394b29",
+        "title": "The Lake Where the Rivers",
+        "url": "https://suno.com/song/d94dcb48-4457-40be-b7ed-9b4d4d394b29",
+        "createdAt": "2026-10-13T15:57:45.054Z",
+        "durationSeconds": 183.56,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "0681b1ca-5a68-49e6-a48e-94b2049412c8",
+        "title": "Facing Both Suns",
+        "url": "https://suno.com/song/0681b1ca-5a68-49e6-a48e-94b2049412c8",
+        "createdAt": "2026-10-13T16:02:22.660Z",
+        "durationSeconds": 243.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "102775aa-69db-4859-8fcf-b5729cb9fb9f",
+        "title": "I Circle the Garden",
+        "url": "https://suno.com/song/102775aa-69db-4859-8fcf-b5729cb9fb9f",
+        "createdAt": "2026-10-13T16:02:38.121Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "707612e2-0aa9-43bb-8766-8786296bd4c4",
+        "title": "Blossoms Under Glass",
+        "url": "https://suno.com/song/707612e2-0aa9-43bb-8766-8786296bd4c4",
+        "createdAt": "2026-10-13T16:02:57.393Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "7f83749c-79f0-49ff-886b-8c14377fc88d",
+        "title": "The Leaning Tree",
+        "url": "https://suno.com/song/7f83749c-79f0-49ff-886b-8c14377fc88d",
+        "createdAt": "2026-10-13T16:03:15.172Z",
+        "durationSeconds": 172.76,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "9abb95ed-59a3-44da-a23c-4920980a1022",
+        "title": "Wish One",
+        "url": "https://suno.com/song/9abb95ed-59a3-44da-a23c-4920980a1022",
+        "createdAt": "2026-10-13T16:52:31.935Z",
+        "durationSeconds": 206.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "a329721f-9e72-4010-90da-220673b8c1bd",
+        "title": "Honey's Gone",
+        "url": "https://suno.com/song/a329721f-9e72-4010-90da-220673b8c1bd",
+        "createdAt": "2026-10-13T16:52:48.767Z",
+        "durationSeconds": 198,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "717adaa4-9174-46ba-a500-cd087876e860",
+        "title": "Lives Not Lived",
+        "url": "https://suno.com/song/717adaa4-9174-46ba-a500-cd087876e860",
+        "createdAt": "2026-10-13T16:53:07.327Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "2f8da4ea-6805-4fc3-8fcc-91648e2acdf2",
+        "title": "One Looks Back",
+        "url": "https://suno.com/song/2f8da4ea-6805-4fc3-8fcc-91648e2acdf2",
+        "createdAt": "2026-10-13T16:53:26.408Z",
+        "durationSeconds": 185.96,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "af8993c8-7592-4c56-ada5-c981fae193a9",
+        "title": "King of Unclaimed Kingdoms",
+        "url": "https://suno.com/song/af8993c8-7592-4c56-ada5-c981fae193a9",
+        "createdAt": "2026-10-13T16:53:46.128Z",
+        "durationSeconds": 195.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "32fed52e-7214-4a7f-bc46-7792903e80cd",
+        "title": "Every Plate Is My Favorite",
+        "url": "https://suno.com/song/32fed52e-7214-4a7f-bc46-7792903e80cd",
+        "createdAt": "2026-10-13T16:54:05.613Z",
+        "durationSeconds": 156.36,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "f5dfd7dd-dda6-4fb6-a315-145f62f3530f",
+        "title": "Turn It, Turn It",
+        "url": "https://suno.com/song/f5dfd7dd-dda6-4fb6-a315-145f62f3530f",
+        "createdAt": "2026-10-13T16:54:24.062Z",
+        "durationSeconds": 182.4,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "39a26d0f-b287-4d3f-95ca-4b12354bf157",
+        "title": "A Thousand Necks",
+        "url": "https://suno.com/song/39a26d0f-b287-4d3f-95ca-4b12354bf157",
+        "createdAt": "2026-10-13T17:45:20.079Z",
+        "durationSeconds": 152.8,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      },
+      {
+        "id": "fa21c7d2-8252-479c-8c00-0e9106d3fe9c",
+        "title": "The Prison Built of Open Doors",
+        "url": "https://suno.com/song/fa21c7d2-8252-479c-8c00-0e9106d3fe9c",
+        "createdAt": "2026-10-13T17:46:02.402Z",
+        "durationSeconds": 184.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9a6ce2fe-9356-4108-9050-97dfd7c1f905.jpeg"
+      }
+    ]
+  },
+  {
     "id": "7040b8a4-0481-4bc5-bc79-6c2c194b6ce7",
     "name": "Metaphor Better Or Worse",
     "resourceType": "album",
