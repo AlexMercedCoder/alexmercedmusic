@@ -1,5 +1,199 @@
 [
   {
+    "id": "34b271d3-258a-482a-bea6-5283b69a4ee8",
+    "name": "Metaphor and Effect",
+    "resourceType": "album",
+    "url": "https://suno.com/album/34b271d3-258a-482a-bea6-5283b69a4ee8",
+    "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg",
+    "songCount": 20,
+    "durationSeconds": 4183.28,
+    "description": "More songs from fun metaphors.",
+    "trackIds": [
+      "fc3456c8-978b-4f0b-8f34-3946fba0419b",
+      "bf888cc8-25bc-401e-8f77-38f7aff44837",
+      "5e8c9a83-10db-4e96-9926-174def91510c",
+      "e95c141c-0621-4ea3-9e3a-793cd961163f",
+      "d0b86d6f-16ee-46e9-a8a4-e7f357ae9115",
+      "277114f3-338c-4e5f-9cc4-15b00d3933d4",
+      "a91a2b6d-e887-43df-82d6-b4c4aacc9db7",
+      "6ebd0e29-3403-4ac6-9c9f-0b15131e8555",
+      "6242b66b-c5d7-4271-ae51-ab0c570a46fa",
+      "b5276f22-69a2-4096-8106-ad0a34e67e9f",
+      "2eecef5a-fb66-4821-8fcd-ae52f2830af0",
+      "b11b2b22-29ab-4fe9-94b2-4c28115b7a07",
+      "ece26019-3421-4696-be40-4a102161bbb1",
+      "0fbce576-fbe1-4a6a-bbeb-f0f93f440c39",
+      "fe1b59cc-32f4-451c-8edf-18fb7b0101c0",
+      "b6313cee-cbb9-4ba1-9c19-b5bfd1934397",
+      "4ffddeea-a597-493d-a3ba-782098809822",
+      "7be0f811-4e9d-455c-b32b-54ba185310ba",
+      "f43df81e-538e-40d7-b85d-2e0488470572",
+      "062530da-de4e-490f-b82e-1d7a70b7b446"
+    ],
+    "tracks": [
+      {
+        "id": "fc3456c8-978b-4f0b-8f34-3946fba0419b",
+        "title": "Hope Was In The Room",
+        "url": "https://suno.com/song/fc3456c8-978b-4f0b-8f34-3946fba0419b",
+        "createdAt": "2026-10-14T14:19:55.614Z",
+        "durationSeconds": 190.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "bf888cc8-25bc-401e-8f77-38f7aff44837",
+        "title": "All The Wrong Places",
+        "url": "https://suno.com/song/bf888cc8-25bc-401e-8f77-38f7aff44837",
+        "createdAt": "2026-10-14T14:26:03.482Z",
+        "durationSeconds": 213.6,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "5e8c9a83-10db-4e96-9926-174def91510c",
+        "title": "One Small Yes",
+        "url": "https://suno.com/song/5e8c9a83-10db-4e96-9926-174def91510c",
+        "createdAt": "2026-10-14T14:26:42.834Z",
+        "durationSeconds": 206.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "e95c141c-0621-4ea3-9e3a-793cd961163f",
+        "title": "Good Day, Good Day",
+        "url": "https://suno.com/song/e95c141c-0621-4ea3-9e3a-793cd961163f",
+        "createdAt": "2026-10-14T14:55:15.597Z",
+        "durationSeconds": 254.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "d0b86d6f-16ee-46e9-a8a4-e7f357ae9115",
+        "title": "This Small Thing",
+        "url": "https://suno.com/song/d0b86d6f-16ee-46e9-a8a4-e7f357ae9115",
+        "createdAt": "2026-10-14T14:59:12.714Z",
+        "durationSeconds": 191.96,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "277114f3-338c-4e5f-9cc4-15b00d3933d4",
+        "title": "First-Hit Kick",
+        "url": "https://suno.com/song/277114f3-338c-4e5f-9cc4-15b00d3933d4",
+        "createdAt": "2026-10-14T15:05:45.690Z",
+        "durationSeconds": 190.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "a91a2b6d-e887-43df-82d6-b4c4aacc9db7",
+        "title": "Rush of Your Eyes",
+        "url": "https://suno.com/song/a91a2b6d-e887-43df-82d6-b4c4aacc9db7",
+        "createdAt": "2026-10-14T15:09:03.276Z",
+        "durationSeconds": 185.72,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "6ebd0e29-3403-4ac6-9c9f-0b15131e8555",
+        "title": "Did I Go Far Enough",
+        "url": "https://suno.com/song/6ebd0e29-3403-4ac6-9c9f-0b15131e8555",
+        "createdAt": "2026-10-14T15:14:22.898Z",
+        "durationSeconds": 236.28,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "6242b66b-c5d7-4271-ae51-ab0c570a46fa",
+        "title": "Flamingo in a flock of pigeons",
+        "url": "https://suno.com/song/6242b66b-c5d7-4271-ae51-ab0c570a46fa",
+        "createdAt": "2026-10-14T15:24:48.333Z",
+        "durationSeconds": 201.56,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "b5276f22-69a2-4096-8106-ad0a34e67e9f",
+        "title": "Sky’s On Our Side",
+        "url": "https://suno.com/song/b5276f22-69a2-4096-8106-ad0a34e67e9f",
+        "createdAt": "2026-10-14T03:51:30.589Z",
+        "durationSeconds": 181.6,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "2eecef5a-fb66-4821-8fcd-ae52f2830af0",
+        "title": "Good Day",
+        "url": "https://suno.com/song/2eecef5a-fb66-4821-8fcd-ae52f2830af0",
+        "createdAt": "2026-10-14T03:49:20.631Z",
+        "durationSeconds": 187.56,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "b11b2b22-29ab-4fe9-94b2-4c28115b7a07",
+        "title": "Stay Till The Morning",
+        "url": "https://suno.com/song/b11b2b22-29ab-4fe9-94b2-4c28115b7a07",
+        "createdAt": "2026-10-14T03:44:42.088Z",
+        "durationSeconds": 158.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "ece26019-3421-4696-be40-4a102161bbb1",
+        "title": "Build The Wings",
+        "url": "https://suno.com/song/ece26019-3421-4696-be40-4a102161bbb1",
+        "createdAt": "2026-10-13T22:35:40.353Z",
+        "durationSeconds": 184,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "0fbce576-fbe1-4a6a-bbeb-f0f93f440c39",
+        "title": "No Waiting Room",
+        "url": "https://suno.com/song/0fbce576-fbe1-4a6a-bbeb-f0f93f440c39",
+        "createdAt": "2026-10-13T22:46:49.490Z",
+        "durationSeconds": 233.56,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "fe1b59cc-32f4-451c-8edf-18fb7b0101c0",
+        "title": "Parallel Me",
+        "url": "https://suno.com/song/fe1b59cc-32f4-451c-8edf-18fb7b0101c0",
+        "createdAt": "2026-10-13T23:40:27.098Z",
+        "durationSeconds": 201.16,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "b6313cee-cbb9-4ba1-9c19-b5bfd1934397",
+        "title": "The Wrong Turn Was the Right",
+        "url": "https://suno.com/song/b6313cee-cbb9-4ba1-9c19-b5bfd1934397",
+        "createdAt": "2026-10-14T00:56:57.417Z",
+        "durationSeconds": 237.6,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "4ffddeea-a597-493d-a3ba-782098809822",
+        "title": "Kite That Loves Its String",
+        "url": "https://suno.com/song/4ffddeea-a597-493d-a3ba-782098809822",
+        "createdAt": "2026-10-12T21:35:22.739Z",
+        "durationSeconds": 266.36,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "7be0f811-4e9d-455c-b32b-54ba185310ba",
+        "title": "The Beautiful Wrong Note",
+        "url": "https://suno.com/song/7be0f811-4e9d-455c-b32b-54ba185310ba",
+        "createdAt": "2026-10-14T15:32:42.523Z",
+        "durationSeconds": 219.96,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "f43df81e-538e-40d7-b85d-2e0488470572",
+        "title": "Lighthouse in a City of",
+        "url": "https://suno.com/song/f43df81e-538e-40d7-b85d-2e0488470572",
+        "createdAt": "2026-10-14T15:33:49.919Z",
+        "durationSeconds": 241.56,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      },
+      {
+        "id": "062530da-de4e-490f-b82e-1d7a70b7b446",
+        "title": "Beautiful Bug",
+        "url": "https://suno.com/song/062530da-de4e-490f-b82e-1d7a70b7b446",
+        "createdAt": "2026-10-14T15:36:41.985Z",
+        "durationSeconds": 198.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a7ce3520-44d7-4202-97b1-df27467cb462.jpeg"
+      }
+    ]
+  },
+  {
     "id": "c9369bb7-9cd3-437a-a6f2-4b643a57a21b",
     "name": "Metaphor All Seasons",
     "resourceType": "album",
