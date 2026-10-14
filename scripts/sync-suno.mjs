@@ -126,7 +126,14 @@ for (const playlistId of playlistIds) {
     const url = new URL(`https://studio-api.prod.suno.com/api/playlist/${playlistId}/`);
     url.searchParams.set('page', String(playlistPage));
     const response = await fetchPage(url, `playlist ${playlistId} page ${playlistPage}`, { allowNotFound: playlistPage === 1 });
-    if (response.status === 404) break;
+    if (response.status === 404) {
+      const previousCollection = previousCollectionById.get(playlistId);
+      if (previousCollection) {
+        console.warn(`Suno playlist ${playlistId} returned 404; retaining the previously cataloged ${previousCollection.name}.`);
+        playlists.push(previousCollection);
+      }
+      break;
+    }
     const data = await response.json();
     if (playlistPage === 1) {
       if (data.user_handle !== 'alexmerced') throw new Error(`Unexpected owner for Suno playlist ${playlistId}.`);
