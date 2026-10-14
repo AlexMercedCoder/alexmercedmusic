@@ -329,6 +329,8 @@ const videoTitleAliases: Record<string, string[]> = {
   'try to forget': ['try to forget you'],
   'birthday': ['birthday song'],
   'the open lakehouse': ['the iceberg open lakehouse'],
+  'beautiful buf': ['beautiful bug'],
+  'i chose therefore i live': ['i chose therefore i lived'],
 };
 
 const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
