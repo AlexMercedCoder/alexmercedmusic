@@ -1,11 +1,12 @@
 # Production monitoring
 
-Automated checks live in `.github/workflows/site-health.yml`. They rebuild the site,
-validate catalog relationships and generated pages, and check every unique external
-listening URL each Monday. Failures appear in the repository's Actions tab.
+Optional checks live in `.github/workflows/site-health.yml`. When run manually, they
+rebuild the site, validate catalog relationships and generated pages, and check every
+unique external listening URL. Failures appear in the repository's Actions tab.
 
-The daily catalog workflow compares the public Suno profile with the checked-in
-metadata and opens a reviewed pull request when a song or its metadata changes.
+The catalog workflow can be run manually to compare the public Suno profile with
+the checked-in metadata and attempt a pull request when something changes.
+Neither workflow runs on a schedule.
 
 ## Search consoles
 

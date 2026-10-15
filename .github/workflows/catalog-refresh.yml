@@ -2,8 +2,6 @@ name: Catalog refresh
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '17 11 * * *'
 
 permissions:
   contents: write

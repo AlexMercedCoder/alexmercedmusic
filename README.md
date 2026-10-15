@@ -48,14 +48,14 @@ npm run sync:youtube -- --write
 The Suno command walks the public profile API, preserves rich public metadata,
 distinguishes catalog songs from reimagining generations, captures public
 albums with their current counts and runtimes, and reports
-additions, removals, and metadata changes. A scheduled GitHub Action runs this
-daily and opens a tested catalog-refresh pull request when something changes.
+additions, removals, and metadata changes. The catalog-refresh GitHub Action can
+be run manually and attempts to open a tested pull request when something changes.
 The YouTube command refreshes exact public upload dates and thumbnails.
 The Spotify command verifies the configured release identities and track counts,
 then refreshes direct track links used by the release and song pages.
 
 `npm run check:external-links` checks unique listening, album, and platform URLs.
-The weekly site-health workflow runs this after the complete test suite. See
+The manually triggered site-health workflow runs this after the complete test suite. See
 `docs/production-monitoring.md` for Search Console and operational setup.
 
 ## Where the data lives

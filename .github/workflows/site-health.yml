@@ -2,8 +2,6 @@ name: Site health
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: '43 12 * * 1'
 
 permissions:
   contents: read
