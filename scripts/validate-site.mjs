@@ -114,6 +114,18 @@ for (const [youtubeId, title] of [
   assert.ok(song, `${title} Short must connect to its song page.`);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${title} song page must link back to the Short.`);
 }
+for (const [youtubeId, title] of [
+  ['Ho22DHW3p_4', 'Be Weird, Be Wonderful'],
+  ['x6ELTD-FRLI', 'Paper Planets'],
+  ['u52veeC1bLE', 'Make Some Room'],
+  ['2b955JYiYkQ', 'Stay Strange, Stay Kind'],
+]) {
+  const video = catalog.videos.find((item) => item.youtubeId === youtubeId);
+  assert.equal(video?.videoType, 'video', `${title} must appear in the full-length video catalog.`);
+  const song = catalog.songs.find((item) => item.title === title && video.songIds.includes(item.id));
+  assert.ok(song, `${title} video must connect to its song page.`);
+  assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(video.watchUrl), `${title} song page must link back to the video.`);
+}
 
 for (const album of catalog.albums) {
   for (const trackId of album.trackIds) assert.ok(songIds.has(trackId), `${album.title} references a missing track.`);
