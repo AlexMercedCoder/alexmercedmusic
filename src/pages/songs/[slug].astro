@@ -121,7 +121,7 @@ const jsonLd = [
           {song.genres?.length && <div><dt>Style</dt><dd>{song.genres.join(' · ')}</dd></div>}
           {song.model && <div><dt>Suno model</dt><dd>{song.model}</dd></div>}
           {song.album && <div><dt>Album</dt><dd><a href={song.albumPageUrl!.replace(SITE, '')}>{song.album}</a></dd></div>}
-          {song.albumLinks.length > 0 && <div><dt>Suno albums</dt><dd>{song.albumLinks.map((album, index) => <span>{index > 0 && ' · '}<a href={album.pageUrl.replace(SITE, '')}>{album.title}</a> (<a href={album.sourceUrl}>Suno ↗</a>)</span>)}</dd></div>}
+          {song.albumLinks.length > 0 && <div><dt>Streaming albums</dt><dd>{song.albumLinks.map((album, index) => <span>{index > 0 && ' · '}<a href={album.pageUrl.replace(SITE, '')}>{album.title}</a>{album.pageUrl !== album.sourceUrl && <> (<a href={album.sourceUrl}>{album.platform} ↗</a>)</>}</span>)}</dd></div>}
           {!song.createdAt && song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
         </dl>
 

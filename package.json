@@ -12,6 +12,7 @@
     "validate": "npm run check && npm run build && node scripts/validate-site.mjs",
     "test": "npm run validate",
     "sync:suno": "node scripts/sync-suno.mjs",
+    "sync:spotify": "node scripts/sync-spotify.mjs",
     "sync:youtube": "node scripts/sync-youtube-metadata.mjs",
     "check:external-links": "node scripts/check-external-links.mjs"
   },

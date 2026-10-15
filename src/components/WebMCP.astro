@@ -177,7 +177,7 @@
             query: { type: 'string', minLength: 1, description: 'Words from a title or description.' },
             era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'] },
             kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'] },
-            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno'] },
+            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno', 'spotify'] },
             album: { type: 'string', minLength: 1 },
             limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 },
             offset: { type: 'integer', minimum: 0, default: 0 },
@@ -210,7 +210,7 @@
           properties: {
             era: { type: 'string', enum: ['all', 'acoustic', 'electronic', 'ai'], default: 'all' },
             kind: { type: 'string', enum: ['all', 'archive', 'electronic', 'reimagined', 'generated'], default: 'all' },
-            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno'], default: 'all' },
+            source: { type: 'string', enum: ['all', 'youtube', 'soundcloud', 'soundcloud-albums', 'reverbnation', 'suno', 'spotify'], default: 'all' },
             album: { type: 'string', minLength: 1 },
             limit: { type: 'integer', minimum: 1, maximum: 100, default: 25 },
             offset: { type: 'integer', minimum: 0, default: 0 },

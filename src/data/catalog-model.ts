@@ -19,9 +19,10 @@ import {
 } from './catalog';
 import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
+import spotifyTracksData from './spotify-tracks.json';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '2.0.0';
+export const CATALOG_SCHEMA_VERSION = '2.1.0';
 export const CATALOG_UPDATED_AT = '2026-10-15';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -115,11 +116,13 @@ const sourceLabel: Record<TrackLink['source'], string> = {
   'soundcloud-albums': 'SoundCloud album',
   reverbnation: 'ReverbNation',
   suno: 'Suno',
+  spotify: 'Spotify',
 };
 
 const sourceFromUrl = (url: string): TrackLink['source'] => {
   if (url.includes('youtube.com')) return 'youtube';
   if (url.includes('suno.com')) return 'suno';
+  if (url.includes('spotify.com')) return 'spotify';
   if (url.includes('reverbnation.com')) return 'reverbnation';
   return 'soundcloud';
 };
@@ -394,11 +397,80 @@ for (const album of sunoAlbums) {
   }
 }
 
+type SpotifyTrack = (typeof spotifyTracksData)[number];
+const spotifyBaseTitle = (title: string) => title.replace(/\s*-\s*(?:actual\s+)?(?:original\s+acoustic|original|ai)\s+version$/i, '');
+const normalizedSpotifyTitle = (title: string) => spotifyBaseTitle(title)
+  .replace(/^new song\s+/i, '')
+  .replace(/^alex merced\s*[-–:]\s*/i, '')
+  .replace(/\s+video$/i, '')
+  .replace(/\bsolumn\b/gi, 'solemn')
+  .replace(/\bscars\b/gi, 'scar')
+  .replace(/[^a-z0-9]+/gi, ' ')
+  .trim().toLowerCase();
+const songRuntime = (song: typeof baseSongs[number]) => song.durationSeconds ?? song.seconds
+  ?? (song.length ? Number(song.length.split(':')[0]) * 60 + Number(song.length.split(':')[1]) : undefined);
+const matchSpotifyTrack = (track: SpotifyTrack) => {
+  const kind: SongKind = /\s*-\s*(?:actual\s+)?(?:original\s+acoustic|original)\s+version$/i.test(track.title) ? 'archive'
+    : /\s*-\s*ai\s+version$/i.test(track.title) ? 'reimagined' : 'generated';
+  const title = normalizedSpotifyTitle(track.title);
+  const candidates = baseSongs.filter((song) => song.kind === kind && normalizedSpotifyTitle(song.title) === title);
+  // The original recording was uploaded as Eadd9 Improv before being released as Solumn Thoughts.
+  if (!candidates.length && kind === 'archive' && title === 'solemn thoughts') {
+    const original = baseSongs.find((song) => song.kind === 'archive' && song.title === 'Eadd9 Improv');
+    if (original) return original;
+  }
+  if (candidates.length === 1) return candidates[0];
+  if (candidates.length > 1) {
+    const ranked = candidates.map((song) => ({ song, gap: Math.abs((songRuntime(song) ?? Infinity) - track.durationSeconds) })).sort((a, b) => a.gap - b.gap);
+    if (ranked[0].gap + 2 < ranked[1].gap) return ranked[0].song;
+  }
+  throw new Error(`Spotify track ${track.title} (${track.id}) has ${candidates.length} matches; a unique match is required.`);
+};
+const spotifyMatches = spotifyTracksData.map((track) => {
+  const release = distributedReleases.find((item) => item.links.some((link) => link.label === 'Spotify' && link.url === `https://open.spotify.com/album/${track.albumId}`));
+  if (!release) throw new Error(`Spotify track ${track.id} has no verified release.`);
+  return { track, song: matchSpotifyTrack(track), release };
+});
+const spotifyMatchesBySongId = new Map<string, typeof spotifyMatches>();
+for (const match of spotifyMatches) {
+  const matches = spotifyMatchesBySongId.get(match.song.id) ?? [];
+  matches.push(match);
+  spotifyMatchesBySongId.set(match.song.id, matches);
+}
+
 export const songs: CatalogSong[] = baseSongs.map((song) => ({
   ...song,
-  albumLinks: [...new Map(song.links.flatMap((link) => sunoAlbumMembership.get(link.url) ?? []).map((album) => [album.id, album])).values()],
+  links: [
+    ...song.links,
+    ...(spotifyMatchesBySongId.get(song.id) ?? []).map(({ track }) => ({
+      source: 'spotify' as const,
+      url: track.url,
+      label: `Spotify: ${track.title}`,
+      versionRole: song.kind === 'archive' || song.kind === 'electronic' ? 'recording' as const : 'generation' as const,
+    })),
+  ],
+  albumLinks: [...new Map([
+    ...song.links.flatMap((link) => sunoAlbumMembership.get(link.url) ?? []),
+    ...(spotifyMatchesBySongId.get(song.id) ?? []).map(({ track, release }) => ({
+      id: `spotify:album:${track.albumId}`,
+      title: release.title,
+      pageUrl: `https://open.spotify.com/album/${track.albumId}`,
+      sourceUrl: `https://open.spotify.com/album/${track.albumId}`,
+      platform: 'Spotify' as const,
+    })),
+  ].map((album) => [album.id, album])).values()],
   videoIds: videos.filter((video) => video.songIds.includes(song.id)).map((video) => video.id),
   relatedVideoIds: videos.filter((video) => video.relatedSongIds.includes(song.id)).map((video) => video.id),
+}));
+
+export const catalogDistributedReleases = distributedReleases.map((release) => ({
+  ...release,
+  tracks: spotifyMatches.filter((match) => match.release.title === release.title).map(({ track, song }) => ({
+    title: track.title,
+    url: track.url,
+    songId: song.id,
+    songPageUrl: song.pageUrl,
+  })),
 }));
 
 export const catalogAlbums: CatalogAlbum[] = albums.map((album) => ({
@@ -458,7 +530,7 @@ export const publicCatalog = {
   songs,
   videos,
   albums: catalogAlbums,
-  distributedReleases,
+  distributedReleases: catalogDistributedReleases,
   platforms,
 };
 

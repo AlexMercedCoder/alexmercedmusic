@@ -24,7 +24,7 @@ const jsonLd = [{
       <label><span>Era</span><select id="song-era"><option value="all">All eras</option><option value="acoustic">Acoustic</option><option value="electronic">Electronic</option><option value="ai">AI and reimagined</option></select></label>
       <label><span>Genre</span><select id="song-genre"><option value="all">All genres</option>{genres.map((item) => <option value={item}>{item}</option>)}</select></label>
       <label><span>Type</span><select id="song-kind"><option value="all">All types</option><option value="archive">Archive recording</option><option value="electronic">Electronic</option><option value="reimagined">Reimagined</option><option value="generated">New with Suno</option></select></label>
-      <label><span>Platform</span><select id="song-source"><option value="all">All platforms</option><option value="youtube">YouTube</option><option value="suno">Suno</option><option value="soundcloud">SoundCloud</option><option value="reverbnation">ReverbNation</option></select></label>
+      <label><span>Platform</span><select id="song-source"><option value="all">All platforms</option><option value="youtube">YouTube</option><option value="suno">Suno</option><option value="spotify">Spotify</option><option value="soundcloud">SoundCloud</option><option value="reverbnation">ReverbNation</option></select></label>
       <label><span>Album</span><select id="song-album"><option value="all">All albums</option>{albums.map((album) => <option value={album}>{album}</option>)}</select></label>
       <label><span>Sort</span><select id="song-sort"><option value="catalog">Catalog order</option><option value="newest">Newest dated first</option><option value="az">Title A-Z</option><option value="duration">Longest first</option></select></label>
     </div>
@@ -37,9 +37,9 @@ const jsonLd = [{
     <noscript><p class="empty">JavaScript is required to filter the full catalog. The first {PAGE_SIZE} songs remain available above, and the complete catalog is also available in <a href="/catalog.json">catalog.json</a>.</p></noscript>
   </div></section>
   <section class="section section--tight"><div class="shell">
-    <div class="section__head"><p class="eyebrow">Albums</p><h2>Follow an album</h2><p>Open a Suno album for its ordered song links, or hear a distributed release on Spotify. Individual Spotify track matches will follow once their mappings are confirmed.</p></div>
+    <div class="section__head"><p class="eyebrow">Albums</p><h2>Follow an album</h2><p>Open a Suno album for its ordered songs, or choose a Spotify release and explore its matching song pages.</p></div>
     <div class="grid grid--3">
-      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}</div></article>)}
+      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}<a href={`/songs/?album=${encodeURIComponent(release.title)}`}>Explore matching songs</a></div></article>)}
     </div>
     <p><a href="/suno/">Browse all {sunoAlbums.length} Suno albums with artwork and track lists →</a></p>
   </div></section>

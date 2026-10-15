@@ -18,7 +18,7 @@ import youtubeMetadataData from './youtube-metadata.json';
 export type Era = 'acoustic' | 'electronic' | 'ai';
 
 export type TrackLink = {
-  source: 'youtube' | 'soundcloud' | 'soundcloud-albums' | 'reverbnation' | 'suno';
+  source: 'youtube' | 'soundcloud' | 'soundcloud-albums' | 'reverbnation' | 'suno' | 'spotify';
   url: string;
   /** Optional human-readable distinction when one source hosts several versions. */
   label?: string;

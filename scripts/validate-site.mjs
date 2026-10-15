@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '2.0.0');
+assert.equal(catalog.schemaVersion, '2.1.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -26,7 +26,21 @@ assert.equal(catalog.distributedReleases.length, 3);
 assert.ok(catalog.distributedReleases.every((release) => release.title && release.released && release.trackCount > 0 && release.links.length > 0));
 for (const release of catalog.distributedReleases) {
   for (const link of release.links) assert.equal(new URL(link.url).protocol, 'https:', `${release.title} has a non-HTTPS store link.`);
+  assert.equal(release.tracks.length, release.trackCount, `${release.title} is missing Spotify track mappings.`);
 }
+const spotifyTracks = JSON.parse(read('src/data/spotify-tracks.json'));
+assert.equal(spotifyTracks.length, 28);
+assert.equal(new Set(spotifyTracks.map((track) => track.id)).size, spotifyTracks.length);
+for (const track of spotifyTracks) {
+  const linked = catalog.songs.filter((song) => song.links.some((link) => link.source === 'spotify' && link.url === track.url));
+  assert.equal(linked.length, 1, `${track.title} must link to exactly one song page.`);
+  assert.ok(linked[0].albumLinks.some((album) => album.id === `spotify:album:${track.albumId}` && album.platform === 'Spotify'));
+  assert.ok(catalog.distributedReleases.some((release) => release.tracks.some((item) => item.url === track.url && item.songId === linked[0].id)));
+}
+const spotifyOriginal = catalog.songs.find((song) => song.links.some((link) => link.url === 'https://open.spotify.com/track/7tk2vjN5FJJH8RdVGLNHyt'));
+assert.equal(spotifyOriginal?.title, 'Eadd9 Improv', 'Solumn Thoughts must point to its original Eadd9 Improv recording.');
+const spotifyTinRoof = catalog.songs.find((song) => song.links.some((link) => link.url === 'https://open.spotify.com/track/6Edh8bgB6YIlJe4pjhryQr'));
+assert.ok(Math.abs((spotifyTinRoof?.durationSeconds ?? 0) - 202.76) < 1, 'The Spotify Tin Roof Weather track must select the matching take.');
 
 for (const song of catalog.songs) {
   assert.equal(song.pageUrl, `${catalog.site}/songs/${song.slug}/`);
@@ -127,6 +141,7 @@ assert.ok(catalog.songs.filter((song) => song.albumLinks.length).length > 1000, 
 const songsPage = read('dist/songs/index.html');
 for (const release of catalog.distributedReleases) {
   assert.ok(songsPage.includes(release.links.find((link) => link.label === 'Spotify')?.url), `${release.title} is missing its Spotify album link on the songs page.`);
+  assert.ok(read('dist/listen/index.html').includes(release.tracks[0].url), `${release.title} is missing its direct Spotify track links.`);
 }
 assert.ok(!/class="hero-album"[^>]*aria-label=/.test(read('dist/index.html')), 'Hero album links should use visible link text as their accessible name.');
 assert.ok(!/<h4>This site<\/h4>/.test(read('dist/index.html')), 'Footer headings should not skip from h2 to h4.');

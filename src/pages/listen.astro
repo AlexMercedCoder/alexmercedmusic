@@ -1,7 +1,8 @@
 ---
 import Base from '../layouts/Base.astro';
 import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
-import { distributedReleases, platforms, sunoAlbums } from '../data/catalog';
+import { platforms, sunoAlbums } from '../data/catalog';
+import { catalogDistributedReleases as distributedReleases, SITE } from '../data/catalog-model';
 
 const label: Record<string, string> = {
   acoustic: 'Acoustic',
@@ -43,7 +44,7 @@ const jsonLd = distributedReleases.map((release) => ({
       <div class="section__head">
         <p class="eyebrow">Current distributed releases</p>
         <h2>Exact links across streaming stores</h2>
-        <p>These links were checked against the release title, track list and UPC where available. Some delivery destinations do not publish a stable artist or album page.</p>
+        <p>These links were checked against the release title, track list and UPC where available. Spotify tracks connect to song pages by title and version label, with runtime used when a title has multiple takes. Some delivery destinations do not publish a stable artist or album page.</p>
       </div>
       <div class="grid grid--3">
         {distributedReleases.map((release) => (
@@ -54,6 +55,10 @@ const jsonLd = distributedReleases.map((release) => ({
             <div class="source-links">
               {release.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}
             </div>
+            <details>
+              <summary>See the {release.tracks.length} Spotify tracks and matching song pages</summary>
+              <ol>{release.tracks.map((track) => <li><a href={track.songPageUrl.replace(SITE, '')}>{track.title}</a> · <a href={track.url}>Spotify ↗</a></li>)}</ol>
+            </details>
           </article>
         ))}
       </div>
