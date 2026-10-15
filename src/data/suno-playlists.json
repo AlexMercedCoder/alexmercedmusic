@@ -1,5 +1,262 @@
 [
   {
+    "id": "0dada68d-fcdb-4f09-844e-3ff20806ebc0",
+    "name": "The Seams Inside That Burst",
+    "resourceType": "album",
+    "url": "https://suno.com/album/0dada68d-fcdb-4f09-844e-3ff20806ebc0",
+    "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg",
+    "songCount": 27,
+    "durationSeconds": 5817.96,
+    "description": "Songs about my struggles with impulse control.",
+    "trackIds": [
+      "79689236-d571-4036-9c28-1e835ef52672",
+      "16da6e14-3be5-43a3-9fc2-2402f143cac7",
+      "b4dfbb0d-9868-4381-94c5-e68b59cce953",
+      "fa538fca-0672-4af7-953a-64b24b21b9eb",
+      "662ae4e7-2338-460f-a4c4-26264c544e95",
+      "a08722cf-00ae-49ca-a584-d2e725150fcc",
+      "2b226123-d6ae-4283-8128-424b35c9b894",
+      "a75d6e74-a23a-47bd-bf89-73a2ae856b06",
+      "25e37ab2-41f9-4cdc-bfab-cb932a01224d",
+      "f1815629-9e33-439f-a4e0-6e8d46e378fa",
+      "52018f4d-2357-4144-96b0-786a5640d6e5",
+      "2e7aeaac-5bdc-4e1e-acef-337aeb1670ed",
+      "d8e1fe72-ff78-42fb-98c3-431fd2ee0122",
+      "5a5f0e74-933d-4b0f-84b2-96a4fb7303a5",
+      "7414eed3-dc68-41dc-855c-e3a4f1e77d40",
+      "43faf7ac-7502-40b2-af91-9121949f1103",
+      "a981fd02-043b-4caf-a0d6-17ff00d7cce8",
+      "3fd5180e-a209-4700-87ef-11ac63725553",
+      "cae58962-68f4-4eff-bede-78edb95ee55a",
+      "7d9eae1e-edf4-44e8-83b8-084296b490c3",
+      "aad78bbd-a135-43c6-942f-d1d64f1a2fa9",
+      "17b40db2-511b-44f1-824b-539170c811c6",
+      "ac5b16eb-307c-47a3-9c4a-bee5da7de18d",
+      "c8cd5827-475f-4c47-805b-5405d1f2dbfe",
+      "75d48de9-2c72-4cd1-924e-e461fd56c0db",
+      "779e21ad-91ae-4452-8aa3-805d4b823102",
+      "b2936099-3d94-45c8-8231-a703639c9feb"
+    ],
+    "tracks": [
+      {
+        "id": "79689236-d571-4036-9c28-1e835ef52672",
+        "title": "The Calm It Knows",
+        "url": "https://suno.com/song/79689236-d571-4036-9c28-1e835ef52672",
+        "createdAt": "2026-10-14T18:52:38.498Z",
+        "durationSeconds": 218.76,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "16da6e14-3be5-43a3-9fc2-2402f143cac7",
+        "title": "Matchbook by the Sink",
+        "url": "https://suno.com/song/16da6e14-3be5-43a3-9fc2-2402f143cac7",
+        "createdAt": "2026-10-14T18:53:36.216Z",
+        "durationSeconds": 220,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "b4dfbb0d-9868-4381-94c5-e68b59cce953",
+        "title": "A Friend That Isn't One",
+        "url": "https://suno.com/song/b4dfbb0d-9868-4381-94c5-e68b59cce953",
+        "createdAt": "2026-10-14T18:57:58.856Z",
+        "durationSeconds": 192.8,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "fa538fca-0672-4af7-953a-64b24b21b9eb",
+        "title": "I Can't Be Yours",
+        "url": "https://suno.com/song/fa538fca-0672-4af7-953a-64b24b21b9eb",
+        "createdAt": "2026-10-14T18:59:00.419Z",
+        "durationSeconds": 201.56,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "662ae4e7-2338-460f-a4c4-26264c544e95",
+        "title": "Poison Medicine",
+        "url": "https://suno.com/song/662ae4e7-2338-460f-a4c4-26264c544e95",
+        "createdAt": "2026-10-14T19:00:39.751Z",
+        "durationSeconds": 259.96,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "a08722cf-00ae-49ca-a584-d2e725150fcc",
+        "title": "The Road Through You",
+        "url": "https://suno.com/song/a08722cf-00ae-49ca-a584-d2e725150fcc",
+        "createdAt": "2026-10-14T19:00:39.751Z",
+        "durationSeconds": 216.76,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "2b226123-d6ae-4283-8128-424b35c9b894",
+        "title": "Every Road Runs Back",
+        "url": "https://suno.com/song/2b226123-d6ae-4283-8128-424b35c9b894",
+        "createdAt": "2026-10-14T19:09:55.201Z",
+        "durationSeconds": 246.4,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "a75d6e74-a23a-47bd-bf89-73a2ae856b06",
+        "title": "Heart Passport",
+        "url": "https://suno.com/song/a75d6e74-a23a-47bd-bf89-73a2ae856b06",
+        "createdAt": "2026-10-14T19:14:54.197Z",
+        "durationSeconds": 227.6,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "25e37ab2-41f9-4cdc-bfab-cb932a01224d",
+        "title": "Everybody's Home",
+        "url": "https://suno.com/song/25e37ab2-41f9-4cdc-bfab-cb932a01224d",
+        "createdAt": "2026-10-14T19:18:28.402Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "f1815629-9e33-439f-a4e0-6e8d46e378fa",
+        "title": "Frozen Hemispheres",
+        "url": "https://suno.com/song/f1815629-9e33-439f-a4e0-6e8d46e378fa",
+        "createdAt": "2026-10-14T19:18:28.402Z",
+        "durationSeconds": 186.8,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "52018f4d-2357-4144-96b0-786a5640d6e5",
+        "title": "Too Many Doors",
+        "url": "https://suno.com/song/52018f4d-2357-4144-96b0-786a5640d6e5",
+        "createdAt": "2026-10-14T19:25:19.553Z",
+        "durationSeconds": 212,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "2e7aeaac-5bdc-4e1e-acef-337aeb1670ed",
+        "title": "Too Many Sunrises",
+        "url": "https://suno.com/song/2e7aeaac-5bdc-4e1e-acef-337aeb1670ed",
+        "createdAt": "2026-10-14T19:25:19.553Z",
+        "durationSeconds": 216,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "d8e1fe72-ff78-42fb-98c3-431fd2ee0122",
+        "title": "Which One Stays",
+        "url": "https://suno.com/song/d8e1fe72-ff78-42fb-98c3-431fd2ee0122",
+        "createdAt": "2026-10-14T19:29:31.375Z",
+        "durationSeconds": 211.56,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "5a5f0e74-933d-4b0f-84b2-96a4fb7303a5",
+        "title": "The Ledger Bends",
+        "url": "https://suno.com/song/5a5f0e74-933d-4b0f-84b2-96a4fb7303a5",
+        "createdAt": "2026-10-14T19:33:47.194Z",
+        "durationSeconds": 216.16,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "7414eed3-dc68-41dc-855c-e3a4f1e77d40",
+        "title": "Too Many Maps",
+        "url": "https://suno.com/song/7414eed3-dc68-41dc-855c-e3a4f1e77d40",
+        "createdAt": "2026-10-14T20:43:16.018Z",
+        "durationSeconds": 215.56,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "43faf7ac-7502-40b2-af91-9121949f1103",
+        "title": "Too Many Homes",
+        "url": "https://suno.com/song/43faf7ac-7502-40b2-af91-9121949f1103",
+        "createdAt": "2026-10-14T20:43:16.018Z",
+        "durationSeconds": 246.96,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "a981fd02-043b-4caf-a0d6-17ff00d7cce8",
+        "title": "Another One Awake",
+        "url": "https://suno.com/song/a981fd02-043b-4caf-a0d6-17ff00d7cce8",
+        "createdAt": "2026-10-14T20:48:54.620Z",
+        "durationSeconds": 201.6,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "3fd5180e-a209-4700-87ef-11ac63725553",
+        "title": "Splitting at the Seam",
+        "url": "https://suno.com/song/3fd5180e-a209-4700-87ef-11ac63725553",
+        "createdAt": "2026-10-14T20:48:54.620Z",
+        "durationSeconds": 203.96,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "cae58962-68f4-4eff-bede-78edb95ee55a",
+        "title": "The House Inside My Head",
+        "url": "https://suno.com/song/cae58962-68f4-4eff-bede-78edb95ee55a",
+        "createdAt": "2026-10-14T20:57:35.543Z",
+        "durationSeconds": 213.2,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "7d9eae1e-edf4-44e8-83b8-084296b490c3",
+        "title": "Wake to the Walls",
+        "url": "https://suno.com/song/7d9eae1e-edf4-44e8-83b8-084296b490c3",
+        "createdAt": "2026-10-14T20:57:35.543Z",
+        "durationSeconds": 220.8,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "aad78bbd-a135-43c6-942f-d1d64f1a2fa9",
+        "title": "Unowned, Alive",
+        "url": "https://suno.com/song/aad78bbd-a135-43c6-942f-d1d64f1a2fa9",
+        "createdAt": "2026-10-14T21:03:10.554Z",
+        "durationSeconds": 217.56,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "17b40db2-511b-44f1-824b-539170c811c6",
+        "title": "That House Inside My Song",
+        "url": "https://suno.com/song/17b40db2-511b-44f1-824b-539170c811c6",
+        "createdAt": "2026-10-14T21:12:03.680Z",
+        "durationSeconds": 212.4,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "ac5b16eb-307c-47a3-9c4a-bee5da7de18d",
+        "title": "Every Door Unclosed",
+        "url": "https://suno.com/song/ac5b16eb-307c-47a3-9c4a-bee5da7de18d",
+        "createdAt": "2026-10-14T21:02:55.820Z",
+        "durationSeconds": 209.56,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "c8cd5827-475f-4c47-805b-5405d1f2dbfe",
+        "title": "With the Edges On",
+        "url": "https://suno.com/song/c8cd5827-475f-4c47-805b-5405d1f2dbfe",
+        "createdAt": "2026-10-14T21:29:12.386Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "75d48de9-2c72-4cd1-924e-e461fd56c0db",
+        "title": "Wide Enough to Pass",
+        "url": "https://suno.com/song/75d48de9-2c72-4cd1-924e-e461fd56c0db",
+        "createdAt": "2026-10-14T21:29:12.385Z",
+        "durationSeconds": 224,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "779e21ad-91ae-4452-8aa3-805d4b823102",
+        "title": "Hold You Close Without",
+        "url": "https://suno.com/song/779e21ad-91ae-4452-8aa3-805d4b823102",
+        "createdAt": "2026-10-14T21:34:12.335Z",
+        "durationSeconds": 227.6,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      },
+      {
+        "id": "b2936099-3d94-45c8-8231-a703639c9feb",
+        "title": "A Little Border",
+        "url": "https://suno.com/song/b2936099-3d94-45c8-8231-a703639c9feb",
+        "createdAt": "2026-10-14T21:34:42.972Z",
+        "durationSeconds": 201.2,
+        "imageUrl": "https://cdn2.suno.ai/image_852d7366-550e-465e-93b7-7253b48b8c0a.jpeg"
+      }
+    ]
+  },
+  {
     "id": "34b271d3-258a-482a-bea6-5283b69a4ee8",
     "name": "Metaphor and Effect",
     "resourceType": "album",
