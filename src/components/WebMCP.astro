@@ -61,6 +61,7 @@
       kind: song.kind,
       pageUrl: song.pageUrl,
       album: song.album ?? null,
+      albumLinks: song.albumLinks ?? [],
       style: song.style ?? null,
       length: song.length ?? (song.seconds ? `${Math.floor(song.seconds / 60)}:${String(song.seconds % 60).padStart(2, '0')}` : null),
       links: song.links,
@@ -197,7 +198,7 @@
             && (era === 'all' || song.era === era)
             && (kind === 'all' || song.kind === kind)
             && (source === 'all' || song.links.some((link) => link.source === source))
-            && (!album || song.album?.toLowerCase().includes(album)));
+            && (!album || song.album?.toLowerCase().includes(album) || song.albumLinks?.some((item) => item.title.toLowerCase().includes(album))));
           return { query, filters: { era, kind, source, album: album || null }, ...page(matches.map(songSummary), input) };
         },
       },
@@ -226,7 +227,7 @@
             (era === 'all' || song.era === era)
             && (kind === 'all' || song.kind === kind)
             && (source === 'all' || song.links.some((link) => link.source === source))
-            && (!album || song.album?.toLowerCase().includes(album)));
+            && (!album || song.album?.toLowerCase().includes(album) || song.albumLinks?.some((item) => item.title.toLowerCase().includes(album))));
           return { filters: { era, kind, source, album: album || null }, ...page(matches.map(songSummary), input) };
         },
       },
@@ -314,32 +315,6 @@
           const rebuilt = (original.reimaginedTrackIds ?? []).map((relatedId) => byId.get(relatedId)).filter(Boolean);
           if (!rebuilt.length && selected.kind !== 'reimagined') return { error: 'This recording has no cataloged reimagined version.', song: songSummary(selected) };
           return { original: songSummary(original), reimagined: rebuilt.map(songSummary) };
-        },
-      },
-      {
-        name: 'list_suno_playlists',
-        description: 'List every public Alex Merced Suno playlist with its local page, source URL, artwork, song count and runtime. Use this when a user wants a themed or project-based listening path.',
-        inputSchema: { type: 'object', properties: {}, additionalProperties: false },
-        execute: async (_input, signal) => {
-          const catalog = await getCatalog(signal);
-          return { updatedAt: catalog.updatedAt, count: catalog.suno.playlists.length, playlists: catalog.suno.playlists.map(({ trackIds, sourceTracks, ...playlist }) => playlist) };
-        },
-      },
-      {
-        name: 'get_suno_playlist',
-        description: 'Get one Suno playlist and its ordered track records. Accept a playlist ID, slug or exact name from list_suno_playlists.',
-        inputSchema: { type: 'object', properties: { id: { type: 'string', minLength: 1 }, slug: { type: 'string', minLength: 1 }, name: { type: 'string', minLength: 1 } }, additionalProperties: false },
-        execute: async (input, signal) => {
-          const catalog = await getCatalog(signal);
-          const id = textValue(input, 'id');
-          const slug = textValue(input, 'slug').toLowerCase();
-          const name = textValue(input, 'name').toLowerCase();
-          if (!id && !slug && !name) return { error: 'Provide id, slug, or name.' };
-          const playlist = catalog.suno.playlists.find((item) => item.id === id || item.slug === slug || item.name.toLowerCase() === name);
-          if (!playlist) return { error: 'No Suno playlist matched.' };
-          const bySunoUrl = new Map(catalog.songs.flatMap((song) => song.links.filter((link) => link.source === 'suno').map((link) => [link.url, song])));
-          const { sourceTracks, ...playlistSummary } = playlist;
-          return { updatedAt: catalog.updatedAt, playlist: playlistSummary, tracks: sourceTracks.map((source) => { const song = bySunoUrl.get(source.url); return song ? { source, catalogSong: songSummary(song) } : { source, catalogSong: null }; }) };
         },
       },
       {
@@ -714,7 +689,7 @@
           const main = [
             { label: 'Home', url: `${catalog.site}/` }, { label: 'Acoustic archive', url: `${catalog.site}/acoustic/` },
             { label: 'Reimagined with Suno', url: `${catalog.site}/reimagined/` }, { label: 'Electronic catalogue', url: `${catalog.site}/electronic/` },
-            { label: 'Suno albums and playlists', url: `${catalog.site}/suno/` },
+            { label: 'Suno albums', url: `${catalog.site}/suno/` },
             { label: 'Suno Prompting Field Guide', url: `${catalog.site}/suno-prompting-guide/` },
             { label: 'Music Theory for Songwriters and Producers', url: `${catalog.site}/music-theory/` },
             { label: 'Where to listen', url: `${catalog.site}/listen/` }, { label: 'About Alex Merced', url: `${catalog.site}/about/` },

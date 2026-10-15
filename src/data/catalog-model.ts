@@ -12,7 +12,6 @@ import {
   sunoAlbums,
   sunoPublishedCount,
   sunoSongs,
-  sunoPlaylists,
   sunoStyle,
   youtubeMetadata,
   type Era,
@@ -22,8 +21,8 @@ import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '1.14.0';
-export const CATALOG_UPDATED_AT = '2026-10-14';
+export const CATALOG_SCHEMA_VERSION = '2.0.0';
+export const CATALOG_UPDATED_AT = '2026-10-15';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -47,6 +46,7 @@ export type CatalogSong = {
   album?: string;
   albumId?: string;
   albumPageUrl?: string;
+  albumLinks: Array<{ id: string; title: string; pageUrl: string; sourceUrl: string; platform: 'Suno' | 'Spotify' }>;
   style?: string;
   createdAt?: string;
   durationSeconds?: number;
@@ -148,7 +148,7 @@ const linksFor = (
     }));
 };
 
-type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
+type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'albumLinks' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
   key: string;
   originalTitle?: string;
   originalEra?: Era;
@@ -384,8 +384,19 @@ export const videos: CatalogVideo[] = Object.entries(youtubeMetadata)
   })
   .sort((left, right) => left.channelPosition - right.channelPosition);
 
+const sunoAlbumMembership = new Map<string, CatalogSong['albumLinks']>();
+for (const album of sunoAlbums) {
+  for (const trackId of album.trackIds) {
+    const sourceUrl = `https://suno.com/song/${trackId}`;
+    const membership = sunoAlbumMembership.get(sourceUrl) ?? [];
+    membership.push({ id: album.id, title: album.name, pageUrl: `${SITE}${album.pageUrl}`, sourceUrl: album.url, platform: 'Suno' });
+    sunoAlbumMembership.set(sourceUrl, membership);
+  }
+}
+
 export const songs: CatalogSong[] = baseSongs.map((song) => ({
   ...song,
+  albumLinks: [...new Map(song.links.flatMap((link) => sunoAlbumMembership.get(link.url) ?? []).map((album) => [album.id, album])).values()],
   videoIds: videos.filter((video) => video.songIds.includes(song.id)).map((video) => video.id),
   relatedVideoIds: videos.filter((video) => video.relatedSongIds.includes(song.id)).map((video) => video.id),
 }));
@@ -409,16 +420,6 @@ export const albumById = new Map(catalogAlbums.map((album) => [album.id, album])
 export const videoById = new Map(videos.map((video) => [video.id, video]));
 export const videoByYoutubeId = new Map(videos.map((video) => [video.youtubeId, video]));
 
-export const catalogSunoPlaylists = sunoPlaylists.map(({ tracks: sourceTracks, ...playlist }) => ({
-  ...playlist,
-  pageUrl: `${SITE}${playlist.pageUrl}`,
-  sourceTracks,
-  trackIds: playlist.trackIds.flatMap((clipId) => {
-    const song = songByPrimaryUrl.get(`https://suno.com/song/${clipId}`);
-    return song ? [song.id] : [];
-  }),
-}));
-
 export const catalogSunoAlbums = sunoAlbums.map(({ tracks: sourceTracks, ...album }) => ({
   ...album,
   pageUrl: `${SITE}${album.pageUrl}`,
@@ -441,7 +442,6 @@ export const publicCatalog = {
     generated: songs.filter((song) => song.kind === 'generated').length,
     albums: catalogAlbums.length,
     sunoPublished: sunoPublishedCount,
-    sunoPlaylists: sunoPlaylists.length,
     sunoAlbums: sunoAlbums.length,
     videos: videos.length,
     shorts: videos.filter((video) => video.videoType === 'short').length,
@@ -453,7 +453,6 @@ export const publicCatalog = {
     publishedCount: sunoPublishedCount,
     featuredReimaginingAlbums,
     albums: catalogSunoAlbums,
-    playlists: catalogSunoPlaylists,
   },
   guides: { sunoPrompting: sunoPromptingGuide, musicTheory: musicTheoryGuide },
   songs,

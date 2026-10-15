@@ -5,7 +5,6 @@ const urls = [...new Set([
   ...catalog.songs.flatMap((song) => song.links.map((link) => link.url)),
   ...catalog.albums.map((album) => album.sourceUrl),
   ...catalog.platforms.map((platform) => platform.url),
-  ...catalog.suno.playlists.map((playlist) => playlist.url),
   ...catalog.suno.albums.map((album) => album.url),
 ])];
 const failures = [];

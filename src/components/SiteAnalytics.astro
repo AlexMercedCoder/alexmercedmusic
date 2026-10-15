@@ -14,7 +14,6 @@
       else if (target.tagName === 'A') {
         const url = new URL(target.href, location.href);
         if (url.origin !== location.origin) emit('External listen', { host: url.hostname });
-        else if (url.pathname.startsWith('/suno/playlists/')) emit('Playlist open', { path: url.pathname });
       }
     });
   })();

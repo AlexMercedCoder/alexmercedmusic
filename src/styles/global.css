@@ -303,7 +303,7 @@ p:last-child { margin-bottom: 0; }
 
 .site-footer { border-top: 1px solid var(--rule-soft); background: var(--night-800); padding: 3rem 0 2.5rem; margin-top: 2rem; }
 .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 2rem; }
-.footer-grid h4 { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 0.9rem; }
+.footer-grid h2 { font: 600 0.72rem/1 var(--mono); letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-faint); margin: 0 0 0.9rem; }
 .footer-grid ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.42rem; }
 .footer-grid a { font-size: 0.88rem; color: var(--ink-soft); text-decoration: none; }
 .footer-grid a:hover { color: var(--ink); text-decoration: underline; }

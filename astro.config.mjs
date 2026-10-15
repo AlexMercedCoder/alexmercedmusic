@@ -2,7 +2,7 @@
 import { defineConfig } from 'astro/config';
 import sitemap from '@astrojs/sitemap';
 import { readFileSync } from 'node:fs';
-import { songs, videos, songRichness, songById, albumById, catalogAlbums, catalogSunoAlbums, catalogSunoPlaylists } from './src/data/catalog-model';
+import { songs, videos, songRichness, songById, albumById, catalogAlbums, catalogSunoAlbums } from './src/data/catalog-model';
 
 // P4.9: video pages canonicalize to their song page or are noindexed, so none
 // belong in the sitemap. Song pages are weighted by how much they offer.
@@ -28,7 +28,7 @@ const songDate = (song) => newest([
 const lastmod = new Map();
 for (const song of songs) lastmod.set(song.pageUrl, songDate(song));
 for (const album of catalogAlbums) lastmod.set(album.pageUrl, newest([album.released, ...album.trackIds.map((id) => songById.get(id)?.createdAt)]));
-for (const collection of [...catalogSunoAlbums, ...catalogSunoPlaylists]) {
+for (const collection of catalogSunoAlbums) {
   lastmod.set(collection.pageUrl, newest(collection.sourceTracks.map((track) => track.createdAt)));
 }
 /** @param {(song: import('./src/data/catalog-model').CatalogSong) => boolean} filter */

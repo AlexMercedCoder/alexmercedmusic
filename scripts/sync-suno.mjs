@@ -110,9 +110,10 @@ const publicClips = allClips.filter((clip) => clip.is_public && !clip.is_trashed
 const profileCollectionById = new Map(profilePlaylists.map((playlist) => [playlist.id, playlist]));
 const previousCollectionById = new Map(previousCollections.map((collection) => [collection.id, collection]));
 const profilePlaylistIds = profilePlaylists
+  .filter((playlist) => playlist.feed_id?.startsWith('album:') || previousCollectionById.get(playlist.id)?.resourceType === 'album')
   .map((playlist) => playlist.id)
   .filter((id) => typeof id === 'string' && id);
-const playlistIds = [...new Set([...profilePlaylistIds, ...registeredPlaylistIds])];
+const playlistIds = [...new Set([...profilePlaylistIds, ...registeredPlaylistIds.filter((id) => previousCollectionById.get(id)?.resourceType === 'album')])];
 const serializedPlaylistRegistry = `${JSON.stringify(playlistIds, null, 2)}\n`;
 
 const playlists = [];
@@ -128,7 +129,7 @@ for (const playlistId of playlistIds) {
     const response = await fetchPage(url, `playlist ${playlistId} page ${playlistPage}`, { allowNotFound: playlistPage === 1 });
     if (response.status === 404) {
       const previousCollection = previousCollectionById.get(playlistId);
-      if (previousCollection) {
+      if (previousCollection?.resourceType === 'album') {
         console.warn(`Suno playlist ${playlistId} returned 404; retaining the previously cataloged ${previousCollection.name}.`);
         playlists.push(previousCollection);
       }
@@ -162,7 +163,7 @@ for (const playlistId of playlistIds) {
     playlistPage += 1;
     await wait(300);
   }
-  if (!playlist) continue;
+  if (!playlist || playlist.resourceType !== 'album') continue;
   const uniqueTrackIds = [...new Set(trackIds)];
   if (uniqueTrackIds.length !== playlistTotal) {
     throw new Error(`Expected ${playlistTotal} tracks in ${playlist.name} but received ${uniqueTrackIds.length}.`);

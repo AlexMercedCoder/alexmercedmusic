@@ -1,10 +1,11 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import { distributedReleases, sunoAlbums } from '../../data/catalog';
 import { SITE, songs } from '../../data/catalog-model';
 
 const PAGE_SIZE = 48;
-const albums = [...new Set(songs.map((song) => song.album).filter(Boolean))].sort();
+const albums = Array.from(new Set(songs.flatMap((song) => [...(song.album ? [song.album] : []), ...song.albumLinks.map((album) => album.title)]))).sort();
 const genres = [...new Set(songs.flatMap((song) => song.genres ?? []))].sort();
 const initialSongs = songs.slice(0, PAGE_SIZE);
 const sectionLabel = { archive: 'Acoustic archive', electronic: 'Electronic', reimagined: 'Reimagined', generated: 'New with Suno' };
@@ -35,6 +36,13 @@ const jsonLd = [{
     <div class="load-more"><button class="btn" type="button" id="load-more">Load more songs</button></div>
     <noscript><p class="empty">JavaScript is required to filter the full catalog. The first {PAGE_SIZE} songs remain available above, and the complete catalog is also available in <a href="/catalog.json">catalog.json</a>.</p></noscript>
   </div></section>
+  <section class="section section--tight"><div class="shell">
+    <div class="section__head"><p class="eyebrow">Albums</p><h2>Follow an album</h2><p>Open a Suno album for its ordered song links, or hear a distributed release on Spotify. Individual Spotify track matches will follow once their mappings are confirmed.</p></div>
+    <div class="grid grid--3">
+      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}</div></article>)}
+    </div>
+    <p><a href="/suno/">Browse all {sunoAlbums.length} Suno albums with artwork and track lists →</a></p>
+  </div></section>
 </Base>
 
 <style>
@@ -42,14 +50,14 @@ const jsonLd = [{
 </style>
 
 <script>
-  type SongIndexItem = { id:string; index:number; title:string; pageUrl:string; era:string; kind:string; album:string|null; genres:string[]; style:string|null; sources:string[]; sourceUrl:string; createdAt:string|null; duration:number; embedUrl:string|null };
+  type SongIndexItem = { id:string; index:number; title:string; pageUrl:string; era:string; kind:string; album:string|null; albumTitles:string[]; genres:string[]; style:string|null; sources:string[]; sourceUrl:string; createdAt:string|null; duration:number; embedUrl:string|null };
   const PAGE_SIZE = 48;
   const labels:Record<string,string> = { archive:'Acoustic archive',electronic:'Electronic',reimagined:'Reimagined',generated:'New with Suno' };
   const grid=document.getElementById('song-grid')!; const query=document.getElementById('song-query') as HTMLInputElement; const era=document.getElementById('song-era') as HTMLSelectElement; const kind=document.getElementById('song-kind') as HTMLSelectElement; const genre=document.getElementById('song-genre') as HTMLSelectElement; const source=document.getElementById('song-source') as HTMLSelectElement; const album=document.getElementById('song-album') as HTMLSelectElement; const sort=document.getElementById('song-sort') as HTMLSelectElement; const count=document.getElementById('song-count')!; const empty=document.getElementById('song-empty')!; const more=document.getElementById('load-more') as HTMLButtonElement;
   let all:SongIndexItem[]=[]; let matched:SongIndexItem[]=[]; let visible=PAGE_SIZE;
   const element=(tag:string,className?:string,text?:string)=>{const node=document.createElement(tag);if(className)node.className=className;if(text)node.textContent=text;return node};
   const render=()=>{grid.replaceChildren();for(const song of matched.slice(0,visible)){const card=element('article','song-card card card--era');card.dataset.era=song.era;const eyebrow=element('p','eyebrow',labels[song.kind]??song.kind);const heading=element('h2');const detail=document.createElement('a');detail.href=song.pageUrl;detail.textContent=song.title;heading.append(detail);const note=element('p','',song.album||song.genres.slice(0,3).join(' · ')||song.style||'Alex Merced Music');const actions=element('div','song-card__actions');const details=document.createElement('a');details.href=song.pageUrl;details.textContent='Details';actions.append(details);if(song.embedUrl){const play=document.createElement('button');play.type='button';play.textContent='Play here';play.dataset.embedUrl=song.embedUrl;play.dataset.trackTitle=song.title;actions.append(play)}const external=document.createElement('a');external.href=song.sourceUrl;external.textContent='Source ↗';actions.append(external);card.append(eyebrow,heading,note,actions);grid.append(card)}count.textContent=`Showing ${Math.min(visible,matched.length)} of ${matched.length} matching songs (${all.length} total)`;empty.hidden=matched.length>0;more.hidden=visible>=matched.length;grid.setAttribute('aria-busy','false')};
-  const apply=()=>{visible=PAGE_SIZE;const term=query.value.trim().toLowerCase();matched=all.filter((song)=>(!term||`${song.title} ${song.genres.join(' ')} ${song.album??''} ${song.style??''}`.toLowerCase().includes(term))&&(era.value==='all'||song.era===era.value)&&(kind.value==='all'||song.kind===kind.value)&&(genre.value==='all'||song.genres.includes(genre.value))&&(source.value==='all'||song.sources.includes(source.value))&&(album.value==='all'||song.album===album.value));matched.sort((a,b)=>sort.value==='az'?a.title.localeCompare(b.title):sort.value==='newest'?Date.parse(b.createdAt??'1900')-Date.parse(a.createdAt??'1900'):sort.value==='duration'?b.duration-a.duration:a.index-b.index);const params=new URLSearchParams();if(term)params.set('q',term);for(const [control,key,initial] of [[era,'era','all'],[kind,'kind','all'],[genre,'genre','all'],[source,'source','all'],[album,'album','all'],[sort,'sort','catalog']] as const)if(control.value!==initial)params.set(key,control.value);history.replaceState(null,'',`${location.pathname}${params.size?`?${params}`:''}`);render()};
+  const apply=()=>{visible=PAGE_SIZE;const term=query.value.trim().toLowerCase();matched=all.filter((song)=>(!term||`${song.title} ${song.genres.join(' ')} ${song.album??''} ${song.albumTitles.join(' ')} ${song.style??''}`.toLowerCase().includes(term))&&(era.value==='all'||song.era===era.value)&&(kind.value==='all'||song.kind===kind.value)&&(genre.value==='all'||song.genres.includes(genre.value))&&(source.value==='all'||song.sources.includes(source.value))&&(album.value==='all'||song.album===album.value||song.albumTitles.includes(album.value)));matched.sort((a,b)=>sort.value==='az'?a.title.localeCompare(b.title):sort.value==='newest'?Date.parse(b.createdAt??'1900')-Date.parse(a.createdAt??'1900'):sort.value==='duration'?b.duration-a.duration:a.index-b.index);const params=new URLSearchParams();if(term)params.set('q',term);for(const [control,key,initial] of [[era,'era','all'],[kind,'kind','all'],[genre,'genre','all'],[source,'source','all'],[album,'album','all'],[sort,'sort','catalog']] as const)if(control.value!==initial)params.set(key,control.value);history.replaceState(null,'',`${location.pathname}${params.size?`?${params}`:''}`);render()};
   const params=new URLSearchParams(location.search);query.value=params.get('q')??'';for(const [control,key] of [[era,'era'],[kind,'kind'],[genre,'genre'],[source,'source'],[album,'album'],[sort,'sort']] as const){const value=params.get(key);if(value&&[...control.options].some((option)=>option.value===value))control.value=value}
   grid.setAttribute('aria-busy','true');fetch('/song-index.json').then((response)=>{if(!response.ok)throw new Error(String(response.status));return response.json()}).then((data)=>{all=data.songs;apply()}).catch(()=>{grid.setAttribute('aria-busy','false');count.textContent='The full filter index could not load. The first songs remain available.';more.hidden=true});
   for(const control of [query,era,kind,genre,source,album,sort])control.addEventListener(control===query?'input':'change',apply);more.addEventListener('click',()=>{visible+=PAGE_SIZE;render()});document.getElementById('reset')!.addEventListener('click',()=>{query.value='';for(const select of [era,kind,genre,source,album])select.value='all';sort.value='catalog';apply()});document.getElementById('surprise')!.addEventListener('click',()=>{const selected=matched[Math.floor(Math.random()*matched.length)];if(selected)location.href=selected.pageUrl});

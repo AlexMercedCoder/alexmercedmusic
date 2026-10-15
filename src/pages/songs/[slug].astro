@@ -2,6 +2,7 @@
 import Base from '../../layouts/Base.astro';
 import FeaturedReimaginingAlbums from '../../components/FeaturedReimaginingAlbums.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CoverImage from '../../components/CoverImage.astro';
 import { CATALOG_UPDATED_AT, SITE, songById, songs, videoById, type CatalogSong } from '../../data/catalog-model';
 
 export function getStaticPaths() {
@@ -61,7 +62,10 @@ const jsonLd = [
     ...(song.createdAt ? { datePublished: song.createdAt } : {}),
     ...(song.genres?.length ? { genre: song.genres } : {}),
     ...(song.imageLargeUrl || song.imageUrl ? { image: song.imageLargeUrl ?? song.imageUrl } : {}),
-    ...(song.albumPageUrl ? { inAlbum: { '@id': `${song.albumPageUrl}#album` } } : {}),
+    ...(song.albumLinks.length || song.albumPageUrl ? { inAlbum: [
+      ...(song.albumPageUrl ? [{ '@id': `${song.albumPageUrl}#album` }] : []),
+      ...song.albumLinks.map((album) => ({ '@id': `${album.pageUrl}#album` })),
+    ] } : {}),
     ...(original ? { isBasedOn: { '@id': `${original.pageUrl}#recording` } } : {}),
     ...(reimaginings.length ? {
       workExample: reimaginings.map((related) => ({ '@id': `${related.pageUrl}#recording` })),
@@ -117,6 +121,7 @@ const jsonLd = [
           {song.genres?.length && <div><dt>Style</dt><dd>{song.genres.join(' · ')}</dd></div>}
           {song.model && <div><dt>Suno model</dt><dd>{song.model}</dd></div>}
           {song.album && <div><dt>Album</dt><dd><a href={song.albumPageUrl!.replace(SITE, '')}>{song.album}</a></dd></div>}
+          {song.albumLinks.length > 0 && <div><dt>Suno albums</dt><dd>{song.albumLinks.map((album, index) => <span>{index > 0 && ' · '}<a href={album.pageUrl.replace(SITE, '')}>{album.title}</a> (<a href={album.sourceUrl}>Suno ↗</a>)</span>)}</dd></div>}
           {!song.createdAt && song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
         </dl>
 
@@ -127,7 +132,7 @@ const jsonLd = [
         </div>
       </div>
 
-      {playerUrl && <div class="embed embed--poster">{(song.imageLargeUrl || song.imageUrl) && <img src={song.imageLargeUrl ?? song.imageUrl} width="600" height="600" alt={`Artwork for ${song.title}`} />}<button class="btn btn--primary" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play on {playerName}</button></div>}
+      {playerUrl && <div class="embed embed--poster">{(song.imageLargeUrl || song.imageUrl) && <CoverImage src={song.imageLargeUrl ?? song.imageUrl!} widths={[320, 480, 640]} sizes="(max-width: 720px) 92vw, 480px" alt={`Artwork for ${song.title}`} />}<button class="btn btn--primary" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play on {playerName}</button></div>}
     </div>
 
     <div class="shell process-note">

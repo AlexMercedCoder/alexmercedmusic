@@ -1,6 +1,7 @@
 ---
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
+import CoverImage from '../../../components/CoverImage.astro';
 import { SITE, catalogSunoAlbums, songByPrimaryUrl, type CatalogSong } from '../../../data/catalog-model';
 
 export function getStaticPaths() {
@@ -24,14 +25,14 @@ const jsonLd = [{
 }, {
   '@type': 'BreadcrumbList', itemListElement: [
     { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
-    { '@type': 'ListItem', position: 2, name: 'Suno albums and playlists', item: `${SITE}/suno/` },
+    { '@type': 'ListItem', position: 2, name: 'Suno albums', item: `${SITE}/suno/` },
     { '@type': 'ListItem', position: 3, name: album.name, item: album.pageUrl },
   ],
 }];
 ---
 
 <Base title={pageTitle} description={`${album.description} Browse ${album.songCount} songs in album order and open each recording directly.`} jsonLd={jsonLd} ogType="music.album" ogImage={album.imageUrl} imageAlt={`Artwork for ${album.name}`}>
-  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno albums and playlists', href: '/suno/' }, { label: album.name }]} />
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno albums', href: '/suno/' }, { label: album.name }]} />
   <article class="section detail" data-era="ai">
     <div class="shell detail__grid">
       <div>
@@ -44,9 +45,9 @@ const jsonLd = [{
           {minutes && <div><dt>Runtime</dt><dd>{Math.floor(minutes / 60) ? `${Math.floor(minutes / 60)} hr ${minutes % 60} min` : `${minutes} min`}</dd></div>}
           <div><dt>Source</dt><dd>Public Suno album</dd></div>
         </dl>
-        <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href={album.url}>Listen on Suno ↗</a><a class="btn" href="/suno/">All Suno collections</a></div>
+        <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href={album.url}>Listen on Suno ↗</a><a class="btn" href="/suno/">All Suno albums</a></div>
       </div>
-      {album.imageUrl && <img class="artwork" src={album.imageUrl} width="600" height="600" alt={`Artwork for ${album.name}`} />}
+      {album.imageUrl && <CoverImage class="artwork" src={album.imageUrl} widths={[320, 480, 640]} sizes="(max-width: 720px) 92vw, 480px" alt={`Artwork for ${album.name}`} />}
     </div>
     <div class="shell album-tracks">
       <h2>Track list</h2>

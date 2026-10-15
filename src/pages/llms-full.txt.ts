@@ -37,17 +37,13 @@ ${publicCatalog.suno.featuredReimaginingAlbums.map((album) => `- ${album.volume}
 
 ${publicCatalog.suno.albums.map((album) => `### ${album.name}\n\n${album.description}\n\n- Local page: ${album.pageUrl}\n- Suno source: ${album.url}\n- Songs: ${album.songCount}\n- Stable track IDs: ${album.trackIds.join(', ')}`).join('\n\n')}
 
-## Suno playlists
-
-${publicCatalog.suno.playlists.map((playlist) => `### ${playlist.name}\n\n${playlist.description}\n\n- Local page: ${playlist.pageUrl}\n- Suno source: ${playlist.url}\n- Songs: ${playlist.songCount}\n- Stable track IDs: ${playlist.trackIds.join(', ')}`).join('\n\n')}
-
 ## Electronic albums
 
 ${publicCatalog.albums.map((album) => `### ${album.title}\n\n- Page: ${album.pageUrl}\n- Source: ${album.sourceUrl}\n- Released: ${album.released}\n- Track IDs: ${album.trackIds.join(', ')}`).join('\n\n')}
 
 ## Every song
 
-${publicCatalog.songs.map((song) => `### ${song.title}\n\n- ID: ${song.id}\n- Page: ${song.pageUrl}\n- Era: ${song.era}\n- Kind: ${song.kind}\n- Description: ${song.description}\n- Sources: ${song.links.map((link) => `${link.label}: ${link.url}`).join('; ')}${song.createdAt ? `\n- Published: ${song.createdAt}` : ''}${song.album ? `\n- Album: ${song.album}` : ''}${song.originalPageUrl ? `\n- Original: ${song.originalPageUrl}` : ''}${song.reimaginedPageUrls?.length ? `\n- Reimagined versions: ${song.reimaginedPageUrls.join(', ')}` : ''}${song.relatedVideoIds.length ? `\n- Related video IDs: ${song.relatedVideoIds.join(', ')}` : ''}`).join('\n\n')}
+${publicCatalog.songs.map((song) => `### ${song.title}\n\n- ID: ${song.id}\n- Page: ${song.pageUrl}\n- Era: ${song.era}\n- Kind: ${song.kind}\n- Description: ${song.description}\n- Sources: ${song.links.map((link) => `${link.label}: ${link.url}`).join('; ')}${song.createdAt ? `\n- Published: ${song.createdAt}` : ''}${song.album ? `\n- Album: ${song.album}` : ''}${song.albumLinks.length ? `\n- Suno albums: ${song.albumLinks.map((album) => `${album.title}: ${album.pageUrl}`).join('; ')}` : ''}${song.originalPageUrl ? `\n- Original: ${song.originalPageUrl}` : ''}${song.reimaginedPageUrls?.length ? `\n- Reimagined versions: ${song.reimaginedPageUrls.join(', ')}` : ''}${song.relatedVideoIds.length ? `\n- Related video IDs: ${song.relatedVideoIds.join(', ')}` : ''}`).join('\n\n')}
 
 ## Every YouTube Short and video
 

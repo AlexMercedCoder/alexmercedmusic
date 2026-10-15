@@ -24,11 +24,11 @@ const year = new Date().getFullYear();
   <div class="shell">
     <div class="footer-grid">
       <div>
-        <h4>This site</h4>
+        <h2>This site</h2>
         <ul>
           <li><a href="/acoustic/">Acoustic archive</a></li>
           <li><a href="/reimagined/">Reimagined with Suno</a></li>
-          <li><a href="/suno/">Suno albums and playlists</a></li>
+          <li><a href="/suno/">Suno albums</a></li>
           <li><a href="/suno-prompting-guide/">Suno prompting guide</a></li>
           <li><a href="/music-theory/">Music theory guide</a></li>
           <li><a href="/electronic/">Electronic catalogue</a></li>
@@ -45,7 +45,7 @@ const year = new Date().getFullYear();
       </div>
       {footer.groups.map((group) => (
         <div>
-          <h4>{group.title}</h4>
+          <h2>{group.title}</h2>
           <ul>
             {group.links.map((l) => <li><a href={l.url}>{l.title}</a></li>)}
             <li><a href={footer.allSitesUrl}>{footer.allSitesLabel}</a></li>
@@ -53,7 +53,7 @@ const year = new Date().getFullYear();
         </div>
       ))}
       <div>
-        <h4>Connect</h4>
+        <h2>Connect</h2>
         <ul>
           {connectLinks.map((l) => <li><a href={l.url}>{l.label}</a></li>)}
         </ul>

@@ -5,7 +5,7 @@ import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.a
 import CoverImage from '../components/CoverImage.astro';
 import {
   acousticTracks, acousticPlaylist, allReimagined, featuredReimaginingAlbums, reimaginedPlaylist,
-  albums, distributedReleases, electronicStats, electronicRuntime, electronicTracks, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
+  albums, distributedReleases, electronicStats, electronicRuntime, electronicTracks, sunoAlbums, sunoSongs, sunoPublishedCount, platforms,
 } from '../data/catalog';
 import { SITE, songByPrimaryUrl, videos } from '../data/catalog-model';
 
@@ -14,7 +14,7 @@ const originals = new Map([...acousticTracks, ...electronicTracks].map((track) =
 const originalFor = (song: (typeof allReimagined)[number]) => originals.get(`${song.originalEra ?? 'acoustic'}:${song.original}`);
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 const recentSuno = sunoSongs.slice(0, 6);
-const featuredPlaylists = [...sunoAlbums, ...sunoPlaylists.filter((playlist) => playlist.collectionType === 'album')];
+const featuredPlaylists = sunoAlbums;
 const recentVideos = videos.slice(0, 3);
 const distributedAlbum = distributedReleases.find((release) => release.title === 'Songs for your Consideration');
 const homepagePlatforms = (distributedAlbum?.links ?? []).map((link) => ({
@@ -49,7 +49,7 @@ const jsonLd = [
           <p class="eyebrow">Originals and reimaginings</p>
           <div class="hero-albums" aria-label="Featured originals and reimaginings albums">
             {featuredReimaginingAlbums.map((album, index) => (
-              <a class="hero-album" href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
+              <a class="hero-album" href={album.url}>
                 {album.imageUrl && <CoverImage src={album.imageUrl} widths={[160, 240, 320, 480]} sizes="(max-width: 720px) 31vw, 240px" eager priority={index === 0} alt={`Cover of ${album.title}`} />}
                 <span><small>{album.volume}</small>{album.title}</span>
               </a>
@@ -232,7 +232,7 @@ const jsonLd = [
           </article>
         ))}
       </div>
-      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/songs/?kind=generated">All generated songs</a><a class="btn" href="/suno/">Browse Suno albums and playlists</a></div>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn btn--primary" href="/songs/?kind=generated">All generated songs</a><a class="btn" href="/suno/">Browse Suno albums</a></div>
     </div>
   </section>
 
