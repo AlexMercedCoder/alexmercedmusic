@@ -206,7 +206,9 @@ assert.ok(heroHtml.indexOf('class="hero-albums"') > heroHtml.indexOf('<h1'), 'Th
 assert.ok(heroHtml.indexOf('class="hero-albums"') < heroHtml.indexOf('href="/reimagined/"'), 'The featured album covers must appear before the homepage CTA buttons.');
 for (const album of catalog.suno.featuredReimaginingAlbums) {
   assert.ok(heroHtml.includes(album.url), `The homepage hero is missing ${album.title}.`);
-  assert.ok(heroHtml.includes(album.imageUrl), `The homepage hero is missing the cover for ${album.title}.`);
+  // Covers are re-encoded at build time as responsive WebP named after the Suno image.
+  const coverName = album.imageUrl.split('/').pop().replace(/\.\w+$/, '');
+  assert.ok(heroHtml.includes(album.imageUrl) || new RegExp(`/_astro/${coverName}_[^"]+\\.webp`).test(heroHtml), `The homepage hero is missing the cover for ${album.title}.`);
 }
 for (const path of ['dist/index.html', 'dist/acoustic/index.html', 'dist/electronic/index.html', 'dist/reimagined/index.html', 'dist/suno/index.html', 'dist/listen/index.html', 'dist/about/index.html', 'dist/stories/originals-and-reimaginings/index.html', 'dist/stories/revisiting-songs-with-suno/index.html', 'dist/llms.txt', 'dist/llms-full.txt']) {
   const html = read(path);

@@ -1,5 +1,6 @@
 ---
 import { featuredReimaginingAlbums } from '../data/catalog';
+import CoverImage from './CoverImage.astro';
 
 interface Props {
   includeComparison?: boolean;
@@ -13,7 +14,7 @@ const { includeComparison = true } = Astro.props;
     {featuredReimaginingAlbums.map((album) => (
       <article class="card card--era featured-album" data-era="ai">
         <a href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
-          {album.imageUrl && <img class="release-art" src={album.imageUrl} width="640" height="640" loading="lazy" alt={`Cover of ${album.title}`} />}
+          {album.imageUrl && <CoverImage class="release-art" src={album.imageUrl} widths={[320, 480, 640]} sizes="(max-width: 720px) 92vw, 380px" alt={`Cover of ${album.title}`} />}
         </a>
         <p class="eyebrow">{album.volume}</p>
         <h3><a href={album.url}>{album.title}</a></h3>

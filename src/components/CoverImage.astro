@@ -1,0 +1,37 @@
+---
+// Suno cover art is served as ~1 MB JPEGs. Fetch it once at build time and
+// emit responsive WebP so cards and the homepage hero load small files.
+import { Image } from 'astro:assets';
+
+interface Props {
+  src: string;
+  alt: string;
+  widths: number[];
+  sizes: string;
+  class?: string;
+  priority?: boolean;
+  eager?: boolean;
+}
+
+const { src, alt, widths, sizes, class: className, priority = false, eager = false } = Astro.props;
+const largest = Math.max(...widths);
+const remote = /^https:\/\/cdn\d*\.suno\.ai\//.test(src);
+---
+{remote ? (
+  <Image
+    src={src}
+    alt={alt}
+    width={largest}
+    height={largest}
+    widths={widths}
+    sizes={sizes}
+    format="webp"
+    quality={78}
+    class={className}
+    loading={priority || eager ? 'eager' : 'lazy'}
+    decoding="async"
+    fetchpriority={priority ? 'high' : undefined}
+  />
+) : (
+  <img src={src} alt={alt} width={largest} height={largest} class={className} loading={priority || eager ? 'eager' : 'lazy'} decoding="async" fetchpriority={priority ? 'high' : undefined} />
+)}

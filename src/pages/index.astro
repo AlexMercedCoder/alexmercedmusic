@@ -2,6 +2,7 @@
 import Base from '../layouts/Base.astro';
 import PlatformMark from '../components/PlatformMark.astro';
 import FeaturedReimaginingAlbums from '../components/FeaturedReimaginingAlbums.astro';
+import CoverImage from '../components/CoverImage.astro';
 import {
   acousticTracks, acousticPlaylist, allReimagined, featuredReimaginingAlbums, reimaginedPlaylist,
   albums, distributedReleases, electronicStats, electronicRuntime, electronicTracks, sunoAlbums, sunoSongs, sunoPublishedCount, sunoPlaylists, platforms,
@@ -47,9 +48,9 @@ const jsonLd = [
         <div class="hero-album-lead">
           <p class="eyebrow">Originals and reimaginings</p>
           <div class="hero-albums" aria-label="Featured originals and reimaginings albums">
-            {featuredReimaginingAlbums.map((album) => (
+            {featuredReimaginingAlbums.map((album, index) => (
               <a class="hero-album" href={album.url} aria-label={`Listen to ${album.title} on Suno`}>
-                {album.imageUrl && <img src={album.imageUrl} width="640" height="640" loading="eager" decoding="async" alt={`Cover of ${album.title}`} />}
+                {album.imageUrl && <CoverImage src={album.imageUrl} widths={[160, 240, 320, 480]} sizes="(max-width: 720px) 31vw, 240px" eager priority={index === 0} alt={`Cover of ${album.title}`} />}
                 <span><small>{album.volume}</small>{album.title}</span>
               </a>
             ))}
@@ -193,7 +194,7 @@ const jsonLd = [
             them posted to his YouTube channel. A guitar, a room, and songs
             about the things you write songs about at that age.
           </p>
-          <p><a href="/acoustic">Browse the archive</a></p>
+          <p><a href="/acoustic/">Browse the archive</a></p>
         </article>
         <article class="card card--era" data-era="electronic">
           <h3>The electronic catalogue</h3>
@@ -203,7 +204,7 @@ const jsonLd = [
             scattered over ReverbNation, two SoundCloud accounts and YouTube, so the
             full list is assembled here.
           </p>
-          <p><a href="/electronic">Browse all {electronicStats.total}</a></p>
+          <p><a href="/electronic/">Browse all {electronicStats.total}</a></p>
         </article>
         <article class="card card--era" data-era="ai">
           <h3>What he does now</h3>
@@ -224,7 +225,7 @@ const jsonLd = [
       <div class="grid grid--3">
         {recentSuno.map((song) => (
           <article class="card card--era" data-era="ai">
-            {song.imageUrl && <img class="release-art" src={song.imageUrl} width="320" height="320" loading="lazy" alt={`Artwork for ${song.title}`} />}
+            {song.imageUrl && <CoverImage class="release-art" src={song.imageUrl} widths={[320, 480]} sizes="(max-width: 720px) 92vw, 380px" alt={`Artwork for ${song.title}`} />}
             <h3><a href={detailUrl(song.url)}>{song.title}</a></h3>
             <p>{song.genres?.slice(0, 3).join(' · ') || 'Suno generation'}</p>
             <div class="source-links"><a href={detailUrl(song.url)}>Details</a><a href={song.url}>Suno ↗</a></div>
@@ -260,7 +261,7 @@ const jsonLd = [
         ))}
       </div>
       <div class="btn-row" style="margin-top:1.4rem">
-        <a class="btn" href="/listen">Every platform</a>
+        <a class="btn" href="/listen/">Every platform</a>
       </div>
     </div>
   </section>

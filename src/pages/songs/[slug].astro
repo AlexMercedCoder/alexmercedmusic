@@ -24,8 +24,8 @@ const playerName = youtubeId ? 'YouTube' : song.embedUrl ? 'Suno' : soundcloudLi
 const section = song.kind === 'archive' ? 'Acoustic archive'
   : song.kind === 'electronic' ? 'Electronic catalogue'
     : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
-const sectionUrl = song.kind === 'archive' ? '/acoustic'
-  : song.kind === 'electronic' ? '/electronic' : song.kind === 'reimagined' ? '/reimagined' : '/suno';
+const sectionUrl = song.kind === 'archive' ? '/acoustic/'
+  : song.kind === 'electronic' ? '/electronic/' : song.kind === 'reimagined' ? '/reimagined/' : '/suno/';
 const durationSeconds = song.seconds ?? song.durationSeconds;
 const duration = durationSeconds
   ? `PT${Math.floor(durationSeconds / 60)}M${Math.round(durationSeconds % 60)}S`
@@ -109,7 +109,7 @@ const jsonLd = [
         <p class="lede">{song.description}</p>
 
         <dl class="facts">
-          <div><dt>Artist</dt><dd><a href="/about">Alex Merced</a></dd></div>
+          <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
           <div><dt>Type</dt><dd>{song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
           {song.style && <div><dt>Rebuilt as</dt><dd>{song.style}</dd></div>}
           {(song.length || durationSeconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(durationSeconds! / 60)}:${String(Math.round(durationSeconds! % 60)).padStart(2, '0')}`}</dd></div>}
