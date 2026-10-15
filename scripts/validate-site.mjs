@@ -103,6 +103,17 @@ for (const video of catalog.videos) {
     assert.ok(html.includes(song.pageUrl.replace(catalog.site, '')), `${video.title} is missing its ${song.title} relationship.`);
   }
 }
+for (const [youtubeId, title] of [
+  ['PYlVvwxnkr8', 'Paper Smile'],
+  ['aGuXLEIMM1s', 'Back To Empty'],
+  ['UYkkIfVS-u0', 'Wild Crazy Place'],
+]) {
+  const short = catalog.videos.find((video) => video.youtubeId === youtubeId);
+  assert.equal(short?.videoType, 'short', `${title} must appear in the Shorts catalog.`);
+  const song = catalog.songs.find((item) => item.title === title && short.songIds.includes(item.id));
+  assert.ok(song, `${title} Short must connect to its song page.`);
+  assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${title} song page must link back to the Short.`);
+}
 
 for (const album of catalog.albums) {
   for (const trackId of album.trackIds) assert.ok(songIds.has(trackId), `${album.title} references a missing track.`);
