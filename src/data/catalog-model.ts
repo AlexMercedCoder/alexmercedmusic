@@ -265,6 +265,32 @@ const seeds: SongSeed[] = [
     lyrics: track.lyrics,
     creationMethod: 'Created by Alex Merced with Suno; style tags, runtime, artwork, model version and lyrics are sourced from the public Suno recording metadata.',
   })),
+  {
+    key: 'https://open.spotify.com/track/2hZla3Hvj8iVDFtde2LZN4',
+    title: 'Hope',
+    era: 'ai',
+    kind: 'generated',
+    description: 'Hope is a song by Alex Merced on A Collection of Songs that Exist, Vol. 3. Listen to the verified Spotify release.',
+    links: linksFor(undefined, 'https://open.spotify.com/track/2hZla3Hvj8iVDFtde2LZN4', 'generation'),
+    createdAt: '2026-10-12',
+    catalogedAt: CATALOG_UPDATED_AT,
+    durationSeconds: 209,
+    creationMethod: 'Released by Alex Merced on Spotify; no matching source recording has been verified.',
+  },
+  {
+    key: 'https://open.spotify.com/track/2q19Zd3SJaCYhqrhjeRYhb',
+    title: "The One Who Can't Be Love",
+    era: 'ai',
+    kind: 'reimagined',
+    description: "The One Who Can't Be Love is an Alex Merced voice AI reimagining of an earlier acoustic song, released on Spotify.",
+    links: linksFor(undefined, 'https://open.spotify.com/track/2q19Zd3SJaCYhqrhjeRYhb', 'generation'),
+    originalTitle: "Alex Merced - The One Who Can't Be Loved",
+    originalEra: 'acoustic',
+    createdAt: '2026-10-02',
+    catalogedAt: CATALOG_UPDATED_AT,
+    durationSeconds: 223,
+    creationMethod: 'Alex Merced voice AI reimagining released on Spotify; production platform has not been verified.',
+  },
 ];
 
 const slugCounts = new Map<string, number>();
@@ -400,6 +426,9 @@ for (const album of sunoAlbums) {
 type SpotifyTrack = (typeof spotifyTracksData)[number];
 const spotifyBaseTitle = (title: string) => title.replace(/\s*-\s*(?:actual\s+)?(?:original\s+acoustic|original|ai)\s+version$/i, '');
 const normalizedSpotifyTitle = (title: string) => spotifyBaseTitle(title)
+  .replace(/\s*\(pogs in my pocket\)/i, '')
+  .replace(/\bbahn mi\b/i, 'banh mi')
+  .replace(/\bmore than the pieces\b/i, 'more than pieces')
   .replace(/^new song\s+/i, '')
   .replace(/^alex merced\s*[-–:]\s*/i, '')
   .replace(/\s+video$/i, '')
@@ -410,6 +439,10 @@ const normalizedSpotifyTitle = (title: string) => spotifyBaseTitle(title)
 const songRuntime = (song: typeof baseSongs[number]) => song.durationSeconds ?? song.seconds
   ?? (song.length ? Number(song.length.split(':')[0]) * 60 + Number(song.length.split(':')[1]) : undefined);
 const matchSpotifyTrack = (track: SpotifyTrack) => {
+  if (track.id === '2q19Zd3SJaCYhqrhjeRYhb') {
+    const standalone = baseSongs.find((song) => song.title === "The One Who Can't Be Love" && song.kind === 'reimagined');
+    if (standalone) return standalone;
+  }
   const kind: SongKind = /\s*-\s*(?:actual\s+)?(?:original\s+acoustic|original)\s+version$/i.test(track.title) ? 'archive'
     : /\s*-\s*ai\s+version$/i.test(track.title) ? 'reimagined' : 'generated';
   const title = normalizedSpotifyTitle(track.title);
@@ -442,7 +475,7 @@ export const songs: CatalogSong[] = baseSongs.map((song) => ({
   ...song,
   links: [
     ...song.links,
-    ...(spotifyMatchesBySongId.get(song.id) ?? []).map(({ track }) => ({
+    ...(spotifyMatchesBySongId.get(song.id) ?? []).filter(({ track }) => !song.links.some((link) => link.url === track.url)).map(({ track }) => ({
       source: 'spotify' as const,
       url: track.url,
       label: `Spotify: ${track.title}`,

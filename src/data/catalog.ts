@@ -755,6 +755,7 @@ export type DistributedRelease = {
   title: string;
   released: string;
   trackCount: number;
+  releaseType?: 'album' | 'ep' | 'single';
   upc?: string;
   links: { label: string; url: string }[];
 };
@@ -762,9 +763,54 @@ export type DistributedRelease = {
 /** Exact release pages verified against titles, track lists and distributor UPCs. */
 export const distributedReleases: DistributedRelease[] = [
   {
+    title: 'A Collection of Songs that Exist, Vol. 1',
+    released: '2026-10-12',
+    trackCount: 35,
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/09kE4PLWoT4M9UDBclJGJL' }],
+  },
+  {
+    title: 'A Collection of Songs that Exist, Vol. 3',
+    released: '2026-10-12',
+    trackCount: 21,
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/4A5oDUq04pE1vFf0B9thsF' }],
+  },
+  {
+    title: 'Food, Nostalgia and Paris',
+    released: '2026-10-02',
+    trackCount: 15,
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/6lk2RMsRfFrjKN4NuNQZ9l' }],
+  },
+  {
+    title: "I'm Secure I Know My Insecurities",
+    released: '2026-10-02',
+    trackCount: 12,
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/4zphlfEYn9MeKkS4IC3eGO' }],
+  },
+  {
+    title: "Yes. I'm Weird.",
+    released: '2026-10-02',
+    trackCount: 10,
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/4HvrKAzdMrXrQwUuYqk97Q' }],
+  },
+  {
+    title: 'Everyone is Worth It',
+    released: '2026-10-02',
+    trackCount: 5,
+    releaseType: 'ep',
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/09y38lZaA6LHoVY5H4FMvh' }],
+  },
+  {
+    title: "The One Who Can't Be Love (Alex's Voice AI Reimagined)",
+    released: '2026-10-02',
+    trackCount: 1,
+    releaseType: 'single',
+    links: [{ label: 'Spotify', url: 'https://open.spotify.com/album/7mrtyIrS1g3sEHiGdB0Unz' }],
+  },
+  {
     title: 'Tell My Heart (Actual Original Acoustic Version)',
     released: '2026-10-02',
     trackCount: 1,
+    releaseType: 'single',
     links: [
       { label: 'Spotify', url: 'https://open.spotify.com/album/7kdOTWCYo9EZnlik3QDD57' },
       { label: 'YouTube Music', url: 'https://music.youtube.com/watch?v=pDmSZKG4itU' },

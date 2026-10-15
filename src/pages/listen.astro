@@ -49,7 +49,7 @@ const jsonLd = distributedReleases.map((release) => ({
       <div class="grid grid--3">
         {distributedReleases.map((release) => (
           <article class="card">
-            <p class="eyebrow">{release.released} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'}</p>
+            <p class="eyebrow">{release.releaseType ?? 'album'} · {release.released} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'}</p>
             <h3>{release.title}</h3>
             {release.upc && <p class="pair__style">UPC {release.upc}</p>}
             <div class="source-links">

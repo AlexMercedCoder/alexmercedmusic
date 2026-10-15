@@ -8,7 +8,7 @@ const PAGE_SIZE = 48;
 const albums = Array.from(new Set(songs.flatMap((song) => [...(song.album ? [song.album] : []), ...song.albumLinks.map((album) => album.title)]))).sort();
 const genres = [...new Set(songs.flatMap((song) => song.genres ?? []))].sort();
 const initialSongs = songs.slice(0, PAGE_SIZE);
-const sectionLabel = { archive: 'Acoustic archive', electronic: 'Electronic', reimagined: 'Reimagined', generated: 'New with Suno' };
+const sectionLabel = { archive: 'Acoustic archive', electronic: 'Electronic', reimagined: 'Reimagined', generated: 'New songs' };
 const jsonLd = [{
   '@type': 'CollectionPage', '@id': `${SITE}/songs/#page`, name: 'Explore every Alex Merced song', url: `${SITE}/songs/`, about: { '@id': `${SITE}/#musicgroup` },
   mainEntity: { '@type': 'ItemList', numberOfItems: songs.length, itemListElement: initialSongs.map((song, index) => ({ '@type': 'ListItem', position: index + 1, url: song.pageUrl, name: song.title })) },
@@ -23,7 +23,7 @@ const jsonLd = [{
       <label><span>Search</span><input id="song-query" type="search" placeholder="Song title, style or album" autocomplete="off" /></label>
       <label><span>Era</span><select id="song-era"><option value="all">All eras</option><option value="acoustic">Acoustic</option><option value="electronic">Electronic</option><option value="ai">AI and reimagined</option></select></label>
       <label><span>Genre</span><select id="song-genre"><option value="all">All genres</option>{genres.map((item) => <option value={item}>{item}</option>)}</select></label>
-      <label><span>Type</span><select id="song-kind"><option value="all">All types</option><option value="archive">Archive recording</option><option value="electronic">Electronic</option><option value="reimagined">Reimagined</option><option value="generated">New with Suno</option></select></label>
+      <label><span>Type</span><select id="song-kind"><option value="all">All types</option><option value="archive">Archive recording</option><option value="electronic">Electronic</option><option value="reimagined">Reimagined</option><option value="generated">New songs</option></select></label>
       <label><span>Platform</span><select id="song-source"><option value="all">All platforms</option><option value="youtube">YouTube</option><option value="suno">Suno</option><option value="spotify">Spotify</option><option value="soundcloud">SoundCloud</option><option value="reverbnation">ReverbNation</option></select></label>
       <label><span>Album</span><select id="song-album"><option value="all">All albums</option>{albums.map((album) => <option value={album}>{album}</option>)}</select></label>
       <label><span>Sort</span><select id="song-sort"><option value="catalog">Catalog order</option><option value="newest">Newest dated first</option><option value="az">Title A-Z</option><option value="duration">Longest first</option></select></label>
@@ -37,9 +37,9 @@ const jsonLd = [{
     <noscript><p class="empty">JavaScript is required to filter the full catalog. The first {PAGE_SIZE} songs remain available above, and the complete catalog is also available in <a href="/catalog.json">catalog.json</a>.</p></noscript>
   </div></section>
   <section class="section section--tight"><div class="shell">
-    <div class="section__head"><p class="eyebrow">Albums</p><h2>Follow an album</h2><p>Open a Suno album for its ordered songs, or choose a Spotify release and explore its matching song pages.</p></div>
+    <div class="section__head"><p class="eyebrow">Releases</p><h2>Albums, EPs and singles</h2><p>Open a Suno album for its ordered songs, or choose a Spotify release and explore its matching song pages.</p></div>
     <div class="grid grid--3">
-      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}<a href={`/songs/?album=${encodeURIComponent(release.title)}`}>Explore matching songs</a></div></article>)}
+      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.releaseType ?? 'album'} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}<a href={`/songs/?album=${encodeURIComponent(release.title)}`}>Explore matching songs</a></div></article>)}
     </div>
     <p><a href="/suno/">Browse all {sunoAlbums.length} Suno albums with artwork and track lists →</a></p>
   </div></section>
@@ -52,7 +52,7 @@ const jsonLd = [{
 <script>
   type SongIndexItem = { id:string; index:number; title:string; pageUrl:string; era:string; kind:string; album:string|null; albumTitles:string[]; genres:string[]; style:string|null; sources:string[]; sourceUrl:string; createdAt:string|null; duration:number; embedUrl:string|null };
   const PAGE_SIZE = 48;
-  const labels:Record<string,string> = { archive:'Acoustic archive',electronic:'Electronic',reimagined:'Reimagined',generated:'New with Suno' };
+  const labels:Record<string,string> = { archive:'Acoustic archive',electronic:'Electronic',reimagined:'Reimagined',generated:'New songs' };
   const grid=document.getElementById('song-grid')!; const query=document.getElementById('song-query') as HTMLInputElement; const era=document.getElementById('song-era') as HTMLSelectElement; const kind=document.getElementById('song-kind') as HTMLSelectElement; const genre=document.getElementById('song-genre') as HTMLSelectElement; const source=document.getElementById('song-source') as HTMLSelectElement; const album=document.getElementById('song-album') as HTMLSelectElement; const sort=document.getElementById('song-sort') as HTMLSelectElement; const count=document.getElementById('song-count')!; const empty=document.getElementById('song-empty')!; const more=document.getElementById('load-more') as HTMLButtonElement;
   let all:SongIndexItem[]=[]; let matched:SongIndexItem[]=[]; let visible=PAGE_SIZE;
   const element=(tag:string,className?:string,text?:string)=>{const node=document.createElement(tag);if(className)node.className=className;if(text)node.textContent=text;return node};

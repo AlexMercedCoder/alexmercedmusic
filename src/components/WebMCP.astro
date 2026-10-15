@@ -634,7 +634,7 @@
       },
       {
         name: 'list_reimaginings',
-        description: 'List every Suno rebuild paired with its exact acoustic or electronic source recording and canonical pages. The response also identifies the three featured albums that sequence each original beside its reimaginings.',
+        description: 'List every cataloged reimagining paired with its acoustic or electronic source recording and canonical pages, including Spotify-only versions. The response also identifies the three featured Suno albums.',
         inputSchema: { type: 'object', properties: {}, additionalProperties: false },
         execute: async (_input, signal) => {
           const catalog = await getCatalog(signal);
