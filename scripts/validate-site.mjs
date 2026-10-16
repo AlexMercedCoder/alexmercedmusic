@@ -61,6 +61,16 @@ for (const song of catalog.songs) {
     assert.ok(original.reimaginedTrackIds?.includes(song.id), `${song.title} is missing its reverse relationship.`);
   }
   for (const relatedId of song.reimaginedTrackIds ?? []) assert.ok(songIds.has(relatedId));
+  if (song.acousticSourceId) {
+    const source = catalog.songs.find((candidate) => candidate.id === song.acousticSourceId);
+    assert.ok(source, `${song.title} points to a missing earlier song.`);
+    assert.equal(song.acousticSourcePageUrl, source.pageUrl);
+    assert.ok(source.acousticVersionIds?.includes(song.id), `${song.title} is missing its reverse acoustic relationship.`);
+  }
+  for (const versionId of song.acousticVersionIds ?? []) {
+    const version = catalog.songs.find((candidate) => candidate.id === versionId);
+    assert.equal(version?.acousticSourceId, song.id, `${song.title} has an invalid acoustic version.`);
+  }
   for (const videoId of song.videoIds) assert.ok(videoIds.has(videoId), `${song.title} points to a missing video.`);
   for (const videoId of song.relatedVideoIds) assert.ok(videoIds.has(videoId), `${song.title} points to a missing related video.`);
 
@@ -166,6 +176,21 @@ for (const album of sunoAlbums) {
     assert.ok(song?.albumLinks.some((membership) => membership.id === album.id && membership.pageUrl === album.pageUrl), `${album.name} is missing a two-way song link for ${trackId}.`);
   }
 }
+const acousticAlbum = sunoAlbums.find((album) => album.id === '1b7a483c-4a8e-40a0-9d59-b3d5d1b65a71');
+assert.equal(acousticAlbum?.songCount, 26, 'The generated acoustic album must contain all 26 songs.');
+const acousticAlbumHtml = read(`dist/suno/albums/${acousticAlbum.slug}/index.html`);
+for (const versionId of acousticAlbum.trackIds) {
+  const version = catalog.songs.find((song) => song.id === versionId);
+  const source = catalog.songs.find((song) => song.id === version?.acousticSourceId);
+  assert.ok(source, `${version?.title} needs a verified earlier song.`);
+  assert.ok(acousticAlbumHtml.includes(source.pageUrl.replace(catalog.site, '')), `${version.title} needs its earlier song linked from the album.`);
+  assert.ok(read(`dist/songs/${version.slug}/index.html`).includes(source.pageUrl.replace(catalog.site, '')), `${version.title} needs its earlier song on the song page.`);
+  assert.ok(read(`dist/songs/${source.slug}/index.html`).includes(version.pageUrl.replace(catalog.site, '')), `${source.title} needs its acoustic version on the song page.`);
+}
+const pieceAcoustic = catalog.songs.find((song) => song.links.some((link) => link.url.endsWith('ea20960d-3ae7-4947-9ca7-46c2fb1c21cc')));
+const mapAcoustic = catalog.songs.find((song) => song.links.some((link) => link.url.endsWith('1a47c72e-0ff6-4c76-9409-a8a781d3fea0')));
+assert.ok(catalog.songs.find((song) => song.id === pieceAcoustic?.acousticSourceId)?.links.some((link) => link.url.endsWith('204cc035-a481-4d21-9963-a8f8e45888d0')));
+assert.ok(catalog.songs.find((song) => song.id === mapAcoustic?.acousticSourceId)?.links.some((link) => link.url.endsWith('7e47b964-26a7-4bbd-acbc-c2e56d200fa5')));
 assert.ok(catalog.songs.filter((song) => song.albumLinks.length).length > 1000, 'Verified Suno album memberships unexpectedly dropped.');
 const songsPage = read('dist/songs/index.html');
 for (const release of catalog.distributedReleases) {

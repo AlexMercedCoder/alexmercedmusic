@@ -80,6 +80,10 @@ const playlistSlug = (value: string) => value
   .replace(/^-|-$/g, '');
 
 const sunoPlaylistEditorial: Record<string, Pick<SunoPlaylist, 'description' | 'collectionType' | 'collectionLabel'>> = {
+  '1b7a483c-4a8e-40a0-9d59-b3d5d1b65a71': {
+    description: 'Twenty-six generated acoustic versions of Alex Merced songs. Each track links to an earlier version for side-by-side listening.',
+    collectionType: 'covers', collectionLabel: 'Generated acoustic arrangements',
+  },
   'abf459c8-27e4-4382-a9a5-77769146b46b': {
     description: 'Songs about nostalgia, memory, food and the familiar comforts that connect them.',
     collectionType: 'theme', collectionLabel: 'Nostalgic collection',

@@ -63,6 +63,10 @@ export type CatalogSong = {
   originalPageUrl?: string;
   reimaginedTrackIds?: string[];
   reimaginedPageUrls?: string[];
+  acousticSourceId?: string;
+  acousticSourcePageUrl?: string;
+  acousticVersionIds?: string[];
+  acousticVersionPageUrls?: string[];
   videoIds: string[];
   relatedVideoIds: string[];
 };
@@ -151,7 +155,7 @@ const linksFor = (
     }));
 };
 
-type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'albumLinks' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
+type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'albumLinks' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'acousticSourceId' | 'acousticSourcePageUrl' | 'acousticVersionIds' | 'acousticVersionPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
   key: string;
   originalTitle?: string;
   originalEra?: Era;
@@ -336,6 +340,40 @@ const baseSongs = reimaginedWithOriginals.map(({ key: _key, originalTitle: _orig
   };
 });
 
+const generatedAcousticAlbum = sunoAlbums.find((album) => album.id === '1b7a483c-4a8e-40a0-9d59-b3d5d1b65a71');
+const generatedAcousticTrackIds = new Set(generatedAcousticAlbum?.trackIds ?? []);
+const normalizeAcousticTitle = (title: string) => slugify(title
+  .replace(/\s*\(acoustic(?: version)?\)\s*$/i, '')
+  .replace(/\s*\(v\d+\)\s*$/i, ''));
+const acousticSourceOverrides: Record<string, string> = {
+  // Two earlier songs share each title. The selected versions match the new arrangements.
+  'ea20960d-3ae7-4947-9ca7-46c2fb1c21cc': '204cc035-a481-4d21-9963-a8f8e45888d0',
+  '1a47c72e-0ff6-4c76-9409-a8a781d3fea0': '7e47b964-26a7-4bbd-acbc-c2e56d200fa5',
+};
+const sunoId = (track: (typeof sunoSongs)[number]) => track.url?.split('/').at(-1) ?? '';
+const sunoSongById = new Map(sunoSongs.map((track) => [sunoId(track), track]));
+const catalogSongBySunoId = new Map(baseSongs.flatMap((song) => song.links
+  .filter((link) => link.source === 'suno')
+  .map((link) => [link.url.split('/').at(-1)!, song] as const)));
+const acousticSourceByVersionId = new Map<string, typeof baseSongs[number]>();
+const acousticVersionsBySourceId = new Map<string, typeof baseSongs>();
+for (const trackId of generatedAcousticTrackIds) {
+  const track = sunoSongById.get(trackId);
+  const version = catalogSongBySunoId.get(trackId);
+  if (!track || !version) throw new Error(`Missing generated acoustic album track ${trackId}.`);
+  const candidates = sunoSongs.filter((candidate) => !generatedAcousticTrackIds.has(sunoId(candidate))
+    && normalizeAcousticTitle(candidate.title) === normalizeAcousticTitle(track.title));
+  const sourceTrack = acousticSourceOverrides[trackId]
+    ? candidates.find((candidate) => sunoId(candidate) === acousticSourceOverrides[trackId])
+    : candidates.length === 1 ? candidates[0] : undefined;
+  const source = sourceTrack && catalogSongBySunoId.get(sunoId(sourceTrack));
+  if (!source) throw new Error(`A unique earlier Suno song is required for ${track.title} (${trackId}).`);
+  acousticSourceByVersionId.set(version.id, source);
+  const versions = acousticVersionsBySourceId.get(source.id) ?? [];
+  versions.push(version);
+  acousticVersionsBySourceId.set(source.id, versions);
+}
+
 const normalizeVideoTitle = (value: string) => value
   .normalize('NFKD')
   .replace(/[\u0300-\u036f]/g, '')
@@ -473,6 +511,16 @@ for (const match of spotifyMatches) {
 
 export const songs: CatalogSong[] = baseSongs.map((song) => ({
   ...song,
+  ...(acousticSourceByVersionId.has(song.id) ? {
+    acousticSourceId: acousticSourceByVersionId.get(song.id)!.id,
+    acousticSourcePageUrl: acousticSourceByVersionId.get(song.id)!.pageUrl,
+    description: `${song.title} is a generated acoustic version of ${acousticSourceByVersionId.get(song.id)!.title} by Alex Merced. Listen to both versions.`,
+    creationMethod: `This acoustic arrangement was generated with Suno from Alex’s creative direction. Hear the earlier version of ${acousticSourceByVersionId.get(song.id)!.title} for comparison.`,
+  } : {}),
+  ...(acousticVersionsBySourceId.has(song.id) ? {
+    acousticVersionIds: acousticVersionsBySourceId.get(song.id)!.map((version) => version.id),
+    acousticVersionPageUrls: acousticVersionsBySourceId.get(song.id)!.map((version) => version.pageUrl),
+  } : {}),
   links: [
     ...song.links,
     ...(spotifyMatchesBySongId.get(song.id) ?? []).filter(({ track }) => !song.links.some((link) => link.url === track.url)).map(({ track }) => ({

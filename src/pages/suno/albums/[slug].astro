@@ -2,7 +2,7 @@
 import Base from '../../../layouts/Base.astro';
 import Breadcrumbs from '../../../components/Breadcrumbs.astro';
 import CoverImage from '../../../components/CoverImage.astro';
-import { SITE, catalogSunoAlbums, songByPrimaryUrl, type CatalogSong } from '../../../data/catalog-model';
+import { SITE, catalogSunoAlbums, songById, songByPrimaryUrl, type CatalogSong } from '../../../data/catalog-model';
 
 export function getStaticPaths() {
   return catalogSunoAlbums.map((album) => ({
@@ -53,7 +53,10 @@ const jsonLd = [{
       <h2>Track list</h2>
       <p>{album.trackIds.length} tracks connect to local catalog pages. Every track also links directly to its Suno recording.</p>
       <ol class="tracks">
-        {tracks.map(({ source, song }, index) => <li><span class="num">{String(index + 1).padStart(2, '0')}</span><span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span><span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a></span></li>)}
+        {tracks.map(({ source, song }, index) => {
+          const earlier = song?.acousticSourceId ? songById.get(song.acousticSourceId) : undefined;
+          return <li><span class="num">{String(index + 1).padStart(2, '0')}</span><span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span><span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a>{earlier && <a href={earlier.pageUrl.replace(SITE, '')}>Earlier version</a>}</span></li>;
+        })}
       </ol>
     </div>
   </article>

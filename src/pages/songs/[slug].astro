@@ -15,6 +15,8 @@ const reimaginings = (song.reimaginedTrackIds ?? []).flatMap((id) => {
   const related = songById.get(id);
   return related ? [related] : [];
 });
+const acousticSource = song.acousticSourceId ? songById.get(song.acousticSourceId) : undefined;
+const acousticVersions = (song.acousticVersionIds ?? []).flatMap((id) => songById.get(id) ?? []);
 const youtubeLink = song.links.find((link) => link.source === 'youtube');
 const youtubeId = youtubeLink ? new URL(youtubeLink.url).searchParams.get('v') : null;
 const soundcloudLink = song.links.find((link) => link.source.startsWith('soundcloud'));
@@ -67,9 +69,9 @@ const jsonLd = [
       ...(song.albumPageUrl ? [{ '@id': `${song.albumPageUrl}#album` }] : []),
       ...song.albumLinks.map((album) => ({ '@id': `${album.pageUrl}#album` })),
     ] } : {}),
-    ...(original ? { isBasedOn: { '@id': `${original.pageUrl}#recording` } } : {}),
-    ...(reimaginings.length ? {
-      workExample: reimaginings.map((related) => ({ '@id': `${related.pageUrl}#recording` })),
+    ...(original || acousticSource ? { isBasedOn: { '@id': `${(original ?? acousticSource)!.pageUrl}#recording` } } : {}),
+    ...(reimaginings.length || acousticVersions.length ? {
+      workExample: [...reimaginings, ...acousticVersions].map((related) => ({ '@id': `${related.pageUrl}#recording` })),
     } : {}),
   },
   ...(youtubeId && song.imageUrl && song.createdAt ? [{
@@ -115,7 +117,7 @@ const jsonLd = [
 
         <dl class="facts">
           <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
-          <div><dt>Type</dt><dd>{song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
+          <div><dt>Type</dt><dd>{acousticSource ? 'Generated acoustic arrangement' : song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
           {song.style && <div><dt>Rebuilt as</dt><dd>{song.style}</dd></div>}
           {(song.length || durationSeconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(durationSeconds! / 60)}:${String(Math.round(durationSeconds! % 60)).padStart(2, '0')}`}</dd></div>}
           {song.createdAt && <div><dt>Published</dt><dd><time datetime={song.createdAt}>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(song.createdAt))}</time></dd></div>}
@@ -164,6 +166,13 @@ const jsonLd = [
             <div class="source-links">{related.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div>
           </div>
         ))}
+      </div>
+    )}
+    {(acousticSource || acousticVersions.length > 0) && (
+      <div class="shell relationship">
+        <h2>Earlier song and generated acoustic version</h2>
+        {acousticSource && <div class="relationship__item" data-era="ai"><div><span class="eyebrow">Earlier version</span><a class="song-link" href={acousticSource.pageUrl.replace(SITE, '')}>{acousticSource.title}</a></div><div class="source-links">{acousticSource.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>}
+        {acousticVersions.map((version) => <div class="relationship__item" data-era="ai"><div><span class="eyebrow">Generated acoustic version</span><a class="song-link" href={version.pageUrl.replace(SITE, '')}>{version.title}</a></div><div class="source-links">{version.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
       </div>
     )}
     {(directVideos.length > 0 || versionVideos.length > 0) && (

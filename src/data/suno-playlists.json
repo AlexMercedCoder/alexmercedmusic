@@ -1,5 +1,253 @@
 [
   {
+    "id": "1b7a483c-4a8e-40a0-9d59-b3d5d1b65a71",
+    "name": "All My Favorites, But Acoustic",
+    "resourceType": "album",
+    "url": "https://suno.com/album/1b7a483c-4a8e-40a0-9d59-b3d5d1b65a71",
+    "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg",
+    "songCount": 26,
+    "durationSeconds": 5260.32,
+    "description": "A collection of all my favorite songs across all my generations. This collection is riddled with infectious melodies and songs that reflect some of my most personal insecurities, anxieties and joys.",
+    "trackIds": [
+      "0a496997-8544-4e88-a074-c74f8055a242",
+      "8c307e3d-9859-4270-a34b-f973fa0b0c08",
+      "79ddfd53-ddb7-43b1-8d56-0f15bdcc4a82",
+      "2261e830-5bea-43df-8bfd-94dc2d01afe2",
+      "f7319a99-8ae9-4f77-b1ca-2654e53105fd",
+      "ea20960d-3ae7-4947-9ca7-46c2fb1c21cc",
+      "b47155ce-4a2a-418b-9ec3-11d2d68aedaf",
+      "b927150e-3f88-4cf1-9a3d-bcfd3189e225",
+      "1a261e12-bd79-4ef5-b83e-6fac68d04d4d",
+      "741fa7de-ef94-4522-8816-d33167a76e2a",
+      "29e3f4fb-cd1b-4992-801a-1b5028b87917",
+      "6744ec6b-6dda-4177-ada0-89d55a5092b0",
+      "872cf020-9b83-42c8-8147-ba3001d70bb0",
+      "f8f133e1-2aeb-4076-ac00-b1cf9ed634ce",
+      "fb828c5e-c044-475a-8712-31c9b3379abc",
+      "219cc43f-948c-41a3-8672-9c24f33eabe3",
+      "dcae81cf-e63a-492c-acd1-67f08de5f537",
+      "ad633334-415e-4907-9057-bbc3475f3e99",
+      "882a108e-179e-48ef-bfad-ee62fc0f0c60",
+      "afc03aa0-baba-4f12-805e-feab78a7a34e",
+      "8d95a6f3-3080-4bdf-a5ae-8fb163459d64",
+      "1a47c72e-0ff6-4c76-9409-a8a781d3fea0",
+      "11287b91-3e88-4a88-9723-f5e0b0f23daf",
+      "8538f36d-dc00-436f-aa5f-16de45781f7c",
+      "8a82547b-e52f-4a3e-b111-80753db21186",
+      "ca58d867-b227-4f61-bc0a-b619d431a0b9"
+    ],
+    "tracks": [
+      {
+        "id": "0a496997-8544-4e88-a074-c74f8055a242",
+        "title": "Gray Child (Acoustic Version)",
+        "url": "https://suno.com/song/0a496997-8544-4e88-a074-c74f8055a242",
+        "createdAt": "2026-10-16T17:28:31.465Z",
+        "durationSeconds": 210.8,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "8c307e3d-9859-4270-a34b-f973fa0b0c08",
+        "title": "God In My Hands (Acoustic)",
+        "url": "https://suno.com/song/8c307e3d-9859-4270-a34b-f973fa0b0c08",
+        "createdAt": "2026-10-16T17:32:19.507Z",
+        "durationSeconds": 187.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "79ddfd53-ddb7-43b1-8d56-0f15bdcc4a82",
+        "title": "The Other Side (Acoustic)",
+        "url": "https://suno.com/song/79ddfd53-ddb7-43b1-8d56-0f15bdcc4a82",
+        "createdAt": "2026-10-16T17:35:20.324Z",
+        "durationSeconds": 207.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "2261e830-5bea-43df-8bfd-94dc2d01afe2",
+        "title": "Just Ahead of My Time (Acoustic)",
+        "url": "https://suno.com/song/2261e830-5bea-43df-8bfd-94dc2d01afe2",
+        "createdAt": "2026-10-16T18:02:49.977Z",
+        "durationSeconds": 200.8,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "f7319a99-8ae9-4f77-b1ca-2654e53105fd",
+        "title": "Better Parts (acoustic)",
+        "url": "https://suno.com/song/f7319a99-8ae9-4f77-b1ca-2654e53105fd",
+        "createdAt": "2026-10-16T18:06:44.882Z",
+        "durationSeconds": 249.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "ea20960d-3ae7-4947-9ca7-46c2fb1c21cc",
+        "title": "Piece by Piece (Acoustic)",
+        "url": "https://suno.com/song/ea20960d-3ae7-4947-9ca7-46c2fb1c21cc",
+        "createdAt": "2026-10-16T18:10:54.357Z",
+        "durationSeconds": 221.04,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "b47155ce-4a2a-418b-9ec3-11d2d68aedaf",
+        "title": "Stay Strange, Stay Kind (acoustic)",
+        "url": "https://suno.com/song/b47155ce-4a2a-418b-9ec3-11d2d68aedaf",
+        "createdAt": "2026-10-16T18:18:02.268Z",
+        "durationSeconds": 139.12,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "b927150e-3f88-4cf1-9a3d-bcfd3189e225",
+        "title": "The One Who Stays In Here",
+        "url": "https://suno.com/song/b927150e-3f88-4cf1-9a3d-bcfd3189e225",
+        "createdAt": "2026-10-16T18:19:54.770Z",
+        "durationSeconds": 209.6,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "1a261e12-bd79-4ef5-b83e-6fac68d04d4d",
+        "title": "Blow All The Anchors Away (acoustic)",
+        "url": "https://suno.com/song/1a261e12-bd79-4ef5-b83e-6fac68d04d4d",
+        "createdAt": "2026-10-16T18:24:57.443Z",
+        "durationSeconds": 186.12,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "741fa7de-ef94-4522-8816-d33167a76e2a",
+        "title": "Paper Prison (acoustic)",
+        "url": "https://suno.com/song/741fa7de-ef94-4522-8816-d33167a76e2a",
+        "createdAt": "2026-10-16T18:27:43.705Z",
+        "durationSeconds": 211.16,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "29e3f4fb-cd1b-4992-801a-1b5028b87917",
+        "title": "Back To Empty (acoustic)",
+        "url": "https://suno.com/song/29e3f4fb-cd1b-4992-801a-1b5028b87917",
+        "createdAt": "2026-10-16T19:32:22.657Z",
+        "durationSeconds": 189.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "6744ec6b-6dda-4177-ada0-89d55a5092b0",
+        "title": "Nap Away (acoustic)",
+        "url": "https://suno.com/song/6744ec6b-6dda-4177-ada0-89d55a5092b0",
+        "createdAt": "2026-10-16T19:37:50.955Z",
+        "durationSeconds": 197.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "872cf020-9b83-42c8-8147-ba3001d70bb0",
+        "title": "Second Stair Creak (acoustic)",
+        "url": "https://suno.com/song/872cf020-9b83-42c8-8147-ba3001d70bb0",
+        "createdAt": "2026-10-16T19:41:51.530Z",
+        "durationSeconds": 196.76,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "f8f133e1-2aeb-4076-ac00-b1cf9ed634ce",
+        "title": "I Rise. (Acoustic)",
+        "url": "https://suno.com/song/f8f133e1-2aeb-4076-ac00-b1cf9ed634ce",
+        "createdAt": "2026-10-16T19:49:05.896Z",
+        "durationSeconds": 160.76,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "fb828c5e-c044-475a-8712-31c9b3379abc",
+        "title": "Half Truth Lantern (acoustic)",
+        "url": "https://suno.com/song/fb828c5e-c044-475a-8712-31c9b3379abc",
+        "createdAt": "2026-10-16T19:51:53.462Z",
+        "durationSeconds": 194.76,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "219cc43f-948c-41a3-8672-9c24f33eabe3",
+        "title": "THE HOLE STILL KNOWS MY NAME (acoustic)",
+        "url": "https://suno.com/song/219cc43f-948c-41a3-8672-9c24f33eabe3",
+        "createdAt": "2026-10-16T19:57:30.912Z",
+        "durationSeconds": 286.76,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "dcae81cf-e63a-492c-acd1-67f08de5f537",
+        "title": "LET IT GO, LET IT GROW (acoustic)",
+        "url": "https://suno.com/song/dcae81cf-e63a-492c-acd1-67f08de5f537",
+        "createdAt": "2026-10-16T20:06:49.296Z",
+        "durationSeconds": 236.4,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "ad633334-415e-4907-9057-bbc3475f3e99",
+        "title": "Let Them Bloom (acoustic)",
+        "url": "https://suno.com/song/ad633334-415e-4907-9057-bbc3475f3e99",
+        "createdAt": "2026-10-16T20:10:55.549Z",
+        "durationSeconds": 203.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "882a108e-179e-48ef-bfad-ee62fc0f0c60",
+        "title": "Paper Walls (acoustic)",
+        "url": "https://suno.com/song/882a108e-179e-48ef-bfad-ee62fc0f0c60",
+        "createdAt": "2026-10-16T20:14:36.669Z",
+        "durationSeconds": 219.16,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "afc03aa0-baba-4f12-805e-feab78a7a34e",
+        "title": "Gold Under Skin (acoustic)",
+        "url": "https://suno.com/song/afc03aa0-baba-4f12-805e-feab78a7a34e",
+        "createdAt": "2026-10-16T20:17:43.365Z",
+        "durationSeconds": 216.2,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "8d95a6f3-3080-4bdf-a5ae-8fb163459d64",
+        "title": "Say My Name (acoustic)",
+        "url": "https://suno.com/song/8d95a6f3-3080-4bdf-a5ae-8fb163459d64",
+        "createdAt": "2026-10-16T20:22:37.546Z",
+        "durationSeconds": 190,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "1a47c72e-0ff6-4c76-9409-a8a781d3fea0",
+        "title": "Where the Map Runs Thin (acoustic)",
+        "url": "https://suno.com/song/1a47c72e-0ff6-4c76-9409-a8a781d3fea0",
+        "createdAt": "2026-10-16T20:27:54.500Z",
+        "durationSeconds": 152,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "11287b91-3e88-4a88-9723-f5e0b0f23daf",
+        "title": "I Wish I'd Saved a Life (acoustic)",
+        "url": "https://suno.com/song/11287b91-3e88-4a88-9723-f5e0b0f23daf",
+        "createdAt": "2026-10-16T20:30:47.263Z",
+        "durationSeconds": 208.4,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "8538f36d-dc00-436f-aa5f-16de45781f7c",
+        "title": "Ghosts of Choices (acoustic)",
+        "url": "https://suno.com/song/8538f36d-dc00-436f-aa5f-16de45781f7c",
+        "createdAt": "2026-10-16T20:36:19.100Z",
+        "durationSeconds": 154.92,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "8a82547b-e52f-4a3e-b111-80753db21186",
+        "title": "Storm Behind My Confidence (acoustic)",
+        "url": "https://suno.com/song/8a82547b-e52f-4a3e-b111-80753db21186",
+        "createdAt": "2026-10-16T20:40:02.176Z",
+        "durationSeconds": 224.76,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      },
+      {
+        "id": "ca58d867-b227-4f61-bc0a-b619d431a0b9",
+        "title": "How I Tried (acoustic)",
+        "url": "https://suno.com/song/ca58d867-b227-4f61-bc0a-b619d431a0b9",
+        "createdAt": "2026-10-16T20:48:32.950Z",
+        "durationSeconds": 207.6,
+        "imageUrl": "https://cdn2.suno.ai/image_87e98124-d66f-468d-af4b-89b51955d5cf.jpeg"
+      }
+    ]
+  },
+  {
     "id": "f01f047b-c75b-476c-91a7-baff7ab022f5",
     "name": "Strange Is Good",
     "resourceType": "album",
