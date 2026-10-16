@@ -1,5 +1,316 @@
 [
   {
+    "id": "f01f047b-c75b-476c-91a7-baff7ab022f5",
+    "name": "Strange Is Good",
+    "resourceType": "album",
+    "url": "https://suno.com/album/f01f047b-c75b-476c-91a7-baff7ab022f5",
+    "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg",
+    "songCount": 33,
+    "durationSeconds": 4442.12,
+    "description": "Several songs embracing being strange, weird and wonderful!",
+    "trackIds": [
+      "4bf3a6c7-1da5-4bbe-b32f-4975f6aa3841",
+      "02aa1377-a90a-4a5f-aeaf-af6e32aada53",
+      "f7b7a7be-d75a-4bbd-b996-14de2dad93e0",
+      "ffac0f50-8238-48cf-8673-36ebb5fc0a7d",
+      "d9ce2ad9-56bb-4524-966e-7ce9b68511f4",
+      "a4c925b1-96a1-4479-a764-9f346295b564",
+      "ac2a4991-b724-4681-add7-1465eb761b11",
+      "ed2426de-7f75-4838-b6d9-9a12e13c891c",
+      "7078f92e-8e48-4f50-a98e-bd2c66b8fc7a",
+      "d002d696-065b-4cd3-9fca-9041b4555a08",
+      "68e6e132-c7d6-460a-87ea-45b37acfed26",
+      "3f18d66e-4f35-4961-9703-4a791aed1e39",
+      "b2840156-4a9e-4ac3-9ca5-1e113cf5c512",
+      "d7046574-d924-43a1-8a59-27fe56cc3d0c",
+      "b3356ad7-f6bf-4b5f-9e36-ba077b9e83fe",
+      "2a7bb8b8-5640-4134-8dec-5c94f5a30ae0",
+      "9532b0b8-5b7d-43aa-9042-8f81bb63de34",
+      "cd89ddea-e67f-4311-9b67-f6da058cc9c3",
+      "72d93554-49cb-4b97-89a9-4dc02bf4052b",
+      "b090438d-0c9d-4215-94e5-f57b671b1dab",
+      "82e26bb3-6324-4f8f-ad6d-0351fc36d147",
+      "22d7e762-31b9-49a3-bdfc-e5747bf70609",
+      "e94986b5-8a86-47fe-bef9-634e99bf8f29",
+      "66620a1b-8340-43ab-8e85-13f9bd8791ba",
+      "74057fa6-f187-4629-b04b-d4c27eb5c6e0",
+      "bc175772-b99c-42b5-95d6-cb672619c120",
+      "b6229215-69a3-4a46-a301-7fc203607270",
+      "192587d9-321b-4c0e-997f-d75116d7aade",
+      "1b615870-29d2-4d4f-bae8-989d483c70e8",
+      "ad6766e5-fb31-4997-9d3c-2b3514d0b933",
+      "3c0661fb-2523-4657-90ed-619bb58e2dd0",
+      "85572d0e-83e8-43e3-9575-16bf71e1415a",
+      "7f508ead-b4a0-440a-983a-62d1bab05593"
+    ],
+    "tracks": [
+      {
+        "id": "4bf3a6c7-1da5-4bbe-b32f-4975f6aa3841",
+        "title": "Strange in the Same Wide Room",
+        "url": "https://suno.com/song/4bf3a6c7-1da5-4bbe-b32f-4975f6aa3841",
+        "createdAt": "2026-10-15T19:23:21.421Z",
+        "durationSeconds": 212,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "02aa1377-a90a-4a5f-aeaf-af6e32aada53",
+        "title": "Here's to the Odd Ones",
+        "url": "https://suno.com/song/02aa1377-a90a-4a5f-aeaf-af6e32aada53",
+        "createdAt": "2026-10-15T19:23:21.421Z",
+        "durationSeconds": 195.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "f7b7a7be-d75a-4bbd-b996-14de2dad93e0",
+        "title": "Stay Strange, Stay Kind",
+        "url": "https://suno.com/song/f7b7a7be-d75a-4bbd-b996-14de2dad93e0",
+        "createdAt": "2026-10-15T19:25:18.020Z",
+        "durationSeconds": 132,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "ffac0f50-8238-48cf-8673-36ebb5fc0a7d",
+        "title": "Be Strange With Me",
+        "url": "https://suno.com/song/ffac0f50-8238-48cf-8673-36ebb5fc0a7d",
+        "createdAt": "2026-10-15T19:28:11.755Z",
+        "durationSeconds": 178,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "d9ce2ad9-56bb-4524-966e-7ce9b68511f4",
+        "title": "Make a New Door",
+        "url": "https://suno.com/song/d9ce2ad9-56bb-4524-966e-7ce9b68511f4",
+        "createdAt": "2026-10-15T19:28:11.755Z",
+        "durationSeconds": 173.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "a4c925b1-96a1-4479-a764-9f346295b564",
+        "title": "Be Weird, Be Wonderful",
+        "url": "https://suno.com/song/a4c925b1-96a1-4479-a764-9f346295b564",
+        "createdAt": "2026-10-15T19:28:33.546Z",
+        "durationSeconds": 132,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "ac2a4991-b724-4681-add7-1465eb761b11",
+        "title": "Stay Strange, Stay Bright",
+        "url": "https://suno.com/song/ac2a4991-b724-4681-add7-1465eb761b11",
+        "createdAt": "2026-10-15T19:28:33.546Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "ed2426de-7f75-4838-b6d9-9a12e13c891c",
+        "title": "Paper Planets",
+        "url": "https://suno.com/song/ed2426de-7f75-4838-b6d9-9a12e13c891c",
+        "createdAt": "2026-10-15T19:35:11.625Z",
+        "durationSeconds": 123.12,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "7078f92e-8e48-4f50-a98e-bd2c66b8fc7a",
+        "title": "Stay Strange",
+        "url": "https://suno.com/song/7078f92e-8e48-4f50-a98e-bd2c66b8fc7a",
+        "createdAt": "2026-10-15T19:35:11.625Z",
+        "durationSeconds": 145.2,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "d002d696-065b-4cd3-9fca-9041b4555a08",
+        "title": "Wonderfully Out of Line",
+        "url": "https://suno.com/song/d002d696-065b-4cd3-9fca-9041b4555a08",
+        "createdAt": "2026-10-15T19:35:32.441Z",
+        "durationSeconds": 186.4,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "68e6e132-c7d6-460a-87ea-45b37acfed26",
+        "title": "Make Some Room",
+        "url": "https://suno.com/song/68e6e132-c7d6-460a-87ea-45b37acfed26",
+        "createdAt": "2026-10-15T19:43:05.381Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "3f18d66e-4f35-4961-9703-4a791aed1e39",
+        "title": "A Little Room for You",
+        "url": "https://suno.com/song/3f18d66e-4f35-4961-9703-4a791aed1e39",
+        "createdAt": "2026-10-15T19:43:05.381Z",
+        "durationSeconds": 189.6,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "b2840156-4a9e-4ac3-9ca5-1e113cf5c512",
+        "title": "Be Strange With Me",
+        "url": "https://suno.com/song/b2840156-4a9e-4ac3-9ca5-1e113cf5c512",
+        "createdAt": "2026-10-15T19:43:54.279Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "d7046574-d924-43a1-8a59-27fe56cc3d0c",
+        "title": "Crooked Compass",
+        "url": "https://suno.com/song/d7046574-d924-43a1-8a59-27fe56cc3d0c",
+        "createdAt": "2026-10-15T23:56:57.556Z",
+        "durationSeconds": 133.6,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "b3356ad7-f6bf-4b5f-9e36-ba077b9e83fe",
+        "title": "Flower in the Concrete",
+        "url": "https://suno.com/song/b3356ad7-f6bf-4b5f-9e36-ba077b9e83fe",
+        "createdAt": "2026-10-16T00:01:59.200Z",
+        "durationSeconds": 119.56,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "2a7bb8b8-5640-4134-8dec-5c94f5a30ae0",
+        "title": "The Beat Between The Beats",
+        "url": "https://suno.com/song/2a7bb8b8-5640-4134-8dec-5c94f5a30ae0",
+        "createdAt": "2026-10-16T00:04:07.195Z",
+        "durationSeconds": 119.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "9532b0b8-5b7d-43aa-9042-8f81bb63de34",
+        "title": "Draw Another Geography",
+        "url": "https://suno.com/song/9532b0b8-5b7d-43aa-9042-8f81bb63de34",
+        "createdAt": "2026-10-16T00:24:40.480Z",
+        "durationSeconds": 119.92,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "cd89ddea-e67f-4311-9b67-f6da058cc9c3",
+        "title": "Stained-Glass Hurricane",
+        "url": "https://suno.com/song/cd89ddea-e67f-4311-9b67-f6da058cc9c3",
+        "createdAt": "2026-10-16T00:25:09.237Z",
+        "durationSeconds": 120.2,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "72d93554-49cb-4b97-89a9-4dc02bf4052b",
+        "title": "Thirteenth Hour",
+        "url": "https://suno.com/song/72d93554-49cb-4b97-89a9-4dc02bf4052b",
+        "createdAt": "2026-10-16T00:27:51.830Z",
+        "durationSeconds": 119.16,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "b090438d-0c9d-4215-94e5-f57b671b1dab",
+        "title": "Odd-Shaped Key",
+        "url": "https://suno.com/song/b090438d-0c9d-4215-94e5-f57b671b1dab",
+        "createdAt": "2026-10-16T00:28:13.911Z",
+        "durationSeconds": 119.56,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "82e26bb3-6324-4f8f-ad6d-0351fc36d147",
+        "title": "Beautiful Anomaly",
+        "url": "https://suno.com/song/82e26bb3-6324-4f8f-ad6d-0351fc36d147",
+        "createdAt": "2026-10-16T00:28:55.794Z",
+        "durationSeconds": 119.56,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "22d7e762-31b9-49a3-bdfc-e5747bf70609",
+        "title": "Different Trajectory",
+        "url": "https://suno.com/song/22d7e762-31b9-49a3-bdfc-e5747bf70609",
+        "createdAt": "2026-10-16T00:31:35.349Z",
+        "durationSeconds": 120.4,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "e94986b5-8a86-47fe-bef9-634e99bf8f29",
+        "title": "The Color With No Name",
+        "url": "https://suno.com/song/e94986b5-8a86-47fe-bef9-634e99bf8f29",
+        "createdAt": "2026-10-16T00:31:57.270Z",
+        "durationSeconds": 119.88,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "66620a1b-8340-43ab-8e85-13f9bd8791ba",
+        "title": "Uninvited Firework",
+        "url": "https://suno.com/song/66620a1b-8340-43ab-8e85-13f9bd8791ba",
+        "createdAt": "2026-10-16T13:41:34.542Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "74057fa6-f187-4629-b04b-d4c27eb5c6e0",
+        "title": "Upside-Down Umbrella",
+        "url": "https://suno.com/song/74057fa6-f187-4629-b04b-d4c27eb5c6e0",
+        "createdAt": "2026-10-16T13:42:09.070Z",
+        "durationSeconds": 120.04,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "bc175772-b99c-42b5-95d6-cb672619c120",
+        "title": "Elevator to a Secret Floor",
+        "url": "https://suno.com/song/bc175772-b99c-42b5-95d6-cb672619c120",
+        "createdAt": "2026-10-16T13:48:13.664Z",
+        "durationSeconds": 119.6,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "b6229215-69a3-4a46-a301-7fc203607270",
+        "title": "Jellyfish Orchestra",
+        "url": "https://suno.com/song/b6229215-69a3-4a46-a301-7fc203607270",
+        "createdAt": "2026-10-16T13:48:29.257Z",
+        "durationSeconds": 119.84,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "192587d9-321b-4c0e-997f-d75116d7aade",
+        "title": "The Misprinted Stamp",
+        "url": "https://suno.com/song/192587d9-321b-4c0e-997f-d75116d7aade",
+        "createdAt": "2026-10-16T13:48:43.842Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "1b615870-29d2-4d4f-bae8-989d483c70e8",
+        "title": "Runaway Carousel Horse",
+        "url": "https://suno.com/song/1b615870-29d2-4d4f-bae8-989d483c70e8",
+        "createdAt": "2026-10-16T13:48:58.304Z",
+        "durationSeconds": 119.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "ad6766e5-fb31-4997-9d3c-2b3514d0b933",
+        "title": "I'm Already Complete",
+        "url": "https://suno.com/song/ad6766e5-fb31-4997-9d3c-2b3514d0b933",
+        "createdAt": "2026-10-16T13:49:15.951Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "3c0661fb-2523-4657-90ed-619bb58e2dd0",
+        "title": "Backwards Telescope",
+        "url": "https://suno.com/song/3c0661fb-2523-4657-90ed-619bb58e2dd0",
+        "createdAt": "2026-10-16T13:49:33.150Z",
+        "durationSeconds": 119.92,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "85572d0e-83e8-43e3-9575-16bf71e1415a",
+        "title": "Neon Scarecrow",
+        "url": "https://suno.com/song/85572d0e-83e8-43e3-9575-16bf71e1415a",
+        "createdAt": "2026-10-16T13:49:48.592Z",
+        "durationSeconds": 119.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      },
+      {
+        "id": "7f508ead-b4a0-440a-983a-62d1bab05593",
+        "title": "Left-Handed Lightning Bolt",
+        "url": "https://suno.com/song/7f508ead-b4a0-440a-983a-62d1bab05593",
+        "createdAt": "2026-10-16T13:50:10.619Z",
+        "durationSeconds": 120.36,
+        "imageUrl": "https://cdn2.suno.ai/image_4b6690df-7754-427c-8b9c-3fd555388129.jpeg"
+      }
+    ]
+  },
+  {
     "id": "b6a3ab2c-9975-412f-a310-fb0b24cb6191",
     "name": "In Another Life, In Another Song",
     "resourceType": "album",

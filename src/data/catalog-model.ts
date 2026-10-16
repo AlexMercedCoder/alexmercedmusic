@@ -23,7 +23,7 @@ import spotifyTracksData from './spotify-tracks.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.1.0';
-export const CATALOG_UPDATED_AT = '2026-10-15';
+export const CATALOG_UPDATED_AT = '2026-10-16';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 

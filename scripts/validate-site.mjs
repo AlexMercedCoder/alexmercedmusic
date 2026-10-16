@@ -104,13 +104,14 @@ for (const video of catalog.videos) {
   }
 }
 for (const [youtubeId, title] of [
+  ['tqz4v-ICnAA', 'The Hole Still Knows My Name'],
   ['PYlVvwxnkr8', 'Paper Smile'],
   ['aGuXLEIMM1s', 'Back To Empty'],
   ['UYkkIfVS-u0', 'Wild Crazy Place'],
 ]) {
   const short = catalog.videos.find((video) => video.youtubeId === youtubeId);
   assert.equal(short?.videoType, 'short', `${title} must appear in the Shorts catalog.`);
-  const song = catalog.songs.find((item) => item.title === title && short.songIds.includes(item.id));
+  const song = catalog.songs.find((item) => item.title.toLowerCase() === title.toLowerCase() && short.songIds.includes(item.id));
   assert.ok(song, `${title} Short must connect to its song page.`);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${title} song page must link back to the Short.`);
 }
@@ -122,7 +123,7 @@ for (const [youtubeId, title] of [
 ]) {
   const video = catalog.videos.find((item) => item.youtubeId === youtubeId);
   assert.equal(video?.videoType, 'video', `${title} must appear in the full-length video catalog.`);
-  const song = catalog.songs.find((item) => item.title === title && video.songIds.includes(item.id));
+  const song = catalog.songs.find((item) => item.title.toLowerCase() === title.toLowerCase() && video.songIds.includes(item.id));
   assert.ok(song, `${title} video must connect to its song page.`);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(video.watchUrl), `${title} song page must link back to the video.`);
 }
