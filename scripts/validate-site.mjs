@@ -174,6 +174,11 @@ assert.equal(catalog.counts.sunoAlbums, sunoAlbums.length);
 assert.equal(sunoAlbums.length, sourceSunoPlaylists.filter((collection) => collection.resourceType === 'album').length);
 assert.ok(sunoAlbums.length >= 19, 'The official Suno album catalog unexpectedly lost albums.');
 assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl && album.imageUrl), 'Every official Suno album must retain its album art and complete track metadata.');
+const libertyAlbum = sunoAlbums.find((album) => album.id === '01d1b567-ab42-4d0f-8036-e8dc9494aa86');
+assert.equal(libertyAlbum?.name, 'Manifesto of Love and Liberty');
+assert.equal(libertyAlbum?.songCount, 10);
+assert.equal(libertyAlbum?.sourceTracks[0]?.title, 'Free Enough');
+assert.equal(libertyAlbum?.sourceTracks.at(-1)?.title, 'A Sky Wide Enough');
 for (const [id, name, count] of [
   ['4e059c40-1e3b-4379-a5b0-fbeff797df37', 'Make A Better World', 50],
   ['96df8b9d-469e-4b4a-a92d-d96884093350', 'The Lives Never Lived', 23],
