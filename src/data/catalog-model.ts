@@ -23,7 +23,7 @@ import spotifyTracksData from './spotify-tracks.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.1.0';
-export const CATALOG_UPDATED_AT = '2026-10-16';
+export const CATALOG_UPDATED_AT = '2026-10-18';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -420,6 +420,9 @@ const relatedSongIdsFor = (songIds: string[]) => {
     if (!song) continue;
     if (song.originalTrackId) ids.add(song.originalTrackId);
     for (const relatedId of song.reimaginedTrackIds ?? []) ids.add(relatedId);
+    const acousticSource = acousticSourceByVersionId.get(song.id);
+    if (acousticSource) ids.add(acousticSource.id);
+    for (const version of acousticVersionsBySourceId.get(song.id) ?? []) ids.add(version.id);
   }
   return [...ids];
 };

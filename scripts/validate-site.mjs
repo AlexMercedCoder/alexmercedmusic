@@ -114,6 +114,7 @@ for (const video of catalog.videos) {
   }
 }
 for (const [youtubeId, title] of [
+  ['lGyQrIVk_YY', 'I Name The Room'],
   ['tqz4v-ICnAA', 'The Hole Still Knows My Name'],
   ['PYlVvwxnkr8', 'Paper Smile'],
   ['aGuXLEIMM1s', 'Back To Empty'],
@@ -126,6 +127,11 @@ for (const [youtubeId, title] of [
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${title} song page must link back to the Short.`);
 }
 for (const [youtubeId, title] of [
+  ['QwjkX3W9TW0', 'Ghosts of Choices'],
+  ['246HZb0UZr4', 'The Misprinted Stamp'],
+  ['CrI5fWl8bBI', 'Elevator to a Secret Floor'],
+  ['TyJGBTMUr6o', 'Jellyfish Orchestra'],
+  ['cySU07bWJxc', 'Uninvited Firework'],
   ['Ho22DHW3p_4', 'Be Weird, Be Wonderful'],
   ['x6ELTD-FRLI', 'Paper Planets'],
   ['u52veeC1bLE', 'Make Some Room'],
@@ -137,6 +143,9 @@ for (const [youtubeId, title] of [
   assert.ok(song, `${title} video must connect to its song page.`);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(video.watchUrl), `${title} song page must link back to the video.`);
 }
+const ghostsVideo = catalog.videos.find((video) => video.youtubeId === 'QwjkX3W9TW0');
+const ghostsAcoustic = catalog.songs.find((song) => song.title === 'Ghosts of Choices (acoustic)');
+assert.ok(ghostsVideo?.relatedSongIds.includes(ghostsAcoustic?.id), 'Ghosts of Choices video must link to its generated acoustic version.');
 
 for (const album of catalog.albums) {
   for (const trackId of album.trackIds) assert.ok(songIds.has(trackId), `${album.title} references a missing track.`);
@@ -165,6 +174,16 @@ assert.equal(catalog.counts.sunoAlbums, sunoAlbums.length);
 assert.equal(sunoAlbums.length, sourceSunoPlaylists.filter((collection) => collection.resourceType === 'album').length);
 assert.ok(sunoAlbums.length >= 19, 'The official Suno album catalog unexpectedly lost albums.');
 assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl && album.imageUrl), 'Every official Suno album must retain its album art and complete track metadata.');
+for (const [id, name, count] of [
+  ['4e059c40-1e3b-4379-a5b0-fbeff797df37', 'Make A Better World', 50],
+  ['96df8b9d-469e-4b4a-a92d-d96884093350', 'The Lives Never Lived', 23],
+  ['d8bdf764-1645-42de-9908-abdf7094dad7', 'Misplaced Temporally', 21],
+]) {
+  const album = sunoAlbums.find((item) => item.id === id);
+  assert.equal(album?.name, name);
+  assert.equal(album?.songCount, count);
+  assert.ok(album?.description && album.description !== '…', `${name} needs a useful description.`);
+}
 for (const album of sunoAlbums) {
   const path = `dist/suno/albums/${album.slug}/index.html`;
   assert.ok(existsSync(new URL(path, root)), `Missing Suno album page for ${album.name}.`);
