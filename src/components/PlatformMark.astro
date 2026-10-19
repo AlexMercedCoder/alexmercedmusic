@@ -29,13 +29,16 @@ const key = platform.toLowerCase().replaceAll(' ', '');
   {key === 'boomplay' && (
     <svg viewBox="0 0 24 24"><path d="M7 3h6.7a4 4 0 0 1 0 8H7m0 0h7.3a5 5 0 0 1 0 10H7z"/><path d="m10 14 5 2.5-5 2.5z" /></svg>
   )}
+  {key === 'tiktok' && (
+    <svg viewBox="0 0 24 24"><path d="M14 2v12.5a4.5 4.5 0 1 1-4.5-4.5c.4 0 .8.1 1.2.2v3a1.5 1.5 0 1 0 .3 1V2zm0 1c.9 2.8 2.8 4.3 6 4.5v3.1c-2.5-.1-4.5-1.1-6-2.8" /></svg>
+  )}
 </span>
 
 <style>
   .platform-mark{display:grid;place-items:center;width:2.1rem;height:2.1rem;color:currentColor}
   svg{width:100%;height:100%;overflow:visible}
   path,rect,circle{fill:currentColor}
-  .platform-mark--amazonmusic path,.platform-mark--iheart path:last-child,.platform-mark--boomplay path:first-child{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .platform-mark--amazonmusic path,.platform-mark--iheart path:last-child,.platform-mark--boomplay path:first-child,.platform-mark--tiktok path{fill:none;stroke:currentColor;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
   .platform-mark--iheart circle{fill:var(--paper)}
-  .platform-mark--spotify{color:#1ed760}.platform-mark--youtubemusic{color:#ff0033}.platform-mark--amazonmusic{color:#25d1da}.platform-mark--tidal{color:var(--ink)}.platform-mark--deezer{color:#a238ff}.platform-mark--iheart{color:#c6002b}.platform-mark--boomplay{color:#2764ff}
+  .platform-mark--spotify{color:#1ed760}.platform-mark--youtubemusic{color:#ff0033}.platform-mark--amazonmusic{color:#25d1da}.platform-mark--tidal{color:var(--ink)}.platform-mark--deezer{color:#a238ff}.platform-mark--iheart{color:#c6002b}.platform-mark--boomplay{color:#2764ff}.platform-mark--tiktok{color:var(--ink)}
 </style>

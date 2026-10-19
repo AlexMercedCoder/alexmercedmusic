@@ -23,7 +23,7 @@ import spotifyTracksData from './spotify-tracks.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.1.0';
-export const CATALOG_UPDATED_AT = '2026-10-18';
+export const CATALOG_UPDATED_AT = '2026-10-19';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -406,6 +406,10 @@ const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
     const id = youtubeId(link.url);
     return id ? [[id, song] as const] : [];
   })));
+const verifiedSunoVideoMatches: Record<string, string> = {
+  // Several Suno songs share this title. The 117-second video matches this 116-second album track.
+  'KzIDlYp1-yI': '6a9613aa-0dae-4154-b7db-8aea5a0f244c',
+};
 const songsByNormalizedTitle = new Map<string, typeof baseSongs>();
 for (const song of baseSongs) {
   const title = normalizeVideoTitle(song.title);
@@ -430,7 +434,8 @@ const relatedSongIdsFor = (songIds: string[]) => {
 export const videos: CatalogVideo[] = Object.entries(youtubeMetadata)
   .filter(([, metadata]) => metadata.channelPosition)
   .map(([id, metadata]) => {
-    const sourceSong = sourceSongByYoutubeId.get(id);
+    const sourceSong = sourceSongByYoutubeId.get(id)
+      ?? (verifiedSunoVideoMatches[id] ? catalogSongBySunoId.get(verifiedSunoVideoMatches[id]) : undefined);
     const normalizedTitle = normalizeVideoTitle(metadata.title ?? '');
     const matchTitles = [normalizedTitle, ...(videoTitleAliases[normalizedTitle] ?? [])];
     const titleMatches = matchTitles.flatMap((title) => songsByNormalizedTitle.get(title) ?? []);

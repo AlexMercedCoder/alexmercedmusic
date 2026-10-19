@@ -1,5 +1,442 @@
 [
   {
+    "id": "29d59401-2f6f-4c51-a53e-8dfa1304d1a6",
+    "name": "Acceptance of the Life Being Lived",
+    "resourceType": "album",
+    "url": "https://suno.com/album/29d59401-2f6f-4c51-a53e-8dfa1304d1a6",
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "songCount": 47,
+    "durationSeconds": 7148.52,
+    "description": "Songs about embracing who you are and the life you are living.",
+    "trackIds": [
+      "dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+      "d1df590c-5003-472c-998a-d5a45dd86ba4",
+      "9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+      "b42d3298-5399-42cf-992a-3ff909825ec0",
+      "93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+      "ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+      "6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+      "caf7ed59-3187-446b-9ed0-87ce991a846b",
+      "341f83ae-f181-42f3-a05d-10d97cf3c53e",
+      "6708c726-d681-4472-834d-8d11e3ec97b5",
+      "df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+      "4dff03d0-218f-4a16-8456-2325267418ac",
+      "183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+      "aaf15a43-6c0f-4349-94f2-44b791703314",
+      "58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+      "0fd20511-b5cf-4678-8821-0597d880d50a",
+      "46e84216-698b-402b-9bec-f9222c81e53e",
+      "bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+      "cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+      "2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+      "9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+      "d5c20b0d-ee53-4748-b015-423be517a898",
+      "d262ab0a-4ea7-4148-83a8-1b62e8320542",
+      "e16f3326-acd5-415e-bd84-6bb87147776e",
+      "2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+      "87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+      "1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+      "7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+      "a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+      "871ea484-369f-415e-8824-99b3464b4b28",
+      "5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+      "524c92d5-b8e2-4b55-b726-a358957d21bb",
+      "8bda7896-4198-4aef-a19f-ea2688f71a38",
+      "63463300-587c-4aa1-bf60-ea1b958ad059",
+      "38764cc2-a8fb-4835-84e4-49759654a577",
+      "6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+      "4fb1d644-2985-405b-89dc-6f2611e48a80",
+      "a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+      "6989ed56-5380-41c5-bb81-809971df9812",
+      "c1901dcf-40fa-401d-ba05-18c60edcacff",
+      "9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+      "4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+      "3269c134-29c4-4aa3-ab19-50244e55f2cc",
+      "f3284ad7-8b95-499c-82fb-f322441db3a6",
+      "2018a727-9862-4158-b843-71bd3e4d6520",
+      "ca521c1b-576d-4980-9d4f-515ac4982312",
+      "0ee18865-ff16-46ff-94d8-62997a634b94"
+    ],
+    "tracks": [
+      {
+        "id": "dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+        "title": "Take My Crooked Heart",
+        "url": "https://suno.com/song/dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+        "createdAt": "2026-10-18T20:25:53.804Z",
+        "durationSeconds": 233.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "d1df590c-5003-472c-998a-d5a45dd86ba4",
+        "title": "Imperfect Stars",
+        "url": "https://suno.com/song/d1df590c-5003-472c-998a-d5a45dd86ba4",
+        "createdAt": "2026-10-18T20:25:53.804Z",
+        "durationSeconds": 246.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+        "title": "The Better Ghost",
+        "url": "https://suno.com/song/9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+        "createdAt": "2026-10-18T20:32:37.287Z",
+        "durationSeconds": 260,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "b42d3298-5399-42cf-992a-3ff909825ec0",
+        "title": "The Self I Can't Quite Catch",
+        "url": "https://suno.com/song/b42d3298-5399-42cf-992a-3ff909825ec0",
+        "createdAt": "2026-10-18T20:49:04.988Z",
+        "durationSeconds": 149.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+        "title": "Meet Myself Right Here",
+        "url": "https://suno.com/song/93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+        "createdAt": "2026-10-18T21:11:17.265Z",
+        "durationSeconds": 165.12,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+        "title": "Enough Without Another",
+        "url": "https://suno.com/song/ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+        "createdAt": "2026-10-18T21:12:49.528Z",
+        "durationSeconds": 130,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+        "title": "I'm Still Here",
+        "url": "https://suno.com/song/6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+        "createdAt": "2026-10-18T21:15:29.556Z",
+        "durationSeconds": 116.36,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "caf7ed59-3187-446b-9ed0-87ce991a846b",
+        "title": "Ghost of Who I Could Have",
+        "url": "https://suno.com/song/caf7ed59-3187-446b-9ed0-87ce991a846b",
+        "createdAt": "2026-10-18T21:15:29.556Z",
+        "durationSeconds": 188.36,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "341f83ae-f181-42f3-a05d-10d97cf3c53e",
+        "title": "I’ll Take This Life Instead",
+        "url": "https://suno.com/song/341f83ae-f181-42f3-a05d-10d97cf3c53e",
+        "createdAt": "2026-10-18T21:41:46.742Z",
+        "durationSeconds": 148.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "6708c726-d681-4472-834d-8d11e3ec97b5",
+        "title": "The Person That I Am",
+        "url": "https://suno.com/song/6708c726-d681-4472-834d-8d11e3ec97b5",
+        "createdAt": "2026-10-18T23:06:17.138Z",
+        "durationSeconds": 180.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+        "title": "Take The Whole Of Me",
+        "url": "https://suno.com/song/df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+        "createdAt": "2026-10-18T23:06:30.013Z",
+        "durationSeconds": 120.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "4dff03d0-218f-4a16-8456-2325267418ac",
+        "title": "Head Held High",
+        "url": "https://suno.com/song/4dff03d0-218f-4a16-8456-2325267418ac",
+        "createdAt": "2026-10-18T23:06:30.013Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+        "title": "Turn With The Tilt",
+        "url": "https://suno.com/song/183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+        "createdAt": "2026-10-18T23:31:06.490Z",
+        "durationSeconds": 156.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "aaf15a43-6c0f-4349-94f2-44b791703314",
+        "title": "Bowl with a Map",
+        "url": "https://suno.com/song/aaf15a43-6c0f-4349-94f2-44b791703314",
+        "createdAt": "2026-10-18T23:33:00.568Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+        "title": "House With Moving Walls",
+        "url": "https://suno.com/song/58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+        "createdAt": "2026-10-18T23:36:47.147Z",
+        "durationSeconds": 119.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "0fd20511-b5cf-4678-8821-0597d880d50a",
+        "title": "Bent But Bearing",
+        "url": "https://suno.com/song/0fd20511-b5cf-4678-8821-0597d880d50a",
+        "createdAt": "2026-10-18T23:36:47.147Z",
+        "durationSeconds": 130.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "46e84216-698b-402b-9bec-f9222c81e53e",
+        "title": "Cracked Astrolabe",
+        "url": "https://suno.com/song/46e84216-698b-402b-9bec-f9222c81e53e",
+        "createdAt": "2026-10-18T23:48:50.807Z",
+        "durationSeconds": 123.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+        "title": "Keep the Seams",
+        "url": "https://suno.com/song/bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+        "createdAt": "2026-10-18T23:50:11.276Z",
+        "durationSeconds": 120.28,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+        "title": "Play On",
+        "url": "https://suno.com/song/cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+        "createdAt": "2026-10-19T01:18:16.328Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+        "title": "Crooked Kaleidoscope",
+        "url": "https://suno.com/song/2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+        "createdAt": "2026-10-19T02:09:54.035Z",
+        "durationSeconds": 138.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+        "title": "Twenty Clocks",
+        "url": "https://suno.com/song/9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+        "createdAt": "2026-10-19T02:10:21.559Z",
+        "durationSeconds": 131.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "d5c20b0d-ee53-4748-b015-423be517a898",
+        "title": "The Strange Hour",
+        "url": "https://suno.com/song/d5c20b0d-ee53-4748-b015-423be517a898",
+        "createdAt": "2026-10-19T02:10:21.559Z",
+        "durationSeconds": 123.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "d262ab0a-4ea7-4148-83a8-1b62e8320542",
+        "title": "Garden of Broken Code",
+        "url": "https://suno.com/song/d262ab0a-4ea7-4148-83a8-1b62e8320542",
+        "createdAt": "2026-10-19T02:11:44.916Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "e16f3326-acd5-415e-bd84-6bb87147776e",
+        "title": "Jagged Ed Turning into Gold",
+        "url": "https://suno.com/song/e16f3326-acd5-415e-bd84-6bb87147776e",
+        "createdAt": "2026-10-19T02:11:44.916Z",
+        "durationSeconds": 141.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+        "title": "My Crooked Map",
+        "url": "https://suno.com/song/2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+        "createdAt": "2026-10-19T02:12:30.334Z",
+        "durationSeconds": 219.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+        "title": "Empire of Scrap",
+        "url": "https://suno.com/song/87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+        "createdAt": "2026-10-19T02:13:43.056Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+        "title": "Rejected Parts",
+        "url": "https://suno.com/song/1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+        "createdAt": "2026-10-19T02:13:43.056Z",
+        "durationSeconds": 190.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+        "title": "Cathedral of Misprinted Plans",
+        "url": "https://suno.com/song/7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+        "createdAt": "2026-10-19T02:14:35.416Z",
+        "durationSeconds": 171.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+        "title": "The Hinge and the Gill",
+        "url": "https://suno.com/song/a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+        "createdAt": "2026-10-19T02:16:19.634Z",
+        "durationSeconds": 201.16,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "871ea484-369f-415e-8824-99b3464b4b28",
+        "title": "Radio That Catches Tomorrow",
+        "url": "https://suno.com/song/871ea484-369f-415e-8824-99b3464b4b28",
+        "createdAt": "2026-10-19T12:27:25.163Z",
+        "durationSeconds": 212.76,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+        "title": "The Bright Machine",
+        "url": "https://suno.com/song/5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+        "createdAt": "2026-10-19T12:28:07.574Z",
+        "durationSeconds": 131.28,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "524c92d5-b8e2-4b55-b726-a358957d21bb",
+        "title": "Circus of Failed Inventions",
+        "url": "https://suno.com/song/524c92d5-b8e2-4b55-b726-a358957d21bb",
+        "createdAt": "2026-10-19T12:28:07.574Z",
+        "durationSeconds": 164.68,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "8bda7896-4198-4aef-a19f-ea2688f71a38",
+        "title": "Uneven Moons",
+        "url": "https://suno.com/song/8bda7896-4198-4aef-a19f-ea2688f71a38",
+        "createdAt": "2026-10-19T12:28:50.856Z",
+        "durationSeconds": 118.76,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "63463300-587c-4aa1-bf60-ea1b958ad059",
+        "title": "Seventeen Moons",
+        "url": "https://suno.com/song/63463300-587c-4aa1-bf60-ea1b958ad059",
+        "createdAt": "2026-10-19T12:28:50.856Z",
+        "durationSeconds": 119.56,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "38764cc2-a8fb-4835-84e4-49759654a577",
+        "title": "The Note Between the Notes",
+        "url": "https://suno.com/song/38764cc2-a8fb-4835-84e4-49759654a577",
+        "createdAt": "2026-10-19T12:29:33.717Z",
+        "durationSeconds": 120.36,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+        "title": "Building Room for Something",
+        "url": "https://suno.com/song/6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+        "createdAt": "2026-10-19T12:30:35.193Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "4fb1d644-2985-405b-89dc-6f2611e48a80",
+        "title": "An Unmarked Place",
+        "url": "https://suno.com/song/4fb1d644-2985-405b-89dc-6f2611e48a80",
+        "createdAt": "2026-10-19T14:15:03.479Z",
+        "durationSeconds": 182.8,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+        "title": "A Different Kind of Guide",
+        "url": "https://suno.com/song/a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+        "createdAt": "2026-10-19T14:15:03.479Z",
+        "durationSeconds": 142.52,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "6989ed56-5380-41c5-bb81-809971df9812",
+        "title": "Morrowglass",
+        "url": "https://suno.com/song/6989ed56-5380-41c5-bb81-809971df9812",
+        "createdAt": "2026-10-19T14:15:18.562Z",
+        "durationSeconds": 146.4,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "c1901dcf-40fa-401d-ba05-18c60edcacff",
+        "title": "Language of Almost-Right",
+        "url": "https://suno.com/song/c1901dcf-40fa-401d-ba05-18c60edcacff",
+        "createdAt": "2026-10-19T14:15:18.562Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+        "title": "Map in the Lens",
+        "url": "https://suno.com/song/9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+        "createdAt": "2026-10-19T14:15:34.329Z",
+        "durationSeconds": 122.4,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+        "title": "Factory of Accidents",
+        "url": "https://suno.com/song/4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+        "createdAt": "2026-10-19T14:16:01.688Z",
+        "durationSeconds": 183.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "3269c134-29c4-4aa3-ab19-50244e55f2cc",
+        "title": "A Map They Neglected",
+        "url": "https://suno.com/song/3269c134-29c4-4aa3-ab19-50244e55f2cc",
+        "createdAt": "2026-10-19T14:16:25.116Z",
+        "durationSeconds": 123.6,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "f3284ad7-8b95-499c-82fb-f322441db3a6",
+        "title": "Brindlewake",
+        "url": "https://suno.com/song/f3284ad7-8b95-499c-82fb-f322441db3a6",
+        "createdAt": "2026-10-19T14:16:44.493Z",
+        "durationSeconds": 183.2,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "2018a727-9862-4158-b843-71bd3e4d6520",
+        "title": "The Lift That Skips a Floor",
+        "url": "https://suno.com/song/2018a727-9862-4158-b843-71bd3e4d6520",
+        "createdAt": "2026-10-19T14:17:00.433Z",
+        "durationSeconds": 131.76,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "ca521c1b-576d-4980-9d4f-515ac4982312",
+        "title": "Singing Through the Drift",
+        "url": "https://suno.com/song/ca521c1b-576d-4980-9d4f-515ac4982312",
+        "createdAt": "2026-10-19T14:17:25.583Z",
+        "durationSeconds": 119.56,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      },
+      {
+        "id": "0ee18865-ff16-46ff-94d8-62997a634b94",
+        "title": "Sing Out of Tune",
+        "url": "https://suno.com/song/0ee18865-ff16-46ff-94d8-62997a634b94",
+        "createdAt": "2026-10-19T14:17:25.583Z",
+        "durationSeconds": 152.4,
+        "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg"
+      }
+    ]
+  },
+  {
     "id": "01d1b567-ab42-4d0f-8036-e8dc9494aa86",
     "name": "Manifesto of Love and Liberty",
     "resourceType": "album",

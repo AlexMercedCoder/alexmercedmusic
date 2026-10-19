@@ -20,7 +20,7 @@ const distributedAlbum = distributedReleases.find((release) => release.title ===
 const homepagePlatforms = (distributedAlbum?.links ?? []).map((link) => ({
   ...link,
   url: link.label === 'Spotify' ? 'https://open.spotify.com/artist/7saFKAusZMQg0PnHcO8zm6' : link.url,
-}));
+})).concat([{ label: 'TikTok', url: 'https://www.tiktok.com/@alexmercedmusic' }]);
 
 const jsonLd = [
   {
@@ -74,11 +74,11 @@ const jsonLd = [
             <a class="btn" href="/videos/">Browse music videos</a>
           </div>
         </div>
-        <nav class="streaming-links" aria-label="Listen on streaming platforms">
-          <p>Listen on</p>
+        <nav class="streaming-links" aria-label="Music and social platforms">
+          <p>Listen and follow</p>
           <div>
             {homepagePlatforms.map((platform) => (
-              <a href={platform.url} aria-label={`Listen to Alex Merced on ${platform.label}`} title={platform.label}>
+              <a href={platform.url} aria-label={`${platform.label === 'TikTok' ? 'Follow' : 'Listen to'} Alex Merced on ${platform.label}`} title={platform.label}>
                 <PlatformMark platform={platform.label} />
                 <span>{platform.label}</span>
               </a>

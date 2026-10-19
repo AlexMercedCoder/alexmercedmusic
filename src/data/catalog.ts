@@ -927,4 +927,10 @@ export const platforms: Platform[] = [
     era: 'all',
     note: 'Occasional clips and works in progress.',
   },
+  {
+    label: 'TikTok',
+    url: 'https://www.tiktok.com/@alexmercedmusic',
+    era: 'all',
+    note: 'Short music clips from Alex Merced Music.',
+  },
 ];

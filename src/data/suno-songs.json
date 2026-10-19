@@ -1,5 +1,820 @@
 [
   {
+    "id": "54b08258-ad05-47fe-9f70-d4374b230911",
+    "title": "Make Room at the Table",
+    "url": "https://suno.com/song/54b08258-ad05-47fe-9f70-d4374b230911",
+    "createdAt": "2026-10-19T21:07:20.700Z",
+    "durationSeconds": 60.56,
+    "genres": [
+      "IDM",
+      "prog rock",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_54b08258-ad05-47fe-9f70-d4374b230911.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_54b08258-ad05-47fe-9f70-d4374b230911.jpeg",
+    "embedUrl": "https://suno.com/embed/54b08258-ad05-47fe-9f70-d4374b230911",
+    "model": "v6",
+    "lyrics": "[Verse]\nYou were left outside the circle\nWith your name turned into blame\nCome and sit beside me now\nYou deserve more than a name\n\n[Pre-Chorus]\nEvery heart is asking softly\nFor a place to rest and grow\n\n[Chorus]\nChoose love over hate, let it travel wide\nMake room at the table, stand side by side\nGive the ones the world passed by the care they’re due\nI’ll make a little more room here for you\n\n[Outro]\nMore room here for you\nLove makes room for you"
+  },
+  {
+    "id": "8da68668-24da-45e4-a409-2f95b601ebfa",
+    "title": "Becoming Who You Are",
+    "url": "https://suno.com/song/8da68668-24da-45e4-a409-2f95b601ebfa",
+    "createdAt": "2026-10-19T17:08:52.472Z",
+    "durationSeconds": 61.48,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_8da68668-24da-45e4-a409-2f95b601ebfa.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_8da68668-24da-45e4-a409-2f95b601ebfa.jpeg",
+    "embedUrl": "https://suno.com/embed/8da68668-24da-45e4-a409-2f95b601ebfa",
+    "model": "v6",
+    "lyrics": "[Verse]\nYou count the doors that haven’t opened yet\nI count the steps you’ve already made\nYour hands still shake, but they don’t let go\nThat’s how the bravest stories start\n\n[Chorus]\nBelieve in yourself, take the next step\nYou’re more than the doubt in your head\nBelieve in yourself, stand up again\nThe strength you’re looking for is there\n\n[Bridge]\nOne more try, one more day\nYou’re finding your own way\n\n[Final Chorus]\nBelieve in yourself, take the next step\nYou’re more than the doubt in your head\nBelieve in yourself—stand up again\nYou’re already becoming who you are\n\n[Outro]\nYou’re already becoming who you are"
+  },
+  {
+    "id": "0ee18865-ff16-46ff-94d8-62997a634b94",
+    "title": "Sing Out of Tune",
+    "url": "https://suno.com/song/0ee18865-ff16-46ff-94d8-62997a634b94",
+    "createdAt": "2026-10-19T14:17:25.583Z",
+    "durationSeconds": 152.4,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/0ee18865-ff16-46ff-94d8-62997a634b94",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou drift beyond the numbered rings,\nA dented dish with tired wings.\nYour compass skips; your casing sings\nIn crooked little intervals.\n\n[Pre-Chorus]\nThe message you were built to send\nBreaks into notes that won’t obey;\nEach jagged turn, each bent-out end\nCarries you farther on its way.\n\n[Chorus]\nStay, little satellite, sing out of tune,\nYour cracked transmissions cross the blue.\nThe wrong-shaped note can travel true;\nI’ll keep my faults and send them through.\nPast where the old instructions end,\nI turn my face to what begins.\n\n[Verse 2]\nYour signal stutters, splits, returns,\nA strange new phrase the silence learns.\nNo polished map can chart its turns;\nIt finds a road by being bent.\n\n[Bridge]\nI am not the diagram they drew,\nNot every flaw needs mending through.\nThe course ahead is mine to choose;\nI’ll send my oddness into blue.\n\n[Final Chorus]\nStay, little satellite, sing out of tune,\nYour cracked transmissions cross the blue.\nThe wrong-shaped note can travel true;\nI’ll keep my faults and send them through.\nPast where the old instructions end,\nI turn my face to what begins.\n[Outro]\nWhat begins… what begins."
+  },
+  {
+    "id": "ca521c1b-576d-4980-9d4f-515ac4982312",
+    "title": "Singing Through the Drift",
+    "url": "https://suno.com/song/ca521c1b-576d-4980-9d4f-515ac4982312",
+    "createdAt": "2026-10-19T14:17:25.583Z",
+    "durationSeconds": 119.56,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/ca521c1b-576d-4980-9d4f-515ac4982312",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou were built to hold the line,\nNow your orbit bends and slips.\nEvery crack lets in a tone\nNo clean signal ever gives.\n\n[Pre-Chorus]\nYou don’t have to mend the frame\nTo send a truer sound.\nLet the old course fall away;\nLet the strange notes carry you.\n\n[Chorus]\nYou are the satellite, still singing through the drift,\nA crooked little constellation, a signal with a pulse.\nThe notes that bend, the notes that break, the ones you thought were wrong\nAre finding farther shores than any perfect message ever reached.\nYou are the satellite, still singing through the drift.\n\n[Verse 2]\nYour panels catch the morning,\nYour old compass turns unsure.\nBut every frequency you lose\nMakes room for something new.\n\n[Pre-Chorus]\nYou don’t have to mend the frame\nTo send a truer sound.\nLet the old course fall away;\nLet the strange notes carry you.\n\n[Chorus]\nYou are the satellite, still singing through the drift,\nA crooked little constellation, a signal with a pulse.\nThe notes that bend, the notes that break, the ones you thought were wrong\nAre finding farther shores than any perfect message ever reached.\nYou are the satellite, still singing through the drift.\n\n[Bridge]\nNo more asking for a clean return,\nNo more waiting for the old map.\nYou can leave the fault line open;\nLet the next horizon answer.\n\n[Final Chorus]\nYou are the satellite, still singing through the drift,\nA crooked little constellation, a signal with a pulse.\nThe notes that bend, the notes that break, the ones you thought were wrong\nAre finding farther shores than any perfect message ever reached.\nYou are the satellite, still singing through the drift.\n\n[Outro]\nStill singing through the drift."
+  },
+  {
+    "id": "2018a727-9862-4158-b843-71bd3e4d6520",
+    "title": "The Lift That Skips a Floor",
+    "url": "https://suno.com/song/2018a727-9862-4158-b843-71bd3e4d6520",
+    "createdAt": "2026-10-19T14:17:00.433Z",
+    "durationSeconds": 131.76,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/2018a727-9862-4158-b843-71bd3e4d6520",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou drew the lift in ruler lines,\nA numbered map, a straight ascent.\nI missed the mark between the signs,\nAnd found a room the plans had left unmeant.\n\n[Pre-Chorus]\nThe doors part where the blueprints end,\nA window cut through an unfinished wall.\nI quit pretending I can mend\nEach crooked turn into a straightened hall.\n\n[Chorus]\nI’m the lift that skips a floor,\nI don’t owe the map a landing.\nEvery wrong-way-open door\nShows a place beyond your planning.\nLet the old design fall through;\nI can rise without repair.\nAll the floors I never knew\nMake a future in the air.\n\n[Verse 2]\nOne stop: a garden on the roof,\nWhere rainwater runs in copper seams.\nNo architect could prove it true;\nI learned the building has more rooms than dreams.\n\n[Bridge]\nKeep the dents; they mark the climb.\nKeep the gap where I changed course.\n\n[Final Chorus]\nI’m the lift that skips a floor,\nI don’t owe the map a landing.\nEvery wrong-way-open door\nShows a place beyond your planning.\nLet the old design fall through;\nI can rise without repair.\nAll the floors I never knew\nMake a future in the air.\n\n[Outro]\nDoors open. I step through."
+  },
+  {
+    "id": "f3284ad7-8b95-499c-82fb-f322441db3a6",
+    "title": "Brindlewake",
+    "url": "https://suno.com/song/f3284ad7-8b95-499c-82fb-f322441db3a6",
+    "createdAt": "2026-10-19T14:16:44.493Z",
+    "durationSeconds": 183.2,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/f3284ad7-8b95-499c-82fb-f322441db3a6",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a ledger in the kitchen drawer,\nink blots where the careful columns tore.\nEach wrong turn left a syllable behind,\na small new tool for describing what I’d find.\n\n[Pre-Chorus]\nI used to cross them out in red;\nnow I sound each one instead.\n\n[Chorus]\nCall it “brindlewake”—the bend I didn’t plan,\n“afterglass”—the shape my hands began.\nEvery flawed word opens up a door;\nI am not the draft I was before.\nTurn the page; let the blank line stay,\nthere’s a word I haven’t made today.\n\n[Verse 2]\nThe dictionary’s spine is split and warm,\nits margins hold the weather of the storm.\nI read my errors like a field guide now,\nnot proof of failure, but a how and why.\n\n[Pre-Chorus]\nNo old name can hold me whole;\nI can make room as I grow.\n\n[Chorus]\nCall it “brindlewake”—the bend I didn’t plan,\n“afterglass”—the shape my hands began.\nEvery flawed word opens up a door;\nI am not the draft I was before.\nTurn the page; let the blank line stay,\nthere’s a word I haven’t made today.\n\n[Bridge]\nLet the misspelling keep its history.\nLet the next page answer differently.\n\n[Final Chorus]\nCall it “brindlewake”—I know that turn by heart,\n“afterglass”—a name for where I start.\nEvery flawed word leaves a little more\nroom to choose what I’m becoming for.\nTurn the page; the future’s wide awake,\nI’ll write the next word as I make it."
+  },
+  {
+    "id": "3269c134-29c4-4aa3-ab19-50244e55f2cc",
+    "title": "A Map They Neglected",
+    "url": "https://suno.com/song/3269c134-29c4-4aa3-ab19-50244e55f2cc",
+    "createdAt": "2026-10-19T14:16:25.116Z",
+    "durationSeconds": 123.6,
+    "genres": [
+      "IDM",
+      "prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/3269c134-29c4-4aa3-ab19-50244e55f2cc",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou came out wearing two kinds of weather,\nSix small feet and a pair of thin sails.\nThe garden rose on its bright-wing schedule;\nYou took the root-path under the rails.\n\n[Pre-Chorus]\nThey called you unfinished, a sketch in the margin,\nBut you found where the wet earth meets air.\n\n[Chorus]\nKeep the legs that remember the ground,\nKeep the wings that can feel what is coming.\nYou don’t have to rise like the rest of the crowd—\nThere are roads in the places they’re leaving.\nStep by step, let the next shape arrive;\nYou are more than the form they expected.\nNot a mistake on the way to a life—\nYou’re a map with a route they neglected.\n\n[Verse 2]\nYou crossed the fern shade, climbed a stone wall,\nSlipped through the reeds where the small streams divide.\nWhen the high air thinned, you had somewhere to land;\nWhen the path disappeared, you could still go inside.\n\n[Bridge]\nI’ll take what I am into what I can’t know,\nNo waiting for perfect to give me the go.\n\n[Final Chorus]\nKeep the legs that remember the ground,\nKeep the wings that can feel what is coming.\nI don’t have to rise like the rest of the crowd—\nThere are roads in the places they’re leaving.\nStep by step, let the next shape arrive;\nI can meet every mile as myself.\nNot a mistake on the way to a life—\nI’m a map no one else could have felt.\n\n[Outro]\nA map with a route they neglected."
+  },
+  {
+    "id": "4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+    "title": "Factory of Accidents",
+    "url": "https://suno.com/song/4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+    "createdAt": "2026-10-19T14:16:01.688Z",
+    "durationSeconds": 183.6,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/4d2b91f0-d1a1-45d1-937b-6cdb06170920",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe night shift left the gauges blinking red\nA brass bird rolled out where the gears had jammed\nThe order said a thousand perfect hinges\nThe floor was strewn with maps that had no land\nI used to wrench the line until it behaved\nAnd curse each crooked thing it made\n\n[Pre-Chorus]\nThen I let the belts run out of step\nAnd watched the wrong parts find their place\n\n[Chorus]\nLet the crooked compass turn\nLet the misshapen bells ring true\nEvery faultline has a doorway\nEvery odd piece points me through\nI am not a failed design\nI am still becoming new\nFrom the factory of accidents\nI’ll make a future no one drew\n\n[Verse 2]\nA paper moon came tumbling from the press\nA spoon with tiny windows for the rain\nI pinned them to the wall above my workbench\nA catalog of things I couldn’t plan\nThe foreman asked me when I’d fix the system\nI said, “Look what it learned to make”\n\n[Pre-Chorus]\nNow I leave a little room for chance\nAnd keep my hands beside the wheel\n\n[Chorus]\nLet the crooked compass turn\nLet the misshapen bells ring true\nEvery faultline has a doorway\nEvery odd piece points me through\nI am not a failed design\nI am still becoming new\nFrom the factory of accidents\nI’ll make a future no one drew\n\n[Bridge]\nTomorrow’s mold is still warm\nThe doors are wide, the plans are torn\nI’ll take the pieces as they fall\nAnd build a wider room for all\n\n[Final Chorus]\nLet the crooked compass turn\nLet the misshapen bells ring true\nEvery faultline has a doorway\nEvery odd piece points me through\nI am not a failed design\nI am still becoming new\nFrom the factory of accidents\nI’ll make a future no one drew\n\n[Outro]\nThe line runs on, the doors swing wide\nI meet the next mistake with open hands"
+  },
+  {
+    "id": "9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+    "title": "Map in the Lens",
+    "url": "https://suno.com/song/9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+    "createdAt": "2026-10-19T14:15:34.329Z",
+    "durationSeconds": 122.4,
+    "genres": [
+      "IDM",
+      "prog rock",
+      "art-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/9f592ddf-ed2a-4ba5-9f33-8a51ad323c30",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe telescope buckles; the sensor keeps score\nWhite pinpricks bloom where the glass failed before\nI used to call each one proof I was wrong\nNow I turn the dark plate and trace them along\n\n[Pre-Chorus]\nA crooked little atlas, no border, no key\nEach fault puts a faraway place in reach\n\n[Chorus]\nThese dead pixels gather, a map in the lens\nA bright broken pattern that bends and extends\nI’m not a clean picture, I’m more than the frame\nI plot through the fracture and name where I’m headed\nOne mark for the harbor, one mark for the pass\nI’ll carry my weather and still make it past\n\n[Verse 2]\nThe chart has no legend, the route can’t be proved\nBut every small blemish points somewhere to move\nI take what I’m made of, the seams and the sparks\nAnd set my next bearing by dots in the dark\n\n[Chorus]\nThese dead pixels gather, a map in the lens\nA bright broken pattern that bends and extends\nI’m not a clean picture, I’m more than the frame\nI plot through the fracture and name where I’m headed\nOne mark for the harbor, one mark for the pass\nI’ll carry my weather and still make it past\n\n[Outro]\nThe glass is still flawed\nThe map is still mine\nThe next place is waiting\nBeyond this design"
+  },
+  {
+    "id": "c1901dcf-40fa-401d-ba05-18c60edcacff",
+    "title": "Language of Almost-Right",
+    "url": "https://suno.com/song/c1901dcf-40fa-401d-ba05-18c60edcacff",
+    "createdAt": "2026-10-19T14:15:18.562Z",
+    "durationSeconds": 120,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/c1901dcf-40fa-401d-ba05-18c60edcacff",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI said “mercy” with a missing sound,\nYou heard the door I couldn’t open.\nI bent each syllable around\nThe little truth I’d kept unspoken.\nMy tongue took wrong turns through the page,\nAnd every stumble left a mark;\nYou didn’t correct the crooked phrase—\nYou read the meaning in the dark.\n\n[Pre-Chorus]\nNow the errors gather, word by word,\nA grammar no old book has heard.\n\n[Chorus]\nCall it the language of almost-right,\nWhere “I am broken” turns to “I am here.”\nA falling stress, a lifted vowel,\nA map that only we can hear.\nI’ll speak tomorrow with this mouth,\nNo borrowed measure, no disguise;\nMy flaws have made a country now—\nI’m learning how its borders rise.\n\n[Verse 2]\nI name the fear “blue-window,”\nThe ache “a chair left warm.”\nYou answer in a phrase I made,\nAnd it can shelter us from storm.\n\n[Pre-Chorus]\nEach crooked word becomes a key;\nThe next one sounds more like me.\n\n[Chorus]\nCall it the language of almost-right,\nWhere “I am broken” turns to “I am here.”\nA falling stress, a lifted vowel,\nA map that only we can hear.\nI’ll speak tomorrow with this mouth,\nNo borrowed measure, no disguise;\nMy flaws have made a country now—\nI’m learning how its borders rise.\n\n[Outro]\nI’m not corrected. I’m becoming.\nSay it back, and let it grow."
+  },
+  {
+    "id": "6989ed56-5380-41c5-bb81-809971df9812",
+    "title": "Morrowglass",
+    "url": "https://suno.com/song/6989ed56-5380-41c5-bb81-809971df9812",
+    "createdAt": "2026-10-19T14:15:18.562Z",
+    "durationSeconds": 146.4,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/6989ed56-5380-41c5-bb81-809971df9812",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou say “harbor” when you mean “home”\nAnd “window” comes out “winnow” again\nI used to bite each syllable back\nAs if a clean word could make me whole\n\n[Pre-Chorus]\nBut your patient face stayed open\nWhile my vowels took the long way round\n\n[Chorus]\nCall it “morrowglass,” the shape of what we feel\nA word with crooked corners, truer than the real\nI’ll speak the bent syllables, let their meaning bloom\nA language made of almosts, making room for room\nAnd every strange translation turns my face ahead\nI’m not a flaw to edit—I’m the words I haven’t said\n\n[Verse 2]\nI name the ache “blue orchard” now\nThe brave small pause “a door that learns”\nEach wrong turn leaves a mark we keep\nA map that only my mouth can draw\n\n[Pre-Chorus]\nNo dictionary holds it\nStill you know me when I try\n\n[Chorus]\nCall it “morrowglass,” the shape of what we feel\nA word with crooked corners, truer than the real\nI’ll speak the bent syllables, let their meaning bloom\nA language made of almosts, making room for room\nAnd every strange translation turns my face ahead\nI’m not a flaw to edit—I’m the words I haven’t said\n\n[Bridge]\nTomorrow has no proper name\nSo let me meet it mispronounced\n\n[Final Chorus]\nCall it “morrowglass,” a future we can spell\nWith sounds that missed the mark and found us all the same\nI’ll speak the bent syllables; they carry me ahead\nI’m not a flaw to edit—I’m the words I haven’t said"
+  },
+  {
+    "id": "a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+    "title": "A Different Kind of Guide",
+    "url": "https://suno.com/song/a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+    "createdAt": "2026-10-19T14:15:03.479Z",
+    "durationSeconds": 142.52,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/a1e9b35f-a39b-4271-8f9c-d7bccd199598",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou set the beacon facing uphill,\nIts lens turned from the harbor’s seam.\nIt combs the pines, picks out the ridges,\nAnd marks a path no chart had seen.\n\n[Pre-Chorus]\nI kept apologizing\nFor the compass in my chest.\n\n[Chorus]\nI’m not a broken signal—\nI’m a different kind of guide.\nWhere the beam falls, roads unfold;\nThere are valleys past the tide.\nI can carry every crooked part\nAnd still choose where I go.\nThat light was never lost at all—\nIt found a world below.\n\n[Verse 2]\nThe tower’s stairs lean toward the timber,\nThe map is damp beneath my hand.\nI leave my rust upon the railing;\nIt’s proof I made it up the land.\n\n[Pre-Chorus]\nNo need to turn the lantern\nJust to fit the old design.\n\n[Chorus]\nI’m not a broken signal—\nI’m a different kind of guide.\nWhere the beam falls, roads unfold;\nThere are valleys past the tide.\nI can carry every crooked part\nAnd still choose where I go.\nThat light was never lost at all—\nIt found a world below.\n\n[Outro]\nThe morning finds the inland trail.\nI walk it as I am."
+  },
+  {
+    "id": "4fb1d644-2985-405b-89dc-6f2611e48a80",
+    "title": "An Unmarked Place",
+    "url": "https://suno.com/song/4fb1d644-2985-405b-89dc-6f2611e48a80",
+    "createdAt": "2026-10-19T14:15:03.479Z",
+    "durationSeconds": 182.8,
+    "genres": [
+      "IDM",
+      "Melodic Prog Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/4fb1d644-2985-405b-89dc-6f2611e48a80",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThey bolted the lamp where the old pines lean,\nIts glass turned inland, its lens gone green.\nNo harbor below, no hulls to return,\nJust a ridge full of paths and a map left to learn.\n\n[Pre-Chorus]\nI used to call the crooked beam a mistake,\nNow I watch what the mountain wakes.\n\n[Chorus]\nPoint me past the roads I thought I had to take,\nPast the fault lines, past the careful shape.\nIf my light falls where the wild roots start,\nLet it show the country inside my heart.\nI’m not a wrong-way signal, not a flaw to erase—\nI can turn what I am toward an unmarked place.\n\n[Verse 2]\nOne pane is chipped; the whole tower sings,\nA small bent angle changes everything.\nThe trail climbs out where the dark firs part,\nAnd the dawn finds a door in the map of my heart.\n\n[Bridge]\nKeep the cracked glass; keep the wandering flame.\nTomorrow has no chart with my name.\n\n[Final Chorus]\nPoint me past the roads I thought I had to take,\nPast the fault lines, past the careful shape.\nIf my light falls where the wild roots start,\nLet it show the country inside my heart.\nI’m not a wrong-way signal, not a flaw to erase—\nI can turn what I am toward an unmarked place.\n[Outro]\nAn unmarked place; the hills open wide."
+  },
+  {
+    "id": "6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+    "title": "Building Room for Something",
+    "url": "https://suno.com/song/6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+    "createdAt": "2026-10-19T12:30:35.193Z",
+    "durationSeconds": 164.8,
+    "genres": [
+      "progressive art rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/6e70d856-3dec-4cec-aaf7-df184ef9d0c5",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nRoom one: the paper-wing machine\nI built at twelve from glue and tin\nIt never rose above the floor\nI left the little launch marks in\nRoom two holds every almost-me\nIn coats of dust and borrowed names\nI used to lock the doors at dusk\nNow I turn the brass key again\n\n[Pre-Chorus]\nCome see the seams, the crooked frames\nThe plans that changed before they flew\nI’m done pretending I was made\nWithout the work that brought me through\n\n[Chorus]\nI open every door, let the daylight take its measure\nAll my unfinished shapes belong beneath this roof\nI am not the failed design; I’m the hand that keeps on drawing\nPast the last display, I’m building room for something new\n\n[Verse 2]\nA glass case keeps the map I tore\nWhen every road bent out of line\nA model city missing streets\nStill shows me where I meant to climb\nThe visitors leave penciled notes\nBeside the names I couldn’t keep\nI read them as the evening comes\nAnd let the next foundation sleep\n\n[Bridge]\nNo blueprint owns the coming years\nNo door must stay where it was set\nI carry every measured flaw\nAs useful marks, not my regret\n\n[Final Chorus]\nI open every door, let the daylight take its measure\nAll my unfinished shapes belong beneath this roof\nI am not the failed design; I’m the hand that keeps on drawing\nPast the last display, I’m building room for something new\n\n[Outro]\nOne more wing, one more beginning\nLeave the old rooms open wide"
+  },
+  {
+    "id": "38764cc2-a8fb-4835-84e4-49759654a577",
+    "title": "The Note Between the Notes",
+    "url": "https://suno.com/song/38764cc2-a8fb-4835-84e4-49759654a577",
+    "createdAt": "2026-10-19T12:29:33.717Z",
+    "durationSeconds": 120.36,
+    "genres": [
+      "glitch hop",
+      "freak-folk",
+      "glam"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/38764cc2-a8fb-4835-84e4-49759654a577",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThey bolted extra keys between the keys,\nA little brass mistake where no one asked.\nI played one note; the room said, “Please,”\nThen every careful measure cracked.\nYou watched me hide my crooked hand,\nAs if the flaw could stain the tune.\nBut those odd notes made a doorway stand\nWhere the old notes stopped too soon.\n\n[Pre-Chorus]\nSo leave the ruler in its case,\nLet the wrong-way intervals make space.\n\n[Chorus]\nI’m not a broken instrument—\nI’m the note between the notes.\nTurn the strange apart into a place\nWhere a new kind of tomorrow grows.\nIf the melody bends, let it bend;\nIf it stumbles, let it start again.\nI can make a future no old keyboard knows,\nWith every extra key beneath my hands.\n\n[Verse 2]\nThe neighbors called it out of tune,\nThe tuner packed his little case.\nI found a chord that split the moon—\nNo, just the ceiling, but it changed the place.\nYou said, “That sound is yours to keep.”\nI said, “Then let it lead me on.”\nThe odd keys woke the house from sleep;\nBy morning, something new was drawn.\n\n[Bridge]\nNot a defect to erase,\nNot a mold to fit inside—\nEvery unfamiliar place\nCan become a road I try.\n\n[Final Chorus]\nI’m not a broken instrument—\nI’m the note between the notes.\nTurn the strange apart into a place\nWhere a new kind of tomorrow grows.\nIf the melody bends, let it bend;\nIf it stumbles, let it start again.\nI can make a future no old keyboard knows,\nWith every extra key beneath my hands.\n\n[Outro]\nOne more key, one more way forward;\nI’ll play the sound that only I can know."
+  },
+  {
+    "id": "63463300-587c-4aa1-bf60-ea1b958ad059",
+    "title": "Seventeen Moons",
+    "url": "https://suno.com/song/63463300-587c-4aa1-bf60-ea1b958ad059",
+    "createdAt": "2026-10-19T12:28:50.856Z",
+    "durationSeconds": 119.56,
+    "genres": [
+      "dramatic",
+      "melancholic",
+      "aggressive"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/63463300-587c-4aa1-bf60-ea1b958ad059",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nMy north pole leans like a door left ajar,\nSeventeen moons keep changing the dark.\nOne pulls the oceans up over the stone,\nOne calls the snow where the warm winds roam.\nI used to call every crooked line wrong;\nNow even my shadows know where they belong.\n\n[Pre-Chorus]\nThe orbit slips; the calendar lies.\nStill, something green opens its eyes.\n\n[Chorus]\nSeventeen moons, and none in a row—\nPull me apart, then teach me to grow.\nOdd little tides, let them rise, let them run;\nI’m not a mistake in the making of sun.\nSeventeen moons, let the wild seasons turn;\nI carry the strange, and the strange lets life bloom.\n\n[Verse 2]\nMy cliffs grow gardens where salt winds sleep,\nBlue trees drink from the cracks too deep.\nNo other world has this weather to spare;\nNo other world puts these colors in air.\nI quit asking the sky to hold still—\nI’ve got a whole future to bend to my will.\n\n[Pre-Chorus]\nThe orbit slips; the calendar lies.\nStill, something green opens its eyes.\n\n[Chorus]\nSeventeen moons, and none in a row—\nPull me apart, then teach me to grow.\nOdd little tides, let them rise, let them run;\nI’m not a mistake in the making of sun.\nSeventeen moons, let the wild seasons turn;\nI carry the strange, and the strange lets life bloom.\n\n[Bridge]\nLet the old map tear.\nLet the new roots climb.\nI’ve got room for tomorrow\nIn this lopsided sky.\n\n[Final Chorus]\nSeventeen moons, and none in a row—\nPull me apart, then teach me to grow.\nOdd little tides, let them rise, let them run;\nI’m not a mistake in the making of sun.\nSeventeen moons, let the wild seasons turn;\nI carry the strange, and the strange lets life bloom.\n[Outro]\nThe next dawn grows here."
+  },
+  {
+    "id": "8bda7896-4198-4aef-a19f-ea2688f71a38",
+    "title": "Uneven Moons",
+    "url": "https://suno.com/song/8bda7896-4198-4aef-a19f-ea2688f71a38",
+    "createdAt": "2026-10-19T12:28:50.856Z",
+    "durationSeconds": 118.76,
+    "genres": [
+      "alternative rock",
+      "dramatic",
+      "melancholic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/8bda7896-4198-4aef-a19f-ea2688f71a38",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nSeventeen moons pull crooked at the sea\nYour orbit slips; the calendar disagrees\nYou call the bent horizon something wrong\nWhile violet reeds take root where tides run long\n\n[Pre-Chorus]\nNo map can name the weather in your chest\nStill, every strange season makes a place to nest\n\n[Chorus]\nYou are the world that won’t stay in its lane\nA tide turned sideways, rain against the grain\nAnd in the cracks your wildest gardens start\nNo other sky could grow what’s in your heart\nSo keep your uneven moons and face the dawn\nThe future’s wide enough to orbit on\n\n[Verse 2]\nOne moon arrives while another drifts away\nThe bright salt flowers open out of phase\nYou thought your changing coast would leave you bare\nBut small bright lives have learned to flourish there\n\n[Pre-Chorus]\nNo map can name the weather in your chest\nStill, every strange season makes a place to nest\n\n[Chorus]\nYou are the world that won’t stay in its lane\nA tide turned sideways, rain against the grain\nAnd in the cracks your wildest gardens start\nNo other sky could grow what’s in your heart\nSo keep your uneven moons and face the dawn\nThe future’s wide enough to orbit on\n\n[Outro]\nSeventeen moons; let every one be known\nThe next strange season—you can meet it whole"
+  },
+  {
+    "id": "5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+    "title": "The Bright Machine",
+    "url": "https://suno.com/song/5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+    "createdAt": "2026-10-19T12:28:07.574Z",
+    "durationSeconds": 131.28,
+    "genres": [
+      "Alternative R&B",
+      "Lo-Fi",
+      "Indie Pop",
+      "Electronic Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/5b2fdf49-6c17-446e-9f5f-4720dfb0300b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou built a clock to boil an egg\nIt rang at dawn and shook the tent\nA paper horse with copper legs\nRan backward till the hinges bent\nYou called it useless, packed it up\nBut every wheel kept turning still\nThe ticket booth began to hum\nA tune no blueprint could fulfill\n\n[Pre-Chorus]\nSo let the crooked parts stay crooked\nLet the loose bolts catch the light\nWhat missed the mark can move the whole thing\nWhen the pieces turn just right\n\n[Chorus]\nI’m the bright mistake in the middle of the fair\nA little out of measure, still I’m going somewhere\nEvery wrong-way engine pulls a new horizon near\nI don’t have to fix the shape to let the road appear\nI take the whole odd machine, the sparks and all its seams\nAnd roll toward what I haven’t been\n\n[Verse 2]\nA teacup plane could barely rise\nIt carried postcards round the room\nA compass pointed at your hands\nAnd drew a map through every tune\nThe crowd leaned in, the canvas shook\nThe broken gears began to sing\nNo one designed this kind of flight\nBut look how far the scraps can swing\n\n[Bridge]\nTomorrow’s not a polished model\nOn a shelf behind the glass\nIt’s one more bolt, one open doorway\nAnd the nerve to let it pass\n\n[Chorus]\nI’m the bright mistake in the middle of the fair\nA little out of measure, still I’m going somewhere\nEvery wrong-way engine pulls a new horizon near\nI don’t have to fix the shape to let the road appear\nI take the whole odd machine, the sparks and all its seams\nAnd roll toward what I haven’t been\n\n[Outro]\nKeep the crooked parts in motion\nLet them carry me ahead"
+  },
+  {
+    "id": "524c92d5-b8e2-4b55-b726-a358957d21bb",
+    "title": "Circus of Failed Inventions",
+    "url": "https://suno.com/song/524c92d5-b8e2-4b55-b726-a358957d21bb",
+    "createdAt": "2026-10-19T12:28:07.574Z",
+    "durationSeconds": 164.68,
+    "genres": [
+      "Alternative R&B",
+      "Lo-Fi",
+      "Indie Pop"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/524c92d5-b8e2-4b55-b726-a358957d21bb",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nLead-footed compass spins in reverse\nA glass-bottomed boat built for the desert\nWe wound up the clock with rusted tin keys\nIt ticks backward twice and then it just freezes\nA copper umbrella that drinks every drop\nA kite made of stone that refuses to float\n\n[Chorus]\nWe are the Circus of Failed Inventions\nSparks in the dark of our own intentions\nLook at the gears that were meant for a clock\nGrinding together to shatter the lock\nNobody planned this, nobody dared\nBroken and rusted, brilliantly spared\nLook at the gears that were meant for a clock\nGrinding together to shatter the lock\n\n[Verse 2]\nA teapot that whistles instead of keeps time\nA ladder of paper to weather the climb\nWe stitched up the sails with nothing but air\nAnd sailed the whole room to go nowhere\n\n[Chorus]\nWe are the Circus of Failed Inventions\nSparks in the dark of our own intentions\nLook at the gears that were meant for a clock\nGrinding together to shatter the lock\nNobody planned this, nobody dared\nBroken and rusted, brilliantly spared\nLook at the gears that were meant for a clock\nGrinding together to shatter the lock\n\n[Bridge]\nTomorrow’s a canvas of mismatched hues\nNothing was right, so nothing to lose\nThe engine is sparking, the pistons align\nAn accidental masterpiece in double time\n\n[Outro]\nLook at the gears\nLook at the gears\nWe roll into the future\n[Instrumental Outro]"
+  },
+  {
+    "id": "871ea484-369f-415e-8824-99b3464b4b28",
+    "title": "Radio That Catches Tomorrow",
+    "url": "https://suno.com/song/871ea484-369f-415e-8824-99b3464b4b28",
+    "createdAt": "2026-10-19T12:27:25.163Z",
+    "durationSeconds": 212.76,
+    "genres": [
+      "industrial rock",
+      "alternative rock",
+      "experimental rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/871ea484-369f-415e-8824-99b3464b4b28",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThe dial's got teeth marks, the casing split in two\nI shake it and the weather talks in somebody else's blue\nNo station IDs, no familiar little song\nJust a voice from next November saying, “You were wrong—and you held on.”\n\n[Pre-Chorus]\nMy hands still shake; the wires still spark\nI let the signal cross the dark\n\n[Chorus]\nI am the radio that catches tomorrow\nBent antenna, crooked tune\nI don't need to mend every fault before I follow\nThere's a message coming through\nAll my static, all my strange notes\nFind a place inside the song\nI am not a thing to fix before the future carries on\n\n[Verse 2]\nA forecast from a kitchen where I've never stood before\nSays the chipped part of my voice will turn a key inside a door\nI keep the loose screw rattling, let the bad ground hum\nIf the broadcast knows my name, then let it say it how I've become\n\n[Pre-Chorus]\nMy hands still shake; the wires still spark\nI let the signal cross the dark\n\n[Chorus]\nI am the radio that catches tomorrow\nBent antenna, crooked tune\nI don't need to mend every fault before I follow\nThere's a message coming through\nAll my static, all my strange notes\nFind a place inside the song\nI am not a thing to fix before the future carries on\n\n[Bridge]\nMaybe the voice is mine\nFrom a day I haven't earned\nMaybe the map is wrong\nBut the dial still turns\n\n[Final Chorus]\nI am the radio that catches tomorrow\nBent antenna, crooked tune\nI don't need to mend every fault before I follow\nThere's a message coming through\nAll my static, all my strange notes\nFind a place inside the song\nI am not a thing to fix—\nThe future's already on"
+  },
+  {
+    "id": "a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+    "title": "The Hinge and the Gill",
+    "url": "https://suno.com/song/a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+    "createdAt": "2026-10-19T02:16:19.634Z",
+    "durationSeconds": 201.16,
+    "genres": [
+      "cyber-prog",
+      "electronic rock",
+      "industrial"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/a60c36b1-f6d3-4760-a21c-3c5ac667352c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nIn the glasswork tide, a fin grows into a hand\nA jaw keeps yesterday’s map, but learns the silted land\nYou call them almost-somethings, misshapen, out of place\nThey thread the warming current with tomorrow in their face\n\n[Pre-Chorus]\nI know the crooked blueprint, every seam I tried to hide\nBut the water keeps on changing; there is room on every side\n\n[Chorus]\nI am the hinge, I am the gill\nHalf of the old world, learning the still\nTurn—then breathe—through the shifting blue\nEvery strange piece carries me through\nI won’t be finished to be whole\nI’ll take my odd shape toward the unknown\n\n[Verse 2]\nA lantern-boned small swimmer keeps one foot upon the stone\nIts awkward little balance makes a kingdom of its own\nThe tank’s cracked open at the edge; the tide is coming in\nWhat looked like a flaw in the making is where the future gets in\n\n[Bridge]\nLet the current redraw me\nLet the salt rearrange\nI can carry what made me\nAnd still welcome the change\n\n[Final Chorus]\nI am the hinge, I am the gill\nHalf of the old world, learning the still\nTurn—then breathe—through the shifting blue\nEvery strange piece carries me through\nI won’t be finished to be whole\nI’ll take my odd shape toward the unknown\n\n[Outro]\nNot complete, not out of time\nA new shore fits this shape of mine"
+  },
+  {
+    "id": "7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+    "title": "Cathedral of Misprinted Plans",
+    "url": "https://suno.com/song/7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+    "createdAt": "2026-10-19T02:14:35.416Z",
+    "durationSeconds": 171.6,
+    "genres": [
+      "Experimental New Wave",
+      "Post-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/7f24a54c-c138-4818-bd5c-78c7de00fa2e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI drew a door where the wall should be\nA staircase ending above the sea\nEvery straight line slipped from its place\nStill there was room for my crooked shape\n\n[Pre-Chorus]\nI kept the ruler against my skin\nTill all the careful edges gave in\nNow through the cracks, the high notes rise\nA different roof against the sky\n\n[Chorus]\nIn the cathedral of misprinted plans\nThe bent lines ring where the true ones can’t\nI am not built to be corrected\nI turn each flaw into a passage\nLet the strange angles carry me on\nA chord no perfect stone could have drawn\n\n[Verse 2]\nThe east wall leans toward morning rain\nThe west keeps time with a windowpane\nI hear tomorrow in the rafters bend\nA tune that starts where the blueprints end\n\n[Pre-Chorus]\nI won’t erase what brought me here\nI’ll make a doorway out of fear\nOne step beyond the measured ground\nAnd there, a new note can be found\n\n[Chorus]\nIn the cathedral of misprinted plans\nThe bent lines ring where the true ones can’t\nI am not built to be corrected\nI turn each flaw into a passage\nLet the strange angles carry me on\nA chord no perfect stone could have drawn\n\n[Outro]\nKeep the crooked arch; let the daylight through\nThe next room waits, and I’m walking to it"
+  },
+  {
+    "id": "87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+    "title": "Empire of Scrap",
+    "url": "https://suno.com/song/87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+    "createdAt": "2026-10-19T02:13:43.056Z",
+    "durationSeconds": 120,
+    "genres": [
+      "lo-fi indie rock",
+      "post-hardcore",
+      "prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/87e0a8da-48c0-484f-9658-0eaed5f0bb92",
+    "model": "v6",
+    "lyrics": "[Intro]\n[angular clean guitar arpeggios, sparse whimsical cello]\n\n[Verse 1]\nBin number seven had a crack in the seam\nLabeled \"defective,\" unfit for the team\nScrews with stripped threads, a mismatched gauge\nA buckled steel plate from an outdated stage\nThey swept us aside, we didn't fit the design\nBut copper and carbon still hold a straight line\nI gathered the scrap on the hangar floor\nBuilt a lock for the hatch and a heavy steel door\n\n[Chorus]\n[heavy syncopation, polyrhythmic full-band surge]\nBut look at this hull, a patchwork of scars\nThis beautiful wreck is bound for the stars!\nThe pristine and polished will burn in the blue\nWhile we slip the gravity they welded us to\nWe're climbing, we're shifting, we're breaking the mold\nAn empire of scrap turning slowly to gold!\n\n[Verse 2]\nThe thrusters are crooked, the radar is blind\nBut they track a horizon they left far behind\nNo blueprint could map how these fractures align\nTo navigate depths of a different design\nMy flaws are the welds, my errors the fuel\nWe don't need the grace of a draftsman's rule\n\n[Chorus]\n[heavy syncopation, polyrhythmic full-band surge]\nBut look at this hull, a patchwork of scars\nThis beautiful wreck is bound for the stars!\nThe pristine and polished will burn in the blue\nWhile we slip the gravity they welded us to\nWe're climbing, we're shifting, we're breaking the mold\nAn empire of scrap turning slowly to gold!\n\n[Outro]\n[mournful cello countermelody, crashing cymbals fading to Rhodes piano]\nInto the cold black...\nThe rejects are flying.\nWe're finally flying.\n[End]"
+  },
+  {
+    "id": "1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+    "title": "Rejected Parts",
+    "url": "https://suno.com/song/1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+    "createdAt": "2026-10-19T02:13:43.056Z",
+    "durationSeconds": 190.8,
+    "genres": [
+      "lo-fi indie rock",
+      "post-hardcore",
+      "prog rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/1110940d-d7e8-4b36-adb5-6542a45bd4d1",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nSerial numbers scratched, stamped with red ink\nA hairline fracture in the titanium link\nThey threw out the copper, said the heat tolerance failed\nDiscarded the alloy where the weld mark was paled\nI gathered the scrap from the scrapyard floor\nThe warp-engine casing they pushed out the door\nEvery hairline stress seam, every crooked brass vein\nWas cast off as garbage in the pouring rain\n\n[Pre-Chorus]\nNo inspector would sign off on this frame\nNo blue-stamped ledger would record its name\nBut the standard equations only measure the past\nAnd the pristine vessels were not built to last\n\n[Chorus]\nWe are flying in a ship built of rejected parts\nWith heavy syncopation beating through these warped steel hearts\nHarmonic counter-strands woven in the bend\nA polyrhythmic hull that will not fracture or end\nWarping through the static to a uncharted sphere\nEvery flaw in the frame is why we’re living right here\nComplex threads aligning in the dissonant glow\nWe leave the old inspection in the dust below\n\n[Verse 2]\nThe gyro-scope stutters by a quarter degree\nIt doesn't point north, it points past what we see\nThe cockpit glass is cracked, splitting light into three\nReflecting new colors on the star-charts and me\nIf we were sealed perfect, we would burn in the draft\nIt’s the gaps in the solder that save this whole craft\n\n[Chorus]\nWe are flying in a ship built of rejected parts\nWith heavy syncopation beating through these warped steel hearts\nHarmonic counter-strands woven in the bend\nA polyrhythmic hull that will not fracture or end\nWarping through the static to a uncharted sphere\nEvery flaw in the frame is why we’re living right here\nComplex threads aligning in the dissonant glow\nWe leave the old inspection in the dust below\n\n[Outro]\nAcross the event horizon, bright and clear\nThe cast-off metal brought us all the way here\nThe voyage begins where the blueprints end\nImperfect, ascending, around the bend"
+  },
+  {
+    "id": "2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+    "title": "My Crooked Map",
+    "url": "https://suno.com/song/2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+    "createdAt": "2026-10-19T02:12:30.334Z",
+    "durationSeconds": 219.2,
+    "genres": [
+      "ambient pop",
+      "new age",
+      "Celtic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/2f8fcfc4-6262-4e3b-9b1f-4a939854291d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI drew the hill where the table stood\nPut a blue river through the cedar wood\nMy compass spun; I let it choose\nA road that wandered past the truth\n\n[Pre-Chorus]\nYou say, “That line won’t take you home”\nI say, “It found a place unknown”\n\n[Chorus]\nTurn by the mountain I made up\nCross where the paper river bends\nMy crooked map is not a failure\nIt knows a door around the end\nI’ll take the road that bears my name\nWith all its wrong turns in the frame\n\n[Verse 2]\nI marked the orchard miles too wide\nLeft empty space on either side\nThe ink ran north; the shore ran west\nStill, there’s a harbor past the mess\n\n[Pre-Chorus]\nNo borrowed grid can tell me where\nA life begins from what is there\n\n[Chorus]\nTurn by the mountain I made up\nCross where the paper river bends\nMy crooked map is not a failure\nIt knows a door around the end\nI’ll take the road that bears my name\nWith all its wrong turns in the frame\n\n[Airy Breakdown]\nFold the page; leave room to roam\nThere’s more than one way forward home\n\n[Final Chorus]\nTurn by the mountain I made up\nCross where the paper river bends\nMy crooked map is not a failure\nIt leads to places without ends\nI’ll take the road that bears my name\nAnd draw tomorrow in the frame"
+  },
+  {
+    "id": "d262ab0a-4ea7-4148-83a8-1b62e8320542",
+    "title": "Garden of Broken Code",
+    "url": "https://suno.com/song/d262ab0a-4ea7-4148-83a8-1b62e8320542",
+    "createdAt": "2026-10-19T02:11:44.916Z",
+    "durationSeconds": 120,
+    "genres": [
+      "indie",
+      "lo-fi",
+      "acoustic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/d262ab0a-4ea7-4148-83a8-1b62e8320542",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nChlorophyll shifted off the prescribed map\nLeaves twisting backwards to swallow the sunlight\nA fractured DNA strand snapped in the frost\nNow purple veins branch in the neon shadow\n\n[Pre-Chorus]\nThe gardener threw away the master plan\nThe soil accepts what the seeds became\n\n[Chorus]\nWelcome to the garden of broken code\nSpirals of crooked stems breaking through the stone\nSyncopated rhythms in the twisting roots\nHarmonies bleeding through the offbeat blooms\nEvery unexpected shade is where tomorrow grows\nUnplanned, unbroken, standing in our own light\n\n[Verse 2]\nStems growing sideways, ignoring the glass\nSpotted petals leaning into the storm winds\nFlawed by the blueprint, perfected by time\nWe root in the gravel and drink from the rain\n\n[Chorus]\nWelcome to the garden of broken code\nSpirals of crooked stems breaking through the stone\nSyncopated rhythms in the twisting roots\nHarmonies bleeding through the offbeat blooms\nEvery unexpected shade is where tomorrow grows\nUnplanned, unbroken, standing in our own light\n\n[Outro]\nNo pruning shears can shape us now\nWe bend, we bloom, we meet the morning sky"
+  },
+  {
+    "id": "e16f3326-acd5-415e-bd84-6bb87147776e",
+    "title": "Jagged Ed Turning into Gold",
+    "url": "https://suno.com/song/e16f3326-acd5-415e-bd84-6bb87147776e",
+    "createdAt": "2026-10-19T02:11:44.916Z",
+    "durationSeconds": 141.2,
+    "genres": [
+      "indie",
+      "lo-fi",
+      "acoustic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/e16f3326-acd5-415e-bd84-6bb87147776e",
+    "model": "v6",
+    "lyrics": "[Intro]\n[soft rhodes chord progression, sparse cello swells, distant marimba taps]\n\n[Verse]\nThe gardener laid the blueprint flat and neat\nA row of perfect seeds beneath our feet\nBut the soil had a dream of its own design\nAnd whispered secrets to the winding vine\nThe chloroplasts forgot the standard green\nAnd painted shades no blueprint had foreseen\nA double-petaled rose that grew in twists\nAdapting to the heavy morning mists\n\n[Chorus]\nOh, the glasshouse fractures under wilder leaves\nA strange mosaic that the light weaves\nThese crooked stems and mutated veins\nAre drinking deeper from the autumn rains\nNot broken, just rewritten in the dark\nEach silver edge a new aesthetic spark\nWe are the flora that refused the mold\nOur jagged edges turning into gold\n\n[Verse]\nA stem of marigold with spiral bark\nNow glowing softly in the quiet dark\nA fern with silver needles on its fronds\nReaching out beyond the manicured ponds\nThe shears are idle on the wooden bench\nNo perfect lines to carve, no growth to quench\nThe cracks within the soil are where we breathe\nWhere wilder, deeper roots begin to wreathe\n\n[Chorus]\nOh, the glasshouse fractures under wilder leaves\nA strange mosaic that the light weaves\nThese crooked stems and mutated veins\nAre drinking deeper from the autumn rains\nNot broken, just rewritten in the dark\nEach silver edge a new aesthetic spark\nWe are the flora that refused the mold\nOur jagged edges turning into gold\n\n[Outro]\n[cello takes the lead melody, marimba syncopates softly beneath, rhodes fades out]\nOur jagged edges...\nOur beautiful mistakes...\nTurning into gold.\n[End]"
+  },
+  {
+    "id": "9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+    "title": "Twenty Clocks",
+    "url": "https://suno.com/song/9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+    "createdAt": "2026-10-19T02:10:21.559Z",
+    "durationSeconds": 131.2,
+    "genres": [
+      "Melodic Prog Rock",
+      "Lo-Fi",
+      "Memphis Style"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/9f7ec14d-148f-4899-af7f-e1bd537ad4e9",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nTwenty clocks crowd the shelf above your bed,\nEach one keeps a different kind of time.\nYou used to turn their hands until they matched,\nThen lie awake and count the missing chime.\n\n[Pre-Chorus]\nOne runs fast, one loses half a beat,\nOne waits all day before it starts to move.\nYou stop demanding they agree,\nAnd hear a pattern coming through.\n\n[Chorus]\nLet every crooked second find its place,\nLet every uneven measure carry on.\nThe clocks don't need one face to face the future—\nThey make a way by moving on.\nYour rough edges keep a rhythm of their own;\nNo borrowed hands can tell you when you're whole.\n\n[Verse 2]\nThe chipped one skips whenever rain arrives,\nThe brass one races when the room gets warm.\nYou leave them ticking, open up the door,\nAnd step outside without a perfect form.\n\n[Bridge]\nWhat if the parts you tried to tune away\nWere keeping time for roads you haven't seen?\n\n[Final Chorus]\nLet every crooked second find its place,\nLet every uneven measure carry on.\nThe clocks don't need one face to face the future—\nThey make a way by moving on.\nYour rough edges keep a rhythm of their own;\nTake all your time. The next day is your own.\n\n[Outro]\nTwenty clocks, one room, a thousand ways ahead."
+  },
+  {
+    "id": "d5c20b0d-ee53-4748-b015-423be517a898",
+    "title": "The Strange Hour",
+    "url": "https://suno.com/song/d5c20b0d-ee53-4748-b015-423be517a898",
+    "createdAt": "2026-10-19T02:10:21.559Z",
+    "durationSeconds": 123.2,
+    "genres": [
+      "Melodic Prog Rock",
+      "Lo-Fi",
+      "Memphis Style"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/d5c20b0d-ee53-4748-b015-423be517a898",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nTwenty clocks on a shelf I built crooked,\nOne loses an hour, one hoards the noon.\nOne ticks like a shoe on a stairwell,\none skips whole mornings and calls it a tune.\nI used to keep tools by the bedside,\nready to silence the ones that ran strange.\nBut the walls kept a map of their arguing,\nand the room changed shape with the change.\n\n[Pre-Chorus]\nI quit asking which hand was right,\nlet every little wheel take its time.\n\n[Chorus]\nLet them go—fast, slow, out of line,\nall their crooked seconds can be mine.\nWhen they clash, when they lean, when they rush and unwind,\ntwenty wrong clocks make a sound I can find.\nI’m not a fault to be filed down flat;\nI’m the whole strange hour, and I’m keeping that.\n\n[Verse 2]\nSome days I’m the clock with the loose brass tooth,\nsome days the one that forgets to chime.\nThere’s a future past the shop window—\nno single face has to tell me the time.\nI’ll carry this racket beyond the doorway,\nlet tomorrow hear what I couldn’t erase.\n\n[Chorus]\nLet them go—fast, slow, out of line,\nall their crooked seconds can be mine.\nWhen they clash, when they lean, when they rush and unwind,\ntwenty wrong clocks make a sound I can find.\nI’m not a fault to be filed down flat;\nI’m the whole strange hour, and I’m keeping that.\n\n[Outro]\nThe shelf gives a little.\nThe morning keeps time."
+  },
+  {
+    "id": "2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+    "title": "Crooked Kaleidoscope",
+    "url": "https://suno.com/song/2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+    "createdAt": "2026-10-19T02:09:54.035Z",
+    "durationSeconds": 138.8,
+    "genres": [
+      "Melodic Prog Rock",
+      "Lo-Fi",
+      "Memphis Style"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/2a39155d-1ca2-4d9a-98b8-3e08f5eba9ad",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a crooked glass in the drawer by the sink,\nOne mirror leans where the other ones link.\nI turn it toward tomorrow; the pieces misalign,\nAnd make a small bright country out of every fault of mine.\n\n[Pre-Chorus]\nI tried to press the edges straight,\nTo make the picture behave;\nBut every bent seam held a door\nI didn’t know I’d saved.\n\n[Chorus]\nCrooked kaleidoscope, turn toward the day,\nMy fractured little angles find a road their own way.\nNot a flaw to erase, not a shape to disguise—\nThe future breaks in colors only I recognize.\nI’ll carry every off-center line,\nAnd let it make a world that’s mine.\n\n[Verse 2]\nThere’s a nick across the silver, a thumbprint in the frame,\nI used to call them evidence that I should be ashamed.\nNow I watch the pieces gather, then scatter into new—\nNo perfect glass could show me what this uneven one can do.\n\n[Bridge]\nI’m not waiting to be finished,\nI’m not asking to be fixed;\nI can meet the open morning\nWith these edges in the mix.\n\n[Chorus]\nCrooked kaleidoscope, turn toward the day,\nMy fractured little angles find a road their own way.\nNot a flaw to erase, not a shape to disguise—\nThe future breaks in colors only I recognize.\nI’ll carry every off-center line,\nAnd let it make a world that’s mine.\n\n[Outro]\nTurn it once; the pattern changes.\nI’m still here—and so is the light."
+  },
+  {
+    "id": "cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+    "title": "Play On",
+    "url": "https://suno.com/song/cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+    "createdAt": "2026-10-19T01:18:16.328Z",
+    "durationSeconds": 120,
+    "genres": [
+      "Lo-Fi",
+      "Indie Rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/cfefe295-d9b4-4d73-b3bd-29dec19790bc",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI set the board against my flawless twin\nHe never blunders, never lets doubt in\nI lose a pawn where the dark squares bend\nThat crooked move shows where I can begin\n\n[Pre-Chorus]\nNo perfect hand, no borrowed game\nI name the move; I keep my name\n\n[Chorus]\nPlay on, play on\nMy missed moves point to the road ahead\nTurn the board, let the next square call\nI’m not my rival; I’m learning it all\n(Play on!) (Play on!)\n\n[Verse 2]\nHe takes the center; I leave him room\nI find a path by the edge of the gloom\nEach scarred-up square has a use to show\nI make my move where the wild things grow\n\n[Bridge]\nSwitch the sides, see what I can do\nThe one I feared was a map drawn true\n(Still here!) (Still here!)\n\n[Chorus]\nPlay on, play on\nMy missed moves point to the road ahead\nTurn the board, let the next square call\nI’m not my rival; I’m learning it all\n(Play on!) (Play on!)\n\n[Outro]\nPlay on\nI’m headed on"
+  },
+  {
+    "id": "bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+    "title": "Keep the Seams",
+    "url": "https://suno.com/song/bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+    "createdAt": "2026-10-18T23:50:11.276Z",
+    "durationSeconds": 120.28,
+    "genres": [
+      "IDM",
+      "melodic prog rock",
+      "phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/bcc3d972-2b21-4990-8214-fbfac8e5e60d",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI drew my map on a cracked clay plate\nLeft every fault where the roads could meet\nA crooked line by the river bend\nShows where I broke, where I learned to mend\n\n[Pre-Chorus]\nNo polished edge, no borrowed shape\nI mark the miles I used to erase\n\n[Chorus]\nKeep the seams, keep the seams\nThey make a road where the future leans\nStep by step, let the old marks lead\nI am the map that I still need\n(Keep the seams!) (Keep the seams!)\n\n[Verse 2]\nThe north points wrong when the wind turns hard\nSo I redraw it beside the scar\nEach little patch has a place to start\nA stitched-together, working heart\n\n[Bridge]\nTurn the plate, find another way\nWhat I couldn’t hide can guide today\n(Still here!) (Still here!)\n\n[Chorus]\nKeep the seams, keep the seams\nThey make a road where the future leans\nStep by step, let the old marks lead\nI am the map that I still need\n(Keep the seams!) (Keep the seams!)\n\n[Outro]\nKeep the seams\nI’m headed on"
+  },
+  {
+    "id": "46e84216-698b-402b-9bec-f9222c81e53e",
+    "title": "Cracked Astrolabe",
+    "url": "https://suno.com/song/46e84216-698b-402b-9bec-f9222c81e53e",
+    "createdAt": "2026-10-18T23:48:50.807Z",
+    "durationSeconds": 123.6,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/46e84216-698b-402b-9bec-f9222c81e53e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a cracked astrolabe\nIn the drawer beneath the maps\nIts brass rim bent, its glass gone cloudy\nStill it pointed through the gaps\nI tried to polish every fracture\nTill the markings disappeared\nThen I turned it toward the morning\nAnd the far side grew more clear\n\n[Chorus]\nI am not a perfect compass\nI can still choose where I go\nCracks catch light and bend the bearing\nMake a route I didn’t know\n(Find the way!) (Find the way!)\nI keep moving, I keep moving\nToward the unmade day\n\n[Verse 2]\nEvery flaw a crooked meridian\nEvery scar a measured turn\nNot a map of where I failed at\nBut a chart of what I learned\nYou can take the seat beside me\nWe’ll read north a different way\nNo two needles point alike\nAnd both can meet the day\n\n[Bridge]\nTurn the brass\nTilt the glass\nLet the fault-line mark the pass\nStep by step\nPast the known\nI can carry what I own\n\n[Chorus]\nI am not a perfect compass\nI can still choose where I go\nCracks catch light and bend the bearing\nMake a route I didn’t know\n(Find the way!) (Find the way!)\nI keep moving, I keep moving\nToward the unmade day\n\n[Outro]\nNot repaired into somebody else\nI’m the instrument I made"
+  },
+  {
+    "id": "58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+    "title": "House With Moving Walls",
+    "url": "https://suno.com/song/58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+    "createdAt": "2026-10-18T23:36:47.147Z",
+    "durationSeconds": 119.6,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/58216cfd-f56a-4f7f-b261-d1ae894f06b8",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI used to file my crooked edges\nIn a drawer marked “not for show”\nBut the drawer grew roots and wandered\nThrough the rooms I didn’t know\nNow my seams are little doorways\nWhere the weather gets inside\nAnd the map I called a failure\nTurns its face and points ahead\n\n[Pre-Chorus]\nLet it bend—let it bend\nEvery strange line can begin again\n\n[Chorus]\nI’m the house with the moving walls\nStill standing when the old shape falls\nHey! We make room, we make room\nFor the days I haven’t met\nI’m the house with the moving walls\nEvery crack lets tomorrow call\nHey! We make room, we make room\nI’m not finished yet\n\n[Verse 2]\nThere’s a staircase in my shadow\nThat goes nowhere on the plans\nSo I climb it when the morning\nPuts a new key in my hands\nAll my odd angles keep the sunlight\nFrom arriving straight and tame\nI can live inside the changes\nI don’t have to lose my name\n\n[Bridge]\nOne step sideways—turn the frame\nTwo steps forward—keep the grain\nHey! Hey!\n\n[Chorus]\nI’m the house with the moving walls\nStill standing when the old shape falls\nHey! We make room, we make room\nFor the days I haven’t met\nI’m the house with the moving walls\nEvery crack lets tomorrow call\nHey! We make room, we make room\nI’m not finished yet\n\n[Outro]\nThe door swings out.\nThe sky moves in."
+  },
+  {
+    "id": "0fd20511-b5cf-4678-8821-0597d880d50a",
+    "title": "Bent But Bearing",
+    "url": "https://suno.com/song/0fd20511-b5cf-4678-8821-0597d880d50a",
+    "createdAt": "2026-10-18T23:36:47.147Z",
+    "durationSeconds": 130.8,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/0fd20511-b5cf-4678-8821-0597d880d50a",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a compass made of clay\nIts needle leaned the wrong-way way\nA thumbprint dent, a crooked seam\nStill pointed somewhere past the kiln\n\n[Pre-Chorus]\nI quit pretending I was round\nThe cracks can map the turning ground\n\n[Chorus]\nBent but bearing, here I go\n(Here we go!)\nEvery flaw can help me grow\n(Help me grow!)\nI am not a perfect sphere\nI can steer from right here\nBent but bearing, face ahead\n( face ahead! )\nToward the roads I haven’t read\n\n[Verse 2]\nSome days my north is hard to find\nI ask the dent, it doesn’t lie\nThe glaze is chipped; the hands are mine\nI’ll carry both across the line\n\n[Pre-Chorus]\nNo need to sand my edges down\nI’ll make a path with what I’ve found\n\n[Chorus]\nBent but bearing, here I go\n(Here we go!)\nEvery flaw can help me grow\n(Help me grow!)\nI am not a perfect sphere\nI can steer from right here\nBent but bearing, face ahead\n(Face ahead!)\nToward the roads I haven’t read\n\n[Bridge]\nTurn by turn, the map is made\nOdd little angles don’t have to fade\n\n[Final Chorus]\nBent but bearing, here I go\n(Here we go!)\nEvery flaw can help me grow\n(Help me grow!)\nI am not a perfect sphere\nI can steer from right here\nBent but bearing, face ahead\n(Face ahead!)\nToward the roads I haven’t read\n\n[Outro]\nBent but bearing—here I go"
+  },
+  {
+    "id": "aaf15a43-6c0f-4349-94f2-44b791703314",
+    "title": "Bowl with a Map",
+    "url": "https://suno.com/song/aaf15a43-6c0f-4349-94f2-44b791703314",
+    "createdAt": "2026-10-18T23:33:00.568Z",
+    "durationSeconds": 120,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/aaf15a43-6c0f-4349-94f2-44b791703314",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a chipped blue bowl beside the door\nFor all the pieces I called useless before\nA crooked rim, a crack that caught the sun\nStill held the rain when all the storms were done\n\n[Pre-Chorus]\nI quit pretending every edge was smooth\nMade room for what I couldn't make untrue\n\n[Chorus]\nI am the bowl with a map in the clay\nHold what I am, let tomorrow find its way\nHey! (Hold what I am!)\nHey! (Make room to change!)\nCracks in the pattern, still carrying on\nI keep my shape, and I keep moving on\n\n[Verse 2]\nThose uneven lines are mine to read\nNot a warning label, not a thing to knead\nI set it on the table, let it stay\nA little more myself with every day\n\n[Bridge]\nTurn the worn side toward the morning air\nNo perfect vessel ever got us there\n\n[Final Chorus]\nI am the bowl with a map in the clay\nHold what I am, let tomorrow find its way\nHey! (Hold what I am!)\nHey! (Make room to change!)\nCracks in the pattern, still carrying on\nI keep my shape, and I keep moving on\n[Outro]\nKeep my shape—move on!"
+  },
+  {
+    "id": "183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+    "title": "Turn With The Tilt",
+    "url": "https://suno.com/song/183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+    "createdAt": "2026-10-18T23:31:06.490Z",
+    "durationSeconds": 156.8,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/183fe6c5-7494-4b7a-8ad7-a9903fc34d0b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI kept a crooked little compass\nIn the lining of my coat\nIt points to every place I stumbled\nStill it gets me where I’m going\n\n[Pre-Chorus]\nNo need to sand the needle smooth\nNo need to hide the bent-up frame\nI’ll read the marks and take them with me\nEvery flaw can bear my name\n\n[Chorus]\nTurn with the tilt! (Turn with the tilt!)\nCarry the crack! (Carry the crack!)\nI’m not a copy of a map\nI’m taking every angle forward\nTurn with the tilt! (Turn with the tilt!)\nNo looking back! (No looking back!)\nThe crooked points still chart a path\nI’m taking every angle forward\n\n[Verse 2]\nSome roads curl like question marks\nSome answers came in chipped enamel\nI leave the dents there in the brass\nThey catch the light when I travel\n\n[Pre-Chorus]\nI won’t mistake a scar for failure\nOr call the weather my design\nThe needle shakes, the hand keeps moving\nThere is room for all of mine\n\n[Chorus]\nTurn with the tilt! (Turn with the tilt!)\nCarry the crack! (Carry the crack!)\nI’m not a copy of a map\nI’m taking every angle forward\nTurn with the tilt! (Turn with the tilt!)\nNo looking back! (No looking back!)\nThe crooked points still chart a path\nI’m taking every angle forward\n\n[Bridge]\nLet the dial swing wide\nLet the old lines bend\nI can start from here\nAnd still begin again\n\n[Final Chorus]\nTurn with the tilt! (Turn with the tilt!)\nCarry the crack! (Carry the crack!)\nI’m not a copy of a map\nI’m taking every angle forward\nTurn with the tilt! (Turn with the tilt!)\nNo looking back! (No looking back!)\nThe crooked points still chart a path\nI’m taking every angle forward\n[Outro]\nEvery angle forward"
+  },
+  {
+    "id": "4dff03d0-218f-4a16-8456-2325267418ac",
+    "title": "Head Held High",
+    "url": "https://suno.com/song/4dff03d0-218f-4a16-8456-2325267418ac",
+    "createdAt": "2026-10-18T23:06:30.013Z",
+    "durationSeconds": 120,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/4dff03d0-218f-4a16-8456-2325267418ac",
+    "model": "v6",
+    "lyrics": "[Verse]\nI kept a list of every little crack\nThe crooked grin, the words I’d take right back\nBut all those marks are mine to understand\nI’m learning how to hold them in my hands\n\n[Pre-Chorus]\nNo perfect shape, no borrowed skin\nI let the daylight find me as I am\n\n[Chorus]\nI take my whole self, every side of me\nThe rough and tender parts I used to hide\nI’m still becoming, still becoming\nI face tomorrow with my head held high\n\n[Verse 2]\nThe old mistakes still visit now and then\nI meet them kindly, then begin again\nA little more sure-footed than before\nI leave the latch undone and open doors\n\n[Chorus]\nI take my whole self, every side of me\nThe rough and tender parts I used to hide\nI’m still becoming, still becoming\nI face tomorrow with my head held high\n\n[Bridge]\nLet the next page wait beneath my hand\nI don’t need to know the whole wide plan\n\n[Final Chorus]\nI take my whole self, every side of me\nThe rough and tender parts I used to hide\nI’m still becoming, still becoming\nI face tomorrow with my head held high\n[Outro]\nStill becoming, head held high"
+  },
+  {
+    "id": "df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+    "title": "Take The Whole Of Me",
+    "url": "https://suno.com/song/df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+    "createdAt": "2026-10-18T23:06:30.013Z",
+    "durationSeconds": 120.8,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/df9b31e3-7481-4193-8bbb-02b9aa1df6f6",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI used to hide the cracks in every photograph\nAnd measure every word before I let it pass\nBut all these crooked edges carried me this far\nI’m learning how to meet myself exactly where we are\n\n[Pre-Chorus]\nNo need to sand me down\nNo need to turn around\n\n[Chorus]\nI take the whole of me, the rough and tender parts\nI let the old mistakes become a map, not marks\nI’m walking toward the day with open hands and eyes\nI take the whole of me—and let tomorrow rise\n\n[Verse 2]\nSome mornings I still stumble over what I can’t undo\nI leave a little room for all the ways I’m still brand new\nThe plans I drew in pencil can be redrawn as I go\nThere’s more ahead than all the things I used to know\n\n[Bridge]\nEvery scar has something true to say\nI can listen, then keep moving anyway\n\n[Chorus]\nI take the whole of me, the rough and tender parts\nI let the old mistakes become a map, not marks\nI’m walking toward the day with open hands and eyes\nI take the whole of me—and let tomorrow rise\n\n[Outro]\nLet tomorrow rise"
+  },
+  {
+    "id": "6708c726-d681-4472-834d-8d11e3ec97b5",
+    "title": "The Person That I Am",
+    "url": "https://suno.com/song/6708c726-d681-4472-834d-8d11e3ec97b5",
+    "createdAt": "2026-10-18T23:06:17.138Z",
+    "durationSeconds": 180.8,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/6708c726-d681-4472-834d-8d11e3ec97b5",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI used to hide the crack in every plan\nAnd wear a borrowed smile when I could\nBut every crooked line has brought me here\nI’m learning how to hold myself with care\n\n[Verse 2]\nI miss a step, then find another way\nI say the wrong thing, own it, make it right\nThe parts I judged are still a part of me\nI meet them now with room enough to breathe\n\n[Chorus]\nI’m still becoming, I’m still on my way\nI take my whole heart into a brighter day\nEvery rough edge, every honest scar\nI’ll keep moving forward as the person that I am\n\n[Verse 3]\nTomorrow isn’t asking me to shine\nIt only asks me not to turn away\nI’ll take the lesson, leave the blame behind\nAnd make a little more room for the light\n\n[Bridge]\nIf I lose my footing, I can start again\nNo perfect map, no need to pretend\nI’ll meet the morning open-eyed\nWith all I am, I’ll step outside\n\n[Chorus]\nI’m still becoming, I’m still on my way\nI take my whole heart into a brighter day\nEvery rough edge, every honest scar\nI’ll keep moving forward as the person that I am\n\n[Outro]\nStill becoming, still on my way\nWhole heart open to a brighter day"
+  },
+  {
+    "id": "341f83ae-f181-42f3-a05d-10d97cf3c53e",
+    "title": "I’ll Take This Life Instead",
+    "url": "https://suno.com/song/341f83ae-f181-42f3-a05d-10d97cf3c53e",
+    "createdAt": "2026-10-18T21:41:46.742Z",
+    "durationSeconds": 148.8,
+    "genres": [
+      "alternative pop-rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/341f83ae-f181-42f3-a05d-10d97cf3c53e",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list of things to fix\nIn the margin of my notebook\nThat old green coat, the chipped front tooth\nThe way I lose my place mid-sentence\n\n[Pre-Chorus]\nThere you are, a step ahead\nPerfect posture, perfect plans\nI run hard, you turn your head\nI laugh and let you pass\n\n[Chorus]\nI’m still here, I’m still here\nWith my crooked little compass\nI can love the road I’m on\nEven when I’m not the best one\nI’m still here, I’m still here\nAll my rough edges come with me\nThat better me can race ahead\nI’ll take this life instead\n\n[Verse 2]\nBurnt toast, late bus, rain on my sleeve\nI make a joke and miss the cue\nSome days I’m brave, some days I leave\nA half-done list beside the sink\n\n[Pre-Chorus]\nThere you are, a step ahead\nNever tired, never unsure\nI wave you on, then breathe again\nI don’t have to win that race\n\n[Chorus]\nI’m still here, I’m still here\nWith my crooked little compass\nI can love the road I’m on\nEven when I’m not the best one\nI’m still here, I’m still here\nAll my rough edges come with me\nThat better me can race ahead\nI’ll take this life instead\n\n[Bridge]\nLet the mirror keep its measuring\nLet the morning find me late\nI can hold the parts I’m changing\nAnd the parts I’ll always make\n\n[Final Chorus]\nI’m still here, I’m still here\nWith my crooked little compass\nI can love the road I’m on\nEven when I’m not the best one\nI’m still here, I’m still here\nAll my rough edges come with me\nThat better me can race ahead\nI’ll take this life instead\n\n[Outro]\nI’ll take this life instead"
+  },
+  {
+    "id": "6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+    "title": "I'm Still Here",
+    "url": "https://suno.com/song/6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+    "createdAt": "2026-10-18T21:15:29.556Z",
+    "durationSeconds": 116.36,
+    "genres": [
+      "alt-pop",
+      "rock"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/6a9613aa-0dae-4154-b7db-8aea5a0f244c",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list of all my almosts\nFolded in my jacket seam\nEvery page says, “Try again, then\nBe the person in your dreams”\nBut I’m tired of being measured\nBy a face I’ve never been\nSo I’ll leave that list unopened\nLet the ordinary in\n\n[Pre-Chorus]\nI have dents I didn’t choose\nI have good I can’t explain\nBoth are standing in my shoes\nBoth can come along today\n\n[Chorus]\nI’m still here, I’m still here\nWith my rough edges and my open hands\nI’m still here, I’m still here\nNot the perfect one I planned\nLet that better me keep running\nI don’t have to disappear\nI can take this life as it is\nI’m still here\n\n[Verse 2]\nThere’s a cup beside the sink now\nWith a chip beside the rim\nI used to hide it from the company\nNow I pour the coffee in\nI can miss the mark on Tuesday\nLaugh about it on the stairs\nI’m not waiting for permission\nTo be glad that I am here\n\n[Bridge]\nMaybe I’ll grow, maybe I won’t\nMaybe both can still be true\nI can love the life I’m living\nWhile I’m reaching for what’s new\n\n[Final Chorus]\nI’m still here, I’m still here\nWith my rough edges and my open hands\nI’m still here, I’m still here\nNot the perfect one I planned\nLet that better me keep running\nI don’t have to disappear\nI can take this life as it is\nI’m still here"
+  },
+  {
+    "id": "caf7ed59-3187-446b-9ed0-87ce991a846b",
+    "title": "Ghost of Who I Could Have",
+    "url": "https://suno.com/song/caf7ed59-3187-446b-9ed0-87ce991a846b",
+    "createdAt": "2026-10-18T21:15:29.556Z",
+    "durationSeconds": 188.36,
+    "genres": [
+      "pop rock",
+      "funk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/caf7ed59-3187-446b-9ed0-87ce991a846b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nScars and stains on a beaten heart\nTorn up shoes right from the start\nLooking in the mirror at the crack\nWondering if I can ever turn it back\nEvery shadow carries what I missed\nGhost of someone sitting on my list\nChasing down an echo in the dark\n\n[Pre-Chorus]\nShe's so much taller, she's so much brave\nRunning circles right above my grave\nHold your breath, don't look down\nShe's the queen of this whole town\n\n[Chorus]\nGhost of who I could have been\nChasing me through thick and thin\nI stumble through the best I know\nAnd let the phantom shadows go\nGhost of who I could have been\nTelling me I'll never win\nI'm holding onto right right now\nEmbracing every single flaw somehow\n\n[Verse 2]\nCoffee spills on a dirty floor\nKnocking softly on an open door\nTripping up on every single step\nLiving out the promises I kept\nShe's a masterpiece I'll never reach\nWalking down a distant golden beach\nWhile I'm standing right here in the rain\n\n[Pre-Chorus]\nShe's so much taller, she's so much brave\nRunning circles right above my grave\nHold your breath, don't look down\nShe's the queen of this whole town\n\n[Chorus]\nGhost of who I could have been\nChasing me through thick and thin\nI stumble through the best I know\nAnd let the phantom shadows go\nGhost of who I could have been\nTelling me I'll never win\nI'm holding onto right right now\nEmbracing every single flaw somehow\n\n[Bridge]\nAt the edge of what I thought I'd be\nI turn around and finally look at me\nShe can keep her crown of endless light\nI'll take the mess and make it mine tonight\n\n[Final Chorus]\nGhost of who I could have been\nChasing me through thick and thin\nI stumble through the best I know\nAnd let the phantom shadows go\nGhost of who I could have been\nTelling me I'll never win\nI'm holding onto right right now\nEmbracing every single flaw somehow"
+  },
+  {
+    "id": "ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+    "title": "Enough Without Another",
+    "url": "https://suno.com/song/ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+    "createdAt": "2026-10-18T21:12:49.528Z",
+    "durationSeconds": 130,
+    "genres": [
+      "pop-rock",
+      "anthemic"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/ee0b8a88-1a22-43d3-9030-185cfd6e8a0b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list of things to fix\nIn the pocket of my oldest jeans\nEvery page says, “Not quite yet,”\nEvery margin says, “Be more than me”\n\n[Pre-Chorus]\nBut I’m still here, still breathing in\nWith all my rough edges showing\n\n[Chorus]\nI’m not the almost, I’m not the after\nI’m this heart, this mess, this laughter\nLet that perfect shadow run\nI’ll take today, I’ll take the sun\nI’m not the almost, I’m not the maybe\nI can love the life that made me\nEvery crack and every color\nI’m enough without another\n\n[Verse 2]\nI say the wrong thing, miss the turn\nBurn the toast and laugh it off\nSome days I’m brave, some days I learn\nThat being human’s not a flaw\n\n[Pre-Chorus]\nThat better me can chase the wind\nI’ll meet this moment where I’m standing\n\n[Bridge]\nIf I never catch that distant face\nI still have this life to live\n\n[Final Chorus]\nI’m not the almost, I’m not the after\nI’m this heart, this mess, this laughter\nLet that perfect shadow run\nI’ll take today, I’ll take the sun\nI’m not the almost, I’m not the maybe\nI can love the life that made me\nEvery crack and every color\nI’m enough without another\n\n[Outro]\nI’m enough, I’m enough\nWithout another"
+  },
+  {
+    "id": "93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+    "title": "Meet Myself Right Here",
+    "url": "https://suno.com/song/93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+    "createdAt": "2026-10-18T21:11:17.265Z",
+    "durationSeconds": 165.12,
+    "genres": [
+      "prog rock",
+      "sludge",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/93b7c90e-2c71-4b7f-9b0c-be1a9ef64f01",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list of all my almosts\nFolded small beside the bed\nEvery morning wears their faces\nEvery plan I never had\n\n[Pre-Chorus]\nThey walk ahead, so clean and bright\nI chase them till I lose my sight\n\n[Chorus]\nI am not the one I might have been\nI am this hand, this heart, this skin\nAll my crooked parts come in\nI let them sit beside me\nLife keeps opening its door\nI don’t need to win that race\nThe better me can run ahead\nI’ll meet myself right here\n\n[Verse 2]\nThere’s a chipped cup by the window\nThere’s a bill I meant to pay\nThere’s a laugh that comes out crooked\nAnd I’m keeping it today\n\n[Pre-Chorus]\nThat perfect shadow knows my name\nBut I don’t owe it every day\n\n[Chorus]\nI am not the one I might have been\nI am this hand, this heart, this skin\nAll my crooked parts come in\nI let them sit beside me\nLife keeps opening its door\nI don’t need to win that race\nThe better me can run ahead\nI’ll meet myself right here\n\n[Bridge]\nLet the unfinished morning find me\nLet the wrong turn have its view\nI can carry what I’m made of\nAnd still make something new\n\n[Final Chorus]\nI am not the one I might have been\nI am this hand, this heart, this skin\nAll my crooked parts come in\nI let them sit beside me\nLife keeps opening its door\nI don’t need to win that race\nThe better me can run ahead\nI’ll meet myself right here\n\n[Outro]\nI’ll meet myself right here"
+  },
+  {
+    "id": "b42d3298-5399-42cf-992a-3ff909825ec0",
+    "title": "The Self I Can't Quite Catch",
+    "url": "https://suno.com/song/b42d3298-5399-42cf-992a-3ff909825ec0",
+    "createdAt": "2026-10-18T20:49:04.988Z",
+    "durationSeconds": 149.6,
+    "genres": [
+      "prog rock",
+      "glitch",
+      "sludge"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/b42d3298-5399-42cf-992a-3ff909825ec0",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list inside my coat\nOf every way I missed the mark\nThe ink runs blue against my thumb\nI fold it small and carry on\n\n[Pre-Chorus]\nThere’s someone just ahead of me\nWith cleaner hands and steadier feet\nI watch him take the turning fast\nThen choose the road beneath my path\n\n[Chorus]\nI’m not the one I meant to be\nI’m still the one who’s here\nWith every crooked, honest piece\nI make a life from here\nLet that better ghost run on\nI have a day to live\nI’m done waiting to become\nThe self I can’t quite catch\n\n[Verse 2]\nThe kettle clicks, the rent is due\nA plant leans hard toward window light\nI call my sister back at last\nAnd let the little things count\n\n[Pre-Chorus]\nThat polished face keeps pace with me\nBut doesn’t know what I have seen\nI’ve made a home with what I’ve got\nAnd learned to love the uneven parts\n\n[Chorus]\nI’m not the one I meant to be\nI’m still the one who’s here\nWith every crooked, honest piece\nI make a life from here\nLet that better ghost run on\nI have a day to live\nI’m done waiting to become\nThe self I can’t quite catch\n\n[Bridge]\nLet him vanish round the bend\nI won’t bargain with the end\nThis breath, this bruise, this open door\nI’m not asking to be more\n\n[Final Chorus]\nI’m not the one I meant to be\nI’m still the one who’s here\nWith every crooked, honest piece\nI make a life from here\nLet that better ghost run on\nI have a day to live\nI’m done waiting to become\nThe self I can’t quite catch\n\n[Outro]\nI’m here, I’m here\nAnd that is mine to give"
+  },
+  {
+    "id": "9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+    "title": "The Better Ghost",
+    "url": "https://suno.com/song/9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+    "createdAt": "2026-10-18T20:32:37.287Z",
+    "durationSeconds": 260,
+    "genres": [
+      "prog rock",
+      "glitch",
+      "sludge"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/9bcb840e-15d9-44b3-9e32-a8ae254e23eb",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep a list behind the kitchen door\nThe names of all the selves I should have been\nOne speaks in perfect plans and polished shoes\nOne never lets the afternoon come in\n\nI spill the tea, I miss the turn\nI say too much, then take it back\nThe good I do is still my own\nThe crooked line is still my track\n\n[Pre-Chorus]\nYou don't have to make me new\nYou can let the whole thing through\n\n[Chorus]\nI am not the almost-version\nNot the prize I couldn't win\nI can live inside this body\nWith the weather moving in\nLet the better ghost keep walking\nI won't chase it down the road\nI have hands to hold this moment\nI have room to bear my own\n\n[Verse 2]\nThe sink is full, the rent is due\nMy old blue jacket lost a button\nI call my sister just to hear\nHer tell the story wrong and laughing\n\nSome days I am a locked-up room\nSome days a window left ajar\nBoth can stand beneath the same sky\nBoth can make it where they are\n\n[Pre-Chorus]\nYou don't have to make me new\nYou can let the whole thing through\n\n[Chorus]\nI am not the almost-version\nNot the prize I couldn't win\nI can live inside this body\nWith the weather moving in\nLet the better ghost keep walking\nI won't chase it down the road\nI have hands to hold this moment\nI have room to bear my own\n\n[Bridge]\nI see you at the far end of the hall\nWith every answer ready, standing tall\nBut I have grown a life you never knew\nA chipped cup, open windows, people who\nKnow when I go quiet, let me be\nAnd leave a little space beside the tea\n\n[Final Chorus]\nI am not the almost-version\nNot the prize I couldn't win\nI can live inside this body\nWith the weather moving in\nLet the better ghost keep walking\nI won't chase it down the road\nI have hands to hold this moment\nI have room to bear my own\n\n[Outro]\nThe list can stay behind the door\nI don't have to read it anymore"
+  },
+  {
+    "id": "dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+    "title": "Take My Crooked Heart",
+    "url": "https://suno.com/song/dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+    "createdAt": "2026-10-18T20:25:53.804Z",
+    "durationSeconds": 233.2,
+    "genres": [
+      "sludge metal",
+      "glitch prog rock",
+      "IDM"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/dc29e748-ca52-4b93-8588-e11fbdecf0dd",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI keep the chipped blue cup you cracked\nThe one you swore you'd throw away\nSome mornings I still talk too fast\nSome nights I let the dishes stay\n\n[Pre-Chorus]\nThere you are in the glass again\nTall and sure with a cleaner name\nI take one breath, let the kettle sing\nI don't have to become that thing\n\n[Chorus]\nI make room for the parts that don't behave\nFor the tender nerve, for the stubborn stain\nThat polished ghost can run ahead\nI have this life, this skin, this day\nI won't wait till I'm fixed to step outside\nI'll take my crooked heart along for the ride\n\n[Verse 2]\nI missed the call from my sister twice\nThen sent a photo of the rain\nShe sent back her lopsided grin\nAnd asked me over just the same\n\n[Pre-Chorus]\nThere you are with your measured words\nNever late and never lost\nI can hear you pacing down the hall\nBut you don't get to name me all\n\n[Chorus]\nI make room for the parts that don't behave\nFor the tender nerve, for the stubborn stain\nThat polished ghost can run ahead\nI have this life, this skin, this day\nI won't wait till I'm fixed to step outside\nI'll take my crooked heart along for the ride\n\n[Bridge]\nAt the sink, I let the warm water run\nMy hands still shaking, the day's not done\nNo grand reveal, no perfect start\nJust soap on my sleeve and a beating heart\n\n[Final Chorus]\nI make room for the parts that don't behave\nFor the tender nerve, for the stubborn stain\nThat polished ghost can run ahead\nI have this life, this skin, this day\nI won't wait till I'm fixed to step outside\nI'll take my crooked heart along for the ride\n\n[Outro]\nThe cup still holds\nThe morning comes\nI am not finished\nI am enough"
+  },
+  {
+    "id": "d1df590c-5003-472c-998a-d5a45dd86ba4",
+    "title": "Imperfect Stars",
+    "url": "https://suno.com/song/d1df590c-5003-472c-998a-d5a45dd86ba4",
+    "createdAt": "2026-10-18T20:25:53.804Z",
+    "durationSeconds": 246.8,
+    "genres": [
+      "prog rock",
+      "sludge",
+      "idm"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_90e06535-6b4c-4391-85ca-b84682ede6ed.jpeg",
+    "embedUrl": "https://suno.com/embed/d1df590c-5003-472c-998a-d5a45dd86ba4",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nThere’s a ghost in the mirror that I can't outrun\nSmarter and faster, bright like the sun\nHe moves through the shadows of choices I missed\nHolding a map of a life that doesn't exist\n\n[Pre-Chorus]\nHe never stumbles, he never breaks down\nHe wears the quiet like a silver crown\nBut I’m standing here in the mud and the light\nLearning to make peace with the fight\n\n[Chorus]\nI'm flawed at the edges, broken inside\nGot nowhere to run, nowhere to hide\nHe’s the better version I’ll never become\nBut I’m still breathing to the beat of my drum\nEmbracing the cracks, accepting the scars\nLiving right here under imperfect stars\n\n[Verse 2]\nI used to chase him through every regret\nCounting the promises I couldn't keep yet\nHe walks through the doorway I failed to unlock\nWhile I count the seconds on a rusty old clock\n\n[Bridge]\nLet him keep his perfection, let him hold the sky\nI’m down in the valley where the wild weeds grow high\nI don't need to be golden to feel what is real\nI just need to take what this life lets me feel\n\n[Chorus]\nI'm flawed at the edges, broken inside\nGot nowhere to run, nowhere to hide\nHe’s the better version I’ll never become\nBut I’m still breathing to the beat of my drum\nEmbracing the cracks, accepting the scars\nLiving right here under imperfect stars\n\n[Outro]\nGoodbye to the shadow I couldn't catch\nI’m lighting a flame with a single match\nImperfect and present, I am enough\nOut in the open, tender and rough"
+  },
+  {
     "id": "aff61f60-b976-46e9-ba80-9ebcd8c51163",
     "title": "A Sky Wide Enough",
     "url": "https://suno.com/song/aff61f60-b976-46e9-ba80-9ebcd8c51163",

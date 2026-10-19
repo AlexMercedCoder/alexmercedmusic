@@ -126,7 +126,13 @@ for (const [youtubeId, title] of [
   assert.ok(song, `${title} Short must connect to its song page.`);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${title} song page must link back to the Short.`);
 }
+const stillHereVideo = catalog.videos.find((video) => video.youtubeId === 'KzIDlYp1-yI');
+assert.equal(stillHereVideo?.songIds.length, 1, "The new I'm Still Here video must link to one verified recording.");
+assert.ok(catalog.songs.find((song) => song.id === stillHereVideo.songIds[0])?.links.some((link) => link.url.endsWith('6a9613aa-0dae-4154-b7db-8aea5a0f244c')));
 for (const [youtubeId, title] of [
+  ['3mIoaUnzpn0', 'Head Held High'],
+  ['HznYpTO2Xb0', 'I’ll Take This Life Instead'],
+  ['KzIDlYp1-yI', "I'm Still Here"],
   ['QwjkX3W9TW0', 'Ghosts of Choices'],
   ['246HZb0UZr4', 'The Misprinted Stamp'],
   ['CrI5fWl8bBI', 'Elevator to a Secret Floor'],
@@ -174,6 +180,9 @@ assert.equal(catalog.counts.sunoAlbums, sunoAlbums.length);
 assert.equal(sunoAlbums.length, sourceSunoPlaylists.filter((collection) => collection.resourceType === 'album').length);
 assert.ok(sunoAlbums.length >= 19, 'The official Suno album catalog unexpectedly lost albums.');
 assert.ok(sunoAlbums.every((album) => album.url === `https://suno.com/album/${album.id}` && album.songCount > 0 && album.sourceTracks.length === album.songCount && album.pageUrl && album.imageUrl), 'Every official Suno album must retain its album art and complete track metadata.');
+const acceptanceAlbum = sunoAlbums.find((album) => album.id === '29d59401-2f6f-4c51-a53e-8dfa1304d1a6');
+assert.equal(acceptanceAlbum?.name, 'Acceptance of the Life Being Lived');
+assert.equal(acceptanceAlbum?.songCount, 47);
 const libertyAlbum = sunoAlbums.find((album) => album.id === '01d1b567-ab42-4d0f-8036-e8dc9494aa86');
 assert.equal(libertyAlbum?.name, 'Manifesto of Love and Liberty');
 assert.equal(libertyAlbum?.songCount, 10);
@@ -217,6 +226,10 @@ assert.ok(catalog.songs.find((song) => song.id === pieceAcoustic?.acousticSource
 assert.ok(catalog.songs.find((song) => song.id === mapAcoustic?.acousticSourceId)?.links.some((link) => link.url.endsWith('7e47b964-26a7-4bbd-acbc-c2e56d200fa5')));
 assert.ok(catalog.songs.filter((song) => song.albumLinks.length).length > 1000, 'Verified Suno album memberships unexpectedly dropped.');
 const songsPage = read('dist/songs/index.html');
+const tiktokUrl = 'https://www.tiktok.com/@alexmercedmusic';
+assert.ok(catalog.platforms.some((platform) => platform.label === 'TikTok' && platform.url === tiktokUrl));
+assert.ok(read('dist/index.html').includes(tiktokUrl), 'The home page must link to Alex Merced Music on TikTok.');
+assert.ok(read('dist/listen/index.html').includes(tiktokUrl), 'The platform directory must link to Alex Merced Music on TikTok.');
 for (const release of catalog.distributedReleases) {
   assert.ok(songsPage.includes(release.links.find((link) => link.label === 'Spotify')?.url), `${release.title} is missing its Spotify album link on the songs page.`);
   assert.ok(read('dist/listen/index.html').includes(release.tracks[0].url), `${release.title} is missing its direct Spotify track links.`);

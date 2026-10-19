@@ -26,6 +26,7 @@ export const communityLinks: NetworkLink[] = [
 
 export const connectLinks: NetworkLink[] = [
   { label: 'Spotify, music', url: 'https://open.spotify.com/artist/7saFKAusZMQg0PnHcO8zm6' },
+  { label: 'TikTok, music', url: 'https://www.tiktok.com/@alexmercedmusic' },
   { label: 'GitHub', url: 'https://github.com/alexmercedcoder' },
   { label: 'LinkedIn', url: 'https://www.linkedin.com/in/alexmerced' },
   { label: 'BlueSky', url: 'https://bsky.app/profile/alextalksdatalakehouses.fyi' },
