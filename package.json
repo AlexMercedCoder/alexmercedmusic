@@ -14,6 +14,8 @@
     "sync:suno": "node scripts/sync-suno.mjs",
     "sync:spotify": "node scripts/sync-spotify.mjs",
     "sync:youtube": "node scripts/sync-youtube-metadata.mjs",
+    "sync:mp3": "node scripts/sync-mp3.mjs",
+    "match:mp3": "node scripts/match-mp3.mjs --write",
     "check:external-links": "node scripts/check-external-links.mjs"
   },
   "dependencies": {

@@ -7,6 +7,7 @@ import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 const originals = new Map([...acousticTracks, ...electronicTracks].map((track) => [`${'sources' in track ? 'electronic' : 'acoustic'}:${track.title}`, track]));
 const originalFor = (song: (typeof allReimagined)[number]) => originals.get(`${song.originalEra ?? 'acoustic'}:${song.original}`);
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
+const downloadUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.downloads[0]?.url : undefined;
 
 const albumGroups = [reimagined.slice(0, 10), reimagined.slice(10), electronicReimagined];
 const jsonLd = featuredReimaginingAlbums.map((album, albumIndex) => {
@@ -80,6 +81,7 @@ const jsonLd = featuredReimaginingAlbums.map((album, albumIndex) => {
               {song.original && originalFor(song) ? (
                 <div class="source-links">
                   {originalFor(song)?.links?.map((link) => <a href={link.url}>{link.label ?? 'Original'} ↗</a>) ?? <a href={originalFor(song)?.url}>Original ↗</a>}
+                  {downloadUrl(originalFor(song)?.url) && <a href={downloadUrl(originalFor(song)?.url)} download>Download original MP3</a>}
                 </div>
               ) : (
                 <div class="pair__style">Original recording unavailable</div>
@@ -94,6 +96,7 @@ const jsonLd = featuredReimaginingAlbums.map((album, albumIndex) => {
                 {song.links?.map((link) => (
                   <a href={link.url}>Rebuilt · {link.label ?? (link.source === 'youtube' ? 'YouTube' : 'Suno')} ↗</a>
                 ))}
+                {downloadUrl(song.url) && <a href={downloadUrl(song.url)} download>Download reimagined MP3</a>}
               </div>
             </div>
           </div>
@@ -116,7 +119,7 @@ const jsonLd = featuredReimaginingAlbums.map((album, albumIndex) => {
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span>{t.url ? <a class="song-link" href={detailUrl(t.url)}>{t.title}</a> : t.title}</span>
-            <span class="len"><a class="platform-link" href={t.url}>Suno ↗</a></span>
+            <span class="len"><a class="platform-link" href={t.url}>Suno ↗</a>{downloadUrl(t.url) && <> · <a class="platform-link" href={downloadUrl(t.url)} download>Download MP3</a></>}</span>
           </li>
         ))}
       </ol>

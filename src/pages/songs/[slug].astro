@@ -61,6 +61,7 @@ const jsonLd = [
     description: song.description,
     byArtist: { '@id': `${SITE}/#musicgroup` },
     sameAs: song.links.map((link) => link.url),
+    ...(song.downloads.length ? { audio: song.downloads.map((download) => ({ '@type': 'AudioObject', contentUrl: download.url, encodingFormat: 'audio/mpeg' })) } : {}),
     ...(duration ? { duration } : {}),
     ...(song.createdAt ? { datePublished: song.createdAt } : {}),
     ...(song.genres?.length ? { genre: song.genres } : {}),
@@ -133,6 +134,13 @@ const jsonLd = [
           {song.links.map((link) => <a class="btn btn--primary" href={link.url}>{link.label} ↗</a>)}
           {playerUrl && <button class="btn" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play here on {playerName}</button>}
         </div>
+        {song.downloads.length > 0 && <>
+          <h2 class="detail__heading">Download MP3</h2>
+          <p>These files are hosted on Alex Merced Cloud, separate from the streaming services.</p>
+          <div class="btn-row">
+            {song.downloads.map((download) => <a class="btn" href={download.url} download title={`${download.fileName} (${(download.sizeBytes / 1048576).toFixed(1)} MiB)`}>{song.downloads.length === 1 ? 'Download MP3' : `Download ${download.fileName}`}</a>)}
+          </div>
+        </>}
       </div>
 
       {playerUrl && <div class="embed embed--poster">{(song.imageLargeUrl || song.imageUrl) && <CoverImage src={song.imageLargeUrl ?? song.imageUrl!} widths={[320, 480, 640]} sizes="(max-width: 720px) 92vw, 480px" alt={`Artwork for ${song.title}`} />}<button class="btn btn--primary" type="button" data-embed-url={playerUrl} data-track-title={song.title}>Play on {playerName}</button></div>}

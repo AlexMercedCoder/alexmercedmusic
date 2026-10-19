@@ -65,6 +65,7 @@
       style: song.style ?? null,
       length: song.length ?? (song.seconds ? `${Math.floor(song.seconds / 60)}:${String(song.seconds % 60).padStart(2, '0')}` : null),
       links: song.links,
+      downloads: song.downloads ?? [],
       originalTrackId: song.originalTrackId ?? null,
       originalPageUrl: song.originalPageUrl ?? null,
       reimaginedTrackIds: song.reimaginedTrackIds ?? [],

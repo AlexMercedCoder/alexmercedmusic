@@ -12,6 +12,7 @@ import {
 import { SITE, songByPrimaryUrl } from '../data/catalog-model';
 
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
+const downloadUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.downloads[0]?.url : undefined;
 
 const rebuiltByOriginal = new Map(
   reimagined.filter((r) => r.original).map((r) => [r.original, r]),
@@ -102,7 +103,7 @@ const jsonLd = [
                 </span>
               )}
             </span>
-            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>
+            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a>{downloadUrl(t.url) && <> · <a class="platform-link" href={downloadUrl(t.url)} download>Download MP3</a></>}</span>
           </li>
         ))}
       </ol>
@@ -116,7 +117,7 @@ const jsonLd = [
           <li>
             <span class="num">{String(i + 1).padStart(2, '0')}</span>
             <span><a class="song-link" href={detailUrl(t.url)}>{t.title}</a></span>
-            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a></span>
+            <span class="len">{t.length} · <a class="platform-link" href={t.url}>YouTube ↗</a>{downloadUrl(t.url) && <> · <a class="platform-link" href={downloadUrl(t.url)} download>Download MP3</a></>}</span>
           </li>
         ))}
       </ol>
@@ -140,7 +141,7 @@ const jsonLd = [
                 </span>
               )}
             </span>
-            <span class="len"><a class="platform-link" href={t.url}>SoundCloud ↗</a></span>
+            <span class="len"><a class="platform-link" href={t.url}>SoundCloud ↗</a>{downloadUrl(t.url) && <> · <a class="platform-link" href={downloadUrl(t.url)} download>Download MP3</a></>}</span>
           </li>
         ))}
       </ol>

@@ -13,7 +13,7 @@ const videoIds = new Set(catalog.videos.map((video) => video.id));
 const youtubeIds = new Set(catalog.videos.map((video) => video.youtubeId));
 const songMetaTitles = new Set();
 
-assert.equal(catalog.schemaVersion, '2.1.0');
+assert.equal(catalog.schemaVersion, '2.2.0');
 assert.match(catalog.updatedAt, /^\d{4}-\d{2}-\d{2}$/);
 assert.equal(songIds.size, catalog.songs.length, 'Song IDs must be unique.');
 assert.equal(songSlugs.size, catalog.songs.length, 'Song slugs must be unique.');
@@ -22,6 +22,23 @@ assert.equal(videoIds.size, catalog.videos.length, 'Video IDs must be unique.');
 assert.equal(youtubeIds.size, catalog.videos.length, 'YouTube IDs must be unique.');
 assert.equal(catalog.counts.songs, catalog.songs.length);
 assert.equal(catalog.counts.albums, catalog.albums.length);
+const mp3Uploads = JSON.parse(read('src/data/mp3-uploads.json'));
+const mp3Matches = JSON.parse(read('src/data/mp3-matches.json'));
+assert.equal(catalog.counts.mp3Files, mp3Uploads.files.length);
+assert.equal(catalog.counts.songsWithMp3, catalog.songs.filter((song) => song.downloads.length).length);
+assert.equal(new Set(mp3Uploads.files.map((file) => file.sourcePath)).size, mp3Uploads.files.length);
+assert.equal(new Set(mp3Uploads.files.map((file) => file.url)).size, mp3Uploads.files.length);
+for (const file of mp3Uploads.files) {
+  assert.ok(file.url.startsWith('https://mp3.alexmercedcloud.com/tracks/'), `${file.sourcePath} has the wrong host.`);
+  assert.match(file.sha256, /^[a-f0-9]{64}$/);
+  assert.ok(file.sizeBytes > 0);
+  const songId = mp3Matches[file.sourcePath];
+  if (!songId) continue;
+  const song = catalog.songs.find((candidate) => candidate.id === songId);
+  assert.ok(song?.downloads.some((download) => download.url === file.url), `${file.sourcePath} is not connected to its song.`);
+}
+const downloadsPage = read('dist/downloads/index.html');
+for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
 assert.equal(catalog.distributedReleases.length, 10);
 assert.ok(catalog.distributedReleases.every((release) => release.title && release.released && release.trackCount > 0 && release.links.length > 0));
 for (const release of catalog.distributedReleases) {
@@ -88,6 +105,7 @@ for (const song of catalog.songs) {
   assert.ok(html.includes('MusicRecording'), `${song.title} is missing recording structured data.`);
   assert.ok(existsSync(new URL(`dist/social/songs/${song.slug}.png`, root)), `${song.title} is missing its social image.`);
   for (const link of song.links) assert.ok(html.includes(link.url.replaceAll('&', '&amp;')) || html.includes(link.url), `${song.title} is missing ${link.url}.`);
+  for (const download of song.downloads) assert.ok(html.includes(download.url), `${song.title} is missing its MP3 download.`);
 }
 
 assert.equal(catalog.counts.videos, catalog.videos.length);

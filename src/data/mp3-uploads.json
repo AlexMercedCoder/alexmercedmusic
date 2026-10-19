@@ -1,0 +1,2016 @@
+{
+  "schemaVersion": 1,
+  "files": [
+    {
+      "sourcePath": "A Glorious Mess.mp3",
+      "sha256": "dd7e4460126336918959a7d7986b013e3e5b559c34d6b8f0fcc02a98a893d5e2",
+      "sizeBytes": 6040549,
+      "objectKey": "tracks/a-glorious-mess-dd7e446012633691.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/a-glorious-mess-dd7e446012633691.mp3",
+      "uploadedAt": "2026-10-19T21:56:09.512Z"
+    },
+    {
+      "sourcePath": "A Hundred Pieces of Me.mp3",
+      "sha256": "0801e22d948a25e62cf7eb4df6c236c17821876c4ffc43c994cc5709a11dfd52",
+      "sizeBytes": 5419951,
+      "objectKey": "tracks/a-hundred-pieces-of-me-0801e22d948a25e6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/a-hundred-pieces-of-me-0801e22d948a25e6.mp3",
+      "uploadedAt": "2026-10-19T21:56:10.107Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - But Youre Still Sleeping.mp3",
+      "sha256": "6fdecee134bb6751478cd326e9c5a3b7559a3e43542737873814bf234e57a79c",
+      "sizeBytes": 3262416,
+      "objectKey": "tracks/alex-merced-but-youre-still-sleeping-6fdecee134bb6751.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-but-youre-still-sleeping-6fdecee134bb6751.mp3",
+      "uploadedAt": "2026-10-19T21:56:09.149Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - I’ve Only Seen Your Eyes.mp3",
+      "sha256": "3229b88c9e311bcbea6cc066e771500770dd543e5c48b784d1e248caf94614cf",
+      "sizeBytes": 3658558,
+      "objectKey": "tracks/alex-merced-i-ve-only-seen-your-eyes-3229b88c9e311bcb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-i-ve-only-seen-your-eyes-3229b88c9e311bcb.mp3",
+      "uploadedAt": "2026-10-19T21:56:09.552Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - Sadistic Affirmation.mp3",
+      "sha256": "38f5255204d1aa9051947fc81bc088ea42291399a46ebc4ee93826193eda3e52",
+      "sizeBytes": 2842816,
+      "objectKey": "tracks/alex-merced-sadistic-affirmation-38f5255204d1aa90.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-sadistic-affirmation-38f5255204d1aa90.mp3",
+      "uploadedAt": "2026-10-19T21:56:11.175Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - The Most Beautiful Sin.mp3",
+      "sha256": "dae0e899c3cdc6c1ddc5906fab5d8291bd17ad02ff7c1c62bedf342955053673",
+      "sizeBytes": 3317516,
+      "objectKey": "tracks/alex-merced-the-most-beautiful-sin-dae0e899c3cdc6c1.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-most-beautiful-sin-dae0e899c3cdc6c1.mp3",
+      "uploadedAt": "2026-10-19T21:56:11.869Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - Theorists Lament.mp3",
+      "sha256": "1db3299cb3bb3871104f4b6d69a6c9cbe656b4889f1f3738c0349b6df5b92dd9",
+      "sizeBytes": 3040844,
+      "objectKey": "tracks/alex-merced-theorists-lament-1db3299cb3bb3871.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-theorists-lament-1db3299cb3bb3871.mp3",
+      "uploadedAt": "2026-10-19T21:56:11.993Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - To Say These Words (Alex AI Voice Cover).mp3",
+      "sha256": "b20449875cfe36d8e75df63e9cc4a1196f1fd44e3ce9ee31178a010509171058",
+      "sizeBytes": 3900483,
+      "objectKey": "tracks/alex-merced-to-say-these-words-alex-ai-voice-cover-b20449875cfe36d8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-to-say-these-words-alex-ai-voice-cover-b20449875cfe36d8.mp3",
+      "uploadedAt": "2026-10-19T21:56:12.458Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - To Say These Words.mp3",
+      "sha256": "1e349acc3d306ee3fe5b8a5d2de6f74bf8b0dc2b1778a45c1c0e1f0d003832b1",
+      "sizeBytes": 2908998,
+      "objectKey": "tracks/alex-merced-to-say-these-words-1e349acc3d306ee3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-to-say-these-words-1e349acc3d306ee3.mp3",
+      "uploadedAt": "2026-10-19T21:56:13.345Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - Your Fairy Tale.mp3",
+      "sha256": "0f4abed55412e4c0dc0b9b64e73b40f04c511fe1aecb040f2c945fdbacabcaa7",
+      "sizeBytes": 2912476,
+      "objectKey": "tracks/alex-merced-your-fairy-tale-0f4abed55412e4c0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-your-fairy-tale-0f4abed55412e4c0.mp3",
+      "uploadedAt": "2026-10-19T21:56:14.303Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Alex Merced - Your Smile.mp3",
+      "sha256": "37f35f817189fae59dc327654d478ffe4413edefe602f920ea743c34a4545f4b",
+      "sizeBytes": 2775820,
+      "objectKey": "tracks/alex-merced-your-smile-37f35f817189fae5.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-your-smile-37f35f817189fae5.mp3",
+      "uploadedAt": "2026-10-19T21:56:14.160Z"
+    },
+    {
+      "sourcePath": "Acoustic1/But You’re Still Sleeping (Alex AI Voice Cover).mp3",
+      "sha256": "441393ecd168bbc81470c132df4240bba95e166d503428027c8d42b90bbea9c9",
+      "sizeBytes": 4555117,
+      "objectKey": "tracks/but-you-re-still-sleeping-alex-ai-voice-cover-441393ecd168bbc8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/but-you-re-still-sleeping-alex-ai-voice-cover-441393ecd168bbc8.mp3",
+      "uploadedAt": "2026-10-19T21:56:15.374Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Heart to Give You (Alex AI Voice Cover).mp3",
+      "sha256": "6bab82feb5345966ccd4b96d96d20b77fb19b6eb36655f5bc6f01bc4e3ee44f7",
+      "sizeBytes": 4611840,
+      "objectKey": "tracks/heart-to-give-you-alex-ai-voice-cover-6bab82feb5345966.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/heart-to-give-you-alex-ai-voice-cover-6bab82feb5345966.mp3",
+      "uploadedAt": "2026-10-19T21:56:15.631Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Heart to Give You Original.mp3",
+      "sha256": "e0ad547567a5997d29a211879f8f7ac05b62333828cf2994094b1a640797581d",
+      "sizeBytes": 2563630,
+      "objectKey": "tracks/heart-to-give-you-original-e0ad547567a5997d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/heart-to-give-you-original-e0ad547567a5997d.mp3",
+      "uploadedAt": "2026-10-19T21:56:16.525Z"
+    },
+    {
+      "sourcePath": "Acoustic1/My Heart Stopped (Alex AI Voice Cover).mp3",
+      "sha256": "1e5e6aacc1d4c0dc7bc29217d3d1119f69dd17d3637439b6b4e0f2804e484018",
+      "sizeBytes": 5174761,
+      "objectKey": "tracks/my-heart-stopped-alex-ai-voice-cover-1e5e6aacc1d4c0dc.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/my-heart-stopped-alex-ai-voice-cover-1e5e6aacc1d4c0dc.mp3",
+      "uploadedAt": "2026-10-19T21:56:16.650Z"
+    },
+    {
+      "sourcePath": "Acoustic1/My Heart Stopped Original.mp3",
+      "sha256": "ac10658c7bd160a2f600e58e5553190fdab52bf2d99bfc4b7d9eb86b9a3052a5",
+      "sizeBytes": 2839244,
+      "objectKey": "tracks/my-heart-stopped-original-ac10658c7bd160a2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/my-heart-stopped-original-ac10658c7bd160a2.mp3",
+      "uploadedAt": "2026-10-19T21:56:17.523Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Only Seen Your Eyes Once Here (Alex AI Voice Cover).mp3",
+      "sha256": "a81409b003f53a9261a4813a90ab254bf64043c6419e7d824e97658522470232",
+      "sizeBytes": 4873093,
+      "objectKey": "tracks/only-seen-your-eyes-once-here-alex-ai-voice-cover-a81409b003f53a92.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/only-seen-your-eyes-once-here-alex-ai-voice-cover-a81409b003f53a92.mp3",
+      "uploadedAt": "2026-10-19T21:56:17.958Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Pain (Alex AI Voice Cover).mp3",
+      "sha256": "f092d1514d130a4dc73c3f01fe0e59f8ab23f5eaceac3554abb526f65a0489e8",
+      "sizeBytes": 4969600,
+      "objectKey": "tracks/pain-alex-ai-voice-cover-f092d1514d130a4d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/pain-alex-ai-voice-cover-f092d1514d130a4d.mp3",
+      "uploadedAt": "2026-10-19T21:56:19.237Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Pain Original.mp3",
+      "sha256": "2fc5b894f06b4187585776239aacfbdd2768960943c81dd216cd9bf44ad0f275",
+      "sizeBytes": 2855982,
+      "objectKey": "tracks/pain-original-2fc5b894f06b4187.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/pain-original-2fc5b894f06b4187.mp3",
+      "uploadedAt": "2026-10-19T21:56:19.099Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Sadistic Affirmation (Alex AI Voice Cover).mp3",
+      "sha256": "08efc6dfe7774f10bd69502140cc45d8b845c9cd69ec5a58cbe04b80cd33077d",
+      "sizeBytes": 3701885,
+      "objectKey": "tracks/sadistic-affirmation-alex-ai-voice-cover-08efc6dfe7774f10.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/sadistic-affirmation-alex-ai-voice-cover-08efc6dfe7774f10.mp3",
+      "uploadedAt": "2026-10-19T21:56:19.851Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Scars and Stitches (Alex Voice AI Cover).mp3",
+      "sha256": "20279b635dd06abdd8eefd17c22e9ef4a00329436bbd4d4823d5fb890e5cec46",
+      "sizeBytes": 5407025,
+      "objectKey": "tracks/scars-and-stitches-alex-voice-ai-cover-20279b635dd06abd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/scars-and-stitches-alex-voice-ai-cover-20279b635dd06abd.mp3",
+      "uploadedAt": "2026-10-19T21:56:20.269Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Scars and stitches Original.mp3",
+      "sha256": "96a3595f90c93721f13729688143beb4649ce3da8a197199e774608508a3567b",
+      "sizeBytes": 3994603,
+      "objectKey": "tracks/scars-and-stitches-original-96a3595f90c93721.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/scars-and-stitches-original-96a3595f90c93721.mp3",
+      "uploadedAt": "2026-10-19T21:56:21.714Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Solumn Thoughts (Alex AI Voice Cover II).mp3",
+      "sha256": "f1dc9772c222399f962c671d5d9c6fc4c0bd8ae3b2d47d920fd41017bab2df72",
+      "sizeBytes": 6086654,
+      "objectKey": "tracks/solumn-thoughts-alex-ai-voice-cover-ii-f1dc9772c222399f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/solumn-thoughts-alex-ai-voice-cover-ii-f1dc9772c222399f.mp3",
+      "uploadedAt": "2026-10-19T21:56:21.904Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Solumn Thoughts Original.mp3",
+      "sha256": "46735d174b027cd04dadf15bd36b609a456cff62840c5397697b58647502e274",
+      "sizeBytes": 5574244,
+      "objectKey": "tracks/solumn-thoughts-original-46735d174b027cd0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/solumn-thoughts-original-46735d174b027cd0.mp3",
+      "uploadedAt": "2026-10-19T21:56:22.767Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Tell My Heart (Alex AI Voice Cover).mp3",
+      "sha256": "e6bd91c2b0106963623bd4cb4e0e46966747bc0fa79ec420bdba59decc162fa8",
+      "sizeBytes": 3704254,
+      "objectKey": "tracks/tell-my-heart-alex-ai-voice-cover-e6bd91c2b0106963.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-my-heart-alex-ai-voice-cover-e6bd91c2b0106963.mp3",
+      "uploadedAt": "2026-10-19T21:56:22.631Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Tell My Heart Original.mp3",
+      "sha256": "86b858f59e92d75b1aacbbea94619c4c3b96c122eff64b80d9c8e5439eb66fec",
+      "sizeBytes": 2493762,
+      "objectKey": "tracks/tell-my-heart-original-86b858f59e92d75b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-my-heart-original-86b858f59e92d75b.mp3",
+      "uploadedAt": "2026-10-19T21:56:23.761Z"
+    },
+    {
+      "sourcePath": "Acoustic1/The Most Beautiful Sin (Alex AI Voice Cover).mp3",
+      "sha256": "5425ad5f2fb4c45f5063ab8783d514f872435db30aa149339729a981f3d44daa",
+      "sizeBytes": 4553982,
+      "objectKey": "tracks/the-most-beautiful-sin-alex-ai-voice-cover-5425ad5f2fb4c45f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-most-beautiful-sin-alex-ai-voice-cover-5425ad5f2fb4c45f.mp3",
+      "uploadedAt": "2026-10-19T21:56:24.015Z"
+    },
+    {
+      "sourcePath": "Acoustic1/The One Who Can’t Be Loved (Alex AI Voice Cover).mp3",
+      "sha256": "bed3439aa08584b8bacf4e58c2eac1ae581f46f0d66654869f07dc17904aa670",
+      "sizeBytes": 5623325,
+      "objectKey": "tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-bed3439aa08584b8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-bed3439aa08584b8.mp3",
+      "uploadedAt": "2026-10-19T21:56:25.342Z"
+    },
+    {
+      "sourcePath": "Acoustic1/The One Who Can’t Be Loved (Original).mp3",
+      "sha256": "8bf92dbecdef8843d3dddb890ccbe17c19cb409ffa7bcff0ea0f41f4fb824010",
+      "sizeBytes": 3530614,
+      "objectKey": "tracks/the-one-who-can-t-be-loved-original-8bf92dbecdef8843.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-one-who-can-t-be-loved-original-8bf92dbecdef8843.mp3",
+      "uploadedAt": "2026-10-19T21:56:25.097Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Theorist’s Lament (Alex AI Voice Cover).mp3",
+      "sha256": "c829239da292c0002a14d3f56ecfc06264651ca7f46ec03c5f6138dfac824405",
+      "sizeBytes": 3848894,
+      "objectKey": "tracks/theorist-s-lament-alex-ai-voice-cover-c829239da292c000.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/theorist-s-lament-alex-ai-voice-cover-c829239da292c000.mp3",
+      "uploadedAt": "2026-10-19T21:56:25.845Z"
+    },
+    {
+      "sourcePath": "Acoustic1/These days (Alex AI Voice Cover).mp3",
+      "sha256": "97c515d79620ebb7e011fe906545bc8113090d4bebd9758b3d99e69a823e446c",
+      "sizeBytes": 4091691,
+      "objectKey": "tracks/these-days-alex-ai-voice-cover-97c515d79620ebb7.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/these-days-alex-ai-voice-cover-97c515d79620ebb7.mp3",
+      "uploadedAt": "2026-10-19T21:56:26.702Z"
+    },
+    {
+      "sourcePath": "Acoustic1/These days original.mp3",
+      "sha256": "50252a6338b51a832f353f6ecb6f8191dc53647a50f819a46fdb991b1a5d7d64",
+      "sizeBytes": 2415593,
+      "objectKey": "tracks/these-days-original-50252a6338b51a83.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/these-days-original-50252a6338b51a83.mp3",
+      "uploadedAt": "2026-10-19T21:56:26.987Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Through the Darkness (Alex AI Voice Cover).mp3",
+      "sha256": "bf2cff0ac4f5ac1b237ef61284d8723566b1c8c1c4c603a6782181dd61b83d3f",
+      "sizeBytes": 5033336,
+      "objectKey": "tracks/through-the-darkness-alex-ai-voice-cover-bf2cff0ac4f5ac1b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/through-the-darkness-alex-ai-voice-cover-bf2cff0ac4f5ac1b.mp3",
+      "uploadedAt": "2026-10-19T21:56:27.583Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Through the Darkness Original.mp3",
+      "sha256": "d6989345905b9f7cafbac9fdf461195f9c1756b8867d980449f51996ec03a88e",
+      "sizeBytes": 3210630,
+      "objectKey": "tracks/through-the-darkness-original-d6989345905b9f7c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/through-the-darkness-original-d6989345905b9f7c.mp3",
+      "uploadedAt": "2026-10-19T21:56:28.099Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Try to Forget You (Alex AI Voice Cover).mp3",
+      "sha256": "17ab25e101a6bbdda27cfa9be5cd30b458e1608b71bbb5416cf0dc0720457b2d",
+      "sizeBytes": 5117574,
+      "objectKey": "tracks/try-to-forget-you-alex-ai-voice-cover-17ab25e101a6bbdd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/try-to-forget-you-alex-ai-voice-cover-17ab25e101a6bbdd.mp3",
+      "uploadedAt": "2026-10-19T21:56:29.142Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Try to Forget You (original).mp3",
+      "sha256": "1f59ae6de969a43be3d13476511a213051afcdf70a7d4d585bff8950ef5e68e1",
+      "sizeBytes": 3121840,
+      "objectKey": "tracks/try-to-forget-you-original-1f59ae6de969a43b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/try-to-forget-you-original-1f59ae6de969a43b.mp3",
+      "uploadedAt": "2026-10-19T21:56:29.110Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Your Fairy Tale (Alex AI Voice Cover).mp3",
+      "sha256": "b28ffe581e948700e3cec2a819506880baf6a38816d9feb81a9608da61a5a8b4",
+      "sizeBytes": 3787302,
+      "objectKey": "tracks/your-fairy-tale-alex-ai-voice-cover-b28ffe581e948700.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-fairy-tale-alex-ai-voice-cover-b28ffe581e948700.mp3",
+      "uploadedAt": "2026-10-19T21:56:29.693Z"
+    },
+    {
+      "sourcePath": "Acoustic1/Your Smile (Alex AI Voice Cover).mp3",
+      "sha256": "71cd27f61b05cdbe78563bdff12a170d63f7352ea0035a756cf019a97a658b87",
+      "sizeBytes": 4368458,
+      "objectKey": "tracks/your-smile-alex-ai-voice-cover-71cd27f61b05cdbe.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-smile-alex-ai-voice-cover-71cd27f61b05cdbe.mp3",
+      "uploadedAt": "2026-10-19T21:56:30.454Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Be Weird, Be Wonderful.mp3",
+      "sha256": "ce2f38ec984d30d1560e4faea5c6879ec924b1256e35c12438e7781795164d96",
+      "sizeBytes": 2127383,
+      "objectKey": "tracks/alex-merced-be-weird-be-wonderful-ce2f38ec984d30d1.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-be-weird-be-wonderful-ce2f38ec984d30d1.mp3",
+      "uploadedAt": "2026-10-19T21:56:30.893Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Elevator to a Secret Floor.mp3",
+      "sha256": "fc08b33473f6a5324596eaaef9d59e422e4f548ce9be8f382f41fd2e91a43f8e",
+      "sizeBytes": 1840690,
+      "objectKey": "tracks/alex-merced-elevator-to-a-secret-floor-fc08b33473f6a532.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-elevator-to-a-secret-floor-fc08b33473f6a532.mp3",
+      "uploadedAt": "2026-10-19T21:56:31.168Z"
+    },
+    {
+      "sourcePath": "Alex Merced - I Wish I’d Saved a Life (AlexMercedMusic.com).mp3",
+      "sha256": "53774b0ca3f36182cd470ee126e079b2fdbe9c548324b9654f8f1333517a45cf",
+      "sizeBytes": 3519269,
+      "objectKey": "tracks/alex-merced-i-wish-i-d-saved-a-life-alexmercedmusic-com-53774b0ca3f36182.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-i-wish-i-d-saved-a-life-alexmercedmusic-com-53774b0ca3f36182.mp3",
+      "uploadedAt": "2026-10-19T21:56:31.726Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Jellyfish Orchestra.mp3",
+      "sha256": "837867cc4b697dfd8b9580812f7881fb2a9da59b2c67497d8bd2271c7035de2c",
+      "sizeBytes": 1798352,
+      "objectKey": "tracks/alex-merced-jellyfish-orchestra-837867cc4b697dfd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-jellyfish-orchestra-837867cc4b697dfd.mp3",
+      "uploadedAt": "2026-10-19T21:56:32.544Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Make Some Room.mp3",
+      "sha256": "72fbbde37aef08000a257e6e42889f226ceada1edbf44ecd438408c0644a0bb8",
+      "sizeBytes": 1759032,
+      "objectKey": "tracks/alex-merced-make-some-room-72fbbde37aef0800.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-make-some-room-72fbbde37aef0800.mp3",
+      "uploadedAt": "2026-10-19T21:56:32.906Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Paper Planets.mp3",
+      "sha256": "cb909315a4ef1dfa142fc6f013b24d46ba71a6259f29a8492f2a6d5aac3abdf1",
+      "sizeBytes": 1661191,
+      "objectKey": "tracks/alex-merced-paper-planets-cb909315a4ef1dfa.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-paper-planets-cb909315a4ef1dfa.mp3",
+      "uploadedAt": "2026-10-19T21:56:33.107Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Scar and Stitches.mp3",
+      "sha256": "437b482617e3fe9c8f911ee261a20bf34c16e6f38a972f8abd73e8eb3dcb5a0d",
+      "sizeBytes": 6212473,
+      "objectKey": "tracks/alex-merced-scar-and-stitches-437b482617e3fe9c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-scar-and-stitches-437b482617e3fe9c.mp3",
+      "uploadedAt": "2026-10-19T21:56:34.337Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Stay Strange, Stay Kind.mp3",
+      "sha256": "25b905c13bc1383732275c12cb56eefbdba2bd19434404f828ddc2e5ed6c6769",
+      "sizeBytes": 2012157,
+      "objectKey": "tracks/alex-merced-stay-strange-stay-kind-25b905c13bc13837.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-stay-strange-stay-kind-25b905c13bc13837.mp3",
+      "uploadedAt": "2026-10-19T21:56:34.446Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Tell my heart.mp3",
+      "sha256": "1bc056908a52da55961897b347b21157b9786cb4b0f9ff7ff724444bd8b51da4",
+      "sizeBytes": 1005649,
+      "objectKey": "tracks/alex-merced-tell-my-heart-1bc056908a52da55.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-tell-my-heart-1bc056908a52da55.mp3",
+      "uploadedAt": "2026-10-19T21:56:34.676Z"
+    },
+    {
+      "sourcePath": "Alex Merced - The Misprinted Stamp.mp3",
+      "sha256": "6569c09810a44862309cc14f3e4836a18dc741dd40dc7716b6e5a0a7778d1125",
+      "sizeBytes": 2902236,
+      "objectKey": "tracks/alex-merced-the-misprinted-stamp-6569c09810a44862.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-misprinted-stamp-6569c09810a44862.mp3",
+      "uploadedAt": "2026-10-19T21:56:35.327Z"
+    },
+    {
+      "sourcePath": "ALex Merced - the one who can't be loved.mp3",
+      "sha256": "d1a75050e37972e9e55a227a203acf521ea1163a533a890c8f8545ecd0caaac9",
+      "sizeBytes": 5820009,
+      "objectKey": "tracks/alex-merced-the-one-who-can-t-be-loved-d1a75050e37972e9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-one-who-can-t-be-loved-d1a75050e37972e9.mp3",
+      "uploadedAt": "2026-10-19T21:56:37.003Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Through The Darkness [IqcWdaAdV-c].mp3",
+      "sha256": "4ce4cf3e2979c755b35eb264682f0bb3fad2961aee74186434ab25d5db38e62d",
+      "sizeBytes": 1817234,
+      "objectKey": "tracks/alex-merced-through-the-darkness-iqcwdaadv-c-4ce4cf3e2979c755.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-through-the-darkness-iqcwdaadv-c-4ce4cf3e2979c755.mp3",
+      "uploadedAt": "2026-10-19T21:56:36.772Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Uninvited Firework.mp3",
+      "sha256": "1cafdc470615a206dad0d5c2fd4b05dbf57985162da448192ea2d8552ef4bc33",
+      "sizeBytes": 1838229,
+      "objectKey": "tracks/alex-merced-uninvited-firework-1cafdc470615a206.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-uninvited-firework-1cafdc470615a206.mp3",
+      "uploadedAt": "2026-10-19T21:56:36.967Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Where the World Fell Short (AlexMercedMusic.com).mp3",
+      "sha256": "59c07555dc2cd425fc962c9d7b0c612f336696834caa3e3b1941d0c42c470c88",
+      "sizeBytes": 3194171,
+      "objectKey": "tracks/alex-merced-where-the-world-fell-short-alexmercedmusic-com-59c07555dc2cd425.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-where-the-world-fell-short-alexmercedmusic-com-59c07555dc2cd425.mp3",
+      "uploadedAt": "2026-10-19T21:56:37.467Z"
+    },
+    {
+      "sourcePath": "Alex Merced Birthday.mp3",
+      "sha256": "e99bbd67dfa1f077fbd3cc73b8ae95afd7fe5f281420857a43963459c2814829",
+      "sizeBytes": 1287175,
+      "objectKey": "tracks/alex-merced-birthday-e99bbd67dfa1f077.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-birthday-e99bbd67dfa1f077.mp3",
+      "uploadedAt": "2026-10-19T21:56:38.576Z"
+    },
+    {
+      "sourcePath": "Ambition Habit.mp3",
+      "sha256": "58569094274afc25e675795473b1fc17a853c46c48d8c514e577859a98d6a735",
+      "sizeBytes": 5258955,
+      "objectKey": "tracks/ambition-habit-58569094274afc25.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/ambition-habit-58569094274afc25.mp3",
+      "uploadedAt": "2026-10-19T21:56:40.144Z"
+    },
+    {
+      "sourcePath": "Banana Every Day.mp3",
+      "sha256": "448a21e6580ba630b21349653f83a836973923a0c1721c223ba23ffc4df3ca34",
+      "sizeBytes": 4961169,
+      "objectKey": "tracks/banana-every-day-448a21e6580ba630.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/banana-every-day-448a21e6580ba630.mp3",
+      "uploadedAt": "2026-10-19T21:56:40.113Z"
+    },
+    {
+      "sourcePath": "Be Gentle.mp3",
+      "sha256": "b2eacf05a5340422a9bbe9341267f2da55b8c71cf11c09db2fd0aa511ccf2513",
+      "sizeBytes": 5522993,
+      "objectKey": "tracks/be-gentle-b2eacf05a5340422.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/be-gentle-b2eacf05a5340422.mp3",
+      "uploadedAt": "2026-10-19T21:56:40.265Z"
+    },
+    {
+      "sourcePath": "Be the Whole Thing.mp3",
+      "sha256": "7925646bc9e761aae88a0779a8ca8f7c4d964ce7d1ede617320352a82f79e64c",
+      "sizeBytes": 6236470,
+      "objectKey": "tracks/be-the-whole-thing-7925646bc9e761aa.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/be-the-whole-thing-7925646bc9e761aa.mp3",
+      "uploadedAt": "2026-10-19T21:56:42.431Z"
+    },
+    {
+      "sourcePath": "Best Me That Will Ever Exist.mp3",
+      "sha256": "9862bf5fb574978e840d0d7231941ed4ec5d9ac1420aa7325c256a2a20509343",
+      "sizeBytes": 6758816,
+      "objectKey": "tracks/best-me-that-will-ever-exist-9862bf5fb574978e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/best-me-that-will-ever-exist-9862bf5fb574978e.mp3",
+      "uploadedAt": "2026-10-19T21:56:42.957Z"
+    },
+    {
+      "sourcePath": "Better Parts.mp3",
+      "sha256": "037922b0412f41d630adbea2026580321af21a36d747b896f4073b2bf6274ae5",
+      "sizeBytes": 6358135,
+      "objectKey": "tracks/better-parts-037922b0412f41d6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/better-parts-037922b0412f41d6.mp3",
+      "uploadedAt": "2026-10-19T21:56:43.528Z"
+    },
+    {
+      "sourcePath": "BG MuSic (1).mp3",
+      "sha256": "8f5f3c206e3353a8c46c5ba247c757646cfc99c0a658df58a504f36bd275f55d",
+      "sizeBytes": 3402355,
+      "objectKey": "tracks/bg-music-1-8f5f3c206e3353a8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/bg-music-1-8f5f3c206e3353a8.mp3",
+      "uploadedAt": "2026-10-19T21:56:43.224Z"
+    },
+    {
+      "sourcePath": "BG MuSic.mp3",
+      "sha256": "8171af0c9e53493f6444277b03a8fc6b605e54e0a3f9546caf74f24331507d06",
+      "sizeBytes": 4993409,
+      "objectKey": "tracks/bg-music-8171af0c9e53493f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/bg-music-8171af0c9e53493f.mp3",
+      "uploadedAt": "2026-10-19T21:56:44.700Z"
+    },
+    {
+      "sourcePath": "Black Hole Love.mp3",
+      "sha256": "2b2acd0d8a9cd1574a45b5396eaf4831c2167519f1a3c224856beb8e4f5ea384",
+      "sizeBytes": 3393175,
+      "objectKey": "tracks/black-hole-love-2b2acd0d8a9cd157.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/black-hole-love-2b2acd0d8a9cd157.mp3",
+      "uploadedAt": "2026-10-19T21:56:45.222Z"
+    },
+    {
+      "sourcePath": "Borrowed Appetite.mp3",
+      "sha256": "40c55bb8c68eb84267a87470dfd6e254c7905b8cc4a57573c75d4857439b7010",
+      "sizeBytes": 4946213,
+      "objectKey": "tracks/borrowed-appetite-40c55bb8c68eb842.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/borrowed-appetite-40c55bb8c68eb842.mp3",
+      "uploadedAt": "2026-10-19T21:56:46.022Z"
+    },
+    {
+      "sourcePath": "Borrowed Lives.mp3",
+      "sha256": "ca89e290e6053672caeb2470560f3ad03616c26a6a6af0e98dc14641060daf30",
+      "sizeBytes": 4527975,
+      "objectKey": "tracks/borrowed-lives-ca89e290e6053672.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/borrowed-lives-ca89e290e6053672.mp3",
+      "uploadedAt": "2026-10-19T21:56:45.918Z"
+    },
+    {
+      "sourcePath": "Borrowed Smile.mp3",
+      "sha256": "1eb679df171dda2712393b9a213626b6b8a0a20732cb3ef08353b214da7538ab",
+      "sizeBytes": 4670928,
+      "objectKey": "tracks/borrowed-smile-1eb679df171dda27.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/borrowed-smile-1eb679df171dda27.mp3",
+      "uploadedAt": "2026-10-19T21:56:47.019Z"
+    },
+    {
+      "sourcePath": "Borrowed Years.mp3",
+      "sha256": "3d854f59f12b63ad463d7fbefca5521e86d5d76d24208cabf23e2ff2f2d99634",
+      "sizeBytes": 6251234,
+      "objectKey": "tracks/borrowed-years-3d854f59f12b63ad.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/borrowed-years-3d854f59f12b63ad.mp3",
+      "uploadedAt": "2026-10-19T21:56:47.926Z"
+    },
+    {
+      "sourcePath": "Bottomless Plate.mp3",
+      "sha256": "855bfed1a124cca8e672ca3112ff16178ec44cc200e69c0b118c8de3d98b95dc",
+      "sizeBytes": 3337123,
+      "objectKey": "tracks/bottomless-plate-855bfed1a124cca8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/bottomless-plate-855bfed1a124cca8.mp3",
+      "uploadedAt": "2026-10-19T21:56:48.267Z"
+    },
+    {
+      "sourcePath": "Break The Frame.mp3",
+      "sha256": "089c2add8046042d23fbb5902e884f6ba15f43c5212a469fe1db1c5d871ae7fb",
+      "sizeBytes": 6029804,
+      "objectKey": "tracks/break-the-frame-089c2add8046042d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/break-the-frame-089c2add8046042d.mp3",
+      "uploadedAt": "2026-10-19T21:56:48.539Z"
+    },
+    {
+      "sourcePath": "Build It In Yourself.mp3",
+      "sha256": "d7f73b159552bb0ef3d83e6beb8346456d43e939227494a0eeeb7c88303b7140",
+      "sizeBytes": 5670480,
+      "objectKey": "tracks/build-it-in-yourself-d7f73b159552bb0e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/build-it-in-yourself-d7f73b159552bb0e.mp3",
+      "uploadedAt": "2026-10-19T21:56:49.609Z"
+    },
+    {
+      "sourcePath": "Built it Up.mp3",
+      "sha256": "b6a80157506948dc9570b133e6d0f0e081a4998c5c1ef574cff6f96ea7d8c19c",
+      "sizeBytes": 5038078,
+      "objectKey": "tracks/built-it-up-b6a80157506948dc.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/built-it-up-b6a80157506948dc.mp3",
+      "uploadedAt": "2026-10-19T21:56:50.813Z"
+    },
+    {
+      "sourcePath": "Burn the Maps.mp3",
+      "sha256": "7bb4e9a0f2c0f479e99c09421c2be2a81d93f601d242158660a491cdb5fe3542",
+      "sizeBytes": 4111396,
+      "objectKey": "tracks/burn-the-maps-7bb4e9a0f2c0f479.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/burn-the-maps-7bb4e9a0f2c0f479.mp3",
+      "uploadedAt": "2026-10-19T21:56:50.689Z"
+    },
+    {
+      "sourcePath": "CARRY THE FIRE.mp3",
+      "sha256": "123c4199a91fdb4ea489b22511f46e037f7a15ffacaea9072ae704fd1429de1b",
+      "sizeBytes": 6543858,
+      "objectKey": "tracks/carry-the-fire-123c4199a91fdb4e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/carry-the-fire-123c4199a91fdb4e.mp3",
+      "uploadedAt": "2026-10-19T21:56:51.344Z"
+    },
+    {
+      "sourcePath": "Cassette Rewind.mp3",
+      "sha256": "4bbcd5ab34f3666b3d7ce82f3f253b63aef15b841b814d394868720dae30663c",
+      "sizeBytes": 5816817,
+      "objectKey": "tracks/cassette-rewind-4bbcd5ab34f3666b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/cassette-rewind-4bbcd5ab34f3666b.mp3",
+      "uploadedAt": "2026-10-19T21:56:51.919Z"
+    },
+    {
+      "sourcePath": "Chess Alone.mp3",
+      "sha256": "f6e239be248ab9bbf7e005e8645451daad62ae69277cd35c2414c0f9b65a0524",
+      "sizeBytes": 6036943,
+      "objectKey": "tracks/chess-alone-f6e239be248ab9bb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/chess-alone-f6e239be248ab9bb.mp3",
+      "uploadedAt": "2026-10-19T21:56:53.664Z"
+    },
+    {
+      "sourcePath": "Come As You Are.mp3",
+      "sha256": "c24dfa60e8d25ff49a868c97d435244dbd13459b934c10f7885bb304ef190f6e",
+      "sizeBytes": 5473193,
+      "objectKey": "tracks/come-as-you-are-c24dfa60e8d25ff4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/come-as-you-are-c24dfa60e8d25ff4.mp3",
+      "uploadedAt": "2026-10-19T21:56:53.898Z"
+    },
+    {
+      "sourcePath": "Couloir Bleu.mp3",
+      "sha256": "d14cafa8db29bcfb9a74c1eae26c622f5ce3f409254260ee028115a1a211fe98",
+      "sizeBytes": 5750348,
+      "objectKey": "tracks/couloir-bleu-d14cafa8db29bcfb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/couloir-bleu-d14cafa8db29bcfb.mp3",
+      "uploadedAt": "2026-10-19T21:56:54.306Z"
+    },
+    {
+      "sourcePath": "Counting My Blessings.mp3",
+      "sha256": "0c098ef23b21cfbd3be0f9ad640c17cecd962e1176f172d803d2a860b576598f",
+      "sizeBytes": 5236441,
+      "objectKey": "tracks/counting-my-blessings-0c098ef23b21cfbd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/counting-my-blessings-0c098ef23b21cfbd.mp3",
+      "uploadedAt": "2026-10-19T21:56:54.395Z"
+    },
+    {
+      "sourcePath": "Cracked Lunch Tray.mp3",
+      "sha256": "a229517c27c6b99fa98dbc8db8b8520594dd247bed759882c3d063fc3f77fa0b",
+      "sizeBytes": 4415876,
+      "objectKey": "tracks/cracked-lunch-tray-a229517c27c6b99f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/cracked-lunch-tray-a229517c27c6b99f.mp3",
+      "uploadedAt": "2026-10-19T21:56:56.035Z"
+    },
+    {
+      "sourcePath": "Deadbolt Heavy.mp3",
+      "sha256": "50251bd4de8a3e43cec9370b7625b9dc32ee3315f23ff9ad265b3190a72db89d",
+      "sizeBytes": 6082504,
+      "objectKey": "tracks/deadbolt-heavy-50251bd4de8a3e43.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/deadbolt-heavy-50251bd4de8a3e43.mp3",
+      "uploadedAt": "2026-10-19T21:56:56.689Z"
+    },
+    {
+      "sourcePath": "Dice and Dirty Cards.mp3",
+      "sha256": "5b10c80f66f0e444f5e56206b7316df7868d14e8f004c0e28020b914cb41d8c9",
+      "sizeBytes": 4849163,
+      "objectKey": "tracks/dice-and-dirty-cards-5b10c80f66f0e444.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/dice-and-dirty-cards-5b10c80f66f0e444.mp3",
+      "uploadedAt": "2026-10-19T21:56:57.489Z"
+    },
+    {
+      "sourcePath": "Different Names, Different.mp3",
+      "sha256": "15c7e85be0274d2a267d0c6a2aa8e2ef3f0960fe2766f09c8e032c245dfcb4f2",
+      "sizeBytes": 6439319,
+      "objectKey": "tracks/different-names-different-15c7e85be0274d2a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/different-names-different-15c7e85be0274d2a.mp3",
+      "uploadedAt": "2026-10-19T21:56:57.264Z"
+    },
+    {
+      "sourcePath": "Eadd9 Tuning Improv [LzAFKiI72QA].mp3",
+      "sha256": "905d24bad0922e81f4a17a87d944dcb2bf662444cdb1826ab19f026601828013",
+      "sizeBytes": 3481266,
+      "objectKey": "tracks/eadd9-tuning-improv-lzafkii72qa-905d24bad0922e81.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/eadd9-tuning-improv-lzafkii72qa-905d24bad0922e81.mp3",
+      "uploadedAt": "2026-10-19T21:56:57.976Z"
+    },
+    {
+      "sourcePath": "Electronic1/A Beautiful Dying Radio (Reimagined).mp3",
+      "sha256": "d249c0aad63e9fc807a454c461256c954e2e63c52f1832da4792ebfbb0b3b5a2",
+      "sizeBytes": 6316099,
+      "objectKey": "tracks/a-beautiful-dying-radio-reimagined-d249c0aad63e9fc8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/a-beautiful-dying-radio-reimagined-d249c0aad63e9fc8.mp3",
+      "uploadedAt": "2026-10-19T21:56:59.022Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - A Beautiful Dying Radio (original).mp3",
+      "sha256": "e9753dd39b10d564ec066d66bfcc5620c74e478ff246fa08317a985f09a94928",
+      "sizeBytes": 4796544,
+      "objectKey": "tracks/alex-merced-a-beautiful-dying-radio-original-e9753dd39b10d564.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-a-beautiful-dying-radio-original-e9753dd39b10d564.mp3",
+      "uploadedAt": "2026-10-19T21:56:59.528Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Figure it out Again.mp3",
+      "sha256": "b39de01a11b274ad34c3ad9e6511b41dcd442f36514abe667e7b18d1eddd36fc",
+      "sizeBytes": 4529034,
+      "objectKey": "tracks/alex-merced-figure-it-out-again-b39de01a11b274ad.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-figure-it-out-again-b39de01a11b274ad.mp3",
+      "uploadedAt": "2026-10-19T21:56:59.948Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Sounds of Success (original).mp3",
+      "sha256": "b09cd754eb1e511778031edb5ff080a40e275b886535f7eaeba798e4ca609039",
+      "sizeBytes": 3733548,
+      "objectKey": "tracks/alex-merced-sounds-of-success-original-b09cd754eb1e5117.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-sounds-of-success-original-b09cd754eb1e5117.mp3",
+      "uploadedAt": "2026-10-19T21:57:00.167Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Sounds of Success (Reimagined).mp3",
+      "sha256": "46563d628f26cc6b54bfac6bb23f159177c2ef3a97e90930109e65f8dfa7b0a2",
+      "sizeBytes": 6782938,
+      "objectKey": "tracks/alex-merced-sounds-of-success-reimagined-46563d628f26cc6b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-sounds-of-success-reimagined-46563d628f26cc6b.mp3",
+      "uploadedAt": "2026-10-19T21:57:02.086Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Spilling Guts (Original).mp3",
+      "sha256": "7702bb5c03815ed14de551e943d013039a077fccd9073c4cddfe3f182c3deae7",
+      "sizeBytes": 4289452,
+      "objectKey": "tracks/alex-merced-spilling-guts-original-7702bb5c03815ed1.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-spilling-guts-original-7702bb5c03815ed1.mp3",
+      "uploadedAt": "2026-10-19T21:57:02.074Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Spilling Guts (Reimagined).mp3",
+      "sha256": "a5b0e38b23d9e8dba506f9ed52e823e32bfce8aed3f24618f392204b505a009d",
+      "sizeBytes": 5344275,
+      "objectKey": "tracks/alex-merced-spilling-guts-reimagined-a5b0e38b23d9e8db.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-spilling-guts-reimagined-a5b0e38b23d9e8db.mp3",
+      "uploadedAt": "2026-10-19T21:57:02.520Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Sweet Melody of Love.mp3",
+      "sha256": "036f89e5d51e44eb4b9fdbfc0db49bd0a66e6190aba9e21a24bbfa0b5abb809d",
+      "sizeBytes": 5374292,
+      "objectKey": "tracks/alex-merced-sweet-melody-of-love-036f89e5d51e44eb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-sweet-melody-of-love-036f89e5d51e44eb.mp3",
+      "uploadedAt": "2026-10-19T21:57:02.862Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - The Best of Me.mp3",
+      "sha256": "97bd0536afc6ede630c43e6c27580fd6945817edb8ae0537c92d2485c707a9d6",
+      "sizeBytes": 3985514,
+      "objectKey": "tracks/alex-merced-the-best-of-me-97bd0536afc6ede6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-best-of-me-97bd0536afc6ede6.mp3",
+      "uploadedAt": "2026-10-19T21:57:04.586Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - The Games I’ve Played.mp3",
+      "sha256": "7e409a3c7859ef6c078db17e4d91ea41469ee2c51995cd761e04ce77dd80ca6a",
+      "sizeBytes": 6752566,
+      "objectKey": "tracks/alex-merced-the-games-i-ve-played-7e409a3c7859ef6c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-games-i-ve-played-7e409a3c7859ef6c.mp3",
+      "uploadedAt": "2026-10-19T21:57:05.463Z"
+    },
+    {
+      "sourcePath": "Electronic1/ALex Merced - Video Game Lullaby.mp3",
+      "sha256": "f42eb0bd7a1af62ac7d6737805b1d171f9577bad1de2b4cf225ae52067bc83d1",
+      "sizeBytes": 3853384,
+      "objectKey": "tracks/alex-merced-video-game-lullaby-f42eb0bd7a1af62a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-video-game-lullaby-f42eb0bd7a1af62a.mp3",
+      "uploadedAt": "2026-10-19T21:57:05.170Z"
+    },
+    {
+      "sourcePath": "Electronic1/ALex Merced - Warm Night Warm Piano.mp3",
+      "sha256": "cbc80eb9f494004550d1f95b6bf85fa5737a4a8b7c82d332dcc8d0c3f13eb576",
+      "sizeBytes": 3225478,
+      "objectKey": "tracks/alex-merced-warm-night-warm-piano-cbc80eb9f4940045.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-warm-night-warm-piano-cbc80eb9f4940045.mp3",
+      "uploadedAt": "2026-10-19T21:57:05.380Z"
+    },
+    {
+      "sourcePath": "Electronic1/Alex Merced - Your Heart Give To.mp3",
+      "sha256": "ff45dc35069d4589e38d45b9254cee11daa45faaa0dd7df562379262dc9a9e39",
+      "sizeBytes": 4141984,
+      "objectKey": "tracks/alex-merced-your-heart-give-to-ff45dc35069d4589.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-your-heart-give-to-ff45dc35069d4589.mp3",
+      "uploadedAt": "2026-10-19T21:57:06.737Z"
+    },
+    {
+      "sourcePath": "Electronic1/Figure it out Again (reimagined).mp3",
+      "sha256": "bd43f157d4d160a34206fd35130f5cb904021431894270f9546ee0ea245079bf",
+      "sizeBytes": 6067825,
+      "objectKey": "tracks/figure-it-out-again-reimagined-bd43f157d4d160a3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/figure-it-out-again-reimagined-bd43f157d4d160a3.mp3",
+      "uploadedAt": "2026-10-19T21:57:08.000Z"
+    },
+    {
+      "sourcePath": "Electronic1/Power Ballad of Power and Frustration (Original).mp3",
+      "sha256": "3f6c24542dfbb0b46b5699dd835d17046a175581b49e698aa24e5cbd8b5fb045",
+      "sizeBytes": 4913904,
+      "objectKey": "tracks/power-ballad-of-power-and-frustration-original-3f6c24542dfbb0b4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/power-ballad-of-power-and-frustration-original-3f6c24542dfbb0b4.mp3",
+      "uploadedAt": "2026-10-19T21:57:08.383Z"
+    },
+    {
+      "sourcePath": "Electronic1/Power Ballad of Power and Frustration (reimagined).mp3",
+      "sha256": "27dac63005402b5e7969c158cc0dc9dfec5331969aef312bda9e6de6b2cad811",
+      "sizeBytes": 6478366,
+      "objectKey": "tracks/power-ballad-of-power-and-frustration-reimagined-27dac63005402b5e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/power-ballad-of-power-and-frustration-reimagined-27dac63005402b5e.mp3",
+      "uploadedAt": "2026-10-19T21:57:08.692Z"
+    },
+    {
+      "sourcePath": "Electronic1/Sweet Melody of Love (Reimagined).mp3",
+      "sha256": "8629ee993c92f38efa84d3b43a28877eb0619645fd242991a1daa38dba9cfa03",
+      "sizeBytes": 6786747,
+      "objectKey": "tracks/sweet-melody-of-love-reimagined-8629ee993c92f38e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/sweet-melody-of-love-reimagined-8629ee993c92f38e.mp3",
+      "uploadedAt": "2026-10-19T21:57:09.252Z"
+    },
+    {
+      "sourcePath": "Electronic1/The Best of Me (Reimagined).mp3",
+      "sha256": "47df7611883aa78634cec21cd75abe6494727d6af5498095b9160bfdf84de06b",
+      "sizeBytes": 6429012,
+      "objectKey": "tracks/the-best-of-me-reimagined-47df7611883aa786.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-best-of-me-reimagined-47df7611883aa786.mp3",
+      "uploadedAt": "2026-10-19T21:57:10.698Z"
+    },
+    {
+      "sourcePath": "Electronic1/The Games I’ve Played (reimagined).mp3",
+      "sha256": "58b62cc11cda20d25354fe506a9e1a39bf6f64406c7edd056bc6bd2dface5f10",
+      "sizeBytes": 6021475,
+      "objectKey": "tracks/the-games-i-ve-played-reimagined-58b62cc11cda20d2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-games-i-ve-played-reimagined-58b62cc11cda20d2.mp3",
+      "uploadedAt": "2026-10-19T21:57:11.381Z"
+    },
+    {
+      "sourcePath": "Electronic1/Video Game Lullaby (reimagined).mp3",
+      "sha256": "016c605ded09cc9b28ad4fc9ff070fccfb37a3770370fa79313b5d82cfaed6f3",
+      "sizeBytes": 6109963,
+      "objectKey": "tracks/video-game-lullaby-reimagined-016c605ded09cc9b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/video-game-lullaby-reimagined-016c605ded09cc9b.mp3",
+      "uploadedAt": "2026-10-19T21:57:11.893Z"
+    },
+    {
+      "sourcePath": "Electronic1/Warn Night Warm Piano (reimagined).mp3",
+      "sha256": "1c8a3ffeb345aa0a383a395da5e7ace74f39a09ff70693d6cdd6b612003cf82d",
+      "sizeBytes": 6527611,
+      "objectKey": "tracks/warn-night-warm-piano-reimagined-1c8a3ffeb345aa0a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/warn-night-warm-piano-reimagined-1c8a3ffeb345aa0a.mp3",
+      "uploadedAt": "2026-10-19T21:57:12.429Z"
+    },
+    {
+      "sourcePath": "Electronic1/Your Heart Give To (Reimagined).mp3",
+      "sha256": "b1c1bdbeac2ab4d9e95393c8ead8f42df69afdd90e66892632d6cdad591d838d",
+      "sizeBytes": 6653038,
+      "objectKey": "tracks/your-heart-give-to-reimagined-b1c1bdbeac2ab4d9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-heart-give-to-reimagined-b1c1bdbeac2ab4d9.mp3",
+      "uploadedAt": "2026-10-19T21:57:13.491Z"
+    },
+    {
+      "sourcePath": "Exactly Like This.mp3",
+      "sha256": "b8c7d0389acc8dfb1374a752fd626c24a81857fcaca0968b21fbf001b3924ae1",
+      "sizeBytes": 6227036,
+      "objectKey": "tracks/exactly-like-this-b8c7d0389acc8dfb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/exactly-like-this-b8c7d0389acc8dfb.mp3",
+      "uploadedAt": "2026-10-19T21:57:14.100Z"
+    },
+    {
+      "sourcePath": "Eyes of the World.mp3",
+      "sha256": "abf5ac67f5f50667e336ececcc13f96660eaa5bbb7a04fdc7f7e6fcea39dc9d1",
+      "sizeBytes": 5078110,
+      "objectKey": "tracks/eyes-of-the-world-abf5ac67f5f50667.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/eyes-of-the-world-abf5ac67f5f50667.mp3",
+      "uploadedAt": "2026-10-19T21:57:14.499Z"
+    },
+    {
+      "sourcePath": "Finding the me that once Was.mp3",
+      "sha256": "2b562814a1e36c5f4563b7b6cf17d3908378664152a92ecbb846b53a00a04aaa",
+      "sizeBytes": 4106511,
+      "objectKey": "tracks/finding-the-me-that-once-was-2b562814a1e36c5f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/finding-the-me-that-once-was-2b562814a1e36c5f.mp3",
+      "uploadedAt": "2026-10-19T21:57:14.783Z"
+    },
+    {
+      "sourcePath": "First Light.mp3",
+      "sha256": "13977d2ab478ec3bd650fa5160ed45db55103621f3b883c9e4e781994e452eaf",
+      "sizeBytes": 4410998,
+      "objectKey": "tracks/first-light-13977d2ab478ec3b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/first-light-13977d2ab478ec3b.mp3",
+      "uploadedAt": "2026-10-19T21:57:15.814Z"
+    },
+    {
+      "sourcePath": "Fold My Colors.mp3",
+      "sha256": "0f2b95b5cf6fa5e3ba57c2797bc75bee4dc0049660aad9211a1f1f7361654ef5",
+      "sizeBytes": 5656363,
+      "objectKey": "tracks/fold-my-colors-0f2b95b5cf6fa5e3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/fold-my-colors-0f2b95b5cf6fa5e3.mp3",
+      "uploadedAt": "2026-10-19T21:57:16.542Z"
+    },
+    {
+      "sourcePath": "Food is Good.mp3",
+      "sha256": "4e34f69e268f35be69f35938bd3243c6d45679a09c615848ce39ccb063d3a6ea",
+      "sizeBytes": 2159310,
+      "objectKey": "tracks/food-is-good-4e34f69e268f35be.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/food-is-good-4e34f69e268f35be.mp3",
+      "uploadedAt": "2026-10-19T21:57:16.570Z"
+    },
+    {
+      "sourcePath": "Fork in the Road.mp3",
+      "sha256": "308eb416e310fb254cc13bda0bf5b72ac714fa479f0ef4178fe9f0a2273d9cb1",
+      "sizeBytes": 3323627,
+      "objectKey": "tracks/fork-in-the-road-308eb416e310fb25.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/fork-in-the-road-308eb416e310fb25.mp3",
+      "uploadedAt": "2026-10-19T21:57:17.032Z"
+    },
+    {
+      "sourcePath": "FREE ENOUGH TO LOVE.mp3",
+      "sha256": "28fa7066e8388c4d8d1790075982a297007fa347fe03c5bcddbeff19687f8e76",
+      "sizeBytes": 8737528,
+      "objectKey": "tracks/free-enough-to-love-28fa7066e8388c4d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/free-enough-to-love-28fa7066e8388c4d.mp3",
+      "uploadedAt": "2026-10-19T21:57:18.971Z"
+    },
+    {
+      "sourcePath": "Gare du Nord.mp3",
+      "sha256": "2a2ad3c1679ab7293c41766aed90677283111199ed30fc5a017a90dcb206207a",
+      "sizeBytes": 3827808,
+      "objectKey": "tracks/gare-du-nord-2a2ad3c1679ab729.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/gare-du-nord-2a2ad3c1679ab729.mp3",
+      "uploadedAt": "2026-10-19T21:57:19.356Z"
+    },
+    {
+      "sourcePath": "Ghosts of Choices.mp3",
+      "sha256": "45b130472f2a07ec5ff5e92884d73325d2394bb0d7b7436eb2668551b4b77fd6",
+      "sizeBytes": 5134252,
+      "objectKey": "tracks/ghosts-of-choices-45b130472f2a07ec.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/ghosts-of-choices-45b130472f2a07ec.mp3",
+      "uploadedAt": "2026-10-19T21:57:19.666Z"
+    },
+    {
+      "sourcePath": "Give Without Becoming God.mp3",
+      "sha256": "b95d6c70b59b27589710fb1010f4c0fd99342bb061896d742b1528d4734b7747",
+      "sizeBytes": 6382881,
+      "objectKey": "tracks/give-without-becoming-god-b95d6c70b59b2758.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/give-without-becoming-god-b95d6c70b59b2758.mp3",
+      "uploadedAt": "2026-10-19T21:57:19.872Z"
+    },
+    {
+      "sourcePath": "Glass Ledger.mp3",
+      "sha256": "fdac1af83f942783f71df6419f1ce7e5992b996eb3d9578fbef50e73cb07685a",
+      "sizeBytes": 4815420,
+      "objectKey": "tracks/glass-ledger-fdac1af83f942783.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/glass-ledger-fdac1af83f942783.mp3",
+      "uploadedAt": "2026-10-19T21:57:21.729Z"
+    },
+    {
+      "sourcePath": "Glass On My Tongue.mp3",
+      "sha256": "86dc8d9458d2a123731de1f00a0576c766aade80867c9f5125559e0cfd7a27ba",
+      "sizeBytes": 4526895,
+      "objectKey": "tracks/glass-on-my-tongue-86dc8d9458d2a123.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/glass-on-my-tongue-86dc8d9458d2a123.mp3",
+      "uploadedAt": "2026-10-19T21:57:22.270Z"
+    },
+    {
+      "sourcePath": "Gloriously You.mp3",
+      "sha256": "2fcf0ff7613b6775e43b7aef08b3056a57400c1e3535790ebb3a25af23843c53",
+      "sizeBytes": 6172887,
+      "objectKey": "tracks/gloriously-you-2fcf0ff7613b6775.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/gloriously-you-2fcf0ff7613b6775.mp3",
+      "uploadedAt": "2026-10-19T21:57:23.167Z"
+    },
+    {
+      "sourcePath": "God In My Hands.mp3",
+      "sha256": "9d654e1d19ab144c516193988cffd85c54d2f684cd53b04e6269bd02dcf9d0de",
+      "sizeBytes": 4941489,
+      "objectKey": "tracks/god-in-my-hands-9d654e1d19ab144c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/god-in-my-hands-9d654e1d19ab144c.mp3",
+      "uploadedAt": "2026-10-19T21:57:23.130Z"
+    },
+    {
+      "sourcePath": "Gold Under Skin.mp3",
+      "sha256": "4e42a094ed1def5a9c807e747dd423a6638b9f069d71fb5bc542bf12a6e649d9",
+      "sizeBytes": 5881662,
+      "objectKey": "tracks/gold-under-skin-4e42a094ed1def5a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/gold-under-skin-4e42a094ed1def5a.mp3",
+      "uploadedAt": "2026-10-19T21:57:24.915Z"
+    },
+    {
+      "sourcePath": "Golden Arches.mp3",
+      "sha256": "1e02a936c56406f148bfe0766c1892b96205a2f9a6497f9cc512b52fdda35c16",
+      "sizeBytes": 4910391,
+      "objectKey": "tracks/golden-arches-1e02a936c56406f1.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/golden-arches-1e02a936c56406f1.mp3",
+      "uploadedAt": "2026-10-19T21:57:25.290Z"
+    },
+    {
+      "sourcePath": "Golden Window.mp3",
+      "sha256": "84415d56000c191cde877c44c1cf2a5e26d81efbad1b668cf5b6e14f63ea81c8",
+      "sizeBytes": 5486430,
+      "objectKey": "tracks/golden-window-84415d56000c191c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/golden-window-84415d56000c191c.mp3",
+      "uploadedAt": "2026-10-19T21:57:26.173Z"
+    },
+    {
+      "sourcePath": "Gray Child.mp3",
+      "sha256": "3445af5cb61c76e845574ff304af29542fde56ef1c47064cade76bb0caee8bac",
+      "sizeBytes": 5965548,
+      "objectKey": "tracks/gray-child-3445af5cb61c76e8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/gray-child-3445af5cb61c76e8.mp3",
+      "uploadedAt": "2026-10-19T21:57:26.214Z"
+    },
+    {
+      "sourcePath": "Half Truth Lantern.mp3",
+      "sha256": "0ef6429ba433bc0f206f53d49be6b6fca026a46c61f6596864e380d3839aec93",
+      "sizeBytes": 4267800,
+      "objectKey": "tracks/half-truth-lantern-0ef6429ba433bc0f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/half-truth-lantern-0ef6429ba433bc0f.mp3",
+      "uploadedAt": "2026-10-19T21:57:27.152Z"
+    },
+    {
+      "sourcePath": "Half-Open Door.mp3",
+      "sha256": "6a97bed0b101802a6fa0402a07ccd38cc9b2f82901944f49f477e13cb810c317",
+      "sizeBytes": 4529168,
+      "objectKey": "tracks/half-open-door-6a97bed0b101802a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/half-open-door-6a97bed0b101802a.mp3",
+      "uploadedAt": "2026-10-19T21:57:27.535Z"
+    },
+    {
+      "sourcePath": "Hands Full Empty.mp3",
+      "sha256": "bf7f8b27e3cdd3f445b269754636930ec98aa3291cc8c66ea3239e3807441264",
+      "sizeBytes": 5734280,
+      "objectKey": "tracks/hands-full-empty-bf7f8b27e3cdd3f4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hands-full-empty-bf7f8b27e3cdd3f4.mp3",
+      "uploadedAt": "2026-10-19T21:57:28.782Z"
+    },
+    {
+      "sourcePath": "Heal Your Heart.mp3",
+      "sha256": "c3c51e7c660a61944be7b4629ff274cda1017ee6a330313aa28ab3848e1ef0b6",
+      "sizeBytes": 5030028,
+      "objectKey": "tracks/heal-your-heart-c3c51e7c660a6194.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/heal-your-heart-c3c51e7c660a6194.mp3",
+      "uploadedAt": "2026-10-19T21:57:29.092Z"
+    },
+    {
+      "sourcePath": "Hope.mp3",
+      "sha256": "0b0a0551169749a406cf96210782b454dea01d2cb196f9fcdf603d4435089e7f",
+      "sizeBytes": 4715150,
+      "objectKey": "tracks/hope-0b0a0551169749a4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hope-0b0a0551169749a4.mp3",
+      "uploadedAt": "2026-10-19T21:57:29.448Z"
+    },
+    {
+      "sourcePath": "How I Tried.mp3",
+      "sha256": "deec985c0feb583a198bd2a75076390ae2e5430aa9644f712ec6a98ab0241d20",
+      "sizeBytes": 5867008,
+      "objectKey": "tracks/how-i-tried-deec985c0feb583a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/how-i-tried-deec985c0feb583a.mp3",
+      "uploadedAt": "2026-10-19T21:57:29.869Z"
+    },
+    {
+      "sourcePath": "How Much Do I Need.mp3",
+      "sha256": "02c7040454b5657bd4c4159a8007dd03c496f9d0d4ca533645384e89b3e3480f",
+      "sizeBytes": 5740835,
+      "objectKey": "tracks/how-much-do-i-need-02c7040454b5657b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/how-much-do-i-need-02c7040454b5657b.mp3",
+      "uploadedAt": "2026-10-19T21:57:31.232Z"
+    },
+    {
+      "sourcePath": "I am Alex Merced (AlexMerced.com) (1).mp3",
+      "sha256": "4ddf9031429f2fddff759e47b89058d64772dd8c66e9735ab573e037f888d65a",
+      "sizeBytes": 5517359,
+      "objectKey": "tracks/i-am-alex-merced-alexmerced-com-1-4ddf9031429f2fdd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-am-alex-merced-alexmerced-com-1-4ddf9031429f2fdd.mp3",
+      "uploadedAt": "2026-10-19T21:57:31.983Z"
+    },
+    {
+      "sourcePath": "I am Alex Merced (AlexMerced.com).mp3",
+      "sha256": "4ddf9031429f2fddff759e47b89058d64772dd8c66e9735ab573e037f888d65a",
+      "sizeBytes": 5517359,
+      "objectKey": "tracks/i-am-alex-merced-alexmerced-com-4ddf9031429f2fdd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-am-alex-merced-alexmerced-com-4ddf9031429f2fdd.mp3",
+      "uploadedAt": "2026-10-19T21:57:32.255Z"
+    },
+    {
+      "sourcePath": "I believe in you.mp3",
+      "sha256": "efa988abca03e44e6dd388f424e23ebe34853c8622719a769842214a4581e3d6",
+      "sizeBytes": 5180629,
+      "objectKey": "tracks/i-believe-in-you-efa988abca03e44e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-believe-in-you-efa988abca03e44e.mp3",
+      "uploadedAt": "2026-10-19T21:57:32.754Z"
+    },
+    {
+      "sourcePath": "I Can't Be Everywhere.mp3",
+      "sha256": "5b061af8cb5083821975857eebb3ad5ab36af8b01729109efa2845fb7b32b5b7",
+      "sizeBytes": 6872404,
+      "objectKey": "tracks/i-can-t-be-everywhere-5b061af8cb508382.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-can-t-be-everywhere-5b061af8cb508382.mp3",
+      "uploadedAt": "2026-10-19T21:57:34.340Z"
+    },
+    {
+      "sourcePath": "I Chose, Therefore I Lived.mp3",
+      "sha256": "792001e0c3ca8a9510c9488256db21d06a32e1c3202e67934de47504d643f651",
+      "sizeBytes": 4886889,
+      "objectKey": "tracks/i-chose-therefore-i-lived-792001e0c3ca8a95.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-chose-therefore-i-lived-792001e0c3ca8a95.mp3",
+      "uploadedAt": "2026-10-19T21:57:34.576Z"
+    },
+    {
+      "sourcePath": "I Name the Room.mp3",
+      "sha256": "b2f2a8a9bfd43cc28a933d1414ba1371a6b8bfb2d909b34d1a320e74113e0c00",
+      "sizeBytes": 7031711,
+      "objectKey": "tracks/i-name-the-room-b2f2a8a9bfd43cc2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-name-the-room-b2f2a8a9bfd43cc2.mp3",
+      "uploadedAt": "2026-10-19T21:57:35.299Z"
+    },
+    {
+      "sourcePath": "I Win Because I'm Weird.mp3",
+      "sha256": "5982a5daf42f65b297425f8f82dbc30f5b781371386f94826e3e3841f1ae8b59",
+      "sizeBytes": 5006561,
+      "objectKey": "tracks/i-win-because-i-m-weird-5982a5daf42f65b2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-win-because-i-m-weird-5982a5daf42f65b2.mp3",
+      "uploadedAt": "2026-10-19T21:57:35.644Z"
+    },
+    {
+      "sourcePath": "Ice Age Draft Night.mp3",
+      "sha256": "d28423d22f7f848b35b6c3b0858dd44d5cb7fd1bc7b717fecba7f98db7abd199",
+      "sizeBytes": 5071638,
+      "objectKey": "tracks/ice-age-draft-night-d28423d22f7f848b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/ice-age-draft-night-d28423d22f7f848b.mp3",
+      "uploadedAt": "2026-10-19T21:57:36.674Z"
+    },
+    {
+      "sourcePath": "Inner Maze.mp3",
+      "sha256": "731bc748cb1a7a52a64c873732525775cabb04cb14c8087c3bcd7c4c11b17f5a",
+      "sizeBytes": 6363113,
+      "objectKey": "tracks/inner-maze-731bc748cb1a7a52.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/inner-maze-731bc748cb1a7a52.mp3",
+      "uploadedAt": "2026-10-19T21:57:37.373Z"
+    },
+    {
+      "sourcePath": "Just Ahead of My Time.mp3",
+      "sha256": "de3945513d3a08fc93617e7a0c53f86bf543b0f2175f78f151fa4417e69142fa",
+      "sizeBytes": 4981345,
+      "objectKey": "tracks/just-ahead-of-my-time-de3945513d3a08fc.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/just-ahead-of-my-time-de3945513d3a08fc.mp3",
+      "uploadedAt": "2026-10-19T21:57:37.904Z"
+    },
+    {
+      "sourcePath": "Karaoke King.mp3",
+      "sha256": "240a236d4fff0540cd7dadd3fdf35a19f54449816fa2dddd390326970bc566a7",
+      "sizeBytes": 5815999,
+      "objectKey": "tracks/karaoke-king-240a236d4fff0540.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/karaoke-king-240a236d4fff0540.mp3",
+      "uploadedAt": "2026-10-19T21:57:38.371Z"
+    },
+    {
+      "sourcePath": "Kindness Is a Door Held Wide.mp3",
+      "sha256": "2bbdbbf955c4868278e14a8c46acdef734b4881f60cd9fb80bdd8e0f6faf975d",
+      "sizeBytes": 6055452,
+      "objectKey": "tracks/kindness-is-a-door-held-wide-2bbdbbf955c48682.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/kindness-is-a-door-held-wide-2bbdbbf955c48682.mp3",
+      "uploadedAt": "2026-10-19T21:57:39.077Z"
+    },
+    {
+      "sourcePath": "King of the Table.mp3",
+      "sha256": "cc6252ca225f6911e18c5e6355b677aaf3790c3fdeb8abeadd2c4dd4c024364f",
+      "sizeBytes": 4383806,
+      "objectKey": "tracks/king-of-the-table-cc6252ca225f6911.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/king-of-the-table-cc6252ca225f6911.mp3",
+      "uploadedAt": "2026-10-19T21:57:39.628Z"
+    },
+    {
+      "sourcePath": "Leave a Door Unclosed.mp3",
+      "sha256": "50990b0fa5b20ece4d3dff7d19eb9b554c6f197b56f9867c1f4da60a03f9d2aa",
+      "sizeBytes": 5103099,
+      "objectKey": "tracks/leave-a-door-unclosed-50990b0fa5b20ece.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/leave-a-door-unclosed-50990b0fa5b20ece.mp3",
+      "uploadedAt": "2026-10-19T21:57:40.456Z"
+    },
+    {
+      "sourcePath": "LEAVE ROOM FOR ME.mp3",
+      "sha256": "09cdbca3b2edcb01e2056bbb24f63745361ac32f5b6c8ff063710505c8498544",
+      "sizeBytes": 8313275,
+      "objectKey": "tracks/leave-room-for-me-09cdbca3b2edcb01.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/leave-room-for-me-09cdbca3b2edcb01.mp3",
+      "uploadedAt": "2026-10-19T21:57:41.566Z"
+    },
+    {
+      "sourcePath": "Leave the Kettle Singing.mp3",
+      "sha256": "485b74a87db162e77595d0a82c37ceeaaac7aa26e4674289dcf89e7552bb1a18",
+      "sizeBytes": 5386641,
+      "objectKey": "tracks/leave-the-kettle-singing-485b74a87db162e7.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/leave-the-kettle-singing-485b74a87db162e7.mp3",
+      "uploadedAt": "2026-10-19T21:57:42.273Z"
+    },
+    {
+      "sourcePath": "Left Unspent.mp3",
+      "sha256": "b529e2054a3b01be5b70e3a0639ca6704f32f68193c96b45865d31fe91b7f8d7",
+      "sizeBytes": 4986962,
+      "objectKey": "tracks/left-unspent-b529e2054a3b01be.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/left-unspent-b529e2054a3b01be.mp3",
+      "uploadedAt": "2026-10-19T21:57:42.140Z"
+    },
+    {
+      "sourcePath": "LET IT GO, LET IT GROW.mp3",
+      "sha256": "2bbae4c245c428bbf8b7831131440dc3dd2cd15730eb1cb3a98e9942292bc428",
+      "sizeBytes": 7188389,
+      "objectKey": "tracks/let-it-go-let-it-grow-2bbae4c245c428bb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/let-it-go-let-it-grow-2bbae4c245c428bb.mp3",
+      "uploadedAt": "2026-10-19T21:57:43.249Z"
+    },
+    {
+      "sourcePath": "LET LOVE BE LOUDER.mp3",
+      "sha256": "fe9824a6e86bd9eeddb2840597f8cea20803e3cd5f55b2c3e93a4ad58932065b",
+      "sizeBytes": 8350998,
+      "objectKey": "tracks/let-love-be-louder-fe9824a6e86bd9ee.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/let-love-be-louder-fe9824a6e86bd9ee.mp3",
+      "uploadedAt": "2026-10-19T21:57:44.598Z"
+    },
+    {
+      "sourcePath": "Let Them Bloom.mp3",
+      "sha256": "10cbfebc92004afb50bb76681dd2d1650d56a88fa3f30f90f110afe0c900dc69",
+      "sizeBytes": 5257671,
+      "objectKey": "tracks/let-them-bloom-10cbfebc92004afb.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/let-them-bloom-10cbfebc92004afb.mp3",
+      "uploadedAt": "2026-10-19T21:57:45.107Z"
+    },
+    {
+      "sourcePath": "Listening Late.mp3",
+      "sha256": "4deebb88983bee2a6068f48ad73ec47ca7624d5f55784e3eb1f19171691e62cd",
+      "sizeBytes": 4924458,
+      "objectKey": "tracks/listening-late-4deebb88983bee2a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/listening-late-4deebb88983bee2a.mp3",
+      "uploadedAt": "2026-10-19T21:57:45.298Z"
+    },
+    {
+      "sourcePath": "Lives Through The Window.mp3",
+      "sha256": "b57ca796b155417a599d9bff4dc1dca4823cb91439c0e108bbbec09f76a55f7e",
+      "sizeBytes": 10205802,
+      "objectKey": "tracks/lives-through-the-window-b57ca796b155417a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/lives-through-the-window-b57ca796b155417a.mp3",
+      "uploadedAt": "2026-10-19T21:57:46.120Z"
+    },
+    {
+      "sourcePath": "Long Line Blues.mp3",
+      "sha256": "7cf49c0de1f52633248631d92b0df7315e243597ee6475fb343d2bd0975dd666",
+      "sizeBytes": 4275364,
+      "objectKey": "tracks/long-line-blues-7cf49c0de1f52633.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/long-line-blues-7cf49c0de1f52633.mp3",
+      "uploadedAt": "2026-10-19T21:57:46.987Z"
+    },
+    {
+      "sourcePath": "Lox and Chicken.mp3",
+      "sha256": "0965b7f402fdc4552a0ae48980aea55e06cb7f36c4997055dfa2e4e6b439be45",
+      "sizeBytes": 5749363,
+      "objectKey": "tracks/lox-and-chicken-0965b7f402fdc455.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/lox-and-chicken-0965b7f402fdc455.mp3",
+      "uploadedAt": "2026-10-19T21:57:47.898Z"
+    },
+    {
+      "sourcePath": "Make Room Where You Stand.mp3",
+      "sha256": "d36a1ad453cbf36d42ac5f5c039b03eec31b77e7a70e4b6754c2c547c1cbc016",
+      "sizeBytes": 6135428,
+      "objectKey": "tracks/make-room-where-you-stand-d36a1ad453cbf36d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/make-room-where-you-stand-d36a1ad453cbf36d.mp3",
+      "uploadedAt": "2026-10-19T21:57:48.394Z"
+    },
+    {
+      "sourcePath": "Maps I Cannot Fold.mp3",
+      "sha256": "aed951df2bbdada53c23f0325abf8458aea4fb06c789c379a1a99013cfffee08",
+      "sizeBytes": 5122258,
+      "objectKey": "tracks/maps-i-cannot-fold-aed951df2bbdada5.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/maps-i-cannot-fold-aed951df2bbdada5.mp3",
+      "uploadedAt": "2026-10-19T21:57:48.530Z"
+    },
+    {
+      "sourcePath": "Milk Cap Summer.mp3",
+      "sha256": "91d92df6f5eb22f74ffd033c9c021ecf6cf9e173a8c5c1f436487b6e8502b160",
+      "sizeBytes": 5201999,
+      "objectKey": "tracks/milk-cap-summer-91d92df6f5eb22f7.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/milk-cap-summer-91d92df6f5eb22f7.mp3",
+      "uploadedAt": "2026-10-19T21:57:49.150Z"
+    },
+    {
+      "sourcePath": "Mirror Bite.mp3",
+      "sha256": "521b331c428af23f885158fa329353f050b561e17d98a78ad067e6287fc667c1",
+      "sizeBytes": 5016710,
+      "objectKey": "tracks/mirror-bite-521b331c428af23f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/mirror-bite-521b331c428af23f.mp3",
+      "uploadedAt": "2026-10-19T21:57:50.206Z"
+    },
+    {
+      "sourcePath": "Mirror Habit.mp3",
+      "sha256": "ee84f82e486a3d9507d4c544927c9d941c96c0184ae812b09999087869d81bae",
+      "sizeBytes": 5054647,
+      "objectKey": "tracks/mirror-habit-ee84f82e486a3d95.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/mirror-habit-ee84f82e486a3d95.mp3",
+      "uploadedAt": "2026-10-19T21:57:51.675Z"
+    },
+    {
+      "sourcePath": "MORE HEARTS THAN HOURS.mp3",
+      "sha256": "a0b30a2b7d56df85fe2ca0569583ade9d67e3ab3adda5b3ba7b88f5da2fd275e",
+      "sizeBytes": 7334832,
+      "objectKey": "tracks/more-hearts-than-hours-a0b30a2b7d56df85.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/more-hearts-than-hours-a0b30a2b7d56df85.mp3",
+      "uploadedAt": "2026-10-19T21:57:51.830Z"
+    },
+    {
+      "sourcePath": "More than Pieces.mp3",
+      "sha256": "652f79721914dd23ca06e62502b0a201521d41f15b221f637c4c6bb093e8b853",
+      "sizeBytes": 4771644,
+      "objectKey": "tracks/more-than-pieces-652f79721914dd23.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/more-than-pieces-652f79721914dd23.mp3",
+      "uploadedAt": "2026-10-19T21:57:51.969Z"
+    },
+    {
+      "sourcePath": "My Heart Stopped (Alex AI Voice Cover).mp3",
+      "sha256": "739cd2d679d033a972283b9c21a3cfadb7637ca2376bb166ffdf65bb04a3d06e",
+      "sizeBytes": 4583679,
+      "objectKey": "tracks/my-heart-stopped-alex-ai-voice-cover-739cd2d679d033a9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/my-heart-stopped-alex-ai-voice-cover-739cd2d679d033a9.mp3",
+      "uploadedAt": "2026-10-19T21:57:52.469Z"
+    },
+    {
+      "sourcePath": "MY NAME IS ALEX.mp3",
+      "sha256": "576d6be5e20ee1fa2df9a0850f24b070880ca4ba93eee7e5d604e9f7fe7dfd8a",
+      "sizeBytes": 10805794,
+      "objectKey": "tracks/my-name-is-alex-576d6be5e20ee1fa.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/my-name-is-alex-576d6be5e20ee1fa.mp3",
+      "uploadedAt": "2026-10-19T21:57:56.245Z"
+    },
+    {
+      "sourcePath": "Nap Away.mp3",
+      "sha256": "9e6e14062296b6eedaf170caf68d110c804ec491fabe8ad265e12b8fc66745cb",
+      "sizeBytes": 5052786,
+      "objectKey": "tracks/nap-away-9e6e14062296b6ee.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/nap-away-9e6e14062296b6ee.mp3",
+      "uploadedAt": "2026-10-19T21:57:54.760Z"
+    },
+    {
+      "sourcePath": "Never Enough.mp3",
+      "sha256": "1e14c331bee9aab927969bdf7ac3b078fbb51b2c8e5ea3d2777901a97111b0ae",
+      "sizeBytes": 4990156,
+      "objectKey": "tracks/never-enough-1e14c331bee9aab9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/never-enough-1e14c331bee9aab9.mp3",
+      "uploadedAt": "2026-10-19T21:57:55.425Z"
+    },
+    {
+      "sourcePath": "NEW SONG Alex Merced - Try to Forget You.mp3",
+      "sha256": "091853f52a9be02218183b3fe65caa227863cb0cbbf17a2efd8ce6a154c01d4f",
+      "sizeBytes": 4976150,
+      "objectKey": "tracks/new-song-alex-merced-try-to-forget-you-091853f52a9be022.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/new-song-alex-merced-try-to-forget-you-091853f52a9be022.mp3",
+      "uploadedAt": "2026-10-19T21:57:55.757Z"
+    },
+    {
+      "sourcePath": "No More Running.mp3",
+      "sha256": "0e06d9248c95a3e5570566d9b2de7c28d4803cd11f149148e80ee859c1e9ac69",
+      "sizeBytes": 4941822,
+      "objectKey": "tracks/no-more-running-0e06d9248c95a3e5.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/no-more-running-0e06d9248c95a3e5.mp3",
+      "uploadedAt": "2026-10-19T21:57:57.053Z"
+    },
+    {
+      "sourcePath": "Not Okay Today.mp3",
+      "sha256": "f6ce3d2727dda2c0836d26023a4cf9b5f49d066298bbe2dde9113d535685cc55",
+      "sizeBytes": 5640494,
+      "objectKey": "tracks/not-okay-today-f6ce3d2727dda2c0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/not-okay-today-f6ce3d2727dda2c0.mp3",
+      "uploadedAt": "2026-10-19T21:57:57.968Z"
+    },
+    {
+      "sourcePath": "Old Scars New Hands.mp3",
+      "sha256": "6504e992829dc02d3efe82db17a153d6a547ea7008524ff04aa93e4c7d3ae8ed",
+      "sizeBytes": 3898454,
+      "objectKey": "tracks/old-scars-new-hands-6504e992829dc02d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/old-scars-new-hands-6504e992829dc02d.mp3",
+      "uploadedAt": "2026-10-19T21:57:58.020Z"
+    },
+    {
+      "sourcePath": "One Open Hand.mp3",
+      "sha256": "a74e767c2a7b32f3c49ae5137e04864c6fe7d5793244c48a419dc85635d695c2",
+      "sizeBytes": 6643734,
+      "objectKey": "tracks/one-open-hand-a74e767c2a7b32f3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/one-open-hand-a74e767c2a7b32f3.mp3",
+      "uploadedAt": "2026-10-19T21:57:58.794Z"
+    },
+    {
+      "sourcePath": "One Step More.mp3",
+      "sha256": "31592e01055379a837f55b14d4f27f84f61d1d452385468ee8a1710421933f96",
+      "sizeBytes": 6046661,
+      "objectKey": "tracks/one-step-more-31592e01055379a8.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/one-step-more-31592e01055379a8.mp3",
+      "uploadedAt": "2026-10-19T21:57:59.285Z"
+    },
+    {
+      "sourcePath": "Open Hands.mp3",
+      "sha256": "01f7558796e887ac6674fc5acdad0a160a06c5b4b10d3d4292392d87bf9584bb",
+      "sizeBytes": 4346724,
+      "objectKey": "tracks/open-hands-01f7558796e887ac.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/open-hands-01f7558796e887ac.mp3",
+      "uploadedAt": "2026-10-19T21:58:00.393Z"
+    },
+    {
+      "sourcePath": "Open It Up.mp3",
+      "sha256": "35c16faa4a96beb44e7dea7ff2e7bc929124bc11cdfbfb75222438bde24d85ff",
+      "sizeBytes": 5501852,
+      "objectKey": "tracks/open-it-up-35c16faa4a96beb4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/open-it-up-35c16faa4a96beb4.mp3",
+      "uploadedAt": "2026-10-19T21:58:00.673Z"
+    },
+    {
+      "sourcePath": "OPEN THE STACK (1).mp3",
+      "sha256": "75ef7b8ca11558c9c72fdc2403661926a140785daef0804917620fa676bc8855",
+      "sizeBytes": 10517757,
+      "objectKey": "tracks/open-the-stack-1-75ef7b8ca11558c9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/open-the-stack-1-75ef7b8ca11558c9.mp3",
+      "uploadedAt": "2026-10-19T21:58:02.456Z"
+    },
+    {
+      "sourcePath": "OPEN THE STACK.mp3",
+      "sha256": "75ef7b8ca11558c9c72fdc2403661926a140785daef0804917620fa676bc8855",
+      "sizeBytes": 10517757,
+      "objectKey": "tracks/open-the-stack-75ef7b8ca11558c9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/open-the-stack-75ef7b8ca11558c9.mp3",
+      "uploadedAt": "2026-10-19T21:58:03.784Z"
+    },
+    {
+      "sourcePath": "OUT OF LINE.mp3",
+      "sha256": "f8f55d7b623f76d126d0b7fcef628a3cc4608de29ef12bf5f61852b04e883e35",
+      "sizeBytes": 6887138,
+      "objectKey": "tracks/out-of-line-f8f55d7b623f76d1.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/out-of-line-f8f55d7b623f76d1.mp3",
+      "uploadedAt": "2026-10-19T21:58:03.650Z"
+    },
+    {
+      "sourcePath": "Paper And Paint.mp3",
+      "sha256": "0ea5663aaef1314d0e6322db6ee1dd8904075b5e6fc835ca450ee7c7f5dcf869",
+      "sizeBytes": 3731766,
+      "objectKey": "tracks/paper-and-paint-0ea5663aaef1314d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/paper-and-paint-0ea5663aaef1314d.mp3",
+      "uploadedAt": "2026-10-19T21:58:03.114Z"
+    },
+    {
+      "sourcePath": "Paper Thin Mercy.mp3",
+      "sha256": "e55a66254d9b2e7e07994647d56aaa64a226c2415f3fb2b65c6420eb628ac7a7",
+      "sizeBytes": 4480253,
+      "objectKey": "tracks/paper-thin-mercy-e55a66254d9b2e7e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/paper-thin-mercy-e55a66254d9b2e7e.mp3",
+      "uploadedAt": "2026-10-19T21:58:04.847Z"
+    },
+    {
+      "sourcePath": "Paper Walls.mp3",
+      "sha256": "efee56cad3bc162e7da99cde9f86ad62eb2e9126aecc9010660dba257bf4dbac",
+      "sizeBytes": 5760130,
+      "objectKey": "tracks/paper-walls-efee56cad3bc162e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/paper-walls-efee56cad3bc162e.mp3",
+      "uploadedAt": "2026-10-19T21:58:05.446Z"
+    },
+    {
+      "sourcePath": "Paris in My Mouth.mp3",
+      "sha256": "f3f4316141e7f752aeac03b61c164af333a67ee1cb87b63084cacb1ee50de471",
+      "sizeBytes": 6826838,
+      "objectKey": "tracks/paris-in-my-mouth-f3f4316141e7f752.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/paris-in-my-mouth-f3f4316141e7f752.mp3",
+      "uploadedAt": "2026-10-19T21:58:06.819Z"
+    },
+    {
+      "sourcePath": "Peanut Butter Halo.mp3",
+      "sha256": "2816625efb80f0a6b1078695ffd09fb6d448a8ff87c761e507a6d9e0977cc287",
+      "sizeBytes": 4293832,
+      "objectKey": "tracks/peanut-butter-halo-2816625efb80f0a6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/peanut-butter-halo-2816625efb80f0a6.mp3",
+      "uploadedAt": "2026-10-19T21:58:06.265Z"
+    },
+    {
+      "sourcePath": "Peculiar Flag.mp3",
+      "sha256": "ed9af2c1f78ce64182675c0635ea5e48b776cdf69af2dab0d3527ff798489604",
+      "sizeBytes": 5507609,
+      "objectKey": "tracks/peculiar-flag-ed9af2c1f78ce641.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/peculiar-flag-ed9af2c1f78ce641.mp3",
+      "uploadedAt": "2026-10-19T21:58:07.305Z"
+    },
+    {
+      "sourcePath": "Pho and Banh Mi.mp3",
+      "sha256": "7d1f61a3687302f329852a74b92168aa3ad3793d75ea553b43f1aa5f122c44c3",
+      "sizeBytes": 5290736,
+      "objectKey": "tracks/pho-and-banh-mi-7d1f61a3687302f3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/pho-and-banh-mi-7d1f61a3687302f3.mp3",
+      "uploadedAt": "2026-10-19T21:58:08.064Z"
+    },
+    {
+      "sourcePath": "Pixel Dust Memory.mp3",
+      "sha256": "442e8a6ad8e04023c57febe4ef39bc93afe2f5f6d947f7b2d9a1554c3668fca1",
+      "sizeBytes": 5402854,
+      "objectKey": "tracks/pixel-dust-memory-442e8a6ad8e04023.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/pixel-dust-memory-442e8a6ad8e04023.mp3",
+      "uploadedAt": "2026-10-19T21:58:08.855Z"
+    },
+    {
+      "sourcePath": "Porte de Versailles.mp3",
+      "sha256": "e037b7eda1f2f2bd72db1306eea92d4534ab7187dab06827aaf03afa4625264a",
+      "sizeBytes": 4372637,
+      "objectKey": "tracks/porte-de-versailles-e037b7eda1f2f2bd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/porte-de-versailles-e037b7eda1f2f2bd.mp3",
+      "uploadedAt": "2026-10-19T21:58:09.311Z"
+    },
+    {
+      "sourcePath": "Pumpkin Spice Run.mp3",
+      "sha256": "6a3626d7f12251702506d2d03d40dbce487a09b87345a4541f4b3ee7b1e0f130",
+      "sizeBytes": 4493403,
+      "objectKey": "tracks/pumpkin-spice-run-6a3626d7f1225170.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/pumpkin-spice-run-6a3626d7f1225170.mp3",
+      "uploadedAt": "2026-10-19T21:58:09.917Z"
+    },
+    {
+      "sourcePath": "Release the Verdict.mp3",
+      "sha256": "5cf35b282e94f5df66de3decb9e631d3d92276344c2bf77b3b6c8022606274c3",
+      "sizeBytes": 6478313,
+      "objectKey": "tracks/release-the-verdict-5cf35b282e94f5df.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/release-the-verdict-5cf35b282e94f5df.mp3",
+      "uploadedAt": "2026-10-19T21:58:10.449Z"
+    },
+    {
+      "sourcePath": "ROSE BY ANY OTHER NAME.mp3",
+      "sha256": "749f3b0cf41bf90cab61806f2d783086e142c2623439562d56177f57c4c8ad9d",
+      "sizeBytes": 8315198,
+      "objectKey": "tracks/rose-by-any-other-name-749f3b0cf41bf90c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/rose-by-any-other-name-749f3b0cf41bf90c.mp3",
+      "uploadedAt": "2026-10-19T21:58:11.746Z"
+    },
+    {
+      "sourcePath": "Rue de Charonne.mp3",
+      "sha256": "d957aaa3e5aec6930005410a129a331565c37813a3fb82bbae299ffb18f25986",
+      "sizeBytes": 5503052,
+      "objectKey": "tracks/rue-de-charonne-d957aaa3e5aec693.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/rue-de-charonne-d957aaa3e5aec693.mp3",
+      "uploadedAt": "2026-10-19T21:58:12.356Z"
+    },
+    {
+      "sourcePath": "Say My Name.mp3",
+      "sha256": "22e561d6937b6073ecff06485b3c608dc6600b42b6d7ae1e336f23dbe49baac3",
+      "sizeBytes": 4303866,
+      "objectKey": "tracks/say-my-name-22e561d6937b6073.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/say-my-name-22e561d6937b6073.mp3",
+      "uploadedAt": "2026-10-19T21:58:12.296Z"
+    },
+    {
+      "sourcePath": "Scars and stitches (Alex’s AI Voice Cover).mp3",
+      "sha256": "dbfa4c2f7abbe1b34b57d26cf638bac822623de4389c72388803f036664ceab4",
+      "sizeBytes": 5490728,
+      "objectKey": "tracks/scars-and-stitches-alex-s-ai-voice-cover-dbfa4c2f7abbe1b3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/scars-and-stitches-alex-s-ai-voice-cover-dbfa4c2f7abbe1b3.mp3",
+      "uploadedAt": "2026-10-19T21:58:13.003Z"
+    },
+    {
+      "sourcePath": "Second Helpings.mp3",
+      "sha256": "cf66ddbed0bc38bdbfc82382cbbcccec5754ccef24937dbf27678dc00dd41fed",
+      "sizeBytes": 5022009,
+      "objectKey": "tracks/second-helpings-cf66ddbed0bc38bd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/second-helpings-cf66ddbed0bc38bd.mp3",
+      "uploadedAt": "2026-10-19T21:58:14.301Z"
+    },
+    {
+      "sourcePath": "Secondhand Spin.mp3",
+      "sha256": "49561e53024d164aed6bc544343b8d7f36221f463180aabdeb73565fe02cb27c",
+      "sizeBytes": 3716122,
+      "objectKey": "tracks/secondhand-spin-49561e53024d164a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/secondhand-spin-49561e53024d164a.mp3",
+      "uploadedAt": "2026-10-19T21:58:14.645Z"
+    },
+    {
+      "sourcePath": "Selfish Little House.mp3",
+      "sha256": "5429686bdde6ff57d6d83449976431ae0457596b0303151db3af0c6a27697980",
+      "sizeBytes": 5311239,
+      "objectKey": "tracks/selfish-little-house-5429686bdde6ff57.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/selfish-little-house-5429686bdde6ff57.mp3",
+      "uploadedAt": "2026-10-19T21:58:15.001Z"
+    },
+    {
+      "sourcePath": "Singapore Noodles.mp3",
+      "sha256": "6836082929e62d035f71591f3fe7aa31a910f27b387ca48a26caadf169e5ddcf",
+      "sizeBytes": 5258422,
+      "objectKey": "tracks/singapore-noodles-6836082929e62d03.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/singapore-noodles-6836082929e62d03.mp3",
+      "uploadedAt": "2026-10-19T21:58:15.644Z"
+    },
+    {
+      "sourcePath": "Solumn Thoughts (AI Alex Voice Cover).mp3",
+      "sha256": "d17d1655d27a4b7be264bfad75995f88a46b8dc46ba7278f38d24a2c01e8555a",
+      "sizeBytes": 5246225,
+      "objectKey": "tracks/solumn-thoughts-ai-alex-voice-cover-d17d1655d27a4b7b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/solumn-thoughts-ai-alex-voice-cover-d17d1655d27a4b7b.mp3",
+      "uploadedAt": "2026-10-19T21:58:17.219Z"
+    },
+    {
+      "sourcePath": "Solumn Thoughts (Alex AI Voice Cover).mp3",
+      "sha256": "6156dfc32cbf6b8bd132b9eb1d9a16bdbc9dc526356b1f16b2d16c029be50bd7",
+      "sizeBytes": 5577172,
+      "objectKey": "tracks/solumn-thoughts-alex-ai-voice-cover-6156dfc32cbf6b8b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/solumn-thoughts-alex-ai-voice-cover-6156dfc32cbf6b8b.mp3",
+      "uploadedAt": "2026-10-19T21:58:17.156Z"
+    },
+    {
+      "sourcePath": "Spin, Bend and Hold.mp3",
+      "sha256": "4ae36791af006ac614ca5b7f1bd832b63a3d534b0dc82d25fbb29be27571ad16",
+      "sizeBytes": 5714063,
+      "objectKey": "tracks/spin-bend-and-hold-4ae36791af006ac6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/spin-bend-and-hold-4ae36791af006ac6.mp3",
+      "uploadedAt": "2026-10-19T21:58:17.935Z"
+    },
+    {
+      "sourcePath": "Split Between Us.mp3",
+      "sha256": "d4120155856ece242ff7f969a454b2bb8c99914f512a47ccdcbbb54a63df7b1d",
+      "sizeBytes": 4597158,
+      "objectKey": "tracks/split-between-us-d4120155856ece24.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/split-between-us-d4120155856ece24.mp3",
+      "uploadedAt": "2026-10-19T21:58:18.074Z"
+    },
+    {
+      "sourcePath": "STEP BY STEP.mp3",
+      "sha256": "9212835afea71e62e0f7910194cab0d64f3e695fd5f9af14c58d77082a760aa9",
+      "sizeBytes": 5969410,
+      "objectKey": "tracks/step-by-step-9212835afea71e62.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/step-by-step-9212835afea71e62.mp3",
+      "uploadedAt": "2026-10-19T21:58:19.991Z"
+    },
+    {
+      "sourcePath": "Stop Marching Rows.mp3",
+      "sha256": "ecd3a24470c7572c2c39f2a489c3e9a7b2d754803ee1cce6bcfbafda1bcbef76",
+      "sizeBytes": 5450899,
+      "objectKey": "tracks/stop-marching-rows-ecd3a24470c7572c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/stop-marching-rows-ecd3a24470c7572c.mp3",
+      "uploadedAt": "2026-10-19T21:58:19.972Z"
+    },
+    {
+      "sourcePath": "Storm Behind My Confidence.mp3",
+      "sha256": "052f7c4d9bcca119549a9ccdc5bf4f5aad37a9664d369b9475be3d36aaba7d25",
+      "sizeBytes": 6869032,
+      "objectKey": "tracks/storm-behind-my-confidence-052f7c4d9bcca119.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/storm-behind-my-confidence-052f7c4d9bcca119.mp3",
+      "uploadedAt": "2026-10-19T21:58:21.064Z"
+    },
+    {
+      "sourcePath": "Sushi Night.mp3",
+      "sha256": "132d3ee0a03a2f2c05f559ee32d7ab19fbd4b75e2e795d7ff848224745b22c3e",
+      "sizeBytes": 5380234,
+      "objectKey": "tracks/sushi-night-132d3ee0a03a2f2c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/sushi-night-132d3ee0a03a2f2c.mp3",
+      "uploadedAt": "2026-10-19T21:58:21.181Z"
+    },
+    {
+      "sourcePath": "Table For Nobody.mp3",
+      "sha256": "b953edc68977b43404f8eaab1dcde217096a34dd477ad45c78c8a59b81c585e2",
+      "sizeBytes": 4846180,
+      "objectKey": "tracks/table-for-nobody-b953edc68977b434.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/table-for-nobody-b953edc68977b434.mp3",
+      "uploadedAt": "2026-10-19T21:58:22.949Z"
+    },
+    {
+      "sourcePath": "Tell Me I Was Here.mp3",
+      "sha256": "9eab5d0bfeb6892c7330e9619a531b0bf9b9f83c525e1417a392c8096a1e55a5",
+      "sizeBytes": 6286627,
+      "objectKey": "tracks/tell-me-i-was-here-9eab5d0bfeb6892c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-me-i-was-here-9eab5d0bfeb6892c.mp3",
+      "uploadedAt": "2026-10-19T21:58:23.252Z"
+    },
+    {
+      "sourcePath": "Tell My Heart (AI Alex Voice Cover).mp3",
+      "sha256": "234ec9dd4f88032570f154819f2d7c8bc3dadc480006e3528ebf45eb57e94626",
+      "sizeBytes": 2372621,
+      "objectKey": "tracks/tell-my-heart-ai-alex-voice-cover-234ec9dd4f880325.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-my-heart-ai-alex-voice-cover-234ec9dd4f880325.mp3",
+      "uploadedAt": "2026-10-19T21:58:23.352Z"
+    },
+    {
+      "sourcePath": "tell-my-heart-original.mp3",
+      "sha256": "c65364d191bf97a249bd23a6d5dfc6f3d2b4fa55ea60bf1d68bbb766d77657d1",
+      "sizeBytes": 2179924,
+      "objectKey": "tracks/tell-my-heart-original-c65364d191bf97a2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-my-heart-original-c65364d191bf97a2.mp3",
+      "uploadedAt": "2026-10-19T21:58:23.646Z"
+    },
+    {
+      "sourcePath": "THE ARITHMETIC OF HEARTS.mp3",
+      "sha256": "c6e0fc304ea1e99d35927a44f8b52f8ecc01f18c1d55a59ad199adfcda331289",
+      "sizeBytes": 8567961,
+      "objectKey": "tracks/the-arithmetic-of-hearts-c6e0fc304ea1e99d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-arithmetic-of-hearts-c6e0fc304ea1e99d.mp3",
+      "uploadedAt": "2026-10-19T21:58:26.794Z"
+    },
+    {
+      "sourcePath": "THE DAYS AHEAD.mp3",
+      "sha256": "cad0949ac225d27ee0513c731451952c6dcc9279620f2ec838e32029de134d5c",
+      "sizeBytes": 7927943,
+      "objectKey": "tracks/the-days-ahead-cad0949ac225d27e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-days-ahead-cad0949ac225d27e.mp3",
+      "uploadedAt": "2026-10-19T21:58:27.488Z"
+    },
+    {
+      "sourcePath": "THE HOLE STILL KNOWS MY NAME.mp3",
+      "sha256": "9a5b8cda735d355b790c4569c12065178806f3a63863cf3bf8d5173e67ddfd4b",
+      "sizeBytes": 11511188,
+      "objectKey": "tracks/the-hole-still-knows-my-name-9a5b8cda735d355b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-hole-still-knows-my-name-9a5b8cda735d355b.mp3",
+      "uploadedAt": "2026-10-19T21:58:28.265Z"
+    },
+    {
+      "sourcePath": "THE ICEBERG OPEN LAKEHOUSE.mp3",
+      "sha256": "4a53a4e751532b884d90dbf675f738e536865e7ed394944bc968b9abf3798213",
+      "sizeBytes": 11017101,
+      "objectKey": "tracks/the-iceberg-open-lakehouse-4a53a4e751532b88.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-iceberg-open-lakehouse-4a53a4e751532b88.mp3",
+      "uploadedAt": "2026-10-19T21:58:28.441Z"
+    },
+    {
+      "sourcePath": "The Lake Remembers.mp3",
+      "sha256": "b64cb4092447865a12bf78ed36f0bab3fd375bbcdd66db210d687c3d79ea1b1d",
+      "sizeBytes": 6465857,
+      "objectKey": "tracks/the-lake-remembers-b64cb4092447865a.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-lake-remembers-b64cb4092447865a.mp3",
+      "uploadedAt": "2026-10-19T21:58:29.156Z"
+    },
+    {
+      "sourcePath": "THE LONG WAY HOME.mp3",
+      "sha256": "ba2ffbef29f602dec3b7bbe6a7e2e6c2d2ab97dced1e3f9638208e884f117382",
+      "sizeBytes": 7371076,
+      "objectKey": "tracks/the-long-way-home-ba2ffbef29f602de.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-long-way-home-ba2ffbef29f602de.mp3",
+      "uploadedAt": "2026-10-19T21:58:30.475Z"
+    },
+    {
+      "sourcePath": "THE MACHINE LEARNS HUNGER.mp3",
+      "sha256": "42ef1c125a13fc47b3dee321042b5c51c15c64a0c152954214d129dbb0d257fd",
+      "sizeBytes": 10728121,
+      "objectKey": "tracks/the-machine-learns-hunger-42ef1c125a13fc47.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-machine-learns-hunger-42ef1c125a13fc47.mp3",
+      "uploadedAt": "2026-10-19T21:58:32.723Z"
+    },
+    {
+      "sourcePath": "THE MIRROR LOVES ME BACK.mp3",
+      "sha256": "84dfe9ca2546a2858411873b262e8b06ef1172729ba82cdb4fa6c85580c2d01a",
+      "sizeBytes": 9737482,
+      "objectKey": "tracks/the-mirror-loves-me-back-84dfe9ca2546a285.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-mirror-loves-me-back-84dfe9ca2546a285.mp3",
+      "uploadedAt": "2026-10-19T21:58:32.593Z"
+    },
+    {
+      "sourcePath": "The One Who Can’t Be Loved (Alex AI Voice Cover) (1).mp3",
+      "sha256": "9e7c5ace169ce2dd4248c5f431c89016a5923a80db8382ea28da7ec2f4456a32",
+      "sizeBytes": 4312517,
+      "objectKey": "tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-1-9e7c5ace169ce2dd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-1-9e7c5ace169ce2dd.mp3",
+      "uploadedAt": "2026-10-19T21:58:32.093Z"
+    },
+    {
+      "sourcePath": "The One Who Can’t Be Loved (Alex AI Voice Cover).mp3",
+      "sha256": "0a1c57be14b4242cfc3a9d3ef682aaa9614a0c18fd85b29c666ef7e10b9a7f08",
+      "sizeBytes": 5155930,
+      "objectKey": "tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-0a1c57be14b4242c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-one-who-can-t-be-loved-alex-ai-voice-cover-0a1c57be14b4242c.mp3",
+      "uploadedAt": "2026-10-19T21:58:33.070Z"
+    },
+    {
+      "sourcePath": "The One Who Stays In Here.mp3",
+      "sha256": "3bd5e0a10bc71f69d0b2e237f747af000d1f9c04376a44f19dc00b9ccbfb815e",
+      "sizeBytes": 5067788,
+      "objectKey": "tracks/the-one-who-stays-in-here-3bd5e0a10bc71f69.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-one-who-stays-in-here-3bd5e0a10bc71f69.mp3",
+      "uploadedAt": "2026-10-19T21:58:34.289Z"
+    },
+    {
+      "sourcePath": "The Other Side.mp3",
+      "sha256": "5b9690f676b02e1ed0d4b1f299375c81c3678c0b31ecbb0c9f703be95c747052",
+      "sizeBytes": 5648831,
+      "objectKey": "tracks/the-other-side-5b9690f676b02e1e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-other-side-5b9690f676b02e1e.mp3",
+      "uploadedAt": "2026-10-19T21:58:35.600Z"
+    },
+    {
+      "sourcePath": "THE PEOPLE NEXT DOOR.mp3",
+      "sha256": "4ed439b06d707d5cc73b6b614d13ae8d8fc5f6bfe0713a432229367f692910b9",
+      "sizeBytes": 10333192,
+      "objectKey": "tracks/the-people-next-door-4ed439b06d707d5c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-people-next-door-4ed439b06d707d5c.mp3",
+      "uploadedAt": "2026-10-19T21:58:37.851Z"
+    },
+    {
+      "sourcePath": "THE SIGNAL IN THE PRICE.mp3",
+      "sha256": "3755f5cc9d7c89d6394ef0d3e2805467ce27a444c5357f02d680bd506ca2e5f3",
+      "sizeBytes": 9833766,
+      "objectKey": "tracks/the-signal-in-the-price-3755f5cc9d7c89d6.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-signal-in-the-price-3755f5cc9d7c89d6.mp3",
+      "uploadedAt": "2026-10-19T21:58:36.747Z"
+    },
+    {
+      "sourcePath": "THE UNIVERSE WON’T MIND.mp3",
+      "sha256": "cae4ac380e1c876e34ad182d8378c57c71b79a92f44263d5e330e1f0139004c1",
+      "sizeBytes": 8294867,
+      "objectKey": "tracks/the-universe-won-t-mind-cae4ac380e1c876e.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-universe-won-t-mind-cae4ac380e1c876e.mp3",
+      "uploadedAt": "2026-10-19T21:58:37.410Z"
+    },
+    {
+      "sourcePath": "These days (Alex AI Voice Cover).mp3",
+      "sha256": "e4854389f91453285417b592f65c9569e22624606751f245decb9eefc4dd9955",
+      "sizeBytes": 2010836,
+      "objectKey": "tracks/these-days-alex-ai-voice-cover-e4854389f9145328.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/these-days-alex-ai-voice-cover-e4854389f9145328.mp3",
+      "uploadedAt": "2026-10-19T21:58:37.742Z"
+    },
+    {
+      "sourcePath": "These Days Video.mp3",
+      "sha256": "e180d51cac26eabfbe7dfee149f91052c335d0361be131b8de143445a460a0cb",
+      "sizeBytes": 2781237,
+      "objectKey": "tracks/these-days-video-e180d51cac26eabf.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/these-days-video-e180d51cac26eabf.mp3",
+      "uploadedAt": "2026-10-19T21:58:38.683Z"
+    },
+    {
+      "sourcePath": "Three Discs to Save the World.mp3",
+      "sha256": "df3d4b308c73622f686c50965f9e5798768a78f1786da9009982e1cadf575c6c",
+      "sizeBytes": 6881803,
+      "objectKey": "tracks/three-discs-to-save-the-world-df3d4b308c73622f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/three-discs-to-save-the-world-df3d4b308c73622f.mp3",
+      "uploadedAt": "2026-10-19T21:58:40.425Z"
+    },
+    {
+      "sourcePath": "Through the Darkness (AI Alex Voice Cover).mp3",
+      "sha256": "e78d1ac0a7271d6da32641de39f4966b906d62c474ae1cde6230c0adadc626b5",
+      "sizeBytes": 4355012,
+      "objectKey": "tracks/through-the-darkness-ai-alex-voice-cover-e78d1ac0a7271d6d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/through-the-darkness-ai-alex-voice-cover-e78d1ac0a7271d6d.mp3",
+      "uploadedAt": "2026-10-19T21:58:40.940Z"
+    },
+    {
+      "sourcePath": "Through the Darkness (Alex AI Voice Cover).mp3",
+      "sha256": "658b64a5f833c1c0b4afca645c4874034bea7ba96e948c3bfde5a871ba2a3b21",
+      "sizeBytes": 11025590,
+      "objectKey": "tracks/through-the-darkness-alex-ai-voice-cover-658b64a5f833c1c0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/through-the-darkness-alex-ai-voice-cover-658b64a5f833c1c0.mp3",
+      "uploadedAt": "2026-10-19T21:58:41.834Z"
+    },
+    {
+      "sourcePath": "Tin Roof Weather.mp3",
+      "sha256": "0e49d7a1384f5438cf6a68b240303a8a8d6cdeac8ea089ddfd3866eead4d1f36",
+      "sizeBytes": 4913456,
+      "objectKey": "tracks/tin-roof-weather-0e49d7a1384f5438.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tin-roof-weather-0e49d7a1384f5438.mp3",
+      "uploadedAt": "2026-10-19T21:58:41.617Z"
+    },
+    {
+      "sourcePath": "To Find My Mind.mp3",
+      "sha256": "aaa11f2912dcd0e7bdb6eac41e4d8bba3583a2a04d076079144a2d452b0135b5",
+      "sizeBytes": 6308148,
+      "objectKey": "tracks/to-find-my-mind-aaa11f2912dcd0e7.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/to-find-my-mind-aaa11f2912dcd0e7.mp3",
+      "uploadedAt": "2026-10-19T21:58:42.987Z"
+    },
+    {
+      "sourcePath": "Today Has Been Good.mp3",
+      "sha256": "b4f1916f6af3adf03149c1b94e751f09281c3ef045b116b342b0002e27a6acb5",
+      "sizeBytes": 3957891,
+      "objectKey": "tracks/today-has-been-good-b4f1916f6af3adf0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/today-has-been-good-b4f1916f6af3adf0.mp3",
+      "uploadedAt": "2026-10-19T21:58:43.289Z"
+    },
+    {
+      "sourcePath": "Tomorrow, Wearing Yesterday.mp3",
+      "sha256": "f2e81d4585659511181a4d26feac37ddd162eacb74ef547c875836da007e7d15",
+      "sizeBytes": 5914332,
+      "objectKey": "tracks/tomorrow-wearing-yesterday-f2e81d4585659511.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tomorrow-wearing-yesterday-f2e81d4585659511.mp3",
+      "uploadedAt": "2026-10-19T21:58:44.443Z"
+    },
+    {
+      "sourcePath": "Top Floor Steps.mp3",
+      "sha256": "dcaf9935c8f41518f4d7fb4a830cd2d71a35983f1de6d531f83195a2a5b18c66",
+      "sizeBytes": 6106044,
+      "objectKey": "tracks/top-floor-steps-dcaf9935c8f41518.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/top-floor-steps-dcaf9935c8f41518.mp3",
+      "uploadedAt": "2026-10-19T21:58:44.516Z"
+    },
+    {
+      "sourcePath": "Try to Forget You (Alex AI Voice Cover) (1).mp3",
+      "sha256": "3c1e0bbe1d62f02ca3cab8c76d561bf9aa81c19ae44acc9a0fad8efe09855cdb",
+      "sizeBytes": 4896400,
+      "objectKey": "tracks/try-to-forget-you-alex-ai-voice-cover-1-3c1e0bbe1d62f02c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/try-to-forget-you-alex-ai-voice-cover-1-3c1e0bbe1d62f02c.mp3",
+      "uploadedAt": "2026-10-19T21:58:45.255Z"
+    },
+    {
+      "sourcePath": "Try to Forget You (Alex AI Voice Cover).mp3",
+      "sha256": "66054f2f5d4828871d35238c33c2d7b229302e8d39e2ce596c3860086217e951",
+      "sizeBytes": 4493182,
+      "objectKey": "tracks/try-to-forget-you-alex-ai-voice-cover-66054f2f5d482887.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/try-to-forget-you-alex-ai-voice-cover-66054f2f5d482887.mp3",
+      "uploadedAt": "2026-10-19T21:58:45.722Z"
+    },
+    {
+      "sourcePath": "Wake to the Walls.mp3",
+      "sha256": "63114d6a05fa01b03fccd32efa025d5404f26f94ee80139561f8f61ed7b266f0",
+      "sizeBytes": 5615707,
+      "objectKey": "tracks/wake-to-the-walls-63114d6a05fa01b0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wake-to-the-walls-63114d6a05fa01b0.mp3",
+      "uploadedAt": "2026-10-19T21:58:47.509Z"
+    },
+    {
+      "sourcePath": "Wear Every Jagged Edge.mp3",
+      "sha256": "ba593d53d0072e34aa6c4fb9228db0fb1e5767e8b1bcf7aad95a323b39ba4bd9",
+      "sizeBytes": 5159164,
+      "objectKey": "tracks/wear-every-jagged-edge-ba593d53d0072e34.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wear-every-jagged-edge-ba593d53d0072e34.mp3",
+      "uploadedAt": "2026-10-19T21:58:47.668Z"
+    },
+    {
+      "sourcePath": "WEAR YOUR OWN NAME.mp3",
+      "sha256": "401d960a9993331d0d6a34161157273136933aab521ecf32acf39eede1a00672",
+      "sizeBytes": 7214737,
+      "objectKey": "tracks/wear-your-own-name-401d960a9993331d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wear-your-own-name-401d960a9993331d.mp3",
+      "uploadedAt": "2026-10-19T21:58:48.128Z"
+    },
+    {
+      "sourcePath": "Weird is just a vision.mp3",
+      "sha256": "a71c35fd60eb74cfce9e71abef45f97f47fe7ceca19f00965f91547b9a3243e0",
+      "sizeBytes": 5126198,
+      "objectKey": "tracks/weird-is-just-a-vision-a71c35fd60eb74cf.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/weird-is-just-a-vision-a71c35fd60eb74cf.mp3",
+      "uploadedAt": "2026-10-19T21:58:48.528Z"
+    },
+    {
+      "sourcePath": "Weird Is Just a Vision.mp3",
+      "sha256": "c4d79a36ae3ce6e4aadbc6071f071f5735e07d2c91afb419354b1429627853c9",
+      "sizeBytes": 4971388,
+      "objectKey": "tracks/weird-is-just-a-vision-c4d79a36ae3ce6e4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/weird-is-just-a-vision-c4d79a36ae3ce6e4.mp3",
+      "uploadedAt": "2026-10-19T21:58:50.160Z"
+    },
+    {
+      "sourcePath": "Weird Is Just the Future.mp3",
+      "sha256": "9a0681d03f8cacae9597118c3e8864116264800fff17b10dd4c56382a92e886e",
+      "sizeBytes": 6554101,
+      "objectKey": "tracks/weird-is-just-the-future-9a0681d03f8cacae.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/weird-is-just-the-future-9a0681d03f8cacae.mp3",
+      "uploadedAt": "2026-10-19T21:58:50.798Z"
+    },
+    {
+      "sourcePath": "What's Left of Me.mp3",
+      "sha256": "640c4acf641b431d6adc3fa746b09e8410cba448cb08ad37cdf8b0d2cdf37b16",
+      "sizeBytes": 5750696,
+      "objectKey": "tracks/what-s-left-of-me-640c4acf641b431d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/what-s-left-of-me-640c4acf641b431d.mp3",
+      "uploadedAt": "2026-10-19T21:58:51.316Z"
+    },
+    {
+      "sourcePath": "Where the Map Runs Thin (v2).mp3",
+      "sha256": "8d0bdfac6d6c881b8b064661e61f48a68cf9514f2d9d7ce023cc092f43bbd12c",
+      "sizeBytes": 4336527,
+      "objectKey": "tracks/where-the-map-runs-thin-v2-8d0bdfac6d6c881b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/where-the-map-runs-thin-v2-8d0bdfac6d6c881b.mp3",
+      "uploadedAt": "2026-10-19T21:58:51.209Z"
+    },
+    {
+      "sourcePath": "Where the World Fell Short.mp3",
+      "sha256": "388705923700149d172249d8b4f06db002e4dfda58b290cfffba68f2fdfd0bdc",
+      "sizeBytes": 4883779,
+      "objectKey": "tracks/where-the-world-fell-short-388705923700149d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/where-the-world-fell-short-388705923700149d.mp3",
+      "uploadedAt": "2026-10-19T21:58:52.354Z"
+    },
+    {
+      "sourcePath": "Wide Awake Again.mp3",
+      "sha256": "2b322fc57a3515d2848cc03434957b175d3ac89769ae93e1d228662a5d1d7e7b",
+      "sizeBytes": 4325590,
+      "objectKey": "tracks/wide-awake-again-2b322fc57a3515d2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wide-awake-again-2b322fc57a3515d2.mp3",
+      "uploadedAt": "2026-10-19T21:58:53.147Z"
+    },
+    {
+      "sourcePath": "Wild Crazy Place.mp3",
+      "sha256": "3a1e655b3d8abb26d8e7e4495608244f44da2dde79bb6aebe0b837e52d7044fb",
+      "sizeBytes": 4725576,
+      "objectKey": "tracks/wild-crazy-place-3a1e655b3d8abb26.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wild-crazy-place-3a1e655b3d8abb26.mp3",
+      "uploadedAt": "2026-10-19T21:58:54.101Z"
+    },
+    {
+      "sourcePath": "Wrong Road Home.mp3",
+      "sha256": "ebddb415c591027b9737afa3e0223fabf2fbd5abf343b551385a4399b9e7dc87",
+      "sizeBytes": 4549356,
+      "objectKey": "tracks/wrong-road-home-ebddb415c591027b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/wrong-road-home-ebddb415c591027b.mp3",
+      "uploadedAt": "2026-10-19T21:58:54.006Z"
+    },
+    {
+      "sourcePath": "Yo Soy Alex Merced.mp3",
+      "sha256": "f7e49323cfb06f541e669ef193d3c340278942a998239396cd402d72e99a38d6",
+      "sizeBytes": 7294295,
+      "objectKey": "tracks/yo-soy-alex-merced-f7e49323cfb06f54.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/yo-soy-alex-merced-f7e49323cfb06f54.mp3",
+      "uploadedAt": "2026-10-19T21:58:55.290Z"
+    },
+    {
+      "sourcePath": "You Deserve a Love.mp3",
+      "sha256": "4cd9972953490661638c6fdb023fd0d4202852cea68d8994cd33424c2dfecbbe",
+      "sizeBytes": 4934632,
+      "objectKey": "tracks/you-deserve-a-love-4cd9972953490661.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/you-deserve-a-love-4cd9972953490661.mp3",
+      "uploadedAt": "2026-10-19T21:58:55.723Z"
+    },
+    {
+      "sourcePath": "YOUR NAME IS ALREADY TALKING.mp3",
+      "sha256": "eb0d7304f5812fa9fa9555eff0a7d5e4b1cb9de1fa1ac07ff07279d5e98874ab",
+      "sizeBytes": 5403944,
+      "objectKey": "tracks/your-name-is-already-talking-eb0d7304f5812fa9.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-name-is-already-talking-eb0d7304f5812fa9.mp3",
+      "uploadedAt": "2026-10-19T21:58:56.898Z"
+    },
+    {
+      "sourcePath": "Your Open Hands.mp3",
+      "sha256": "dc5db0e186b0c99c1b443340a64414af87c5dca63dfd57b8d1c59b86d92686e7",
+      "sizeBytes": 5885637,
+      "objectKey": "tracks/your-open-hands-dc5db0e186b0c99c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-open-hands-dc5db0e186b0c99c.mp3",
+      "uploadedAt": "2026-10-19T21:58:56.873Z"
+    },
+    {
+      "sourcePath": "Your Seams Showing Through.mp3",
+      "sha256": "ca771ef58b9031b38dc8f9c1cc55233eea6ab2693db86ad8bcbe86e2a297f802",
+      "sizeBytes": 5824989,
+      "objectKey": "tracks/your-seams-showing-through-ca771ef58b9031b3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/your-seams-showing-through-ca771ef58b9031b3.mp3",
+      "uploadedAt": "2026-10-19T21:58:58.026Z"
+    }
+  ],
+  "bucket": "alexmercedmusic-mp3",
+  "baseUrl": "https://mp3.alexmercedcloud.com",
+  "updatedAt": "2026-10-19T21:58:58.026Z"
+}

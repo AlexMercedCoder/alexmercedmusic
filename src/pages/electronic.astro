@@ -12,6 +12,7 @@ import {
 import { SITE, catalogAlbums, songByPrimaryUrl } from '../data/catalog-model';
 
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
+const downloadUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.downloads[0]?.url : undefined;
 const albumDetailUrl = new Map(catalogAlbums.map((album) => [album.title, album.pageUrl.replace(SITE, '')]));
 
 const albumEntries = albums.map((album) => ({
@@ -120,7 +121,7 @@ const label: Record<string, string> = {
                 <li>
                   <span class="num">{String(i + 1).padStart(2, '0')}</span>
                   <span>{t.url ? <a href={detailUrl(t.url)}>{t.title}</a> : t.title}</span>
-                  <span class="len"></span>
+                  <span class="len">{downloadUrl(t.url) && <a href={downloadUrl(t.url)} download>Download MP3</a>}</span>
                 </li>
               ))}
             </ol>
@@ -175,6 +176,7 @@ const label: Record<string, string> = {
               {(t.links ?? [{ source: t.sources[0], url: t.url }]).map((link) => (
                 <a href={link.url} data-src={link.source}>{label[link.source] ?? link.source}</a>
               ))}
+              {downloadUrl(t.url) && <a href={downloadUrl(t.url)} download>MP3</a>}
             </span>
             <span class="len">{mmss(t.seconds)}</span>
           </li>

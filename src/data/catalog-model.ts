@@ -20,9 +20,11 @@ import {
 import { sunoPromptingGuide } from './suno-prompting-guide';
 import { musicTheoryGuide } from './music-theory-guide';
 import spotifyTracksData from './spotify-tracks.json';
+import mp3Uploads from './mp3-uploads.json';
+import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
-export const CATALOG_SCHEMA_VERSION = '2.1.0';
+export const CATALOG_SCHEMA_VERSION = '2.2.0';
 export const CATALOG_UPDATED_AT = '2026-10-19';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
@@ -41,6 +43,7 @@ export type CatalogSong = {
   pageUrl: string;
   description: string;
   links: CatalogLink[];
+  downloads: Array<{ url: string; fileName: string; sizeBytes: number }>;
   length?: string;
   seconds?: number;
   posted?: string;
@@ -155,7 +158,7 @@ const linksFor = (
     }));
 };
 
-type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'albumLinks' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'acousticSourceId' | 'acousticSourcePageUrl' | 'acousticVersionIds' | 'acousticVersionPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
+type SongSeed = Omit<CatalogSong, 'id' | 'slug' | 'pageUrl' | 'albumLinks' | 'downloads' | 'originalTrackId' | 'originalPageUrl' | 'reimaginedTrackIds' | 'reimaginedPageUrls' | 'acousticSourceId' | 'acousticSourcePageUrl' | 'acousticVersionIds' | 'acousticVersionPageUrls' | 'videoIds' | 'relatedVideoIds'> & {
   key: string;
   originalTitle?: string;
   originalEra?: Era;
@@ -517,8 +520,22 @@ for (const match of spotifyMatches) {
   spotifyMatchesBySongId.set(match.song.id, matches);
 }
 
+const downloadsBySongId = new Map<string, CatalogSong['downloads']>();
+for (const upload of mp3Uploads.files) {
+  const songId = (mp3Matches as Record<string, string>)[upload.sourcePath];
+  if (!songId) continue;
+  const downloads = downloadsBySongId.get(songId) ?? [];
+  downloads.push({
+    url: upload.url,
+    fileName: upload.sourcePath.split('/').at(-1) ?? upload.sourcePath,
+    sizeBytes: upload.sizeBytes,
+  });
+  downloadsBySongId.set(songId, downloads);
+}
+
 export const songs: CatalogSong[] = baseSongs.map((song) => ({
   ...song,
+  downloads: downloadsBySongId.get(song.id) ?? [],
   ...(acousticSourceByVersionId.has(song.id) ? {
     acousticSourceId: acousticSourceByVersionId.get(song.id)!.id,
     acousticSourcePageUrl: acousticSourceByVersionId.get(song.id)!.pageUrl,
@@ -607,6 +624,8 @@ export const publicCatalog = {
     videos: videos.length,
     shorts: videos.filter((video) => video.videoType === 'short').length,
     longFormVideos: videos.filter((video) => video.videoType === 'video').length,
+    mp3Files: mp3Uploads.files.length,
+    songsWithMp3: songs.filter((song) => song.downloads.length > 0).length,
   },
   electronic: { stats: electronicStats, runtime: electronicRuntime },
   suno: {

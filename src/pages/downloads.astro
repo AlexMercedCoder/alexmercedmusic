@@ -1,0 +1,87 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import uploads from '../data/mp3-uploads.json';
+import matches from '../data/mp3-matches.json';
+import { SITE, songById } from '../data/catalog-model';
+
+const groups = [
+  { title: 'Acoustic originals and reimaginings', prefix: 'Acoustic1/' },
+  { title: 'Electronic originals and reimaginings', prefix: 'Electronic1/' },
+  { title: 'Other recordings', prefix: '' },
+].map((group) => ({
+  ...group,
+  files: uploads.files.filter((file) => group.prefix ? file.sourcePath.startsWith(group.prefix) : !file.sourcePath.includes('/'))
+    .map((file) => ({
+      ...file,
+      fileName: file.sourcePath.split('/').at(-1) ?? file.sourcePath,
+      song: songById.get((matches as Record<string, string>)[file.sourcePath]),
+    })),
+}));
+const description = `Download ${uploads.files.length} Alex Merced MP3 recordings, including acoustic originals, electronic tracks and reimagined versions.`;
+const jsonLd = [{
+  '@type': 'CollectionPage',
+  '@id': `${SITE}/downloads/#page`,
+  name: 'Alex Merced MP3 downloads',
+  url: `${SITE}/downloads/`,
+  description,
+  about: { '@id': `${SITE}/#musicgroup` },
+  numberOfItems: uploads.files.length,
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'MP3 downloads', item: `${SITE}/downloads/` },
+  ],
+}];
+---
+
+<Base title="MP3 downloads" description={description} jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'MP3 downloads' }]} />
+  <section class="section section--tight">
+    <div class="shell">
+      <p class="eyebrow">Direct downloads</p>
+      <h1>Take the music with you</h1>
+      <p class="lede">Browse {uploads.files.length} MP3 files. These downloads come from Alex Merced Cloud, so they do not use the music website's hosting bandwidth.</p>
+      <p>Some songs have more than one recording. Use the song page to compare versions and find their streaming sources.</p>
+      <label class="download-search"><span>Find a file</span><input id="download-query" type="search" placeholder="Search titles and filenames" autocomplete="off" /></label>
+      <p id="download-count" aria-live="polite">Showing {uploads.files.length} files</p>
+    </div>
+  </section>
+  {groups.map((group) => <section class="section section--tight download-group">
+    <div class="shell">
+      <h2>{group.title}</h2>
+      <div class="download-list">
+        {group.files.map((file) => <article class="card download-item" data-download-item data-search={`${file.fileName} ${file.song?.title ?? ''}`.toLowerCase()}>
+          <div>
+            <h3>{file.fileName}</h3>
+            <p>{(file.sizeBytes / 1048576).toFixed(1)} MiB{file.song ? <> · <a href={file.song.pageUrl.replace(SITE, '')}>Song details</a></> : ' · File-only recording'}</p>
+          </div>
+          <a class="btn" href={file.url} download>Download MP3</a>
+        </article>)}
+      </div>
+    </div>
+  </section>)}
+</Base>
+
+<style>
+  .download-search{display:grid;gap:.4rem;max-width:30rem;margin:1.5rem 0 .8rem}.download-search span{font:600 .7rem/1 var(--mono);letter-spacing:.08em;text-transform:uppercase}.download-search input{min-height:2.8rem;padding:.7rem;border:1px solid var(--rule);border-radius:var(--radius);background:var(--night-800);color:var(--ink);font:inherit}.download-list{display:grid;gap:.65rem}.download-item{display:flex;align-items:center;justify-content:space-between;gap:1rem}.download-item[hidden],.download-group[hidden]{display:none}.download-item h3{font-size:1rem;margin:0 0 .25rem;overflow-wrap:anywhere}.download-item p{margin:0;color:var(--ink-faint);font-size:.82rem}.download-item .btn{white-space:nowrap}@media(max-width:36rem){.download-item{align-items:flex-start;flex-direction:column}}
+</style>
+
+<script>
+  const input = document.getElementById('download-query') as HTMLInputElement;
+  const items = [...document.querySelectorAll<HTMLElement>('[data-download-item]')];
+  const count = document.getElementById('download-count')!;
+  input.addEventListener('input', () => {
+    const query = input.value.trim().toLowerCase();
+    let visible = 0;
+    for (const item of items) {
+      item.hidden = !item.dataset.search?.includes(query);
+      if (!item.hidden) visible += 1;
+    }
+    count.textContent = `Showing ${visible} of ${items.length} files`;
+    for (const group of document.querySelectorAll<HTMLElement>('.download-group')) {
+      group.hidden = !group.querySelector('[data-download-item]:not([hidden])');
+    }
+  });
+</script>

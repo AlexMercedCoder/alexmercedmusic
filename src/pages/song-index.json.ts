@@ -24,6 +24,7 @@ export const GET: APIRoute = () => new Response(JSON.stringify({
     genres: song.genres ?? [],
     style: song.style ?? null,
     sources: [...new Set(song.links.map((link) => link.source.replace('soundcloud-albums', 'soundcloud'))) ],
+    downloadUrl: song.downloads[0]?.url ?? null,
     sourceUrl: song.links[0].url,
     createdAt: song.createdAt ?? null,
     duration: song.seconds ?? song.durationSeconds ?? 0,

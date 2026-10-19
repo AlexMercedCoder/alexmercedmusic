@@ -55,7 +55,7 @@ const jsonLd = [{
       <ol class="tracks">
         {tracks.map(({ source, song }, index) => {
           const earlier = song?.acousticSourceId ? songById.get(song.acousticSourceId) : undefined;
-          return <li><span class="num">{String(index + 1).padStart(2, '0')}</span><span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span><span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a>{earlier && <a href={earlier.pageUrl.replace(SITE, '')}>Earlier version</a>}</span></li>;
+          return <li><span class="num">{String(index + 1).padStart(2, '0')}</span><span>{song ? <a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a> : <a class="song-link" href={source.url}>{source.title}</a>}</span><span class="source-links source-links--inline"><a href={source.url}>Suno ↗</a>{song?.downloads[0] && <a href={song.downloads[0].url} download>Download MP3</a>}{earlier && <a href={earlier.pageUrl.replace(SITE, '')}>Earlier version</a>}</span></li>;
         })}
       </ol>
     </div>

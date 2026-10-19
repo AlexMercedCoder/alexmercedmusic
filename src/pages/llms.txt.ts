@@ -20,6 +20,7 @@ Full YouTube videos: ${publicCatalog.counts.longFormVideos}
 
 - [Home](${publicCatalog.site}/)
 - [Explore songs](${publicCatalog.site}/songs/)
+- [MP3 downloads](${publicCatalog.site}/downloads/)
 - [Videos and Shorts](${publicCatalog.site}/videos/)
 - [Acoustic archive](${publicCatalog.site}/acoustic/)
 - [Electronic catalog](${publicCatalog.site}/electronic/)
