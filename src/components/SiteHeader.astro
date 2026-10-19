@@ -2,20 +2,25 @@
 export interface Props { path: string }
 const { path } = Astro.props;
 
-const links = [
-  { href: '/', label: 'Home' },
-  { href: '/acoustic/', label: 'Acoustic' },
-  { href: '/reimagined/', label: 'Reimagined' },
-  { href: '/suno/', label: 'Suno' },
-  { href: '/suno-prompting-guide/', label: 'Prompting' },
-  { href: '/music-theory/', label: 'Theory' },
-  { href: '/electronic/', label: 'Electronic' },
-  { href: '/listen/', label: 'Listen' },
-  { href: '/downloads/', label: 'Downloads' },
-  { href: '/videos/', label: 'Videos' },
-  { href: '/songs/', label: 'Explore' },
-  { href: '/stories/', label: 'Stories' },
-  { href: '/about/', label: 'About' },
+const groups = [
+  { label: 'Music', links: [
+    { href: '/songs/', label: 'All songs' },
+    { href: '/acoustic/', label: 'Acoustic' },
+    { href: '/reimagined/', label: 'Reimagined' },
+    { href: '/electronic/', label: 'Electronic' },
+    { href: '/suno/', label: 'Suno albums' },
+  ] },
+  { label: 'Watch & listen', links: [
+    { href: '/listen/', label: 'Streaming platforms' },
+    { href: '/videos/', label: 'Videos & Shorts' },
+    { href: '/downloads/', label: 'MP3 downloads' },
+  ] },
+  { label: 'Explore', links: [
+    { href: '/stories/', label: 'Stories' },
+    { href: '/music-theory/', label: 'Music theory' },
+    { href: '/suno-prompting-guide/', label: 'Suno prompting' },
+    { href: '/about/', label: 'About Alex' },
+  ] },
 ];
 
 const here = (href: string) =>
@@ -25,16 +30,45 @@ const here = (href: string) =>
 <header class="site-header">
   <div class="shell site-header__inner">
     <a class="brand" href="/">Alex Merced<span>.</span>Music</a>
-    <nav class="site-nav site-nav--desktop" aria-label="Sections">
-      {links.map((l) => (
-        <a href={l.href} aria-current={here(l.href) ? 'page' : undefined}>{l.label}</a>
-      ))}
+    <nav class="site-nav site-nav--desktop" aria-label="Main navigation">
+      <a href="/" aria-current={here('/') ? 'page' : undefined}>Home</a>
+      {groups.map((group) => <details class="site-nav__group">
+        <summary class:list={[group.links.some((link) => here(link.href)) && 'site-nav__active']}>{group.label}</summary>
+        <div class="site-nav__submenu">
+          {group.links.map((link) => <a href={link.href} aria-current={here(link.href) ? 'page' : undefined}>{link.label}</a>)}
+        </div>
+      </details>)}
     </nav>
     <details class="mobile-nav">
       <summary>Menu</summary>
-      <nav aria-label="Mobile sections">
-        {links.map((l) => <a href={l.href} aria-current={here(l.href) ? 'page' : undefined}>{l.label}</a>)}
+      <nav aria-label="Mobile navigation">
+        <a href="/" aria-current={here('/') ? 'page' : undefined}>Home</a>
+        {groups.map((group) => <details>
+          <summary>{group.label}</summary>
+          <div class="mobile-nav__submenu">
+            {group.links.map((link) => <a href={link.href} aria-current={here(link.href) ? 'page' : undefined}>{link.label}</a>)}
+          </div>
+        </details>)}
       </nav>
     </details>
   </div>
 </header>
+
+<script>
+  const desktopGroups = [...document.querySelectorAll<HTMLDetailsElement>('.site-nav__group')];
+  for (const group of desktopGroups) {
+    group.addEventListener('toggle', () => {
+      if (group.open) desktopGroups.filter((other) => other !== group).forEach((other) => { other.open = false; });
+    });
+  }
+  document.addEventListener('click', (event) => {
+    if (!(event.target as Element).closest('.site-nav__group')) desktopGroups.forEach((group) => { group.open = false; });
+  });
+  document.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape') {
+      desktopGroups.forEach((group) => { group.open = false; });
+      const mobile = document.querySelector<HTMLDetailsElement>('.mobile-nav');
+      if (mobile) mobile.open = false;
+    }
+  });
+</script>

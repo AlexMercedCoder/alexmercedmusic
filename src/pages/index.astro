@@ -121,7 +121,7 @@ const jsonLd = [
 
   <section class="section">
     <div class="shell">
-      <div class="section__head"><p class="eyebrow">Watch and connect</p><h2>Shorts and videos with the full story attached</h2><p>Each page links to the matching song record, its listening sources and other known versions.</p></div>
+      <div class="section__head"><p class="eyebrow">Watch and connect</p><h2>Shorts and videos with the full story attached</h2><p>Watch the videos, hear the songs and discover other versions.</p></div>
       <div class="grid grid--3">
         {recentVideos.map((video) => <article class="card"><img class:list={['video-thumb', video.videoType === 'short' && 'video-thumb--short']} src={video.imageUrl} width={video.videoType === 'short' ? 480 : 640} height={video.videoType === 'short' ? 854 : 360} loading="lazy" alt={`${video.videoType === 'short' ? 'Short' : 'Video'} thumbnail for ${video.title}`} /><h3><a href={video.pageUrl.replace(SITE, '')}>{video.title}</a></h3><p>{video.videoType === 'short' ? 'YouTube Short' : (video.relatedSongIds.length ? `${video.relatedSongIds.length} connected song record${video.relatedSongIds.length === 1 ? '' : 's'}` : 'Channel video')}</p><div class="source-links"><a href={video.pageUrl.replace(SITE, '')}>Details</a><a href={video.watchUrl}>YouTube ↗</a></div></article>)}
       </div>
@@ -201,8 +201,7 @@ const jsonLd = [
           <p>
             {electronicStats.total} tracks produced in FL Studio, {electronicRuntime} of it,
             filed under electronica, electro pop and glitch hop out of Brooklyn. It is
-            scattered over ReverbNation, two SoundCloud accounts and YouTube, so the
-            full list is assembled here.
+            available on ReverbNation, SoundCloud and YouTube.
           </p>
           <p><a href="/electronic/">Browse all {electronicStats.total}</a></p>
         </article>
@@ -221,7 +220,7 @@ const jsonLd = [
 
   <section class="section" data-era="ai">
     <div class="shell">
-      <div class="section__head"><p class="eyebrow">Recently published</p><h2>Latest Suno songs</h2><p>Open the local details, published lyrics and direct Suno source for the newest catalog entries.</p></div>
+      <div class="section__head"><p class="eyebrow">Recently published</p><h2>Latest Suno songs</h2><p>Hear the newest songs on Suno and explore their lyrics and details.</p></div>
       <div class="grid grid--3">
         {recentSuno.map((song) => (
           <article class="card card--era" data-era="ai">

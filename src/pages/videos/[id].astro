@@ -35,19 +35,19 @@ const jsonLd = [{
 }];
 ---
 
-<Base title={video.title} description={`Watch the YouTube ${isShort ? 'Short' : 'video'} ${video.title} by Alex Merced and find matching song records, listening sources and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`${isShort ? 'Short' : 'Video'} thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)} canonicalUrl={canonicalSong?.pageUrl} noindex={!canonicalSong}>
+<Base title={video.title} description={`Watch the YouTube ${isShort ? 'Short' : 'video'} ${video.title} by Alex Merced and discover related songs and alternate versions.`} jsonLd={jsonLd} ogImage={video.imageUrl} imageAlt={`${isShort ? 'Short' : 'Video'} thumbnail for ${video.title}`} dateModified={video.publishedAt.slice(0, 10)} canonicalUrl={canonicalSong?.pageUrl} noindex={!canonicalSong}>
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Videos and Shorts', href: '/videos/' }, { label: video.title }]} />
   <article class="section detail">
     <div class="shell detail__grid">
       <div>
         <p class="eyebrow">YouTube {isShort ? 'Short' : 'video'}</p>
         <h1>{video.title}</h1>
-        <p class="lede">Watch the video, then follow its catalog connections to the song record, listening sources and other known versions.</p>
+        <p class="lede">Watch the video, hear the song and explore other versions.</p>
         <dl class="facts">
           <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
           <div><dt>Published</dt><dd><time datetime={video.publishedAt}>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(video.publishedAt))}</time></dd></div>
           {video.durationSeconds && <div><dt>Runtime</dt><dd>{Math.floor(video.durationSeconds / 60)}:{String(video.durationSeconds % 60).padStart(2, '0')}</dd></div>}
-          <div><dt>Song links</dt><dd>{directSongs.length ? `${directSongs.length} matching record${directSongs.length === 1 ? '' : 's'}` : 'No exact catalog match yet'}</dd></div>
+          {directSongs.length > 0 && <div><dt>Related songs</dt><dd>{directSongs.length}</dd></div>}
         </dl>
         <div class="btn-row" style="margin-top:2rem"><a class="btn btn--primary" href={video.watchUrl}>Watch on YouTube ↗</a><button class="btn" type="button" data-embed-url={video.embedUrl} data-track-title={video.title}>Play here</button></div>
       </div>
@@ -55,8 +55,8 @@ const jsonLd = [{
     </div>
 
     {(directSongs.length > 0 || otherVersions.length > 0) && <div class="shell relationship">
-      <h2>Song and version connections</h2>
-      {directSongs.map((song) => <div class="relationship__item" data-era={song.era}><div><span class="eyebrow">Matching song record</span><a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a></div><div class="source-links">{song.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
+      <h2>Songs and other versions</h2>
+      {directSongs.map((song) => <div class="relationship__item" data-era={song.era}><div><span class="eyebrow">Song</span><a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a></div><div class="source-links">{song.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
       {otherVersions.map((song) => <div class="relationship__item" data-era={song.era}><div><span class="eyebrow">Other known version</span><a class="song-link" href={song.pageUrl.replace(SITE, '')}>{song.title}</a></div><div class="source-links">{song.links.map((link) => <a href={link.url}>{link.label} ↗</a>)}</div></div>)}
     </div>}
     <div class="shell relationship"><div class="btn-row"><a class="btn" href="/videos/">Browse every video</a><a class="btn" href="/songs/">Explore every song</a></div></div>

@@ -126,7 +126,7 @@ const jsonLd = [
           {song.model && <div><dt>Suno model</dt><dd>{song.model}</dd></div>}
           {song.album && <div><dt>Album</dt><dd><a href={song.albumPageUrl!.replace(SITE, '')}>{song.album}</a></dd></div>}
           {song.albumLinks.length > 0 && <div><dt>Streaming albums</dt><dd>{song.albumLinks.map((album, index) => <span>{index > 0 && ' · '}<a href={album.pageUrl.replace(SITE, '')}>{album.title}</a>{album.pageUrl !== album.sourceUrl && <> (<a href={album.sourceUrl}>{album.platform} ↗</a>)</>}</span>)}</dd></div>}
-          {!song.createdAt && song.posted && <div><dt>Archive note</dt><dd>Published {song.posted} when the source was catalogued</dd></div>}
+          {!song.createdAt && song.posted && <div><dt>Published</dt><dd>{song.posted}</dd></div>}
         </dl>
 
         <h2 class="detail__heading">Listen</h2>
@@ -136,7 +136,6 @@ const jsonLd = [
         </div>
         {song.downloads.length > 0 && <>
           <h2 class="detail__heading">Download MP3</h2>
-          <p>These files are hosted on Alex Merced Cloud, separate from the streaming services.</p>
           <div class="btn-row">
             {song.downloads.map((download) => <a class="btn" href={download.url} download title={`${download.fileName} (${(download.sizeBytes / 1048576).toFixed(1)} MiB)`}>{song.downloads.length === 1 ? 'Download MP3' : `Download ${download.fileName}`}</a>)}
           </div>
@@ -149,7 +148,7 @@ const jsonLd = [
     <div class="shell process-note">
       <h2>How this recording was made</h2>
       <p>{song.creationMethod}</p>
-      {song.kind === 'generated' && !spotifyOnly && <p>The musical arrangement and performance were generated with Suno from Alex’s creative direction. The title, published source, model label, style tags, artwork and text shown here come from the public recording metadata.</p>}
+      {song.kind === 'generated' && !spotifyOnly && <p>Alex shaped this song with Suno, including its musical direction and final selection.</p>}
       {song.lyrics && (
         <details class="lyrics">
           <summary>Read the published lyrics</summary>

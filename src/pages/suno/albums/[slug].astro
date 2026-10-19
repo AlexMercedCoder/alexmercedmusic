@@ -51,7 +51,7 @@ const jsonLd = [{
     </div>
     <div class="shell album-tracks">
       <h2>Track list</h2>
-      <p>{album.trackIds.length} tracks connect to local catalog pages. Every track also links directly to its Suno recording.</p>
+      <p>Explore the songs here or listen to each track on Suno.</p>
       <ol class="tracks">
         {tracks.map(({ source, song }, index) => {
           const earlier = song?.acousticSourceId ? songById.get(song.acousticSourceId) : undefined;

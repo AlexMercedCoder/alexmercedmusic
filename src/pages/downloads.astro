@@ -42,7 +42,7 @@ const jsonLd = [{
     <div class="shell">
       <p class="eyebrow">Direct downloads</p>
       <h1>Take the music with you</h1>
-      <p class="lede">Browse {uploads.files.length} MP3 files. These downloads come from Alex Merced Cloud, so they do not use the music website's hosting bandwidth.</p>
+      <p class="lede">Browse {uploads.files.length} MP3 recordings, from acoustic originals to electronic tracks and reimagined versions.</p>
       <p>Some songs have more than one recording. Use the song page to compare versions and find their streaming sources.</p>
       <label class="download-search"><span>Find a file</span><input id="download-query" type="search" placeholder="Search titles and filenames" autocomplete="off" /></label>
       <p id="download-count" aria-live="polite">Showing {uploads.files.length} files</p>
@@ -55,7 +55,7 @@ const jsonLd = [{
         {group.files.map((file) => <article class="card download-item" data-download-item data-search={`${file.fileName} ${file.song?.title ?? ''}`.toLowerCase()}>
           <div>
             <h3>{file.fileName}</h3>
-            <p>{(file.sizeBytes / 1048576).toFixed(1)} MiB{file.song ? <> · <a href={file.song.pageUrl.replace(SITE, '')}>Song details</a></> : ' · File-only recording'}</p>
+            <p>{(file.sizeBytes / 1048576).toFixed(1)} MiB{file.song && <> · <a href={file.song.pageUrl.replace(SITE, '')}>Song details</a></>}</p>
           </div>
           <a class="btn" href={file.url} download>Download MP3</a>
         </article>)}

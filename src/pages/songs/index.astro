@@ -37,9 +37,9 @@ const jsonLd = [{
     <noscript><p class="empty">JavaScript is required to filter the full catalog. The first {PAGE_SIZE} songs remain available above, and the complete catalog is also available in <a href="/catalog.json">catalog.json</a>.</p></noscript>
   </div></section>
   <section class="section section--tight"><div class="shell">
-    <div class="section__head"><p class="eyebrow">Releases</p><h2>Albums, EPs and singles</h2><p>Open a Suno album for its ordered songs, or choose a Spotify release and explore its matching song pages.</p></div>
+    <div class="section__head"><p class="eyebrow">Releases</p><h2>Albums, EPs and singles</h2><p>Open a Suno album for its ordered songs, or choose a Spotify release to explore its tracks.</p></div>
     <div class="grid grid--3">
-      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.releaseType ?? 'album'} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}<a href={`/songs/?album=${encodeURIComponent(release.title)}`}>Explore matching songs</a></div></article>)}
+      {distributedReleases.map((release) => <article class="card"><h3>{release.title}</h3><p>{release.releaseType ?? 'album'} · {release.trackCount} {release.trackCount === 1 ? 'song' : 'songs'} · {release.released}</p><div class="source-links">{release.links.filter((link) => link.label === 'Spotify').map((link) => <a href={link.url}>Spotify ↗</a>)}<a href={`/songs/?album=${encodeURIComponent(release.title)}`}>Explore songs</a></div></article>)}
     </div>
     <p><a href="/suno/">Browse all {sunoAlbums.length} Suno albums with artwork and track lists →</a></p>
   </div></section>

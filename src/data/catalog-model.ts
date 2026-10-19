@@ -184,7 +184,7 @@ const formatDate = (value?: string) => value ? new Intl.DateTimeFormat('en-US', 
 const sunoDescription = (track: (typeof sunoSongs)[number]) => {
   const genre = track.genres?.[0] ? ` blending ${track.genres[0]}` : '';
   const published = track.createdAt ? `, published ${formatDate(track.createdAt)}` : '';
-  const suffix = '. Hear it and view its verified details.';
+  const suffix = '. Listen and explore the song.';
   const detailed = `${track.title} is a Suno song by Alex Merced${genre}${published}${suffix}`;
   return detailed.length <= 160
     ? detailed
@@ -199,7 +199,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'acoustic' as const,
     kind: 'archive' as const,
-    description: `${track.title} is an acoustic archive recording by Alex Merced${source?.publishedAt ? `, published ${formatDate(source.publishedAt)}` : ''}. Hear the verified source and any known reimagining.`,
+    description: `${track.title} is an acoustic recording by Alex Merced${source?.publishedAt ? `, published ${formatDate(source.publishedAt)}` : ''}. Hear the original and any reimagined versions.`,
     links: linksFor(track.links, track.url, 'recording'),
     length: track.length,
     posted: track.posted,
@@ -215,7 +215,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'electronic' as const,
     kind: 'electronic' as const,
-    description: `${track.title} is an electronic track produced by Alex Merced${track.album ? ` for ${track.album}` : ''}. Hear it from every verified source.`,
+    description: `${track.title} is an electronic track produced by Alex Merced${track.album ? ` for ${track.album}` : ''}. Find places to listen.`,
     links: linksFor(track.links, track.url, 'recording'),
     seconds: track.seconds,
     album: track.album,
@@ -235,7 +235,7 @@ const seeds: SongSeed[] = [
     title: track.title,
     era: 'ai' as const,
     kind: 'reimagined' as const,
-    description: `${track.title} reimagines an earlier Alex Merced recording as ${track.style.toLowerCase()}. Compare the original and verified rebuilt versions.`,
+    description: `${track.title} reimagines an earlier Alex Merced recording as ${track.style.toLowerCase()}. Hear the original and new version.`,
     links: linksFor(track.links, track.url, 'generation'),
     length: track.length,
     style: track.style,
@@ -250,7 +250,7 @@ const seeds: SongSeed[] = [
     embedUrl: source?.embedUrl,
     model: source?.model,
     lyrics: source?.lyrics,
-    creationMethod: `An earlier Alex Merced composition rebuilt with Suno as ${track.style.toLowerCase()}; the page keeps the source recording and generated arrangements together.`,
+    creationMethod: `Alex revisited an earlier composition with Suno as ${track.style.toLowerCase()}.`,
   }); }),
   ...sunoSongs.map((track) => ({
     key: track.url ?? track.title,
@@ -270,19 +270,19 @@ const seeds: SongSeed[] = [
     embedUrl: track.embedUrl,
     model: track.model,
     lyrics: track.lyrics,
-    creationMethod: 'Created by Alex Merced with Suno; style tags, runtime, artwork, model version and lyrics are sourced from the public Suno recording metadata.',
+    creationMethod: 'Alex created this song with Suno, shaping its musical direction and choosing the final version.',
   })),
   {
     key: 'https://open.spotify.com/track/2hZla3Hvj8iVDFtde2LZN4',
     title: 'Hope',
     era: 'ai',
     kind: 'generated',
-    description: 'Hope is a song by Alex Merced on A Collection of Songs that Exist, Vol. 3. Listen to the verified Spotify release.',
+    description: 'Hope is a song by Alex Merced on A Collection of Songs that Exist, Vol. 3. Listen on Spotify.',
     links: linksFor(undefined, 'https://open.spotify.com/track/2hZla3Hvj8iVDFtde2LZN4', 'generation'),
     createdAt: '2026-10-12',
     catalogedAt: CATALOG_UPDATED_AT,
     durationSeconds: 209,
-    creationMethod: 'Released by Alex Merced on Spotify; no matching source recording has been verified.',
+    creationMethod: 'Released by Alex Merced on Spotify.',
   },
   {
     key: 'https://open.spotify.com/track/2q19Zd3SJaCYhqrhjeRYhb',
@@ -296,7 +296,7 @@ const seeds: SongSeed[] = [
     createdAt: '2026-10-02',
     catalogedAt: CATALOG_UPDATED_AT,
     durationSeconds: 223,
-    creationMethod: 'Alex Merced voice AI reimagining released on Spotify; production platform has not been verified.',
+    creationMethod: 'Alex Merced voice AI reimagining released on Spotify.',
   },
 ];
 
