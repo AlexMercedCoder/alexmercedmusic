@@ -22,6 +22,15 @@ assert.equal(videoIds.size, catalog.videos.length, 'Video IDs must be unique.');
 assert.equal(youtubeIds.size, catalog.videos.length, 'YouTube IDs must be unique.');
 assert.equal(catalog.counts.songs, catalog.songs.length);
 assert.equal(catalog.counts.albums, catalog.albums.length);
+const renamedSongRedirects = read('dist/_redirects').trim().split('\n').map((line) => line.trim().split(/\s+/));
+assert.ok(renamedSongRedirects.length >= 38, 'Renamed song links must remain available.');
+assert.equal(new Set(renamedSongRedirects.map(([from]) => from)).size, renamedSongRedirects.length, 'Song redirects must have unique sources.');
+for (const [from, to, status] of renamedSongRedirects) {
+  assert.match(from, /^\/songs\/[a-z0-9-]+\/$/);
+  assert.match(to, /^\/songs\/[a-z0-9-]+\/$/);
+  assert.equal(status, '301');
+  assert.ok(existsSync(new URL(`dist${to}index.html`, root)), `${from} redirects to a missing song page.`);
+}
 const mp3Uploads = JSON.parse(read('src/data/mp3-uploads.json'));
 const mp3Matches = JSON.parse(read('src/data/mp3-matches.json'));
 assert.equal(catalog.counts.mp3Files, mp3Uploads.files.length);
