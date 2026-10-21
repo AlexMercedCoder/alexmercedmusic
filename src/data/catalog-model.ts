@@ -490,7 +490,20 @@ const normalizedSpotifyTitle = (title: string) => spotifyBaseTitle(title)
   .trim().toLowerCase();
 const songRuntime = (song: typeof baseSongs[number]) => song.durationSeconds ?? song.seconds
   ?? (song.length ? Number(song.length.split(':')[0]) * 60 + Number(song.length.split(':')[1]) : undefined);
+// These Suno recordings were renamed after their Spotify releases were published.
+const spotifyRenamedSunoTracks: Record<string, string> = {
+  '6GMD75Dtq3nPvHOnlfp62k': 'ba3868e0-cd06-4eec-90d1-4bd9d1ab6783',
+  '16Nlgj0uXOk4nin3puMvhw': 'fda80f97-bd46-4ab9-835e-0da64357e1fa',
+  '1EJt15ANsgp2Hj7LtJMh1v': '678237b2-5700-4b38-8447-db2486908421',
+  '3SnT0GfqHCe2YtM5mUCYpC': '6d8e733c-8100-475d-a8f3-f1e34204e959',
+};
 const matchSpotifyTrack = (track: SpotifyTrack) => {
+  const renamedSunoId = spotifyRenamedSunoTracks[track.id];
+  if (renamedSunoId) {
+    const renamedSong = catalogSongBySunoId.get(renamedSunoId);
+    if (!renamedSong) throw new Error(`Spotify track ${track.id} is missing its renamed Suno recording ${renamedSunoId}.`);
+    return renamedSong;
+  }
   if (track.id === '2q19Zd3SJaCYhqrhjeRYhb') {
     const standalone = baseSongs.find((song) => song.title === "The One Who Can't Be Love" && song.kind === 'reimagined');
     if (standalone) return standalone;
