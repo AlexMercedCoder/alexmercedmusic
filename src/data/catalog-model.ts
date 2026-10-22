@@ -401,6 +401,7 @@ const videoTitleAliases: Record<string, string[]> = {
   'the open lakehouse': ['the iceberg open lakehouse'],
   'beautiful buf': ['beautiful bug'],
   'i chose therefore i live': ['i chose therefore i lived'],
+  'goodbye my ghosts shorts version': ['goodbye my ghosts'],
 };
 
 const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
