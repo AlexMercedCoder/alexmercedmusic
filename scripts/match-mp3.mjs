@@ -67,9 +67,12 @@ for (const upload of uploads.files) {
   if (next[upload.sourcePath]) continue;
   const filename = path.basename(upload.sourcePath, '.mp3');
   const youtubeId = filename.match(/\[([A-Za-z0-9_-]{11})\]/)?.[1];
-  let matches = youtubeId
-    ? catalog.songs.filter((song) => song.links.some((link) => link.source === 'youtube' && new URL(link.url).searchParams.get('v') === youtubeId))
-    : [];
+  const video = youtubeId ? catalog.videos.find((item) => item.youtubeId === youtubeId) : undefined;
+  let matches = video?.songIds.length === 1
+    ? catalog.songs.filter((song) => song.id === video.songIds[0])
+    : youtubeId
+      ? catalog.songs.filter((song) => song.links.some((link) => link.source === 'youtube' && new URL(link.url).searchParams.get('v') === youtubeId))
+      : [];
   if (!matches.length) matches = songsByTitle.get(normalize(filename)) ?? [];
   const hint = kindHint(upload.sourcePath);
   if (matches.length > 1 && hint) {

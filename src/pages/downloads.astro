@@ -8,6 +8,7 @@ import { SITE, songById } from '../data/catalog-model';
 const groups = [
   { title: 'Acoustic originals and reimaginings', prefix: 'Acoustic1/' },
   { title: 'Electronic originals and reimaginings', prefix: 'Electronic1/' },
+  { title: 'YouTube recordings', prefix: 'YouTube/' },
   { title: 'Other recordings', prefix: '' },
 ].map((group) => ({
   ...group,
@@ -18,7 +19,7 @@ const groups = [
       song: songById.get((matches as Record<string, string>)[file.sourcePath]),
     })),
 }));
-const description = `Download ${uploads.files.length} Alex Merced MP3 recordings, including acoustic originals, electronic tracks and reimagined versions.`;
+const description = `Download ${uploads.files.length} Alex Merced MP3 recordings, including acoustic originals, electronic tracks, YouTube recordings and reimagined versions.`;
 const jsonLd = [{
   '@type': 'CollectionPage',
   '@id': `${SITE}/downloads/#page`,
@@ -42,7 +43,7 @@ const jsonLd = [{
     <div class="shell">
       <p class="eyebrow">Direct downloads</p>
       <h1>Take the music with you</h1>
-      <p class="lede">Browse {uploads.files.length} MP3 recordings, from acoustic originals to electronic tracks and reimagined versions.</p>
+      <p class="lede">Browse {uploads.files.length} MP3 recordings, from acoustic originals and electronic tracks to YouTube recordings and reimagined versions.</p>
       <p>Some songs have more than one recording. Use the song page to compare versions and find their streaming sources.</p>
       <label class="download-search"><span>Find a file</span><input id="download-query" type="search" placeholder="Search titles and filenames" autocomplete="off" /></label>
       <p id="download-count" aria-live="polite">Showing {uploads.files.length} files</p>
