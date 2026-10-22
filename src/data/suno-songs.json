@@ -1,5 +1,22 @@
 [
   {
+    "id": "164ba83e-9ad5-45c2-816e-79a6d852182b",
+    "title": "Shape of My Own Life",
+    "url": "https://suno.com/song/164ba83e-9ad5-45c2-816e-79a6d852182b",
+    "createdAt": "2026-10-21T23:15:28.976Z",
+    "durationSeconds": 118.36,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_164ba83e-9ad5-45c2-816e-79a6d852182b.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_164ba83e-9ad5-45c2-816e-79a6d852182b.jpeg",
+    "embedUrl": "https://suno.com/embed/164ba83e-9ad5-45c2-816e-79a6d852182b",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou text the list before the day begins\nI shift my plans and tuck my own desires in\nYou need it now, so I arrive on cue\nOne small mistake, and all you see is what I missed for you\n\n[Pre-Chorus]\nI know your coffee, know your careful signs\nBut who am I beneath these borrowed times?\n\n[Chorus]\nI want to run at my full speed\nNo more trimming down the life I need\nI gave you every spare hour I could find\nYou count the one thing wrong, leave all the rest behind\nI want to run, I want to run\nAnd find the shape of my own life begun\n\n[Verse 2]\nI set aside the work that called my name\nYou take it as a promise, never ask what that became\nThen comes the quiet score of what I did not do\nAs if the weight I carried never counted next to you\n\n[Bridge]\nLet me miss a turn, let me choose a road\nLet my hands be mine to hold\n\n[Final Chorus]\nI want to run at my full speed\nNo more trimming down the life I need\nI gave you every spare hour I could find\nYou count the one thing wrong, leave all the rest behind\nI want to run, I want to run\nAnd find the shape of my own life begun"
+  },
+  {
     "id": "4441601b-5e69-4841-a98e-cb6faf2bb05e",
     "title": "Leave the Door Unclosed",
     "url": "https://suno.com/song/4441601b-5e69-4841-a98e-cb6faf2bb05e",
@@ -20242,7 +20259,7 @@
   },
   {
     "id": "d1cd5e1d-e1bd-42a1-9082-a81aca19e11c",
-    "title": "Brick by Brick",
+    "title": "The Life You Want is Waiting",
     "url": "https://suno.com/song/d1cd5e1d-e1bd-42a1-9082-a81aca19e11c",
     "createdAt": "2026-09-18T17:45:50.157Z",
     "durationSeconds": 295.16,
@@ -25508,7 +25525,7 @@
   },
   {
     "id": "d326177c-00fc-4d23-aa35-c15c899d2e03",
-    "title": "Brick By Brick",
+    "title": "Make Your Own Way",
     "url": "https://suno.com/song/d326177c-00fc-4d23-aa35-c15c899d2e03",
     "createdAt": "2026-09-04T20:51:31.671Z",
     "durationSeconds": 201.48,
