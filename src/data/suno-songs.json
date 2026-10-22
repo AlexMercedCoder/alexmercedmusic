@@ -1,5 +1,39 @@
 [
   {
+    "id": "4de0defc-6e1d-4e50-bd9a-d249ecdb43b8",
+    "title": "I Can Put One Thing Down",
+    "url": "https://suno.com/song/4de0defc-6e1d-4e50-bd9a-d249ecdb43b8",
+    "createdAt": "2026-10-22T02:17:50.853Z",
+    "durationSeconds": 120.76,
+    "genres": [
+      "New Wave",
+      "Deathcore",
+      "Ballad"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_4de0defc-6e1d-4e50-bd9a-d249ecdb43b8.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_4de0defc-6e1d-4e50-bd9a-d249ecdb43b8.jpeg",
+    "embedUrl": "https://suno.com/embed/4de0defc-6e1d-4e50-bd9a-d249ecdb43b8",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nI could pull the pin on everything I know,\nLeave the keys beside the sink and let the whole thing go.\nWatch the careful little towers tumble into dust,\nStart with bare hands, start with nothing, start because I must.\n\n[Pre-Chorus]\nThe thought runs hot, the room goes still,\nThen I picture your face against the windowsill.\n\n[Chorus]\nI want the wreckage, I want the wide-open page,\nBut I know what my leaving would set loose in its wake.\nSo I stay with the pieces, though the old shape is gone;\nI can want to disappear and still not pass it on.\n\n[Verse 2]\nThere’s a clean kind of terror in an empty room,\nNo old names on the boxes, no familiar bruise.\nBut you’d be left explaining all the silence I made,\nAnd that small, living fact keeps my hand from the blade.\n\n[Final Chorus]\nI want the wreckage, I want the wide-open page,\nBut I know what my leaving would set loose in its wake.\nSo I stay with the pieces, let the first light come on;\nI can want to disappear and still not pass it on.\n\n[Outro]\nI don’t have to burn it down.\nI can put one thing down."
+  },
+  {
+    "id": "c3e45526-2e5a-446b-808a-c0250b5b1cc7",
+    "title": "I Want My Own Velocity",
+    "url": "https://suno.com/song/c3e45526-2e5a-446b-808a-c0250b5b1cc7",
+    "createdAt": "2026-10-22T01:30:28.201Z",
+    "durationSeconds": 118,
+    "genres": [
+      "Idm",
+      "Melodic Prog Rock",
+      "Phonk"
+    ],
+    "imageUrl": "https://cdn2.suno.ai/image_c3e45526-2e5a-446b-808a-c0250b5b1cc7.jpeg",
+    "imageLargeUrl": "https://cdn2.suno.ai/image_large_c3e45526-2e5a-446b-808a-c0250b5b1cc7.jpeg",
+    "embedUrl": "https://suno.com/embed/c3e45526-2e5a-446b-808a-c0250b5b1cc7",
+    "model": "v6",
+    "lyrics": "[Verse 1]\nYou leave your list beside my name\nThen grade the way I carry it\nI set my own plans out of frame\nYou call one missed detail a slip\n\n[Pre-Chorus]\nMy wants get buried in your needs\nMy hours disappear in pieces\n\n[Chorus]\nI want my own velocity\nNo hand on every turn I take\nI’ve given more than you can see\nOne small mistake, and I’m to blame\nI want my own velocity\nTo run at all the speed in me\n\n[Verse 2]\nI learn your limits, hold them tight\nYou never ask what I set down\nYou count the fault, ignore the night\nI spend to keep your world from slowing down\n\n[Bridge]\nLet the road open; let me go\nI’m not a spare gear for your load\n\n[Final Chorus]\nI want my own velocity\nNo hand on every turn I take\nI’ve given more than you can see\nOne small mistake, and I’m to blame\nI want my own velocity\nTo run at all the speed in me\n\n[Outro]\nAll the speed in me"
+  },
+  {
     "id": "164ba83e-9ad5-45c2-816e-79a6d852182b",
     "title": "Shape of My Own Life",
     "url": "https://suno.com/song/164ba83e-9ad5-45c2-816e-79a6d852182b",
@@ -17019,7 +17053,7 @@
   },
   {
     "id": "ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
-    "title": "Quiet Lightning",
+    "title": "Past The Places I Grew Cold",
     "url": "https://suno.com/song/ba550ced-3a1f-47b2-a9e5-72b01ed2283a",
     "createdAt": "2026-09-25T18:08:56.767Z",
     "durationSeconds": 255.96,
