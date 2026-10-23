@@ -2146,6 +2146,14 @@
       "uploadedAt": "2026-10-22T17:58:24.021Z"
     },
     {
+      "sourcePath": "YouTube/Never Enough [AglO_AXpMVo].mp3",
+      "sha256": "31c8f180fc91810d4a15f61afa2d6eead672133555f2f1bc59a4a9ccfae606f7",
+      "sizeBytes": 5269869,
+      "objectKey": "tracks/never-enough-aglo-axpmvo-31c8f180fc91810d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/never-enough-aglo-axpmvo-31c8f180fc91810d.mp3",
+      "uploadedAt": "2026-10-23T19:01:56.225Z"
+    },
+    {
       "sourcePath": "YouTube/One Small Dubstep for Mankind [qFUVgrpt3kY].mp3",
       "sha256": "e654807cd197c9f033eacd49e24f142f81d98538cfb9544982937b8e8c9dee00",
       "sizeBytes": 3841965,
@@ -2170,15 +2178,39 @@
       "uploadedAt": "2026-10-22T17:58:25.179Z"
     },
     {
+      "sourcePath": "YouTube/Step By Step [vuAZcKCcbCQ].mp3",
+      "sha256": "cf6cf690b443491b495b6b6abdf3a4b38a48598d0be15d13ccaafe1f5392de32",
+      "sizeBytes": 6304941,
+      "objectKey": "tracks/step-by-step-vuazckccbcq-cf6cf690b443491b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/step-by-step-vuazckccbcq-cf6cf690b443491b.mp3",
+      "uploadedAt": "2026-10-23T19:01:57.494Z"
+    },
+    {
       "sourcePath": "YouTube/Tensions and Anxiety [Zp_lLJPzIyU].mp3",
       "sha256": "505027e2c7a590cc9ab4b51e0befb453be5b5bce275be939a86651a7815f81c6",
       "sizeBytes": 5041773,
       "objectKey": "tracks/tensions-and-anxiety-zp-lljpziyu-505027e2c7a590cc.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/tensions-and-anxiety-zp-lljpziyu-505027e2c7a590cc.mp3",
       "uploadedAt": "2026-10-22T17:58:26.173Z"
+    },
+    {
+      "sourcePath": "YouTube/The Open Agentic Platform [TNHeX9Y1fPM].mp3",
+      "sha256": "5a94bc1294b59c103c73530951092818498804084cf646b72260756141797db5",
+      "sizeBytes": 10976877,
+      "objectKey": "tracks/the-open-agentic-platform-tnhex9y1fpm-5a94bc1294b59c10.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-open-agentic-platform-tnhex9y1fpm-5a94bc1294b59c10.mp3",
+      "uploadedAt": "2026-10-23T19:01:58.000Z"
+    },
+    {
+      "sourcePath": "YouTube/Yo Soy Alex! [-gkX8ZOwBgY].mp3",
+      "sha256": "8a7955e42c002c7618ae1e0bd5dc7cfdd9d7ee8b3e857dd9dbc32aa2bb745fff",
+      "sizeBytes": 7378605,
+      "objectKey": "tracks/yo-soy-alex-gkx8zowbgy-8a7955e42c002c76.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/yo-soy-alex-gkx8zowbgy-8a7955e42c002c76.mp3",
+      "uploadedAt": "2026-10-23T19:01:57.720Z"
     }
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-22T17:58:26.173Z"
+  "updatedAt": "2026-10-23T19:02:06.780Z"
 }

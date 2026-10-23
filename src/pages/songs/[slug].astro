@@ -25,11 +25,12 @@ const playerUrl = youtubeId
   : song.embedUrl ?? (soundcloudLink ? `https://w.soundcloud.com/player/?url=${encodeURIComponent(soundcloudLink.url)}&color=%234fc4b8&auto_play=false&hide_related=true&show_comments=false` : null);
 const playerName = youtubeId ? 'YouTube' : song.embedUrl ? 'Suno' : soundcloudLink ? 'SoundCloud' : null;
 const spotifyOnly = song.links.every((link) => link.source === 'spotify');
+const youtubeOnly = song.links.every((link) => link.source === 'youtube');
 const section = song.kind === 'archive' ? 'Acoustic archive'
   : song.kind === 'electronic' ? 'Electronic catalogue'
-    : spotifyOnly ? 'Spotify releases' : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
+    : spotifyOnly ? 'Spotify releases' : youtubeOnly ? 'Music videos' : song.kind === 'reimagined' ? 'Reimagined with Suno' : 'New Suno songs';
 const sectionUrl = song.kind === 'archive' ? '/acoustic/'
-  : song.kind === 'electronic' ? '/electronic/' : spotifyOnly ? '/listen/' : song.kind === 'reimagined' ? '/reimagined/' : '/suno/';
+  : song.kind === 'electronic' ? '/electronic/' : spotifyOnly ? '/listen/' : youtubeOnly ? '/videos/' : song.kind === 'reimagined' ? '/reimagined/' : '/suno/';
 const durationSeconds = song.seconds ?? song.durationSeconds;
 const duration = durationSeconds
   ? `PT${Math.floor(durationSeconds / 60)}M${Math.round(durationSeconds % 60)}S`
@@ -118,7 +119,7 @@ const jsonLd = [
 
         <dl class="facts">
           <div><dt>Artist</dt><dd><a href="/about/">Alex Merced</a></dd></div>
-          <div><dt>Type</dt><dd>{acousticSource ? 'Generated acoustic arrangement' : song.kind === 'reimagined' ? 'Reimagined recording' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
+          <div><dt>Type</dt><dd>{acousticSource ? 'Generated acoustic arrangement' : song.kind === 'reimagined' ? 'Reimagined recording' : youtubeOnly && song.kind === 'generated' ? 'AI-generated song' : song.kind === 'generated' ? 'Suno generation' : song.kind === 'archive' ? 'Acoustic archive recording' : 'Electronic recording'}</dd></div>
           {song.style && <div><dt>Rebuilt as</dt><dd>{song.style}</dd></div>}
           {(song.length || durationSeconds) && <div><dt>Runtime</dt><dd>{song.length ?? `${Math.floor(durationSeconds! / 60)}:${String(Math.round(durationSeconds! % 60)).padStart(2, '0')}`}</dd></div>}
           {song.createdAt && <div><dt>Published</dt><dd><time datetime={song.createdAt}>{new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' }).format(new Date(song.createdAt))}</time></dd></div>}
@@ -148,7 +149,7 @@ const jsonLd = [
     <div class="shell process-note">
       <h2>How this recording was made</h2>
       <p>{song.creationMethod}</p>
-      {song.kind === 'generated' && !spotifyOnly && <p>Alex shaped this song with Suno, including its musical direction and final selection.</p>}
+      {song.kind === 'generated' && !spotifyOnly && !youtubeOnly && <p>Alex shaped this song with Suno, including its musical direction and final selection.</p>}
       {song.lyrics && (
         <details class="lyrics">
           <summary>Read the published lyrics</summary>

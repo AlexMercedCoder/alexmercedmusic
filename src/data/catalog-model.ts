@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-10-22';
+export const CATALOG_UPDATED_AT = '2026-10-23';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -191,6 +191,14 @@ const sunoDescription = (track: (typeof sunoSongs)[number]) => {
     : `${track.title} is a Suno song by Alex Merced${genre}${suffix}`;
 };
 
+const youtubeOnlySongs = [
+  { id: 'AglO_AXpMVo', title: 'Never Enough' },
+  { id: 'vuAZcKCcbCQ', title: 'Step By Step' },
+  { id: 'vJ3ywxrzpAs', title: 'Wear Your Own Name' },
+  { id: '-gkX8ZOwBgY', title: 'Yo Soy Alex!' },
+  { id: 'TNHeX9Y1fPM', title: 'The Open Agentic Platform' },
+];
+
 const seeds: SongSeed[] = [
   ...acousticTracks.map((track) => {
     const source = youtubeDetails(track.url);
@@ -272,6 +280,23 @@ const seeds: SongSeed[] = [
     lyrics: track.lyrics,
     creationMethod: 'Alex created this song with Suno, shaping its musical direction and choosing the final version.',
   })),
+  ...youtubeOnlySongs.map(({ id, title }) => {
+    const video = youtubeMetadata[id];
+    const url = `https://www.youtube.com/watch?v=${id}`;
+    return {
+      key: url,
+      title,
+      era: 'ai' as const,
+      kind: 'generated' as const,
+      description: `${title} is an AI-generated song by Alex Merced. Watch the full music video or download the recording.`,
+      links: linksFor(undefined, url, 'generation'),
+      createdAt: video.publishedAt,
+      catalogedAt: CATALOG_UPDATED_AT,
+      durationSeconds: video.durationSeconds,
+      imageUrl: video.imageUrl,
+      creationMethod: 'Alex created this song using AI, including an AI version of his voice, and published the music video on YouTube.',
+    };
+  }),
   {
     key: 'https://open.spotify.com/track/2hZla3Hvj8iVDFtde2LZN4',
     title: 'Hope',
