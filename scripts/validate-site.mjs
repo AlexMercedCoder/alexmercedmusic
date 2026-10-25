@@ -48,6 +48,12 @@ for (const file of mp3Uploads.files) {
 }
 const downloadsPage = read('dist/downloads/index.html');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
+for (const title of ['Stacked Up', 'Work in the Ordinary']) {
+  const song = catalog.songs.find((item) => item.title === title && item.links.some((link) => link.source === 'suno'));
+  assert.ok(song?.downloads.length, `${title} needs its original-song MP3 download.`);
+}
+const sufjanCover = catalog.songs.find((song) => song.title.includes('To Be Alone With You (Sufjan Stevens Cover)'));
+assert.equal(sufjanCover?.downloads.length, 0, 'The Sufjan Stevens cover must not offer an MP3 download.');
 assert.equal(catalog.distributedReleases.length, 10);
 assert.ok(catalog.distributedReleases.every((release) => release.title && release.released && release.trackCount > 0 && release.links.length > 0));
 for (const release of catalog.distributedReleases) {
@@ -156,6 +162,14 @@ for (const [youtubeId, title] of [
 const stillHereVideo = catalog.videos.find((video) => video.youtubeId === 'KzIDlYp1-yI');
 assert.equal(stillHereVideo?.songIds.length, 1, "The new I'm Still Here video must link to one verified recording.");
 assert.ok(catalog.songs.find((song) => song.id === stillHereVideo.songIds[0])?.links.some((link) => link.url.endsWith('6a9613aa-0dae-4154-b7db-8aea5a0f244c')));
+for (const [youtubeId, title] of [
+  ['FoBba_zoVJQ', 'Where the Map Runs Thin (v2)'],
+  ['AP7pdZQAjIA', 'Pho and Banh Mi'],
+]) {
+  const video = catalog.videos.find((item) => item.youtubeId === youtubeId);
+  const song = catalog.songs.find((item) => item.title === title);
+  assert.ok(video?.songIds.includes(song?.id), `${video?.title ?? youtubeId} must link to ${title}.`);
+}
 for (const [youtubeId, title] of [
   ['3mIoaUnzpn0', 'Head Held High'],
   ['HznYpTO2Xb0', 'I’ll Take This Life Instead'],

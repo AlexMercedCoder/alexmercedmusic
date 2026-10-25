@@ -1594,6 +1594,14 @@
       "uploadedAt": "2026-10-19T21:58:18.074Z"
     },
     {
+      "sourcePath": "Stacked Up.mp3",
+      "sha256": "cf61e1234df94d8030f3408d7232ca7a77382585ea71c2f72db4065d7fe215a3",
+      "sizeBytes": 5438045,
+      "objectKey": "tracks/stacked-up-cf61e1234df94d80.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/stacked-up-cf61e1234df94d80.mp3",
+      "uploadedAt": "2026-10-25T16:32:15.992Z"
+    },
+    {
       "sourcePath": "STEP BY STEP.mp3",
       "sha256": "9212835afea71e62e0f7910194cab0d64f3e695fd5f9af14c58d77082a760aa9",
       "sizeBytes": 5969410,
@@ -1962,6 +1970,14 @@
       "uploadedAt": "2026-10-19T21:58:54.101Z"
     },
     {
+      "sourcePath": "Work in the Ordinary.mp3",
+      "sha256": "2d08b0a9ffff623912d01292c2d676b892036c6a95e0b4019cbd8bbbf7bb3cb1",
+      "sizeBytes": 6954651,
+      "objectKey": "tracks/work-in-the-ordinary-2d08b0a9ffff6239.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/work-in-the-ordinary-2d08b0a9ffff6239.mp3",
+      "uploadedAt": "2026-10-25T16:32:15.997Z"
+    },
+    {
       "sourcePath": "Wrong Road Home.mp3",
       "sha256": "ebddb415c591027b9737afa3e0223fabf2fbd5abf343b551385a4399b9e7dc87",
       "sizeBytes": 4549356,
@@ -2212,5 +2228,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-23T19:02:06.780Z"
+  "updatedAt": "2026-10-25T16:32:15.997Z"
 }
