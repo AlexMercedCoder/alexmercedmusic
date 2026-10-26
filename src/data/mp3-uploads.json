@@ -458,6 +458,14 @@
       "uploadedAt": "2026-10-19T21:56:42.431Z"
     },
     {
+      "sourcePath": "Because I Knew You.mp3",
+      "sha256": "64299bdcaa3e8a5879607e542ef4eb9085710a73769de2c6f427612efabc9980",
+      "sizeBytes": 3520822,
+      "objectKey": "tracks/because-i-knew-you-64299bdcaa3e8a58.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/because-i-knew-you-64299bdcaa3e8a58.mp3",
+      "uploadedAt": "2026-10-26T14:56:38.412Z"
+    },
+    {
       "sourcePath": "Best Me That Will Ever Exist.mp3",
       "sha256": "9862bf5fb574978e840d0d7231941ed4ec5d9ac1420aa7325c256a2a20509343",
       "sizeBytes": 6758816,
@@ -1682,6 +1690,14 @@
       "uploadedAt": "2026-10-19T21:58:27.488Z"
     },
     {
+      "sourcePath": "The Firm Edge.mp3",
+      "sha256": "153c6c043b839235a1fc92dbd5321e690b544a4185668134f7e4498b3f8743da",
+      "sizeBytes": 4679495,
+      "objectKey": "tracks/the-firm-edge-153c6c043b839235.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/the-firm-edge-153c6c043b839235.mp3",
+      "uploadedAt": "2026-10-26T14:56:38.437Z"
+    },
+    {
       "sourcePath": "THE HOLE STILL KNOWS MY NAME.mp3",
       "sha256": "9a5b8cda735d355b790c4569c12065178806f3a63863cf3bf8d5173e67ddfd4b",
       "sizeBytes": 11511188,
@@ -2034,6 +2050,94 @@
       "uploadedAt": "2026-10-22T17:58:16.585Z"
     },
     {
+      "sourcePath": "YouTube/Alex Merced - Be Kind Because You Want To [0trj_N-RJ5I].mp3",
+      "sha256": "58e3b42103cbc8b43b107a26874a437ded57714a282b8d1529b82ea71600c3d3",
+      "sizeBytes": 3376845,
+      "objectKey": "tracks/alex-merced-be-kind-because-you-want-to-0trj-n-rj5i-58e3b42103cbc8b4.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-be-kind-because-you-want-to-0trj-n-rj5i-58e3b42103cbc8b4.mp3",
+      "uploadedAt": "2026-10-26T14:56:38.219Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Becoming Who You Are [mwXYO8Yuxqs].mp3",
+      "sha256": "be2d3d8c2721ca1ddf4c82a996f2189654a809968658c9a238e94b4f68c0be27",
+      "sizeBytes": 1809357,
+      "objectKey": "tracks/alex-merced-becoming-who-you-are-mwxyo8yuxqs-be2d3d8c2721ca1d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-becoming-who-you-are-mwxyo8yuxqs-be2d3d8c2721ca1d.mp3",
+      "uploadedAt": "2026-10-26T14:56:37.833Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Captain of the Reeds [c0ooFbaUmsk].mp3",
+      "sha256": "5d960d53e156a032b8943100d3aeb40ea745836c2b76fbe052be4f73d437240e",
+      "sizeBytes": 1504173,
+      "objectKey": "tracks/alex-merced-captain-of-the-reeds-c0oofbaumsk-5d960d53e156a032.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-captain-of-the-reeds-c0oofbaumsk-5d960d53e156a032.mp3",
+      "uploadedAt": "2026-10-26T14:56:40.617Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Cockatiels, Rise and Sing [JAtTi72j17o].mp3",
+      "sha256": "2a967caed285ee6fa5b3643e90dfebdc02297aab321f83b536f68b6d260ffdb1",
+      "sizeBytes": 1709589,
+      "objectKey": "tracks/alex-merced-cockatiels-rise-and-sing-jatti72j17o-2a967caed285ee6f.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-cockatiels-rise-and-sing-jatti72j17o-2a967caed285ee6f.mp3",
+      "uploadedAt": "2026-10-26T14:56:40.817Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - I Can Put One Thing Down [A9Gjym-2-PQ].mp3",
+      "sha256": "f96dfc5bc955e306e1a1b144885fa708146c8de95d48fd0733b18f565a8c261f",
+      "sizeBytes": 3499629,
+      "objectKey": "tracks/alex-merced-i-can-put-one-thing-down-a9gjym-2-pq-f96dfc5bc955e306.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-i-can-put-one-thing-down-a9gjym-2-pq-f96dfc5bc955e306.mp3",
+      "uploadedAt": "2026-10-26T14:56:41.334Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Leave The Door Unclosed [z6mNlxS2iac].mp3",
+      "sha256": "42432f2828ea2f9dc506a27248dddc4857d4b6dd149e8c34fdba77d7ddf4ad79",
+      "sizeBytes": 3379629,
+      "objectKey": "tracks/alex-merced-leave-the-door-unclosed-z6mnlxs2iac-42432f2828ea2f9d.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-leave-the-door-unclosed-z6mnlxs2iac-42432f2828ea2f9d.mp3",
+      "uploadedAt": "2026-10-26T14:56:41.452Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Little River Keepers [ueKj8QxPdu8].mp3",
+      "sha256": "19debe13ec6742357723750f44ff55a563532ed322a430f6f04257db92d300dc",
+      "sizeBytes": 2197197,
+      "objectKey": "tracks/alex-merced-little-river-keepers-uekj8qxpdu8-19debe13ec674235.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-little-river-keepers-uekj8qxpdu8-19debe13ec674235.mp3",
+      "uploadedAt": "2026-10-26T14:56:43.075Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Make Room At the Table [AwgTlArFMwE].mp3",
+      "sha256": "487a1d717d947ebf73c745a922e14506d665ea4670ac895753bf990d2a2977c1",
+      "sizeBytes": 1797549,
+      "objectKey": "tracks/alex-merced-make-room-at-the-table-awgtlarfmwe-487a1d717d947ebf.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-make-room-at-the-table-awgtlarfmwe-487a1d717d947ebf.mp3",
+      "uploadedAt": "2026-10-26T14:56:43.354Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - Shape of my own Life [vb5L1-zeqC8].mp3",
+      "sha256": "3b3772380896c1700fc6d4d9c60bd34a245f026e9ad3ac680173cd1db2d894cf",
+      "sizeBytes": 3467229,
+      "objectKey": "tracks/alex-merced-shape-of-my-own-life-vb5l1-zeqc8-3b3772380896c170.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-shape-of-my-own-life-vb5l1-zeqc8-3b3772380896c170.mp3",
+      "uploadedAt": "2026-10-26T14:56:44.336Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - The Better World Begins [33q5duxjiGU].mp3",
+      "sha256": "6a080336397836b319842b7716b244205b4accde9860ba280eb778a825ff253e",
+      "sizeBytes": 3553293,
+      "objectKey": "tracks/alex-merced-the-better-world-begins-33q5duxjigu-6a080336397836b3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-the-better-world-begins-33q5duxjigu-6a080336397836b3.mp3",
+      "uploadedAt": "2026-10-26T14:56:44.407Z"
+    },
+    {
+      "sourcePath": "YouTube/Alex Merced - You Deserve The Love That Stays [jKdPUaMGPyo].mp3",
+      "sha256": "9da32d76536b5b749131b6e60bc416c637ecaaf467b3fbc5381c3db865f28282",
+      "sizeBytes": 1745277,
+      "objectKey": "tracks/alex-merced-you-deserve-the-love-that-stays-jkdpuamgpyo-9da32d76536b5b74.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-you-deserve-the-love-that-stays-jkdpuamgpyo-9da32d76536b5b74.mp3",
+      "uploadedAt": "2026-10-26T14:56:45.454Z"
+    },
+    {
       "sourcePath": "YouTube/Birthday Song [gQiAXJApS0M].mp3",
       "sha256": "3f1703eaf6adc8d7e6e7b97c4862e6ec522c50af342bff96566c9ce53a6e170b",
       "sizeBytes": 1419309,
@@ -2228,5 +2332,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-25T16:32:15.997Z"
+  "updatedAt": "2026-10-26T14:56:45.454Z"
 }

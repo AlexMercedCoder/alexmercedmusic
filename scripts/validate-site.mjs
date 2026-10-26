@@ -48,7 +48,7 @@ for (const file of mp3Uploads.files) {
 }
 const downloadsPage = read('dist/downloads/index.html');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
-for (const title of ['Stacked Up', 'Work in the Ordinary']) {
+for (const title of ['Stacked Up', 'Work in the Ordinary', 'Because I Knew You', 'The Firm Edge']) {
   const song = catalog.songs.find((item) => item.title === title && item.links.some((link) => link.source === 'suno'));
   assert.ok(song?.downloads.length, `${title} needs its original-song MP3 download.`);
 }
@@ -163,6 +163,8 @@ const stillHereVideo = catalog.videos.find((video) => video.youtubeId === 'KzIDl
 assert.equal(stillHereVideo?.songIds.length, 1, "The new I'm Still Here video must link to one verified recording.");
 assert.ok(catalog.songs.find((song) => song.id === stillHereVideo.songIds[0])?.links.some((link) => link.url.endsWith('6a9613aa-0dae-4154-b7db-8aea5a0f244c')));
 for (const [youtubeId, title] of [
+  ['5Eok3O17lKw', 'You Deserve a Love That Stays'],
+  ['35oZGj30avg', 'Break The Frame and Come Through'],
   ['FoBba_zoVJQ', 'Where the Map Runs Thin (v2)'],
   ['AP7pdZQAjIA', 'Pho and Banh Mi'],
 ]) {

@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-10-25';
+export const CATALOG_UPDATED_AT = '2026-10-26';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -418,6 +418,8 @@ const normalizeVideoTitle = (value: string) => value
   .toLowerCase();
 
 const videoTitleAliases: Record<string, string[]> = {
+  'you deserve the love that stays': ['you deserve a love that stays'],
+  'break the frame': ['break the frame and come through'],
   'where the map runs thin': ['where the map runs thin v2'],
   'pho and bahn mi': ['pho and banh mi'],
   'your open hands': ['open hands'],
