@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-10-26';
+export const CATALOG_UPDATED_AT = '2026-10-29';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -327,11 +327,16 @@ const seeds: SongSeed[] = [
 
 const slugCounts = new Map<string, number>();
 for (const seed of seeds) slugCounts.set(slugify(seed.title), (slugCounts.get(slugify(seed.title)) ?? 0) + 1);
+const preservedSongSlugs: Record<string, string> = {
+  // Keep established URLs when newly published songs reuse these titles.
+  'song:generated:hpmovg': 'goodbye-to-the-almost',
+  'song:generated:1ghvtok': 'another-life',
+};
 
 const provisional: DerivedSeed[] = seeds.map((seed) => {
   const base = slugify(seed.title);
-  const slug = slugCounts.get(base) === 1 ? base : `${base}-${seed.kind}-${hash(seed.key).slice(0, 6)}`;
   const id = `song:${seed.kind}:${hash(seed.key)}`;
+  const slug = preservedSongSlugs[id] ?? (slugCounts.get(base) === 1 ? base : `${base}-${seed.kind}-${hash(seed.key).slice(0, 6)}`);
   return { ...seed, id, slug, pageUrl: `${SITE}/songs/${slug}/` };
 });
 
@@ -446,6 +451,14 @@ const verifiedSunoVideoMatches: Record<string, string> = {
   'AwgTlArFMwE': '54b08258-ad05-47fe-9f70-d4374b230911',
   'jKdPUaMGPyo': '92dc62d8-fd78-4550-a10c-d50612d0b92e',
 };
+const verifiedCatalogVideoMatches: Record<string, string> = {
+  // These Shorts use altered or repeated titles, but their runtimes match the reimagined recordings.
+  '_Hg2jFO-Dgs': 'song:reimagined:1yvbn2f',
+  'AB9jQTgjerQ': 'song:reimagined:vr0f0k',
+  'FxkmCRc7jdU': 'song:reimagined:vx8k44',
+  'rPxDk6b8NNA': 'song:reimagined:juufpu',
+  'ohHAfq6SMog': 'song:reimagined:p221tf',
+};
 const songsByNormalizedTitle = new Map<string, typeof baseSongs>();
 for (const song of baseSongs) {
   const title = normalizeVideoTitle(song.title);
@@ -471,7 +484,8 @@ export const videos: CatalogVideo[] = Object.entries(youtubeMetadata)
   .filter(([, metadata]) => metadata.channelPosition)
   .map(([id, metadata]) => {
     const sourceSong = sourceSongByYoutubeId.get(id)
-      ?? (verifiedSunoVideoMatches[id] ? catalogSongBySunoId.get(verifiedSunoVideoMatches[id]) : undefined);
+      ?? (verifiedSunoVideoMatches[id] ? catalogSongBySunoId.get(verifiedSunoVideoMatches[id]) : undefined)
+      ?? baseSongs.find((song) => song.id === verifiedCatalogVideoMatches[id]);
     const normalizedTitle = normalizeVideoTitle(metadata.title ?? '');
     const matchTitles = [normalizedTitle, ...(videoTitleAliases[normalizedTitle] ?? [])];
     const titleMatches = matchTitles.flatMap((title) => songsByNormalizedTitle.get(title) ?? []);

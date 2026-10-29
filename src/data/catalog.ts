@@ -933,4 +933,10 @@ export const platforms: Platform[] = [
     era: 'all',
     note: 'Short music clips from Alex Merced Music.',
   },
+  {
+    label: 'X',
+    url: 'https://x.com/alexmercedmusic',
+    era: 'all',
+    note: 'Updates from Alex Merced Music.',
+  },
 ];

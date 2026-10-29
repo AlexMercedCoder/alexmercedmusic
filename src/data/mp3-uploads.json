@@ -18,6 +18,22 @@
       "uploadedAt": "2026-10-19T21:56:10.107Z"
     },
     {
+      "sourcePath": "A Life With My Name On.mp3",
+      "sha256": "639fe501887d3e4b3e0323d57e69a2ad2c12d7c360dcb971eb9a5898772eb767",
+      "sizeBytes": 3378490,
+      "objectKey": "tracks/a-life-with-my-name-on-639fe501887d3e4b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/a-life-with-my-name-on-639fe501887d3e4b.mp3",
+      "uploadedAt": "2026-10-29T13:28:12.917Z"
+    },
+    {
+      "sourcePath": "A Room Inside My Own Design.mp3",
+      "sha256": "7a41801fa11083fe35d446c7bd4e334be616e3941a2725a72e6ee5e42e68d34e",
+      "sizeBytes": 3572397,
+      "objectKey": "tracks/a-room-inside-my-own-design-7a41801fa11083fe.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/a-room-inside-my-own-design-7a41801fa11083fe.mp3",
+      "uploadedAt": "2026-10-29T13:28:13.019Z"
+    },
+    {
       "sourcePath": "Acoustic1/Alex Merced - But Youre Still Sleeping.mp3",
       "sha256": "6fdecee134bb6751478cd326e9c5a3b7559a3e43542737873814bf234e57a79c",
       "sizeBytes": 3262416,
@@ -1096,6 +1112,14 @@
       "objectKey": "tracks/i-name-the-room-b2f2a8a9bfd43cc2.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/i-name-the-room-b2f2a8a9bfd43cc2.mp3",
       "uploadedAt": "2026-10-19T21:57:35.299Z"
+    },
+    {
+      "sourcePath": "I Want My Own Velocity.mp3",
+      "sha256": "51f2defaf6a387437dceddf99c04b5115257fd6f4623f040fc06ae4ff363a351",
+      "sizeBytes": 3459336,
+      "objectKey": "tracks/i-want-my-own-velocity-51f2defaf6a38743.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-want-my-own-velocity-51f2defaf6a38743.mp3",
+      "uploadedAt": "2026-10-29T13:28:12.966Z"
     },
     {
       "sourcePath": "I Win Because I'm Weird.mp3",
@@ -2332,5 +2356,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-26T14:56:45.454Z"
+  "updatedAt": "2026-10-29T13:28:13.019Z"
 }
