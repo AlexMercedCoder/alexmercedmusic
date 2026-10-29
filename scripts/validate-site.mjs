@@ -295,6 +295,10 @@ assert.ok(read('dist/listen/index.html').includes(tiktokUrl), 'The platform dire
 assert.ok(catalog.platforms.some((platform) => platform.label === 'X' && platform.url === xUrl));
 assert.ok(read('dist/index.html').includes(xUrl), 'The home page must link to Alex Merced Music on X.');
 assert.ok(read('dist/listen/index.html').includes(xUrl), 'The platform directory must link to Alex Merced Music on X.');
+const homePage = read('dist/index.html');
+assert.ok(homePage.includes('href="https://www.youtube.com/@alexmercedmusic" aria-label="Follow Alex Merced on YouTube Profile"'), 'The home page must show a YouTube Profile button.');
+assert.ok(homePage.includes('href="https://www.instagram.com/alexmercedmusic" aria-label="Follow Alex Merced on Instagram"'), 'The home page must show an Instagram button.');
+assert.ok(homePage.includes('platform-mark--youtubeprofile') && homePage.includes('platform-mark--instagram'), 'The new social buttons must include icons.');
 for (const release of catalog.distributedReleases) {
   assert.ok(songsPage.includes(release.links.find((link) => link.label === 'Spotify')?.url), `${release.title} is missing its Spotify album link on the songs page.`);
   assert.ok(read('dist/listen/index.html').includes(release.tracks[0].url), `${release.title} is missing its direct Spotify track links.`);
