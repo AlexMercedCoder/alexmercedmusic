@@ -177,6 +177,15 @@ for (const [youtubeId, songId] of [
   const song = catalog.songs.find((item) => item.id === songId);
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(short.watchUrl), `${song.title} must link back to its Short.`);
 }
+for (const [youtubeId, songId] of [
+  ['6F7LEzvYHO8', 'song:electronic:7vm4c7'],
+  ['3TeD5aylkSY', 'song:archive:1xqe7he'],
+  ['fxyrrNnGYVE', 'song:archive:2td6he'],
+  ['6J_cAqkxIcg', 'song:electronic:x0cg5f'],
+]) {
+  const video = catalog.videos.find((item) => item.youtubeId === youtubeId);
+  assert.deepEqual(video?.songIds, [songId], `${youtubeId} must link to its original recording.`);
+}
 const stillHereVideo = catalog.videos.find((video) => video.youtubeId === 'KzIDlYp1-yI');
 assert.equal(stillHereVideo?.songIds.length, 1, "The new I'm Still Here video must link to one verified recording.");
 assert.ok(catalog.songs.find((song) => song.id === stillHereVideo.songIds[0])?.links.some((link) => link.url.endsWith('6a9613aa-0dae-4154-b7db-8aea5a0f244c')));
@@ -287,6 +296,9 @@ assert.ok(catalog.songs.find((song) => song.id === pieceAcoustic?.acousticSource
 assert.ok(catalog.songs.find((song) => song.id === mapAcoustic?.acousticSourceId)?.links.some((link) => link.url.endsWith('7e47b964-26a7-4bbd-acbc-c2e56d200fa5')));
 assert.ok(catalog.songs.filter((song) => song.albumLinks.length).length > 1000, 'Verified Suno album memberships unexpectedly dropped.');
 const songsPage = read('dist/songs/index.html');
+assert.equal(catalog.platforms.find((platform) => platform.label === 'YouTube, Alex Merced Music')?.stat, `${catalog.videos.length} cataloged uploads`);
+assert.ok(!read('dist/listen/index.html').includes('none of it has been consolidated'), 'The listening page must describe the song pages accurately.');
+assert.ok(!read('dist/stories/from-guitar-to-fl-studio/index.html').includes('274-track'), 'The electronic story must not hard-code an old track count.');
 const tiktokUrl = 'https://www.tiktok.com/@alexmercedmusic';
 const xUrl = 'https://x.com/alexmercedmusic';
 assert.ok(catalog.platforms.some((platform) => platform.label === 'TikTok' && platform.url === tiktokUrl));

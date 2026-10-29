@@ -11,7 +11,7 @@ const picks = [
   ['Glitchy Romance', 'A concise example of the electronic catalog’s melodic side.'],
   ['Solemn Thoughts', 'Eadd9 Improv heard again through an indie-disco arrangement.'],
   ['Through the Darkness', 'An older song rebuilt as disco house.'],
-  ['Pocket Fire', 'The newest end of the current Suno catalog.'],
+  ['Pocket Fire', 'A song from the newer Suno catalog.'],
   ['YOUR NAME IS ALREADY TALKING', 'A newer generated song tied to Alex’s broader creative work.'],
 ].map(([title,note]) => ({ song: songs.find((candidate) => candidate.title === title && (title !== 'Solemn Thoughts' || candidate.kind === 'reimagined')), note })).filter((item) => item.song);
 ---

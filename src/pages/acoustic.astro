@@ -60,9 +60,8 @@ const jsonLd = [
       <p class="lede" style="margin-top:1rem">
         {acousticTracks.length} accessible recordings are listed below across the old
         YouTube playlist, the current music channel and the loose-tracks SoundCloud
-        account. {`The playlist itself reports ${acousticPlaylist.totalEntries} entries,
-        but YouTube hides ${acousticPlaylist.unavailableEntries} unavailable videos.
-        Titles are preserved as the hosts present them.`}
+        account. Some older playlist videos are unavailable, so the listings here focus on
+        recordings with working links. Titles are preserved as the hosts present them.
       </p>
       <div style="margin-top:1.8rem">
         <FeaturedReimaginingAlbums />
@@ -84,7 +83,7 @@ const jsonLd = [
       <div class="section__head">
         <h2>The YouTube archive playlist</h2>
         <p>
-          {youtubeArchiveTracks.length} accessible videos in current playlist order.
+          {youtubeArchiveTracks.length} accessible videos in playlist order.
           Rebuilt songs include direct links to both the original and new versions.
         </p>
       </div>

@@ -1,5 +1,213 @@
 [
   {
+    "id": "e6231b6c-ae93-44c6-8846-5f9ea3224bf6",
+    "name": "Me, My Angels And My Demons (Alternate Version)",
+    "resourceType": "album",
+    "url": "https://suno.com/album/e6231b6c-ae93-44c6-8846-5f9ea3224bf6",
+    "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1790.6799999999998,
+    "description": "The alternate version of my introspective concept album, featuring the alternate version of each song on the original album.",
+    "trackIds": [
+      "4b2d63f8-dc79-4a92-86cf-cb390ed650ce",
+      "7655aa8f-a576-49a7-bd23-ecd0dd6050d4",
+      "e222df42-3c4a-4b49-8237-5f27b22fff6c",
+      "3c7f920a-bb7f-4add-9f52-8bf5d8e9f136",
+      "ce65982a-caf4-41d6-b970-712474a50162",
+      "708d61a3-e460-4e68-9f43-d2f6d9ba523d",
+      "f9ef1a37-068e-4852-8d4a-e257974639d6",
+      "7f481a63-f39a-45fd-b4b4-787c8af5330d",
+      "acd90f3f-0f21-4d7a-b66b-5e3d8349e11f",
+      "1ba5f05b-d0cb-4416-b78e-c8214ab9711a"
+    ],
+    "tracks": [
+      {
+        "id": "4b2d63f8-dc79-4a92-86cf-cb390ed650ce",
+        "title": "The Committee of Me (alternate version)",
+        "url": "https://suno.com/song/4b2d63f8-dc79-4a92-86cf-cb390ed650ce",
+        "createdAt": "2026-10-29T16:53:43.863Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "7655aa8f-a576-49a7-bd23-ecd0dd6050d4",
+        "title": "The Weight of Being Wonderful (alternate version)",
+        "url": "https://suno.com/song/7655aa8f-a576-49a7-bd23-ecd0dd6050d4",
+        "createdAt": "2026-10-29T16:54:51.024Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "e222df42-3c4a-4b49-8237-5f27b22fff6c",
+        "title": "The Dopamine Auction (alternate version)",
+        "url": "https://suno.com/song/e222df42-3c4a-4b49-8237-5f27b22fff6c",
+        "createdAt": "2026-10-29T16:56:05.446Z",
+        "durationSeconds": 178.76,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "3c7f920a-bb7f-4add-9f52-8bf5d8e9f136",
+        "title": "A Hunger That Learns My Name (alternate version)",
+        "url": "https://suno.com/song/3c7f920a-bb7f-4add-9f52-8bf5d8e9f136",
+        "createdAt": "2026-10-29T16:56:54.420Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "ce65982a-caf4-41d6-b970-712474a50162",
+        "title": "An Orchestra of Almosts (alternate version)",
+        "url": "https://suno.com/song/ce65982a-caf4-41d6-b970-712474a50162",
+        "createdAt": "2026-10-29T16:57:56.853Z",
+        "durationSeconds": 178.76,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "708d61a3-e460-4e68-9f43-d2f6d9ba523d",
+        "title": "Collateral Kindness (alternate version)",
+        "url": "https://suno.com/song/708d61a3-e460-4e68-9f43-d2f6d9ba523d",
+        "createdAt": "2026-10-29T16:59:05.301Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "f9ef1a37-068e-4852-8d4a-e257974639d6",
+        "title": "The Mercy Paradox (alternate version)",
+        "url": "https://suno.com/song/f9ef1a37-068e-4852-8d4a-e257974639d6",
+        "createdAt": "2026-10-29T17:00:24.358Z",
+        "durationSeconds": 178.76,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "7f481a63-f39a-45fd-b4b4-787c8af5330d",
+        "title": "The Infinite Amateur (alternate version)",
+        "url": "https://suno.com/song/7f481a63-f39a-45fd-b4b4-787c8af5330d",
+        "createdAt": "2026-10-29T17:01:11.117Z",
+        "durationSeconds": 178,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "acd90f3f-0f21-4d7a-b66b-5e3d8349e11f",
+        "title": "Negotiations with Myself (alternate version)",
+        "url": "https://suno.com/song/acd90f3f-0f21-4d7a-b66b-5e3d8349e11f",
+        "createdAt": "2026-10-29T17:02:15.274Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      },
+      {
+        "id": "1ba5f05b-d0cb-4416-b78e-c8214ab9711a",
+        "title": "Me, My Angels and My Demons (alternate version)",
+        "url": "https://suno.com/song/1ba5f05b-d0cb-4416-b78e-c8214ab9711a",
+        "createdAt": "2026-10-29T17:03:36.003Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_4f979f10-96a1-4d15-ada8-0ea7970ed9b4.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "73f675f1-9324-4ce5-9813-261bcafee287",
+    "name": "Me, My Angels And My Demons",
+    "resourceType": "album",
+    "url": "https://suno.com/album/73f675f1-9324-4ce5-9813-261bcafee287",
+    "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1791.84,
+    "description": "A cohesive concept album that is an abstract adventure into me. Exploring the good and bad I see in myself, my impulses, my need to please, my ideals and the struggle to reconcile these things in myself.",
+    "trackIds": [
+      "29eea9ba-e307-477a-ab21-e876bc1199eb",
+      "56e54f9c-3de1-418e-9801-2f010d4b53fd",
+      "b4d946fc-3f6e-4d64-b1ea-5d47cf616d75",
+      "c9c2de9e-c8a9-4425-b6b0-43ea7a340df4",
+      "8aad0ee8-1abc-4ece-8a80-97878a7f3669",
+      "5f91addd-f1d2-4346-bd92-04d5648d7ffe",
+      "a80dd9af-b00e-4c89-b81f-15e002cbdd70",
+      "dfb0fab2-9ef3-429f-9417-3512628a55ea",
+      "0007ff7e-cea7-4523-9fd6-69d66d660763",
+      "cdf28cfe-9328-4381-b14a-48c3921c4a7c"
+    ],
+    "tracks": [
+      {
+        "id": "29eea9ba-e307-477a-ab21-e876bc1199eb",
+        "title": "The Committee of Me",
+        "url": "https://suno.com/song/29eea9ba-e307-477a-ab21-e876bc1199eb",
+        "createdAt": "2026-10-29T16:53:43.863Z",
+        "durationSeconds": 178.76,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "56e54f9c-3de1-418e-9801-2f010d4b53fd",
+        "title": "The Weight of Being Wonderful",
+        "url": "https://suno.com/song/56e54f9c-3de1-418e-9801-2f010d4b53fd",
+        "createdAt": "2026-10-29T16:54:51.024Z",
+        "durationSeconds": 179.6,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "b4d946fc-3f6e-4d64-b1ea-5d47cf616d75",
+        "title": "The Dopamine Auction",
+        "url": "https://suno.com/song/b4d946fc-3f6e-4d64-b1ea-5d47cf616d75",
+        "createdAt": "2026-10-29T16:56:05.446Z",
+        "durationSeconds": 179.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "c9c2de9e-c8a9-4425-b6b0-43ea7a340df4",
+        "title": "A Hunger That Learns My Name",
+        "url": "https://suno.com/song/c9c2de9e-c8a9-4425-b6b0-43ea7a340df4",
+        "createdAt": "2026-10-29T16:56:54.420Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "8aad0ee8-1abc-4ece-8a80-97878a7f3669",
+        "title": "An Orchestra of Almosts",
+        "url": "https://suno.com/song/8aad0ee8-1abc-4ece-8a80-97878a7f3669",
+        "createdAt": "2026-10-29T16:57:56.853Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "5f91addd-f1d2-4346-bd92-04d5648d7ffe",
+        "title": "Collateral Kindness",
+        "url": "https://suno.com/song/5f91addd-f1d2-4346-bd92-04d5648d7ffe",
+        "createdAt": "2026-10-29T16:59:05.301Z",
+        "durationSeconds": 178.8,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "a80dd9af-b00e-4c89-b81f-15e002cbdd70",
+        "title": "The Mercy Paradox",
+        "url": "https://suno.com/song/a80dd9af-b00e-4c89-b81f-15e002cbdd70",
+        "createdAt": "2026-10-29T17:00:24.358Z",
+        "durationSeconds": 179.16,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "dfb0fab2-9ef3-429f-9417-3512628a55ea",
+        "title": "The Infinite Amateur",
+        "url": "https://suno.com/song/dfb0fab2-9ef3-429f-9417-3512628a55ea",
+        "createdAt": "2026-10-29T17:01:11.117Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "0007ff7e-cea7-4523-9fd6-69d66d660763",
+        "title": "Negotiations with Myself",
+        "url": "https://suno.com/song/0007ff7e-cea7-4523-9fd6-69d66d660763",
+        "createdAt": "2026-10-29T17:02:15.274Z",
+        "durationSeconds": 179.52,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      },
+      {
+        "id": "cdf28cfe-9328-4381-b14a-48c3921c4a7c",
+        "title": "Me, My Angels and My Demons",
+        "url": "https://suno.com/song/cdf28cfe-9328-4381-b14a-48c3921c4a7c",
+        "createdAt": "2026-10-29T17:03:36.003Z",
+        "durationSeconds": 179.2,
+        "imageUrl": "https://cdn2.suno.ai/image_2e168a55-d097-4563-b3a5-f52f57f6ae74.jpeg"
+      }
+    ]
+  },
+  {
     "id": "ebca448c-55af-4e82-a2b8-d3970f41fcb9",
     "name": "Chill, Beautiful And Positive",
     "resourceType": "album",

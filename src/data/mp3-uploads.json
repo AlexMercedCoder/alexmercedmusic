@@ -1042,6 +1042,46 @@
       "uploadedAt": "2026-10-19T21:57:29.092Z"
     },
     {
+      "sourcePath": "Hearing Pity in the Tenderness.mp3",
+      "sha256": "c5d85e3b6f4946d01e493e50a70f7101f7fed1d35a2e050825b2545b6cbac62e",
+      "sizeBytes": 4335246,
+      "objectKey": "tracks/hearing-pity-in-the-tenderness-c5d85e3b6f4946d0.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hearing-pity-in-the-tenderness-c5d85e3b6f4946d0.mp3",
+      "uploadedAt": "2026-10-29T23:07:52.195Z"
+    },
+    {
+      "sourcePath": "Heart Passport.mp3",
+      "sha256": "15cd55f340c58a87e4821bca22f79b3c4da5721da4e68854ead4667d75a2e47a",
+      "sizeBytes": 5746079,
+      "objectKey": "tracks/heart-passport-15cd55f340c58a87.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/heart-passport-15cd55f340c58a87.mp3",
+      "uploadedAt": "2026-10-29T23:07:52.340Z"
+    },
+    {
+      "sourcePath": "Hearts Like Lanterns Overflow.mp3",
+      "sha256": "2f9b48bbc26c1b84811aac0cc5da6c0fc8de8d4d498867929aae1f3d43d0fedd",
+      "sizeBytes": 6344744,
+      "objectKey": "tracks/hearts-like-lanterns-overflow-2f9b48bbc26c1b84.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hearts-like-lanterns-overflow-2f9b48bbc26c1b84.mp3",
+      "uploadedAt": "2026-10-29T23:07:52.419Z"
+    },
+    {
+      "sourcePath": "Hold the In-Between.mp3",
+      "sha256": "1bc4c38fa5fc3e96aaaa77d7191a2de261427b14247649fbc1904f1531819406",
+      "sizeBytes": 6171156,
+      "objectKey": "tracks/hold-the-in-between-1bc4c38fa5fc3e96.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hold-the-in-between-1bc4c38fa5fc3e96.mp3",
+      "uploadedAt": "2026-10-29T23:07:52.207Z"
+    },
+    {
+      "sourcePath": "Hope Was In The Room.mp3",
+      "sha256": "9c06a0b8d5caf2de990079c861b07af8e09ff14a66dbd4303ff7fde9b4d254d7",
+      "sizeBytes": 5059443,
+      "objectKey": "tracks/hope-was-in-the-room-9c06a0b8d5caf2de.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/hope-was-in-the-room-9c06a0b8d5caf2de.mp3",
+      "uploadedAt": "2026-10-29T23:07:56.328Z"
+    },
+    {
       "sourcePath": "Hope.mp3",
       "sha256": "0b0a0551169749a406cf96210782b454dea01d2cb196f9fcdf603d4435089e7f",
       "sizeBytes": 4715150,
@@ -1266,6 +1306,14 @@
       "uploadedAt": "2026-10-19T21:57:47.898Z"
     },
     {
+      "sourcePath": "Made for More.mp3",
+      "sha256": "784689c758082abf15249e4121ea48e2c74935d38e36832dd49c9f05c2e0c401",
+      "sizeBytes": 5743327,
+      "objectKey": "tracks/made-for-more-784689c758082abf.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/made-for-more-784689c758082abf.mp3",
+      "uploadedAt": "2026-10-29T23:07:56.378Z"
+    },
+    {
       "sourcePath": "Make Room Where You Stand.mp3",
       "sha256": "d36a1ad453cbf36d42ac5f5c039b03eec31b77e7a70e4b6754c2c547c1cbc016",
       "sizeBytes": 6135428,
@@ -1320,6 +1368,14 @@
       "objectKey": "tracks/more-than-pieces-652f79721914dd23.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/more-than-pieces-652f79721914dd23.mp3",
       "uploadedAt": "2026-10-19T21:57:51.969Z"
+    },
+    {
+      "sourcePath": "More Than The Alarm.mp3",
+      "sha256": "cf70091b604317cd5c89fc6ff72aba97acbab541986e5947ef65114a4273b028",
+      "sizeBytes": 6845328,
+      "objectKey": "tracks/more-than-the-alarm-cf70091b604317cd.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/more-than-the-alarm-cf70091b604317cd.mp3",
+      "uploadedAt": "2026-10-29T23:07:56.153Z"
     },
     {
       "sourcePath": "My Heart Stopped (Alex AI Voice Cover).mp3",
@@ -1930,6 +1986,14 @@
       "uploadedAt": "2026-10-19T21:58:47.509Z"
     },
     {
+      "sourcePath": "We Are Us.mp3",
+      "sha256": "ca8c7518f467cb09d9ff73656036769620a34b49c2cbb03b7b8a13bec7475a47",
+      "sizeBytes": 6201665,
+      "objectKey": "tracks/we-are-us-ca8c7518f467cb09.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/we-are-us-ca8c7518f467cb09.mp3",
+      "uploadedAt": "2026-10-29T23:07:56.094Z"
+    },
+    {
       "sourcePath": "Wear Every Jagged Edge.mp3",
       "sha256": "ba593d53d0072e34aa6c4fb9228db0fb1e5767e8b1bcf7aad95a323b39ba4bd9",
       "sizeBytes": 5159164,
@@ -2356,5 +2420,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-29T13:28:13.019Z"
+  "updatedAt": "2026-10-29T23:07:56.378Z"
 }
