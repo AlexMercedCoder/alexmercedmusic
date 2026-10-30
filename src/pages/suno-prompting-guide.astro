@@ -50,6 +50,14 @@ const faqs = [
     question: 'How can several Suno songs sound like one album?',
     answer: 'Create a style bible covering harmonic palette, recurring motif, instrument family, vocal identity and production rules. Give each track a different narrative role while preserving a few shared decisions.',
   },
+  {
+    question: 'How can I reimagine a recording I already own?',
+    answer: 'Upload the recording, name the melody or lyric that must remain, and describe the new ensemble, groove and production. Compare the result with the original by ear.',
+  },
+  {
+    question: 'Which tool should I use to keep an album sound consistent?',
+    answer: 'Start with a written style bible. Use Inspire with a focused playlist of your own songs when recorded references help. Consider a Custom Model only when you have enough rights-cleared tracks.',
+  },
 ];
 
 const jsonLd = [
@@ -60,7 +68,7 @@ const jsonLd = [
     description: guide.description,
     url: guide.pageUrl,
     datePublished: '2026-09-13',
-    dateModified: '2026-10-07',
+    dateModified: '2026-10-30',
     author: { '@id': 'https://alexmerced.com/#alexmerced' },
     publisher: { '@id': 'https://alexmerced.com/#alexmerced' },
     about: ['Suno', 'music prompting', 'keys', 'chord progressions', 'time signatures', 'parentheses in lyrics', 'vocal rhythm', 'percussion', 'song arrangement', 'music production'],
@@ -90,7 +98,7 @@ const jsonLd = [
   keywords={['Suno prompting guide', 'Suno prompts', 'Suno parentheses lyrics', 'Suno rhythmic lyrics', 'Suno chord progression prompts', 'Suno time signatures', 'Suno percussion prompts', 'music prompting', 'Suno v6']}
   jsonLd={jsonLd}
   ogType="article"
-  dateModified="2026-10-07"
+  dateModified="2026-10-30"
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Suno Prompting Field Guide' }]} />
 
@@ -102,7 +110,7 @@ const jsonLd = [
       <div class="guide-meta">
         <span>{guide.edition}</span>
         <span>{guide.scope}</span>
-        <span>Research verified October 7, 2026</span>
+        <span>Research verified October 30, 2026</span>
       </div>
       <div class="btn-row">
         <a class="btn btn--primary" href="#prompt-architecture">Build a prompt</a>
@@ -131,6 +139,11 @@ const jsonLd = [
       <a href="#hybrids">Hybrids</a>
       <a href="#controls">Controls</a>
       <a href="#workflow">Workflow</a>
+      <a href="#owned-audio">Owned audio</a>
+      <a href="#album-consistency">Album consistency</a>
+      <a href="#vocal-production">Vocal production</a>
+      <a href="#suno-sounds">Sounds and DAW</a>
+      <a href="#finishing">Finish a song</a>
       <a href="#troubleshooting">Troubleshooting</a>
       <a href="#recipes">Recipes</a>
       <a href="#project-bible">Project planning</a>
@@ -633,6 +646,69 @@ const jsonLd = [
     </div>
   </section>
 
+  <section class="section section--tight" id="owned-audio" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Start with material you made</p>
+        <h2>Reimagine an owned recording without losing its identity</h2>
+        <p>An acoustic demo, guitar riff, drum loop or finished song can be a more reliable starting point than prose alone. Suno accepts audio uploads, and v6 can combine several references in one request. Describe what must stay and what is free to change.</p>
+      </div>
+      <div class="vocab-grid">
+        {guide.ownedAudioWorkflow.map(([step, action]) => <article><h3>{step}</h3><p>{action}</p></article>)}
+      </div>
+      <div class="prompt-card"><p class="eyebrow">Example: acoustic to electronic</p><p>Use my uploaded acoustic recording as the song anchor. Keep the chorus melody and lyric. Rebuild the accompaniment as a restrained electronic track with a dry two-step groove, warm sub-bass and glassy synth chords. Let the final chorus widen, but keep the vocal phrasing recognizable.</p></div>
+      <p>Uploaded audio can also be combined with songs, playlists, images or video in v6 Simple mode. Treat each source as a reference with a stated role. When the exact melody or timing matters, compare the result against your recording instead of assuming the prompt preserved it.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="album-consistency" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Project continuity</p>
+        <h2>Choose a reference method for the whole album</h2>
+        <p>A consistent album needs repeated decisions, not identical songs. Keep a stable vocal approach, instrument family and production space, then give each track its own role.</p>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Method</th><th>Use it when</th><th>Working approach</th></tr></thead><tbody>{guide.referenceMethods.map(([method, when, approach]) => <tr><th scope="row">{method}</th><td>{when}</td><td>{approach}</td></tr>)}</tbody></table></div>
+      <p>Inspire draws from a playlist of songs you made; Suno recommends three to five songs for tighter control. Custom Models require at least six songs you have rights to use. Neither method replaces listening for recurring motifs, compatible mixes and an intentional track sequence.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="vocal-production" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">From instrumental to singer</p>
+        <h2>Build and check a vocal performance</h2>
+        <p>Choose a vocal method based on what you already have. Add Vocals works from an uploaded or generated instrumental. Suno's Voices feature can use a verified profile of your own voice where available.</p>
+      </div>
+      <div class="vocab-grid">{guide.vocalProductionWorkflow.map(([name, action]) => <article><h3>{name}</h3><p>{action}</p></article>)}</div>
+      <p>Write the Style field for the full target song, not just the singer. For example: “The existing dry acoustic guitar stays forward; add a low, close-mic baritone with conversational verses and a lightly doubled chorus.” Test the Audio Strength setting, then check whether the accompaniment survived intact.</p>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="suno-sounds" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">For DAW producers</p>
+        <h2>Prompt individual sounds, then inspect them in your session</h2>
+        <p>Suno Sounds can generate one-shots and loops. It offers BPM and key settings for musical material, but the result still needs a listening check for tuning, transient shape, loop seams and unwanted extra instruments.</p>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Use</th><th>Example prompt</th><th>Production check</th></tr></thead><tbody>{guide.soundsRecipes.map(([use, prompt, check]) => <tr><th scope="row">{use}</th><td>{prompt}</td><td>{check}</td></tr>)}</tbody></table></div>
+    </div>
+  </section>
+
+  <section class="section section--tight" id="finishing" data-era="ai">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Choose the next edit</p>
+        <h2>Finish a promising song without restarting it</h2>
+        <p>Keep the parts that work. Remaster is for sonic refinement, while Cover is for a larger transformation. Suno offers Subtle, Normal and High Remaster variation, so compare each output with the accepted version.</p>
+      </div>
+      <div class="table-wrap"><table><thead><tr><th>Problem</th><th>Next action</th><th>What to check</th></tr></thead><tbody>{guide.finishChoices.map(([problem, action, check]) => <tr><th scope="row">{problem}</th><td>{action}</td><td>{check}</td></tr>)}</tbody></table></div>
+      <div class="section__head subsection-head"><p class="eyebrow">Source material and release</p><h2>Keep rights and provenance clear</h2></div>
+      <ul>{guide.rightsNotes.map((note) => <li>{note}</li>)}</ul>
+    </div>
+  </section>
+
   <section class="section section--tight" id="troubleshooting" data-era="ai">
     <div class="shell">
       <div class="section__head">
@@ -762,8 +838,15 @@ const jsonLd = [
         <li><a href="https://help.suno.com/en/articles/13670529">Suno Help: Studio 2.0</a>: MIDI, effects, automation, advanced stems and chat-assisted production.</li>
         <li><a href="https://help.suno.com/en/articles/13925185">Suno Help: Stem Separation</a>: instrument and vocal separation modes for production work.</li>
         <li><a href="https://help.suno.com/en/articles/13925249">Suno Help: Exporting from Studio</a>: full mix, selected range, multitrack, WAV and MIDI export workflows.</li>
-        <li><a href="https://help.suno.com/en/articles/2477633">Suno Help: Upload Audio</a>: extending from audio you own, including a four-bar drum loop.</li>
+        <li><a href="https://help.suno.com/en/articles/6141569">Suno Help: Audio Uploads</a>: starting from a demo, loop or owned recording.</li>
         <li><a href="https://help.suno.com/en/articles/13924481">Suno Help: v6 FAQ</a>: Variety, Max Mode and model behavior.</li>
+        <li><a href="https://help.suno.com/en/articles/6882753">Suno Help: Inspire</a>: using a focused playlist of songs you made as a project reference.</li>
+        <li><a href="https://help.suno.com/en/articles/11362497">Suno Help: Custom Models</a>: building a model from rights-cleared songs.</li>
+        <li><a href="https://help.suno.com/en/articles/6882817">Suno Help: Add Vocals</a>: lyrics, Style and Audio Strength for an instrumental.</li>
+        <li><a href="https://help.suno.com/en/articles/11362369">Suno Help: Voices</a>: verified profiles of your own voice.</li>
+        <li><a href="https://help.suno.com/en/articles/8105281">Suno Help: Remaster</a>: variation strengths and the distinction from Cover.</li>
+        <li><a href="https://help.suno.com/en/articles/10625537">Suno Help: Suno Sounds</a>: one-shots, loops, BPM and key settings.</li>
+        <li><a href="https://help.suno.com/en/articles/2416769">Suno Help: Ownership</a> and <a href="https://help.suno.com/en/articles/2746945">copyright guidance</a>: commercial-use and copyright distinctions.</li>
         <li><a href="https://online.berklee.edu/takenote/harmonic-progressions-for-songwriters/">Berklee Online: Harmonic Progressions for Songwriters</a>: chord function, harmonic rhythm, borrowed chords and voice leading.</li>
         <li><a href="https://online.berklee.edu/courses/time-and-rhythm-1">Berklee Online: Time and Rhythm 1</a>: simple and compound meter, beat grouping, syncopation and polyrhythm.</li>
         <li><a href="https://learningmusic.ableton.com/chords/play-with-chords.html">Ableton Learning Music: Play with Chords</a>: interactive key, mode and chord relationships.</li>

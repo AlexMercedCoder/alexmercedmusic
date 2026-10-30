@@ -329,11 +329,15 @@ const promptingPage = read('dist/suno-prompting-guide/index.html');
 assert.ok(promptingPage.includes('TechArticle') && promptingPage.includes('FAQPage'), 'The prompting guide is missing structured data.');
 assert.ok(!promptingPage.includes('.pdf'), 'The prompting guide must not publish or link to the source PDF.');
 assert.ok(!existsSync(new URL('dist/guides/suno-prompting-field-guide.pdf', root)), 'The source PDF must not be included in the built site.');
-for (const section of ['Interactive workbench', 'Genre atlas', 'Keys and chord progressions', 'Time signatures and beat grouping', 'Odd-meter drum maps', 'Melody and vocal writing', 'Arrangement blueprints', 'Prompt, edit or produce?', 'Control boundary', 'Studio production', 'Generation diagnosis', 'Before and after', 'Project-level prompting', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
+for (const section of ['Interactive workbench', 'Genre atlas', 'Keys and chord progressions', 'Time signatures and beat grouping', 'Odd-meter drum maps', 'Melody and vocal writing', 'Arrangement blueprints', 'Prompt, edit or produce?', 'Control boundary', 'Studio production', 'Reimagine an owned recording', 'Choose a reference method for the whole album', 'Build and check a vocal performance', 'Prompt individual sounds', 'Finish a promising song', 'Generation diagnosis', 'Before and after', 'Project-level prompting', 'Instrumentation and voice', 'Rhythm, harmony and form', 'References and hybrid genres', 'Master vocabulary', 'Score each candidate']) {
   assert.ok(promptingPage.includes(section), `The prompting guide is missing the ${section} section.`);
 }
 assert.ok(promptingPage.includes('not sent to the generative model'), 'The prompting guide must explain the Studio time-signature limitation.');
 assert.ok(promptingPage.includes('i-VI-III-VII') && promptingPage.includes('7/8 grouped 2+2+3'), 'The prompting guide is missing practical harmony or meter examples.');
+assert.ok(promptingPage.includes('Midwest emo') && promptingPage.includes('Gamelan-inspired') && promptingPage.includes('Pedal steel') && promptingPage.includes('Darbuka'), 'The expanded genre and instrument atlas is incomplete.');
+for (const id of ['owned-audio', 'album-consistency', 'vocal-production', 'suno-sounds', 'finishing']) {
+  assert.ok(promptingPage.includes(`id="${id}"`), `The prompting guide is missing its ${id} section.`);
+}
 assert.equal((promptingPage.match(/<button[^>]+data-tab=/g) ?? []).length, 4, 'The prompting workbench must render four interactive tabs.');
 for (const marker of ['data-suno-workbench', 'data-output="style"', 'data-output="chords"', 'data-meter-grid', 'data-diagnosis-output']) {
   assert.ok(promptingPage.includes(marker), `The prompting workbench is missing ${marker}.`);
