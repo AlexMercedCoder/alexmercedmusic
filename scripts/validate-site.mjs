@@ -435,8 +435,11 @@ for (const video of catalog.videos) {
   assert.ok(noindex || (canonical && songPages.has(canonical)), `${video.title} must canonicalize to a song page or be noindex.`);
 }
 assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/suno-prompting-guide/</loc>'));
+assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/ethics-of-ai-music/</loc>'), 'The ethics essay is missing from the sitemap.');
+assert.ok(read('dist/index.html').includes('href="/ethics-of-ai-music/"'), 'The ethics essay is missing from the navigation.');
+assert.ok(!read('src/pages/ethics-of-ai-music.astro').includes('\u2014'), 'The ethics essay must not use em dashes.');
 const aiPerspectiveUrl = 'https://amdatalakehouse.substack.com/p/when-hard-becomes-easy-ai-art-and';
-for (const path of ['dist/suno/index.html', 'dist/stories/index.html', 'dist/stories/revisiting-songs-with-suno/index.html', 'dist/about/index.html', 'dist/llms.txt', 'dist/llms-full.txt']) {
+for (const path of ['dist/suno/index.html', 'dist/stories/index.html', 'dist/stories/revisiting-songs-with-suno/index.html', 'dist/about/index.html', 'dist/ethics-of-ai-music/index.html', 'dist/llms.txt', 'dist/llms-full.txt']) {
   assert.ok(read(path).includes(aiPerspectiveUrl), `${path} is missing Alex's AI and music perspective article.`);
 }
 

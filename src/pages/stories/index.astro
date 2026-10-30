@@ -1,7 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
-import { aiMusicPerspective } from '../../data/editorial';
+import { aiMusicPerspective, ethicsOfAiMusic } from '../../data/editorial';
 const stories = [
   ['/stories/start-here/', 'Start here: ten songs across twenty years', 'A guided route through the acoustic, electronic and AI-assisted eras.'],
   ['/stories/originals-and-reimaginings/', 'Originals and reimaginings', 'Why the old recordings remain beside the rebuilt arrangements.'],
@@ -10,6 +10,7 @@ const stories = [
   ['/suno-prompting-guide/', 'Suno Prompting Field Guide', 'A practical handbook for genre, instrumentation, vocals, structure, production and iteration.'],
   ['/music-theory/', 'Music Theory for Songwriters and Producers', 'Scales, modes, chords, Roman numerals, progressions and practical workflows for instruments and DAWs.'],
   ['/stories/from-guitar-to-fl-studio/', 'From guitar to FL Studio', 'The tools changed, but the melodic thread continued.'],
+  [ethicsOfAiMusic.path, ethicsOfAiMusic.title, ethicsOfAiMusic.description],
   [aiMusicPerspective.url, aiMusicPerspective.title, aiMusicPerspective.description],
 ];
 ---

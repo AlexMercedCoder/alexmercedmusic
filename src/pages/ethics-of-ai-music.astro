@@ -1,0 +1,216 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE } from '../data/catalog-model';
+import { aiMusicPerspective, ethicsOfAiMusic as page } from '../data/editorial';
+import pageDates from '../data/page-dates.json';
+
+const dateModified = (pageDates as Record<string, string>)['/ethics-of-ai-music/'];
+
+const sections = [
+  ['tool', 'A tool that makes sounds'],
+  ['labels', 'Musician is not the same as guitarist'],
+  ['songwriting', 'Who wrote the song?'],
+  ['benefits', 'What AI is good for'],
+  ['misuse', 'Where it goes wrong'],
+  ['consequences', 'The cost nobody planned for'],
+  ['history', 'We have had this argument before'],
+  ['fans', 'What fans are actually buying'],
+  ['disclosure', 'Be upfront about the method'],
+  ['live', 'Can an AI artist play a show?'],
+  ['for-yourself', 'Making music for yourself'],
+  ['personalization', 'Many more voices, each one quieter'],
+  ['bottom-line', 'The bottom line'],
+];
+
+const jsonLd = [{
+  '@type': 'Article',
+  '@id': `${SITE}/ethics-of-ai-music/#article`,
+  url: `${SITE}/ethics-of-ai-music/`,
+  headline: page.title,
+  description: page.description,
+  datePublished: page.publishedAt,
+  ...(dateModified ? { dateModified } : {}),
+  author: { '@id': 'https://alexmerced.com/#alexmerced' },
+  isPartOf: { '@id': `${SITE}/#website` },
+  citation: aiMusicPerspective.url,
+}, {
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` },
+    { '@type': 'ListItem', position: 2, name: 'Ethics of AI music', item: `${SITE}/ethics-of-ai-music/` },
+  ],
+}];
+---
+
+<Base title={page.title} description={page.description} jsonLd={jsonLd} ogType="article" dateModified={dateModified}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Ethics of AI music' }]} />
+  <article class="section prose essay" data-era="ai">
+    <div class="shell prose__body" style="margin-top:0">
+      <p class="eyebrow">Essay by Alex Merced</p>
+      <h1>{page.title}</h1>
+      <p class="lede">AI is a tool that makes sounds. What matters is what you do with it, what you claim about it, and whose work you take to get there.</p>
+
+      <nav class="essay__toc" aria-label="Sections in this essay">
+        <p class="eyebrow">In this essay</p>
+        <ol>{sections.map(([id, label]) => <li><a href={`#${id}`}>{label}</a></li>)}</ol>
+      </nav>
+
+      <p>I have made music three different ways over about twenty years. I started with a guitar, a voice and a camera, recording songs in whatever room I was in. Later I moved into FL Studio and spent years building electronic tracks one pattern and one automation lane at a time. More recently I started using Suno to rebuild old songs in new arrangements and to write new ones. Every song on this site is filed under one of those methods, acoustic, electronic or generated, so you always know which one you are hearing.</p>
+      <p>Because I have worked all three ways, I hear the AI music argument from several sides at once. I understand why a session guitarist is angry. I understand why someone who never learned an instrument is thrilled. I understand why a producer who spent a decade learning to mix feels the floor moving. I also think most of the public argument is aimed at the wrong target. People argue about whether AI music is good or evil, as if the tool had a moral character. Tools do not. People do, and the ethics live in what people claim and what they take.</p>
+      <p>This essay lays out where I land. I made a shorter version of the economic argument in <a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a> on my Substack, and this page goes further into the musical side.</p>
+
+      <h2 id="tool">A tool that makes sounds</h2>
+      <p>Start with the plainest description. A generative music model takes input, usually text and sometimes audio, and produces sound. In that respect it belongs to the same family as a guitar, a piano, a drum machine, a sampler, a synthesizer and a laptop running a DAW. Each of those is a device a person uses to make sound happen. They differ enormously in how much control they give you, how much skill they demand, and how much of the result comes from the device's own design instead of your hands. They are still tools.</p>
+      <p>Whether the sound that comes out counts as music is a separate question, and it has never had a fixed answer. People argued about whether jazz was music. People argued about whether punk was music. John Cage wrote a piece made of a performer sitting silently at a piano, and listeners still argue about whether that is music. Noise artists, field recordists and ambient composers all make work that some people hear as music and others hear as sound. There is no panel that rules on this. Music is a judgment listeners make, and different listeners make it differently.</p>
+      <p>So I find it more useful to define the musician by intent and action than by the tool. If you pick up any tool and act with it, intending to make sounds you hope other people will hear as music, you are doing what musicians do. You might be doing it badly. You might be doing it with a tool that does most of the work. You might be making something nobody else likes. You are still a person making music, and I do not think the word "musician" needs to be guarded more tightly than that.</p>
+      <p>Some people find this definition too loose. They want "musician" to mean someone with years of practice on an instrument. I understand the instinct, because practice is real and it deserves respect. But that definition has never matched how people use the word. Plenty of musicians who shaped popular music could not read notation, and some could barely play. Plenty of producers who built whole genres worked mostly by arranging and selecting sounds made by other people or by machines. If the word had always required instrumental skill, a good share of the last century of recorded music would not have been made by musicians. The broader definition is not a lowering of standards. It describes what already happened.</p>
+
+      <h2 id="labels">Musician is not the same as guitarist</h2>
+      <p>"Musician" is a broad label because making music is a broad activity. Underneath it sit narrower labels that describe specific skills with specific tools: guitarist, drummer, bassist, pianist, vocalist, violinist, instrumentalist, composer, arranger, electronic producer, mixing engineer. These labels mean something precise. When you call yourself a guitarist, you are telling people that you can pick up a guitar and play it to a certain standard. When you call yourself a vocalist, you are telling them that the voice on the record came out of your body.</p>
+      <p>Those labels are earned by doing the work with the tool they name. If you generate a track with a model and the model renders a guitar solo, you did not play a guitar solo. If the model sings, you are not the vocalist. If the model writes and voices a string arrangement, you are not a string arranger. You can still be the person who directed the work, picked the result, wrote the lyrics, shaped the structure and released it. Those are real contributions. They are just not the same contributions the narrow labels describe.</p>
+      <p>I apply this to myself. On my acoustic recordings I can fairly say I played guitar and sang, because I did. On my electronic albums I can fairly say I produced the tracks, because I built them in FL Studio. On my Suno songs I write the lyrics and give the creative direction, and the model generates the arrangement and the performance. I would not describe myself as the singer on those songs, and I would not describe the instrumental parts as my playing. The song pages on this site say which method made each recording for exactly that reason.</p>
+      <p>This distinction protects two groups of people. It protects listeners, who deserve to know what they are hearing when they decide whether to care about it. It also protects the people who did put in the years with an instrument, because their labels keep their meaning. A world where anyone with a prompt can call themselves a virtuoso pianist is a world where the phrase "virtuoso pianist" stops telling you anything. Keeping the narrow labels honest is how you respect the skill without gatekeeping the activity.</p>
+      <p>There is a fair middle ground here, and most AI-assisted work lives in it. Someone who plays guitar, records a part, and uses a model to generate a drum track around it is still a guitarist on that song. Someone who sings a demo and uses a model to build an arrangement under their real voice is still the vocalist. The rule is simple to state: claim the labels for the parts you performed with your own skill, and describe the rest accurately. It takes one sentence in a liner note.</p>
+
+      <h2 id="songwriting">Who wrote the song?</h2>
+      <p>Songwriting credit is harder than performance credit, and it has always been harder. Popular culture likes the image of a single songwriter alone with a guitar, producing the melody, the chords and the words in one sitting. Some songs are made that way. Many of the most famous ones were not.</p>
+      <p>Songwriting teams that split the work are everywhere in music history. George Gershwin wrote the music and his brother Ira wrote the lyrics. Richard Rodgers wrote the melodies while Oscar Hammerstein II wrote the words. Elton John has spent decades setting Bernie Taupin's lyrics to music, often receiving the words first and composing around them without Taupin in the room. At the Brill Building, Carole King frequently wrote the music while Gerry Goffin wrote the lyrics. Burt Bacharach and Hal David worked the same way. Motown's Holland-Dozier-Holland divided composing, lyrics and production across three people. Modern pop runs on writing camps, where a track-maker builds the instrumental, a topliner writes the melody, another writer polishes the lyrics, and a producer shapes the whole thing. All of them are listed as songwriters.</p>
+      <p>In every one of those cases, the person who wrote the words did not write the music, and the team as a unit is the songwriter. Nobody says Bernie Taupin is not a songwriter because he does not compose melodies. Nobody says Elton John did not write "Your Song" because he did not write the lyrics. The credit belongs to the collaboration.</p>
+      <p>AI does not settle this. It adds another participant to an already blurry process. When I write lyrics and a model composes the melody and arrangement, the arrangement looks a lot like a lyricist working with a composer, except the composer is software. When someone writes a melody and chord progression and a model writes lyrics, it looks like the reverse. When someone types a two-line description of a mood and accepts whatever comes back, their contribution is thin, and it is hard to call them the songwriter in any meaningful sense.</p>
+      <p>I find it useful to separate two roles. The first is the song creator: the person who acted with the intent that this song should exist, made the choices that shaped it, and decided it was finished. That role is clear in nearly every AI-assisted song, because a person started the process and a person chose to release the result. The second is the songwriter in the traditional sense: the person or people who authored the melody, the harmony and the words. That role depends on what you actually contributed. If you wrote the lyrics, you wrote the lyrics. If you hummed a melody and the model built on it, you wrote a melody. If you edited a generated melody note by note in a DAW, you did compositional work.</p>
+      <p>There is no clean point where a song creator becomes a songwriter, just as there was never a clean point where a bandmate who suggested a chord change became a co-writer. The honest approach is to describe what you did. "Lyrics by me, music generated with Suno" is accurate and easy to understand. "Written by me" with no further detail, when a model wrote the music, leaves listeners with a false impression even if it is technically defensible.</p>
+
+      <h2 id="benefits">What AI is good for</h2>
+      <p>Most public discussion of AI music focuses on the worst uses: fake artists, cloned voices, streaming fraud. Those are real and I deal with them below. But the useful applications are also real, and many of them have nothing to do with replacing anyone. Here are the ones I think matter most.</p>
+
+      <h3>Experimenting with musical ideas</h3>
+      <p>Every songwriter has had the experience of hearing a song in their head that they cannot get out into the world. Maybe they want to hear a folk song as a disco track, or a ballad with a brass section, or a chorus in a different key. Before generative tools, testing those ideas meant learning new instruments, hiring players or spending hours programming parts. Many ideas never got tested at all.</p>
+      <p>A model lets you hear a rough version of an idea in minutes. That changes how you can explore. You can try ten different genres for the same lyric and discover that the song works best as something you would never have guessed. You can hear a bridge you wrote in three different arrangements and learn which one carries the emotion. Then you can take what you learned back into your own work, playing it yourself, programming it in your DAW or bringing it to a band. Used this way, the model is a sketchbook. Nobody thinks a painter's sketchbook replaces the painting.</p>
+
+      <h3>Quick demos</h3>
+      <p>Demos have always been a practical problem. A songwriter pitching a song to an artist, a band trying to show a producer what they mean, a composer trying to sell a client on a direction: all of them need something that sounds close enough to the finished product that the listener can imagine it. Demos used to require a studio, session players or a lot of home recording skill.</p>
+      <p>A generated demo is not a finished record, and it should not pretend to be one. But it can get a song's shape across faster than a voice memo with a guitar. Songwriters have used cheap demo singers and programmed backing tracks for decades. A generated demo fills the same role. The finished version, if it gets made, can still be recorded by people.</p>
+
+      <h3>Music as personal expression and therapy</h3>
+      <p>This is the benefit I think critics underrate most. A huge number of people have something they want to say in a song and no way to say it. They never had lessons. They cannot afford them now. They have a disability that makes playing an instrument hard. They are older and their hands do not cooperate. They tried to learn guitar at fourteen, gave up, and have carried songs around in their heads ever since.</p>
+      <p>For those people, a generative tool can turn a set of lyrics about a divorce, a lost parent, an illness, a child's birth or a bad year into something they can actually listen to. Hearing your own words sung back to you over music can be powerful. People already use journaling, painting and writing poems to work through hard experiences. A song made with AI can do the same job. It may never be streamed by anyone else, and that is fine. The value is in making it.</p>
+      <p>I do not think anyone loses when a grieving person makes a song for their mother's memorial with a tool. The session musician was never going to be hired for that song. The song would simply not have existed. Arguments that treat every AI-generated track as a stolen job miss these cases entirely.</p>
+
+      <h3>Sounds, samples and loops for a DAW</h3>
+      <p>Electronic producers have always built tracks from material they did not play. Sample packs, loop libraries, preset banks and drum kits are standard tools. Whole genres exist because producers took recorded sounds and rearranged them. Generative models can fill the same role: a producer can generate a vocal texture, a percussion loop, an atmospheric pad or a short melodic phrase and then chop, pitch, filter and arrange it inside a DAW like any other sample.</p>
+      <p>Generated audio is one more source of raw material, with one real advantage: you can describe what you want instead of digging through thousands of files. The producer's skill shows up in what they do with that material, which is the same place it has always shown up.</p>
+
+      <h3>Rounding out a song with stems</h3>
+      <p>Many musicians are strong on one instrument and weak on others. A guitarist with a finished song might have no drummer and no bassist. A producer might have a great beat and no vocalist for a backing part. Some tools can now generate separate stems, individual tracks for drums, bass, keys or vocals, which can be dropped into a project alongside parts you recorded yourself.</p>
+
+      <h2 id="misuse">Where it goes wrong</h2>
+      <p>None of that means anything goes. There are uses of AI music that I think are plainly wrong, and they share a feature: each one involves deception or taking something that belongs to someone else. They are not wrong because they used a model. They are wrong for the same reasons they would be wrong without one.</p>
+
+      <h3>Claiming skills you do not have</h3>
+      <p>Using a model to pass yourself off as a vocalist, guitarist, pianist, drummer or composer when you are not one is a lie. It is the same lie as lip-syncing to someone else's vocal and calling it your voice, or buying a ghost-produced track and claiming you made it. Pop music has had scandals of exactly this kind. Milli Vanilli lost their Grammy in 1990 when it came out that they had not sung on their own records. The problem then was not the technology of recorded vocals. It was the false claim.</p>
+      <p>The same standard applies now. If you post a generated song with a caption about how long you practiced the guitar solo, or film yourself miming to a generated vocal and let people believe it is you, you are deceiving your audience. That deceives listeners, and it also cheapens the work of every musician who did practice that solo.</p>
+
+      <h3>Fake people</h3>
+      <p>A related problem is inventing an artist persona and presenting it as a real human. This goes beyond using a stage name. Stage names, characters and masked performers are a long tradition, from Ziggy Stardust to Daft Punk to Gorillaz, and audiences understand the game. The line is crossed when someone builds a fake biography, fake photos and fake interviews for an AI-generated act and lets listeners believe a real band or singer exists.</p>
+      <p>In 2025 a "band" called The Velvet Sundown gathered a large Spotify audience before it came out that the music, the images and the backstory were generated. Much of the anger was about being misled, not about the music itself. People felt tricked into an emotional connection with people who did not exist. That reaction makes sense, because a big part of why people care about artists is that they believe there is a person on the other end. Faking that person exploits the most important thing in the relationship.</p>
+      <p>A virtual artist who is openly virtual is a different thing. A character with a clearly stated AI origin, presented honestly, is creative work. A fabricated human presented as real is fraud with a soundtrack.</p>
+
+      <h3>Taking other artists' songs and voices</h3>
+      <p>The third category is using other people's work and identities as raw material without permission. That includes cloning a recognizable singer's voice, generating "new" songs by a real artist, uploading someone else's copyrighted song to have a model rework it and releasing the result as your own, or prompting a model to imitate a specific artist so closely that the output trades on their name. In 2023 a track called "Heart on My Sleeve" spread widely using cloned voices that imitated Drake and The Weeknd, and the labels had it pulled from streaming platforms. Whatever you think of the song, those two singers never agreed to have their voices used.</p>
+      <p>A voice is part of a person's identity and often their livelihood. Using it without consent is not a gray area. Covers, licensed samples and authorized remixes all have legitimate paths, and skipping them because a model makes it easy is still taking something that is not yours.</p>
+      <p>My own reimagined songs on this site are rebuilt from songs I wrote. That is the line I hold for myself. I use my own material, and I say where it came from.</p>
+
+      <h3>Shame the act, not the tool</h3>
+      <p>These behaviors should be called out, discouraged and, where the law applies, prosecuted. Platforms should remove impersonations and fake artists. Communities should push back hard on people who lie about their skills or steal voices. That pressure is how norms form, and norms matter more here than any single law.</p>
+      <p>But the target should be the behavior. When every use of AI in music is treated as equally evil, the real offenders get lost among the grief-stricken parent, the bedroom producer making loops and the songwriter testing an arrangement. A blanket condemnation also makes it harder for honest users to be honest. If disclosing AI use brings the same reaction as committing fraud, people stop disclosing, and the fraud gets easier to hide. A culture that separates honest use from deceptive use gives everyone a reason to be open.</p>
+
+      <h2 id="consequences">The cost nobody planned for</h2>
+      <p>Even if every user of AI behaved perfectly, there would still be a cost, and it is not fair to pretend otherwise. Generative music will reduce paid work for many people who make music for a living, and the people most exposed are not famous artists.</p>
+      <p>Think about who earns money from music without being a household name. Session musicians who play on other people's records. Composers who write production music for stock libraries. Jingle writers who score local commercials. People who write background music for YouTube channels, podcasts, corporate videos, mobile games and training courses. Demo singers. Arrangers who produce custom tracks for weddings and events. Much of that work exists because a client needed music that sounded professional and had no way to get it except by paying someone.</p>
+      <p>I do not have a clean answer to this. I do not think it is an argument for banning the tools, any more than the job losses from recorded music were an argument for banning records. But the people who benefit from the tools, me included, should be honest that the benefits are not free. Some people are paying for them with their livelihoods. That should shape how we talk about AI music: with less triumphalism, more respect for the people affected, and support for policies like consent and compensation for training data that make the transition less brutal.</p>
+      <p>The most exposed work is music clients value for its function: background, filler, mood. Music people value because of who made it holds up better, which comes up again below.</p>
+
+      <h2 id="history">We have had this argument before</h2>
+      <p>Every major technology in music has been met with some version of the claim that it would destroy real musicianship. Some of those predictions were partly right about the economics and wrong about the art. Looking at them helps separate what is new about AI from what is a familiar reaction to change.</p>
+
+      <h3>Player pianos</h3>
+      <p>In the early twentieth century, player pianos were in millions of homes. They used perforated paper rolls to play music mechanically, with no pianist required. In 1906 John Philip Sousa published an essay called "The Menace of Mechanical Music," arguing that machines playing music would discourage people from learning instruments and would weaken amateur music making in the home. He also worried about composers not being paid when their work was copied onto rolls.</p>
+      <p>Part of his concern was legitimate. The question of composer payment for mechanical reproduction led to real changes in American copyright law in 1909, including the mechanical license that still exists today. But his larger fear, that people would stop making music, did not come true. People kept learning instruments. Machines changed which music people heard at home without ending their urge to make it.</p>
+
+      <h3>Recorded music</h3>
+      <p>Recording technology produced a much bigger shock. When sound film arrived in the late 1920s, theaters that had employed live orchestras and organists to accompany silent films let many of them go. The American Federation of Musicians ran a public campaign against "canned music," arguing that recorded sound was robbing audiences of real performance. Between 1942 and 1944 the union led a recording ban, refusing to make commercial records because recorded music was replacing live work on radio and in jukeboxes.</p>
+      <p>The musicians who lost theater jobs were genuinely hurt, and the union's concerns about payment were reasonable. But recorded music also created whole careers, industries and art forms that could not exist without it. Recorded music made the job of a theater pianist rarer and made the job of a recording artist possible.</p>
+
+      <h3>Drum machines and turntables</h3>
+      <p>When drum machines like the Roland TR-808 and the Linn LM-1 spread in the early 1980s, many drummers saw them as a direct threat to studio work, and some of that work did disappear. The British Musicians' Union debated restricting drum machines and synthesizers in sessions because they were replacing players. Critics called machine-made beats cold, lifeless and fake.</p>
+      <p>Turntablism and hip-hop production drew a similar reaction. DJs who built music from existing records were told they were not musicians, that they were just playing other people's songs. Sampling raised real legal questions, and a 1991 court case over Biz Markie's use of a Gilbert O'Sullivan song changed how samples had to be cleared. But the core artistic claim, that a turntable or a sampler could not be a real instrument, has not aged well. The 808 became one of the most celebrated sounds in popular music. DJs and producers built entire genres. Today hardly anyone would say the person who built a classic hip-hop beat from samples was not making music.</p>
+      <p>The sampling story matters here for another reason. The artistic legitimacy of sampling and the need for consent from the people being sampled were both true at once. The industry eventually built a clearance system that let sampling continue while paying the original artists. AI music needs the same pairing: accepting the new tool while insisting on consent and payment for the people whose work and voices it draws on.</p>
+
+      <h3>DAWs and digital editing</h3>
+      <p>Digital audio workstations brought another round. As Pro Tools and similar software took over studios in the 1990s and 2000s, critics complained that editing and quantizing made musicians lazy, that performances were being assembled from fragments rather than played, and that pitch correction meant anyone could sound like a singer. Auto-Tune became a symbol of this. Some artists publicly campaigned against it, and many listeners treated heavy pitch correction as a sign that the singer could not really sing.</p>
+      <p>Today, a teenager with a laptop and a free DAW can make a record that would have required a professional studio a generation ago. Bedroom producers have made hit songs. The DAW did make some old skills less necessary, like splicing tape, and it did let people with less traditional training make polished music. It also opened the door to an enormous wave of creativity. Pitch correction became an artistic effect in its own right, used on purpose by artists who could sing perfectly well without it.</p>
+
+      <h3>What the pattern tells us</h3>
+      <p>The pattern across these cases is consistent. Each new technology hurt some working musicians in the short run, especially those whose work was mostly functional. Each one also produced complaints that the new music was not real music, and those complaints mostly faded as audiences and artists absorbed the tool. The legitimate concerns, about payment and consent, were the ones that led to lasting changes in law and practice. The concerns about authenticity mostly turned out to be about unfamiliarity.</p>
+
+      <h2 id="fans">What fans are actually buying</h2>
+      <p>To think clearly about where AI fits in the music business, you have to be honest about what people pay for when they support an artist. It is often not just the audio.</p>
+      <p>Think about the artists you care most about. You probably care about the songs, but you also care about the person. You know something about their story. You trust what they are saying because you believe they mean it. You connect what they sing about to your own life, and part of what makes it meaningful is knowing that another human felt something similar. When an artist you love releases an album, you are buying their next chapter, not just a set of sounds.</p>
+      <p>Fans also buy into each other. Fan communities are some of the most durable social groups around. People meet friends at shows, in forums, in group chats and fan accounts. Deadheads followed the Grateful Dead across the country for decades, and many of them would tell you the community was as important as the music. Plenty of fans attend concerts as much to see each other as to see the band.</p>
+      <p>That has a direct consequence for anyone hoping to make a living from music. Whether or not AI is involved, if you are not building a real connection with listeners and a community among them, it will be very hard to sustain a career. Streaming pays tiny amounts per play. Most working musicians earn far more from live shows, merchandise, direct fan support and licensing than from streams. All of those depend on people caring about you specifically.</p>
+      <p>This is why I think the fear that AI songs will simply replace human artists is overstated for artists who have built communities and accurate for music that is purely functional. A playlist of generated background music can replace a stock library. It cannot replace the relationship a fan has with an artist they have followed for ten years. That relationship depends on a person, and a model is not a person.</p>
+
+      <h2 id="disclosure">Be upfront about the method</h2>
+      <p>If connection and trust are the real foundation of an artist's career, then honesty about method is not just an ethical nicety. It is good strategy. Trust built on a false impression collapses the moment the truth comes out, and with AI, it usually comes out.</p>
+      <p>That is why this site separates the work by method. The acoustic archive holds songs I played and sang. The electronic catalog holds tracks I produced in FL Studio. The generated songs, including the reimagined versions of older material, are labeled as made with Suno, with the song pages stating that I supplied the song, text and creative direction and the model generated the arrangement and performance. Anyone listening knows which kind of work they are hearing. Nobody has to guess, and nobody finds out later and feels misled.</p>
+      <p>I would like to see this become normal. Album credits already list who played what. Adding "arrangement and vocals generated with" a named tool is not a big step. Some platforms are starting to require AI disclosure, and I think that is healthy as long as the labels are neutral descriptions rather than warnings. The goal is information, not stigma.</p>
+
+      <h2 id="live">Can an AI artist play a show?</h2>
+      <p>Live performance is where the tension in AI music is most obvious. A traditional concert is built on the idea that the people on stage are making the music in front of you. If the music on the record was generated, what exactly happens on stage?</p>
+      <p>I think there is an honest answer, and it already exists in another part of culture. Consider the audience participation screenings of <em>The Rocky Horror Picture Show</em>. Since the 1970s, fans have gathered at midnight showings to sing along, shout callbacks, dress up and act out scenes in front of the screen. Nobody pretends the cast is in the room. Nobody feels cheated. People go for the experience of being together with other fans and singing songs they love. <em>Hedwig and the Angry Inch</em> developed a similar culture of sing-along screenings and devoted fan gatherings.</p>
+      <p>An AI artist with a real following could do something like that. Picture an event built around the songs, with the music played openly as recordings, lyrics on screens, a host, visuals, and a room full of people who came to sing together. It would not be marketed as a traditional concert, because it is not one. It would be a sing-along experience, a community gathering built around shared songs. The creator could be there talking about how the songs were made, what they mean, and what the community means to them.</p>
+      <p>The point of a live music event has always been partly about the people in the room with each other. If a set of songs means something to a group of people, giving them a place to share that is worthwhile, and you do not need to pretend you are doing something you are not. The experience and the connection are real even if the vocalist is a model, as long as everyone knows it.</p>
+
+      <h2 id="for-yourself">Making music for yourself</h2>
+      <p>Much of this essay is about careers, audiences and economics. But most people who make music, with or without AI, are not trying to build a career. They are making music because they enjoy it.</p>
+      <p>If that is you, you can ignore most of the strategic advice above. You do not need a community. You do not need a fan base. You do not need to think about scale. Make music however you like making it. Use a guitar, a DAW, a model, or all three. Make songs for your family, for a friend's birthday, for a hard week, or for nobody. The only conditions are the same ethical ones that apply to everyone: do not lie about what you did, and do not take what belongs to someone else.</p>
+      <p>You should accept that there may be limits to how far your music travels if you are not building connections with listeners. That is true of nearly all music. Most songs ever written have been heard by a few dozen people. That has never made them worthless. If you enjoy making them, and enjoy them yourself, that is reason enough to keep going.</p>
+
+      <h2 id="personalization">Many more voices, each one quieter</h2>
+      <p>To understand where AI music fits, it helps to step back from music and look at a bigger trend. The production of art and culture has been getting more personal and more widely distributed for a long time, and AI is accelerating a process that was already underway.</p>
+      <p>Look at physical goods. Print-on-demand and drop shipping let anyone design and sell a shirt, a mug, a poster or a book without inventory, and let customers order a calendar of their dog or a shirt with a family joke on it. Personalized products used to be luxuries. Now they are ordinary.</p>
+      <p>Look at media. The internet removed most of the old gatekeepers between artists and audiences. Before it, getting heard as a musician usually meant getting past a record label, a radio programmer or a club booker. Now anyone can upload a song and anyone in the world can find it. Listeners can follow a bedroom artist in another country as easily as a superstar. The result has been an explosion of music and a fragmentation of attention. There are more artists making a living than in the old system, but fewer universal stars that everyone knows.</p>
+      <p>AI pushes the personalization part much further. It is now practical to make a song about your own specific life, for your own specific audience, even if that audience is one person. That means far more voices making far more music. It also means each individual voice reaches a smaller share of the total audience.</p>
+      <p>There is a political analogy that helps me think about this. When the vote is extended to more people, the influence of each person who already had the vote shrinks. A voter in a small, exclusive electorate has much more individual power than a voter in a large, inclusive one. Expanding the franchise was right, but it did reduce the relative influence of the people who had been voting before. Some of those people felt that as a loss, and in a narrow sense it was one.</p>
+      <p>Creative fields are going through something similar. For a long time, being a professional musician, artist or writer meant joining a fairly small class of people who had the skill, connections and resources to get their work in front of the public. Many people worked very hard to enter that class, practicing for years in the hope of a career that was partly defined by how few people could have it. When tools make it possible for far more people to create and publish, the distinction between that class and everyone else shrinks. For people who invested heavily in reaching it, seeing it diluted is discouraging, and I understand why. Some of the anger at AI in art comes from exactly that feeling.</p>
+      <p>I do not think the answer is to dismiss that feeling. It is reasonable to grieve a world where your hard-won skill set you apart in ways that it no longer will. But I also do not think the answer is to keep tools out of people's hands so the class stays exclusive. More people being able to express themselves through music is, on balance, a good thing, just as more people having a vote is a good thing. The trade is real: more voices, each one a bit quieter. I would take that trade.</p>
+
+      <h2 id="bottom-line">The bottom line</h2>
+      <p>Here is where I come down.</p>
+      <p>AI is a tool for making sound. Anyone who uses a tool with the intent of making music is acting as a musician, and whether the result is music is up to listeners. The general label is open to everyone. The specific labels, guitarist, drummer, vocalist, instrumentalist, composer, producer, belong to the people who have the skills they describe, and you should not claim them for work a model did.</p>
+      <p>Songwriting credit has always been shared, so say what you wrote and what the tool generated. The tools have real benefits for experimenting, demos, personal expression, samples and stems. Some uses are wrong: posing as a performer you are not, inventing fake humans to sell generated music, and taking other artists' voices and songs without consent. Call those out every time, and remember that condemning every use of AI equally makes the real abuses harder to stop. The economic costs are real too, and those of us who use the tools should say so plainly.</p>
+      <p>The history of music technology suggests that complaints about authenticity fade while concerns about payment and consent are the ones that last. The business of being an artist still depends on connection and community, and that has not changed. If you want to build a career, build relationships, and be upfront about how you make your music. If you just want to make songs, make them.</p>
+      <p>And if you love music and want more of it in the world, keep making it by any means necessary. Pick up a guitar, open a DAW, write a prompt, or do all three. Just do not be a jerk about it. Do not steal other artists' songs or voices, and do not pretend to be something you are not.</p>
+
+      <aside class="essay__related">
+        <p class="eyebrow">Related reading</p>
+        <p>I made a related argument about creative access, artistic skill and working artists in <a href={aiMusicPerspective.url}>{aiMusicPerspective.title}</a> on Substack.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href={aiMusicPerspective.url}>Read it on Substack ↗</a>
+          <a class="btn" href="/suno/">Hear the generated songs</a>
+          <a class="btn" href="/stories/revisiting-songs-with-suno/">How I revisit older songs</a>
+        </div>
+      </aside>
+    </div>
+  </article>
+</Base>
+
+<style>
+  .essay h3 { margin: 1.8rem 0 0.6rem; font-size: 1.2rem; }
+  .essay__toc { margin: 2rem 0 2.5rem; padding: 1.2rem 1.4rem; background: var(--night-800); border: 1px solid var(--rule); border-left: 3px solid var(--era); border-radius: var(--radius); }
+  .essay__toc ol { margin: 0; padding-left: 1.3rem; columns: 2 16rem; column-gap: 2rem; }
+  .essay__toc li { margin: 0.2rem 0; break-inside: avoid; }
+  .essay h2 { scroll-margin-top: 5rem; }
+  .essay__related { margin-top: 3.5rem; padding-top: 2rem; border-top: 1px solid var(--rule); }
+</style>

@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { publicCatalog } from '../data/catalog-model';
-import { aiMusicPerspective } from '../data/editorial';
+import { aiMusicPerspective, ethicsOfAiMusic } from '../data/editorial';
 
 export const GET: APIRoute = () => {
   const recent = publicCatalog.songs.filter((song) => song.createdAt).slice().sort((a, b) => Date.parse(b.createdAt!) - Date.parse(a.createdAt!)).slice(0, 12);
@@ -29,6 +29,7 @@ ${publicCatalog.suno.featuredReimaginingAlbums.map((album) => `- [${album.title}
 - [Suno albums](${publicCatalog.site}/suno/)
 - [Suno Prompting Field Guide](${publicCatalog.site}/suno-prompting-guide/)
 - [Music Theory for Songwriters and Producers](${publicCatalog.site}/music-theory/)
+- [${ethicsOfAiMusic.title}](${publicCatalog.site}${ethicsOfAiMusic.path})
 - [${aiMusicPerspective.title}](${aiMusicPerspective.url})
 - [WebMCP guide](${publicCatalog.site}/webmcp/)
 

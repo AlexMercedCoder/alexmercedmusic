@@ -22,6 +22,7 @@ if (shallow) {
 const pages = {
   '/about/': ['src/pages/about.astro'],
   '/stories/': ['src/pages/stories/index.astro'],
+  '/ethics-of-ai-music/': ['src/pages/ethics-of-ai-music.astro'],
   '/suno-prompting-guide/': ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts', 'src/components/SunoPromptWorkbench.astro'],
   '/music-theory/': ['src/pages/music-theory/index.astro', 'src/data/music-theory-guide.ts', 'src/components/MusicTheoryWorkbench.astro'],
 };

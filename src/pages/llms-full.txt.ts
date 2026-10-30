@@ -1,6 +1,6 @@
 import type { APIRoute } from 'astro';
 import { publicCatalog } from '../data/catalog-model';
-import { aiMusicPerspective } from '../data/editorial';
+import { aiMusicPerspective, ethicsOfAiMusic } from '../data/editorial';
 
 export const GET: APIRoute = () => {
   const body = `# Alex Merced Music: full catalog guide
@@ -18,6 +18,11 @@ ${Object.entries(publicCatalog.counts).map(([name, count]) => `- ${name}: ${coun
 - URL: ${aiMusicPerspective.url}
 - Published: ${aiMusicPerspective.publishedAt}
 - Summary: ${aiMusicPerspective.description}
+
+- Essay: ${ethicsOfAiMusic.title}
+- URL: ${publicCatalog.site}${ethicsOfAiMusic.path}
+- Published: ${ethicsOfAiMusic.publishedAt}
+- Summary: ${ethicsOfAiMusic.description}
 
 ## Learning guides
 
