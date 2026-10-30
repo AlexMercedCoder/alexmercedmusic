@@ -269,9 +269,23 @@ const jsonLd = [
       </div>
     </div>
   </section>
+
+  <section class="section section--tight closing-note" aria-labelledby="closing-note-title">
+    <div class="shell">
+      <p class="eyebrow">One last thought</p>
+      <h2 id="closing-note-title">Keep your love of music</h2>
+      <p>The debates about AI and music matter, but do not get so lost in them that your love of music fades. In a world that turns hobbies into side hustles, music can still be something you make and enjoy simply because you love it.</p>
+      <a class="btn" href="https://www.youtube.com/watch?v=bKih8QFcEb4">Watch the “Side Hustle Hobby” music video</a>
+    </div>
+  </section>
 </Base>
 
 <style>
+  .closing-note { background: var(--night-800); }
+  .closing-note .shell { max-width: 46rem; }
+  .closing-note h2 { margin-bottom: 1rem; }
+  .closing-note p:not(.eyebrow) { color: var(--ink-soft); font-size: clamp(1.05rem, 1.7vw, 1.25rem); }
+  .closing-note .btn { margin-top: .5rem; }
   .video-thumb{width:100%;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);border-radius:var(--radius)}.video-thumb--short{aspect-ratio:9/16;max-height:28rem}
   .streaming-links{margin-top:1.6rem;padding-top:1.2rem;border-top:1px solid var(--rule)}
   .streaming-links>p{margin:0 0 .65rem;font-family:var(--mono);font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}

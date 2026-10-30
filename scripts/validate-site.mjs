@@ -308,6 +308,9 @@ assert.ok(catalog.platforms.some((platform) => platform.label === 'X' && platfor
 assert.ok(read('dist/index.html').includes(xUrl), 'The home page must link to Alex Merced Music on X.');
 assert.ok(read('dist/listen/index.html').includes(xUrl), 'The platform directory must link to Alex Merced Music on X.');
 const homePage = read('dist/index.html');
+assert.ok(homePage.includes('id="closing-note-title"') && homePage.includes('your love of music fades'), 'The homepage is missing its closing music statement.');
+assert.ok(homePage.includes('href="https://www.youtube.com/watch?v=bKih8QFcEb4"'), 'The closing statement must link to the Side Hustle Hobby music video.');
+assert.ok(homePage.indexOf('id="closing-note-title"') > homePage.indexOf('Where to listen'), 'The closing statement must appear at the bottom of the homepage.');
 assert.ok(homePage.includes('href="https://www.youtube.com/@alexmercedmusic" aria-label="Follow Alex Merced on YouTube Profile"'), 'The home page must show a YouTube Profile button.');
 assert.ok(homePage.includes('href="https://www.instagram.com/alexmercedmusic" aria-label="Follow Alex Merced on Instagram"'), 'The home page must show an Instagram button.');
 assert.ok(homePage.includes('platform-mark--youtubeprofile') && homePage.includes('platform-mark--instagram'), 'The new social buttons must include icons.');
