@@ -36,6 +36,19 @@ const jsonLd = [
     isPartOf: { '@id': 'https://alexmercedmusic.com/#website' },
     about: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
   },
+  {
+    '@type': 'VideoObject',
+    '@id': 'https://alexmercedmusic.com/#site-tour-video',
+    name: 'A tour of AlexMercedMusic.com, with a megamix',
+    description: 'A six-minute tour of the acoustic archive, the electronic catalogue, the Suno songs, originals beside their reimaginings, the music theory guide, the Suno prompting guide and the essay on the ethics of AI music, set to a megamix of 47 songs.',
+    thumbnailUrl: 'https://alexmercedmusic.com/media/alexmercedmusic-tour-megamix-poster.jpg',
+    contentUrl: 'https://alexmercedmusic.com/media/alexmercedmusic-tour-megamix.mp4',
+    uploadDate: '2026-10-31',
+    duration: 'PT6M',
+    inLanguage: 'en',
+    isPartOf: { '@id': 'https://alexmercedmusic.com/#homepage' },
+    creator: { '@id': 'https://alexmercedmusic.com/#musicgroup' },
+  },
 ];
 ---
 
@@ -99,6 +112,23 @@ const jsonLd = [
         <div data-era="electronic"><b>{videos.length}</b><span>YouTube uploads</span></div>
         <div data-era="all"><b>20</b><span>Years of it</span></div>
       </div>
+    </div>
+  </section>
+
+  <section class="section section--tight site-tour" id="tour" aria-labelledby="site-tour-title">
+    <div class="shell">
+      <div class="section__head">
+        <p class="eyebrow">Start here</p>
+        <h2 id="site-tour-title">Take the six-minute tour</h2>
+        <p>A quick walk through everything on the site, from the acoustic archive to the essay on AI and music, set to a megamix of 47 songs. Halfway through, five originals play beside their reimaginings.</p>
+      </div>
+      <figure class="site-tour__frame">
+        <video controls preload="none" playsinline width="1920" height="1080" poster="/media/alexmercedmusic-tour-megamix-poster.jpg" aria-describedby="site-tour-caption">
+          <source src="/media/alexmercedmusic-tour-megamix.mp4" type="video/mp4" />
+          <a href="/media/alexmercedmusic-tour-megamix.mp4">Download the tour video (MP4)</a>
+        </video>
+        <figcaption id="site-tour-caption">Acoustic, electronic, Suno, reimagined, music theory, the Suno prompting guide and the ethics of AI music.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -281,6 +311,9 @@ const jsonLd = [
 </Base>
 
 <style>
+  .site-tour__frame { margin: 0; }
+  .site-tour__frame video { display: block; width: 100%; height: auto; aspect-ratio: 16 / 9; background: var(--night-800); border: 1px solid var(--rule); border-radius: var(--radius); }
+  .site-tour__frame figcaption { margin-top: .7rem; font-family: var(--mono); font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
   .closing-note { background: var(--night-800); }
   .closing-note .shell { max-width: 46rem; }
   .closing-note h2 { margin-bottom: 1rem; }
