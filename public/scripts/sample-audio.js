@@ -10,6 +10,20 @@ export const PPQ = 480;
 
 let tonePromise;
 let boundContext;
+let workerBlocked = false;
+
+// Tone drives its clock (the Transport and every scheduled note release) from a
+// blob: Web Worker. If a Content Security Policy blocks that worker, nothing
+// throws: the clock just never ticks, so playback is silent and notes hang.
+// Switch to the setTimeout clock as soon as the browser reports the block.
+const useTimeoutClock = () => {
+  try { if (window.Tone && window.Tone.getContext().clockSource !== 'timeout') window.Tone.getContext().clockSource = 'timeout'; } catch {}
+};
+globalThis.document?.addEventListener('securitypolicyviolation', (event) => {
+  if (!String(event.blockedURI).startsWith('blob') || !/worker|script/.test(event.effectiveDirective)) return;
+  workerBlocked = true;
+  useTimeoutClock();
+});
 
 // Tone creates a context of its own when its script loads, so the page creates
 // and resumes the real AudioContext inside the click handler, then hands it to
@@ -28,6 +42,7 @@ export const loadTone = (audioContext) => {
       Tone.setContext(audioContext, !boundContext);
       boundContext = audioContext;
     }
+    if (workerBlocked) useTimeoutClock();
     return Tone;
   });
 };

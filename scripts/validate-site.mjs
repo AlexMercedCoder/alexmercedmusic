@@ -446,17 +446,21 @@ for (const path of ['dist/suno/index.html', 'dist/stories/index.html', 'dist/sto
   assert.ok(read(path).includes(aiPerspectiveUrl), `${path} is missing Alex's AI and music perspective article.`);
 }
 
-for (const [slug, marker, actions] of [['melody-sample-maker', 'data-melody-maker', ['start', 'play', 'stop', 'wav', 'midi']], ['drum-sample-maker', 'data-drum-maker', ['start', 'play', 'stop', 'wav']]]) {
+for (const [slug, marker, actions] of [['melody-sample-maker', 'data-melody-maker', ['start', 'play', 'stop', 'wav', 'midi', 'save', 'load', 'remove', 'backup']], ['drum-sample-maker', 'data-drum-maker', ['start', 'play', 'stop', 'wav', 'save', 'load', 'remove', 'backup']]]) {
   const html = read(`dist/${slug}/index.html`);
   assert.ok(html.includes('TechArticle') && html.includes('FAQPage') && html.includes('BreadcrumbList') && html.includes('WebApplication'), `/${slug}/ is missing structured data.`);
   assert.ok(html.includes(marker) && html.includes('class="breadcrumbs'), `/${slug}/ is missing its tool or breadcrumbs.`);
   for (const action of actions) assert.ok(html.includes(`-action="${action}"`), `/${slug}/ is missing its ${action} control.`);
+  // A second Play button sits beside the piano roll or step grid, so the page needs two.
+  assert.ok((html.match(/-action="play"/g) ?? []).length >= 2, `/${slug}/ needs a Play button next to its editor.`);
   assert.ok(!/https?:\/\/[^"' ]*tone/i.test(html), `/${slug}/ must not load Tone.js from a CDN.`);
   assert.ok(homepage.includes(`href="/${slug}/"`), `/${slug}/ is missing from the navigation.`);
   assert.ok(sitemap.includes(`<loc>https://alexmercedmusic.com/${slug}/</loc>`), `/${slug}/ is missing from the sitemap.`);
   assert.ok(read('dist/llms.txt').includes(`/${slug}/`) && read('dist/llms-full.txt').includes(`/${slug}/`), `/${slug}/ is missing from llms.txt.`);
 }
 assert.equal((read('dist/drum-sample-maker/index.html').match(/<button[^>]+class="step/g) ?? []).length, 256, 'The drum sequencer must render 4 rows of 64 steps.');
+assert.ok(/data-drum-bars[^>]*>(?:<option[^>]*>[^<]*<\/option>){4}<\/select>/.test(read('dist/drum-sample-maker/index.html')), 'The drum sequencer needs a 1 to 4 bar length control.');
+assert.ok(read('public/scripts/sample-audio.js').includes("clockSource = 'timeout'"), 'sample-audio.js must fall back to the timeout clock when a CSP blocks Tone worker clock.');
 for (const path of ['src/pages/melody-sample-maker/index.astro', 'src/pages/drum-sample-maker/index.astro', 'src/components/MelodySampleMaker.astro', 'src/components/DrumSampleMaker.astro', 'src/data/sample-makers.ts', 'public/scripts/sample-audio.js']) {
   const source = read(path);
   assert.ok(!source.includes('—'), `${path} contains an em dash.`);
@@ -642,6 +646,9 @@ assert.equal(sampleTools.tools.melody.url, `${catalog.site}/melody-sample-maker/
 const drumLength = JSON.parse(await getTool('get_sample_maker_tools').execute({ tool: 'drum', bpm: 120, repeats: 10 }));
 assert.equal(drumLength.wavLength.seconds, 80);
 assert.equal(drumLength.wavLength.frames, 80 * 44100);
+const shortDrum = JSON.parse(await getTool('get_sample_maker_tools').execute({ tool: 'drum', bpm: 90, bars: 2, repeats: 3 }));
+assert.equal(shortDrum.wavLength.bars, 6);
+assert.equal(shortDrum.wavLength.frames, Math.round(((6 * 4 * 60) / 90) * 44100));
 const melodyLength = JSON.parse(await getTool('get_sample_maker_tools').execute({ tool: 'melody', bpm: 90, bars: 160 }));
 assert.equal(melodyLength.wavLength.frames, Math.round(((160 * 4 * 60) / 90) * 44100));
 const perspective = JSON.parse(await getTool('get_ai_music_perspective').execute({}));

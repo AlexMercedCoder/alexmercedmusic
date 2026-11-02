@@ -18,6 +18,26 @@ const STEPS = 64;
     <span class="tool-status" data-drum-status aria-live="polite">Audio is off. Press Start audio or Play to begin.</span>
   </div>
 
+  <section class="library" aria-labelledby="drum-library-title">
+    <div class="library-head">
+      <h2 id="drum-library-title">My loops</h2>
+      <p>Saved in this browser only. Each save keeps the pattern, tempo, loop length and every kit setting.</p>
+    </div>
+    <div class="library-row">
+      <label class="inline grow">Name<input data-drum-name type="text" maxlength="60" placeholder="Untitled loop" autocomplete="off" /></label>
+      <button type="button" class="tool-primary" data-drum-action="save">Save</button>
+      <button type="button" data-drum-action="new">New loop</button>
+      <label class="inline grow">Saved loops<select data-drum-library><option value="">No saved loops yet</option></select></label>
+      <button type="button" data-drum-action="load">Load</button>
+      <button type="button" data-drum-action="remove">Delete</button>
+    </div>
+    <div class="library-row">
+      <button type="button" data-drum-action="backup">Download library backup</button>
+      <label class="file-button">Import backup<input type="file" accept="application/json,.json" data-drum-import /></label>
+      <p class="library-status" data-drum-library-status aria-live="polite"></p>
+    </div>
+  </section>
+
   <section class="rack" aria-labelledby="drum-kit-title">
     <div class="rack-head"><h2 id="drum-kit-title">Synthesized kit</h2><p>Every sound is generated in your browser, so the kit is free of sample licenses.</p></div>
     <div class="kit-grid">
@@ -36,16 +56,21 @@ const STEPS = 64;
   </section>
 
   <section class="sequencer" aria-labelledby="drum-seq-title">
-    <div class="rack-head"><h2 id="drum-seq-title">4-bar step sequencer</h2><p>16 steps per bar. Each click cycles a step through off, on and accent.</p></div>
+    <div class="rack-head"><h2 id="drum-seq-title">Step sequencer</h2><p>1 to 4 bars, 16 steps per bar. Each click cycles a step through off, on and accent.</p></div>
+    <div class="seq-transport">
+      <button type="button" class="tool-primary" data-drum-action="play">Play</button>
+      <button type="button" data-drum-action="stop" disabled>Stop</button>
+      <label class="inline">Loop length<select data-drum-bars>{[1, 2, 3, 4].map((bars) => <option value={bars} selected={bars === 4}>{bars} {bars === 1 ? 'bar' : 'bars'}</option>)}</select></label>
+    </div>
     <div class="seq-scroll">
-      <div class="seq" style={`--steps:${STEPS}`}>
+      <div class="seq" style="--bars:4" data-seq>
         <div class="seq-label seq-label--head" aria-hidden="true"></div>
-        {Array.from({ length: 4 }, (_, bar) => <div class="seq-bar" aria-hidden="true">Bar {bar + 1}</div>)}
+        {Array.from({ length: 4 }, (_, bar) => <div class="seq-bar" data-bar={bar} aria-hidden="true">Bar {bar + 1}</div>)}
         {instruments.map((instrument) => (
           <>
             <div class="seq-label" id={`seq-${instrument.id}`}>{instrument.label}</div>
             {Array.from({ length: 4 }, (_, bar) => (
-              <div class="seq-steps" role="group" aria-label={`${instrument.label}, bar ${bar + 1}`}>
+              <div class="seq-steps" data-bar={bar} role="group" aria-label={`${instrument.label}, bar ${bar + 1}`}>
                 {Array.from({ length: 16 }, (_, step) => (
                   <button type="button" class:list={['step', step % 4 === 0 && 'step--beat']} data-row={instrument.id} data-step={bar * 16 + step} aria-pressed="false" aria-label={`${instrument.label}, bar ${bar + 1}, step ${step + 1}`}></button>
                 ))}
@@ -59,7 +84,7 @@ const STEPS = 64;
   </section>
 
   <section class="export" aria-labelledby="drum-export-title">
-    <div><h2 id="drum-export-title">Export</h2><p>Render the 4-bar loop up to ten times in a row as one 44.1 kHz, 16-bit stereo WAV.</p></div>
+    <div><h2 id="drum-export-title">Export</h2><p>Render the loop up to ten times in a row as one 44.1 kHz, 16-bit stereo WAV.</p></div>
     <div class="export-row">
       <label class="inline">Repeat<select data-drum-repeats>{Array.from({ length: 10 }, (_, index) => <option value={index + 1} selected={index === 3}>{index + 1}x ({(index + 1) * 4} bars)</option>)}</select></label>
       <label class="inline">Tail<select data-drum-tail><option value="wrap" selected>Wrap tail to start (clean loop)</option><option value="cut">Cut at the last bar</option><option value="keep">Keep the decay tail</option></select></label>
@@ -86,7 +111,9 @@ const STEPS = 64;
     const pattern = Object.fromEntries(ROWS.map((row) => [row, new Array(STEPS).fill(0)]));
     const buttons = Object.fromEntries(ROWS.map((row) => [row, [...root.querySelectorAll(`.step[data-row="${row}"]`)]]));
     let bpm = 120;
+    let bars = 4;
     let playing = false;
+    const loopSteps = () => bars * 16;
 
     const readKit = () => Object.fromEntries(ROWS.map((row) => {
       const field = root.querySelector(`[data-instrument="${row}"]`);
@@ -174,6 +201,10 @@ const STEPS = 64;
       if (step >= 0) ROWS.forEach((row) => buttons[row][step].classList.add('is-now'));
       root.dataset.playStep = String(step);
     };
+    const setTransportButtons = (isPlaying) => {
+      root.querySelectorAll('[data-drum-action="play"]').forEach((button) => { button.disabled = isPlaying; });
+      root.querySelectorAll('[data-drum-action="stop"]').forEach((button) => { button.disabled = !isPlaying; });
+    };
     const play = async () => {
       if (playing) return;
       await engine();
@@ -185,16 +216,15 @@ const STEPS = 64;
       let step = 0;
       const draw = Tone.getDraw();
       loopId = transport.scheduleRepeat((time) => {
-        const current = step;
+        const current = step % loopSteps();
         for (const row of ROWS) if (pattern[row][current]) liveKit.hit(row, time, VELOCITY[pattern[row][current]]);
         draw.schedule(() => showStep(current), time);
-        step = (step + 1) % STEPS;
+        step = (current + 1) % loopSteps();
       }, '16n');
       transport.start('+0.05');
       playing = true;
-      $('[data-drum-action="play"]').disabled = true;
-      $('[data-drum-action="stop"]').disabled = false;
-      status.textContent = `Playing 4 bars at ${bpm} BPM.`;
+      setTransportButtons(true);
+      status.textContent = `Playing ${bars} ${bars === 1 ? 'bar' : 'bars'} at ${bpm} BPM.`;
     };
     const stop = () => {
       if (!playing) return;
@@ -204,8 +234,7 @@ const STEPS = 64;
       transport.cancel();
       playing = false;
       showStep(-1);
-      $('[data-drum-action="play"]').disabled = false;
-      $('[data-drum-action="stop"]').disabled = true;
+      setTransportButtons(false);
       status.textContent = 'Stopped.';
     };
 
@@ -218,13 +247,52 @@ const STEPS = 64;
       button.dataset.level = String(value);
       button.setAttribute('aria-label', `${button.getAttribute('aria-label').replace(/(, (off|on|accent))$/, '')}, ${stateLabel[value]}`);
     };
+    // Steps beyond the loop length stay in the pattern, hidden, so shortening
+    // the loop and lengthening it again does not lose anything.
+    const showBars = () => {
+      $('[data-seq]').style.setProperty('--bars', String(bars));
+      root.querySelectorAll('.seq [data-bar]').forEach((element) => { element.hidden = Number(element.dataset.bar) >= bars; });
+      $('[data-drum-bars]').value = String(bars);
+      root.querySelectorAll('[data-drum-repeats] option').forEach((option) => { option.textContent = `${option.value}x (${Number(option.value) * bars} ${Number(option.value) * bars === 1 ? 'bar' : 'bars'})`; });
+      root.dataset.bars = String(bars);
+    };
     const describe = () => {
-      const counts = ROWS.map((row) => pattern[row].filter(Boolean).length);
+      const counts = ROWS.map((row) => pattern[row].slice(0, loopSteps()).filter(Boolean).length);
       const total = counts.reduce((sum, count) => sum + count, 0);
       root.dataset.activeSteps = String(total);
-      summary.textContent = `${total} active steps: kick ${counts[0]}, snare ${counts[1]}, hi-hat ${counts[2]}, tom ${counts[3]}.`;
+      summary.textContent = `${total} active ${total === 1 ? 'step' : 'steps'} in ${bars} ${bars === 1 ? 'bar' : 'bars'}: kick ${counts[0]}, snare ${counts[1]}, hi-hat ${counts[2]}, tom ${counts[3]}.`;
     };
-    const save = () => { try { localStorage.setItem(STORE, JSON.stringify({ bpm, pattern })); } catch {} };
+    const controlKey = (input) => `${input.closest('[data-instrument]').dataset.instrument}.${input.dataset.param}`;
+    const readControls = () => Object.fromEntries([...root.querySelectorAll('[data-param]')].map((input) => [controlKey(input), input.value]));
+    const showOutput = (input) => {
+      const unit = input.dataset.unit;
+      input.parentElement.querySelector('output').textContent = unit === '%' ? `${input.value}%` : `${input.value} ${unit}`;
+    };
+    const applyControls = (controls) => {
+      if (!controls || typeof controls !== 'object') return;
+      root.querySelectorAll('[data-param]').forEach((input) => {
+        const value = Number(controls[controlKey(input)]);
+        if (!Number.isFinite(value)) return;
+        input.value = String(value);
+        showOutput(input);
+      });
+      liveKit?.apply(readKit());
+    };
+    const snapshot = () => ({ bpm, bars, pattern: Object.fromEntries(ROWS.map((row) => [row, [...pattern[row]]])), controls: readControls() });
+    const restore = (data) => {
+      bpm = Math.max(40, Math.min(240, Math.round(Number(data.bpm)) || 120));
+      bars = [1, 2, 3, 4].includes(Number(data.bars)) ? Number(data.bars) : 4;
+      $('[data-drum-bpm]').value = String(bpm);
+      if (Tone) Tone.getTransport().bpm.value = bpm;
+      for (const row of ROWS) {
+        pattern[row].fill(0);
+        if (Array.isArray(data.pattern?.[row])) data.pattern[row].slice(0, STEPS).forEach((value, step) => { pattern[row][step] = [0, 1, 2].includes(value) ? value : 0; });
+      }
+      applyControls(data.controls);
+      showBars();
+    };
+    const nameInput = $('[data-drum-name]');
+    const save = () => { try { localStorage.setItem(STORE, JSON.stringify({ ...snapshot(), name: nameInput.value })); } catch {} };
     const refresh = () => { ROWS.forEach((row) => pattern[row].forEach((_, step) => paintStep(row, step))); describe(); save(); };
     root.querySelectorAll('.step').forEach((button) => button.addEventListener('click', () => {
       const row = button.dataset.row;
@@ -246,7 +314,8 @@ const STEPS = 64;
       for (const row of ROWS) pattern[row].fill(0);
       if (preset) {
         for (let bar = 0; bar < 4; bar += 1) for (const row of ROWS) preset[row].forEach((step) => { pattern[row][bar * 16 + step] = step === 0 && row === 'kick' ? 2 : 1; });
-        if (event.target.value !== 'four') { pattern.tom[48 + 12] = 1; pattern.tom[48 + 13] = 1; pattern.tom[48 + 14] = 2; }
+        const fill = (bars - 1) * 16;
+        if (event.target.value !== 'four') { pattern.tom[fill + 12] = 1; pattern.tom[fill + 13] = 1; pattern.tom[fill + 14] = 2; }
       }
       refresh();
       status.textContent = preset ? `Loaded the ${event.target.selectedOptions[0].textContent.toLowerCase()} pattern.` : 'Cleared every step.';
@@ -255,17 +324,100 @@ const STEPS = 64;
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
       if (saved?.pattern) {
-        bpm = Math.max(40, Math.min(240, Number(saved.bpm) || 120));
-        $('[data-drum-bpm]').value = String(bpm);
-        for (const row of ROWS) if (Array.isArray(saved.pattern[row])) saved.pattern[row].slice(0, STEPS).forEach((value, step) => { pattern[row][step] = [0, 1, 2].includes(value) ? value : 0; });
+        restore(saved);
+        if (typeof saved.name === 'string') nameInput.value = saved.name.slice(0, 60);
       }
     } catch {}
 
+    // ---- library --------------------------------------------------------
+    const LIBRARY = 'amm-drum-library';
+    const librarySelect = $('[data-drum-library]');
+    const libraryStatus = $('[data-drum-library-status]');
+    const isLoop = (item) => item && typeof item.name === 'string' && item.pattern && typeof item.pattern === 'object';
+    const readLibrary = () => {
+      try {
+        const data = JSON.parse(localStorage.getItem(LIBRARY) || '[]');
+        return Array.isArray(data) ? data.filter(isLoop) : [];
+      } catch { return []; }
+    };
+    const writeLibrary = (items) => {
+      try { localStorage.setItem(LIBRARY, JSON.stringify(items)); return true; }
+      catch { libraryStatus.textContent = 'This browser would not store the library (private mode or storage full). Download a backup instead.'; return false; }
+    };
+    const activeCount = (item) => ROWS.reduce((sum, row) => sum + (Array.isArray(item.pattern[row]) ? item.pattern[row].slice(0, (item.bars || 4) * 16).filter(Boolean).length : 0), 0);
+    const renderLibrary = (selectedId = librarySelect.value) => {
+      const items = readLibrary().sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0));
+      librarySelect.replaceChildren(...(items.length
+        ? items.map((item) => new Option(`${item.name} (${item.bars || 4} ${item.bars === 1 ? 'bar' : 'bars'}, ${item.bpm} BPM, ${new Date(item.savedAt || 0).toLocaleDateString()})`, item.id))
+        : [new Option('No saved loops yet', '')]));
+      if (items.some((item) => item.id === selectedId)) librarySelect.value = selectedId;
+      librarySelect.disabled = !items.length;
+      $('[data-drum-action="load"]').disabled = !items.length;
+      $('[data-drum-action="remove"]').disabled = !items.length;
+      root.dataset.libraryCount = String(items.length);
+    };
+    const saveToLibrary = () => {
+      const name = nameInput.value.trim().slice(0, 60) || `Loop ${new Date().toLocaleString()}`;
+      nameInput.value = name;
+      const items = readLibrary();
+      // Saving under an existing name updates that loop instead of duplicating it.
+      const existing = items.find((item) => item.name.toLowerCase() === name.toLowerCase());
+      const entry = { ...snapshot(), id: existing?.id ?? `d${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, name, savedAt: Date.now() };
+      const next = existing ? items.map((item) => (item === existing ? entry : item)) : [...items, entry];
+      if (!writeLibrary(next)) return;
+      renderLibrary(entry.id);
+      save();
+      libraryStatus.textContent = `${existing ? 'Updated' : 'Saved'} "${name}" (${activeCount(entry)} active steps).`;
+    };
+    const loadFromLibrary = () => {
+      const item = readLibrary().find((candidate) => candidate.id === librarySelect.value);
+      if (!item) return;
+      stop();
+      restore(item);
+      nameInput.value = item.name;
+      refresh();
+      libraryStatus.textContent = `Loaded "${item.name}". Save again to keep your changes.`;
+    };
+    renderLibrary();
+    nameInput.addEventListener('change', () => save());
+    nameInput.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveToLibrary(); } });
+    $('[data-drum-import]').addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      event.target.value = '';
+      if (!file) return;
+      try {
+        const data = JSON.parse(await file.text());
+        const incoming = (Array.isArray(data) ? data : data.loops ?? []).filter(isLoop);
+        if (!incoming.length) throw new Error('no loops');
+        const items = readLibrary();
+        let added = 0;
+        for (const item of incoming) {
+          // Keep the newer copy when the backup and this browser share a loop.
+          const entry = { id: item.id || `d${Date.now().toString(36)}${added}`, name: item.name.slice(0, 60), savedAt: Number(item.savedAt) || Date.now(), bpm: item.bpm, bars: item.bars, controls: item.controls, pattern: Object.fromEntries(ROWS.map((row) => [row, Array.from({ length: STEPS }, (_, step) => ([0, 1, 2].includes(item.pattern[row]?.[step]) ? item.pattern[row][step] : 0))])) };
+          const match = items.findIndex((existing) => existing.id === entry.id || existing.name.toLowerCase() === entry.name.toLowerCase());
+          if (match < 0) { items.push(entry); added += 1; }
+          else if (entry.savedAt >= (items[match].savedAt || 0)) items[match] = { ...entry, id: items[match].id };
+        }
+        if (!writeLibrary(items)) return;
+        renderLibrary();
+        libraryStatus.textContent = `Imported ${incoming.length} ${incoming.length === 1 ? 'loop' : 'loops'} (${added} new).`;
+      } catch {
+        libraryStatus.textContent = 'That file is not a Drum Sample Maker library backup.';
+      }
+    });
+    $('[data-drum-bars]').addEventListener('change', (event) => {
+      bars = Number(event.target.value);
+      showBars();
+      describe();
+      save();
+      if (playing) status.textContent = `Playing ${bars} ${bars === 1 ? 'bar' : 'bars'} at ${bpm} BPM.`;
+    });
+
     // ---- controls -------------------------------------------------------
     root.querySelectorAll('[data-param]').forEach((input) => input.addEventListener('input', () => {
-      const unit = input.dataset.unit;
-      input.parentElement.querySelector('output').textContent = unit === '%' ? `${input.value}%` : `${input.value} ${unit}`;
+      showOutput(input);
       liveKit?.apply(readKit());
+      save();
     }));
     $('[data-drum-bpm]').addEventListener('change', (event) => {
       bpm = Math.max(40, Math.min(240, Math.round(Number(event.target.value)) || 120));
@@ -278,16 +430,48 @@ const STEPS = 64;
       liveKit.hit(button.dataset.drumHit, Tone.now(), 1);
     }));
     const actions = {
+      save: saveToLibrary,
+      load: loadFromLibrary,
+      new: () => {
+        const button = $('[data-drum-action="new"]');
+        if (ROWS.some((row) => pattern[row].some(Boolean)) && button.dataset.confirm !== 'true') { button.dataset.confirm = 'true'; button.textContent = 'Click again for a blank loop'; setTimeout(() => { button.dataset.confirm = ''; button.textContent = 'New loop'; }, 3000); return; }
+        button.dataset.confirm = '';
+        button.textContent = 'New loop';
+        for (const row of ROWS) pattern[row].fill(0);
+        nameInput.value = '';
+        refresh();
+        libraryStatus.textContent = 'Started a blank loop. The kit settings are kept.';
+      },
+      remove: () => {
+        const item = readLibrary().find((candidate) => candidate.id === librarySelect.value);
+        if (!item) return;
+        const button = $('[data-drum-action="remove"]');
+        if (button.dataset.confirm !== item.id) { button.dataset.confirm = item.id; button.textContent = `Delete "${item.name.slice(0, 20)}"?`; setTimeout(() => { button.dataset.confirm = ''; button.textContent = 'Delete'; }, 3000); return; }
+        button.dataset.confirm = '';
+        button.textContent = 'Delete';
+        if (!writeLibrary(readLibrary().filter((candidate) => candidate.id !== item.id))) return;
+        renderLibrary();
+        libraryStatus.textContent = `Deleted "${item.name}".`;
+      },
+      backup: async () => {
+        const items = readLibrary();
+        if (!items.length) { libraryStatus.textContent = 'Save a loop first; the library is empty.'; return; }
+        const audio = await lib;
+        const json = JSON.stringify({ app: 'Drum Sample Maker', version: 1, exportedAt: new Date().toISOString(), loops: items });
+        audio.downloadBytes(new TextEncoder().encode(json), `drum-library-${new Date().toISOString().slice(0, 10)}.json`, 'application/json');
+        libraryStatus.textContent = `Downloaded a backup of ${items.length} ${items.length === 1 ? 'loop' : 'loops'}.`;
+      },
       start: async () => { await engine(); status.textContent = `Audio on (${audioContext.state}, ${audioContext.sampleRate} Hz).`; },
       play,
       stop,
       wav: async () => {
         const repeats = Number($('[data-drum-repeats]').value);
         const mode = $('[data-drum-tail]').value;
-        if (!ROWS.some((row) => pattern[row].some(Boolean))) { exportResult.textContent = 'Turn on some steps before rendering a WAV.'; return; }
+        if (!ROWS.some((row) => pattern[row].slice(0, loopSteps()).some(Boolean))) { exportResult.textContent = 'Turn on some steps before rendering a WAV.'; return; }
         const audio = await engine();
         const kit = readKit();
-        const seconds = audio.loopSeconds({ bpm, bars: 4, repeats });
+        const seconds = audio.loopSeconds({ bpm, bars, repeats });
+        const steps = loopSteps();
         const step = stepSeconds();
         exportResult.textContent = 'Rendering...';
         const started = performance.now();
@@ -295,16 +479,16 @@ const STEPS = 64;
           const offline = buildKit(kit);
           offline.output.toDestination();
           for (let repeat = 0; repeat < repeats; repeat += 1) {
-            for (let index = 0; index < STEPS; index += 1) {
-              for (const row of ROWS) if (pattern[row][index]) offline.hit(row, (repeat * STEPS + index) * step, VELOCITY[pattern[row][index]]);
+            for (let index = 0; index < steps; index += 1) {
+              for (const row of ROWS) if (pattern[row][index]) offline.hit(row, (repeat * steps + index) * step, VELOCITY[pattern[row][index]]);
             }
           }
         }, { seconds, tail: 1.5, mode });
         const wav = audio.encodeWavFromChannels(result.channels, result.sampleRate);
-        const name = `drum-loop-${bpm}bpm-${repeats * 4}bars.wav`;
+        const name = `drum-loop-${bpm}bpm-${repeats * bars}bars.wav`;
         audio.downloadBytes(wav, name, 'audio/wav');
-        root.dataset.lastRender = JSON.stringify({ frames: result.channels[0].length, sampleRate: result.sampleRate, peak: result.levels.peak, rms: result.levels.rms, seconds, bytes: wav.length, ms: Math.round(performance.now() - started) });
-        exportResult.textContent = `Saved ${name}: ${repeats}x the 4-bar loop, ${(result.channels[0].length / result.sampleRate).toFixed(3)} s, peak ${audio.toDbfs(result.levels.peak).toFixed(1)} dBFS.`;
+        root.dataset.lastRender = JSON.stringify({ frames: result.channels[0].length, sampleRate: result.sampleRate, peak: result.levels.peak, rms: result.levels.rms, seconds, bytes: wav.length, bars, repeats, ms: Math.round(performance.now() - started) });
+        exportResult.textContent = `Saved ${name}: ${repeats}x the ${bars}-bar loop, ${(result.channels[0].length / result.sampleRate).toFixed(3)} s, peak ${audio.toDbfs(result.levels.peak).toFixed(1)} dBFS.`;
       },
     };
     root.querySelectorAll('[data-drum-action]').forEach((button) => button.addEventListener('click', async () => {
@@ -312,6 +496,7 @@ const STEPS = 64;
       catch (error) { console.warn(error); status.textContent = `Audio error: ${error instanceof Error ? error.message : String(error)}`; }
     }));
     document.addEventListener('astro:before-swap', () => { stop(); liveKit?.dispose(); liveKit = undefined; }, { once: true });
+    showBars();
     refresh();
   })();
 </script>
@@ -332,7 +517,21 @@ const STEPS = 64;
   select, input[type="number"] { border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.5rem .55rem; font:500 .82rem/1.2 var(--sans); }
   input[type="number"] { width:5.5rem; }
   input[type="range"] { width:100%; accent-color:var(--electronic); }
-  .rack, .sequencer, .export { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .rack, .sequencer, .export, .library { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .library { display:grid; gap:.8rem; }
+  .library-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem 1rem; }
+  .library-head h2 { margin:0; font-size:1.15rem; color:var(--ink); }
+  .library-head p { margin:0; color:var(--ink-soft); font-size:.85rem; }
+  .library-row, .seq-transport { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
+  .seq-transport { margin-bottom:.8rem; }
+  .library-row .grow { flex:1 1 12rem; }
+  .library-row input[type="text"], .library-row select { width:100%; min-width:0; }
+  input[type="text"] { border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.5rem .55rem; font:500 .82rem/1.2 var(--sans); }
+  .file-button { display:inline-flex; align-items:center; border:1px solid var(--rule); border-radius:999px; background:var(--night-800); color:var(--ink); padding:.55rem .9rem; font:650 .78rem/1.1 var(--sans); cursor:pointer; }
+  .file-button:hover { border-color:var(--electronic); color:var(--electronic); }
+  .file-button:focus-within { outline:2px solid var(--electronic); outline-offset:2px; }
+  .file-button input { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; }
+  .library-status { flex:1 1 14rem; margin:0; color:var(--electronic); font:600 .74rem/1.4 var(--mono); }
   .rack-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:.4rem 1rem; margin-bottom:1rem; }
   .rack-head h2, .export h2 { margin:0; font-size:1.15rem; color:var(--ink); }
   .rack-head p { margin:0; color:var(--ink-soft); font-size:.88rem; }
@@ -341,9 +540,10 @@ const STEPS = 64;
   .osc legend { padding:0 .35rem; color:var(--electronic); font:700 .72rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
   .hint { margin:0; color:var(--ink-faint); font-size:.78rem; }
   .seq-scroll { overflow-x:auto; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }
-  .seq { display:grid; grid-template-columns:5.5rem repeat(4, max-content); gap:.4rem .7rem; padding:.8rem; min-width:max-content; }
+  .seq { display:grid; grid-template-columns:5.5rem repeat(var(--bars, 4), max-content); gap:.4rem .7rem; padding:.8rem; min-width:max-content; }
   .seq-label { position:sticky; left:0; z-index:1; display:flex; align-items:center; padding-right:.4rem; background:var(--night-900); color:var(--ink); font:700 .74rem/1 var(--mono); }
   .seq-bar { color:var(--ink-faint); font:650 .66rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+  .seq [hidden] { display:none; }
   .seq-steps { display:grid; grid-template-columns:repeat(16, 1.6rem); gap:.22rem; }
   .step { width:1.6rem; height:2.1rem; padding:0; border-radius:.3rem; background:var(--night-700); border-color:var(--rule-soft); }
   .step--beat { background:var(--night-600); }
@@ -360,8 +560,8 @@ const STEPS = 64;
   @media (max-width:560px) {
     .kit-grid { grid-template-columns:1fr; }
     .tool-status { text-align:left; flex-basis:100%; }
-    .rack, .sequencer, .export, .tool-bar { padding:1rem; }
-    .seq { grid-template-columns:4rem repeat(4, max-content); }
+    .rack, .sequencer, .export, .library, .tool-bar { padding:1rem; }
+    .seq { grid-template-columns:4rem repeat(var(--bars, 4), max-content); }
     .seq-steps { grid-template-columns:repeat(16, 1.9rem); }
     .step { width:1.9rem; height:2.4rem; }
   }

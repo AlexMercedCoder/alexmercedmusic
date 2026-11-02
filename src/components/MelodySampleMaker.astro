@@ -19,6 +19,26 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
     <span class="tool-status" data-melody-status aria-live="polite">Audio is off. Press Start audio, Play or a key to begin.</span>
   </div>
 
+  <section class="library" aria-labelledby="melody-library-title">
+    <div class="library-head">
+      <h2 id="melody-library-title">My melodies</h2>
+      <p>Saved in this browser only. Each save keeps the notes, tempo, meter, length and the full 3xOsc voice.</p>
+    </div>
+    <div class="library-row">
+      <label class="inline grow">Name<input data-melody-name type="text" maxlength="60" placeholder="Untitled melody" autocomplete="off" /></label>
+      <button type="button" class="tool-primary" data-melody-action="save">Save</button>
+      <button type="button" data-melody-action="new">New melody</button>
+      <label class="inline grow">Saved melodies<select data-melody-library><option value="">No saved melodies yet</option></select></label>
+      <button type="button" data-melody-action="load">Load</button>
+      <button type="button" data-melody-action="remove">Delete</button>
+    </div>
+    <div class="library-row">
+      <button type="button" data-melody-action="backup">Download library backup</button>
+      <label class="file-button">Import backup<input type="file" accept="application/json,.json" data-melody-import /></label>
+      <p class="library-status" data-melody-library-status aria-live="polite"></p>
+    </div>
+  </section>
+
   <section class="rack" aria-labelledby="melody-voice-title">
     <div class="rack-head"><h2 id="melody-voice-title">3xOsc voice</h2><button type="button" data-melody-action="audition">Audition C4</button></div>
     <div class="osc-grid">
@@ -49,6 +69,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
     <div class="rack-head">
       <h2 id="melody-roll-title">Piano roll</h2>
       <div class="roll-tools">
+        <div class="roll-transport" role="group" aria-label="Playback"><button type="button" class="tool-primary" data-melody-action="play">Play</button><button type="button" data-melody-action="stop" disabled>Stop</button></div>
         <div class="seg" role="group" aria-label="Edit tool"><button type="button" aria-pressed="true" data-melody-tool="draw">Draw</button><button type="button" aria-pressed="false" data-melody-tool="erase">Erase</button><button type="button" aria-pressed="false" data-melody-tool="pan">Scroll</button></div>
         <label class="inline">Snap<select data-melody-snap>{snaps.map(([value, label]) => <option value={value} selected={value === '240'}>{label}</option>)}</select></label>
         <label class="inline">Zoom<input data-melody-zoom type="range" min="6" max="160" value="48" aria-label="Horizontal zoom" /></label>
@@ -211,6 +232,10 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
       lastAudition = performance.now();
       liveVoice.trigger(pitch, 0.35, Tone.now(), 0.8);
     };
+    const setTransportButtons = (playing) => {
+      root.querySelectorAll('[data-melody-action="play"]').forEach((button) => { button.disabled = playing; });
+      root.querySelectorAll('[data-melody-action="stop"]').forEach((button) => { button.disabled = !playing; });
+    };
     const songTicks = () => state.bars * state.beatsPerBar * PPQ;
     const buildPart = () => {
       part?.dispose();
@@ -232,8 +257,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
       buildPart();
       transport.start('+0.05', `${Math.min(state.startTick, songTicks() - 1)}i`);
       state.playing = true;
-      $('[data-melody-action="play"]').disabled = true;
-      $('[data-melody-action="stop"]').disabled = false;
+      setTransportButtons(true);
       status.textContent = `Playing ${state.bars} bars at ${state.bpm} BPM.`;
       tick();
     };
@@ -246,8 +270,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
       part = undefined;
       liveVoice?.releaseAll();
       state.playing = false;
-      $('[data-melody-action="play"]').disabled = false;
-      $('[data-melody-action="stop"]').disabled = true;
+      setTransportButtons(false);
       status.textContent = 'Stopped.';
       draw();
     };
@@ -269,13 +292,15 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
     const xTick = (x) => (x / state.zoom) * PPQ;
     const pitchY = (pitch) => (HIGH - pitch) * state.rowHeight;
     const yPitch = (y) => HIGH - Math.floor(y / state.rowHeight);
-    const sizeCanvas = (canvas, width, height) => {
+    const sizeCanvas = (canvas, width, height, setCssSize = true) => {
       const ratio = window.devicePixelRatio || 1;
       if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) {
         canvas.width = Math.round(width * ratio);
         canvas.height = Math.round(height * ratio);
-        canvas.style.width = `${width}px`;
-        canvas.style.height = `${height}px`;
+        if (setCssSize) {
+          canvas.style.width = `${width}px`;
+          canvas.style.height = `${height}px`;
+        }
       }
       const context = canvas.getContext('2d');
       context.setTransform(ratio, 0, 0, ratio, 0, 0);
@@ -351,14 +376,19 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
       }
       if (head >= -6 && head <= width) { r.fillStyle = palette.electronic; r.beginPath(); r.moveTo(head - 5, 16); r.lineTo(head + 5, 16); r.lineTo(head, 24); r.fill(); }
 
-      const k = sizeCanvas(keys, keys.clientWidth, height);
-      k.fillStyle = palette.bg; k.fillRect(0, 0, keys.clientWidth, height);
+      // The keys canvas takes its size from CSS and draws its own edge line.
+      // It used to write its measured width back as a style, and with a CSS
+      // border that lost a pixel per paint until the keys vanished on scroll.
+      const keyWidth = keys.clientWidth;
+      const k = sizeCanvas(keys, keyWidth, height, false);
+      k.fillStyle = palette.bg; k.fillRect(0, 0, keyWidth, height);
       for (let pitch = firstRow; pitch <= lastRow; pitch += 1) {
         const y = pitchY(pitch) - top;
         k.fillStyle = isBlack(pitch) ? '#151b23' : '#c9d2dc';
-        k.fillRect(0, y, isBlack(pitch) ? keys.clientWidth * 0.62 : keys.clientWidth, state.rowHeight - 1);
-        if (pitch % 12 === 0 && state.rowHeight >= 9) { k.fillStyle = '#0d131a'; k.font = '700 9px ui-monospace, monospace'; k.fillText(noteName(pitch), keys.clientWidth - 24, y + state.rowHeight - 3); }
+        k.fillRect(0, y, isBlack(pitch) ? keyWidth * 0.62 : keyWidth, state.rowHeight - 1);
+        if (pitch % 12 === 0 && state.rowHeight >= 9) { k.fillStyle = '#0d131a'; k.font = '700 9px ui-monospace, monospace'; k.fillText(noteName(pitch), keyWidth - 25, y + state.rowHeight - 3); }
       }
+      k.fillStyle = palette.rule; k.fillRect(keyWidth - 1, 0, 1, height);
     };
     const tick = () => {
       if (!state.playing) return;
@@ -488,27 +518,148 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
     };
 
     // ---- persistence ----------------------------------------------------
-    const save = () => {
-      try { localStorage.setItem(STORE, JSON.stringify({ bpm: state.bpm, beatsPerBar: state.beatsPerBar, bars: state.bars, notes: state.notes })); } catch {}
+    // Voice controls are stored by name ("osc0.wave", "attack") so saved
+    // melodies keep working if the control layout changes.
+    const controlKey = (input) => {
+      const osc = input.closest('[data-osc]');
+      return osc ? `osc${osc.dataset.osc}.${input.dataset.param}` : input.dataset.param;
     };
+    const readControls = () => Object.fromEntries([...root.querySelectorAll('[data-param]')].map((input) => [controlKey(input), input.value]));
+    const applyControls = (controls) => {
+      if (!controls || typeof controls !== 'object') return;
+      root.querySelectorAll('[data-param]').forEach((input) => {
+        const value = controls[controlKey(input)];
+        if (value === undefined || value === null) return;
+        if (input.tagName === 'SELECT' ? ![...input.options].some((option) => option.value === String(value)) : !Number.isFinite(Number(value))) return;
+        input.value = String(value);
+        const output = input.parentElement.querySelector('output');
+        if (output) output.textContent = formatOutput(input);
+      });
+      liveVoice?.apply(readVoice());
+    };
+    const snapshot = () => ({
+      bpm: state.bpm,
+      beatsPerBar: state.beatsPerBar,
+      bars: state.bars,
+      notes: state.notes.map(({ pitch, start, duration, velocity }) => ({ pitch, start, duration, velocity })),
+      controls: readControls(),
+    });
+    const cleanNotes = (notes, limit) => (Array.isArray(notes) ? notes : [])
+      .filter((note) => note && Number.isFinite(note.pitch) && Number.isFinite(note.start) && note.start >= 0 && note.start < limit && note.duration > 0)
+      .map((note, index) => ({ id: index + 1, pitch: clampPitch(Math.round(note.pitch)), start: Math.round(note.start), duration: Math.round(Math.min(note.duration, limit - note.start)), velocity: Number.isFinite(note.velocity) ? Math.max(0.05, Math.min(1, note.velocity)) : 0.8 }));
+    // Load a saved melody (or the autosave) into the editor.
+    const restore = (data) => {
+      state.bpm = Math.max(40, Math.min(240, Math.round(Number(data.bpm)) || 120));
+      state.beatsPerBar = [3, 4, 5, 7].includes(Number(data.beatsPerBar)) ? Number(data.beatsPerBar) : 4;
+      state.bars = [1, 2, 4, 8, 16, 32, 64, 96, 128, 160].includes(Number(data.bars)) ? Number(data.bars) : 8;
+      state.notes = cleanNotes(data.notes, songTicks());
+      state.nextId = state.notes.length + 1;
+      state.selected = null;
+      state.startTick = 0;
+      $('[data-melody-bpm]').value = String(state.bpm);
+      $('[data-melody-meter]').value = String(state.beatsPerBar);
+      $('[data-melody-bars]').value = String(state.bars);
+      if (Tone) Tone.getTransport().bpm.value = state.bpm;
+      applyControls(data.controls);
+    };
+    const save = () => {
+      try { localStorage.setItem(STORE, JSON.stringify({ ...snapshot(), name: nameInput.value })); } catch {}
+    };
+    const nameInput = $('[data-melody-name]');
     try {
       const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
       if (saved && Array.isArray(saved.notes)) {
-        Object.assign(state, { bpm: saved.bpm, beatsPerBar: saved.beatsPerBar, bars: saved.bars });
-        state.notes = saved.notes.filter((note) => Number.isFinite(note.pitch) && Number.isFinite(note.start) && note.duration > 0).map((note, index) => ({ ...note, id: index + 1 }));
-        state.nextId = state.notes.length + 1;
-        $('[data-melody-bpm]').value = String(state.bpm);
-        $('[data-melody-meter]').value = String(state.beatsPerBar);
-        $('[data-melody-bars]').value = String(state.bars);
+        restore(saved);
+        if (typeof saved.name === 'string') nameInput.value = saved.name.slice(0, 60);
       }
     } catch {}
+
+    // ---- library --------------------------------------------------------
+    const LIBRARY = 'amm-melody-library';
+    const librarySelect = $('[data-melody-library]');
+    const libraryStatus = $('[data-melody-library-status]');
+    const readLibrary = () => {
+      try {
+        const data = JSON.parse(localStorage.getItem(LIBRARY) || '[]');
+        return Array.isArray(data) ? data.filter((item) => item && typeof item.name === 'string' && Array.isArray(item.notes)) : [];
+      } catch { return []; }
+    };
+    const writeLibrary = (items) => {
+      try { localStorage.setItem(LIBRARY, JSON.stringify(items)); return true; }
+      catch { libraryStatus.textContent = 'This browser would not store the library (private mode or storage full). Download a backup instead.'; return false; }
+    };
+    const renderLibrary = (selectedId = librarySelect.value) => {
+      const items = readLibrary().sort((a, b) => (b.savedAt || 0) - (a.savedAt || 0));
+      librarySelect.replaceChildren(...(items.length
+        ? items.map((item) => new Option(`${item.name} (${item.notes.length} ${item.notes.length === 1 ? 'note' : 'notes'}, ${new Date(item.savedAt || 0).toLocaleDateString()})`, item.id))
+        : [new Option('No saved melodies yet', '')]));
+      if (items.some((item) => item.id === selectedId)) librarySelect.value = selectedId;
+      librarySelect.disabled = !items.length;
+      $('[data-melody-action="load"]').disabled = !items.length;
+      $('[data-melody-action="remove"]').disabled = !items.length;
+      root.dataset.libraryCount = String(items.length);
+    };
+    const saveToLibrary = () => {
+      const name = nameInput.value.trim().slice(0, 60) || `Melody ${new Date().toLocaleString()}`;
+      nameInput.value = name;
+      const items = readLibrary();
+      // Saving under an existing name updates that melody instead of duplicating it.
+      const existing = items.find((item) => item.name.toLowerCase() === name.toLowerCase());
+      const entry = { ...snapshot(), id: existing?.id ?? `m${Date.now().toString(36)}${Math.random().toString(36).slice(2, 6)}`, name, savedAt: Date.now() };
+      const next = existing ? items.map((item) => (item === existing ? entry : item)) : [...items, entry];
+      if (!writeLibrary(next)) return;
+      renderLibrary(entry.id);
+      save();
+      libraryStatus.textContent = `${existing ? 'Updated' : 'Saved'} "${name}" with ${entry.notes.length} ${entry.notes.length === 1 ? 'note' : 'notes'}.`;
+    };
+    const loadFromLibrary = () => {
+      const item = readLibrary().find((candidate) => candidate.id === librarySelect.value);
+      if (!item) return;
+      stop();
+      restore(item);
+      nameInput.value = item.name;
+      layout();
+      const first = [...state.notes].sort((a, b) => a.start - b.start)[0];
+      viewport.scrollLeft = 0;
+      viewport.scrollTop = pitchY(first ? first.pitch + 6 : 76);
+      notesChanged();
+      libraryStatus.textContent = `Loaded "${item.name}". Save again to keep your changes.`;
+    };
+    renderLibrary();
 
     // ---- controls -------------------------------------------------------
     root.querySelectorAll('[data-param]').forEach((input) => input.addEventListener('input', () => {
       const output = input.parentElement.querySelector('output');
       if (output) output.textContent = formatOutput(input);
       liveVoice?.apply(readVoice());
+      save();
     }));
+    nameInput.addEventListener('change', save);
+    nameInput.addEventListener('keydown', (event) => { if (event.key === 'Enter') { event.preventDefault(); saveToLibrary(); } });
+    $('[data-melody-import]').addEventListener('change', async (event) => {
+      const file = event.target.files?.[0];
+      event.target.value = '';
+      if (!file) return;
+      try {
+        const data = JSON.parse(await file.text());
+        const incoming = (Array.isArray(data) ? data : data.melodies ?? []).filter((item) => item && typeof item.name === 'string' && Array.isArray(item.notes));
+        if (!incoming.length) throw new Error('no melodies');
+        const items = readLibrary();
+        let added = 0;
+        for (const item of incoming) {
+          // Keep the newer copy when the backup and this browser share a melody.
+          const match = items.findIndex((existing) => existing.id === item.id || existing.name.toLowerCase() === item.name.toLowerCase());
+          const entry = { id: item.id || `m${Date.now().toString(36)}${added}`, name: item.name.slice(0, 60), savedAt: Number(item.savedAt) || Date.now(), bpm: item.bpm, beatsPerBar: item.beatsPerBar, bars: item.bars, notes: cleanNotes(item.notes, 160 * 7 * PPQ).map(({ pitch, start, duration, velocity }) => ({ pitch, start, duration, velocity })), controls: item.controls };
+          if (match < 0) { items.push(entry); added += 1; }
+          else if (entry.savedAt >= (items[match].savedAt || 0)) items[match] = { ...entry, id: items[match].id };
+        }
+        if (!writeLibrary(items)) return;
+        renderLibrary();
+        libraryStatus.textContent = `Imported ${incoming.length} ${incoming.length === 1 ? 'melody' : 'melodies'} (${added} new).`;
+      } catch {
+        libraryStatus.textContent = 'That file is not a Melody Sample Maker library backup.';
+      }
+    });
     $('[data-melody-bpm]').addEventListener('change', (event) => {
       state.bpm = Math.max(40, Math.min(240, Math.round(Number(event.target.value)) || 120));
       event.target.value = String(state.bpm);
@@ -538,6 +689,40 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
     }));
     const demo = [[60, 0, 240], [63, 240, 240], [67, 480, 480], [70, 960, 240], [68, 1200, 240], [67, 1440, 480], [63, 1920, 240], [65, 2160, 240], [67, 2400, 720], [60, 3120, 240], [58, 3360, 480], [60, 3840, 960], [55, 4800, 480], [58, 5280, 480], [60, 5760, 1920]];
     const actions = {
+      save: saveToLibrary,
+      load: loadFromLibrary,
+      new: () => {
+        const button = $('[data-melody-action="new"]');
+        if (state.notes.length && button.dataset.confirm !== 'true') { button.dataset.confirm = 'true'; button.textContent = 'Click again for a blank melody'; setTimeout(() => { button.dataset.confirm = ''; button.textContent = 'New melody'; }, 3000); return; }
+        button.dataset.confirm = '';
+        button.textContent = 'New melody';
+        stop();
+        state.notes = [];
+        state.selected = null;
+        state.startTick = 0;
+        nameInput.value = '';
+        notesChanged();
+        libraryStatus.textContent = 'Started a blank melody. The voice settings are kept.';
+      },
+      remove: () => {
+        const item = readLibrary().find((candidate) => candidate.id === librarySelect.value);
+        if (!item) return;
+        const button = $('[data-melody-action="remove"]');
+        if (button.dataset.confirm !== item.id) { button.dataset.confirm = item.id; button.textContent = `Delete "${item.name.slice(0, 20)}"?`; setTimeout(() => { button.dataset.confirm = ''; button.textContent = 'Delete'; }, 3000); return; }
+        button.dataset.confirm = '';
+        button.textContent = 'Delete';
+        if (!writeLibrary(readLibrary().filter((candidate) => candidate.id !== item.id))) return;
+        renderLibrary();
+        libraryStatus.textContent = `Deleted "${item.name}".`;
+      },
+      backup: async () => {
+        const items = readLibrary();
+        if (!items.length) { libraryStatus.textContent = 'Save a melody first; the library is empty.'; return; }
+        const audio = await lib;
+        const json = JSON.stringify({ app: 'Melody Sample Maker', version: 1, exportedAt: new Date().toISOString(), melodies: items }, null, 1);
+        audio.downloadBytes(new TextEncoder().encode(json), `melody-library-${new Date().toISOString().slice(0, 10)}.json`, 'application/json');
+        libraryStatus.textContent = `Downloaded a backup of ${items.length} ${items.length === 1 ? 'melody' : 'melodies'}.`;
+      },
       start: async () => { await engine(); status.textContent = `Audio on (${audioContext.state}, ${audioContext.sampleRate} Hz).`; },
       play,
       stop,
@@ -623,7 +808,20 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
   input[type="number"] { width:5.5rem; }
   input[type="range"] { width:100%; accent-color:var(--ai); }
   .check { display:flex; align-items:center; gap:.4rem; align-self:center; }
-  .rack, .roll-panel, .export { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .rack, .roll-panel, .export, .library { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .library { display:grid; gap:.8rem; }
+  .library-head { display:flex; flex-wrap:wrap; align-items:baseline; gap:.4rem 1rem; }
+  .library-head h2 { margin:0; font-size:1.15rem; color:var(--ink); }
+  .library-head p { margin:0; color:var(--ink-soft); font-size:.85rem; }
+  .library-row { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
+  .library-row .grow { flex:1 1 12rem; }
+  .library-row input[type="text"], .library-row select { width:100%; min-width:0; }
+  input[type="text"] { border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.5rem .55rem; font:500 .82rem/1.2 var(--sans); }
+  .file-button { display:inline-flex; align-items:center; border:1px solid var(--rule); border-radius:999px; background:var(--night-800); color:var(--ink); padding:.55rem .9rem; font:650 .78rem/1.1 var(--sans); cursor:pointer; }
+  .file-button:hover { border-color:var(--ai); color:var(--ai); }
+  .file-button:focus-within { outline:2px solid var(--ai); outline-offset:2px; }
+  .file-button input { position:absolute; width:1px; height:1px; opacity:0; overflow:hidden; }
+  .library-status { flex:1 1 14rem; margin:0; color:var(--electronic); font:600 .74rem/1.4 var(--mono); }
   .rack-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.8rem; margin-bottom:1rem; }
   .rack-head h2, .export h2 { margin:0; font-size:1.15rem; color:var(--ink); }
   .osc-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:.8rem; }
@@ -631,6 +829,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
   .osc legend { padding:0 .35rem; color:var(--ai); font:700 .72rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
   .roll-tools { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
   .roll-tools input[type="range"] { width:7rem; }
+  .roll-transport { display:flex; gap:.4rem; }
   .seg { display:flex; }
   .seg button { border-radius:0; margin-left:-1px; }
   .seg button:first-child { border-radius:999px 0 0 999px; }
@@ -639,7 +838,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
   .roll { display:grid; grid-template-columns:3.5rem minmax(0, 1fr); grid-template-rows:24px clamp(18rem, 55vh, 34rem); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden; background:var(--night-900); }
   .roll-corner { background:var(--night-800); border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); }
   .roll-ruler { display:block; width:100%; height:24px; border-bottom:1px solid var(--rule); cursor:pointer; touch-action:manipulation; }
-  .roll-keys { display:block; width:100%; height:100%; border-right:1px solid var(--rule); cursor:pointer; }
+  .roll-keys { display:block; width:100%; height:100%; cursor:pointer; }
   .roll-stage { position:relative; min-width:0; }
   .roll-viewport { position:absolute; inset:0; overflow:auto; cursor:crosshair; touch-action:none; overscroll-behavior:contain; }
   .roll-viewport[data-tool="pan"] { touch-action:pan-x pan-y; }
@@ -654,7 +853,7 @@ const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 t
   @media (max-width:560px) {
     .osc-grid { grid-template-columns:1fr; }
     .tool-status { text-align:left; flex-basis:100%; }
-    .rack, .roll-panel, .export, .tool-bar { padding:1rem; }
+    .rack, .roll-panel, .export, .library, .tool-bar { padding:1rem; }
     .roll { grid-template-columns:2.6rem minmax(0, 1fr); }
     .roll-tools input[type="range"] { width:5.5rem; }
   }

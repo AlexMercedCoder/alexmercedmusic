@@ -8,10 +8,10 @@ import { SITE } from '../../data/catalog-model';
 const tool = sampleMakers.drum;
 const faqs = [
   ['Are the drum sounds free to use?', 'Yes. Nothing is sampled. Every hit is synthesized from oscillators and noise in your browser when you play or export, so there is no sample library or license attached to the sound.'],
-  ['How long is the exported loop?', 'The pattern is 4 bars of 4/4. The WAV repeats it 1 to 10 times, so at 120 BPM one repeat lasts 8 seconds and ten repeats last 80 seconds.'],
+  ['How long is the exported loop?', 'Choose a loop length of 1 to 4 bars of 4/4. The WAV repeats the loop 1 to 10 times, so a 4-bar loop at 120 BPM lasts 8 seconds per repeat and 80 seconds at ten repeats.'],
   ['What does an accent do?', 'Each step cycles through off, on and accent. Accented steps play at full velocity and normal steps play softer, which keeps a hi-hat line from sounding mechanical.'],
   ['Why do I need to press Start audio?', 'Browsers, and Safari on iPhone and iPad in particular, only allow sound after a tap or click. The first button you press starts the audio engine.'],
-  ['Does anything get uploaded?', 'No. Playback and rendering happen entirely in this browser. Your pattern is kept in local storage on this device.'],
+  ['Does anything get uploaded?', 'No. Playback and rendering happen entirely in this browser. Your current pattern and any loops you save to My loops are kept in local storage on this device. Download a library backup to move them to another browser.'],
   ['What does the tail option do?', 'Wrap folds the decay of the final hits back onto the start, so the file is exactly the loop length and repeats without a click. Cut drops the tail. Keep leaves it on the end.'],
 ];
 const jsonLd = [
@@ -24,7 +24,7 @@ const jsonLd = [
 
 <Base title={tool.title} description={tool.description} keywords={['drum loop maker', 'online step sequencer', 'drum machine in browser', 'synthesized drums', 'free drum loop WAV', 'royalty-free drum loop', 'Web Audio drum machine']} jsonLd={jsonLd} ogType="article" dateModified="2026-11-02">
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: tool.title }]} />
-  <section class="section section--tight" data-era="electronic"><div class="shell"><p class="eyebrow">Browser tool · no upload</p><h1>{tool.title}</h1><p class="lede">Tune a synthesized kick, snare, hi-hat and tom, program four bars of 16th-note steps and download the loop as a WAV, repeated up to ten times.</p><div class="btn-row"><a class="btn btn--primary" href="#maker">Open the maker</a><a class="btn" href="/melody-sample-maker/">Melody Sample Maker</a><a class="btn" href="/suno-prompting-guide/">Suno prompting guide</a></div></div></section>
+  <section class="section section--tight" data-era="electronic"><div class="shell"><p class="eyebrow">Browser tool · no upload</p><h1>{tool.title}</h1><p class="lede">Tune a synthesized kick, snare, hi-hat and tom, program one to four bars of 16th-note steps and download the loop as a WAV, repeated up to ten times.</p><div class="btn-row"><a class="btn btn--primary" href="#maker">Open the maker</a><a class="btn" href="/melody-sample-maker/">Melody Sample Maker</a><a class="btn" href="/suno-prompting-guide/">Suno prompting guide</a></div></div></section>
 
   <section class="section section--tight" id="maker"><div class="shell"><DrumSampleMaker /></div></section>
 
