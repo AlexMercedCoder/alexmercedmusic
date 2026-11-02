@@ -1,6 +1,7 @@
 import type { APIRoute } from 'astro';
 import { publicCatalog } from '../data/catalog-model';
 import { aiMusicPerspective, ethicsOfAiMusic } from '../data/editorial';
+import { sampleMakers } from '../data/sample-makers';
 
 export const GET: APIRoute = () => {
   const body = `# Alex Merced Music: full catalog guide
@@ -28,6 +29,10 @@ ${Object.entries(publicCatalog.counts).map(([name, count]) => `- ${name}: ${coun
 
 - Music Theory for Songwriters and Producers: ${publicCatalog.site}/music-theory/
 - Suno Prompting Field Guide: ${publicCatalog.site}/suno-prompting-guide/
+
+## Browser audio tools
+
+${Object.values(sampleMakers).map((tool) => `### ${tool.title}\n\n- URL: ${tool.pageUrl}\n- Summary: ${tool.description}\n- Sound: ${tool.voice.join('; ')}\n- Composition: ${tool.composition.join('; ')}\n- Exports: ${tool.exports.map(([format, detail]) => `${format} (${detail})`).join('; ')}\n- Runs entirely in the browser; nothing is uploaded.`).join('\n\n')}
 - Structured guide data: ${publicCatalog.site}/catalog.json under the guides property
 
 ## Distributed releases
@@ -64,6 +69,8 @@ ${publicCatalog.videos.map((video) => `### ${video.title}\n\n- ID: ${video.id}\n
 - ${publicCatalog.site}/video-index.json
 - ${publicCatalog.site}/music-theory/
 - ${publicCatalog.site}/suno-prompting-guide/
+- ${publicCatalog.site}/melody-sample-maker/
+- ${publicCatalog.site}/drum-sample-maker/
 - ${publicCatalog.site}/webmcp/
 `;
   return new Response(body, { headers: { 'content-type': 'text/plain; charset=utf-8' } });

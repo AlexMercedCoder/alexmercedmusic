@@ -1,0 +1,661 @@
+---
+const waves = [['sine', 'Sine'], ['triangle', 'Triangle'], ['sawtooth', 'Saw'], ['square', 'Square']];
+const oscillators = [
+  { label: 'Osc 1', wave: 'sawtooth', level: 80, coarse: 0, fine: 0, octave: 0 },
+  { label: 'Osc 2', wave: 'square', level: 45, coarse: 0, fine: 7, octave: -1 },
+  { label: 'Osc 3', wave: 'sine', level: 35, coarse: 7, fine: -5, octave: 0 },
+];
+const snaps = [['1920', '1 bar'], ['480', '1/4'], ['240', '1/8'], ['160', '1/8 triplet'], ['120', '1/16'], ['80', '1/16 triplet'], ['60', '1/32']];
+---
+
+<div class="sample-tool" data-melody-maker data-audio-state="idle">
+  <div class="tool-bar">
+    <button type="button" class="tool-primary" data-melody-action="start">Start audio</button>
+    <button type="button" data-melody-action="play" aria-keyshortcuts="Space">Play</button>
+    <button type="button" data-melody-action="stop" disabled>Stop</button>
+    <label class="inline">BPM<input data-melody-bpm type="number" min="40" max="240" step="1" value="120" inputmode="numeric" /></label>
+    <label class="inline">Meter<select data-melody-meter><option value="3">3/4</option><option value="4" selected>4/4</option><option value="5">5/4</option><option value="7">7/4</option></select></label>
+    <label class="inline">Length<select data-melody-bars>{[1, 2, 4, 8, 16, 32, 64, 96, 128, 160].map((bars) => <option value={bars} selected={bars === 8}>{bars} {bars === 1 ? 'bar' : 'bars'}</option>)}</select></label>
+    <span class="tool-status" data-melody-status aria-live="polite">Audio is off. Press Start audio, Play or a key to begin.</span>
+  </div>
+
+  <section class="rack" aria-labelledby="melody-voice-title">
+    <div class="rack-head"><h2 id="melody-voice-title">3xOsc voice</h2><button type="button" data-melody-action="audition">Audition C4</button></div>
+    <div class="osc-grid">
+      {oscillators.map((osc, index) => (
+        <fieldset class="osc" data-osc={index}>
+          <legend>{osc.label}</legend>
+          <label>Waveform<select data-param="wave">{waves.map(([value, label]) => <option value={value} selected={value === osc.wave}>{label}</option>)}</select></label>
+          <label>Level <output>{osc.level}%</output><input data-param="level" type="range" min="0" max="100" value={osc.level} /></label>
+          <label>Coarse <output>{osc.coarse} st</output><input data-param="coarse" type="range" min="-24" max="24" value={osc.coarse} /></label>
+          <label>Fine <output>{osc.fine} ct</output><input data-param="fine" type="range" min="-100" max="100" value={osc.fine} /></label>
+          <label>Octave<select data-param="octave">{[-2, -1, 0, 1, 2].map((octave) => <option value={octave} selected={octave === osc.octave}>{octave > 0 ? `+${octave}` : octave}</option>)}</select></label>
+        </fieldset>
+      ))}
+      <fieldset class="osc" data-shared>
+        <legend>Envelope and filter</legend>
+        <label>Attack <output>0.01 s</output><input data-param="attack" type="range" min="0.001" max="2" step="0.001" value="0.01" /></label>
+        <label>Decay <output>0.25 s</output><input data-param="decay" type="range" min="0.01" max="3" step="0.01" value="0.25" /></label>
+        <label>Sustain <output>60%</output><input data-param="sustain" type="range" min="0" max="100" value="60" /></label>
+        <label>Release <output>0.40 s</output><input data-param="release" type="range" min="0.01" max="4" step="0.01" value="0.4" /></label>
+        <label>Cutoff <output>2400 Hz</output><input data-param="cutoff" type="range" min="0" max="1000" value="636" /></label>
+        <label>Resonance <output>1.0</output><input data-param="resonance" type="range" min="0.1" max="18" step="0.1" value="1" /></label>
+        <label>Volume <output>70%</output><input data-param="volume" type="range" min="0" max="100" value="70" /></label>
+      </fieldset>
+    </div>
+  </section>
+
+  <section class="roll-panel" aria-labelledby="melody-roll-title">
+    <div class="rack-head">
+      <h2 id="melody-roll-title">Piano roll</h2>
+      <div class="roll-tools">
+        <div class="seg" role="group" aria-label="Edit tool"><button type="button" aria-pressed="true" data-melody-tool="draw">Draw</button><button type="button" aria-pressed="false" data-melody-tool="erase">Erase</button><button type="button" aria-pressed="false" data-melody-tool="pan">Scroll</button></div>
+        <label class="inline">Snap<select data-melody-snap>{snaps.map(([value, label]) => <option value={value} selected={value === '240'}>{label}</option>)}</select></label>
+        <label class="inline">Zoom<input data-melody-zoom type="range" min="6" max="160" value="48" aria-label="Horizontal zoom" /></label>
+        <label class="inline">Rows<input data-melody-rows type="range" min="8" max="26" value="14" aria-label="Row height" /></label>
+        <label class="check"><input type="checkbox" data-melody-follow checked /> Follow</label>
+        <button type="button" data-melody-action="demo">Load demo phrase</button>
+        <button type="button" data-melody-action="clear">Clear notes</button>
+      </div>
+    </div>
+    <div class="roll" data-roll>
+      <div class="roll-corner" aria-hidden="true"></div>
+      <canvas class="roll-ruler" data-roll-ruler aria-label="Timeline. Click to set the start position." role="img"></canvas>
+      <canvas class="roll-keys" data-roll-keys aria-hidden="true"></canvas>
+      <div class="roll-stage">
+        <div class="roll-viewport" data-roll-viewport tabindex="0" role="application" aria-roledescription="piano roll" aria-label="Piano roll. Click to add a note, drag to move, drag the right edge to resize, right-click or double-click to delete. With a note selected, arrow keys move it, Shift with arrows resizes it and Delete removes it." aria-describedby="melody-roll-summary"><div class="roll-spacer" data-roll-spacer></div></div>
+        <canvas class="roll-grid" data-roll-grid aria-hidden="true"></canvas>
+      </div>
+    </div>
+    <p class="roll-summary" id="melody-roll-summary" data-melody-summary aria-live="polite">No notes yet.</p>
+  </section>
+
+  <section class="export" aria-labelledby="melody-export-title">
+    <div><h2 id="melody-export-title">Export</h2><p>WAV renders the melody through the voice you designed. MIDI contains only the notes, tempo and meter, so your DAW instrument decides how it sounds.</p></div>
+    <div class="export-row">
+      <label class="inline">WAV tail<select data-melody-tail><option value="wrap" selected>Wrap tail to start (clean loop)</option><option value="cut">Cut at the last bar</option><option value="keep">Keep the release tail</option></select></label>
+      <button type="button" class="tool-primary" data-melody-action="wav">Download WAV</button>
+      <button type="button" data-melody-action="midi">Download MIDI</button>
+    </div>
+    <p class="export-result" data-melody-export aria-live="polite"></p>
+  </section>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-melody-maker]');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = 'true';
+    const PPQ = 480;
+    const LOW = 24;
+    const HIGH = 108;
+    const STORE = 'amm-melody-sample-maker';
+    const names = ['C', 'C#', 'D', 'D#', 'E', 'F', 'F#', 'G', 'G#', 'A', 'A#', 'B'];
+    const noteName = (pitch) => `${names[pitch % 12]}${Math.floor(pitch / 12) - 1}`;
+    const isBlack = (pitch) => [1, 3, 6, 8, 10].includes(pitch % 12);
+    const $ = (selector) => root.querySelector(selector);
+    const status = $('[data-melody-status]');
+    const summary = $('[data-melody-summary]');
+    const exportResult = $('[data-melody-export]');
+    const viewport = $('[data-roll-viewport]');
+    const spacer = $('[data-roll-spacer]');
+    const grid = $('[data-roll-grid]');
+    const ruler = $('[data-roll-ruler]');
+    const keys = $('[data-roll-keys]');
+    const lib = import('/scripts/sample-audio.js');
+    const cutoffHz = (value) => Math.round(40 * Math.pow(18000 / 40, value / 1000));
+
+    const state = { bpm: 120, beatsPerBar: 4, bars: 8, snap: 240, zoom: 48, rowHeight: 14, tool: 'draw', follow: true, notes: [], selected: null, nextId: 1, defaultLength: 480, startTick: 0, playing: false };
+    const readVoice = () => ({
+      osc: [...root.querySelectorAll('[data-osc]')].map((field) => ({
+        wave: field.querySelector('[data-param="wave"]').value,
+        level: Number(field.querySelector('[data-param="level"]').value) / 100,
+        coarse: Number(field.querySelector('[data-param="coarse"]').value),
+        fine: Number(field.querySelector('[data-param="fine"]').value),
+        octave: Number(field.querySelector('[data-param="octave"]').value),
+      })),
+      attack: Number($('[data-param="attack"]').value),
+      decay: Number($('[data-param="decay"]').value),
+      sustain: Number($('[data-param="sustain"]').value) / 100,
+      release: Number($('[data-param="release"]').value),
+      cutoff: cutoffHz(Number($('[data-param="cutoff"]').value)),
+      resonance: Number($('[data-param="resonance"]').value),
+      volume: Number($('[data-param="volume"]').value) / 100,
+    });
+    const formatOutput = (input) => {
+      const value = Number(input.value);
+      const param = input.dataset.param;
+      if (param === 'level' || param === 'sustain' || param === 'volume') return `${value}%`;
+      if (param === 'coarse') return `${value} st`;
+      if (param === 'fine') return `${value} ct`;
+      if (param === 'cutoff') return `${cutoffHz(value)} Hz`;
+      if (param === 'resonance') return value.toFixed(1);
+      return `${value.toFixed(value < 1 ? 3 : 2)} s`;
+    };
+
+    // ---- audio ----------------------------------------------------------
+    let audioContext;
+    let Tone;
+    let liveVoice;
+    let part;
+    const setAudioState = (value) => { root.dataset.audioState = value; };
+    // Must run synchronously inside the click or key handler (iOS and Safari).
+    const wakeAudio = () => {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioContext = window.__ammSampleAudioContext ||= new AudioContextClass({ latencyHint: 'interactive' });
+      if (audioContext.state !== 'running') audioContext.resume();
+      const silence = audioContext.createBufferSource();
+      silence.buffer = audioContext.createBuffer(1, 1, audioContext.sampleRate);
+      silence.connect(audioContext.destination);
+      silence.start(0);
+    };
+    const engine = async () => {
+      wakeAudio();
+      const audio = await lib;
+      Tone = await audio.loadTone(audioContext);
+      if (audioContext.state !== 'running') await audioContext.resume();
+      setAudioState(audioContext.state);
+      if (!liveVoice) {
+        liveVoice = buildVoice(readVoice());
+        liveVoice.output.toDestination();
+        $('[data-melody-action="start"]').textContent = 'Audio on';
+      }
+      return audio;
+    };
+    const midiToHz = (pitch) => 440 * Math.pow(2, (pitch - 69) / 12);
+    const buildVoice = (voice, offline = false) => {
+      const output = new Tone.Gain(voice.volume * 0.5);
+      const limiter = new Tone.Limiter(-1).connect(output);
+      const filter = new Tone.Filter({ type: 'lowpass', frequency: voice.cutoff, Q: voice.resonance, rolloff: -24 }).connect(limiter);
+      let current = voice;
+      const configure = (synth, index) => {
+        const osc = current.osc[index];
+        synth.set({ oscillator: { type: osc.wave }, detune: osc.coarse * 100 + osc.fine + osc.octave * 1200, envelope: { attack: current.attack, decay: current.decay, sustain: current.sustain, release: current.release } });
+        synth.volume.value = osc.level > 0 ? Tone.gainToDb(osc.level) : -Infinity;
+        return synth;
+      };
+      // Live playback uses PolySynth. Offline renders use a pool of monophonic
+      // voices allocated by note time, because PolySynth only frees a voice on
+      // the native "ended" event, which an OfflineAudioContext delivers after all
+      // scheduling is done, so long renders would drop notes.
+      const synths = offline ? [] : voice.osc.map(() => new Tone.PolySynth({ voice: Tone.Synth, maxPolyphony: 64 }).connect(filter));
+      const pool = [];
+      const apply = (next) => {
+        current = next;
+        synths.forEach(configure);
+        pool.forEach((slot) => slot.synths.forEach(configure));
+        filter.frequency.value = next.cutoff;
+        filter.Q.value = next.resonance;
+        output.gain.value = next.volume * 0.5;
+      };
+      apply(voice);
+      const triggerPooled = (pitch, duration, time, velocity) => {
+        let slot = pool.find((candidate) => candidate.freeAt <= time);
+        if (!slot) { slot = { freeAt: 0, synths: current.osc.map((_, index) => configure(new Tone.Synth().connect(filter), index)) }; pool.push(slot); }
+        slot.freeAt = time + duration + current.release + 0.05;
+        slot.synths.forEach((synth) => synth.triggerAttackRelease(midiToHz(pitch), duration, time, velocity));
+      };
+      return {
+        output,
+        apply,
+        voices: () => pool.length,
+        trigger: offline ? triggerPooled : (pitch, duration, time, velocity) => synths.forEach((synth) => synth.triggerAttackRelease(midiToHz(pitch), duration, time, velocity)),
+        releaseAll: () => synths.forEach((synth) => synth.releaseAll()),
+        dispose: () => { [...synths, ...pool.flatMap((slot) => slot.synths)].forEach((synth) => synth.dispose()); filter.dispose(); limiter.dispose(); output.dispose(); },
+      };
+    };
+    let lastAudition = 0;
+    const audition = (pitch) => {
+      // Throttled so rapid edits cannot pile up more voices than PolySynth allows.
+      if (!liveVoice || state.playing || performance.now() - lastAudition < 60) return;
+      lastAudition = performance.now();
+      liveVoice.trigger(pitch, 0.35, Tone.now(), 0.8);
+    };
+    const songTicks = () => state.bars * state.beatsPerBar * PPQ;
+    const buildPart = () => {
+      part?.dispose();
+      part = new Tone.Part((time, note) => liveVoice.trigger(note.pitch, `${note.duration}i`, time, note.velocity), state.notes.map((note) => ({ time: `${note.start}i`, pitch: note.pitch, duration: note.duration, velocity: note.velocity })));
+      part.start(0);
+    };
+    const play = async () => {
+      if (state.playing) return;
+      await engine();
+      const transport = Tone.getTransport();
+      transport.stop();
+      transport.cancel();
+      transport.PPQ = PPQ;
+      transport.bpm.value = state.bpm;
+      transport.timeSignature = state.beatsPerBar;
+      transport.loop = true;
+      transport.loopStart = 0;
+      transport.loopEnd = `${songTicks()}i`;
+      buildPart();
+      transport.start('+0.05', `${Math.min(state.startTick, songTicks() - 1)}i`);
+      state.playing = true;
+      $('[data-melody-action="play"]').disabled = true;
+      $('[data-melody-action="stop"]').disabled = false;
+      status.textContent = `Playing ${state.bars} bars at ${state.bpm} BPM.`;
+      tick();
+    };
+    const stop = () => {
+      if (!Tone || !state.playing) return;
+      const transport = Tone.getTransport();
+      transport.stop();
+      transport.cancel();
+      part?.dispose();
+      part = undefined;
+      liveVoice?.releaseAll();
+      state.playing = false;
+      $('[data-melody-action="play"]').disabled = false;
+      $('[data-melody-action="stop"]').disabled = true;
+      status.textContent = 'Stopped.';
+      draw();
+    };
+    const notesChanged = () => {
+      if (state.playing) buildPart();
+      describe();
+      save();
+      draw();
+    };
+
+    // ---- piano roll -----------------------------------------------------
+    const ctx = grid.getContext('2d');
+    const rulerCtx = ruler.getContext('2d');
+    const keysCtx = keys.getContext('2d');
+    const css = getComputedStyle(root);
+    const color = (name, fallback) => css.getPropertyValue(name).trim() || fallback;
+    const palette = { bg: color('--night-900', '#080c11'), black: color('--night-800', '#0d131a'), rule: color('--rule', '#263140'), soft: color('--rule-soft', '#1a232e'), ink: color('--ink', '#e8edf3'), faint: color('--ink-faint', '#6f7f8f'), accent: color('--ai', '#a78bda'), electronic: color('--electronic', '#4fc4b8') };
+    const tickX = (tick) => (tick / PPQ) * state.zoom;
+    const xTick = (x) => (x / state.zoom) * PPQ;
+    const pitchY = (pitch) => (HIGH - pitch) * state.rowHeight;
+    const yPitch = (y) => HIGH - Math.floor(y / state.rowHeight);
+    const sizeCanvas = (canvas, width, height) => {
+      const ratio = window.devicePixelRatio || 1;
+      if (canvas.width !== Math.round(width * ratio) || canvas.height !== Math.round(height * ratio)) {
+        canvas.width = Math.round(width * ratio);
+        canvas.height = Math.round(height * ratio);
+        canvas.style.width = `${width}px`;
+        canvas.style.height = `${height}px`;
+      }
+      const context = canvas.getContext('2d');
+      context.setTransform(ratio, 0, 0, ratio, 0, 0);
+      return context;
+    };
+    const layout = () => {
+      spacer.style.width = `${Math.ceil(tickX(songTicks())) + 1}px`;
+      spacer.style.height = `${(HIGH - LOW + 1) * state.rowHeight}px`;
+      draw();
+    };
+    let frame = 0;
+    const draw = () => { if (!frame) frame = requestAnimationFrame(paint); };
+    const lineSpacing = () => {
+      // Draw the snap grid only when it stays readable; fall back to beats, then bars.
+      for (const ticks of [state.snap, PPQ, PPQ * state.beatsPerBar, PPQ * state.beatsPerBar * 4]) if (tickX(ticks) >= 8) return ticks;
+      return PPQ * state.beatsPerBar * 16;
+    };
+    const playheadTick = () => (state.playing && Tone ? Tone.getTransport().ticks : state.startTick);
+    const paint = () => {
+      frame = 0;
+      const width = viewport.clientWidth;
+      const height = viewport.clientHeight;
+      const left = viewport.scrollLeft;
+      const top = viewport.scrollTop;
+      const barTicks = PPQ * state.beatsPerBar;
+      const endX = tickX(songTicks()) - left;
+      const g = sizeCanvas(grid, width, height);
+      g.fillStyle = palette.bg;
+      g.fillRect(0, 0, width, height);
+      const firstRow = Math.max(LOW, yPitch(top + height));
+      const lastRow = Math.min(HIGH, yPitch(top));
+      for (let pitch = firstRow; pitch <= lastRow; pitch += 1) {
+        const y = pitchY(pitch) - top;
+        if (isBlack(pitch)) { g.fillStyle = palette.black; g.fillRect(0, y, width, state.rowHeight); }
+        g.fillStyle = pitch % 12 === 0 ? palette.rule : palette.soft;
+        g.fillRect(0, y + state.rowHeight - 1, width, 1);
+      }
+      const spacing = lineSpacing();
+      const firstLine = Math.floor(xTick(left) / spacing) * spacing;
+      const lastTick = Math.min(songTicks(), xTick(left + width));
+      for (let tick = firstLine; tick <= lastTick; tick += spacing) {
+        const x = Math.round(tickX(tick) - left) + 0.5;
+        g.fillStyle = tick % barTicks === 0 ? palette.rule : tick % PPQ === 0 ? palette.soft : 'rgba(255,255,255,0.03)';
+        g.fillRect(x, 0, tick % barTicks === 0 ? 1.5 : 1, height);
+      }
+      if (endX < width) { g.fillStyle = 'rgba(0,0,0,0.55)'; g.fillRect(Math.max(0, endX), 0, width, height); }
+      for (const note of state.notes) {
+        const x = tickX(note.start) - left;
+        const w = Math.max(3, tickX(note.duration));
+        if (x > width || x + w < 0) continue;
+        const y = pitchY(note.pitch) - top;
+        if (y > height || y + state.rowHeight < 0) continue;
+        g.fillStyle = note.id === state.selected ? palette.ink : palette.accent;
+        g.globalAlpha = 0.45 + note.velocity * 0.55;
+        g.fillRect(x + 0.5, y + 1, w - 1, state.rowHeight - 2);
+        g.globalAlpha = 1;
+        g.fillStyle = 'rgba(8,12,17,0.55)';
+        g.fillRect(x + w - 3, y + 1, 2, state.rowHeight - 2);
+        if (w > 30 && state.rowHeight >= 12) { g.fillStyle = palette.bg; g.font = '600 9px ui-monospace, monospace'; g.fillText(noteName(note.pitch), x + 4, y + state.rowHeight - 4); }
+      }
+      const head = tickX(playheadTick()) - left;
+      if (head >= 0 && head <= width) { g.fillStyle = palette.electronic; g.fillRect(Math.round(head), 0, 2, height); }
+
+      const r = sizeCanvas(ruler, width, 24);
+      r.fillStyle = palette.black; r.fillRect(0, 0, width, 24);
+      const barWidth = tickX(barTicks);
+      const labelEvery = [1, 2, 4, 8, 16, 32].find((step) => step * barWidth >= 34) ?? 64;
+      r.font = '600 10px ui-monospace, monospace';
+      for (let bar = Math.floor(left / barWidth); bar <= Math.min(state.bars, Math.ceil((left + width) / barWidth)); bar += 1) {
+        const x = Math.round(bar * barWidth - left) + 0.5;
+        r.fillStyle = palette.rule; r.fillRect(x, bar % labelEvery === 0 ? 8 : 16, 1, 24);
+        if (bar % labelEvery === 0 && bar < state.bars) { r.fillStyle = palette.faint; r.fillText(String(bar + 1), x + 4, 14); }
+      }
+      if (head >= -6 && head <= width) { r.fillStyle = palette.electronic; r.beginPath(); r.moveTo(head - 5, 16); r.lineTo(head + 5, 16); r.lineTo(head, 24); r.fill(); }
+
+      const k = sizeCanvas(keys, keys.clientWidth, height);
+      k.fillStyle = palette.bg; k.fillRect(0, 0, keys.clientWidth, height);
+      for (let pitch = firstRow; pitch <= lastRow; pitch += 1) {
+        const y = pitchY(pitch) - top;
+        k.fillStyle = isBlack(pitch) ? '#151b23' : '#c9d2dc';
+        k.fillRect(0, y, isBlack(pitch) ? keys.clientWidth * 0.62 : keys.clientWidth, state.rowHeight - 1);
+        if (pitch % 12 === 0 && state.rowHeight >= 9) { k.fillStyle = '#0d131a'; k.font = '700 9px ui-monospace, monospace'; k.fillText(noteName(pitch), keys.clientWidth - 24, y + state.rowHeight - 3); }
+      }
+    };
+    const tick = () => {
+      if (!state.playing) return;
+      if (state.follow) {
+        const head = tickX(Tone.getTransport().ticks);
+        if (head < viewport.scrollLeft || head > viewport.scrollLeft + viewport.clientWidth * 0.85) viewport.scrollLeft = Math.max(0, head - viewport.clientWidth * 0.1);
+      }
+      paint();
+      requestAnimationFrame(tick);
+    };
+
+    const pointer = (event) => {
+      const rect = viewport.getBoundingClientRect();
+      return { x: event.clientX - rect.left + viewport.scrollLeft, y: event.clientY - rect.top + viewport.scrollTop, inside: event.clientX - rect.left < viewport.clientWidth && event.clientY - rect.top < viewport.clientHeight };
+    };
+    const hit = ({ x, y }) => {
+      const pitch = yPitch(y);
+      for (let index = state.notes.length - 1; index >= 0; index -= 1) {
+        const note = state.notes[index];
+        const start = tickX(note.start);
+        const end = start + Math.max(3, tickX(note.duration));
+        if (note.pitch === pitch && x >= start && x <= end) return { note, edge: end - x <= Math.min(8, (end - start) / 3) };
+      }
+      return null;
+    };
+    const snapFloor = (tick) => Math.floor(tick / state.snap) * state.snap;
+    const clampPitch = (pitch) => Math.max(LOW, Math.min(HIGH, pitch));
+    const remove = (note) => {
+      state.notes = state.notes.filter((item) => item !== note);
+      if (state.selected === note.id) state.selected = null;
+      notesChanged();
+    };
+    let drag = null;
+    viewport.addEventListener('contextmenu', (event) => event.preventDefault());
+    viewport.addEventListener('pointerdown', (event) => {
+      const position = pointer(event);
+      if (!position.inside || state.tool === 'pan') return;
+      const found = hit(position);
+      if (event.button === 2 || state.tool === 'erase') { if (found) remove(found.note); return; }
+      if (event.button !== 0) return;
+      event.preventDefault();
+      viewport.focus({ preventScroll: true });
+      if (found) {
+        state.selected = found.note.id;
+        drag = { note: found.note, mode: found.edge ? 'resize' : 'move', grab: xTick(position.x) - found.note.start, moved: false };
+      } else {
+        const start = snapFloor(xTick(position.x));
+        if (start >= songTicks()) return;
+        const note = { id: state.nextId++, pitch: clampPitch(yPitch(position.y)), start, duration: Math.min(state.defaultLength, songTicks() - start), velocity: 0.8 };
+        state.notes.push(note);
+        state.selected = note.id;
+        drag = { note, mode: 'move', grab: xTick(position.x) - start, moved: true };
+        audition(note.pitch);
+        notesChanged();
+      }
+      viewport.setPointerCapture(event.pointerId);
+      draw();
+      describe();
+    });
+    viewport.addEventListener('pointermove', (event) => {
+      const position = pointer(event);
+      if (!drag) {
+        if (state.tool === 'draw') { const found = hit(position); viewport.style.cursor = found ? (found.edge ? 'ew-resize' : 'grab') : 'crosshair'; }
+        return;
+      }
+      const note = drag.note;
+      if (drag.mode === 'move') {
+        const start = Math.max(0, Math.min(songTicks() - note.duration, snapFloor(xTick(position.x) - drag.grab + state.snap / 2)));
+        const pitch = clampPitch(yPitch(position.y));
+        if (pitch !== note.pitch) audition(pitch);
+        if (start !== note.start || pitch !== note.pitch) { note.start = start; note.pitch = pitch; drag.moved = true; draw(); }
+      } else {
+        const end = Math.max(note.start + state.snap, Math.min(songTicks(), Math.round(xTick(position.x) / state.snap) * state.snap));
+        if (end - note.start !== note.duration) { note.duration = end - note.start; state.defaultLength = note.duration; drag.moved = true; draw(); }
+      }
+    });
+    const endDrag = () => { if (drag?.moved) notesChanged(); drag = null; };
+    viewport.addEventListener('pointerup', endDrag);
+    viewport.addEventListener('pointercancel', endDrag);
+    viewport.addEventListener('dblclick', (event) => { const found = hit(pointer(event)); if (found && state.tool === 'draw') remove(found.note); });
+    viewport.addEventListener('scroll', draw, { passive: true });
+    viewport.addEventListener('wheel', (event) => {
+      if (!event.ctrlKey && !event.metaKey) return;
+      event.preventDefault();
+      setZoom(state.zoom * (event.deltaY < 0 ? 1.15 : 1 / 1.15), event.clientX - viewport.getBoundingClientRect().left);
+    }, { passive: false });
+    viewport.addEventListener('keydown', (event) => {
+      if (event.key === ' ') { event.preventDefault(); state.playing ? stop() : play(); return; }
+      const note = state.notes.find((item) => item.id === state.selected);
+      if (!note) return;
+      const moves = { ArrowLeft: [-state.snap, 0], ArrowRight: [state.snap, 0], ArrowUp: [0, event.shiftKey ? 12 : 1], ArrowDown: [0, event.shiftKey ? -12 : -1] };
+      if (event.key === 'Delete' || event.key === 'Backspace') { event.preventDefault(); remove(note); return; }
+      if (!moves[event.key]) return;
+      event.preventDefault();
+      if (event.shiftKey && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) note.duration = Math.max(state.snap, Math.min(songTicks() - note.start, note.duration + moves[event.key][0]));
+      else { note.start = Math.max(0, Math.min(songTicks() - note.duration, note.start + moves[event.key][0])); note.pitch = clampPitch(note.pitch + moves[event.key][1]); }
+      if (moves[event.key][1]) audition(note.pitch);
+      notesChanged();
+    });
+    ruler.addEventListener('pointerdown', (event) => {
+      const x = event.clientX - ruler.getBoundingClientRect().left + viewport.scrollLeft;
+      const barTicks = PPQ * state.beatsPerBar;
+      state.startTick = Math.max(0, Math.min(songTicks() - barTicks, Math.floor(xTick(x) / barTicks) * barTicks));
+      if (state.playing) Tone.getTransport().ticks = state.startTick;
+      status.textContent = `Start position: bar ${state.startTick / barTicks + 1}.`;
+      draw();
+    });
+    keys.addEventListener('pointerdown', async (event) => {
+      await engine();
+      audition(clampPitch(yPitch(event.clientY - keys.getBoundingClientRect().top + viewport.scrollTop)));
+    });
+    const setZoom = (value, anchor = viewport.clientWidth / 2) => {
+      const tickAtAnchor = xTick(viewport.scrollLeft + anchor);
+      state.zoom = Math.max(6, Math.min(160, value));
+      $('[data-melody-zoom]').value = String(Math.round(state.zoom));
+      layout();
+      viewport.scrollLeft = tickX(tickAtAnchor) - anchor;
+    };
+    const describe = () => {
+      const selected = state.notes.find((item) => item.id === state.selected);
+      const barTicks = PPQ * state.beatsPerBar;
+      const where = (note) => `${noteName(note.pitch)} at bar ${Math.floor(note.start / barTicks) + 1}, beat ${((note.start % barTicks) / PPQ + 1).toFixed(2).replace(/\.00$/, '')}`;
+      root.dataset.noteCount = String(state.notes.length);
+      summary.textContent = state.notes.length
+        ? `${state.notes.length} ${state.notes.length === 1 ? 'note' : 'notes'} over ${state.bars} bars.${selected ? ` Selected: ${where(selected)}, ${selected.duration / PPQ} ${selected.duration === PPQ ? 'beat' : 'beats'} long.` : ''}`
+        : 'No notes yet. Click the grid to add one.';
+    };
+
+    // ---- persistence ----------------------------------------------------
+    const save = () => {
+      try { localStorage.setItem(STORE, JSON.stringify({ bpm: state.bpm, beatsPerBar: state.beatsPerBar, bars: state.bars, notes: state.notes })); } catch {}
+    };
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
+      if (saved && Array.isArray(saved.notes)) {
+        Object.assign(state, { bpm: saved.bpm, beatsPerBar: saved.beatsPerBar, bars: saved.bars });
+        state.notes = saved.notes.filter((note) => Number.isFinite(note.pitch) && Number.isFinite(note.start) && note.duration > 0).map((note, index) => ({ ...note, id: index + 1 }));
+        state.nextId = state.notes.length + 1;
+        $('[data-melody-bpm]').value = String(state.bpm);
+        $('[data-melody-meter]').value = String(state.beatsPerBar);
+        $('[data-melody-bars]').value = String(state.bars);
+      }
+    } catch {}
+
+    // ---- controls -------------------------------------------------------
+    root.querySelectorAll('[data-param]').forEach((input) => input.addEventListener('input', () => {
+      const output = input.parentElement.querySelector('output');
+      if (output) output.textContent = formatOutput(input);
+      liveVoice?.apply(readVoice());
+    }));
+    $('[data-melody-bpm]').addEventListener('change', (event) => {
+      state.bpm = Math.max(40, Math.min(240, Math.round(Number(event.target.value)) || 120));
+      event.target.value = String(state.bpm);
+      if (Tone) Tone.getTransport().bpm.value = state.bpm;
+      save();
+    });
+    $('[data-melody-meter]').addEventListener('change', (event) => { stop(); state.beatsPerBar = Number(event.target.value); state.startTick = 0; clampNotes(); layout(); notesChanged(); });
+    $('[data-melody-bars]').addEventListener('change', (event) => { stop(); state.bars = Number(event.target.value); state.startTick = Math.min(state.startTick, songTicks() - PPQ); clampNotes(); layout(); notesChanged(); });
+    const clampNotes = () => {
+      state.notes = state.notes.filter((note) => note.start < songTicks());
+      state.notes.forEach((note) => { note.duration = Math.min(note.duration, songTicks() - note.start); });
+    };
+    $('[data-melody-snap]').addEventListener('change', (event) => { state.snap = Number(event.target.value); state.defaultLength = Math.max(state.snap, state.defaultLength); draw(); });
+    $('[data-melody-zoom]').addEventListener('input', (event) => setZoom(Number(event.target.value)));
+    $('[data-melody-rows]').addEventListener('input', (event) => {
+      const centre = (viewport.scrollTop + viewport.clientHeight / 2) / state.rowHeight;
+      state.rowHeight = Number(event.target.value);
+      layout();
+      viewport.scrollTop = centre * state.rowHeight - viewport.clientHeight / 2;
+    });
+    $('[data-melody-follow]').addEventListener('change', (event) => { state.follow = event.target.checked; });
+    root.querySelectorAll('[data-melody-tool]').forEach((button) => button.addEventListener('click', () => {
+      state.tool = button.dataset.melodyTool;
+      root.querySelectorAll('[data-melody-tool]').forEach((other) => other.setAttribute('aria-pressed', String(other === button)));
+      viewport.dataset.tool = state.tool;
+      viewport.style.cursor = state.tool === 'erase' ? 'not-allowed' : state.tool === 'pan' ? 'grab' : 'crosshair';
+    }));
+    const demo = [[60, 0, 240], [63, 240, 240], [67, 480, 480], [70, 960, 240], [68, 1200, 240], [67, 1440, 480], [63, 1920, 240], [65, 2160, 240], [67, 2400, 720], [60, 3120, 240], [58, 3360, 480], [60, 3840, 960], [55, 4800, 480], [58, 5280, 480], [60, 5760, 1920]];
+    const actions = {
+      start: async () => { await engine(); status.textContent = `Audio on (${audioContext.state}, ${audioContext.sampleRate} Hz).`; },
+      play,
+      stop,
+      audition: async () => { await engine(); audition(60); },
+      demo: () => {
+        stop();
+        const offset = state.startTick;
+        state.notes = demo.filter(([, start]) => offset + start < songTicks()).map(([pitch, start, duration], index) => ({ id: state.nextId + index, pitch, start: offset + start, duration: Math.min(duration, songTicks() - offset - start), velocity: 0.8 }));
+        state.nextId += demo.length;
+        state.selected = null;
+        viewport.scrollTop = pitchY(72) - viewport.clientHeight / 3;
+        notesChanged();
+      },
+      clear: () => {
+        const button = $('[data-melody-action="clear"]');
+        if (button.dataset.confirm !== 'true') { button.dataset.confirm = 'true'; button.textContent = 'Click again to clear'; setTimeout(() => { button.dataset.confirm = ''; button.textContent = 'Clear notes'; }, 3000); return; }
+        button.dataset.confirm = '';
+        button.textContent = 'Clear notes';
+        state.notes = [];
+        state.selected = null;
+        notesChanged();
+      },
+      wav: async () => {
+        if (!state.notes.length) { exportResult.textContent = 'Add notes before rendering a WAV.'; return; }
+        const audio = await engine();
+        const voice = readVoice();
+        const seconds = audio.loopSeconds({ bpm: state.bpm, bars: state.bars, beatsPerBar: state.beatsPerBar });
+        const mode = $('[data-melody-tail]').value;
+        const secondsPerTick = 60 / state.bpm / PPQ;
+        exportResult.textContent = 'Rendering...';
+        const started = performance.now();
+        let voiceCount = () => 0;
+        const result = await audio.renderOffline(Tone, () => {
+          const offline = buildVoice(voice, true);
+          offline.output.toDestination();
+          voiceCount = offline.voices;
+          for (const note of [...state.notes].sort((a, b) => a.start - b.start)) offline.trigger(note.pitch, note.duration * secondsPerTick, note.start * secondsPerTick, note.velocity);
+        }, { seconds, tail: voice.release + 0.5, mode });
+        const wav = audio.encodeWavFromChannels(result.channels, result.sampleRate);
+        const name = `melody-sample-${state.bpm}bpm-${state.bars}bars.wav`;
+        audio.downloadBytes(wav, name, 'audio/wav');
+        root.dataset.lastRender = JSON.stringify({ frames: result.channels[0].length, sampleRate: result.sampleRate, peak: result.levels.peak, rms: result.levels.rms, seconds, bytes: wav.length, notes: state.notes.length, voices: voiceCount(), ms: Math.round(performance.now() - started) });
+        exportResult.textContent = `Saved ${name}: ${(result.channels[0].length / result.sampleRate).toFixed(3)} s, 44.1 kHz 16-bit stereo, peak ${audio.toDbfs(result.levels.peak).toFixed(1)} dBFS.`;
+      },
+      midi: async () => {
+        if (!state.notes.length) { exportResult.textContent = 'Add notes before exporting MIDI.'; return; }
+        const audio = await lib;
+        const midi = audio.encodeMidi({ notes: state.notes, bpm: state.bpm, beatsPerBar: state.beatsPerBar, name: 'Melody Sample Maker' });
+        const name = `melody-sample-${state.bpm}bpm-${state.bars}bars.mid`;
+        audio.downloadBytes(midi, name, 'audio/midi');
+        exportResult.textContent = `Saved ${name}: ${state.notes.length} notes at ${state.bpm} BPM in ${state.beatsPerBar}/4. MIDI holds notes only, not the 3xOsc sound.`;
+      },
+    };
+    root.querySelectorAll('[data-melody-action]').forEach((button) => button.addEventListener('click', async () => {
+      try { await actions[button.dataset.melodyAction](); }
+      catch (error) { console.warn(error); status.textContent = `Audio error: ${error instanceof Error ? error.message : String(error)}`; }
+    }));
+
+    document.addEventListener('astro:before-swap', () => { stop(); liveVoice?.dispose(); liveVoice = undefined; }, { once: true });
+    new ResizeObserver(draw).observe(viewport);
+    state.zoom = Number($('[data-melody-zoom]').value);
+    layout();
+    viewport.scrollTop = pitchY(76);
+    describe();
+  })();
+</script>
+
+<style>
+  .sample-tool { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); overflow:hidden; }
+  .tool-bar { display:flex; flex-wrap:wrap; align-items:end; gap:.65rem; padding:1rem 1.25rem; background:var(--night-700); border-bottom:1px solid var(--rule); }
+  .tool-status { flex:1 1 14rem; color:var(--electronic); font:650 .72rem/1.4 var(--mono); text-align:right; align-self:center; }
+  button { border:1px solid var(--rule); border-radius:999px; background:var(--night-800); color:var(--ink); padding:.55rem .9rem; font:650 .78rem/1.1 var(--sans); cursor:pointer; }
+  button:hover:not(:disabled) { border-color:var(--ai); color:var(--ai); }
+  button:focus-visible, select:focus-visible, input:focus-visible, .roll-viewport:focus-visible { outline:2px solid var(--ai); outline-offset:2px; }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  .tool-primary { background:var(--ai); border-color:var(--ai); color:var(--night-900); }
+  .tool-primary:hover:not(:disabled) { color:var(--night-900); filter:brightness(1.1); }
+  [data-audio-state="running"] [data-melody-action="start"] { background:transparent; color:var(--electronic); border-color:var(--electronic); }
+  label { display:grid; gap:.35rem; color:var(--ink-faint); font:650 .68rem/1.2 var(--mono); }
+  label.inline { grid-auto-flow:row; }
+  label output { color:var(--ink-soft); float:right; }
+  select, input[type="number"] { border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.5rem .55rem; font:500 .82rem/1.2 var(--sans); }
+  input[type="number"] { width:5.5rem; }
+  input[type="range"] { width:100%; accent-color:var(--ai); }
+  .check { display:flex; align-items:center; gap:.4rem; align-self:center; }
+  .rack, .roll-panel, .export { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .rack-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:center; gap:.8rem; margin-bottom:1rem; }
+  .rack-head h2, .export h2 { margin:0; font-size:1.15rem; color:var(--ink); }
+  .osc-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:.8rem; }
+  .osc { display:grid; gap:.7rem; align-content:start; margin:0; padding:.9rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }
+  .osc legend { padding:0 .35rem; color:var(--ai); font:700 .72rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+  .roll-tools { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
+  .roll-tools input[type="range"] { width:7rem; }
+  .seg { display:flex; }
+  .seg button { border-radius:0; margin-left:-1px; }
+  .seg button:first-child { border-radius:999px 0 0 999px; }
+  .seg button:last-child { border-radius:0 999px 999px 0; }
+  .seg button[aria-pressed="true"] { background:color-mix(in srgb, var(--ai) 22%, var(--night-800)); color:var(--ai); border-color:var(--ai); position:relative; }
+  .roll { display:grid; grid-template-columns:3.5rem minmax(0, 1fr); grid-template-rows:24px clamp(18rem, 55vh, 34rem); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden; background:var(--night-900); }
+  .roll-corner { background:var(--night-800); border-right:1px solid var(--rule); border-bottom:1px solid var(--rule); }
+  .roll-ruler { display:block; width:100%; height:24px; border-bottom:1px solid var(--rule); cursor:pointer; touch-action:manipulation; }
+  .roll-keys { display:block; width:100%; height:100%; border-right:1px solid var(--rule); cursor:pointer; }
+  .roll-stage { position:relative; min-width:0; }
+  .roll-viewport { position:absolute; inset:0; overflow:auto; cursor:crosshair; touch-action:none; overscroll-behavior:contain; }
+  .roll-viewport[data-tool="pan"] { touch-action:pan-x pan-y; }
+  .roll-spacer { pointer-events:none; }
+  .roll-grid { position:absolute; left:0; top:0; pointer-events:none; }
+  .roll-summary, .export p { margin:.8rem 0 0; color:var(--ink-soft); font-size:.88rem; }
+  .export { display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:1rem 2rem; align-items:end; border-bottom:0; }
+  .export p { margin-top:.4rem; }
+  .export-row { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
+  .export .export-result { grid-column:1 / -1; color:var(--electronic); font:600 .78rem/1.4 var(--mono); min-height:1.2em; margin:0; }
+  @media (max-width:900px) { .osc-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } .export { grid-template-columns:1fr; } }
+  @media (max-width:560px) {
+    .osc-grid { grid-template-columns:1fr; }
+    .tool-status { text-align:left; flex-basis:100%; }
+    .rack, .roll-panel, .export, .tool-bar { padding:1rem; }
+    .roll { grid-template-columns:2.6rem minmax(0, 1fr); }
+    .roll-tools input[type="range"] { width:5.5rem; }
+  }
+</style>

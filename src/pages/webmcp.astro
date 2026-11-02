@@ -33,6 +33,7 @@ const tools = [
   ['list_albums', 'Albums or one complete album track list.'],
   ['where_to_listen', 'Verified hosting profiles and playlists by era.'],
   ['get_ai_music_perspective', 'Alex’s first-person article about AI-assisted creativity, artistic skill, access and the effect on working artists.'],
+  ['get_sample_maker_tools', 'What the in-browser Melody and Drum Sample Makers do, plus exact WAV length and sample count for a tempo and bar count.'],
   ['navigate_catalog', 'Canonical human and machine-readable site destinations.'],
 ];
 ---
@@ -43,7 +44,7 @@ const tools = [
     <div class="shell prose__body" style="margin-top:0">
       <p class="eyebrow">Agent interface · schema {CATALOG_SCHEMA_VERSION}</p>
       <h1>WebMCP for the music catalog</h1>
-      <p class="lede">AlexMercedMusic.com registers {tools.length} read-only browser tools. Agents can find recordings and videos, inspect Suno albums, build and diagnose prompts, calculate scales and chords, translate Roman-numeral progressions, plan projects and navigate to canonical pages without scraping visual lists.</p>
+      <p class="lede">AlexMercedMusic.com registers {tools.length} read-only browser tools. Agents can find recordings and videos, inspect Suno albums, build and diagnose prompts, calculate scales and chords, translate Roman-numeral progressions, size sample-maker exports, plan projects and navigate to canonical pages without scraping visual lists.</p>
       <h2>Available tools</h2>
       <dl class="facts">
         {tools.map(([name, description]) => <div><dt><code>{name}</code></dt><dd>{description}</dd></div>)}

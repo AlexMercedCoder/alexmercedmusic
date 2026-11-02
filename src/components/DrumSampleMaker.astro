@@ -1,0 +1,368 @@
+---
+const instruments = [
+  { id: 'kick', label: 'Kick', note: 'Pitched sine with a falling pitch envelope', controls: [['tune', 'Tune', 35, 90, 1, 50, 'Hz'], ['decay', 'Decay', 0.08, 1.2, 0.01, 0.45, 's'], ['punch', 'Punch', 1, 8, 0.1, 5, 'oct']] },
+  { id: 'snare', label: 'Snare', note: 'Noise burst over a short tone', controls: [['tune', 'Tune', 120, 320, 1, 190, 'Hz'], ['decay', 'Decay', 0.05, 0.6, 0.01, 0.2, 's'], ['snappy', 'Snappy', 0, 100, 1, 70, '%']] },
+  { id: 'hat', label: 'Hi-hat', note: 'High-passed noise', controls: [['tone', 'Tone', 3000, 14000, 50, 8000, 'Hz'], ['decay', 'Decay', 0.015, 0.5, 0.005, 0.06, 's']] },
+  { id: 'tom', label: 'Tom', note: 'Pitched sine with a gentle drop', controls: [['tune', 'Tune', 60, 320, 1, 120, 'Hz'], ['decay', 'Decay', 0.08, 1, 0.01, 0.35, 's']] },
+];
+const STEPS = 64;
+---
+
+<div class="sample-tool" data-drum-maker data-audio-state="idle">
+  <div class="tool-bar">
+    <button type="button" class="tool-primary" data-drum-action="start">Start audio</button>
+    <button type="button" data-drum-action="play">Play</button>
+    <button type="button" data-drum-action="stop" disabled>Stop</button>
+    <label class="inline">BPM<input data-drum-bpm type="number" min="40" max="240" step="1" value="120" inputmode="numeric" /></label>
+    <label class="inline">Pattern<select data-drum-preset><option value="">Choose a preset</option><option value="four">Four on the floor</option><option value="backbeat">Rock backbeat</option><option value="break">Breakbeat</option><option value="halftime">Half-time</option><option value="clear">Clear all steps</option></select></label>
+    <span class="tool-status" data-drum-status aria-live="polite">Audio is off. Press Start audio or Play to begin.</span>
+  </div>
+
+  <section class="rack" aria-labelledby="drum-kit-title">
+    <div class="rack-head"><h2 id="drum-kit-title">Synthesized kit</h2><p>Every sound is generated in your browser, so the kit is free of sample licenses.</p></div>
+    <div class="kit-grid">
+      {instruments.map((instrument) => (
+        <fieldset class="osc" data-instrument={instrument.id}>
+          <legend>{instrument.label}</legend>
+          <p class="hint">{instrument.note}</p>
+          {instrument.controls.map(([param, label, min, max, step, value, unit]) => (
+            <label>{label} <output>{value}{unit === '%' ? '%' : ` ${unit}`}</output><input data-param={param} data-unit={unit} type="range" min={min} max={max} step={step} value={value} /></label>
+          ))}
+          <label>Level <output>80%</output><input data-param="level" data-unit="%" type="range" min="0" max="100" step="1" value="80" /></label>
+          <button type="button" data-drum-hit={instrument.id}>Audition {instrument.label.toLowerCase()}</button>
+        </fieldset>
+      ))}
+    </div>
+  </section>
+
+  <section class="sequencer" aria-labelledby="drum-seq-title">
+    <div class="rack-head"><h2 id="drum-seq-title">4-bar step sequencer</h2><p>16 steps per bar. Each click cycles a step through off, on and accent.</p></div>
+    <div class="seq-scroll">
+      <div class="seq" style={`--steps:${STEPS}`}>
+        <div class="seq-label seq-label--head" aria-hidden="true"></div>
+        {Array.from({ length: 4 }, (_, bar) => <div class="seq-bar" aria-hidden="true">Bar {bar + 1}</div>)}
+        {instruments.map((instrument) => (
+          <>
+            <div class="seq-label" id={`seq-${instrument.id}`}>{instrument.label}</div>
+            {Array.from({ length: 4 }, (_, bar) => (
+              <div class="seq-steps" role="group" aria-label={`${instrument.label}, bar ${bar + 1}`}>
+                {Array.from({ length: 16 }, (_, step) => (
+                  <button type="button" class:list={['step', step % 4 === 0 && 'step--beat']} data-row={instrument.id} data-step={bar * 16 + step} aria-pressed="false" aria-label={`${instrument.label}, bar ${bar + 1}, step ${step + 1}`}></button>
+                ))}
+              </div>
+            ))}
+          </>
+        ))}
+      </div>
+    </div>
+    <p class="roll-summary" data-drum-summary aria-live="polite"></p>
+  </section>
+
+  <section class="export" aria-labelledby="drum-export-title">
+    <div><h2 id="drum-export-title">Export</h2><p>Render the 4-bar loop up to ten times in a row as one 44.1 kHz, 16-bit stereo WAV.</p></div>
+    <div class="export-row">
+      <label class="inline">Repeat<select data-drum-repeats>{Array.from({ length: 10 }, (_, index) => <option value={index + 1} selected={index === 3}>{index + 1}x ({(index + 1) * 4} bars)</option>)}</select></label>
+      <label class="inline">Tail<select data-drum-tail><option value="wrap" selected>Wrap tail to start (clean loop)</option><option value="cut">Cut at the last bar</option><option value="keep">Keep the decay tail</option></select></label>
+      <button type="button" class="tool-primary" data-drum-action="wav">Download WAV</button>
+    </div>
+    <p class="export-result" data-drum-export aria-live="polite"></p>
+  </section>
+</div>
+
+<script is:inline>
+  (() => {
+    const root = document.querySelector('[data-drum-maker]');
+    if (!root || root.dataset.ready) return;
+    root.dataset.ready = 'true';
+    const STEPS = 64;
+    const ROWS = ['kick', 'snare', 'hat', 'tom'];
+    const STORE = 'amm-drum-sample-maker';
+    const VELOCITY = [0, 0.72, 1];
+    const $ = (selector) => root.querySelector(selector);
+    const status = $('[data-drum-status]');
+    const summary = $('[data-drum-summary]');
+    const exportResult = $('[data-drum-export]');
+    const lib = import('/scripts/sample-audio.js');
+    const pattern = Object.fromEntries(ROWS.map((row) => [row, new Array(STEPS).fill(0)]));
+    const buttons = Object.fromEntries(ROWS.map((row) => [row, [...root.querySelectorAll(`.step[data-row="${row}"]`)]]));
+    let bpm = 120;
+    let playing = false;
+
+    const readKit = () => Object.fromEntries(ROWS.map((row) => {
+      const field = root.querySelector(`[data-instrument="${row}"]`);
+      return [row, Object.fromEntries([...field.querySelectorAll('[data-param]')].map((input) => [input.dataset.param, Number(input.value)]))];
+    }));
+
+    // ---- audio ----------------------------------------------------------
+    let audioContext;
+    let Tone;
+    let liveKit;
+    let loopId;
+    const wakeAudio = () => {
+      const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+      audioContext = window.__ammSampleAudioContext ||= new AudioContextClass({ latencyHint: 'interactive' });
+      if (audioContext.state !== 'running') audioContext.resume();
+      const silence = audioContext.createBufferSource();
+      silence.buffer = audioContext.createBuffer(1, 1, audioContext.sampleRate);
+      silence.connect(audioContext.destination);
+      silence.start(0);
+    };
+    const engine = async () => {
+      wakeAudio();
+      const audio = await lib;
+      Tone = await audio.loadTone(audioContext);
+      if (audioContext.state !== 'running') await audioContext.resume();
+      root.dataset.audioState = audioContext.state;
+      if (!liveKit) {
+        liveKit = buildKit(readKit());
+        liveKit.output.toDestination();
+        $('[data-drum-action="start"]').textContent = 'Audio on';
+      }
+      return audio;
+    };
+    // One builder serves live playback and Tone.Offline, so the WAV matches what you hear.
+    const buildKit = (kit) => {
+      const output = new Tone.Gain(0.5);
+      const limiter = new Tone.Limiter(-1).connect(output);
+      const channel = () => new Tone.Gain(1).connect(limiter);
+      const kickOut = channel();
+      const kick = new Tone.MembraneSynth({ oscillator: { type: 'sine' }, octaves: kit.kick.punch, pitchDecay: 0.05, envelope: { attack: 0.001, decay: kit.kick.decay, sustain: 0, release: 0.05 } }).connect(kickOut);
+      const snareOut = channel();
+      const snareTone = new Tone.MembraneSynth({ oscillator: { type: 'sine' }, octaves: 1.5, pitchDecay: 0.02, envelope: { attack: 0.001, decay: kit.snare.decay * 0.6, sustain: 0, release: 0.03 } }).connect(snareOut);
+      const snareFilter = new Tone.Filter({ type: 'highpass', frequency: 1200, Q: 0.7 }).connect(snareOut);
+      const snareNoiseGain = new Tone.Gain(1).connect(snareFilter);
+      const snareNoise = new Tone.NoiseSynth({ noise: { type: 'white' }, envelope: { attack: 0.001, decay: kit.snare.decay, sustain: 0, release: 0.03 } }).connect(snareNoiseGain);
+      const hatOut = channel();
+      const hatFilter = new Tone.Filter({ type: 'highpass', frequency: kit.hat.tone, Q: 1.2 }).connect(hatOut);
+      const hat = new Tone.NoiseSynth({ noise: { type: 'white' }, envelope: { attack: 0.001, decay: kit.hat.decay, sustain: 0, release: 0.01 } }).connect(hatFilter);
+      const tomOut = channel();
+      const tom = new Tone.MembraneSynth({ oscillator: { type: 'sine' }, octaves: 2, pitchDecay: 0.08, envelope: { attack: 0.002, decay: kit.tom.decay, sustain: 0, release: 0.05 } }).connect(tomOut);
+      let current = kit;
+      const apply = (next) => {
+        current = next;
+        kick.set({ octaves: next.kick.punch, envelope: { decay: next.kick.decay } });
+        snareTone.set({ envelope: { decay: next.snare.decay * 0.6 } });
+        snareNoise.set({ envelope: { decay: next.snare.decay } });
+        hatFilter.frequency.value = next.hat.tone;
+        hat.set({ envelope: { decay: next.hat.decay } });
+        tom.set({ envelope: { decay: next.tom.decay } });
+        kickOut.gain.value = next.kick.level / 100;
+        snareOut.gain.value = next.snare.level / 100;
+        snareNoiseGain.gain.value = 0.25 + (next.snare.snappy / 100) * 1.1;
+        hatOut.gain.value = (next.hat.level / 100) * 0.55;
+        tomOut.gain.value = next.tom.level / 100;
+      };
+      apply(kit);
+      const hits = {
+        kick: (time, velocity) => kick.triggerAttackRelease(current.kick.tune, current.kick.decay, time, velocity),
+        snare: (time, velocity) => { snareTone.triggerAttackRelease(current.snare.tune, current.snare.decay * 0.6, time, velocity * 0.7); snareNoise.triggerAttackRelease(current.snare.decay, time, velocity); },
+        hat: (time, velocity) => hat.triggerAttackRelease(current.hat.decay, time, velocity),
+        tom: (time, velocity) => tom.triggerAttackRelease(current.tom.tune, current.tom.decay, time, velocity),
+      };
+      return {
+        output,
+        apply,
+        hit: (row, time, velocity) => hits[row](time, velocity),
+        dispose: () => [kick, snareTone, snareFilter, snareNoiseGain, snareNoise, hatFilter, hat, tom, kickOut, snareOut, hatOut, tomOut, limiter, output].forEach((node) => node.dispose()),
+      };
+    };
+    const stepSeconds = () => 60 / bpm / 4;
+    let shown = -1;
+    const showStep = (step) => {
+      if (shown >= 0) ROWS.forEach((row) => buttons[row][shown].classList.remove('is-now'));
+      shown = step;
+      if (step >= 0) ROWS.forEach((row) => buttons[row][step].classList.add('is-now'));
+      root.dataset.playStep = String(step);
+    };
+    const play = async () => {
+      if (playing) return;
+      await engine();
+      const transport = Tone.getTransport();
+      transport.stop();
+      transport.cancel();
+      transport.bpm.value = bpm;
+      transport.loop = false;
+      let step = 0;
+      const draw = Tone.getDraw();
+      loopId = transport.scheduleRepeat((time) => {
+        const current = step;
+        for (const row of ROWS) if (pattern[row][current]) liveKit.hit(row, time, VELOCITY[pattern[row][current]]);
+        draw.schedule(() => showStep(current), time);
+        step = (step + 1) % STEPS;
+      }, '16n');
+      transport.start('+0.05');
+      playing = true;
+      $('[data-drum-action="play"]').disabled = true;
+      $('[data-drum-action="stop"]').disabled = false;
+      status.textContent = `Playing 4 bars at ${bpm} BPM.`;
+    };
+    const stop = () => {
+      if (!playing) return;
+      const transport = Tone.getTransport();
+      transport.stop();
+      if (loopId !== undefined) transport.clear(loopId);
+      transport.cancel();
+      playing = false;
+      showStep(-1);
+      $('[data-drum-action="play"]').disabled = false;
+      $('[data-drum-action="stop"]').disabled = true;
+      status.textContent = 'Stopped.';
+    };
+
+    // ---- pattern --------------------------------------------------------
+    const stateLabel = ['off', 'on', 'accent'];
+    const paintStep = (row, step) => {
+      const button = buttons[row][step];
+      const value = pattern[row][step];
+      button.setAttribute('aria-pressed', String(value > 0));
+      button.dataset.level = String(value);
+      button.setAttribute('aria-label', `${button.getAttribute('aria-label').replace(/(, (off|on|accent))$/, '')}, ${stateLabel[value]}`);
+    };
+    const describe = () => {
+      const counts = ROWS.map((row) => pattern[row].filter(Boolean).length);
+      const total = counts.reduce((sum, count) => sum + count, 0);
+      root.dataset.activeSteps = String(total);
+      summary.textContent = `${total} active steps: kick ${counts[0]}, snare ${counts[1]}, hi-hat ${counts[2]}, tom ${counts[3]}.`;
+    };
+    const save = () => { try { localStorage.setItem(STORE, JSON.stringify({ bpm, pattern })); } catch {} };
+    const refresh = () => { ROWS.forEach((row) => pattern[row].forEach((_, step) => paintStep(row, step))); describe(); save(); };
+    root.querySelectorAll('.step').forEach((button) => button.addEventListener('click', () => {
+      const row = button.dataset.row;
+      const step = Number(button.dataset.step);
+      pattern[row][step] = (pattern[row][step] + 1) % 3;
+      paintStep(row, step);
+      describe();
+      save();
+      if (pattern[row][step] && liveKit && !playing) liveKit.hit(row, Tone.now(), VELOCITY[pattern[row][step]]);
+    }));
+    const presets = {
+      four: { kick: [0, 4, 8, 12], snare: [4, 12], hat: [2, 6, 10, 14], tom: [] },
+      backbeat: { kick: [0, 7, 8], snare: [4, 12], hat: [0, 2, 4, 6, 8, 10, 12, 14], tom: [] },
+      break: { kick: [0, 10], snare: [4, 12, 15], hat: [0, 2, 4, 6, 8, 10, 12, 14], tom: [] },
+      halftime: { kick: [0, 3, 11], snare: [8], hat: [0, 2, 4, 6, 8, 10, 12, 14], tom: [] },
+    };
+    $('[data-drum-preset]').addEventListener('change', (event) => {
+      const preset = presets[event.target.value];
+      for (const row of ROWS) pattern[row].fill(0);
+      if (preset) {
+        for (let bar = 0; bar < 4; bar += 1) for (const row of ROWS) preset[row].forEach((step) => { pattern[row][bar * 16 + step] = step === 0 && row === 'kick' ? 2 : 1; });
+        if (event.target.value !== 'four') { pattern.tom[48 + 12] = 1; pattern.tom[48 + 13] = 1; pattern.tom[48 + 14] = 2; }
+      }
+      refresh();
+      status.textContent = preset ? `Loaded the ${event.target.selectedOptions[0].textContent.toLowerCase()} pattern.` : 'Cleared every step.';
+      event.target.value = '';
+    });
+    try {
+      const saved = JSON.parse(localStorage.getItem(STORE) || 'null');
+      if (saved?.pattern) {
+        bpm = Math.max(40, Math.min(240, Number(saved.bpm) || 120));
+        $('[data-drum-bpm]').value = String(bpm);
+        for (const row of ROWS) if (Array.isArray(saved.pattern[row])) saved.pattern[row].slice(0, STEPS).forEach((value, step) => { pattern[row][step] = [0, 1, 2].includes(value) ? value : 0; });
+      }
+    } catch {}
+
+    // ---- controls -------------------------------------------------------
+    root.querySelectorAll('[data-param]').forEach((input) => input.addEventListener('input', () => {
+      const unit = input.dataset.unit;
+      input.parentElement.querySelector('output').textContent = unit === '%' ? `${input.value}%` : `${input.value} ${unit}`;
+      liveKit?.apply(readKit());
+    }));
+    $('[data-drum-bpm]').addEventListener('change', (event) => {
+      bpm = Math.max(40, Math.min(240, Math.round(Number(event.target.value)) || 120));
+      event.target.value = String(bpm);
+      if (Tone) Tone.getTransport().bpm.value = bpm;
+      save();
+    });
+    root.querySelectorAll('[data-drum-hit]').forEach((button) => button.addEventListener('click', async () => {
+      await engine();
+      liveKit.hit(button.dataset.drumHit, Tone.now(), 1);
+    }));
+    const actions = {
+      start: async () => { await engine(); status.textContent = `Audio on (${audioContext.state}, ${audioContext.sampleRate} Hz).`; },
+      play,
+      stop,
+      wav: async () => {
+        const repeats = Number($('[data-drum-repeats]').value);
+        const mode = $('[data-drum-tail]').value;
+        if (!ROWS.some((row) => pattern[row].some(Boolean))) { exportResult.textContent = 'Turn on some steps before rendering a WAV.'; return; }
+        const audio = await engine();
+        const kit = readKit();
+        const seconds = audio.loopSeconds({ bpm, bars: 4, repeats });
+        const step = stepSeconds();
+        exportResult.textContent = 'Rendering...';
+        const started = performance.now();
+        const result = await audio.renderOffline(Tone, () => {
+          const offline = buildKit(kit);
+          offline.output.toDestination();
+          for (let repeat = 0; repeat < repeats; repeat += 1) {
+            for (let index = 0; index < STEPS; index += 1) {
+              for (const row of ROWS) if (pattern[row][index]) offline.hit(row, (repeat * STEPS + index) * step, VELOCITY[pattern[row][index]]);
+            }
+          }
+        }, { seconds, tail: 1.5, mode });
+        const wav = audio.encodeWavFromChannels(result.channels, result.sampleRate);
+        const name = `drum-loop-${bpm}bpm-${repeats * 4}bars.wav`;
+        audio.downloadBytes(wav, name, 'audio/wav');
+        root.dataset.lastRender = JSON.stringify({ frames: result.channels[0].length, sampleRate: result.sampleRate, peak: result.levels.peak, rms: result.levels.rms, seconds, bytes: wav.length, ms: Math.round(performance.now() - started) });
+        exportResult.textContent = `Saved ${name}: ${repeats}x the 4-bar loop, ${(result.channels[0].length / result.sampleRate).toFixed(3)} s, peak ${audio.toDbfs(result.levels.peak).toFixed(1)} dBFS.`;
+      },
+    };
+    root.querySelectorAll('[data-drum-action]').forEach((button) => button.addEventListener('click', async () => {
+      try { await actions[button.dataset.drumAction](); }
+      catch (error) { console.warn(error); status.textContent = `Audio error: ${error instanceof Error ? error.message : String(error)}`; }
+    }));
+    document.addEventListener('astro:before-swap', () => { stop(); liveKit?.dispose(); liveKit = undefined; }, { once: true });
+    refresh();
+  })();
+</script>
+
+<style>
+  .sample-tool { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); overflow:hidden; }
+  .tool-bar { display:flex; flex-wrap:wrap; align-items:end; gap:.65rem; padding:1rem 1.25rem; background:var(--night-700); border-bottom:1px solid var(--rule); }
+  .tool-status { flex:1 1 14rem; color:var(--electronic); font:650 .72rem/1.4 var(--mono); text-align:right; align-self:center; }
+  button { border:1px solid var(--rule); border-radius:999px; background:var(--night-800); color:var(--ink); padding:.55rem .9rem; font:650 .78rem/1.1 var(--sans); cursor:pointer; }
+  button:hover:not(:disabled) { border-color:var(--electronic); color:var(--electronic); }
+  button:focus-visible, select:focus-visible, input:focus-visible { outline:2px solid var(--electronic); outline-offset:2px; }
+  button:disabled { opacity:.45; cursor:not-allowed; }
+  .tool-primary { background:var(--electronic); border-color:var(--electronic); color:var(--night-900); }
+  .tool-primary:hover:not(:disabled) { color:var(--night-900); filter:brightness(1.1); }
+  [data-audio-state="running"] [data-drum-action="start"] { background:transparent; color:var(--electronic); }
+  label { display:grid; gap:.35rem; color:var(--ink-faint); font:650 .68rem/1.2 var(--mono); }
+  label output { color:var(--ink-soft); float:right; }
+  select, input[type="number"] { border:1px solid var(--rule); border-radius:.35rem; background:var(--night-900); color:var(--ink); padding:.5rem .55rem; font:500 .82rem/1.2 var(--sans); }
+  input[type="number"] { width:5.5rem; }
+  input[type="range"] { width:100%; accent-color:var(--electronic); }
+  .rack, .sequencer, .export { padding:1.25rem; border-bottom:1px solid var(--rule); }
+  .rack-head { display:flex; flex-wrap:wrap; justify-content:space-between; align-items:baseline; gap:.4rem 1rem; margin-bottom:1rem; }
+  .rack-head h2, .export h2 { margin:0; font-size:1.15rem; color:var(--ink); }
+  .rack-head p { margin:0; color:var(--ink-soft); font-size:.88rem; }
+  .kit-grid { display:grid; grid-template-columns:repeat(4, minmax(0, 1fr)); gap:.8rem; }
+  .osc { display:grid; gap:.7rem; align-content:start; margin:0; padding:.9rem; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }
+  .osc legend { padding:0 .35rem; color:var(--electronic); font:700 .72rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+  .hint { margin:0; color:var(--ink-faint); font-size:.78rem; }
+  .seq-scroll { overflow-x:auto; border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-900); }
+  .seq { display:grid; grid-template-columns:5.5rem repeat(4, max-content); gap:.4rem .7rem; padding:.8rem; min-width:max-content; }
+  .seq-label { position:sticky; left:0; z-index:1; display:flex; align-items:center; padding-right:.4rem; background:var(--night-900); color:var(--ink); font:700 .74rem/1 var(--mono); }
+  .seq-bar { color:var(--ink-faint); font:650 .66rem/1 var(--mono); letter-spacing:.06em; text-transform:uppercase; }
+  .seq-steps { display:grid; grid-template-columns:repeat(16, 1.6rem); gap:.22rem; }
+  .step { width:1.6rem; height:2.1rem; padding:0; border-radius:.3rem; background:var(--night-700); border-color:var(--rule-soft); }
+  .step--beat { background:var(--night-600); }
+  .step:nth-child(4n+1):not(:first-child) { margin-left:.25rem; }
+  .step[data-level="1"] { background:color-mix(in srgb, var(--electronic) 55%, var(--night-800)); border-color:var(--electronic); }
+  .step[data-level="2"] { background:var(--electronic); border-color:var(--ink); box-shadow:inset 0 0 0 2px var(--night-900); }
+  .step.is-now { outline:2px solid var(--ai); outline-offset:1px; }
+  .roll-summary, .export p { margin:.8rem 0 0; color:var(--ink-soft); font-size:.88rem; }
+  .export { display:grid; grid-template-columns:minmax(0, 1fr) auto; gap:1rem 2rem; align-items:end; border-bottom:0; }
+  .export p { margin-top:.4rem; }
+  .export-row { display:flex; flex-wrap:wrap; align-items:end; gap:.6rem; }
+  .export .export-result { grid-column:1 / -1; color:var(--electronic); font:600 .78rem/1.4 var(--mono); min-height:1.2em; margin:0; }
+  @media (max-width:900px) { .kit-grid { grid-template-columns:repeat(2, minmax(0, 1fr)); } .export { grid-template-columns:1fr; } }
+  @media (max-width:560px) {
+    .kit-grid { grid-template-columns:1fr; }
+    .tool-status { text-align:left; flex-basis:100%; }
+    .rack, .sequencer, .export, .tool-bar { padding:1rem; }
+    .seq { grid-template-columns:4rem repeat(4, max-content); }
+    .seq-steps { grid-template-columns:repeat(16, 1.9rem); }
+    .step { width:1.9rem; height:2.4rem; }
+  }
+</style>

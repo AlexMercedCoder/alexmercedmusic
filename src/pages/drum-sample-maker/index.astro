@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import DrumSampleMaker from '../../components/DrumSampleMaker.astro';
+import { sampleMakers } from '../../data/sample-makers';
+import { SITE } from '../../data/catalog-model';
+
+const tool = sampleMakers.drum;
+const faqs = [
+  ['Are the drum sounds free to use?', 'Yes. Nothing is sampled. Every hit is synthesized from oscillators and noise in your browser when you play or export, so there is no sample library or license attached to the sound.'],
+  ['How long is the exported loop?', 'The pattern is 4 bars of 4/4. The WAV repeats it 1 to 10 times, so at 120 BPM one repeat lasts 8 seconds and ten repeats last 80 seconds.'],
+  ['What does an accent do?', 'Each step cycles through off, on and accent. Accented steps play at full velocity and normal steps play softer, which keeps a hi-hat line from sounding mechanical.'],
+  ['Why do I need to press Start audio?', 'Browsers, and Safari on iPhone and iPad in particular, only allow sound after a tap or click. The first button you press starts the audio engine.'],
+  ['Does anything get uploaded?', 'No. Playback and rendering happen entirely in this browser. Your pattern is kept in local storage on this device.'],
+  ['What does the tail option do?', 'Wrap folds the decay of the final hits back onto the start, so the file is exactly the loop length and repeats without a click. Cut drops the tail. Keep leaves it on the end.'],
+];
+const jsonLd = [
+  { '@type': 'TechArticle', '@id': `${tool.pageUrl}#article`, headline: tool.title, description: tool.description, url: tool.pageUrl, datePublished: '2026-11-02', dateModified: '2026-11-02', author: { '@id': 'https://alexmerced.com/#alexmerced' }, publisher: { '@id': 'https://alexmerced.com/#alexmerced' }, about: ['drum machine', 'step sequencer', 'drum synthesis', 'drum loop', 'WAV', 'music production'], proficiencyLevel: 'Beginner' },
+  { '@type': 'WebApplication', '@id': `${tool.pageUrl}#app`, name: tool.title, url: tool.pageUrl, applicationCategory: 'MultimediaApplication', operatingSystem: 'Any modern web browser', browserRequirements: 'Requires the Web Audio API', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, featureList: [...tool.voice, ...tool.composition, ...tool.exports.map(([format, detail]) => `${format}: ${detail}`)] },
+  { '@type': 'FAQPage', mainEntity: faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: tool.title, item: tool.pageUrl }] },
+];
+---
+
+<Base title={tool.title} description={tool.description} keywords={['drum loop maker', 'online step sequencer', 'drum machine in browser', 'synthesized drums', 'free drum loop WAV', 'royalty-free drum loop', 'Web Audio drum machine']} jsonLd={jsonLd} ogType="article" dateModified="2026-11-02">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: tool.title }]} />
+  <section class="section section--tight" data-era="electronic"><div class="shell"><p class="eyebrow">Browser tool · no upload</p><h1>{tool.title}</h1><p class="lede">Tune a synthesized kick, snare, hi-hat and tom, program four bars of 16th-note steps and download the loop as a WAV, repeated up to ten times.</p><div class="btn-row"><a class="btn btn--primary" href="#maker">Open the maker</a><a class="btn" href="/melody-sample-maker/">Melody Sample Maker</a><a class="btn" href="/suno-prompting-guide/">Suno prompting guide</a></div></div></section>
+
+  <section class="section section--tight" id="maker"><div class="shell"><DrumSampleMaker /></div></section>
+
+  <section class="section section--tight"><div class="shell"><div class="section__head"><p class="eyebrow">How it works</p><h2>Four synthesized drums and a 64-step grid</h2></div><div class="grid grid--3">
+    <article class="card"><h3>Shape the kit</h3><ul class="facts-list">{tool.voice.map((item) => <li>{item}</li>)}</ul></article>
+    <article class="card"><h3>Program the pattern</h3><ul class="facts-list">{tool.composition.map((item) => <li>{item}</li>)}</ul><p>Start from a preset, then change single steps. Clicking a step while stopped plays that drum so you can hear the accent.</p></article>
+    <article class="card"><h3>Export</h3><ul class="facts-list">{tool.exports.map(([format, detail]) => <li><strong>{format}:</strong> {detail}</li>)}</ul><p>The file length is exact for the tempo, so it lines up with the grid when you drop it into a DAW.</p></article>
+  </div></div></section>
+
+  <section class="section section--tight"><div class="shell"><div class="section__head"><p class="eyebrow">Common questions</p><h2>Short answers</h2></div><div class="faq-list">{faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}</div></div></section>
+</Base>
+
+<style>
+  .facts-list { margin:.8rem 0; padding-left:1.1rem; color:var(--ink-soft); font-size:.92rem; display:grid; gap:.3rem; }
+  .faq-list { display:grid; gap:.75rem; max-width:55rem; }.faq-list details { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }.faq-list summary { cursor:pointer; padding:1rem; color:var(--ink); font-weight:700; }.faq-list p { padding:1rem; margin:0; color:var(--ink-soft); border-top:1px solid var(--rule); }
+</style>

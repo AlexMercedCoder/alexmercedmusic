@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import MelodySampleMaker from '../../components/MelodySampleMaker.astro';
+import { sampleMakers } from '../../data/sample-makers';
+import { SITE } from '../../data/catalog-model';
+
+const tool = sampleMakers.melody;
+const faqs = [
+  ['What is a 3xOsc synth?', 'It is a subtractive synthesizer built from three oscillators that play together. FL Studio ships a well-known one. Detuning the oscillators against each other, or setting one an octave lower, thickens a simple waveform into a lead, bass or pad.'],
+  ['What is the difference between the WAV and MIDI downloads?', 'The WAV is audio: the melody rendered through the voice you designed on this page. The MIDI file contains only notes, timing, tempo and meter. When you import it into a DAW, the instrument you assign there decides how it sounds.'],
+  ['Why do I need to press Start audio?', 'Browsers, and Safari on iPhone and iPad in particular, only allow sound after a tap or click. The first button you press creates and resumes the audio engine. After that, every control responds immediately.'],
+  ['Does anything get uploaded?', 'No. Synthesis, the piano roll and both exports run entirely in this browser. Your current notes are kept in local storage on this device so a refresh does not lose them.'],
+  ['How long can a melody be?', 'Up to 160 bars. The piano roll only draws the part of the grid you can see, so long arrangements stay responsive. Rendering a long WAV takes a few seconds.'],
+  ['What does the WAV tail option do?', 'Wrap folds the release of the last notes back onto the start, so the file loops cleanly in a sampler or DAW at exactly the song length. Cut drops the tail. Keep leaves it on the end of the file.'],
+];
+const jsonLd = [
+  { '@type': 'TechArticle', '@id': `${tool.pageUrl}#article`, headline: tool.title, description: tool.description, url: tool.pageUrl, datePublished: '2026-11-02', dateModified: '2026-11-02', author: { '@id': 'https://alexmerced.com/#alexmerced' }, publisher: { '@id': 'https://alexmerced.com/#alexmerced' }, about: ['synthesizer', 'piano roll', 'melody', 'MIDI', 'WAV', 'sound design', 'music production'], proficiencyLevel: 'Beginner' },
+  { '@type': 'WebApplication', '@id': `${tool.pageUrl}#app`, name: tool.title, url: tool.pageUrl, applicationCategory: 'MultimediaApplication', operatingSystem: 'Any modern web browser', browserRequirements: 'Requires the Web Audio API', isAccessibleForFree: true, offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' }, featureList: [...tool.voice, ...tool.composition, ...tool.exports.map(([format, detail]) => `${format}: ${detail}`)] },
+  { '@type': 'FAQPage', mainEntity: faqs.map(([question, answer]) => ({ '@type': 'Question', name: question, acceptedAnswer: { '@type': 'Answer', text: answer } })) },
+  { '@type': 'BreadcrumbList', itemListElement: [{ '@type': 'ListItem', position: 1, name: 'Home', item: `${SITE}/` }, { '@type': 'ListItem', position: 2, name: tool.title, item: tool.pageUrl }] },
+];
+---
+
+<Base title={tool.title} description={tool.description} keywords={['melody maker', 'online piano roll', '3xOsc synth', 'browser synthesizer', 'melody to MIDI', 'melody WAV export', 'free melody sample maker', 'Web Audio synth']} jsonLd={jsonLd} ogType="article" dateModified="2026-11-02">
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: tool.title }]} />
+  <section class="section section--tight" data-era="ai"><div class="shell"><p class="eyebrow">Browser tool · no upload</p><h1>{tool.title}</h1><p class="lede">Shape a three-oscillator synth, write a melody in the piano roll and download it as a WAV of your sound or a MIDI file of the notes.</p><div class="btn-row"><a class="btn btn--primary" href="#maker">Open the maker</a><a class="btn" href="/drum-sample-maker/">Drum Sample Maker</a><a class="btn" href="/music-theory/">Music theory guide</a></div></div></section>
+
+  <section class="section section--tight" id="maker"><div class="shell"><MelodySampleMaker /></div></section>
+
+  <section class="section section--tight"><div class="shell"><div class="section__head"><p class="eyebrow">How it works</p><h2>From a waveform to a finished phrase</h2></div><div class="grid grid--3">
+    <article class="card"><h3>Build the voice</h3><ul class="facts-list">{tool.voice.map((item) => <li>{item}</li>)}</ul><p>Press Audition C4 while you move the controls. A saw with a square one octave down and a slightly detuned sine is a good starting lead.</p></article>
+    <article class="card"><h3>Write in the piano roll</h3><ul class="facts-list">{tool.composition.map((item) => <li>{item}</li>)}</ul><p>Click the timeline to choose where playback starts. Ctrl or Command with the scroll wheel zooms around the pointer. On a phone, switch to Scroll to pan the grid.</p></article>
+    <article class="card"><h3>Export</h3><ul class="facts-list">{tool.exports.map(([format, detail]) => <li><strong>{format}:</strong> {detail}</li>)}</ul><p>Use the WAV as a sample or bounce. Use the MIDI to keep editing the notes with a different instrument in your DAW.</p></article>
+  </div></div></section>
+
+  <section class="section section--tight"><div class="shell"><div class="section__head"><p class="eyebrow">Common questions</p><h2>Short answers</h2></div><div class="faq-list">{faqs.map(([question, answer]) => <details><summary>{question}</summary><p>{answer}</p></details>)}</div></div></section>
+</Base>
+
+<style>
+  .facts-list { margin:.8rem 0; padding-left:1.1rem; color:var(--ink-soft); font-size:.92rem; display:grid; gap:.3rem; }
+  .faq-list { display:grid; gap:.75rem; max-width:55rem; }.faq-list details { border:1px solid var(--rule); border-radius:var(--radius); background:var(--night-800); }.faq-list summary { cursor:pointer; padding:1rem; color:var(--ink); font-weight:700; }.faq-list p { padding:1rem; margin:0; color:var(--ink-soft); border-top:1px solid var(--rule); }
+</style>

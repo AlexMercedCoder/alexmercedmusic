@@ -446,6 +446,46 @@ for (const path of ['dist/suno/index.html', 'dist/stories/index.html', 'dist/sto
   assert.ok(read(path).includes(aiPerspectiveUrl), `${path} is missing Alex's AI and music perspective article.`);
 }
 
+for (const [slug, marker, actions] of [['melody-sample-maker', 'data-melody-maker', ['start', 'play', 'stop', 'wav', 'midi']], ['drum-sample-maker', 'data-drum-maker', ['start', 'play', 'stop', 'wav']]]) {
+  const html = read(`dist/${slug}/index.html`);
+  assert.ok(html.includes('TechArticle') && html.includes('FAQPage') && html.includes('BreadcrumbList') && html.includes('WebApplication'), `/${slug}/ is missing structured data.`);
+  assert.ok(html.includes(marker) && html.includes('class="breadcrumbs'), `/${slug}/ is missing its tool or breadcrumbs.`);
+  for (const action of actions) assert.ok(html.includes(`-action="${action}"`), `/${slug}/ is missing its ${action} control.`);
+  assert.ok(!/https?:\/\/[^"' ]*tone/i.test(html), `/${slug}/ must not load Tone.js from a CDN.`);
+  assert.ok(homepage.includes(`href="/${slug}/"`), `/${slug}/ is missing from the navigation.`);
+  assert.ok(sitemap.includes(`<loc>https://alexmercedmusic.com/${slug}/</loc>`), `/${slug}/ is missing from the sitemap.`);
+  assert.ok(read('dist/llms.txt').includes(`/${slug}/`) && read('dist/llms-full.txt').includes(`/${slug}/`), `/${slug}/ is missing from llms.txt.`);
+}
+assert.equal((read('dist/drum-sample-maker/index.html').match(/<button[^>]+class="step/g) ?? []).length, 256, 'The drum sequencer must render 4 rows of 64 steps.');
+for (const path of ['src/pages/melody-sample-maker/index.astro', 'src/pages/drum-sample-maker/index.astro', 'src/components/MelodySampleMaker.astro', 'src/components/DrumSampleMaker.astro', 'src/data/sample-makers.ts', 'public/scripts/sample-audio.js']) {
+  const source = read(path);
+  assert.ok(!source.includes('—'), `${path} contains an em dash.`);
+  assert.ok(!/\b(delv(?:e|es|ing)|unlock(?:s|ed|ing)?|tapestry|game-changer|seamless(?:ly)?|revolutioni[sz]e|embark)\b/i.test(source), `${path} contains an AI writing cliche.`);
+  if (path.startsWith('src/components/')) {
+    const clientScript = source.match(/<script is:inline[^>]*>([\s\S]*?)<\/script>/)?.[1];
+    assert.ok(clientScript, `${path} is missing its client script.`);
+    assert.doesNotThrow(() => new Function(clientScript), `${path} contains invalid JavaScript.`);
+  }
+}
+for (const path of ['dist/scripts/sample-audio.js', 'dist/scripts/vendor/tone-15.1.22.js', 'dist/scripts/vendor/tone-15.1.22.LICENSE.txt']) assert.ok(existsSync(new URL(path, root)), `Missing ${path}.`);
+assert.ok(read('public/scripts/vendor/tone-15.1.22.LICENSE.txt').includes('MIT License'), 'The vendored Tone.js license is missing.');
+const sampleAudio = await import(new URL('../public/scripts/sample-audio.js', import.meta.url));
+assert.equal(sampleAudio.loopSeconds({ bpm: 120, bars: 4, repeats: 10 }), 80);
+assert.equal(sampleAudio.frameCount(sampleAudio.loopSeconds({ bpm: 97, bars: 4, repeats: 3 })), Math.round((48 * 60 / 97) * 44100));
+const wrapped = sampleAudio.shapeTail([Float32Array.from([1, 1, 1, 1, 0.5, 0.25])], 4, 'wrap')[0];
+assert.deepEqual([...wrapped], [1.5, 1.25, 1, 1]);
+assert.equal(sampleAudio.shapeTail([new Float32Array(6)], 4, 'cut')[0].length, 4);
+assert.equal(sampleAudio.measureLevels([Float32Array.from([0.5, -0.5])]).rms, 0.5);
+const midiNotes = Array.from({ length: 300 }, (_, index) => ({ pitch: 48 + (index % 24), start: index * 240, duration: 200 + (index % 3) * 280, velocity: 0.5 + (index % 5) / 10 }));
+const sampleMidi = sampleAudio.encodeMidi({ notes: midiNotes, bpm: 93, beatsPerBar: 3 });
+const parsedMidi = sampleAudio.parseMidi(sampleMidi);
+assert.equal(parsedMidi.format, 0);
+assert.equal(parsedMidi.ppq, 480);
+assert.equal(parsedMidi.timeSignature, '3/4');
+assert.ok(Math.abs(parsedMidi.bpm - 93) < 0.01);
+assert.equal(parsedMidi.notes.length, midiNotes.length);
+assert.deepEqual(parsedMidi.notes.map(({ pitch, start, duration }) => [pitch, start, duration]), midiNotes.map(({ pitch, start, duration }) => [pitch, start, duration]).sort((a, b) => a[1] - b[1] || a[0] - b[0]));
+
 const webMcpSource = read('src/components/WebMCP.astro');
 const script = webMcpSource.match(/<script is:inline>([\s\S]*)<\/script>/)?.[1];
 assert.ok(script, 'Could not locate the WebMCP client script.');
@@ -480,7 +520,7 @@ runInNewContext(script, {
 });
 await new Promise((resolve) => setTimeout(resolve, 0));
 
-const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_albums', 'get_suno_album', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'get_music_theory_guide', 'get_music_theory_section', 'build_scale', 'build_chord', 'translate_roman_progression', 'suggest_theory_palette', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'navigate_catalog'];
+const expectedTools = ['music_overview', 'get_song', 'search_songs', 'list_songs', 'get_recent_songs', 'list_videos', 'get_video', 'compare_versions', 'list_suno_albums', 'get_suno_album', 'get_catalog_updates_since', 'get_suno_prompting_guide', 'get_suno_prompting_section', 'search_suno_prompting_guide', 'compose_suno_prompt', 'transpose_chord_progression', 'design_meter_prompt', 'diagnose_suno_result', 'build_arrangement_blueprint', 'create_album_style_bible', 'get_music_theory_guide', 'get_music_theory_section', 'build_scale', 'build_chord', 'translate_roman_progression', 'suggest_theory_palette', 'list_reimaginings', 'list_albums', 'where_to_listen', 'get_ai_music_perspective', 'get_sample_maker_tools', 'navigate_catalog'];
 assert.deepEqual(registered.map(({ tool }) => tool.name), expectedTools);
 for (const { tool, options } of registered) {
   assert.equal(tool.annotations.readOnlyHint, true);
@@ -596,6 +636,14 @@ assert.ok(theoryPalette.matches.length > 0);
 const pairs = JSON.parse(await getTool('list_reimaginings').execute({}));
 assert.equal(pairs.pairs.length, catalog.counts.reimagined);
 assert.ok(pairs.pairs.every((pair) => pair.original?.pageUrl));
+const sampleTools = JSON.parse(await getTool('get_sample_maker_tools').execute({}));
+assert.deepEqual(Object.keys(sampleTools.tools), ['melody', 'drum']);
+assert.equal(sampleTools.tools.melody.url, `${catalog.site}/melody-sample-maker/`);
+const drumLength = JSON.parse(await getTool('get_sample_maker_tools').execute({ tool: 'drum', bpm: 120, repeats: 10 }));
+assert.equal(drumLength.wavLength.seconds, 80);
+assert.equal(drumLength.wavLength.frames, 80 * 44100);
+const melodyLength = JSON.parse(await getTool('get_sample_maker_tools').execute({ tool: 'melody', bpm: 90, bars: 160 }));
+assert.equal(melodyLength.wavLength.frames, Math.round(((160 * 4 * 60) / 90) * 44100));
 const perspective = JSON.parse(await getTool('get_ai_music_perspective').execute({}));
 assert.equal(perspective.url, aiPerspectiveUrl);
 assert.equal(perspective.author, 'Alex Merced');

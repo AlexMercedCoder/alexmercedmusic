@@ -25,6 +25,8 @@ const pages = {
   '/ethics-of-ai-music/': ['src/pages/ethics-of-ai-music.astro'],
   '/suno-prompting-guide/': ['src/pages/suno-prompting-guide.astro', 'src/data/suno-prompting-guide.ts', 'src/components/SunoPromptWorkbench.astro'],
   '/music-theory/': ['src/pages/music-theory/index.astro', 'src/data/music-theory-guide.ts', 'src/components/MusicTheoryWorkbench.astro'],
+  '/melody-sample-maker/': ['src/pages/melody-sample-maker/index.astro', 'src/components/MelodySampleMaker.astro', 'src/data/sample-makers.ts', 'public/scripts/sample-audio.js'],
+  '/drum-sample-maker/': ['src/pages/drum-sample-maker/index.astro', 'src/components/DrumSampleMaker.astro', 'src/data/sample-makers.ts', 'public/scripts/sample-audio.js'],
 };
 for (const f of readdirSync('src/pages/stories').filter((f) => f.endsWith('.astro') && f !== 'index.astro')) {
   pages[`/stories/${f.replace(/\.astro$/, '')}/`] = [`src/pages/stories/${f}`];
