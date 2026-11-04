@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-10-29';
+export const CATALOG_UPDATED_AT = '2026-11-04';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 

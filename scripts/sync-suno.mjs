@@ -51,11 +51,11 @@ const reimaginedSection = catalogSource.split('// ------------------------------
   ?.split('// ---------------------------------------------------------------- electronic')[0] ?? '';
 const coverIds = new Set([...reimaginedSection.matchAll(/suno\.com\/song\/([a-f0-9-]{36})/g)].map((match) => match[1]));
 
-const pages = [];
+const clipsById = new Map();
 let profilePlaylists = [];
 let page = 1;
 let total = Infinity;
-while (pages.flat().length < total && page <= 100) {
+while (clipsById.size < total && page <= 200) {
   const url = new URL(endpoint);
   url.searchParams.set('page', String(page));
   url.searchParams.set('playlists_sort_by', 'created_at');
@@ -66,12 +66,12 @@ while (pages.flat().length < total && page <= 100) {
   total = Number(data.num_total_clips);
   if (page === 1) profilePlaylists = Array.isArray(data.playlists) ? data.playlists : [];
   if (!Array.isArray(data.clips) || data.clips.length === 0) break;
-  pages.push(data.clips);
+  for (const clip of data.clips) if (clip?.id) clipsById.set(clip.id, clip);
   page += 1;
   await wait(300);
 }
 
-const allClips = pages.flat();
+const allClips = [...clipsById.values()];
 if (allClips.length !== total) throw new Error(`Expected ${total} Suno clips but received ${allClips.length}.`);
 
 const cleanGenres = (value) => String(value ?? '')
