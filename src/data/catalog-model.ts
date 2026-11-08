@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-04';
+export const CATALOG_UPDATED_AT = '2026-11-08';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -445,6 +445,8 @@ const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
     return id ? [[id, song] as const] : [];
   })));
 const verifiedSunoVideoMatches: Record<string, string> = {
+  // The 122-second Short matches this Suno take, not the earlier 120-second version.
+  'wAuR5arEOlM': '5bde2828-75c6-4a0f-ba52-d750d2bcbaf6',
   // Several Suno songs share this title. The 117-second video matches this 116-second album track.
   'KzIDlYp1-yI': '6a9613aa-0dae-4154-b7db-8aea5a0f244c',
   // These newer uploads use near-identical titles shared by older or alternate recordings.

@@ -132,6 +132,10 @@ for (const song of catalog.songs) {
 assert.equal(catalog.counts.videos, catalog.videos.length);
 assert.equal(catalog.counts.shorts, catalog.videos.filter((video) => video.videoType === 'short').length);
 assert.equal(catalog.counts.longFormVideos, catalog.videos.filter((video) => video.videoType === 'video').length);
+const tellMeEnoughVideo = catalog.videos.find((video) => video.youtubeId === 'wAuR5arEOlM');
+assert.equal(tellMeEnoughVideo?.songIds.length, 1, 'Tell Me I’m Enough must link to one recording.');
+assert.ok(catalog.songs.find((song) => song.id === tellMeEnoughVideo.songIds[0])?.links.some((link) => link.url.endsWith('/5bde2828-75c6-4a0f-ba52-d750d2bcbaf6')), 'Tell Me I’m Enough must link to the matching 122-second take.');
+assert.equal(catalog.videos.find((video) => video.youtubeId === 'EqBibLHyLwQ')?.songIds.length, 1, 'Small, Impossible Sweetness must link to its song.');
 assert.ok(catalog.counts.shorts > 0, 'The public YouTube Shorts inventory is unexpectedly empty.');
 assert.ok(catalog.videos.length > 150, 'The public YouTube inventory is unexpectedly small.');
 assert.ok(catalog.videos.filter((video) => video.relatedSongIds.length).length >= 140, 'Too few videos are connected to song records.');
