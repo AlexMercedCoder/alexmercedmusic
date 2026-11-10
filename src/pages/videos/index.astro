@@ -45,7 +45,7 @@ const jsonLd = [{
         <label><span>Connection</span><select id="video-connection"><option value="all">All uploads</option><option value="linked">Linked to songs</option><option value="unlinked">Not yet linked</option></select></label>
         <label><span>Sort each section</span><select id="video-sort"><option value="channel">Newest first</option><option value="oldest">Oldest first</option><option value="az">Title A-Z</option></select></label>
       </div>
-      <div class="video-actions"><p id="video-count" aria-live="polite">Showing {shorts.length} Shorts and {Math.min(PAGE_SIZE, standardVideos.length)} of {standardVideos.length} videos</p><button class="btn" id="video-reset" type="button">Reset filters</button></div>
+      <div class="video-actions"><p id="video-count" aria-live="polite">Showing {Math.min(PAGE_SIZE, shorts.length)} of {shorts.length} Shorts and {Math.min(PAGE_SIZE, standardVideos.length)} of {standardVideos.length} videos</p><button class="btn" id="video-reset" type="button">Reset filters</button></div>
 
       <section class="video-group" id="shorts-section" aria-labelledby="shorts-heading">
         <div class="video-group__head"><div><p class="eyebrow">Vertical and brief</p><h2 id="shorts-heading">Shorts</h2></div><p id="shorts-count">{shorts.length} Shorts</p></div>

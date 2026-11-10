@@ -53,6 +53,7 @@ for (const file of mp3Uploads.files) {
   assert.ok(song?.downloads.some((download) => download.url === file.url), `${file.sourcePath} is not connected to its song.`);
 }
 const downloadsPage = read('dist/downloads/index.html');
+assert.ok(downloadsPage.includes(`Browse ${mp3Uploads.files.length} MP3 recordings`), 'Downloads page count is stale.');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
 for (const title of ['Stacked Up', 'Work in the Ordinary', 'Because I Knew You', 'The Firm Edge']) {
   const song = catalog.songs.find((item) => item.title === title && item.links.some((link) => link.source === 'suno'));
@@ -132,6 +133,16 @@ for (const song of catalog.songs) {
 assert.equal(catalog.counts.videos, catalog.videos.length);
 assert.equal(catalog.counts.shorts, catalog.videos.filter((video) => video.videoType === 'short').length);
 assert.equal(catalog.counts.longFormVideos, catalog.videos.filter((video) => video.videoType === 'video').length);
+const homeCountsPage = read('dist/index.html');
+const sunoCountsPage = read('dist/suno/index.html');
+const videoIndexPage = read('dist/videos/index.html');
+assert.ok(homeCountsPage.includes(`Browse all ${catalog.counts.videos} Shorts and videos`), 'Home video count is stale.');
+assert.ok(sunoCountsPage.includes(`Explore ${catalog.counts.sunoAlbums} official albums and ${catalog.counts.sunoPublished} public Suno generations`), 'Suno page counts are stale.');
+assert.ok(videoIndexPage.includes(`Browse ${catalog.counts.shorts} Shorts first, followed by ${catalog.counts.longFormVideos} full videos`), 'Video page counts are stale.');
+assert.ok(videoIndexPage.includes(`Showing ${Math.min(48, catalog.counts.shorts)} of ${catalog.counts.shorts} Shorts and ${Math.min(48, catalog.counts.longFormVideos)} of ${catalog.counts.longFormVideos} videos`), 'Initial video pagination count is stale.');
+for (const id of ['3lN39vbrkb4', 'Jv1xXMAEa6E']) {
+  assert.equal(catalog.videos.find((video) => video.youtubeId === id)?.songIds.length, 1, `${id} must link to Last Available Human.`);
+}
 const tellMeEnoughVideo = catalog.videos.find((video) => video.youtubeId === 'wAuR5arEOlM');
 assert.equal(tellMeEnoughVideo?.songIds.length, 1, 'Tell Me I’m Enough must link to one recording.');
 assert.ok(catalog.songs.find((song) => song.id === tellMeEnoughVideo.songIds[0])?.links.some((link) => link.url.endsWith('/5bde2828-75c6-4a0f-ba52-d750d2bcbaf6')), 'Tell Me I’m Enough must link to the matching 122-second take.');

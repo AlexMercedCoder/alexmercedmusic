@@ -1218,6 +1218,14 @@
       "uploadedAt": "2026-10-19T21:57:39.628Z"
     },
     {
+      "sourcePath": "Last Available Human.mp3",
+      "sha256": "c600340b14303c3172c9854a6479dbd365733f97590891d12f7dfa4cf2117c29",
+      "sizeBytes": 4880830,
+      "objectKey": "tracks/last-available-human-c600340b14303c31.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/last-available-human-c600340b14303c31.mp3",
+      "uploadedAt": "2026-11-10T14:38:55.756Z"
+    },
+    {
       "sourcePath": "Leave a Door Unclosed.mp3",
       "sha256": "50990b0fa5b20ece4d3dff7d19eb9b554c6f197b56f9867c1f4da60a03f9d2aa",
       "sizeBytes": 5103099,
@@ -1458,6 +1466,14 @@
       "uploadedAt": "2026-10-19T21:57:59.285Z"
     },
     {
+      "sourcePath": "Open Architecture.mp3",
+      "sha256": "09e254b2c3915209fbc7c6b276d8e156700cc70e9c7006738079dcc814375658",
+      "sizeBytes": 2628743,
+      "objectKey": "tracks/open-architecture-09e254b2c3915209.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/open-architecture-09e254b2c3915209.mp3",
+      "uploadedAt": "2026-11-10T14:38:55.213Z"
+    },
+    {
       "sourcePath": "Open Hands.mp3",
       "sha256": "01f7558796e887ac6674fc5acdad0a160a06c5b4b10d3d4292392d87bf9584bb",
       "sizeBytes": 4346724,
@@ -1642,12 +1658,36 @@
       "uploadedAt": "2026-10-19T21:58:15.001Z"
     },
     {
+      "sourcePath": "Side Hustle Hobby.mp3",
+      "sha256": "74c4d41c5ef84c5520f5c8ea6f875cd8f3ba13b7b802f7cd873faf7a616cdaa0",
+      "sizeBytes": 6375355,
+      "objectKey": "tracks/side-hustle-hobby-74c4d41c5ef84c55.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/side-hustle-hobby-74c4d41c5ef84c55.mp3",
+      "uploadedAt": "2026-11-10T14:38:56.227Z"
+    },
+    {
       "sourcePath": "Singapore Noodles.mp3",
       "sha256": "6836082929e62d035f71591f3fe7aa31a910f27b387ca48a26caadf169e5ddcf",
       "sizeBytes": 5258422,
       "objectKey": "tracks/singapore-noodles-6836082929e62d03.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/singapore-noodles-6836082929e62d03.mp3",
       "uploadedAt": "2026-10-19T21:58:15.644Z"
+    },
+    {
+      "sourcePath": "Small, Impossible Sweetness.mp3",
+      "sha256": "c3969f92768ae3e5a8b06b9164a42a1cde63c4595f2b77de02d928e61cea52be",
+      "sizeBytes": 5547801,
+      "objectKey": "tracks/small-impossible-sweetness-c3969f92768ae3e5.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/small-impossible-sweetness-c3969f92768ae3e5.mp3",
+      "uploadedAt": "2026-11-10T14:38:55.974Z"
+    },
+    {
+      "sourcePath": "Sold to Shadows.mp3",
+      "sha256": "49110a868d8a00c20f8b583503940e87298bd8478ad4197622cdbc17c429be6b",
+      "sizeBytes": 4772034,
+      "objectKey": "tracks/sold-to-shadows-49110a868d8a00c2.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/sold-to-shadows-49110a868d8a00c2.mp3",
+      "uploadedAt": "2026-11-10T14:38:57.551Z"
     },
     {
       "sourcePath": "Solumn Thoughts (AI Alex Voice Cover).mp3",
@@ -1698,6 +1738,14 @@
       "uploadedAt": "2026-10-19T21:58:19.991Z"
     },
     {
+      "sourcePath": "Stop Auditioning Here.mp3",
+      "sha256": "3b170ba91edf17345d4653d9a4a510722d2bda0767d63732944faffb5efc2e4d",
+      "sizeBytes": 2918216,
+      "objectKey": "tracks/stop-auditioning-here-3b170ba91edf1734.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/stop-auditioning-here-3b170ba91edf1734.mp3",
+      "uploadedAt": "2026-11-10T14:38:57.910Z"
+    },
+    {
       "sourcePath": "Stop Marching Rows.mp3",
       "sha256": "ecd3a24470c7572c2c39f2a489c3e9a7b2d754803ee1cce6bcfbafda1bcbef76",
       "sizeBytes": 5450899,
@@ -1736,6 +1784,14 @@
       "objectKey": "tracks/tell-me-i-was-here-9eab5d0bfeb6892c.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/tell-me-i-was-here-9eab5d0bfeb6892c.mp3",
       "uploadedAt": "2026-10-19T21:58:23.252Z"
+    },
+    {
+      "sourcePath": "Tell Me I'm Enough.mp3",
+      "sha256": "8e86c030639a02c70da2dcc3f8a2dfe4fbba60059dd421cc5ad871c21ae477c4",
+      "sizeBytes": 2720567,
+      "objectKey": "tracks/tell-me-i-m-enough-8e86c030639a02c7.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/tell-me-i-m-enough-8e86c030639a02c7.mp3",
+      "uploadedAt": "2026-11-10T14:38:58.109Z"
     },
     {
       "sourcePath": "Tell My Heart (AI Alex Voice Cover).mp3",
@@ -1920,6 +1976,14 @@
       "objectKey": "tracks/through-the-darkness-alex-ai-voice-cover-658b64a5f833c1c0.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/through-the-darkness-alex-ai-voice-cover-658b64a5f833c1c0.mp3",
       "uploadedAt": "2026-10-19T21:58:41.834Z"
+    },
+    {
+      "sourcePath": "Thumbprint Ghost.mp3",
+      "sha256": "256cb5dbbb289cf3a5156664f0d16cefe39f7162cddcbdcf300158f6a88e6cd5",
+      "sizeBytes": 5711179,
+      "objectKey": "tracks/thumbprint-ghost-256cb5dbbb289cf3.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/thumbprint-ghost-256cb5dbbb289cf3.mp3",
+      "uploadedAt": "2026-11-10T14:38:58.807Z"
     },
     {
       "sourcePath": "Tin Roof Weather.mp3",
@@ -2420,5 +2484,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-10-29T23:07:56.378Z"
+  "updatedAt": "2026-11-10T14:38:58.807Z"
 }
