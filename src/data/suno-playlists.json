@@ -1,5 +1,109 @@
 [
   {
+    "id": "03450c9b-57a0-45b1-a402-1543e65efba2",
+    "name": "Friendly Force of Havoc",
+    "resourceType": "album",
+    "url": "https://suno.com/album/03450c9b-57a0-45b1-a402-1543e65efba2",
+    "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1931.92,
+    "description": "Friendly Force of Havoc fuses melodic prog rock, glitchy IDM, phonk 808s, math-rock precision, and crushing sludge around sampled chiptune melodies to dissect the wreckage of loving too widely and needing too much. Across ten candid tracks, Alex Merced confronts the thin line between genuine care and a validation-hungry addiction, owning the army of goodbyes, missed chances, and quiet devastation left behind a friendly, understanding face.",
+    "trackIds": [
+      "8aaac9e6-ad13-4634-8745-7b1994c5a0a8",
+      "6ac339da-e203-4ad4-b3d3-438fe7c3d9cb",
+      "d96cbc38-367e-44f0-998d-c8763dab2a31",
+      "62a8143f-b356-40ce-a2a0-df781f4a361d",
+      "893206bb-6403-4743-998e-bc5672160697",
+      "b3705308-390c-4d39-8e4e-4cba16d5accb",
+      "4340e776-5e07-4705-b8f5-db8e50f516ea",
+      "99387065-1e66-4446-a1a4-a53bcc9e8110",
+      "48d7cc18-0893-4ee9-b836-5c7e7f6fad4d",
+      "407ad56e-a653-49f7-b9f4-72083a048188"
+    ],
+    "tracks": [
+      {
+        "id": "8aaac9e6-ad13-4634-8745-7b1994c5a0a8",
+        "title": "Impossible Math",
+        "url": "https://suno.com/song/8aaac9e6-ad13-4634-8745-7b1994c5a0a8",
+        "createdAt": "2026-11-14T14:52:05.790Z",
+        "durationSeconds": 216.96,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "6ac339da-e203-4ad4-b3d3-438fe7c3d9cb",
+        "title": "The Second I’m Alone",
+        "url": "https://suno.com/song/6ac339da-e203-4ad4-b3d3-438fe7c3d9cb",
+        "createdAt": "2026-11-14T14:52:07.620Z",
+        "durationSeconds": 194.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "d96cbc38-367e-44f0-998d-c8763dab2a31",
+        "title": "Too Many Tables",
+        "url": "https://suno.com/song/d96cbc38-367e-44f0-998d-c8763dab2a31",
+        "createdAt": "2026-11-14T14:52:09.748Z",
+        "durationSeconds": 189.56,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "62a8143f-b356-40ce-a2a0-df781f4a361d",
+        "title": "Earned on Credit",
+        "url": "https://suno.com/song/62a8143f-b356-40ce-a2a0-df781f4a361d",
+        "createdAt": "2026-11-14T14:52:11.866Z",
+        "durationSeconds": 181.2,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "893206bb-6403-4743-998e-bc5672160697",
+        "title": "Good Man, Bad Habit",
+        "url": "https://suno.com/song/893206bb-6403-4743-998e-bc5672160697",
+        "createdAt": "2026-11-14T14:52:14.445Z",
+        "durationSeconds": 186.8,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "b3705308-390c-4d39-8e4e-4cba16d5accb",
+        "title": "Every Goodbye Costs",
+        "url": "https://suno.com/song/b3705308-390c-4d39-8e4e-4cba16d5accb",
+        "createdAt": "2026-11-14T14:52:37.861Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "4340e776-5e07-4705-b8f5-db8e50f516ea",
+        "title": "The Standing Army",
+        "url": "https://suno.com/song/4340e776-5e07-4705-b8f5-db8e50f516ea",
+        "createdAt": "2026-11-14T14:52:40.173Z",
+        "durationSeconds": 197.6,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "99387065-1e66-4446-a1a4-a53bcc9e8110",
+        "title": "Where the Generous Turns",
+        "url": "https://suno.com/song/99387065-1e66-4446-a1a4-a53bcc9e8110",
+        "createdAt": "2026-11-14T14:52:42.551Z",
+        "durationSeconds": 182,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "48d7cc18-0893-4ee9-b836-5c7e7f6fad4d",
+        "title": "Friendly Face, Wrecking Ball",
+        "url": "https://suno.com/song/48d7cc18-0893-4ee9-b836-5c7e7f6fad4d",
+        "createdAt": "2026-11-14T14:52:45.084Z",
+        "durationSeconds": 196.4,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      },
+      {
+        "id": "407ad56e-a653-49f7-b9f4-72083a048188",
+        "title": "Havoc in Warm Hands",
+        "url": "https://suno.com/song/407ad56e-a653-49f7-b9f4-72083a048188",
+        "createdAt": "2026-11-14T14:52:47.246Z",
+        "durationSeconds": 200.6,
+        "imageUrl": "https://cdn2.suno.ai/image_a5272f5d-7ee8-4aaa-94d5-dfd9c18b5ced.jpeg"
+      }
+    ]
+  },
+  {
     "id": "e23bb239-79d5-4354-b308-de29f26b61b4",
     "name": "What’s Fits In My Hands",
     "resourceType": "album",
