@@ -1146,6 +1146,14 @@
       "uploadedAt": "2026-10-19T21:57:34.576Z"
     },
     {
+      "sourcePath": "I Gave, I Took.mp3",
+      "sha256": "69bb406522479425877d95e8321fa7550e091673df166725affe08f0ad7520d5",
+      "sizeBytes": 5222975,
+      "objectKey": "tracks/i-gave-i-took-69bb406522479425.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/i-gave-i-took-69bb406522479425.mp3",
+      "uploadedAt": "2026-11-14T05:27:53.494Z"
+    },
+    {
       "sourcePath": "I Name the Room.mp3",
       "sha256": "b2f2a8a9bfd43cc28a933d1414ba1371a6b8bfb2d909b34d1a320e74113e0c00",
       "sizeBytes": 7031711,
@@ -1328,6 +1336,14 @@
       "objectKey": "tracks/make-room-where-you-stand-d36a1ad453cbf36d.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/make-room-where-you-stand-d36a1ad453cbf36d.mp3",
       "uploadedAt": "2026-10-19T21:57:48.394Z"
+    },
+    {
+      "sourcePath": "Many Fins, One Sea.mp3",
+      "sha256": "9a46edf30c43fefc57e47276847b567643d79fac7f38b7f0a29b9beb1c0b5be3",
+      "sizeBytes": 6240638,
+      "objectKey": "tracks/many-fins-one-sea-9a46edf30c43fefc.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/many-fins-one-sea-9a46edf30c43fefc.mp3",
+      "uploadedAt": "2026-11-14T05:27:53.378Z"
     },
     {
       "sourcePath": "Maps I Cannot Fold.mp3",
@@ -2170,6 +2186,14 @@
       "uploadedAt": "2026-10-19T21:58:55.723Z"
     },
     {
+      "sourcePath": "You Lean, I Catch.mp3",
+      "sha256": "2ce845c1e7c7987c05d975e7e1925e241e672c4d530d3bda14b46fec7cf2fcf7",
+      "sizeBytes": 6873239,
+      "objectKey": "tracks/you-lean-i-catch-2ce845c1e7c7987c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/you-lean-i-catch-2ce845c1e7c7987c.mp3",
+      "uploadedAt": "2026-11-14T05:27:53.545Z"
+    },
+    {
       "sourcePath": "YOUR NAME IS ALREADY TALKING.mp3",
       "sha256": "eb0d7304f5812fa9fa9555eff0a7d5e4b1cb9de1fa1ac07ff07279d5e98874ab",
       "sizeBytes": 5403944,
@@ -2484,5 +2508,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-10T14:38:58.807Z"
+  "updatedAt": "2026-11-14T05:27:53.545Z"
 }

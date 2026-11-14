@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-11';
+export const CATALOG_UPDATED_AT = '2026-11-14';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -453,6 +453,8 @@ const verifiedSunoVideoMatches: Record<string, string> = {
   // These newer uploads use near-identical titles shared by older or alternate recordings.
   'AwgTlArFMwE': '54b08258-ad05-47fe-9f70-d4374b230911',
   'jKdPUaMGPyo': '92dc62d8-fd78-4550-a10c-d50612d0b92e',
+  // The MP3's embedded Suno ID and 248-second runtime identify this take.
+  'L4UEVSZhmeg': '60f590d9-ac7d-4d56-beec-c288658f00ce',
 };
 const verifiedCatalogVideoMatches: Record<string, string> = {
   // These Shorts use altered or repeated titles, but their runtimes match the reimagined recordings.
