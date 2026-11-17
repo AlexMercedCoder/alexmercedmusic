@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-14';
+export const CATALOG_UPDATED_AT = '2026-11-16';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -455,6 +455,8 @@ const verifiedSunoVideoMatches: Record<string, string> = {
   'jKdPUaMGPyo': '92dc62d8-fd78-4550-a10c-d50612d0b92e',
   // The MP3's embedded Suno ID and 248-second runtime identify this take.
   'L4UEVSZhmeg': '60f590d9-ac7d-4d56-beec-c288658f00ce',
+  // This Short directs listeners to the Paper Planets recording and its MP3.
+  'c_Kg2WO_qYk': 'ed2426de-7f75-4838-b6d9-9a12e13c891c',
 };
 const verifiedCatalogVideoMatches: Record<string, string> = {
   // These Shorts use altered or repeated titles, but their runtimes match the reimagined recordings.

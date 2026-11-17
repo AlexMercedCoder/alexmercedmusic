@@ -148,6 +148,11 @@ assert.ok(videoIndexPage.includes(`Showing ${Math.min(48, catalog.counts.shorts)
 for (const id of ['3lN39vbrkb4', 'Jv1xXMAEa6E']) {
   assert.equal(catalog.videos.find((video) => video.youtubeId === id)?.songIds.length, 1, `${id} must link to Last Available Human.`);
 }
+for (const [videoId, title] of [['c_Kg2WO_qYk', 'Paper Planets'], ['ZJTd2JTliTM', 'The Hole in My Heart']]) {
+  const video = catalog.videos.find((item) => item.youtubeId === videoId);
+  assert.equal(video?.songIds.length, 1, `${videoId} must link to one song.`);
+  assert.equal(catalog.songs.find((song) => song.id === video.songIds[0])?.title, title, `${videoId} must link to ${title}.`);
+}
 const tellMeEnoughVideo = catalog.videos.find((video) => video.youtubeId === 'wAuR5arEOlM');
 assert.equal(tellMeEnoughVideo?.songIds.length, 1, 'Tell Me I’m Enough must link to one recording.');
 assert.ok(catalog.songs.find((song) => song.id === tellMeEnoughVideo.songIds[0])?.links.some((link) => link.url.endsWith('/5bde2828-75c6-4a0f-ba52-d750d2bcbaf6')), 'Tell Me I’m Enough must link to the matching 122-second take.');
