@@ -1218,6 +1218,14 @@
       "uploadedAt": "2026-10-19T21:57:39.077Z"
     },
     {
+      "sourcePath": "Kindness Wins.mp3",
+      "sha256": "0998a127f8f348ec86c4aa9d5f4bc3d9187556caf7ede148ceb95ae647178366",
+      "sizeBytes": 5634296,
+      "objectKey": "tracks/kindness-wins-0998a127f8f348ec.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/kindness-wins-0998a127f8f348ec.mp3",
+      "uploadedAt": "2026-11-17T16:23:40.053Z"
+    },
+    {
       "sourcePath": "King of the Table.mp3",
       "sha256": "cc6252ca225f6911e18c5e6355b677aaf3790c3fdeb8abeadd2c4dd4c024364f",
       "sizeBytes": 4383806,
@@ -2508,5 +2516,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-14T05:27:53.545Z"
+  "updatedAt": "2026-11-17T16:23:40.054Z"
 }

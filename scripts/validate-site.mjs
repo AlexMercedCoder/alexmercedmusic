@@ -56,6 +56,8 @@ for (const file of ['I Gave, I Took.mp3', 'Many Fins, One Sea.mp3', 'You Lean, I
   assert.ok(mp3Matches[file], `${file} needs a song-page download.`);
 }
 assert.equal(mp3Matches['You Lean, I Catch.mp3'], 'song:generated:ct7sox', 'You Lean, I Catch must use the 248-second Suno recording.');
+const kindnessSong = catalog.songs.find((song) => song.id === mp3Matches['Kindness Wins.mp3']);
+assert.ok(kindnessSong?.links.some((link) => link.url === 'https://suno.com/song/e4db4d29-513b-4c7e-8e18-1838ff6fd9f3'), 'Kindness Wins MP3 must link to its matching Suno recording.');
 const downloadsPage = read('dist/downloads/index.html');
 assert.ok(downloadsPage.includes(`Browse ${mp3Uploads.files.length} MP3 recordings`), 'Downloads page count is stale.');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);

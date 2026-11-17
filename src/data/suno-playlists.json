@@ -1,5 +1,118 @@
 [
   {
+    "id": "0d060218-997e-4a52-8f9f-3c32cdc4d9e9",
+    "name": "Love Heals",
+    "resourceType": "album",
+    "url": "https://suno.com/album/0d060218-997e-4a52-8f9f-3c32cdc4d9e9",
+    "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg",
+    "songCount": 11,
+    "durationSeconds": 2321.04,
+    "description": "Songs about positivity and embracing a world of love.",
+    "trackIds": [
+      "1ee50601-2a58-49ea-ac16-1ab550059fca",
+      "69982475-02f7-4912-a9ad-32b4c43df660",
+      "28a23f31-3dd3-4968-8c01-547ad9778707",
+      "2da9930e-78d8-43fa-8c92-538b55460690",
+      "b73dcf41-71de-49c5-8ae2-905620698700",
+      "3dc17047-df9b-4d69-abf0-10f8a8481eaf",
+      "e4db4d29-513b-4c7e-8e18-1838ff6fd9f3",
+      "891967ae-04c5-448e-8dcc-84fe8ce1f5bc",
+      "a623193e-94d7-4881-9edc-702082ef9bd2",
+      "45ad5001-9f23-464b-b0f6-b1201b99ba3e",
+      "a7acd6f3-fe67-462e-b13d-aed475598be0"
+    ],
+    "tracks": [
+      {
+        "id": "1ee50601-2a58-49ea-ac16-1ab550059fca",
+        "title": "Map in My Hands",
+        "url": "https://suno.com/song/1ee50601-2a58-49ea-ac16-1ab550059fca",
+        "createdAt": "2026-11-17T13:47:42.097Z",
+        "durationSeconds": 227.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "69982475-02f7-4912-a9ad-32b4c43df660",
+        "title": "Watch Me Rise",
+        "url": "https://suno.com/song/69982475-02f7-4912-a9ad-32b4c43df660",
+        "createdAt": "2026-11-17T13:54:23.391Z",
+        "durationSeconds": 165.96,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "28a23f31-3dd3-4968-8c01-547ad9778707",
+        "title": "Take It From You",
+        "url": "https://suno.com/song/28a23f31-3dd3-4968-8c01-547ad9778707",
+        "createdAt": "2026-11-17T13:59:20.873Z",
+        "durationSeconds": 211.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "2da9930e-78d8-43fa-8c92-538b55460690",
+        "title": "Shifting My Weight",
+        "url": "https://suno.com/song/2da9930e-78d8-43fa-8c92-538b55460690",
+        "createdAt": "2026-11-17T14:04:35.627Z",
+        "durationSeconds": 198,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "b73dcf41-71de-49c5-8ae2-905620698700",
+        "title": "I Shine Just Fine",
+        "url": "https://suno.com/song/b73dcf41-71de-49c5-8ae2-905620698700",
+        "createdAt": "2026-11-17T14:10:59.885Z",
+        "durationSeconds": 209.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "3dc17047-df9b-4d69-abf0-10f8a8481eaf",
+        "title": "Climb the Fire Escape",
+        "url": "https://suno.com/song/3dc17047-df9b-4d69-abf0-10f8a8481eaf",
+        "createdAt": "2026-11-17T14:15:14.944Z",
+        "durationSeconds": 181.2,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "e4db4d29-513b-4c7e-8e18-1838ff6fd9f3",
+        "title": "Kindness Wins",
+        "url": "https://suno.com/song/e4db4d29-513b-4c7e-8e18-1838ff6fd9f3",
+        "createdAt": "2026-11-17T15:00:31.241Z",
+        "durationSeconds": 207.16,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "891967ae-04c5-448e-8dcc-84fe8ce1f5bc",
+        "title": "Lean With Love",
+        "url": "https://suno.com/song/891967ae-04c5-448e-8dcc-84fe8ce1f5bc",
+        "createdAt": "2026-11-17T15:13:36.494Z",
+        "durationSeconds": 216,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "a623193e-94d7-4881-9edc-702082ef9bd2",
+        "title": "Salt in the Water",
+        "url": "https://suno.com/song/a623193e-94d7-4881-9edc-702082ef9bd2",
+        "createdAt": "2026-11-17T15:21:35.732Z",
+        "durationSeconds": 239.96,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "45ad5001-9f23-464b-b0f6-b1201b99ba3e",
+        "title": "We Can Be More",
+        "url": "https://suno.com/song/45ad5001-9f23-464b-b0f6-b1201b99ba3e",
+        "createdAt": "2026-11-17T15:24:48.506Z",
+        "durationSeconds": 207.6,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      },
+      {
+        "id": "a7acd6f3-fe67-462e-b13d-aed475598be0",
+        "title": "Kindness Wins (Bonus Alternate Version)",
+        "url": "https://suno.com/song/a7acd6f3-fe67-462e-b13d-aed475598be0",
+        "createdAt": "2026-11-17T15:00:31.241Z",
+        "durationSeconds": 257.16,
+        "imageUrl": "https://cdn2.suno.ai/image_9268631a-916b-4347-9fa3-35df1bdc5ff7.jpeg"
+      }
+    ]
+  },
+  {
     "id": "d505631b-5b54-421b-85c3-ca04542bb8c1",
     "name": "Everyone Deserves Love",
     "resourceType": "album",
