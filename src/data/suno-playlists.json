@@ -1,5 +1,109 @@
 [
   {
+    "id": "e407366d-1ca0-440b-8d6b-e20a291b79d5",
+    "name": "More Alive In Difference",
+    "resourceType": "album",
+    "url": "https://suno.com/album/e407366d-1ca0-440b-8d6b-e20a291b79d5",
+    "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1071.32,
+    "description": "An Album celebrating individuality and thinking outside the box.",
+    "trackIds": [
+      "1a3fad4a-0146-4b14-9ff4-eb029bbd15a3",
+      "e5402dc2-3721-4c5c-bf49-b1c92b26ee9b",
+      "394c0c8a-5596-44d5-a472-42c61b0f871f",
+      "4a4d1787-5a06-4e2c-8aba-4d9e9b4a049e",
+      "b672547e-28de-46c3-abf1-bd69777b90f4",
+      "03ebb6b1-d487-4753-9340-ace56ed373ef",
+      "b4bcb355-af83-4f7f-83d0-60d1e722703f",
+      "d09e88fe-2324-484f-b11f-dbd02dad04ea",
+      "64f47bbb-a2a8-4119-956d-85ef2b33a548",
+      "5c6536c4-479f-4193-8055-0a25a45b9906"
+    ],
+    "tracks": [
+      {
+        "id": "1a3fad4a-0146-4b14-9ff4-eb029bbd15a3",
+        "title": "No One Made The Same",
+        "url": "https://suno.com/song/1a3fad4a-0146-4b14-9ff4-eb029bbd15a3",
+        "createdAt": "2026-11-18T16:23:26.229Z",
+        "durationSeconds": 94.36,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "e5402dc2-3721-4c5c-bf49-b1c92b26ee9b",
+        "title": "The Unwritten Rule",
+        "url": "https://suno.com/song/e5402dc2-3721-4c5c-bf49-b1c92b26ee9b",
+        "createdAt": "2026-11-18T16:27:54.372Z",
+        "durationSeconds": 104,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "394c0c8a-5596-44d5-a472-42c61b0f871f",
+        "title": "Your Different Weather",
+        "url": "https://suno.com/song/394c0c8a-5596-44d5-a472-42c61b0f871f",
+        "createdAt": "2026-11-18T16:31:26.603Z",
+        "durationSeconds": 128,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "4a4d1787-5a06-4e2c-8aba-4d9e9b4a049e",
+        "title": "The Useful Misfit",
+        "url": "https://suno.com/song/4a4d1787-5a06-4e2c-8aba-4d9e9b4a049e",
+        "createdAt": "2026-11-18T16:36:30.722Z",
+        "durationSeconds": 109.96,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "b672547e-28de-46c3-abf1-bd69777b90f4",
+        "title": "Many Kinds of Courage",
+        "url": "https://suno.com/song/b672547e-28de-46c3-abf1-bd69777b90f4",
+        "createdAt": "2026-11-18T16:43:21.949Z",
+        "durationSeconds": 106.4,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "03ebb6b1-d487-4753-9340-ace56ed373ef",
+        "title": "Let the Question Live",
+        "url": "https://suno.com/song/03ebb6b1-d487-4753-9340-ace56ed373ef",
+        "createdAt": "2026-11-18T16:47:47.938Z",
+        "durationSeconds": 98,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "b4bcb355-af83-4f7f-83d0-60d1e722703f",
+        "title": "The Things You Noticed",
+        "url": "https://suno.com/song/b4bcb355-af83-4f7f-83d0-60d1e722703f",
+        "createdAt": "2026-11-18T16:52:08.149Z",
+        "durationSeconds": 100.8,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "d09e88fe-2324-484f-b11f-dbd02dad04ea",
+        "title": "Not a Copy of You",
+        "url": "https://suno.com/song/d09e88fe-2324-484f-b11f-dbd02dad04ea",
+        "createdAt": "2026-11-18T17:03:01.461Z",
+        "durationSeconds": 100,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "64f47bbb-a2a8-4119-956d-85ef2b33a548",
+        "title": "A Better Kind of Wealth",
+        "url": "https://suno.com/song/64f47bbb-a2a8-4119-956d-85ef2b33a548",
+        "createdAt": "2026-11-18T17:10:03.130Z",
+        "durationSeconds": 104.64,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      },
+      {
+        "id": "5c6536c4-479f-4193-8055-0a25a45b9906",
+        "title": "The World We Keep Becoming",
+        "url": "https://suno.com/song/5c6536c4-479f-4193-8055-0a25a45b9906",
+        "createdAt": "2026-11-18T17:12:57.334Z",
+        "durationSeconds": 125.16,
+        "imageUrl": "https://cdn2.suno.ai/image_cef63544-7267-4a93-a145-73441d0eeef9.jpeg"
+      }
+    ]
+  },
+  {
     "id": "8f52e5c0-31e4-415e-848d-c88047278b1d",
     "name": "Decay In Hate, Reborn In Love",
     "resourceType": "album",
