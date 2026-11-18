@@ -61,6 +61,10 @@ Cloudflare R2 at `mp3.alexmercedcloud.com`. The local source folder is
 `/home/alexmerced/development/music/mp3` by default. Set `MP3_SOURCE` to use
 another folder.
 
+Folders named `suno-fuel` or `sumo-fuel` are excluded from website downloads,
+even if they appear inside a configured MP3 source. Do not use either folder as
+`MP3_SOURCE`.
+
 After adding files, with Wrangler logged in, run:
 
 ```

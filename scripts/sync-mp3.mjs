@@ -10,13 +10,20 @@ const manifestPath = path.join(repo, 'src/data/mp3-uploads.json');
 const bucket = 'alexmercedmusic-mp3';
 const baseUrl = 'https://mp3.alexmercedcloud.com';
 const concurrency = 4;
+const excludedSourceDirectories = new Set(['suno-fuel', 'sumo-fuel']);
+
+if (source.split(path.sep).some((part) => excludedSourceDirectories.has(part.toLowerCase()))) {
+  throw new Error('The Suno/Sumo fuel folder is excluded from website MP3 downloads.');
+}
 
 async function listMp3s(directory, prefix = '') {
   const entries = await fs.readdir(directory, { withFileTypes: true });
   const files = [];
   for (const entry of entries) {
     const relative = path.posix.join(prefix, entry.name);
-    if (entry.isDirectory()) files.push(...await listMp3s(path.join(directory, entry.name), relative));
+    if (entry.isDirectory() && !excludedSourceDirectories.has(entry.name.toLowerCase())) {
+      files.push(...await listMp3s(path.join(directory, entry.name), relative));
+    }
     else if (entry.isFile() && entry.name.toLowerCase().endsWith('.mp3')) files.push(relative);
   }
   return files.sort((a, b) => a.localeCompare(b));

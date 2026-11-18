@@ -1,5 +1,222 @@
 [
   {
+    "id": "8f52e5c0-31e4-415e-848d-c88047278b1d",
+    "name": "Decay In Hate, Reborn In Love",
+    "resourceType": "album",
+    "url": "https://suno.com/album/8f52e5c0-31e4-415e-848d-c88047278b1d",
+    "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg",
+    "songCount": 11,
+    "durationSeconds": 1648.56,
+    "description": "An album that tells the story of world poisoned with hate and the path to recovery based in love.",
+    "trackIds": [
+      "0362598f-e2d6-41ea-94f8-bb20813b1aa4",
+      "da3c1947-cebb-4162-a1a8-26ed3994aee3",
+      "b61366b7-f146-459d-81d0-1bad8bb792a0",
+      "812af920-e96f-4e1f-a9f6-b3905fab2c2b",
+      "3a975b60-43dc-4588-8565-71f663809e1c",
+      "c6c188bf-cc3c-41c5-a038-9e159d610c24",
+      "88cbe327-6a64-4af1-b025-d4b0472c10f3",
+      "053c6dcc-bdc6-4610-97ee-aab9bfcc9ee9",
+      "5679e0f6-bb0f-4b59-b8e0-1a246c881e4b",
+      "1cac7ef3-f836-4df6-b574-008b67058f3f",
+      "e1d8802d-5198-4787-b09a-3f08e59543e0"
+    ],
+    "tracks": [
+      {
+        "id": "0362598f-e2d6-41ea-94f8-bb20813b1aa4",
+        "title": "Fear Finds a Voice",
+        "url": "https://suno.com/song/0362598f-e2d6-41ea-94f8-bb20813b1aa4",
+        "createdAt": "2026-11-17T21:47:53.514Z",
+        "durationSeconds": 142.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "da3c1947-cebb-4162-a1a8-26ed3994aee3",
+        "title": "The Inheritance of Anger",
+        "url": "https://suno.com/song/da3c1947-cebb-4162-a1a8-26ed3994aee3",
+        "createdAt": "2026-11-17T21:52:03.901Z",
+        "durationSeconds": 136,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "b61366b7-f146-459d-81d0-1bad8bb792a0",
+        "title": "The Arithmetic of Us",
+        "url": "https://suno.com/song/b61366b7-f146-459d-81d0-1bad8bb792a0",
+        "createdAt": "2026-11-17T21:56:26.335Z",
+        "durationSeconds": 132.4,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "812af920-e96f-4e1f-a9f6-b3905fab2c2b",
+        "title": "The First to Lower Their Voice",
+        "url": "https://suno.com/song/812af920-e96f-4e1f-a9f6-b3905fab2c2b",
+        "createdAt": "2026-11-17T22:00:35.030Z",
+        "durationSeconds": 138,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "3a975b60-43dc-4588-8565-71f663809e1c",
+        "title": "Hands that Mend",
+        "url": "https://suno.com/song/3a975b60-43dc-4588-8565-71f663809e1c",
+        "createdAt": "2026-11-17T22:03:43.134Z",
+        "durationSeconds": 168.36,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "c6c188bf-cc3c-41c5-a038-9e159d610c24",
+        "title": "Mercy with a Backbone",
+        "url": "https://suno.com/song/c6c188bf-cc3c-41c5-a038-9e159d610c24",
+        "createdAt": "2026-11-17T22:06:37.999Z",
+        "durationSeconds": 129.88,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "88cbe327-6a64-4af1-b025-d4b0472c10f3",
+        "title": "A Different Kind of Strong",
+        "url": "https://suno.com/song/88cbe327-6a64-4af1-b025-d4b0472c10f3",
+        "createdAt": "2026-11-17T22:12:06.969Z",
+        "durationSeconds": 146,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "053c6dcc-bdc6-4610-97ee-aab9bfcc9ee9",
+        "title": "The Work of Many Hands",
+        "url": "https://suno.com/song/053c6dcc-bdc6-4610-97ee-aab9bfcc9ee9",
+        "createdAt": "2026-11-17T22:45:13.136Z",
+        "durationSeconds": 126.8,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "5679e0f6-bb0f-4b59-b8e0-1a246c881e4b",
+        "title": "When We Choose Each Other",
+        "url": "https://suno.com/song/5679e0f6-bb0f-4b59-b8e0-1a246c881e4b",
+        "createdAt": "2026-11-17T22:49:24.345Z",
+        "durationSeconds": 135.56,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "1cac7ef3-f836-4df6-b574-008b67058f3f",
+        "title": "The World Can Heal Again",
+        "url": "https://suno.com/song/1cac7ef3-f836-4df6-b574-008b67058f3f",
+        "createdAt": "2026-11-17T22:54:15.219Z",
+        "durationSeconds": 151.6,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      },
+      {
+        "id": "e1d8802d-5198-4787-b09a-3f08e59543e0",
+        "title": "BONUS Track: Hope Fades, But I Remain",
+        "url": "https://suno.com/song/e1d8802d-5198-4787-b09a-3f08e59543e0",
+        "createdAt": "2026-11-17T21:40:58.632Z",
+        "durationSeconds": 241.16,
+        "imageUrl": "https://cdn2.suno.ai/image_1b6f32c6-7c6c-430b-8619-4708d5eef714.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "bb4975a8-9f41-4c21-9f24-7c631338625f",
+    "name": "One Act At A Time",
+    "resourceType": "album",
+    "url": "https://suno.com/album/bb4975a8-9f41-4c21-9f24-7c631338625f",
+    "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1647.64,
+    "description": "An album about healing our world with kindness, love and forgiveness.",
+    "trackIds": [
+      "d0c76f49-2428-4430-8fc6-7a64b51d3963",
+      "396038ac-82c6-4225-ae52-e80085ea1419",
+      "1a23ea5e-d2fa-40da-9649-59b8969efb5e",
+      "c467c847-51ed-428f-95d6-24debad50faa",
+      "9fcaad1a-5fea-46dd-bb18-33e096d01f0b",
+      "9f9415bb-4a25-4595-9fba-49a459bb24fa",
+      "e3d7391c-e803-4755-95e2-063a03667c99",
+      "8bd30447-eae9-48c2-ad0f-bbb3ecb502e4",
+      "a3a8b32b-200b-4cde-8595-21d32962e93f",
+      "ab8a0fe3-12a9-4615-b583-11dd2cc529f7"
+    ],
+    "tracks": [
+      {
+        "id": "d0c76f49-2428-4430-8fc6-7a64b51d3963",
+        "title": "Antidote in Small Doses",
+        "url": "https://suno.com/song/d0c76f49-2428-4430-8fc6-7a64b51d3963",
+        "createdAt": "2026-11-17T19:24:12.908Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "396038ac-82c6-4225-ae52-e80085ea1419",
+        "title": "Put Down the Ledger",
+        "url": "https://suno.com/song/396038ac-82c6-4225-ae52-e80085ea1419",
+        "createdAt": "2026-11-17T19:24:14.691Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "1a23ea5e-d2fa-40da-9649-59b8969efb5e",
+        "title": "Unlearn the Panic",
+        "url": "https://suno.com/song/1a23ea5e-d2fa-40da-9649-59b8969efb5e",
+        "createdAt": "2026-11-17T19:24:16.775Z",
+        "durationSeconds": 164.72,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "c467c847-51ed-428f-95d6-24debad50faa",
+        "title": "Mercy at the Checkout",
+        "url": "https://suno.com/song/c467c847-51ed-428f-95d6-24debad50faa",
+        "createdAt": "2026-11-17T19:24:18.322Z",
+        "durationSeconds": 165.2,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "9fcaad1a-5fea-46dd-bb18-33e096d01f0b",
+        "title": "Disarm the Table",
+        "url": "https://suno.com/song/9fcaad1a-5fea-46dd-bb18-33e096d01f0b",
+        "createdAt": "2026-11-17T19:24:20.188Z",
+        "durationSeconds": 164.52,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "9f9415bb-4a25-4595-9fba-49a459bb24fa",
+        "title": "Wash Off the Rust of Hate",
+        "url": "https://suno.com/song/9f9415bb-4a25-4595-9fba-49a459bb24fa",
+        "createdAt": "2026-11-17T19:25:13.524Z",
+        "durationSeconds": 164.4,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "e3d7391c-e803-4755-95e2-063a03667c99",
+        "title": "Grace for the Messy",
+        "url": "https://suno.com/song/e3d7391c-e803-4755-95e2-063a03667c99",
+        "createdAt": "2026-11-17T19:25:15.516Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "8bd30447-eae9-48c2-ad0f-bbb3ecb502e4",
+        "title": "Slow Down the Anger",
+        "url": "https://suno.com/song/8bd30447-eae9-48c2-ad0f-bbb3ecb502e4",
+        "createdAt": "2026-11-17T19:25:17.425Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "a3a8b32b-200b-4cde-8595-21d32962e93f",
+        "title": "Sidewalk Choir",
+        "url": "https://suno.com/song/a3a8b32b-200b-4cde-8595-21d32962e93f",
+        "createdAt": "2026-11-17T19:25:19.397Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      },
+      {
+        "id": "ab8a0fe3-12a9-4615-b583-11dd2cc529f7",
+        "title": "The Patient Cure",
+        "url": "https://suno.com/song/ab8a0fe3-12a9-4615-b583-11dd2cc529f7",
+        "createdAt": "2026-11-17T19:25:21.357Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_6d3e59f0-b432-44f9-a1e4-edae2389f0d9.jpeg"
+      }
+    ]
+  },
+  {
     "id": "0d060218-997e-4a52-8f9f-3c32cdc4d9e9",
     "name": "Love Heals",
     "resourceType": "album",

@@ -44,6 +44,7 @@ assert.equal(catalog.counts.songsWithMp3, catalog.songs.filter((song) => song.do
 assert.equal(new Set(mp3Uploads.files.map((file) => file.sourcePath)).size, mp3Uploads.files.length);
 assert.equal(new Set(mp3Uploads.files.map((file) => file.url)).size, mp3Uploads.files.length);
 for (const file of mp3Uploads.files) {
+  assert.ok(!file.sourcePath.split('/').some((part) => /^(?:suno|sumo)-fuel$/i.test(part)), `${file.sourcePath} is an excluded fuel file.`);
   assert.ok(file.url.startsWith('https://mp3.alexmercedcloud.com/tracks/'), `${file.sourcePath} has the wrong host.`);
   assert.match(file.sha256, /^[a-f0-9]{64}$/);
   assert.ok(file.sizeBytes > 0);
@@ -58,6 +59,8 @@ for (const file of ['I Gave, I Took.mp3', 'Many Fins, One Sea.mp3', 'You Lean, I
 assert.equal(mp3Matches['You Lean, I Catch.mp3'], 'song:generated:ct7sox', 'You Lean, I Catch must use the 248-second Suno recording.');
 const kindnessSong = catalog.songs.find((song) => song.id === mp3Matches['Kindness Wins.mp3']);
 assert.ok(kindnessSong?.links.some((link) => link.url === 'https://suno.com/song/e4db4d29-513b-4c7e-8e18-1838ff6fd9f3'), 'Kindness Wins MP3 must link to its matching Suno recording.');
+const healingSong = catalog.songs.find((song) => song.id === mp3Matches['The World Can Heal Again.mp3']);
+assert.ok(healingSong?.links.some((link) => link.url === 'https://suno.com/song/1cac7ef3-f836-4df6-b574-008b67058f3f'), 'The World Can Heal Again MP3 must link to its matching Suno recording.');
 const downloadsPage = read('dist/downloads/index.html');
 assert.ok(downloadsPage.includes(`Browse ${mp3Uploads.files.length} MP3 recordings`), 'Downloads page count is stale.');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
