@@ -250,6 +250,16 @@ for (const [youtubeId, title] of [
   assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(video.watchUrl), `${title} song page must link back to the video.`);
 }
 const ghostsVideo = catalog.videos.find((video) => video.youtubeId === 'QwjkX3W9TW0');
+for (const [youtubeId, videoType, songTitle] of [
+  ['v2IWqEWqoG8', 'video', 'Kindness Wins'],
+  ['RVlmDDxEA00', 'short', 'The World Can Heal Again'],
+]) {
+  const video = catalog.videos.find((item) => item.youtubeId === youtubeId);
+  const song = catalog.songs.find((item) => item.title === songTitle && video?.songIds.includes(item.id));
+  assert.equal(video?.videoType, videoType, `${songTitle} has the wrong YouTube tab.`);
+  assert.ok(song, `${songTitle} YouTube upload must connect to its song page.`);
+  assert.ok(read(`dist/songs/${song.slug}/index.html`).includes(video.watchUrl), `${songTitle} song page must link back to YouTube.`);
+}
 const ghostsAcoustic = catalog.songs.find((song) => song.title === 'Ghosts of Choices (acoustic)');
 assert.ok(ghostsVideo?.relatedSongIds.includes(ghostsAcoustic?.id), 'Ghosts of Choices video must link to its generated acoustic version.');
 
