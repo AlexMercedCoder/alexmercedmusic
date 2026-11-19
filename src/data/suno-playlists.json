@@ -1,5 +1,290 @@
 [
   {
+    "id": "2f6528c3-eced-4a2b-b164-03b7156852ef",
+    "name": "Who is Alex Merced?",
+    "resourceType": "album",
+    "url": "https://suno.com/album/2f6528c3-eced-4a2b-b164-03b7156852ef",
+    "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg",
+    "songCount": 5,
+    "durationSeconds": 595,
+    "description": "An album exploring the person I am and the life I’ve lived.",
+    "trackIds": [
+      "7b96b1e3-3567-45b2-860b-68ba5543691f",
+      "2d6cf14f-ce48-4abe-aac5-ee6798b6eb71",
+      "04dc9ccf-4a5f-4f48-9a01-d7d5891f67b0",
+      "abaff89d-d41f-4bc4-953c-7242a0f46d25",
+      "0f200aeb-b9e8-4d92-aab9-a239549e2723"
+    ],
+    "tracks": [
+      {
+        "id": "7b96b1e3-3567-45b2-860b-68ba5543691f",
+        "title": "A Question With Many Answers",
+        "url": "https://suno.com/song/7b96b1e3-3567-45b2-860b-68ba5543691f",
+        "createdAt": "2026-11-19T04:35:39.468Z",
+        "durationSeconds": 125.4,
+        "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg"
+      },
+      {
+        "id": "2d6cf14f-ce48-4abe-aac5-ee6798b6eb71",
+        "title": "The Frequency of Learning",
+        "url": "https://suno.com/song/2d6cf14f-ce48-4abe-aac5-ee6798b6eb71",
+        "createdAt": "2026-11-19T04:39:05.492Z",
+        "durationSeconds": 113.96,
+        "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg"
+      },
+      {
+        "id": "04dc9ccf-4a5f-4f48-9a01-d7d5891f67b0",
+        "title": "The Second First Day",
+        "url": "https://suno.com/song/04dc9ccf-4a5f-4f48-9a01-d7d5891f67b0",
+        "createdAt": "2026-11-19T04:44:57.037Z",
+        "durationSeconds": 103.64,
+        "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg"
+      },
+      {
+        "id": "abaff89d-d41f-4bc4-953c-7242a0f46d25",
+        "title": "Open Hands, Open Systems",
+        "url": "https://suno.com/song/abaff89d-d41f-4bc4-953c-7242a0f46d25",
+        "createdAt": "2026-11-19T04:47:57.673Z",
+        "durationSeconds": 115.6,
+        "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg"
+      },
+      {
+        "id": "0f200aeb-b9e8-4d92-aab9-a239549e2723",
+        "title": "Still In Motion",
+        "url": "https://suno.com/song/0f200aeb-b9e8-4d92-aab9-a239549e2723",
+        "createdAt": "2026-11-19T04:51:24.687Z",
+        "durationSeconds": 136.4,
+        "imageUrl": "https://cdn2.suno.ai/image_095fa390-5106-45a2-921a-0a95d3b6e95f.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "d4260021-35c9-44ba-93de-c79f9383b935",
+    "name": "A Chorus of Almosts",
+    "resourceType": "album",
+    "url": "https://suno.com/album/d4260021-35c9-44ba-93de-c79f9383b935",
+    "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1443.8799999999999,
+    "description": "An album about grieving and finding acceptance for the lives you will never live.",
+    "trackIds": [
+      "f774d056-f946-4181-815e-e111f68c4db1",
+      "0b476174-8e3e-45b1-bbbf-731717a7336b",
+      "1e91997a-c430-432a-ba2e-c9b71f675b62",
+      "b7d3800c-e2f7-4bc9-a1c3-cf3734a8d9c5",
+      "c780ed1d-120d-46ab-a8b0-c01c1174ebc9",
+      "89808be7-c429-41d3-9d6f-775d38319869",
+      "c320dfb7-fd67-4ac4-9500-31737d4166fe",
+      "e7c41223-30e5-40c5-b97f-c349335b7edc",
+      "9ecb0814-bc76-44fd-8a8b-934ab331c2cb",
+      "9c35f2c2-9d89-4f20-8eb5-ef18f07c079f"
+    ],
+    "tracks": [
+      {
+        "id": "f774d056-f946-4181-815e-e111f68c4db1",
+        "title": "The Friends I Never Became",
+        "url": "https://suno.com/song/f774d056-f946-4181-815e-e111f68c4db1",
+        "createdAt": "2026-11-19T00:02:08.707Z",
+        "durationSeconds": 136,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "0b476174-8e3e-45b1-bbbf-731717a7336b",
+        "title": "The Other Names",
+        "url": "https://suno.com/song/0b476174-8e3e-45b1-bbbf-731717a7336b",
+        "createdAt": "2026-11-19T00:10:36.705Z",
+        "durationSeconds": 119.16,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "1e91997a-c430-432a-ba2e-c9b71f675b62",
+        "title": "An Elegy for the Almost",
+        "url": "https://suno.com/song/1e91997a-c430-432a-ba2e-c9b71f675b62",
+        "createdAt": "2026-11-19T00:23:42.292Z",
+        "durationSeconds": 162.8,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "b7d3800c-e2f7-4bc9-a1c3-cf3734a8d9c5",
+        "title": "The Self Who Stayed",
+        "url": "https://suno.com/song/b7d3800c-e2f7-4bc9-a1c3-cf3734a8d9c5",
+        "createdAt": "2026-11-19T00:35:43.502Z",
+        "durationSeconds": 116.8,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "c780ed1d-120d-46ab-a8b0-c01c1174ebc9",
+        "title": "The Museum of Could-Have-Been",
+        "url": "https://suno.com/song/c780ed1d-120d-46ab-a8b0-c01c1174ebc9",
+        "createdAt": "2026-11-19T00:38:17.808Z",
+        "durationSeconds": 137.6,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "89808be7-c429-41d3-9d6f-775d38319869",
+        "title": "The Grief Has Many Faces",
+        "url": "https://suno.com/song/89808be7-c429-41d3-9d6f-775d38319869",
+        "createdAt": "2026-11-19T00:43:56.318Z",
+        "durationSeconds": 130,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "c320dfb7-fd67-4ac4-9500-31737d4166fe",
+        "title": "Borrowed Courage",
+        "url": "https://suno.com/song/c320dfb7-fd67-4ac4-9500-31737d4166fe",
+        "createdAt": "2026-11-19T00:50:58.624Z",
+        "durationSeconds": 164,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "e7c41223-30e5-40c5-b97f-c349335b7edc",
+        "title": "A Future I Can Touch",
+        "url": "https://suno.com/song/e7c41223-30e5-40c5-b97f-c349335b7edc",
+        "createdAt": "2026-11-19T00:59:24.618Z",
+        "durationSeconds": 159.2,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "9ecb0814-bc76-44fd-8a8b-934ab331c2cb",
+        "title": "Let The Ghosts Be Kind",
+        "url": "https://suno.com/song/9ecb0814-bc76-44fd-8a8b-934ab331c2cb",
+        "createdAt": "2026-11-19T01:07:43.667Z",
+        "durationSeconds": 140.72,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      },
+      {
+        "id": "9c35f2c2-9d89-4f20-8eb5-ef18f07c079f",
+        "title": "This Life in My Hands",
+        "url": "https://suno.com/song/9c35f2c2-9d89-4f20-8eb5-ef18f07c079f",
+        "createdAt": "2026-11-19T01:26:33.736Z",
+        "durationSeconds": 177.6,
+        "imageUrl": "https://cdn2.suno.ai/image_7b65950f-4f3c-408d-9a45-4f824209acaf.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "ea24f873-68d5-4f70-9c23-488a7d8bebbc",
+    "name": "The Smile I Keep",
+    "resourceType": "album",
+    "url": "https://suno.com/album/ea24f873-68d5-4f70-9c23-488a7d8bebbc",
+    "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg",
+    "songCount": 12,
+    "durationSeconds": 1959.12,
+    "description": "An album about projecting joy when that is not what is occurring inside of you.",
+    "trackIds": [
+      "b77a3d79-3496-45d2-a7da-d3247dd1da5e",
+      "3cdcac7d-2b79-40d3-a7b2-3a7f201375a3",
+      "7acf7dfb-acb0-4c6e-970a-9a3c4bcec079",
+      "0ae39085-c7fc-48a5-9c57-30f8ccc01630",
+      "8e907d80-5827-4c33-bf7e-90232467d0da",
+      "01c58908-d9df-431b-a9bf-7aeda56e895b",
+      "4aa8b3f6-d55e-44a3-944f-ac9d802121ab",
+      "dfa387e8-5df7-4635-b330-6d88230fdc9d",
+      "053c8936-3628-4620-a9fa-4d39bb085d50",
+      "c502a6ab-c7a4-4f59-935a-fc5251ef60aa",
+      "2695b4f7-e161-461f-9125-c2fde55cc2e6",
+      "f0116bc7-4746-43a9-b51f-cf310f5900ad"
+    ],
+    "tracks": [
+      {
+        "id": "b77a3d79-3496-45d2-a7da-d3247dd1da5e",
+        "title": "The Life I Didn’t Choose",
+        "url": "https://suno.com/song/b77a3d79-3496-45d2-a7da-d3247dd1da5e",
+        "createdAt": "2026-11-18T19:04:37.126Z",
+        "durationSeconds": 172.76,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "3cdcac7d-2b79-40d3-a7b2-3a7f201375a3",
+        "title": "The Reset I Can’t Make",
+        "url": "https://suno.com/song/3cdcac7d-2b79-40d3-a7b2-3a7f201375a3",
+        "createdAt": "2026-11-18T19:07:44.257Z",
+        "durationSeconds": 137.6,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "7acf7dfb-acb0-4c6e-970a-9a3c4bcec079",
+        "title": "The Smile I Keep",
+        "url": "https://suno.com/song/7acf7dfb-acb0-4c6e-970a-9a3c4bcec079",
+        "createdAt": "2026-11-18T19:13:40.412Z",
+        "durationSeconds": 163.2,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "0ae39085-c7fc-48a5-9c57-30f8ccc01630",
+        "title": "All The Ways I’ve Stayed",
+        "url": "https://suno.com/song/0ae39085-c7fc-48a5-9c57-30f8ccc01630",
+        "createdAt": "2026-11-18T19:28:54.690Z",
+        "durationSeconds": 141.2,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "8e907d80-5827-4c33-bf7e-90232467d0da",
+        "title": "Borrowed Hours",
+        "url": "https://suno.com/song/8e907d80-5827-4c33-bf7e-90232467d0da",
+        "createdAt": "2026-11-18T19:35:56.673Z",
+        "durationSeconds": 161.2,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "01c58908-d9df-431b-a9bf-7aeda56e895b",
+        "title": "The Cost of Changing Course",
+        "url": "https://suno.com/song/01c58908-d9df-431b-a9bf-7aeda56e895b",
+        "createdAt": "2026-11-18T19:41:24.994Z",
+        "durationSeconds": 144,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "4aa8b3f6-d55e-44a3-944f-ac9d802121ab",
+        "title": "The Small Bright Things",
+        "url": "https://suno.com/song/4aa8b3f6-d55e-44a3-944f-ac9d802121ab",
+        "createdAt": "2026-11-18T19:46:13.632Z",
+        "durationSeconds": 131.2,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "dfa387e8-5df7-4635-b330-6d88230fdc9d",
+        "title": "A Good Day, Somehow",
+        "url": "https://suno.com/song/dfa387e8-5df7-4635-b330-6d88230fdc9d",
+        "createdAt": "2026-11-18T19:53:30.780Z",
+        "durationSeconds": 156.4,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "053c8936-3628-4620-a9fa-4d39bb085d50",
+        "title": "No Villain in The Story",
+        "url": "https://suno.com/song/053c8936-3628-4620-a9fa-4d39bb085d50",
+        "createdAt": "2026-11-18T19:57:52.947Z",
+        "durationSeconds": 130.76,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "c502a6ab-c7a4-4f59-935a-fc5251ef60aa",
+        "title": "The Best I Can From Here",
+        "url": "https://suno.com/song/c502a6ab-c7a4-4f59-935a-fc5251ef60aa",
+        "createdAt": "2026-11-18T19:59:12.424Z",
+        "durationSeconds": 157.6,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "2695b4f7-e161-461f-9125-c2fde55cc2e6",
+        "title": "Bonus: Little Green Saying",
+        "url": "https://suno.com/song/2695b4f7-e161-461f-9125-c2fde55cc2e6",
+        "createdAt": "2026-11-18T18:56:40.941Z",
+        "durationSeconds": 231.6,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      },
+      {
+        "id": "f0116bc7-4746-43a9-b51f-cf310f5900ad",
+        "title": "Bonus: Keep a Place for Me",
+        "url": "https://suno.com/song/f0116bc7-4746-43a9-b51f-cf310f5900ad",
+        "createdAt": "2026-11-18T18:56:40.941Z",
+        "durationSeconds": 231.6,
+        "imageUrl": "https://cdn2.suno.ai/image_eadaac02-95d3-4dc6-a110-38ea03e3cefd.jpeg"
+      }
+    ]
+  },
+  {
     "id": "e407366d-1ca0-440b-8d6b-e20a291b79d5",
     "name": "More Alive In Difference",
     "resourceType": "album",

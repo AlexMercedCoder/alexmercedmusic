@@ -1362,6 +1362,14 @@
       "uploadedAt": "2026-10-19T21:57:48.530Z"
     },
     {
+      "sourcePath": "Mercy with a Backbone.mp3",
+      "sha256": "4c0358c49243cb426984047f32d14fc84d87714d4d3a911391e407d7f62584cd",
+      "sizeBytes": 4316535,
+      "objectKey": "tracks/mercy-with-a-backbone-4c0358c49243cb42.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/mercy-with-a-backbone-4c0358c49243cb42.mp3",
+      "uploadedAt": "2026-11-19T15:30:42.201Z"
+    },
+    {
       "sourcePath": "Milk Cap Summer.mp3",
       "sha256": "91d92df6f5eb22f74ffd033c9c021ecf6cf9e173a8c5c1f436487b6e8502b160",
       "sizeBytes": 5201999,
@@ -2524,5 +2532,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-18T02:17:17.702Z"
+  "updatedAt": "2026-11-19T15:30:42.201Z"
 }

@@ -61,6 +61,8 @@ const kindnessSong = catalog.songs.find((song) => song.id === mp3Matches['Kindne
 assert.ok(kindnessSong?.links.some((link) => link.url === 'https://suno.com/song/e4db4d29-513b-4c7e-8e18-1838ff6fd9f3'), 'Kindness Wins MP3 must link to its matching Suno recording.');
 const healingSong = catalog.songs.find((song) => song.id === mp3Matches['The World Can Heal Again.mp3']);
 assert.ok(healingSong?.links.some((link) => link.url === 'https://suno.com/song/1cac7ef3-f836-4df6-b574-008b67058f3f'), 'The World Can Heal Again MP3 must link to its matching Suno recording.');
+const mercySong = catalog.songs.find((song) => song.id === mp3Matches['Mercy with a Backbone.mp3']);
+assert.ok(mercySong?.links.some((link) => link.url === 'https://suno.com/song/c6c188bf-cc3c-41c5-a038-9e159d610c24'), 'Mercy with a Backbone MP3 must link to its matching Suno recording.');
 const downloadsPage = read('dist/downloads/index.html');
 assert.ok(downloadsPage.includes(`Browse ${mp3Uploads.files.length} MP3 recordings`), 'Downloads page count is stale.');
 for (const file of mp3Uploads.files) assert.ok(downloadsPage.includes(file.url), `${file.sourcePath} is missing from downloads.`);
