@@ -699,4 +699,12 @@ const perspective = JSON.parse(await getTool('get_ai_music_perspective').execute
 assert.equal(perspective.url, aiPerspectiveUrl);
 assert.equal(perspective.author, 'Alex Merced');
 
+const topSnapshot = JSON.parse(read('src/data/top-songs.json'));
+const topPage = read('dist/top-songs/index.html');
+assert.ok(sitemap.includes('<loc>https://alexmercedmusic.com/top-songs/</loc>'));
+assert.ok(topPage.includes('Top 100 songs'));
+assert.ok(topSnapshot.items.length <= 100);
+assert.ok(topSnapshot.items.every((item) => songSlugs.has(item.song)), 'The ranked songs must have song pages.');
+assert.ok(topSnapshot.items.every((item) => topPage.includes(`/songs/${item.song}/`)), 'Ranked song links are missing.');
+
 console.log(`Validated ${catalog.songs.length} song pages, ${catalog.videos.length} video pages, ${catalog.albums.length} album pages, ${catalog.songs.reduce((count, song) => count + song.links.length, 0)} listening links, rich source metadata, feeds, social images, sitemap coverage, structured data, and ${registered.length} WebMCP tools.`);

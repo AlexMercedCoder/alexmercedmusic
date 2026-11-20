@@ -1,0 +1,12 @@
+{
+  "name": "alexmercedmusic-activity",
+  "main": "src/index.js",
+  "compatibility_date": "2026-10-26",
+  "workers_dev": false,
+  "routes": [{ "pattern": "activity.alexmercedcloud.com", "custom_domain": true }],
+  "d1_databases": [{
+    "binding": "ACTIVITY_DB",
+    "database_name": "alexmercedmusic-activity",
+    "database_id": "13a71ca5-5e08-4559-b9e2-32d1a5eaa193"
+  }]
+}

@@ -90,6 +90,20 @@ columns describe links on the website song page; several Suno recordings can
 share one page. `npm run validate` regenerates both files after building the
 site, so commit the updated CSV files with each catalog refresh.
 
+## Top 100 songs
+
+The `/top-songs/` page ranks song activity over the last 90 days. Song page
+visits, embedded plays, listening links, and MP3 download clicks each add one
+count. The browser sends only a song slug and action to the Cloudflare Worker at
+`activity.alexmercedcloud.com`; the Worker keeps daily totals in D1. The page
+loads current totals in the browser, while each site build saves a snapshot in
+`src/data/top-songs.json` for static HTML and search engines. A build preserves
+the last snapshot if the activity endpoint is temporarily unavailable.
+
+The Worker source and schema are in `cloudflare/activity-worker/`. After schema
+changes, apply `schema.sql` to the remote D1 database and deploy the Worker with
+Wrangler. Site changes deploy through the GitHub-connected Netlify site.
+
 `npm run check:external-links` checks unique listening, album, and platform URLs.
 The manually triggered site-health workflow runs this after the complete test suite. See
 `docs/production-monitoring.md` for Search Console and operational setup.

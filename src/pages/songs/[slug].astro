@@ -109,7 +109,7 @@ const jsonLd = [
   dateModified={song.createdAt?.slice(0, 10) ?? CATALOG_UPDATED_AT}
 >
   <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: section, href: sectionUrl }, { label: song.title }]} />
-  <article class="section detail" data-era={song.era}>
+  <article class="section detail" data-era={song.era} data-song-slug={song.slug}>
     <div class="shell detail__grid">
       <div>
         <p class="eyebrow">{section}</p>

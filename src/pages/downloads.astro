@@ -53,7 +53,7 @@ const jsonLd = [{
     <div class="shell">
       <h2>{group.title}</h2>
       <div class="download-list">
-        {group.files.map((file) => <article class="card download-item" data-download-item data-search={`${file.fileName} ${file.song?.title ?? ''}`.toLowerCase()}>
+        {group.files.map((file) => <article class="card download-item" data-song-slug={file.song?.slug} data-download-item data-search={`${file.fileName} ${file.song?.title ?? ''}`.toLowerCase()}>
           <div>
             <h3>{file.fileName}</h3>
             <p>{(file.sizeBytes / 1048576).toFixed(1)} MiB{file.song && <> · <a href={file.song.pageUrl.replace(SITE, '')}>Song details</a></>}</p>

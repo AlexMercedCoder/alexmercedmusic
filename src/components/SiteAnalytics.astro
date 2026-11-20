@@ -7,9 +7,32 @@
       window.dispatchEvent(new CustomEvent('alexmercedmusic:analytics', { detail }));
       if (typeof window.plausible === 'function') window.plausible(name, { props: detail });
     };
+    const activityUrl = 'https://activity.alexmercedcloud.com/event';
+    const record = (song, action) => {
+      if (location.hostname !== 'alexmercedmusic.com' || !song) return;
+      const body = JSON.stringify({ song, action });
+      if (navigator.sendBeacon?.(activityUrl, new Blob([body], { type: 'text/plain' }))) return;
+      fetch(activityUrl, { method: 'POST', body, headers: { 'content-type': 'text/plain' }, keepalive: true }).catch(() => {});
+    };
+    let lastViewPath = '';
+    const recordPageView = () => {
+      if (lastViewPath === location.pathname) return;
+      lastViewPath = location.pathname;
+      const song = document.querySelector('article.detail[data-song-slug]')?.dataset.songSlug;
+      if (song) record(song, 'view');
+    };
+    document.addEventListener('astro:page-load', recordPageView);
+    recordPageView();
     document.addEventListener('click', (event) => {
       const target = event.target.closest('a,button');
       if (!target) return;
+      const song = target.closest('[data-song-slug]')?.dataset.songSlug;
+      if (song && target.matches('[data-embed-url]')) record(song, 'play');
+      else if (song && target.tagName === 'A') {
+        const destination = new URL(target.href, location.href);
+        if (destination.hostname === 'mp3.alexmercedcloud.com') record(song, 'download');
+        else if (destination.origin !== location.origin) record(song, 'listen');
+      }
       if (target.matches('[data-embed-url]')) emit('Play', { title: target.dataset.trackTitle || 'Unknown' });
       else if (target.tagName === 'A') {
         const url = new URL(target.href, location.href);

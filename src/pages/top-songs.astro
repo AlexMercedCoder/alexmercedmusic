@@ -1,0 +1,105 @@
+---
+import Base from '../layouts/Base.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import { SITE, songs } from '../data/catalog-model';
+import ranking from '../data/top-songs.json';
+
+const bySlug = new Map(songs.map((song) => [song.slug, song]));
+const ranked = ranking.items.flatMap((activity) => {
+  const song = bySlug.get(activity.song);
+  return song ? [{ song, activity }] : [];
+}).slice(0, 100);
+const jsonLd = [{
+  '@type': 'CollectionPage',
+  '@id': `${SITE}/top-songs/#page`,
+  name: 'Top 100 Alex Merced songs',
+  url: `${SITE}/top-songs/`,
+  mainEntity: {
+    '@type': 'ItemList',
+    numberOfItems: ranked.length,
+    itemListElement: ranked.map(({ song }, index) => ({ '@type': 'ListItem', position: index + 1, name: song.title, url: song.pageUrl })),
+  },
+}];
+---
+<Base title="Top 100 songs" description="The most explored Alex Merced songs on this website over the last 90 days, ranked by visits and listening activity." jsonLd={jsonLd}>
+  <Breadcrumbs items={[{ label: 'Home', href: '/' }, { label: 'Top 100 songs' }]} />
+  <section class="section section--tight"><div class="shell">
+    <p class="eyebrow">Listener activity</p>
+    <h1>Top 100 songs</h1>
+    <p class="lede">Songs people have explored most on this site in the last 90 days. Each song page visit, play, listening link, and MP3 download counts once. The chart refreshes when the site is published.</p>
+    {ranked.length ? <ol class="top-list" id="top-list">
+      {ranked.map(({ song, activity }) => <li class="card card--era" data-era={song.era} data-song-slug={song.slug}>
+        <div class="top-list__song"><h2><a href={song.pageUrl.replace(SITE, '')}>{song.title}</a></h2><p>{song.album ?? song.kind} · {activity.total} {activity.total === 1 ? 'activity' : 'activities'}</p></div>
+        <div class="source-links"><a href={song.pageUrl.replace(SITE, '')}>Song details</a>{song.links[0] && <a href={song.links[0].url}>{song.links[0].label} ↗</a>}{song.downloads[0] && <a href={song.downloads[0].url} download>Download MP3</a>}</div>
+      </li>)}
+    </ol> : <div class="card" id="top-empty"><h2>The chart is just getting started</h2><p>Rankings will appear as listeners explore songs on this site.</p><a href="/songs/">Explore all songs →</a></div>}
+  </div></section>
+</Base>
+<style is:global>
+  .top-list{display:grid;gap:.7rem;padding:0;list-style:none;counter-reset:rank}.top-list li{display:flex;align-items:center;gap:1rem;counter-increment:rank}.top-list li::before{content:counter(rank,decimal-leading-zero);min-width:2.3rem;color:var(--era);font:700 1.15rem var(--mono)}.top-list__song{flex:1;min-width:0}.top-list h2{margin:0;font-size:1.05rem}.top-list p{margin:.35rem 0 0;color:var(--ink-faint);font-size:.8rem}.top-list .source-links{margin-left:auto}@media(max-width:640px){.top-list li{align-items:flex-start;flex-wrap:wrap}.top-list .source-links{width:100%;margin-left:3.3rem}}
+</style>
+<script>
+  const renderLiveRanking = async () => {
+    try {
+      const activityResponse = await fetch('https://activity.alexmercedcloud.com/top');
+      if (!activityResponse.ok) return;
+      const activity = await activityResponse.json();
+      if (!Array.isArray(activity.items) || !activity.items.length) return;
+      const catalogResponse = await fetch('/song-index.json');
+      if (!catalogResponse.ok) return;
+      const catalog = await catalogResponse.json();
+      if (!Array.isArray(catalog.songs)) return;
+      const bySlug = new Map(catalog.songs.map((song: { pageUrl: string }) => [song.pageUrl.split('/').filter(Boolean).at(-1), song]));
+      const entries = activity.items.slice(0, 100).flatMap((item: { song: string; total: number }) => {
+        const song = bySlug.get(item.song);
+        return song ? [{ song, item }] : [];
+      });
+      if (!entries.length) return;
+      const list = document.getElementById('top-list') ?? document.createElement('ol');
+      list.id = 'top-list';
+      list.className = 'top-list';
+      list.replaceChildren();
+      for (const { song, item } of entries) {
+        const row = document.createElement('li');
+        row.className = 'card card--era';
+        row.dataset.era = song.era;
+        row.dataset.songSlug = item.song;
+        const heading = document.createElement('h2');
+        const title = document.createElement('a');
+        title.href = song.pageUrl;
+        title.textContent = song.title;
+        heading.append(title);
+        const note = document.createElement('p');
+        note.textContent = `${song.album || song.kind} · ${item.total} ${item.total === 1 ? 'activity' : 'activities'}`;
+        const info = document.createElement('div');
+        info.className = 'top-list__song';
+        info.append(heading, note);
+        const links = document.createElement('div');
+        links.className = 'source-links';
+        const detail = document.createElement('a');
+        detail.href = song.pageUrl;
+        detail.textContent = 'Song details';
+        links.append(detail);
+        if (song.sourceUrl) {
+          const source = document.createElement('a');
+          source.href = song.sourceUrl;
+          source.textContent = 'Listen ↗';
+          links.append(source);
+        }
+        if (song.downloadUrl) {
+          const download = document.createElement('a');
+          download.href = song.downloadUrl;
+          download.download = '';
+          download.textContent = 'Download MP3';
+          links.append(download);
+        }
+        row.append(info, links);
+        list.append(row);
+      }
+      const empty = document.getElementById('top-empty');
+      if (empty) empty.replaceWith(list);
+    } catch { /* Keep the published chart when the live service is unavailable. */ }
+  };
+  document.addEventListener('astro:page-load', renderLiveRanking);
+  renderLiveRanking();
+</script>
