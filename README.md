@@ -82,6 +82,14 @@ match. If the song catalog changed, build it before running `match:mp3` so
 file, including recordings without a verified song-page match. Push the tested
 source changes to GitHub to let the connected Netlify site deploy them.
 
+The local `local-index/website-songs.csv` lists every website song page with
+its Suno, MP3, full YouTube video, and Short links. The companion
+`local-index/published-suno-songs.csv` lists every published Suno recording
+and its matching website page. In the Suno recording index, MP3 and YouTube
+columns describe links on the website song page; several Suno recordings can
+share one page. `npm run validate` regenerates both files after building the
+site, so commit the updated CSV files with each catalog refresh.
+
 `npm run check:external-links` checks unique listening, album, and platform URLs.
 The manually triggered site-health workflow runs this after the complete test suite. See
 `docs/production-monitoring.md` for Search Console and operational setup.

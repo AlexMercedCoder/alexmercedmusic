@@ -9,7 +9,7 @@
     "build": "node scripts/page-dates.mjs && astro build && node scripts/generate-social-images.mjs",
     "preview": "astro preview",
     "check": "tsc --noEmit",
-    "validate": "npm run check && npm run build && node scripts/validate-site.mjs",
+    "validate": "npm run check && npm run build && node scripts/validate-site.mjs && npm run index:songs",
     "test": "npm run validate",
     "sync:suno": "node scripts/sync-suno.mjs",
     "sync:spotify": "node scripts/sync-spotify.mjs",
@@ -17,6 +17,7 @@
     "sync:mp3": "node scripts/sync-mp3.mjs",
     "sync:youtube-mp3": "node scripts/sync-youtube-mp3.mjs",
     "match:mp3": "node scripts/match-mp3.mjs --write",
+    "index:songs": "node scripts/build-song-index.mjs",
     "check:external-links": "node scripts/check-external-links.mjs"
   },
   "dependencies": {

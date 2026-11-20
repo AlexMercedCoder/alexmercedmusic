@@ -1,5 +1,439 @@
 [
   {
+    "id": "5e371efe-bb8b-4a1d-98fb-b208a37f89d7",
+    "name": "Still Becoming",
+    "resourceType": "album",
+    "url": "https://suno.com/album/5e371efe-bb8b-4a1d-98fb-b208a37f89d7",
+    "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1650.44,
+    "description": "Still Becoming fuses prog rock, IDM, and phonk over chopped chiptune samples to confront old mistakes, drop the shield of irony, and face long-held fears head-on. Across ten tracks, it turns every stumble and shortfall into forward momentum, committing to the slow, honest work of growing into the person you want to be.",
+    "trackIds": [
+      "6a3edf94-2d14-460a-800e-83c112a5a85c",
+      "db4fa0f1-5d7b-43cf-945d-c390aba78e38",
+      "380d1b66-d27a-4165-9778-61ca5c09edd5",
+      "bf25f499-780e-4f3d-96c9-0684402bd311",
+      "131c9f35-a8cd-4cf2-8323-7f12db6ad77d",
+      "d07f1076-dc8f-4160-9038-d652cc145b93",
+      "4119010b-23c3-4bba-a614-ace3da537dc0",
+      "9c0be78e-be41-468e-9722-d6165a16aa8b",
+      "ea0d9761-d3b3-4724-8cd8-84080d99bf34",
+      "d2655f93-c6c5-4a19-92f5-027846d0672b"
+    ],
+    "tracks": [
+      {
+        "id": "6a3edf94-2d14-460a-800e-83c112a5a85c",
+        "title": "Own the Wreckage",
+        "url": "https://suno.com/song/6a3edf94-2d14-460a-800e-83c112a5a85c",
+        "createdAt": "2026-11-20T16:47:25.851Z",
+        "durationSeconds": 164.88,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "db4fa0f1-5d7b-43cf-945d-c390aba78e38",
+        "title": "Shortfall and Stride",
+        "url": "https://suno.com/song/db4fa0f1-5d7b-43cf-945d-c390aba78e38",
+        "createdAt": "2026-11-20T16:50:16.796Z",
+        "durationSeconds": 164.76,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "380d1b66-d27a-4165-9778-61ca5c09edd5",
+        "title": "Name the Fear",
+        "url": "https://suno.com/song/380d1b66-d27a-4165-9778-61ca5c09edd5",
+        "createdAt": "2026-11-20T16:47:28.027Z",
+        "durationSeconds": 164.76,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "bf25f499-780e-4f3d-96c9-0684402bd311",
+        "title": "No More Hiding Behind Irony",
+        "url": "https://suno.com/song/bf25f499-780e-4f3d-96c9-0684402bd311",
+        "createdAt": "2026-11-20T16:47:30.468Z",
+        "durationSeconds": 166.36,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "131c9f35-a8cd-4cf2-8323-7f12db6ad77d",
+        "title": "Amend the Ledger",
+        "url": "https://suno.com/song/131c9f35-a8cd-4cf2-8323-7f12db6ad77d",
+        "createdAt": "2026-11-20T16:47:32.701Z",
+        "durationSeconds": 164.36,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "d07f1076-dc8f-4160-9038-d652cc145b93",
+        "title": "Relapse and Reset",
+        "url": "https://suno.com/song/d07f1076-dc8f-4160-9038-d652cc145b93",
+        "createdAt": "2026-11-20T16:47:35.326Z",
+        "durationSeconds": 165.56,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "4119010b-23c3-4bba-a614-ace3da537dc0",
+        "title": "The Person I Want to Be",
+        "url": "https://suno.com/song/4119010b-23c3-4bba-a614-ace3da537dc0",
+        "createdAt": "2026-11-20T16:48:46.367Z",
+        "durationSeconds": 164.8,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "9c0be78e-be41-468e-9722-d6165a16aa8b",
+        "title": "Heavy Metal Patience",
+        "url": "https://suno.com/song/9c0be78e-be41-468e-9722-d6165a16aa8b",
+        "createdAt": "2026-11-20T16:48:48.286Z",
+        "durationSeconds": 166,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "ea0d9761-d3b3-4724-8cd8-84080d99bf34",
+        "title": "Unfinished Canvas",
+        "url": "https://suno.com/song/ea0d9761-d3b3-4724-8cd8-84080d99bf34",
+        "createdAt": "2026-11-20T16:48:50.115Z",
+        "durationSeconds": 163.92,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      },
+      {
+        "id": "d2655f93-c6c5-4a19-92f5-027846d0672b",
+        "title": "Still Becoming",
+        "url": "https://suno.com/song/d2655f93-c6c5-4a19-92f5-027846d0672b",
+        "createdAt": "2026-11-20T16:48:53.055Z",
+        "durationSeconds": 165.04,
+        "imageUrl": "https://cdn2.suno.ai/image_0916ec47-41d9-4a2c-b3ec-927391ba0a55.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "b7fb13fe-e4ef-4cfc-a997-aa8cfd37a9e4",
+    "name": "The People V. Me",
+    "resourceType": "album",
+    "url": "https://suno.com/album/b7fb13fe-e4ef-4cfc-a997-aa8cfd37a9e4",
+    "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1730.8,
+    "description": "A concept album about putting yourself on trial.",
+    "trackIds": [
+      "89f82c73-380c-477a-a3e5-799a1f9c241f",
+      "43ce444a-28f4-4be4-a0f3-1b5a9bd55dd0",
+      "2fd3898b-e09a-4fce-b09e-814ce22e5b5c",
+      "9f051698-c784-4c73-8afe-e34eb57abc7a",
+      "f8353adf-5176-4d5d-bd24-e91a50123d16",
+      "66ffd578-647a-4ece-9317-63d3d938be09",
+      "ac2988e7-6cf9-42f0-826c-dc84c08cd92c",
+      "b31a15a0-2dbc-470e-83af-6128d3505925",
+      "4f953661-1daa-42f5-b3d7-4e37795ae6d5",
+      "76843ed3-9c0c-43c1-8178-db4ebddadd56"
+    ],
+    "tracks": [
+      {
+        "id": "89f82c73-380c-477a-a3e5-799a1f9c241f",
+        "title": "Summons",
+        "url": "https://suno.com/song/89f82c73-380c-477a-a3e5-799a1f9c241f",
+        "createdAt": "2026-11-20T00:56:01.098Z",
+        "durationSeconds": 118,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "43ce444a-28f4-4be4-a0f3-1b5a9bd55dd0",
+        "title": "The Kindness Witness",
+        "url": "https://suno.com/song/43ce444a-28f4-4be4-a0f3-1b5a9bd55dd0",
+        "createdAt": "2026-11-20T01:04:11.914Z",
+        "durationSeconds": 188,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "2fd3898b-e09a-4fce-b09e-814ce22e5b5c",
+        "title": "The Applause-Seeker",
+        "url": "https://suno.com/song/2fd3898b-e09a-4fce-b09e-814ce22e5b5c",
+        "createdAt": "2026-11-20T01:12:18.351Z",
+        "durationSeconds": 207.2,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "9f051698-c784-4c73-8afe-e34eb57abc7a",
+        "title": "Exhibit A: The Appetite",
+        "url": "https://suno.com/song/9f051698-c784-4c73-8afe-e34eb57abc7a",
+        "createdAt": "2026-11-20T01:26:01.711Z",
+        "durationSeconds": 172,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "f8353adf-5176-4d5d-bd24-e91a50123d16",
+        "title": "The Keeper Promises",
+        "url": "https://suno.com/song/f8353adf-5176-4d5d-bd24-e91a50123d16",
+        "createdAt": "2026-11-20T01:31:24.740Z",
+        "durationSeconds": 176.4,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "66ffd578-647a-4ece-9317-63d3d938be09",
+        "title": "Cross Examination",
+        "url": "https://suno.com/song/66ffd578-647a-4ece-9317-63d3d938be09",
+        "createdAt": "2026-11-20T01:39:34.249Z",
+        "durationSeconds": 158,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "ac2988e7-6cf9-42f0-826c-dc84c08cd92c",
+        "title": "The Record of Harm",
+        "url": "https://suno.com/song/ac2988e7-6cf9-42f0-826c-dc84c08cd92c",
+        "createdAt": "2026-11-20T01:52:22.450Z",
+        "durationSeconds": 149.2,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "b31a15a0-2dbc-470e-83af-6128d3505925",
+        "title": "No Single Verdict",
+        "url": "https://suno.com/song/b31a15a0-2dbc-470e-83af-6128d3505925",
+        "createdAt": "2026-11-20T02:02:52.219Z",
+        "durationSeconds": 186,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "4f953661-1daa-42f5-b3d7-4e37795ae6d5",
+        "title": "Terms of Release",
+        "url": "https://suno.com/song/4f953661-1daa-42f5-b3d7-4e37795ae6d5",
+        "createdAt": "2026-11-20T02:10:43.884Z",
+        "durationSeconds": 166.4,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      },
+      {
+        "id": "76843ed3-9c0c-43c1-8178-db4ebddadd56",
+        "title": "Still Before the Court",
+        "url": "https://suno.com/song/76843ed3-9c0c-43c1-8178-db4ebddadd56",
+        "createdAt": "2026-11-20T02:24:16.422Z",
+        "durationSeconds": 209.6,
+        "imageUrl": "https://cdn2.suno.ai/image_33003d05-a4f1-4995-aac7-ba037cee23df.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "c246fba3-cb9c-42f6-a40f-42b84afe35d1",
+    "name": "Smile In The Wreckage",
+    "resourceType": "album",
+    "url": "https://suno.com/album/c246fba3-cb9c-42f6-a40f-42b84afe35d1",
+    "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg",
+    "songCount": 12,
+    "durationSeconds": 1491.04,
+    "description": "An album about smiling despite the chaos around you. This album took the same audio input and ran it across 6 different styles to get this album.",
+    "trackIds": [
+      "a5e92091-0e77-44a1-b5b0-1fadcf029e97",
+      "3049c57c-732c-4b29-8303-cbfc36227fd4",
+      "7ec9d1ca-8539-40b3-93d7-b0757f42314f",
+      "47aa38ec-abb5-4e00-9e28-db92316cef07",
+      "b7e0222a-217f-46e5-a412-427d7ce496cd",
+      "ba4c9bf7-f5f9-4b59-bd69-8160c3977967",
+      "19e9daba-7885-4025-a7be-3b2f47ea9d3f",
+      "44099b77-b43b-4502-bcc2-01f865a4c1da",
+      "9355798d-b915-49cc-8d0c-06c266454a7c",
+      "ec61f4ea-b6f6-49ef-af12-7ddc77f76f0a",
+      "aa9ef645-8e84-4912-8452-d531dbd73b82",
+      "acc21ce2-6fdc-444d-808c-eed7ecfb044d"
+    ],
+    "tracks": [
+      {
+        "id": "a5e92091-0e77-44a1-b5b0-1fadcf029e97",
+        "title": "One Small Laugh",
+        "url": "https://suno.com/song/a5e92091-0e77-44a1-b5b0-1fadcf029e97",
+        "createdAt": "2026-11-19T17:59:40.977Z",
+        "durationSeconds": 120.64,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "3049c57c-732c-4b29-8303-cbfc36227fd4",
+        "title": "One Warm Crumb",
+        "url": "https://suno.com/song/3049c57c-732c-4b29-8303-cbfc36227fd4",
+        "createdAt": "2026-11-19T17:59:40.977Z",
+        "durationSeconds": 120.48,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "7ec9d1ca-8539-40b3-93d7-b0757f42314f",
+        "title": "Meet the Wreckage",
+        "url": "https://suno.com/song/7ec9d1ca-8539-40b3-93d7-b0757f42314f",
+        "createdAt": "2026-11-19T18:03:23.987Z",
+        "durationSeconds": 130.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "47aa38ec-abb5-4e00-9e28-db92316cef07",
+        "title": "A Bite of Today",
+        "url": "https://suno.com/song/47aa38ec-abb5-4e00-9e28-db92316cef07",
+        "createdAt": "2026-11-19T18:03:23.987Z",
+        "durationSeconds": 121.48,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "b7e0222a-217f-46e5-a412-427d7ce496cd",
+        "title": "One Small Yes",
+        "url": "https://suno.com/song/b7e0222a-217f-46e5-a412-427d7ce496cd",
+        "createdAt": "2026-11-19T18:06:16.908Z",
+        "durationSeconds": 162,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "ba4c9bf7-f5f9-4b59-bd69-8160c3977967",
+        "title": "Still Sweet Inside",
+        "url": "https://suno.com/song/ba4c9bf7-f5f9-4b59-bd69-8160c3977967",
+        "createdAt": "2026-11-19T18:06:16.908Z",
+        "durationSeconds": 120.92,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "19e9daba-7885-4025-a7be-3b2f47ea9d3f",
+        "title": "Peach Slice on the Windowsill",
+        "url": "https://suno.com/song/19e9daba-7885-4025-a7be-3b2f47ea9d3f",
+        "createdAt": "2026-11-19T18:06:55.427Z",
+        "durationSeconds": 116.4,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "44099b77-b43b-4502-bcc2-01f865a4c1da",
+        "title": "Smile While The Shelves Come",
+        "url": "https://suno.com/song/44099b77-b43b-4502-bcc2-01f865a4c1da",
+        "createdAt": "2026-11-19T18:06:55.427Z",
+        "durationSeconds": 121,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "9355798d-b915-49cc-8d0c-06c266454a7c",
+        "title": "Crumbs and Crooked Plans",
+        "url": "https://suno.com/song/9355798d-b915-49cc-8d0c-06c266454a7c",
+        "createdAt": "2026-11-19T18:07:28.364Z",
+        "durationSeconds": 121.2,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "ec61f4ea-b6f6-49ef-af12-7ddc77f76f0a",
+        "title": "A Tiny Joy",
+        "url": "https://suno.com/song/ec61f4ea-b6f6-49ef-af12-7ddc77f76f0a",
+        "createdAt": "2026-11-19T18:07:28.364Z",
+        "durationSeconds": 120,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "aa9ef645-8e84-4912-8452-d531dbd73b82",
+        "title": "While the Small Things Stay",
+        "url": "https://suno.com/song/aa9ef645-8e84-4912-8452-d531dbd73b82",
+        "createdAt": "2026-11-19T18:08:40.344Z",
+        "durationSeconds": 118,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      },
+      {
+        "id": "acc21ce2-6fdc-444d-808c-eed7ecfb044d",
+        "title": "Smile While the Room Comes",
+        "url": "https://suno.com/song/acc21ce2-6fdc-444d-808c-eed7ecfb044d",
+        "createdAt": "2026-11-19T18:08:40.344Z",
+        "durationSeconds": 117.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bb9f0bd3-913e-4e0c-a895-5055eeabdea9.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "02d170e8-2311-4246-b1e8-84ae30c61378",
+    "name": "The Time We Have",
+    "resourceType": "album",
+    "url": "https://suno.com/album/02d170e8-2311-4246-b1e8-84ae30c61378",
+    "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1409.48,
+    "description": "These songs ask what we do with the time we have, urging us to spend less of it in fear and conflict and more in understanding, forgiveness, and care. Dark, cinematic rock gives voice to that urgency while celebrating each person’s unrepeatable life and capacity to change.",
+    "trackIds": [
+      "da64ca09-e134-4dca-a4e0-9f55d5d10cf2",
+      "1c651b3e-ca36-41cc-ad54-260d9c04bd09",
+      "b5c2995e-46af-47f7-88c1-07cb873f95f6",
+      "2e237217-5fd6-4dc0-b112-4e51a4849eec",
+      "a7907d3c-7ed8-4eee-980c-e7362934577a",
+      "ad5707f0-170d-461a-81b3-77ef0ca9628e",
+      "f23471f3-cf3d-428b-a935-6f6691ce3e9c",
+      "ede80d1e-1f03-4581-aad1-b176f9b00025",
+      "bd4c298e-04d1-4b54-8187-50254f10a215",
+      "dc5a973f-dbb8-418c-84ed-125059080321"
+    ],
+    "tracks": [
+      {
+        "id": "da64ca09-e134-4dca-a4e0-9f55d5d10cf2",
+        "title": "Good Intentions, Open Hands",
+        "url": "https://suno.com/song/da64ca09-e134-4dca-a4e0-9f55d5d10cf2",
+        "createdAt": "2026-11-19T16:12:53.585Z",
+        "durationSeconds": 155.96,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "1c651b3e-ca36-41cc-ad54-260d9c04bd09",
+        "title": "More Than The Moment",
+        "url": "https://suno.com/song/1c651b3e-ca36-41cc-ad54-260d9c04bd09",
+        "createdAt": "2026-11-19T16:20:05.182Z",
+        "durationSeconds": 126,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "b5c2995e-46af-47f7-88c1-07cb873f95f6",
+        "title": "Forgiveness Has a Future",
+        "url": "https://suno.com/song/b5c2995e-46af-47f7-88c1-07cb873f95f6",
+        "createdAt": "2026-11-19T16:25:20.725Z",
+        "durationSeconds": 176.4,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "2e237217-5fd6-4dc0-b112-4e51a4849eec",
+        "title": "Fears Spends Our Time",
+        "url": "https://suno.com/song/2e237217-5fd6-4dc0-b112-4e51a4849eec",
+        "createdAt": "2026-11-19T16:39:54.573Z",
+        "durationSeconds": 146,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "a7907d3c-7ed8-4eee-980c-e7362934577a",
+        "title": "The Path You Took",
+        "url": "https://suno.com/song/a7907d3c-7ed8-4eee-980c-e7362934577a",
+        "createdAt": "2026-11-19T16:44:13.382Z",
+        "durationSeconds": 126.8,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "ad5707f0-170d-461a-81b3-77ef0ca9628e",
+        "title": "A Name Beyond The Argument",
+        "url": "https://suno.com/song/ad5707f0-170d-461a-81b3-77ef0ca9628e",
+        "createdAt": "2026-11-19T16:48:24.377Z",
+        "durationSeconds": 131.2,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "f23471f3-cf3d-428b-a935-6f6691ce3e9c",
+        "title": "The Mercy To Become",
+        "url": "https://suno.com/song/f23471f3-cf3d-428b-a935-6f6691ce3e9c",
+        "createdAt": "2026-11-19T16:57:43.304Z",
+        "durationSeconds": 134.4,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "ede80d1e-1f03-4581-aad1-b176f9b00025",
+        "title": "Your Unrepeatable Life",
+        "url": "https://suno.com/song/ede80d1e-1f03-4581-aad1-b176f9b00025",
+        "createdAt": "2026-11-19T17:03:01.034Z",
+        "durationSeconds": 111.16,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "bd4c298e-04d1-4b54-8187-50254f10a215",
+        "title": "Learn The Shape of Someone",
+        "url": "https://suno.com/song/bd4c298e-04d1-4b54-8187-50254f10a215",
+        "createdAt": "2026-11-19T17:10:22.640Z",
+        "durationSeconds": 123.96,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      },
+      {
+        "id": "dc5a973f-dbb8-418c-84ed-125059080321",
+        "title": "The Time We Have Together",
+        "url": "https://suno.com/song/dc5a973f-dbb8-418c-84ed-125059080321",
+        "createdAt": "2026-11-19T17:27:54.382Z",
+        "durationSeconds": 177.6,
+        "imageUrl": "https://cdn2.suno.ai/image_79f94d23-e241-4da3-b96e-2c032ed375fc.jpeg"
+      }
+    ]
+  },
+  {
     "id": "2f6528c3-eced-4a2b-b164-03b7156852ef",
     "name": "Who is Alex Merced?",
     "resourceType": "album",

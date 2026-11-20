@@ -922,6 +922,14 @@
       "uploadedAt": "2026-10-19T21:57:18.971Z"
     },
     {
+      "sourcePath": "Friendly Face, Wrecking Ball.mp3",
+      "sha256": "8f1931a906780933b1959e721ac7070dd8bd3c49c91f981d399ebfee5fa02be4",
+      "sizeBytes": 4924780,
+      "objectKey": "tracks/friendly-face-wrecking-ball-8f1931a906780933.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/friendly-face-wrecking-ball-8f1931a906780933.mp3",
+      "uploadedAt": "2026-11-20T21:27:38.252Z"
+    },
+    {
       "sourcePath": "Gare du Nord.mp3",
       "sha256": "2a2ad3c1679ab7293c41766aed90677283111199ed30fc5a017a90dcb206207a",
       "sizeBytes": 3827808,
@@ -2532,5 +2540,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-19T15:30:42.201Z"
+  "updatedAt": "2026-11-20T21:27:38.254Z"
 }
