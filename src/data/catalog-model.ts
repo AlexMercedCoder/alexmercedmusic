@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-20';
+export const CATALOG_UPDATED_AT = '2026-11-22';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -331,6 +331,10 @@ const preservedSongSlugs: Record<string, string> = {
   // Keep established URLs when newly published songs reuse these titles.
   'song:generated:hpmovg': 'goodbye-to-the-almost',
   'song:generated:1ghvtok': 'another-life',
+  'song:generated:7h6q2q': 'one-more-step',
+  'song:generated:1bnd9r0': 'hope-is-a-hand',
+  'song:generated:1ejo2gr': 'lives-i-never-lived',
+  'song:generated:1t5bvj7': 'you-can-rest-here',
 };
 
 const provisional: DerivedSeed[] = seeds.map((seed) => {
@@ -424,6 +428,7 @@ const normalizeVideoTitle = (value: string) => value
   .toLowerCase();
 
 const videoTitleAliases: Record<string, string[]> = {
+  'let the love go one': ['let the love go on'],
   'you deserve the love that stays': ['you deserve a love that stays'],
   'break the frame': ['break the frame and come through'],
   'where the map runs thin': ['where the map runs thin v2'],
@@ -457,6 +462,9 @@ const verifiedSunoVideoMatches: Record<string, string> = {
   'L4UEVSZhmeg': '60f590d9-ac7d-4d56-beec-c288658f00ce',
   // This Short directs listeners to the Paper Planets recording and its MP3.
   'c_Kg2WO_qYk': 'ed2426de-7f75-4838-b6d9-9a12e13c891c',
+  // The 130-second full video matches the 129.88-second recording with the MP3.
+  'Qtj5d81t_6I': 'c6c188bf-cc3c-41c5-a038-9e159d610c24',
+  'ZwAVhgpFTvw': 'c6c188bf-cc3c-41c5-a038-9e159d610c24',
 };
 const verifiedCatalogVideoMatches: Record<string, string> = {
   // These Shorts use altered or repeated titles, but their runtimes match the reimagined recordings.

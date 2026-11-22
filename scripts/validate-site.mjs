@@ -25,6 +25,10 @@ assert.equal(catalog.counts.albums, catalog.albums.length);
 for (const [songId, slug] of [
   ['song:generated:hpmovg', 'goodbye-to-the-almost'],
   ['song:generated:1ghvtok', 'another-life'],
+  ['song:generated:7h6q2q', 'one-more-step'],
+  ['song:generated:1bnd9r0', 'hope-is-a-hand'],
+  ['song:generated:1ejo2gr', 'lives-i-never-lived'],
+  ['song:generated:1t5bvj7', 'you-can-rest-here'],
 ]) {
   assert.equal(catalog.songs.find((song) => song.id === songId)?.slug, slug, `${slug} must keep its established URL.`);
 }

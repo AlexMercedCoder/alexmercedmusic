@@ -1,6 +1,247 @@
 {
   "schemaVersion": 1,
   "windowDays": 90,
-  "asOf": "2026-11-20T22:38:06.701Z",
-  "items": []
+  "asOf": "2026-11-22T18:43:40.408Z",
+  "items": [
+    {
+      "song": "who-carries-it-now-generated-3ilqfs",
+      "total": 3,
+      "views": 2,
+      "plays": 1,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "soul-on-the-tongue",
+      "total": 2,
+      "views": 2,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "the-door-beneath-the-floor",
+      "total": 2,
+      "views": 2,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "a-second-skin",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "alex-merced-pain",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "arcade-with-no-final-level",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "boarding-group-blue",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "carry-no-score",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "come-back-to-my-own",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "don-t-let-the-thread-dissapear",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "forest-folds",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "hunger-like-a-siren",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "keep-score",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "king-of-unclaimed-kingdoms",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "make-a-day",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "no-one-owns-the-sun",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "relapse-and-reset",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "room-between-the-notes",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "second-coat-of-paint",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "settle-softly",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "split-the-mold",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "spotlight-soulmate",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "terms-of-release",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "the-one-who-can-t-be-loved",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "the-unchosen-paths",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "walk-back-home",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "when-the-signal-calls",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "who-takes-the-watch",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "you-call",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "your-name-is-already-talking",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    }
+  ]
 }
