@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-22';
+export const CATALOG_UPDATED_AT = '2026-11-23';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -335,6 +335,8 @@ const preservedSongSlugs: Record<string, string> = {
   'song:generated:1bnd9r0': 'hope-is-a-hand',
   'song:generated:1ejo2gr': 'lives-i-never-lived',
   'song:generated:1t5bvj7': 'you-can-rest-here',
+  'song:generated:y0sel1': 'you-can-rest-here-generated-y0sel1',
+  'song:generated:udyoie': 'hope-is-a-hand-generated-udyoie',
 };
 
 const provisional: DerivedSeed[] = seeds.map((seed) => {

@@ -39,6 +39,7 @@ for (const [from, to, status] of renamedSongRedirects) {
   assert.match(from, /^\/songs\/[a-z0-9-]+\/$/);
   assert.match(to, /^\/songs\/[a-z0-9-]+\/$/);
   assert.equal(status, '301');
+  assert.ok(!songPages.has(`${catalog.site}${from}`), `${from} redirects away from a live song page.`);
   assert.ok(existsSync(new URL(`dist${to}index.html`, root)), `${from} redirects to a missing song page.`);
 }
 const mp3Uploads = JSON.parse(read('src/data/mp3-uploads.json'));

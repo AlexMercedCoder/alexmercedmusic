@@ -1,7 +1,7 @@
 import { readFile, writeFile } from 'node:fs/promises';
 
 const path = new URL('../src/data/top-songs.json', import.meta.url);
-const endpoint = 'https://activity.alexmercedcloud.com/top';
+const endpoint = `https://activity.alexmercedcloud.com/top?snapshot=${Date.now()}`;
 const validItem = (item) => item && /^[a-z0-9][a-z0-9-]{0,119}$/.test(item.song)
   && ['total', 'views', 'plays', 'listens', 'downloads'].every((key) => Number.isSafeInteger(item[key]) && item[key] >= 0);
 
