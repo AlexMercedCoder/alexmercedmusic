@@ -332,9 +332,7 @@ const preservedSongSlugs: Record<string, string> = {
   'song:generated:hpmovg': 'goodbye-to-the-almost',
   'song:generated:1ghvtok': 'another-life',
   'song:generated:7h6q2q': 'one-more-step',
-  'song:generated:1bnd9r0': 'hope-is-a-hand',
   'song:generated:1ejo2gr': 'lives-i-never-lived',
-  'song:generated:1t5bvj7': 'you-can-rest-here',
   'song:generated:y0sel1': 'you-can-rest-here-generated-y0sel1',
   'song:generated:udyoie': 'hope-is-a-hand-generated-udyoie',
 };

@@ -26,11 +26,11 @@ for (const [songId, slug] of [
   ['song:generated:hpmovg', 'goodbye-to-the-almost'],
   ['song:generated:1ghvtok', 'another-life'],
   ['song:generated:7h6q2q', 'one-more-step'],
-  ['song:generated:1bnd9r0', 'hope-is-a-hand'],
+  ['song:generated:1bnd9r0', 'hope-is-a-hand-at-your-shoulder'],
   ['song:generated:1ejo2gr', 'lives-i-never-lived'],
-  ['song:generated:1t5bvj7', 'you-can-rest-here'],
+  ['song:generated:1t5bvj7', 'your-chair-in-the-hall'],
 ]) {
-  assert.equal(catalog.songs.find((song) => song.id === songId)?.slug, slug, `${slug} must keep its established URL.`);
+  assert.equal(catalog.songs.find((song) => song.id === songId)?.slug, slug, `${slug} must use its expected URL.`);
 }
 const renamedSongRedirects = read('dist/_redirects').trim().split('\n').map((line) => line.trim().split(/\s+/));
 assert.ok(renamedSongRedirects.length >= 38, 'Renamed song links must remain available.');
@@ -42,6 +42,9 @@ for (const [from, to, status] of renamedSongRedirects) {
   assert.ok(!songPages.has(`${catalog.site}${from}`), `${from} redirects away from a live song page.`);
   assert.ok(existsSync(new URL(`dist${to}index.html`, root)), `${from} redirects to a missing song page.`);
 }
+const songRedirectTargets = new Map(renamedSongRedirects.map(([from, to]) => [from, to]));
+assert.equal(songRedirectTargets.get('/songs/hope-is-a-hand/'), '/songs/hope-is-a-hand-at-your-shoulder/');
+assert.equal(songRedirectTargets.get('/songs/you-can-rest-here/'), '/songs/your-chair-in-the-hall/');
 const mp3Uploads = JSON.parse(read('src/data/mp3-uploads.json'));
 const mp3Matches = JSON.parse(read('src/data/mp3-matches.json'));
 assert.equal(catalog.counts.mp3Files, mp3Uploads.files.length);
