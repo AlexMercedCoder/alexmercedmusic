@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "windowDays": 90,
-  "asOf": "2026-11-23T15:58:54.514Z",
+  "asOf": "2026-11-24T14:44:49.564Z",
   "items": [
     {
       "song": "the-question-in-the-hall",
@@ -9,6 +9,22 @@
       "views": 2,
       "plays": 1,
       "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "no-tower-holds-the-choir-bonus-track",
+      "total": 3,
+      "views": 3,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "three-crooked-lines",
+      "total": 3,
+      "views": 2,
+      "plays": 0,
+      "listens": 1,
       "downloads": 0
     },
     {
@@ -76,6 +92,30 @@
       "downloads": 0
     },
     {
+      "song": "architects-of-tomorrow",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "be-the-one-they-can-t-repeat",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "because-of-you",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "boarding-group-blue",
       "total": 1,
       "views": 1,
@@ -116,7 +156,23 @@
       "downloads": 0
     },
     {
+      "song": "don-t-give-me-a-key",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "don-t-let-the-thread-dissapear",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "flamingo",
       "total": 1,
       "views": 1,
       "plays": 0,
@@ -156,6 +212,14 @@
       "downloads": 0
     },
     {
+      "song": "inflation-is-inevitable",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "keep-score",
       "total": 1,
       "views": 1,
@@ -165,6 +229,22 @@
     },
     {
       "song": "king-of-unclaimed-kingdoms",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "let-it-go",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "live-it-all",
       "total": 1,
       "views": 1,
       "plays": 0,
@@ -244,6 +324,14 @@
       "downloads": 0
     },
     {
+      "song": "salt-in-the-water",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "second-coat-of-paint",
       "total": 1,
       "views": 1,
@@ -309,6 +397,14 @@
     },
     {
       "song": "the-unchosen-paths",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "the-work-of-many-hands",
       "total": 1,
       "views": 1,
       "plays": 0,

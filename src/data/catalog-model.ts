@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-23';
+export const CATALOG_UPDATED_AT = '2026-11-24';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -414,6 +414,7 @@ for (const trackId of generatedAcousticTrackIds) {
 const normalizeVideoTitle = (value: string) => value
   .normalize('NFKD')
   .replace(/[\u0300-\u036f]/g, '')
+  .replace(/^clip:\s*/i, '')
   .replace(/^new song\s+/i, '')
   .replace(/^alex merced\s*[-–:]\s*/i, '')
   .replace(/(?:\s+#[\p{L}\p{N}_]+)+\s*$/u, '')
@@ -428,6 +429,8 @@ const normalizeVideoTitle = (value: string) => value
   .toLowerCase();
 
 const videoTitleAliases: Record<string, string[]> = {
+  'crooked clown': ['crooked crown'],
+  'if no else i will': ['if no one else i will'],
   'let the love go one': ['let the love go on'],
   'you deserve the love that stays': ['you deserve a love that stays'],
   'break the frame': ['break the frame and come through'],
@@ -451,6 +454,8 @@ const sourceSongByYoutubeId = new Map(baseSongs.flatMap((song) => song.links
     return id ? [[id, song] as const] : [];
   })));
 const verifiedSunoVideoMatches: Record<string, string> = {
+  // The 207-second video matches the 206-second recording, not the earlier 192-second take.
+  'XCImllQFatQ': '3da1614c-ea97-4d64-afef-e17d9f5db1b1',
   // The 122-second Short matches this Suno take, not the earlier 120-second version.
   'wAuR5arEOlM': '5bde2828-75c6-4a0f-ba52-d750d2bcbaf6',
   // Several Suno songs share this title. The 117-second video matches this 116-second album track.

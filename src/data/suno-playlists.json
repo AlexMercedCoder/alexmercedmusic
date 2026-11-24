@@ -1,5 +1,109 @@
 [
   {
+    "id": "7a02dfe3-0692-4e9a-8906-42f8654dfbeb",
+    "name": "Love The Hate Away",
+    "resourceType": "album",
+    "url": "https://suno.com/album/7a02dfe3-0692-4e9a-8906-42f8654dfbeb",
+    "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1346.6,
+    "description": "Across ten songs, Alex Merced traces how a cruel remark at noon can land on a friend by five, and how one patient question can break the chain. Down-tuned guitars and pulsing new-wave synths carry the record to its closing scene, where two people on opposite sides of a protest share a bottle of water and finally ask what the other is afraid of losing.",
+    "trackIds": [
+      "ab55c342-9b19-4126-ba6e-5d3ee17db5b4",
+      "a1519c9d-0802-4927-97d8-1c77a5f62ac4",
+      "3e4808b0-9328-44f8-a62c-882eb5de0357",
+      "90f9ff3d-291d-4368-89e1-576c5ae8fd34",
+      "e4738cd6-2dee-4e3e-9124-301b7f9968d4",
+      "62510c70-1d53-49da-a844-064ef10cec79",
+      "e0dcf5be-da04-4346-ad8f-6322ee361f8d",
+      "8f36f9ab-e33e-4546-b6a3-cfca506f70df",
+      "a3939335-f394-40d6-aff7-55b16f920d67",
+      "eab801ff-854e-4745-9eb8-a16a5a0beb68"
+    ],
+    "tracks": [
+      {
+        "id": "ab55c342-9b19-4126-ba6e-5d3ee17db5b4",
+        "title": "Pass It On",
+        "url": "https://suno.com/song/ab55c342-9b19-4126-ba6e-5d3ee17db5b4",
+        "createdAt": "2026-11-23T21:24:55.902Z",
+        "durationSeconds": 159.6,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "a1519c9d-0802-4927-97d8-1c77a5f62ac4",
+        "title": "What Will They Learn",
+        "url": "https://suno.com/song/a1519c9d-0802-4927-97d8-1c77a5f62ac4",
+        "createdAt": "2026-11-23T21:39:17.149Z",
+        "durationSeconds": 143.2,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "3e4808b0-9328-44f8-a62c-882eb5de0357",
+        "title": "When the Joke Goes Quiet",
+        "url": "https://suno.com/song/3e4808b0-9328-44f8-a62c-882eb5de0357",
+        "createdAt": "2026-11-23T21:51:15.539Z",
+        "durationSeconds": 117.6,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "90f9ff3d-291d-4368-89e1-576c5ae8fd34",
+        "title": "Say It Again",
+        "url": "https://suno.com/song/90f9ff3d-291d-4368-89e1-576c5ae8fd34",
+        "createdAt": "2026-11-23T22:00:35.642Z",
+        "durationSeconds": 122.8,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "e4738cd6-2dee-4e3e-9124-301b7f9968d4",
+        "title": "Ask Me Twice",
+        "url": "https://suno.com/song/e4738cd6-2dee-4e3e-9124-301b7f9968d4",
+        "createdAt": "2026-11-23T22:05:04.904Z",
+        "durationSeconds": 126.24,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "62510c70-1d53-49da-a844-064ef10cec79",
+        "title": "Let Him Finish",
+        "url": "https://suno.com/song/62510c70-1d53-49da-a844-064ef10cec79",
+        "createdAt": "2026-11-23T22:11:18.014Z",
+        "durationSeconds": 126.8,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "e0dcf5be-da04-4346-ad8f-6322ee361f8d",
+        "title": "Pull Over Anyway",
+        "url": "https://suno.com/song/e0dcf5be-da04-4346-ad8f-6322ee361f8d",
+        "createdAt": "2026-11-23T22:18:11.078Z",
+        "durationSeconds": 122,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "8f36f9ab-e33e-4546-b6a3-cfca506f70df",
+        "title": "You Can Take Your Time",
+        "url": "https://suno.com/song/8f36f9ab-e33e-4546-b6a3-cfca506f70df",
+        "createdAt": "2026-11-23T22:26:50.631Z",
+        "durationSeconds": 125.6,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "a3939335-f394-40d6-aff7-55b16f920d67",
+        "title": "Let the Old Fear End",
+        "url": "https://suno.com/song/a3939335-f394-40d6-aff7-55b16f920d67",
+        "createdAt": "2026-11-23T22:30:15.586Z",
+        "durationSeconds": 150,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      },
+      {
+        "id": "eab801ff-854e-4745-9eb8-a16a5a0beb68",
+        "title": "The Water You Held Out",
+        "url": "https://suno.com/song/eab801ff-854e-4745-9eb8-a16a5a0beb68",
+        "createdAt": "2026-11-23T22:37:41.163Z",
+        "durationSeconds": 152.76,
+        "imageUrl": "https://cdn2.suno.ai/image_b4a778a8-679c-4071-a069-061487e7600d.jpeg"
+      }
+    ]
+  },
+  {
     "id": "c2030425-a49c-438d-9d6d-45665016e0af",
     "name": "The First Kind Thing",
     "resourceType": "album",

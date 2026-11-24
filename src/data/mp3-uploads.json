@@ -322,12 +322,28 @@
       "uploadedAt": "2026-10-19T21:56:30.454Z"
     },
     {
+      "sourcePath": "Alex Merced - Am I the Problem.mp3",
+      "sha256": "4448c35590293885504fced0e12b0255a09be70d56ab08e8bb8e303956a83b0e",
+      "sizeBytes": 5213545,
+      "objectKey": "tracks/alex-merced-am-i-the-problem-4448c35590293885.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-am-i-the-problem-4448c35590293885.mp3",
+      "uploadedAt": "2026-11-24T14:36:59.183Z"
+    },
+    {
       "sourcePath": "Alex Merced - Be Weird, Be Wonderful.mp3",
       "sha256": "ce2f38ec984d30d1560e4faea5c6879ec924b1256e35c12438e7781795164d96",
       "sizeBytes": 2127383,
       "objectKey": "tracks/alex-merced-be-weird-be-wonderful-ce2f38ec984d30d1.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-be-weird-be-wonderful-ce2f38ec984d30d1.mp3",
       "uploadedAt": "2026-10-19T21:56:30.893Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Crooked Crown.mp3",
+      "sha256": "efdd0cbb777ad272d35dab9853dfd22d9de584a8b454f268b891a762d5b7a954",
+      "sizeBytes": 4637854,
+      "objectKey": "tracks/alex-merced-crooked-crown-efdd0cbb777ad272.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-crooked-crown-efdd0cbb777ad272.mp3",
+      "uploadedAt": "2026-11-24T14:38:28.071Z"
     },
     {
       "sourcePath": "Alex Merced - Elevator to a Secret Floor.mp3",
@@ -338,12 +354,28 @@
       "uploadedAt": "2026-10-19T21:56:31.168Z"
     },
     {
+      "sourcePath": "Alex Merced - Glass in My Hands.mp3",
+      "sha256": "d8f75d97216c365bd7cafbcd9745e28495fe5995498b2eeea0966f6d3f05c7c9",
+      "sizeBytes": 5264677,
+      "objectKey": "tracks/alex-merced-glass-in-my-hands-d8f75d97216c365b.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-glass-in-my-hands-d8f75d97216c365b.mp3",
+      "uploadedAt": "2026-11-24T14:36:59.405Z"
+    },
+    {
       "sourcePath": "Alex Merced - I Wish I’d Saved a Life (AlexMercedMusic.com).mp3",
       "sha256": "53774b0ca3f36182cd470ee126e079b2fdbe9c548324b9654f8f1333517a45cf",
       "sizeBytes": 3519269,
       "objectKey": "tracks/alex-merced-i-wish-i-d-saved-a-life-alexmercedmusic-com-53774b0ca3f36182.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-i-wish-i-d-saved-a-life-alexmercedmusic-com-53774b0ca3f36182.mp3",
       "uploadedAt": "2026-10-19T21:56:31.726Z"
+    },
+    {
+      "sourcePath": "Alex Merced - If No One Else I Will.mp3",
+      "sha256": "06754d72a14e055c9b4105445b2dcfc5d795b08b517e0f30b881f490c3e081ed",
+      "sizeBytes": 4345379,
+      "objectKey": "tracks/alex-merced-if-no-one-else-i-will-06754d72a14e055c.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-if-no-one-else-i-will-06754d72a14e055c.mp3",
+      "uploadedAt": "2026-11-24T14:36:59.098Z"
     },
     {
       "sourcePath": "Alex Merced - Jellyfish Orchestra.mp3",
@@ -2556,5 +2588,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-22T18:36:20.105Z"
+  "updatedAt": "2026-11-24T14:38:28.072Z"
 }
