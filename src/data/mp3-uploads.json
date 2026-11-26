@@ -378,6 +378,14 @@
       "uploadedAt": "2026-11-26T02:10:44.568Z"
     },
     {
+      "sourcePath": "Alex Merced - Happy Holidays.mp3",
+      "sha256": "606c3b68df338c15dc0b1a1bea782ef18f6a34b417c35a7397f91dc7349056c0",
+      "sizeBytes": 4957530,
+      "objectKey": "tracks/alex-merced-happy-holidays-606c3b68df338c15.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-happy-holidays-606c3b68df338c15.mp3",
+      "uploadedAt": "2026-11-26T15:58:59.112Z"
+    },
+    {
       "sourcePath": "Alex Merced - I Wish I’d Saved a Life (AlexMercedMusic.com).mp3",
       "sha256": "53774b0ca3f36182cd470ee126e079b2fdbe9c548324b9654f8f1333517a45cf",
       "sizeBytes": 3519269,
@@ -2612,5 +2620,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-26T02:10:46.229Z"
+  "updatedAt": "2026-11-26T15:58:59.113Z"
 }

@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-25';
+export const CATALOG_UPDATED_AT = '2026-11-26';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -417,6 +417,7 @@ const normalizeVideoTitle = (value: string) => value
   .replace(/^clip:\s*/i, '')
   .replace(/^new song\s+/i, '')
   .replace(/^alex merced\s*[-–:]\s*/i, '')
+  .replace(/\s*\((?:9x16|16x9) version\)\s*$/i, '')
   .replace(/(?:\s+#[\p{L}\p{N}_]+)+\s*$/u, '')
   .replace(/\s*[([][^)\]]*(?:cover|music video|theme song|alexmercedmusic\.com)[^)\]]*[)\]]\s*$/i, '')
   .replace(/\s*[([]\s*(?:official\s+)?(?:ai[- ]generated\s+)?(?:music\s+)?(?:video|song)(?:\s+video)?\s*[)\]]\s*$/i, '')
