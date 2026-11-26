@@ -25,7 +25,7 @@ import mp3Matches from './mp3-matches.json';
 
 export const SITE = 'https://alexmercedmusic.com';
 export const CATALOG_SCHEMA_VERSION = '2.2.0';
-export const CATALOG_UPDATED_AT = '2026-11-24';
+export const CATALOG_UPDATED_AT = '2026-11-25';
 
 export type SongKind = 'archive' | 'electronic' | 'reimagined' | 'generated';
 
@@ -472,6 +472,8 @@ const verifiedSunoVideoMatches: Record<string, string> = {
   'ZwAVhgpFTvw': 'c6c188bf-cc3c-41c5-a038-9e159d610c24',
 };
 const verifiedCatalogVideoMatches: Record<string, string> = {
+  // The video title omits the final "d" in Saved; the recording and MP3 use the full title.
+  'mumXgayfMAM': 'song:generated:8adfk',
   // These Shorts use altered or repeated titles, but their runtimes match the reimagined recordings.
   '_Hg2jFO-Dgs': 'song:reimagined:1yvbn2f',
   'AB9jQTgjerQ': 'song:reimagined:vr0f0k',

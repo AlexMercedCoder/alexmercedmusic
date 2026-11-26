@@ -1,5 +1,421 @@
 [
   {
+    "id": "33edc62f-4374-4399-b206-d9b8dcc628de",
+    "name": "What Feeds The Garden",
+    "resourceType": "album",
+    "url": "https://suno.com/album/33edc62f-4374-4399-b206-d9b8dcc628de",
+    "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg",
+    "songCount": 10,
+    "durationSeconds": 2025.44,
+    "description": "On What Feeds the Garden, Alex Merced tells the story of a gardener who gives away flowers to everyone on his street, until a hard rain brings the secrets that fed his prize blooms to the surface. Atari chirps, lurching tuba, pan flutes, and battered piano take the album from playful waltzes to industrial post-hardcore as he risks telling the truth to the people he’s been trying to please.",
+    "trackIds": [
+      "9b991052-b18d-44d3-aa27-c7f186d68fe2",
+      "a5da386e-22a8-44ee-927e-325122fdd301",
+      "b7abf0d6-742a-4fed-9e2f-23437210e73c",
+      "6432acf2-ac27-428f-b765-bf91cafbae03",
+      "194f1c25-dd32-43a6-bf62-d45994d863f2",
+      "0ff81417-15d4-4635-b67d-7b6ce1fde032",
+      "ce15aa7a-017a-4945-b83d-166dbd85d478",
+      "2c2b570f-54fd-4873-9d6b-2db642e529e2",
+      "017a1b2a-6512-46a1-bd97-d08b2753c376",
+      "987b5df3-5baa-4ac6-a8c5-e1f9d0fa129d"
+    ],
+    "tracks": [
+      {
+        "id": "9b991052-b18d-44d3-aa27-c7f186d68fe2",
+        "title": "Best Garden on the Street",
+        "url": "https://suno.com/song/9b991052-b18d-44d3-aa27-c7f186d68fe2",
+        "createdAt": "2026-11-24T21:54:31.705Z",
+        "durationSeconds": 198.56,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "a5da386e-22a8-44ee-927e-325122fdd301",
+        "title": "Take What You Like",
+        "url": "https://suno.com/song/a5da386e-22a8-44ee-927e-325122fdd301",
+        "createdAt": "2026-11-24T21:54:41.508Z",
+        "durationSeconds": 183.56,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "b7abf0d6-742a-4fed-9e2f-23437210e73c",
+        "title": "The First Thing I Planted",
+        "url": "https://suno.com/song/b7abf0d6-742a-4fed-9e2f-23437210e73c",
+        "createdAt": "2026-11-24T21:54:51.826Z",
+        "durationSeconds": 189.6,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "6432acf2-ac27-428f-b765-bf91cafbae03",
+        "title": "Nobody Asks About the Soil",
+        "url": "https://suno.com/song/6432acf2-ac27-428f-b765-bf91cafbae03",
+        "createdAt": "2026-11-24T21:55:01.137Z",
+        "durationSeconds": 213.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "194f1c25-dd32-43a6-bf62-d45994d863f2",
+        "title": "Bone Meal",
+        "url": "https://suno.com/song/194f1c25-dd32-43a6-bf62-d45994d863f2",
+        "createdAt": "2026-11-24T21:55:12.216Z",
+        "durationSeconds": 194.4,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "0ff81417-15d4-4635-b67d-7b6ce1fde032",
+        "title": "Water Everything",
+        "url": "https://suno.com/song/0ff81417-15d4-4635-b67d-7b6ce1fde032",
+        "createdAt": "2026-11-24T21:55:20.701Z",
+        "durationSeconds": 183.56,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "ce15aa7a-017a-4945-b83d-166dbd85d478",
+        "title": "Best in Show",
+        "url": "https://suno.com/song/ce15aa7a-017a-4945-b83d-166dbd85d478",
+        "createdAt": "2026-11-24T21:55:29.884Z",
+        "durationSeconds": 193.92,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "2c2b570f-54fd-4873-9d6b-2db642e529e2",
+        "title": "After a Hard Rain",
+        "url": "https://suno.com/song/2c2b570f-54fd-4873-9d6b-2db642e529e2",
+        "createdAt": "2026-11-24T21:55:40.404Z",
+        "durationSeconds": 199.2,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "017a1b2a-6512-46a1-bd97-d08b2753c376",
+        "title": "Salt the Earth",
+        "url": "https://suno.com/song/017a1b2a-6512-46a1-bd97-d08b2753c376",
+        "createdAt": "2026-11-24T21:55:49.703Z",
+        "durationSeconds": 189.96,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      },
+      {
+        "id": "987b5df3-5baa-4ac6-a8c5-e1f9d0fa129d",
+        "title": "Turn the Soil",
+        "url": "https://suno.com/song/987b5df3-5baa-4ac6-a8c5-e1f9d0fa129d",
+        "createdAt": "2026-11-24T21:55:59.111Z",
+        "durationSeconds": 278.72,
+        "imageUrl": "https://cdn2.suno.ai/image_bf8dfc7e-0a6f-4c8a-b016-be20f9fb96f7.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "53d8913d-f191-43c8-a774-1b51e8cebdc2",
+    "name": "What The Floorboards Know",
+    "resourceType": "album",
+    "url": "https://suno.com/album/53d8913d-f191-43c8-a774-1b51e8cebdc2",
+    "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg",
+    "songCount": 10,
+    "durationSeconds": 2049.52,
+    "description": "On What the Floorboards Know, Alex Merced tells the story of a man who builds a home for everyone he loves while burying his own needs and secrets beneath it. Melodic prog rock, jittery IDM breakbeats, and heavy sludge guitars track the house’s slow collapse as he decides what he can save by finally telling the truth.",
+    "trackIds": [
+      "e28a632b-3e96-42fc-9a18-7fd840568d13",
+      "5a60dd1c-fcc2-4ce8-8448-a4be83ec263c",
+      "fde3496b-0a2d-4553-9c52-b0427e64cfa1",
+      "a9c1a9e8-6ff4-4fa3-b391-3dce006b45f9",
+      "88155ae3-f61a-4d31-afa0-dfec90d3170d",
+      "ae8724f7-8422-4866-85fe-2d1535db7c98",
+      "e57222ce-9acc-4054-b704-e30d6b53a4eb",
+      "5e46be3b-7398-4ce6-b362-54ecd931e0f3",
+      "5dbbd396-d5d7-49d2-809f-5128f99d1c8c",
+      "a4c3b5b8-4c35-4c4f-b602-f2ffe78257f4"
+    ],
+    "tracks": [
+      {
+        "id": "e28a632b-3e96-42fc-9a18-7fd840568d13",
+        "title": "Good Bones",
+        "url": "https://suno.com/song/e28a632b-3e96-42fc-9a18-7fd840568d13",
+        "createdAt": "2026-11-24T21:36:01.839Z",
+        "durationSeconds": 201.6,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "5a60dd1c-fcc2-4ce8-8448-a4be83ec263c",
+        "title": "Open House",
+        "url": "https://suno.com/song/5a60dd1c-fcc2-4ce8-8448-a4be83ec263c",
+        "createdAt": "2026-11-24T21:36:10.448Z",
+        "durationSeconds": 189.6,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "fde3496b-0a2d-4553-9c52-b0427e64cfa1",
+        "title": "The First Loose Board",
+        "url": "https://suno.com/song/fde3496b-0a2d-4553-9c52-b0427e64cfa1",
+        "createdAt": "2026-11-24T21:36:18.770Z",
+        "durationSeconds": 189.52,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "a9c1a9e8-6ff4-4fa3-b391-3dce006b45f9",
+        "title": "Every One Has My Face",
+        "url": "https://suno.com/song/a9c1a9e8-6ff4-4fa3-b391-3dce006b45f9",
+        "createdAt": "2026-11-24T21:36:26.921Z",
+        "durationSeconds": 213.6,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "88155ae3-f61a-4d31-afa0-dfec90d3170d",
+        "title": "Fresh Paint",
+        "url": "https://suno.com/song/88155ae3-f61a-4d31-afa0-dfec90d3170d",
+        "createdAt": "2026-11-24T21:36:34.957Z",
+        "durationSeconds": 184,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "ae8724f7-8422-4866-85fe-2d1535db7c98",
+        "title": "Architect of Everything",
+        "url": "https://suno.com/song/ae8724f7-8422-4866-85fe-2d1535db7c98",
+        "createdAt": "2026-11-24T21:36:43.428Z",
+        "durationSeconds": 199.16,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "e57222ce-9acc-4054-b704-e30d6b53a4eb",
+        "title": "Houses Settle",
+        "url": "https://suno.com/song/e57222ce-9acc-4054-b704-e30d6b53a4eb",
+        "createdAt": "2026-11-24T21:36:54.092Z",
+        "durationSeconds": 204.12,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "5e46be3b-7398-4ce6-b362-54ecd931e0f3",
+        "title": "Condemned",
+        "url": "https://suno.com/song/5e46be3b-7398-4ce6-b362-54ecd931e0f3",
+        "createdAt": "2026-11-24T21:37:02.126Z",
+        "durationSeconds": 189.96,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "5dbbd396-d5d7-49d2-809f-5128f99d1c8c",
+        "title": "Load-Bearing",
+        "url": "https://suno.com/song/5dbbd396-d5d7-49d2-809f-5128f99d1c8c",
+        "createdAt": "2026-11-24T21:37:11.265Z",
+        "durationSeconds": 199.56,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      },
+      {
+        "id": "a4c3b5b8-4c35-4c4f-b602-f2ffe78257f4",
+        "title": "Pull Up the Boards",
+        "url": "https://suno.com/song/a4c3b5b8-4c35-4c4f-b602-f2ffe78257f4",
+        "createdAt": "2026-11-24T21:37:19.805Z",
+        "durationSeconds": 278.4,
+        "imageUrl": "https://cdn2.suno.ai/image_e0400a06-d104-47f4-9c68-101cc528198f.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "1fb8d9c5-711c-47b3-acd4-5c29de21d7e4",
+    "name": "Where The Embers Land",
+    "resourceType": "album",
+    "url": "https://suno.com/album/1fb8d9c5-711c-47b3-acd4-5c29de21d7e4",
+    "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg",
+    "songCount": 10,
+    "durationSeconds": 2022.44,
+    "description": "On Where the Embers Land, Alex Merced follows a man who spends his life keeping others warm until the needs he hides and the truths he withholds threaten to hurt the people he loves. Gospel harmonies, syncopated phonk, and crushing guitars carry him through the fallout as he learns to let others see what he’s been carrying.",
+    "trackIds": [
+      "77518d51-3e2a-4fe3-9c38-63bbf6f33be0",
+      "6f5b88f1-bfcd-4c54-a781-70891507e62e",
+      "46800246-1120-4499-8341-ccc606741cf1",
+      "ce743c27-ef1d-40c7-9a8d-063314d39f2f",
+      "d9402c66-4293-4ca4-8273-3a3b25532b47",
+      "48aabfab-8fdc-4b46-9595-450629cbf3ce",
+      "3a69b5e6-ac0d-4873-9287-868d9491bb20",
+      "a639d585-d788-4086-aec3-11f6743bddb7",
+      "8a4002fc-b397-44e4-8cb6-0cb945e0252d",
+      "e65b500a-4782-472f-a1f8-a11d765f4d6e"
+    ],
+    "tracks": [
+      {
+        "id": "77518d51-3e2a-4fe3-9c38-63bbf6f33be0",
+        "title": "Pilot Light",
+        "url": "https://suno.com/song/77518d51-3e2a-4fe3-9c38-63bbf6f33be0",
+        "createdAt": "2026-11-24T19:58:21.630Z",
+        "durationSeconds": 198.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "6f5b88f1-bfcd-4c54-a781-70891507e62e",
+        "title": "Everybody's Hearth",
+        "url": "https://suno.com/song/6f5b88f1-bfcd-4c54-a781-70891507e62e",
+        "createdAt": "2026-11-24T19:59:13.623Z",
+        "durationSeconds": 189.16,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "46800246-1120-4499-8341-ccc606741cf1",
+        "title": "Kindling",
+        "url": "https://suno.com/song/46800246-1120-4499-8341-ccc606741cf1",
+        "createdAt": "2026-11-24T19:59:22.647Z",
+        "durationSeconds": 189.16,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "ce743c27-ef1d-40c7-9a8d-063314d39f2f",
+        "title": "Smoke in Every Room",
+        "url": "https://suno.com/song/ce743c27-ef1d-40c7-9a8d-063314d39f2f",
+        "createdAt": "2026-11-24T19:59:30.749Z",
+        "durationSeconds": 208.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "d9402c66-4293-4ca4-8273-3a3b25532b47",
+        "title": "Feed the Furnace",
+        "url": "https://suno.com/song/d9402c66-4293-4ca4-8273-3a3b25532b47",
+        "createdAt": "2026-11-24T19:59:39.679Z",
+        "durationSeconds": 184.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "48aabfab-8fdc-4b46-9595-450629cbf3ce",
+        "title": "Fever Crown",
+        "url": "https://suno.com/song/48aabfab-8fdc-4b46-9595-450629cbf3ce",
+        "createdAt": "2026-11-24T19:59:48.575Z",
+        "durationSeconds": 194.4,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "3a69b5e6-ac0d-4873-9287-868d9491bb20",
+        "title": "Scorched Earth Daydream",
+        "url": "https://suno.com/song/3a69b5e6-ac0d-4873-9287-868d9491bb20",
+        "createdAt": "2026-11-24T19:59:57.035Z",
+        "durationSeconds": 189.96,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "a639d585-d788-4086-aec3-11f6743bddb7",
+        "title": "Burn Inward",
+        "url": "https://suno.com/song/a639d585-d788-4086-aec3-11f6743bddb7",
+        "createdAt": "2026-11-24T20:00:07.736Z",
+        "durationSeconds": 199.2,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "8a4002fc-b397-44e4-8cb6-0cb945e0252d",
+        "title": "Where the Embers Land",
+        "url": "https://suno.com/song/8a4002fc-b397-44e4-8cb6-0cb945e0252d",
+        "createdAt": "2026-11-24T20:00:17.958Z",
+        "durationSeconds": 198.8,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      },
+      {
+        "id": "e65b500a-4782-472f-a1f8-a11d765f4d6e",
+        "title": "Bank the Fire",
+        "url": "https://suno.com/song/e65b500a-4782-472f-a1f8-a11d765f4d6e",
+        "createdAt": "2026-11-24T20:00:27.250Z",
+        "durationSeconds": 269.36,
+        "imageUrl": "https://cdn2.suno.ai/image_4384975e-c8f0-43d5-9fc0-3df51dc9b7bb.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "3c262a60-5f8d-4b7d-9030-fb872e4df92f",
+    "name": "Blast Radius of a Gentle Heart",
+    "resourceType": "album",
+    "url": "https://suno.com/album/3c262a60-5f8d-4b7d-9030-fb872e4df92f",
+    "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg",
+    "songCount": 10,
+    "durationSeconds": 1967.04,
+    "description": "A man determined to make the world kinder slowly fractures himself across everyone he loves, feeding his silence with work, ambition, indulgence, and carefully hidden truths. Through explosive progressive post-hardcore and vulnerable emo confession, Blast Radius of a Gentle Heart follows him into the fallout as he learns that real love requires honesty, boundaries, and the courage to let others know him whole.",
+    "trackIds": [
+      "4515cc2b-38de-48b5-83dd-59f812481a64",
+      "d1e8fe06-9b4c-4987-919f-b565b8772260",
+      "1919590e-501a-43a9-9fab-94252010c36a",
+      "c6c2cb12-2e13-4c8b-902e-89a007c92839",
+      "4dea900f-2334-47d4-ab6c-c7d18dd36266",
+      "8a5dc3d2-fd0d-4342-994f-5ae0e790e957",
+      "898ebdea-d647-4d1e-adce-6aea2966ac5c",
+      "8cbb65f7-b2e6-4bb7-97f0-cb6d9d07b4c5",
+      "d17e264f-cd10-4f7f-8bed-c62e9d5ee8de",
+      "8b253b7c-7a64-441e-bf3b-2196b3208d03"
+    ],
+    "tracks": [
+      {
+        "id": "4515cc2b-38de-48b5-83dd-59f812481a64",
+        "title": "Second Hand Sweep",
+        "url": "https://suno.com/song/4515cc2b-38de-48b5-83dd-59f812481a64",
+        "createdAt": "2026-11-24T17:32:57.259Z",
+        "durationSeconds": 209.84,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "d1e8fe06-9b4c-4987-919f-b565b8772260",
+        "title": "Everybody's Favorite Stranger",
+        "url": "https://suno.com/song/d1e8fe06-9b4c-4987-919f-b565b8772260",
+        "createdAt": "2026-11-24T17:33:08.050Z",
+        "durationSeconds": 176.8,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "1919590e-501a-43a9-9fab-94252010c36a",
+        "title": "Blueprint for a Kinder World",
+        "url": "https://suno.com/song/1919590e-501a-43a9-9fab-94252010c36a",
+        "createdAt": "2026-11-24T17:33:18.753Z",
+        "durationSeconds": 196,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "c6c2cb12-2e13-4c8b-902e-89a007c92839",
+        "title": "Ledger of Small Omissions",
+        "url": "https://suno.com/song/c6c2cb12-2e13-4c8b-902e-89a007c92839",
+        "createdAt": "2026-11-24T17:33:28.610Z",
+        "durationSeconds": 170,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "4dea900f-2334-47d4-ab6c-c7d18dd36266",
+        "title": "Nobody Gets the Whole of Me",
+        "url": "https://suno.com/song/4dea900f-2334-47d4-ab6c-c7d18dd36266",
+        "createdAt": "2026-11-24T17:33:37.266Z",
+        "durationSeconds": 203.2,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "8a5dc3d2-fd0d-4342-994f-5ae0e790e957",
+        "title": "Feed the Quiet",
+        "url": "https://suno.com/song/8a5dc3d2-fd0d-4342-994f-5ae0e790e957",
+        "createdAt": "2026-11-24T17:33:47.434Z",
+        "durationSeconds": 181.2,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "898ebdea-d647-4d1e-adce-6aea2966ac5c",
+        "title": "Emperor of the Open Laptop",
+        "url": "https://suno.com/song/898ebdea-d647-4d1e-adce-6aea2966ac5c",
+        "createdAt": "2026-11-24T17:33:57.664Z",
+        "durationSeconds": 196,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "8cbb65f7-b2e6-4bb7-97f0-cb6d9d07b4c5",
+        "title": "Blast Radius",
+        "url": "https://suno.com/song/8cbb65f7-b2e6-4bb7-97f0-cb6d9d07b4c5",
+        "createdAt": "2026-11-24T17:34:08.165Z",
+        "durationSeconds": 180,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "d17e264f-cd10-4f7f-8bed-c62e9d5ee8de",
+        "title": "Burn the Map",
+        "url": "https://suno.com/song/d17e264f-cd10-4f7f-8bed-c62e9d5ee8de",
+        "createdAt": "2026-11-24T17:34:18.413Z",
+        "durationSeconds": 202,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      },
+      {
+        "id": "8b253b7c-7a64-441e-bf3b-2196b3208d03",
+        "title": "What I Meant by Love",
+        "url": "https://suno.com/song/8b253b7c-7a64-441e-bf3b-2196b3208d03",
+        "createdAt": "2026-11-24T17:34:28.835Z",
+        "durationSeconds": 252,
+        "imageUrl": "https://cdn2.suno.ai/image_66db1cdc-ede9-4633-bc1d-67e8cd91fa6d.jpeg"
+      }
+    ]
+  },
+  {
     "id": "7a02dfe3-0692-4e9a-8906-42f8654dfbeb",
     "name": "Love The Hate Away",
     "resourceType": "album",

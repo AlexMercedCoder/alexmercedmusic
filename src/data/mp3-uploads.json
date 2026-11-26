@@ -338,6 +338,14 @@
       "uploadedAt": "2026-10-19T21:56:30.893Z"
     },
     {
+      "sourcePath": "Alex Merced - Borrowed Weight.mp3",
+      "sha256": "a3767207695d767132d4f0dd51f120a99cf3f626a6069387a078d4b0a31d7199",
+      "sizeBytes": 5625318,
+      "objectKey": "tracks/alex-merced-borrowed-weight-a3767207695d7671.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-borrowed-weight-a3767207695d7671.mp3",
+      "uploadedAt": "2026-11-26T02:10:44.528Z"
+    },
+    {
       "sourcePath": "Alex Merced - Crooked Crown.mp3",
       "sha256": "efdd0cbb777ad272d35dab9853dfd22d9de584a8b454f268b891a762d5b7a954",
       "sizeBytes": 4637854,
@@ -360,6 +368,14 @@
       "objectKey": "tracks/alex-merced-glass-in-my-hands-d8f75d97216c365b.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-glass-in-my-hands-d8f75d97216c365b.mp3",
       "uploadedAt": "2026-11-24T14:36:59.405Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Half Life.mp3",
+      "sha256": "47c249ad3cba8fdf1bc6f0970ef960fb5313fa4a8ae667ac631bf43b44cbaeb4",
+      "sizeBytes": 4763589,
+      "objectKey": "tracks/alex-merced-half-life-47c249ad3cba8fdf.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-half-life-47c249ad3cba8fdf.mp3",
+      "uploadedAt": "2026-11-26T02:10:44.568Z"
     },
     {
       "sourcePath": "Alex Merced - I Wish I’d Saved a Life (AlexMercedMusic.com).mp3",
@@ -448,6 +464,14 @@
       "objectKey": "tracks/alex-merced-through-the-darkness-iqcwdaadv-c-4ce4cf3e2979c755.mp3",
       "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-through-the-darkness-iqcwdaadv-c-4ce4cf3e2979c755.mp3",
       "uploadedAt": "2026-10-19T21:56:36.772Z"
+    },
+    {
+      "sourcePath": "Alex Merced - Time Bomb Love.mp3",
+      "sha256": "54bd5ca0aa11a3920a8414e848dc8b3cd33ffc4a9bbf855986bbeb72677c2a15",
+      "sizeBytes": 5024165,
+      "objectKey": "tracks/alex-merced-time-bomb-love-54bd5ca0aa11a392.mp3",
+      "url": "https://mp3.alexmercedcloud.com/tracks/alex-merced-time-bomb-love-54bd5ca0aa11a392.mp3",
+      "uploadedAt": "2026-11-26T02:10:46.229Z"
     },
     {
       "sourcePath": "Alex Merced - Uninvited Firework.mp3",
@@ -2588,5 +2612,5 @@
   ],
   "bucket": "alexmercedmusic-mp3",
   "baseUrl": "https://mp3.alexmercedcloud.com",
-  "updatedAt": "2026-11-24T14:38:28.072Z"
+  "updatedAt": "2026-11-26T02:10:46.229Z"
 }

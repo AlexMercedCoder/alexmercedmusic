@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "windowDays": 90,
-  "asOf": "2026-11-24T14:44:49.564Z",
+  "asOf": "2026-11-26T02:17:41.607Z",
   "items": [
     {
       "song": "the-question-in-the-hall",
@@ -132,6 +132,22 @@
       "downloads": 0
     },
     {
+      "song": "borrowed-years",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "both-hands-open",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "carry-no-score",
       "total": 1,
       "views": 1,
@@ -181,6 +197,14 @@
     },
     {
       "song": "forest-folds",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "found-you-too-late",
       "total": 1,
       "views": 1,
       "plays": 0,
@@ -245,6 +269,14 @@
     },
     {
       "song": "live-it-all",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "love-is-right-in-front-of-me",
       "total": 1,
       "views": 1,
       "plays": 0,
@@ -348,6 +380,22 @@
       "downloads": 0
     },
     {
+      "song": "solemn-thoughts",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "spend-your-tomorrows-today",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "split-the-mold",
       "total": 1,
       "views": 1,
@@ -412,7 +460,23 @@
       "downloads": 0
     },
     {
+      "song": "turn-toward-me",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
       "song": "walk-back-home",
+      "total": 1,
+      "views": 1,
+      "plays": 0,
+      "listens": 0,
+      "downloads": 0
+    },
+    {
+      "song": "we-don-t-line-up",
       "total": 1,
       "views": 1,
       "plays": 0,
