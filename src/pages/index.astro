@@ -14,7 +14,7 @@ const originals = new Map([...acousticTracks, ...electronicTracks].map((track) =
 const originalFor = (song: (typeof allReimagined)[number]) => originals.get(`${song.originalEra ?? 'acoustic'}:${song.original}`);
 const detailUrl = (url?: string) => url ? songByPrimaryUrl.get(url)?.pageUrl.replace(SITE, '') : undefined;
 const recentSuno = sunoSongs.slice(0, 6);
-const featuredPlaylists = sunoAlbums;
+const recentAlbums = sunoAlbums.slice(0, 6);
 const recentVideos = videos.slice(0, 3);
 const distributedAlbum = distributedReleases.find((release) => release.title === 'Songs for your Consideration');
 const homepagePlatforms = (distributedAlbum?.links ?? []).map((link) => ({
@@ -54,7 +54,7 @@ const jsonLd = [
 
 <Base
   title="Alex Merced Music"
-  description={`Two decades of music by Alex Merced: ${acousticTracks.length} accessible archive recordings, ${electronicStats.total} produced tracks, and ${allReimagined.length} songs rebuilt with Suno.`}
+  description={`Explore two decades of Alex Merced music: ${acousticTracks.length} acoustic recordings, ${electronicStats.total} electronic tracks, ${allReimagined.length} reimaginings, and ${sunoPublishedCount.toLocaleString('en-US')} public Suno songs.`}
   keywords={['Alex Merced', 'Alex Merced music', 'singer songwriter', 'acoustic', 'glitch hop', 'FL Studio', 'Suno', 'AI covers']}
   jsonLd={jsonLd}
 >
@@ -255,8 +255,8 @@ const jsonLd = [
           <h3>What he does now</h3>
           <p>
             The day job is data and AI, so the music comes in bursts: {sunoSongs.length} newer songs
-            generated on Suno, tagged indie prog, and the occasional acoustic take when a
-            guitar is within reach.
+            made with Suno across personal stories, playful ideas, politics and other subjects.
+            The arrangements range from acoustic to electronic sounds.
           </p>
           <p><a href="/songs/?kind=generated">Browse all generated songs</a></p>
         </article>
@@ -283,10 +283,11 @@ const jsonLd = [
 
   <section class="section" data-era="ai">
     <div class="shell">
-      <div class="section__head"><p class="eyebrow">Album-length projects</p><h2>Focused Suno albums</h2><p>{featuredPlaylists.length} sequences explore connected ideas and moods rather than presenting a loose list of singles.</p></div>
+      <div class="section__head"><p class="eyebrow">Album-length projects</p><h2>Recent Suno albums</h2><p>Explore the newest collections, then browse all {sunoAlbums.length} albums for more songs by subject and mood.</p></div>
       <div class="grid grid--3">
-        {featuredPlaylists.map((playlist) => <article class="card card--era" data-era="ai"><h3><a href={playlist.pageUrl}>{playlist.name}</a></h3><p>{playlist.description}</p><p>{playlist.songCount} songs</p></article>)}
+        {recentAlbums.map((album) => <article class="card card--era" data-era="ai">{album.imageUrl && <CoverImage class="release-art" src={album.imageUrl} widths={[320, 480]} sizes="(max-width: 720px) 92vw, 380px" alt={`Artwork for ${album.name}`} />}<h3><a href={album.pageUrl}>{album.name}</a></h3><p>{album.description}</p><p>{album.songCount} songs</p></article>)}
       </div>
+      <div class="btn-row" style="margin-top:1.5rem"><a class="btn" href="/suno/">Browse all Suno albums</a></div>
     </div>
   </section>
 

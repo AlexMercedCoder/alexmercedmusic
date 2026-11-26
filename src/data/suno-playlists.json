@@ -1,5 +1,212 @@
 [
   {
+    "id": "327f1120-ddcd-4162-871f-3bd0dd7a331b",
+    "name": "The Dark Road of Hate",
+    "resourceType": "album",
+    "url": "https://suno.com/album/327f1120-ddcd-4162-871f-3bd0dd7a331b",
+    "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg",
+    "songCount": 10,
+    "durationSeconds": 2020.6399999999999,
+    "description": "Alex Merced traces how private insecurity turns into blame, how blame gives people a sense of belonging, and how that belonging can cost them the people they love. Cold darkwave synths, grinding sludge guitars, and phonk beats follow that descent until a moment of recognition makes empathy and forgiveness possible.",
+    "trackIds": [
+      "b66552f6-9d99-4e08-85b8-2f2ac9b468d2",
+      "150c24a2-014f-4a32-8e82-04d6d6370779",
+      "d90fc957-9826-45ed-871c-e1604f2a4198",
+      "8de5b924-ec9b-4ccb-ac40-66744f1d6a56",
+      "76297852-654c-4c2b-9df0-99e61bc13b82",
+      "4c142297-91ad-481e-b39f-e95ab6d83a61",
+      "f6190d93-9b97-496c-9d27-9e4754b17f37",
+      "803e35ba-793d-4017-a9e0-10b671ce8080",
+      "6b6276c8-ad11-4679-8df3-010880184057",
+      "74bd4549-fd7d-4d80-9eed-845f82995dea"
+    ],
+    "tracks": [
+      {
+        "id": "b66552f6-9d99-4e08-85b8-2f2ac9b468d2",
+        "title": "Not Enough",
+        "url": "https://suno.com/song/b66552f6-9d99-4e08-85b8-2f2ac9b468d2",
+        "createdAt": "2026-11-26T03:41:48.696Z",
+        "durationSeconds": 195,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "150c24a2-014f-4a32-8e82-04d6d6370779",
+        "title": "Every Shadow Has a Face",
+        "url": "https://suno.com/song/150c24a2-014f-4a32-8e82-04d6d6370779",
+        "createdAt": "2026-11-26T03:41:58.589Z",
+        "durationSeconds": 188.64,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "d90fc957-9826-45ed-871c-e1604f2a4198",
+        "title": "Somebody to Blame",
+        "url": "https://suno.com/song/d90fc957-9826-45ed-871c-e1604f2a4198",
+        "createdAt": "2026-11-26T03:42:08.409Z",
+        "durationSeconds": 189.6,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "8de5b924-ec9b-4ccb-ac40-66744f1d6a56",
+        "title": "Feels Like Strength",
+        "url": "https://suno.com/song/8de5b924-ec9b-4ccb-ac40-66744f1d6a56",
+        "createdAt": "2026-11-26T03:42:19.093Z",
+        "durationSeconds": 188.8,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "76297852-654c-4c2b-9df0-99e61bc13b82",
+        "title": "Pass It On",
+        "url": "https://suno.com/song/76297852-654c-4c2b-9df0-99e61bc13b82",
+        "createdAt": "2026-11-26T03:42:29.182Z",
+        "durationSeconds": 183.96,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "4c142297-91ad-481e-b39f-e95ab6d83a61",
+        "title": "The Rooms Get Smaller",
+        "url": "https://suno.com/song/4c142297-91ad-481e-b39f-e95ab6d83a61",
+        "createdAt": "2026-11-26T03:42:39.455Z",
+        "durationSeconds": 209.16,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "f6190d93-9b97-496c-9d27-9e4754b17f37",
+        "title": "Both Sides of the Street",
+        "url": "https://suno.com/song/f6190d93-9b97-496c-9d27-9e4754b17f37",
+        "createdAt": "2026-11-26T03:42:50.070Z",
+        "durationSeconds": 198.72,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "803e35ba-793d-4017-a9e0-10b671ce8080",
+        "title": "I Know That Look",
+        "url": "https://suno.com/song/803e35ba-793d-4017-a9e0-10b671ce8080",
+        "createdAt": "2026-11-26T03:43:00.705Z",
+        "durationSeconds": 199.2,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "6b6276c8-ad11-4679-8df3-010880184057",
+        "title": "Put It Down",
+        "url": "https://suno.com/song/6b6276c8-ad11-4679-8df3-010880184057",
+        "createdAt": "2026-11-26T03:43:10.526Z",
+        "durationSeconds": 198.76,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      },
+      {
+        "id": "74bd4549-fd7d-4d80-9eed-845f82995dea",
+        "title": "The Other Road",
+        "url": "https://suno.com/song/74bd4549-fd7d-4d80-9eed-845f82995dea",
+        "createdAt": "2026-11-26T03:43:20.802Z",
+        "durationSeconds": 268.8,
+        "imageUrl": "https://cdn2.suno.ai/image_954af93a-fe56-4882-8a46-97f622e8b755.jpeg"
+      }
+    ]
+  },
+  {
+    "id": "f26cbad3-b668-4d16-be48-fb72def0c605",
+    "name": "The Great Responsibility Of Loving",
+    "resourceType": "album",
+    "url": "https://suno.com/album/f26cbad3-b668-4d16-be48-fb72def0c605",
+    "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg",
+    "songCount": 10,
+    "description": "Alex Merced explores what it takes to love generously, from saying what someone needs to hear while they’re still here to keeping the promises you can carry and saying a kind no when you need to. Fretless bass, glitching IDM rhythms, phonk grooves, and heavy guitars carry the album toward the joy of watching someone pass on the care they’ve received.",
+    "trackIds": [
+      "0612c7ec-5958-4ee8-b516-97231d5cde2b",
+      "ec7a4679-279e-450f-aec1-e1b6cdd52d76",
+      "72631b2b-72d3-495c-8f00-9de93c898981",
+      "c6a33d8f-2d96-4bb1-a318-5372f240212e",
+      "9d43e3b1-a960-4bbf-b2f7-19b4d86c2e70",
+      "a79ca82d-2712-426d-9174-64b31790a424",
+      "39446d62-ba14-4e35-81ca-dfbeaf0ffb24",
+      "7612cbba-a8eb-47e5-a8c0-c7eb52a440ef",
+      "108c776a-cea9-46fc-b476-2b8df136f181",
+      "45548b5b-a65b-4545-bfc9-46389cd5dce1"
+    ],
+    "tracks": [
+      {
+        "id": "0612c7ec-5958-4ee8-b516-97231d5cde2b",
+        "title": "Handle With Care",
+        "url": "https://suno.com/song/0612c7ec-5958-4ee8-b516-97231d5cde2b",
+        "createdAt": "2026-11-26T03:27:10.241Z",
+        "durationSeconds": 194.36,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "ec7a4679-279e-450f-aec1-e1b6cdd52d76",
+        "title": "Say It While They're Here",
+        "url": "https://suno.com/song/ec7a4679-279e-450f-aec1-e1b6cdd52d76",
+        "createdAt": "2026-11-26T03:27:19.827Z",
+        "durationSeconds": 183.6,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "72631b2b-72d3-495c-8f00-9de93c898981",
+        "title": "Far and Wide",
+        "url": "https://suno.com/song/72631b2b-72d3-495c-8f00-9de93c898981",
+        "createdAt": "2026-11-26T03:27:30.331Z",
+        "durationSeconds": 188.76,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "c6a33d8f-2d96-4bb1-a318-5372f240212e",
+        "title": "The First Time Someone Leaned",
+        "url": "https://suno.com/song/c6a33d8f-2d96-4bb1-a318-5372f240212e",
+        "createdAt": "2026-11-26T03:27:41.244Z",
+        "durationSeconds": 199.6,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "9d43e3b1-a960-4bbf-b2f7-19b4d86c2e70",
+        "title": "Different Kinds of Hungry",
+        "url": "https://suno.com/song/9d43e3b1-a960-4bbf-b2f7-19b4d86c2e70",
+        "createdAt": "2026-11-26T03:27:51.766Z",
+        "durationSeconds": 189,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "a79ca82d-2712-426d-9174-64b31790a424",
+        "title": "I Am Not the Sun",
+        "url": "https://suno.com/song/a79ca82d-2712-426d-9174-64b31790a424",
+        "createdAt": "2026-11-26T03:28:03.780Z",
+        "durationSeconds": 198.8,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "39446d62-ba14-4e35-81ca-dfbeaf0ffb24",
+        "title": "Only What You Can Carry",
+        "url": "https://suno.com/song/39446d62-ba14-4e35-81ca-dfbeaf0ffb24",
+        "createdAt": "2026-11-26T03:28:13.510Z",
+        "durationSeconds": 208.8,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "7612cbba-a8eb-47e5-a8c0-c7eb52a440ef",
+        "title": "A Kind No",
+        "url": "https://suno.com/song/7612cbba-a8eb-47e5-a8c0-c7eb52a440ef",
+        "createdAt": "2026-11-26T03:28:23.853Z",
+        "durationSeconds": 188.52,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "108c776a-cea9-46fc-b476-2b8df136f181",
+        "title": "Teach Them the Fire",
+        "url": "https://suno.com/song/108c776a-cea9-46fc-b476-2b8df136f181",
+        "createdAt": "2026-11-26T03:28:33.306Z",
+        "durationSeconds": 188.8,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      },
+      {
+        "id": "45548b5b-a65b-4545-bfc9-46389cd5dce1",
+        "title": "The Great Responsibility of Loving",
+        "url": "https://suno.com/song/45548b5b-a65b-4545-bfc9-46389cd5dce1",
+        "createdAt": "2026-11-26T03:28:44.103Z",
+        "durationSeconds": 268.8,
+        "imageUrl": "https://cdn2.suno.ai/image_3677c844-d6d6-4020-a5c8-224c7e6d37d9.jpeg"
+      }
+    ]
+  },
+  {
     "id": "33edc62f-4374-4399-b206-d9b8dcc628de",
     "name": "What Feeds The Garden",
     "resourceType": "album",
